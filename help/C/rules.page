@@ -1,0 +1,39 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="eligible">
+      
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
+   <credit type="author">
+    <name>Chris Beiser</name>
+    <email>ctbeiser@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Michael Hill</name>
+     <email>mdhillca@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+  </info>
+
+  <title>Rules</title>
+   <list>
+    <item><p>Tiles must be identical to be removed.</p></item>
+    <item><p>Fully and partially covered tiles cannot be matched.</p></item>
+    <item><p>Tiles must have a free long edge in order to be eligible for
+     matching.</p></item>
+    <item><p>You can undo a move without penalty.</p></item>
+    <item><p>Using the <link xref="hints">hint</link> option adds a 30-second
+     penalty to your time.</p></item>
+    <item><p>If the arrangement does not allow further tiles to be matched, you
+     will be given the option to shuffle the tiles in order to keep
+     playing.</p></item>
+    <item><p>Shuffling tiles adds a 60-second penalty to your time.</p></item>
+   </list>
+</page>

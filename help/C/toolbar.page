@@ -1,0 +1,30 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="toolbar">
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <revision version="0.1" date="2012-03-08" status="final"/>
+    <credit type="author copyright">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+      <years>2011</years>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Show/hide the toolbar</title>
+
+  <p>To show or hide the toolbar, click
+   <guiseq><gui>Settings</gui><gui>Toolbar</gui></guiseq>.</p>
+
+  <p>The toolbar, located under the menu bar, lets you perform common actions
+   with your mouse. To use a toolbar item, just click on it. The buttons, from
+   left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>,
+   <link xref="hints">Hint</link> and <gui>Pause</gui>.</p>
+
+</page>

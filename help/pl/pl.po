@@ -1,0 +1,926 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.mahjongg\n"
+"POT-Creation-Date: 2011-10-28 16:11+0000\n"
+"PO-Revision-Date: 2009-07-05 22:20+0100\n"
+"Last-Translator: Artur Szymański <arteek@wp.pl>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/mahjongg.xml:267(None)
+msgid "@@image: 'figures/mahjongg.png'; md5=4899a2e3d49d42f06c31576492edbc8f"
+msgstr "@@image: 'figures/mahjongg.png'; md5=4899a2e3d49d42f06c31576492edbc8f"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/mahjongg.xml:305(None)
+msgid "@@image: 'figures/no-move.png'; md5=edd6baeeb895787484c3fc446615cd14"
+msgstr "@@image: 'figures/no-move.png'; md5=edd6baeeb895787484c3fc446615cd14"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/mahjongg.xml:417(None)
+msgid "@@image: 'figures/toolbar.png'; md5=ee97ea171b1eb2510f7376734b590791"
+msgstr "@@image: 'figures/toolbar.png'; md5=ee97ea171b1eb2510f7376734b590791"
+
+#. When image changes, this message will be marked fuzzy or untranslated for you.
+#. It doesn't matter what you translate it to: it's not used at all.
+#: C/mahjongg.xml:632(None)
+msgid ""
+"@@image: 'figures/preferences.png'; md5=0c04907f6aeaf7b3620e2c21e54d2025"
+msgstr ""
+"@@image: 'figures/preferences.png'; md5=0c04907f6aeaf7b3620e2c21e54d2025"
+
+#: C/mahjongg.xml:25(title)
+msgid "<application>Mahjongg</application> Manual"
+msgstr "Podręcznik gry <application>Mahjongg</application>"
+
+#: C/mahjongg.xml:27(para)
+msgid ""
+"Mahjongg is a solitaire version of the classic Eastern tile game. It "
+"involves clearing as much of the board as possible by matching corresponding "
+"tiles and taking them out of play."
+msgstr ""
+"Mahjongg jest jednoosobową grą opartą na chińskim pierwowzorze gry w domino. "
+"Celem gry jest eliminacja jak największej liczby kostek poprzez odnajdywanie "
+"i zaznaczanie tych z nich, które posiadają takie same symbole."
+
+#: C/mahjongg.xml:34(year)
+msgid "1998"
+msgstr "1998"
+
+#: C/mahjongg.xml:35(holder)
+msgid "Free Software Foundation"
+msgstr "Fundacja Wolnego Oprogramowania"
+
+#: C/mahjongg.xml:38(year)
+msgid "2000"
+msgstr "2000"
+
+#: C/mahjongg.xml:39(holder)
+msgid "Eric Baudais (Documentation Author)"
+msgstr "Eric Baudais (autor dokumentacji)"
+
+#: C/mahjongg.xml:42(year)
+msgid "2009"
+msgstr "2009"
+
+#: C/mahjongg.xml:43(holder)
+msgid "Paul Cutler (Documentation Author)"
+msgstr "Paul Cutler (autor dokumentacji)"
+
+#: C/mahjongg.xml:57(publishername) C/mahjongg.xml:83(orgname)
+#: C/mahjongg.xml:114(para) C/mahjongg.xml:131(para)
+msgid "GNOME Documentation Project"
+msgstr "Projekt dokumentacji GNOME"
+
+#: C/mahjongg.xml:2(para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or "
+"in the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Udziela się zezwolenia do kopiowania rozpowszechniania i/lub modyfikację "
+"tego dokumentu zgodnie z zasadami Licencji GNU Wolnej Dokumentacji (GFDL) w "
+"wersji 1.1 lub dowolnej późniejszej opublikowanej przez Free Software "
+"Foundation, bez Sekcji Niezmiennych, Tekstu na Przedniej Okładce i Tekstu na "
+"Tylnej Okładce. Kopia licencji GFDL załączona jest w rozdziale zatytułowanym "
+"<ulink type=\"help\" url=\"ghelp:fdl\">Licencja</ulink> lub w pliku COPYING-"
+"DOCS rozprowadzanym wraz z niniejszym podręcznikiem."
+
+#: C/mahjongg.xml:12(para)
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Ten podręcznik jest częścią kolekcji podręczników GNOME dystrybuowanych na "
+"zasadach GFDL. Aby rozpowszechniać ten podręcznik w odłączeniu od kolekcji, "
+"należy dołączyć kopię kopię licencji do podręcznika, jak wyjaśniono to w "
+"sekcji 6. licencji GFDL."
+
+#: C/mahjongg.xml:19(para)
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Nazwy używane przez firmy do wyróżniania swoich produktów i usług są "
+"zazwyczaj zarejestrowanymi znakami towarowymi. Jeśli występują one w "
+"dokumentacji GNOME, w przypadku gdy są znane przez członków Projektu "
+"dokumentacji GNOME, są one napisane wielkimi literami lub zaczynają się od "
+"wielkiej litery."
+
+#: C/mahjongg.xml:35(para)
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+
+#: C/mahjongg.xml:55(para)
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+
+#: C/mahjongg.xml:28(para)
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<placeholder-1/>"
+msgstr ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<placeholder-1/>"
+
+#: C/mahjongg.xml:67(firstname)
+msgid "Eric"
+msgstr "Eric"
+
+#: C/mahjongg.xml:68(surname)
+msgid "Baudais"
+msgstr "Baudais"
+
+#: C/mahjongg.xml:70(email)
+msgid "baudais@okstate.edu"
+msgstr "baudais@okstate.edu"
+
+#: C/mahjongg.xml:74(firstname)
+msgid "Artur"
+msgstr "Artur"
+
+#: C/mahjongg.xml:75(surname)
+msgid "Szymanski"
+msgstr "Szymanski"
+
+#: C/mahjongg.xml:80(firstname)
+msgid "Paul"
+msgstr "Paul"
+
+#: C/mahjongg.xml:81(surname)
+msgid "Cutler"
+msgstr "Cutler"
+
+#: C/mahjongg.xml:84(email)
+msgid "pcutler@gnome.org"
+msgstr "pcutler@gnome.org"
+
+#: C/mahjongg.xml:110(revnumber) C/mahjongg.xml:118(revnumber)
+msgid "Mahjongg Manual V 2.26"
+msgstr "Podręcznik Mahjongg V2.26"
+
+#: C/mahjongg.xml:111(date) C/mahjongg.xml:119(date)
+msgid "2009-06-16"
+msgstr "2009-06-16"
+
+#: C/mahjongg.xml:113(para)
+msgid "Paul Cutler"
+msgstr "Paul Cutler"
+
+#: C/mahjongg.xml:121(para)
+msgid "Artur Szymanski"
+msgstr "Artur Szymanski"
+
+#: C/mahjongg.xml:125(revnumber)
+msgid "Mahjongg Manual V2.10;"
+msgstr "Podręcznik Mahjongg V2.10"
+
+#: C/mahjongg.xml:126(date)
+msgid "June 2005"
+msgstr "Czerwiec 2005"
+
+#: C/mahjongg.xml:128(para)
+msgid "Eric Baudais <email>baudais@okstate.edu</email>"
+msgstr "Eric Baudais <email>baudais@okstate.edu</email>"
+
+#: C/mahjongg.xml:136(releaseinfo)
+msgid "This manual describes version 2.26 of Mahjongg."
+msgstr "Ten podręcznik opisuje grę Mahjongg w wersji 2.26."
+
+#: C/mahjongg.xml:143(title)
+msgid "Feedback"
+msgstr "Wsparcie"
+
+#: C/mahjongg.xml:144(para)
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Mahjongg</"
+"application> application or this manual, follow the directions in the <ulink "
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
+msgstr ""
+"Błędy lub pomysły dotyczące gry <application>Mahjongg</application> bądź "
+"jego podręcznika należy zgłaszać zgodnie z opisem na <ulink url=\"ghelp:user-"
+"guide?feedback-bugs\" type=\"help\">stronie wsparcia GNOME</ulink>."
+
+#: C/mahjongg.xml:154(primary)
+msgid "GNOME Mahjongg"
+msgstr "GNOME Mahjongg"
+
+#: C/mahjongg.xml:160(title)
+msgid "Introduction"
+msgstr "Wprowadzenie"
+
+#: C/mahjongg.xml:162(para)
+msgid ""
+"<application>Mahjongg</application> is a solitaire (one player) version of "
+"the classic Eastern tile game, Mahjongg. It has all the functionality you "
+"expect from a tile or card game. You can change the type of tiles, the "
+"background, and the difficulty level, among other things, in the <link "
+"linkend=\"prefs\">Preferences</link> dialog. Other features, like the <link "
+"linkend=\"pause\"><guibutton>Pause </guibutton> button</link>, make the game "
+"more competitive when you play against the clock."
+msgstr ""
+"<application>Mahjongg</application> (czyt. Madżong) to jednoosobowa gra, "
+"która jest odmianą klasycznej chińskiej gry w domino pod tą samą nazwą. Gra "
+"posiada wszelkie udogodnienia jakich oczekuje się od gier karcianych i "
+"domina, m.in. możliwa jest zmiana rodzaju kostki, tła, bądź poziomu "
+"trudności. Ustawienia tych opcji dostępne są w oknie <link linkend=\"prefs"
+"\">Preferencji</link>. Dzięki innego rodzaju funkcjom, takim jak <link "
+"linkend=\"pause\">przycisk <guibutton>wstrzymania</guibutton></link>, gra "
+"staje się wygodniejsza w trybie gry na czas."
+
+#: C/mahjongg.xml:174(title)
+msgid "A Brief History of Mahjongg"
+msgstr "Krótka historia gry Mahjongg"
+
+#. FIXME: Explain more about solitaire version.
+#: C/mahjongg.xml:177(para)
+msgid ""
+"Mahjongg tile sets are used to play many variations of the original game. "
+"The version of Mahjongg you play is the solitaire one. Each tile also has a "
+"<ulink type=\"http\" url=\"http://www.xs4all.nl/~korntner/mahjong/fortune/"
+"index.html\"> meaning</ulink> associated with it."
+msgstr ""
+"Zestaw kostek domina Mahjongg jest używany do gry w wielu odmianach "
+"oryginału. Gra opisana opisana w niniejszym dokumencie jest grą dla jednej "
+"osoby. Każda kostka posiada także przypisane jej symbolowi <ulink type=\"http"
+"\" url=\"http://www.xs4all.nl/~korntner/mahjong/fortune/index.html"
+"\">znaczenie</ulink>."
+
+#: C/mahjongg.xml:185(para)
+msgid ""
+"Mahjongg's origins are not fully known, but many theories have been put "
+"forth. One such theory says that Noah played Mahjongg on the ark because the "
+"East hand is dominant, presumably the direction the rains came, in the "
+"flood. Another theory says that the Chinese philosopher, Confucius, made the "
+"game. The three <quote>Cardinal</quote> tiles have the same names as his "
+"three Cardinal virtues, Chung (middle) the Red, Fa (prosperity) the Green, "
+"and Po (white) the White, corresponding with Benevolence, Sincerity, and "
+"Filial Piety. Still another theory says that Mahjongg is derived from other "
+"Chinese games. <quote>Ya Pei</quote> is played with 32 cards made of wood or "
+"ivory and have the same oblong shape as present day Mahjongg tiles. "
+"<quote>Ma Tiae</quote> is played with 40 paper cards, similar in appearance, "
+"numbering 1 to 9 in four different suits along with the flower cards. It has "
+"been suggested that two brothers made the game, around 1850 A.D., from a "
+"combination of these two games."
+msgstr ""
+"Pochodzenie gry nie jest do końca jasne, choć opublikowano na ten temat "
+"wiele teorii. Jedna z nich przypisuje powstanie gry Noemu, który grywał "
+"ponoć w Mahjongga na Arce. Ponieważ biblijna burza i powódź nadeszły ze "
+"wschodu, stąd w początkowej fazie rozgrywki Wiatr Wschodni jest graczem "
+"uprzywilejowanym. Kolejna legenda głosi, iż twórcą gry był chiński filozof "
+"Konfucjusz. Przypuszczenie to ma związek z tym, że główne kamienie mają "
+"takie same nazwy jak podstawowe cnoty głoszone przez filozofa: Czerwony "
+"Chung (środek), Zielony Fa (powodzenie) i Biały Po (czystość). Nazwy te "
+"odpowiadają cnotom Konfucjusza: życzliwości, szczerości i pobożności "
+"synowskiej. Jeszcze inna teoria wskazuje rodowód Mahjongga z innych "
+"chińskich gier. W grze <quote>Ya Pei</quote> używa się 32 kart wykonanych z "
+"drewna lub kości słoniowej, które kształtem przypominają dzisiejsze kostki "
+"Mahjongg. W <quote>Ma Tiae</quote> gra się 40 podobnymi w wyglądzie do "
+"Mahjongga kartami, które ponumerowane są od 1 do 9 i składają się z czterech "
+"różnych zestawów z dodatkowymi kartami kwiatami. Podaje się, że na podstawie "
+"tych gier, w 1850 roku dwóch braci stworzyło grę Mahjongg."
+
+#: C/mahjongg.xml:202(para)
+msgid ""
+"In the early 1900's Mahjongg was introduced into English clubs in Shanghai. "
+"Mr. Babcock started the importation of Mahjongg tiles to the Western world. "
+"He stripped down the rules to the very basics and even put Arabic numerals "
+"on the tiles. 1923 was the height of the Mahjongg craze with major gaming "
+"companies, like Parker Bros., Milton Bradley, and United States Playing "
+"Card, importing Mahjongg tile sets by the thousands."
+msgstr ""
+"Na początku XX wieku Mahjongg został zaprezentowany w angielskich klubach w "
+"Szanghaju. Kamienie Mahjongga zostały następnie pokazane zachodniemu światu "
+"przez Pana Babcocka. Znacznie uprościł on reguły gry, zmieniając nawet na "
+"kamieniach cyfry chińskie na arabskie. Kulminacja szaleństwa na punkcie gry "
+"Mahjongg przypadła na rok 1923. Największe firmy rozrywkowe jak Parker "
+"Bros., Milton Bradley czy United States Playing Card, sprowadzały tysiące "
+"zestawów kostek Mahjongga."
+
+#: C/mahjongg.xml:222(para)
+msgid ""
+"Portions of this text were adapted from the <ulink type=\"http\" url="
+"\"http://www.mahjongmuseum.com/\">Mah Jong Museum.</ulink>"
+msgstr ""
+"Niektóre części tego tekstu powstały na podstawie informacji z <ulink type="
+"\"http\" url=\"http://www.mahjongmuseum.com/\">muzeum Mah Jong.</ulink>"
+
+#: C/mahjongg.xml:211(para)
+msgid ""
+"Many different rules sprang up and in 1924 the Standardization Committee of "
+"the American Official Laws of Mah-Jongg was formed to write a rule book. "
+"Still today many clubs play by different rules and sometimes even add flower "
+"or joker tiles. Players of the computer version are becoming intrigued with "
+"the beauty and detail of the hand crafted sets of the 1920's and 1930's and "
+"are searching antique shops and flea markets for sets of their own. Many new "
+"players are being introduced to the game solely through the solitaire "
+"version and are slowly realizing the intrigue and challenge that the "
+"traditional game offers. <placeholder-1/>"
+msgstr ""
+"Istniała niezliczona ilość zasad, dlatego w 1924 powołano Amerykański "
+"Komitet Standaryzacyjny Oficjalnych Zasad Mahjongg (ang. Standardization "
+"Committee of the American Official Laws of Mah-Jongg), który miał zająć się "
+"stworzeniem księgi zasad. Nawet dziś wiele klubów używa różnych zasad gry a "
+"nawet dodaje kamienie kwiaty i jokery. Gracze komputerowi będący pod "
+"wrażeniem kunsztownej ręcznej roboty kamieni z lat 20 i 30 ubiegłego wieku, "
+"poszukują w antykwariatach i na pchlich targach własnych zestawów. Wielu "
+"nowych graczy zaczynających przygodę z Mahjonggiem w postaci komputerowej "
+"gry jednoosobowej, powoli zaczyna sobie uświadamiać wyzwania jakie niesie "
+"gra tradycyjna. <placeholder-1/>"
+
+#: C/mahjongg.xml:234(title)
+msgid "Playing Mahjongg"
+msgstr "Rozgrywka"
+
+#: C/mahjongg.xml:236(para)
+msgid ""
+"You start with five levels of tiles which are stacked so some are covered up "
+"by the tiles on top. The harder the level you set in the <link linkend="
+"\"prefs\"><interface>Preferences</interface> dialog</link>, the more tiles "
+"are covered when the game starts. The object of <application>Mahjongg</"
+"application> is to remove all the tiles from the game. To remove tiles you "
+"have to find matching pairs which look alike. A matching tile will usually "
+"have the same number of buttons or markings on it or will look similar to "
+"each other."
+msgstr ""
+"Gra rozpoczyna się z pięcioma rzędami kostek ułożonych jedna na drugiej. Im "
+"trudniejszy poziom zaznaczony w <link linkend=\"prefs"
+"\"><interface>Preferencjach</interface></link> tym więcej kostek będzie na "
+"początku gry zasłoniętych przez inne. Celem gry <application>Mahjongg</"
+"application> jest usunięcie z planszy wszystkich kostek. Usuwanie kostek "
+"polega na zaznaczaniu identycznych par z przeróżnymi symbolami: kółkami, "
+"chińskimi literami, itp."
+
+#: C/mahjongg.xml:247(para)
+msgid ""
+"As an example, the highlighted tile, in the <link linkend=\"mahjongg-fig\"> "
+"figure below</link>, has six buttons. The matching tile is the one which "
+"also has six buttons. The tile is on the right-hand end of the third row "
+"from the bottom and there is another near the top of the fourth row from the "
+"bottom. If you want to match the tile on the top level, you need to look for "
+"the tile with the same green bamboo symbols. Do you see a matching tile yet? "
+"There are three tiles, which are visible, that match the tile on the top "
+"level. Two are to the left and the lower right. The third one is on the top "
+"row, but you can't remove that tile yet because the tile isn't on the "
+"outside of the stack of tiles. Later you will learn which tiles can be "
+"removed and which tiles can't be removed even though they match. Find the "
+"other two matching tiles, which are visible, on your own."
+msgstr ""
+"<link linkend=\"mahjongg-fig\">Poniższy rysunek</link> przedstawia "
+"przykładowy układ kostek na planszy. Widoczna jest tam podświetlona kostka z "
+"symbolem sześciu kółek. Pasująca do niej kostka to ta, która także ma sześć "
+"kółek. Na czwartym poziomie od góry, w lewym dolnym rogu znajduje się "
+"identyczna kostka, kolejna widoczna jest w piątym poziomie. W tym "
+"przykładowym rozdaniu można jednak zdjąć tylko pierwszą wymienioną kostkę, "
+"ponieważ druga z nich jest otoczona z lewej i prawej strony przez inne "
+"kostki. Można także zdjąć kostkę znajdującą się na szczycie piramidy. Należy "
+"na nią kliknąć a następnie odszukać kostkę z takim samym symbolem "
+"(podpowiedź: znajduje się w drugim rzędzie od góry, po prawej stronie, na "
+"drugim poziomie). W dalszej części tego podręcznika znajdują się instrukcje "
+"dotyczące zasad usuwania kostek z planszy."
+
+#: C/mahjongg.xml:262(title)
+msgid "Mahjongg's Main Window"
+msgstr "Widok głównego okna gry Mahjongg"
+
+#: C/mahjongg.xml:270(phrase)
+msgid "Main window."
+msgstr "Okno główne."
+
+#: C/mahjongg.xml:276(para)
+msgid ""
+"<application>Mahjongg</application> is played by clicking on two matching "
+"tiles that are then removed. Play continues until all the tiles are removed "
+"or there are no available pairs."
+msgstr ""
+"Rozgrywka polega na kliknięciu dwóch pasujących do siebie kostek, które "
+"następnie są usuwane z planszy. Gra toczy się do chwili usunięcia wszystkich "
+"kostek bądź gdy niemożliwe jest zaznaczenie pary identycznych kostek."
+
+#: C/mahjongg.xml:283(para)
+msgid ""
+"Only tiles at the far left and right edges on each level can be selected. "
+"This is because you can't remove any tiles which aren't at the far left and "
+"far right sides. If the tiles are on a different level and at the left or "
+"right sides, those can be removed when you find another matching tile."
+msgstr ""
+"Zaznaczać można tylko te kostki, które w dowolnym rzędzie mają odsłoniętą w "
+"całości prawą lub lewą krawędź. Niemożliwe jest usuwanie tych kostek, na "
+"których znajdują się inne kostki."
+
+#: C/mahjongg.xml:291(para)
+msgid ""
+"If you can't match any more tiles, a dialog will appear telling you no more "
+"tiles can be matched and giving you the option of shuffling the tiles "
+"(adding an additional 60 seconds penalty to the game clock), starting a new "
+"game or undoing your last move (although you may have to undo many more "
+"moves to find your mistake)."
+msgstr ""
+"W przypadku, gdy na planszy nie będzie już możliwości usunięcia pozostałych "
+"kostek, wyświetli się okno dialogowe z informacją o braku możliwości ruchu. "
+"Znajdują się tam opcje pozwalające na cofnięcie ostatnio wykonanego ruchu, "
+"przetasowania pozostałych na planszy kostek (do czasu rozgrywki zostanie "
+"dodane 60 karnych sekund) lub rozpoczęcie nowej rozgrywki. Istnieje "
+"możliwość wielokrotnego cofnięcia wykonanych ruchów w celu odnalezienia "
+"miejsca w którym popełniło się błąd."
+
+#: C/mahjongg.xml:300(title)
+msgid "Information Dialog"
+msgstr "Okno dialogowe"
+
+#: C/mahjongg.xml:308(phrase)
+msgid "Information Dialog."
+msgstr "Okno dialogowe."
+
+#: C/mahjongg.xml:315(title)
+msgid "Toolbar"
+msgstr "Pasek narzędziowy"
+
+#: C/mahjongg.xml:317(para)
+msgid ""
+"The <interface>toolbar</interface>, located below the <interface>Menu Bar</"
+"interface>, contains the following buttons:"
+msgstr ""
+"<interface>Pasek narzędziowy</interface>, który znajduje się pod paskiem "
+"menu, zawiera następujące przyciski:"
+
+#: C/mahjongg.xml:324(guibutton)
+msgid "New"
+msgstr "Nowa"
+
+#: C/mahjongg.xml:326(para)
+msgid "This button starts a new game with the current settings."
+msgstr "Rozpoczyna nową rozgrywkę z aktualnymi ustawieniami."
+
+#: C/mahjongg.xml:332(guibutton)
+msgid "Restart"
+msgstr "Zacznij od początku"
+
+#: C/mahjongg.xml:334(para)
+msgid ""
+"This button restarts the current game to the beginning without shuffling the "
+"tiles."
+msgstr "Umożliwia powtórne rozpoczęcie aktualnej gry bez przetasowania kostek."
+
+#: C/mahjongg.xml:341(guibutton)
+msgid "Pause"
+msgstr "Wstrzymaj"
+
+#: C/mahjongg.xml:343(para)
+msgid ""
+"This button pauses the game. When the game is paused, the clock, at the "
+"bottom right corner of the <interface>Main Window</interface>, stops and you "
+"cannot see any of the tile's faces."
+msgstr ""
+"Wstrzymuje rozgrywkę. Podczas wstrzymania gry, zatrzymywany jest zegar "
+"znajdujący się w prawym dolnym rogu, a symbole znajdujące się na kostkach "
+"stają się niewidoczne dla gracza."
+
+#: C/mahjongg.xml:351(guibutton)
+msgid "Undo Move"
+msgstr "Cofnij ruch"
+
+#: C/mahjongg.xml:353(para)
+msgid ""
+"This button replaces two tiles you removed until you reach the beginning of "
+"the game."
+msgstr ""
+"Cofa ostatnio usuniętą parę kostek. Kilkukrotne wciśnięcie cofa o "
+"odpowiednią ilość ruchów do momentu osiągnięcia początku rozgrywki."
+
+#: C/mahjongg.xml:360(guibutton)
+msgid "Redo Move"
+msgstr "Powtórz ruch"
+
+#: C/mahjongg.xml:362(para)
+msgid ""
+"This button replays your previous move, the <guibutton>Undo Move</guibutton> "
+"button took back."
+msgstr ""
+"Powtarza ostatnio wycofany ruch przyciskiem <guibutton>Cofnij ruch</"
+"guibutton>."
+
+#: C/mahjongg.xml:369(guibutton)
+msgid "Hint"
+msgstr "Podpowiedź"
+
+#: C/mahjongg.xml:371(para)
+msgid ""
+"This button gives you a pair of matching tiles to remove. Each time you use "
+"it, 30 seconds penalty will be added to the game clock."
+msgstr ""
+"Podświetla parę pasujących do siebie kostek. Każdorazowe użycie tej opcji "
+"doda 30 karnych sekund do czasu rozgrywki."
+
+#: C/mahjongg.xml:378(para)
+msgid ""
+"The status bar at the bottom of the window gives you information on the "
+"current state of the game:"
+msgstr ""
+"Pasek stanu znajdujący się na dole okna podaje informacje o aktualnym stanie "
+"gry:"
+
+#: C/mahjongg.xml:384(guilabel)
+msgid "Tiles Left:"
+msgstr "Pozostało płytek:"
+
+#: C/mahjongg.xml:386(para)
+msgid "This shows the number of tiles remaining to be matched."
+msgstr "Podaje ilość kostek pozostałych na planszy."
+
+#: C/mahjongg.xml:393(guilabel)
+msgid "Moves Left:"
+msgstr "Pozostało ruchów:"
+
+#: C/mahjongg.xml:395(para)
+msgid "This shows the number of possible matches you can make."
+msgstr "Podaje ilość możliwych do wykonania dopasowań kostek."
+
+#: C/mahjongg.xml:402(guilabel)
+msgid "Time:"
+msgstr "Czas:"
+
+#: C/mahjongg.xml:404(para)
+msgid "This shows the elapsed time from game start."
+msgstr "Podaje czas jaki upłynął od początku rozgrywki."
+
+#: C/mahjongg.xml:412(title)
+msgid "Mahjongg's Toolbar"
+msgstr "Pasek narzędziowy Mahjongg"
+
+#: C/mahjongg.xml:420(phrase)
+msgid "Toolbar."
+msgstr "Pasek narzędziowy."
+
+#: C/mahjongg.xml:429(title)
+msgid "Menus"
+msgstr "Pasek menu"
+
+#: C/mahjongg.xml:430(para)
+msgid ""
+"The menu bar, located at the top of the <interface>Main Window</interface>, "
+"contains the following menus:"
+msgstr ""
+"Pasek menu, umieszczony na górze <interface>głównego okna</interface> "
+"zawiera następujące komponenty:"
+
+#: C/mahjongg.xml:437(guimenu)
+msgid "Game"
+msgstr "Gra"
+
+#: C/mahjongg.xml:443(para)
+msgid ""
+"<menuchoice><shortcut><keycap>Ctrl-N</keycap></shortcut><guimenuitem>New</"
+"guimenuitem></menuchoice> — This item starts a new game."
+msgstr ""
+"<menuchoice><shortcut><keycap>Ctrl-N</kecap></shortcut><guimenuitem>Nowa</"
+"guimenuitem></menuchoice> — rozpoczyna nową rozgrywkę."
+
+#: C/mahjongg.xml:454(para)
+msgid ""
+"<menuchoice><guimenuitem>Restart</guimenuitem></menuchoice> — This item "
+"resets the current game to the start."
+msgstr ""
+"<menuchoice><guimenuitem>Zacznij od początku</guimenuitem></menuchoice> — "
+"rozpoczyna od nowa aktualną rozgrywkę."
+
+#: C/mahjongg.xml:462(para)
+msgid ""
+"<menuchoice><guimenuitem>Pause</guimenuitem></menuchoice> — This pauses the "
+"game, stopping the clock and hiding the tiles."
+msgstr ""
+"<menuchoice><guimenuitem>Wstrzymaj</guimenuitem></menuchoice> — wstrzymuje "
+"rozgrywkę, zatrzymuje zegar i ukrywa symbole na kostkach."
+
+#: C/mahjongg.xml:471(para)
+msgid ""
+"<menuchoice><shortcut><keycap>Ctrl-Z</keycap></shortcut><guimenuitem>Undo "
+"move</guimenuitem></menuchoice> — This item takes back two tiles you removed "
+"until you reach the beginning of the game."
+msgstr ""
+"<menuchoice><shortcut><keycap>Ctrl-Z</keycap></shortcut><guimenuitem>Cofnij "
+"ruch</guimenuitem></menuchoice> — cofa ostatnio usuniętą parę kamieni. "
+"Kilkukrotne wciśnięcie cofa o odpowiednią ilość ruchów do momentu "
+"osiągnięcia początku rozgrywki."
+
+#: C/mahjongg.xml:483(para)
+msgid ""
+"<menuchoice><shortcut><keycap>Ctrl-R</keycap></shortcut><guimenuitem>Redo "
+"move</guimenuitem></menuchoice> — This item replays your previous move the "
+"<guibutton>Undo</guibutton> button took back. When you reach the state you "
+"started undoing the message <quote>No more redo!</quote> appears at the "
+"bottom left corner of the <interface>Main Window</interface>."
+msgstr ""
+"<menuchoice><shortcut><keycap>Shift-Ctrl-Z</keycap></"
+"shortcut><guimenuitem>Powtórz ruch</guimenuitem></menuchoice> — powtarza "
+"ostatnio wycofany ruch przyciskiem <guibutton>Cofnij ruch</guibutton>. W "
+"chwili dotarcia do punktu w którym rozpoczęto cofanie, opcja staje się "
+"nieaktywna."
+
+#: C/mahjongg.xml:497(para)
+msgid ""
+"<menuchoice><guimenuitem>Hint</guimenuitem></menuchoice> — This item gives "
+"you a pair of matching tiles to remove."
+msgstr ""
+"<menuchoice><guimenuitem>Podpowiedź</guimenuitem></menuchoice> — podświetla "
+"parę pasujących do siebie kostek."
+
+#: C/mahjongg.xml:505(para)
+msgid ""
+"<menuchoice><guimenuitem>Scores</guimenuitem></menuchoice> — This item "
+"brings up a dialog showing you the ten best scores. The dialog has the "
+"scores identified by user name and the time it took to complete the game."
+msgstr ""
+"<menuchoice><guimenuitem>Wyniki</guimenuitem></menuchoice> — wyświetla okno "
+"dialogowe z najlepszymi wynikami. W oknie widoczna jest nazwa użytkownika "
+"oraz czas w jakim ukończono grę na danej planszy."
+
+#: C/mahjongg.xml:515(para)
+msgid ""
+"<menuchoice><shortcut><keycap>Ctrl-Q</keycap></shortcut><guimenuitem>Quit</"
+"guimenuitem></menuchoice> — This item allows you to quit the game."
+msgstr ""
+"<menuchoice><shortcut><keycap>Ctrl-Q</keycap></"
+"shortcut><guimenuitem>Zakończ</guimenuitem></menuchoice> — zamyka okno z grą."
+
+#: C/mahjongg.xml:439(para) C/mahjongg.xml:533(para) C/mahjongg.xml:579(para)
+msgid "The menu contains: <placeholder-1/>"
+msgstr "To menu zawiera następujące opcje: <placeholder-1/>"
+
+#: C/mahjongg.xml:531(guimenu)
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: C/mahjongg.xml:537(para)
+msgid ""
+"<menuchoice><shortcut><keycap>F11</keycap></"
+"shortcut><guimenuitem>Fullscreen</guimenuitem></menuchoice> — This item "
+"allows to play the game in fullscreen mode. To leave fullscreen press "
+"<keycap>F11</keycap> or click <guibutton>Leave Fullscreen</guibutton> button "
+"on <interface>toolbar</interface>."
+msgstr ""
+"<menuchoice><shortcut><keycap>F11</keycap></shortcut><guimenuitem>Pełny "
+"ekran</guimenuitem></menuchoice> — umożliwia grę na całym ekranie. Aby "
+"opuścić ten tryb należy wcisnąć klawisz <keycap>F11</keycap> lub kliknąć w "
+"przycisk <guibutton>Opuść tryb pełnoekranowy</guibutton> na <interface>pasku "
+"narzędziowym</interface>."
+
+#: C/mahjongg.xml:551(para)
+msgid ""
+"<menuchoice><guimenuitem>Toolbar</guimenuitem></menuchoice> — This item "
+"determines whether the <link linkend=\"toolbar\"><interface>toolbar</"
+"interface></link> is shown or not. If the item is checked, the "
+"<interface>toolbar</interface> is shown in the last place you put it. If the "
+"item is unchecked, the <interface>toolbar</interface> is not shown."
+msgstr ""
+"<menuchoice><guimenuitem>Pasek narzędziowy</guimenuitem></menuchoice> — "
+"określa, czy <link linkend=\"toolbar\"><interface>pasek narzędziowy</"
+"interface></link> jest widoczny. Zaznaczenie pola wyboru powoduje, iż "
+"<interface>pasek narzędziowy</interface> jest widoczny, odznaczenie - jego "
+"brak."
+
+#: C/mahjongg.xml:564(para)
+msgid ""
+"<menuchoice><guimenuitem>Preferences</guimenuitem></menuchoice> — This item "
+"brings up the <link linkend=\"prefs\">Preferences </link> dialog."
+msgstr ""
+"<menuchoice><guimenuitem>Preferencje</guimenuitem></menuchoice> — otwiera "
+"okno z <link linkend=\"prefs\">Preferencjami</link>."
+
+#: C/mahjongg.xml:577(guimenu)
+msgid "Help"
+msgstr "Pomoc"
+
+#: C/mahjongg.xml:583(para)
+msgid ""
+"<menuchoice><shortcut><keycap>F1</keycap></shortcut><guimenuitem>Contents</"
+"guimenuitem></menuchoice> — This item shows this manual."
+msgstr ""
+"<menuchoice><shortcut><keycap>F1</keycap></shortcut><guimenuitem>Zawartość</"
+"guimenuitem></menuchoice> — otwiera niniejszy podręcznik."
+
+#: C/mahjongg.xml:594(para)
+msgid ""
+"<menuchoice><guimenuitem>About</guimenuitem></menuchoice> — This item gives "
+"you some basic information about <application>GNOME Mahjongg</application>, "
+"such as the author's names and the application version number."
+msgstr ""
+"<menuchoice><guimenuitem>O programie</guimenuitem></menuchoice> — podaje "
+"podstawowe informacje na temat gry <application>Mahjongg</application>, "
+"takie jak nazwiska autorów i numer wersji programu."
+
+#: C/mahjongg.xml:615(title)
+msgid "Customization"
+msgstr "Dostosowywanie"
+
+#: C/mahjongg.xml:616(para)
+msgid ""
+"To change the application's settings, select <guimenuitem>Preferences</"
+"guimenuitem> from the <guimenu>Settings</guimenu> menu. This opens the <link "
+"linkend=\"preferences-fig\"><interface>Preferences </interface> dialog</"
+"link>."
+msgstr ""
+"Aby zmienić ustawienia programu, należy wybrać z menu <guimenu>Ustawienia</"
+"guimenu> pozycję <guimenuitem>Preferencje</guimenuitem>. Otworzy się okno "
+"dialogowe <link linkend=\"preferences-fig\"><interface>Preferencje gry "
+"Mahjongg</interface></link>."
+
+#. ALAN: looks correct like version 2.10 to me
+#: C/mahjongg.xml:627(title)
+msgid "Preferences Dialog"
+msgstr "Okno z preferencjami gry"
+
+#: C/mahjongg.xml:635(phrase)
+msgid "Preferences dialog."
+msgstr "Okno z preferencjami gry."
+
+#: C/mahjongg.xml:641(para)
+msgid "All the options are applied and saved immediately."
+msgstr "Zmiana opcji jest natychmiast aktywowana i zapisywana."
+
+#: C/mahjongg.xml:645(para)
+msgid "The properties in the <interface>Preferences</interface> dialog are:"
+msgstr ""
+"Okno <interface>Preferencje gry Mahjongg</interface> zawiera następujące "
+"pozycje:"
+
+#: C/mahjongg.xml:651(para)
+msgid ""
+"<guilabel>Tile Set:</guilabel> — Select the look of the tiles from this list."
+msgstr "<guilabel>Zestaw płytek:</guilabel> — wybór wyglądu kostek."
+
+#: C/mahjongg.xml:657(para)
+msgid ""
+"<guilabel>Select Map:</guilabel> — Change the difficulty of the game by "
+"altering how the tiles are stacked. The more spread out (easy) version lets "
+"you see more of the tiles while the more compact (hard) version does not let "
+"you see many tiles."
+msgstr ""
+"<guilabel>Wybór mapy:</guilabel> — zmiana poziomu trudności gry. Im więcej "
+"widocznych kostek tym rozgrywka jest łatwiejsza."
+
+#: C/mahjongg.xml:666(para)
+msgid ""
+"<guilabel>Background Color:</guilabel> — Change the color of the background "
+"by bringing up a <interface> color picker</interface> to let you select a "
+"new color."
+msgstr ""
+"<guilabel>Kolor tła:</guilabel> — zmiana koloru planszy. Wciśnięcie powoduje "
+"otwarcie okna w którym można zmienić kolor."
+
+#: C/mahjongg.xml:675(para)
+msgid ""
+"To alter the size of the tiles simply resize the window in the normal way. "
+"The tiles will expand to fill it."
+msgstr ""
+"Powiększenie rozmiaru kostek odbywa się poprzez rozszerzenie okna z grą."
+
+#: C/mahjongg.xml:693(title)
+msgid "Authors"
+msgstr "Autorzy"
+
+#: C/mahjongg.xml:694(para)
+msgid ""
+"<application>Mahjongg</application> was written by Francisco Bustamante "
+"(<email>pancho@nuclecu.unam.mx</email>), Michael Meeks (<email>mmeeks@gnu."
+"org</email>), Max Watson, Heinz Hempe, and Philippe Chavin. Tiles for "
+"<application>Mahjongg</application> were made by Jonathan Buzzard and Max "
+"Watson. This manual was written by Eric Baudais (<email>baudais@okstate.edu</"
+"email>). To report a bug or make a suggestion regarding this application or "
+"this manual, follow the directions in this <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">document</ulink>."
+msgstr ""
+"Grę <application>Mahjongg</application> napisali: Francisco Bustamante "
+"(<email>pancho@nuclecu.unam.mx</email>), Michael Meeks (<email>mmeeks@gnu."
+"org</email>), Max Watson, Heinz Hempe i Philippe Chavin. Kostki "
+"zaprojektowali Jonathan Buzzard i Max Watson. Niniejszy podręcznik napisał "
+"Eric Baudais (<email>baudais@okstate.edu</email>). Wersję polską opracował "
+"zespół Aviary.pl (<email>gnomepl@aviary.pl</email>). Aby zgłosić błąd lub "
+"pomysł dotyczący programu bądź niniejszego podręcznika należy postępować "
+"zgodnie z instrukcjami zawartymi w tym <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">dokumencie</ulink>."
+
+#: C/mahjongg.xml:722(title)
+msgid "License"
+msgstr "Licencja"
+
+#: C/mahjongg.xml:723(para)
+msgid ""
+"This program and tile artwork is free software; you can redistribute it and/"
+"or modify it under the terms of the <citetitle>GNU General Public License</"
+"citetitle> as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version."
+msgstr ""
+"Niniejszy program wraz z projektem graficznym kostek jest wolnym "
+"oprogramowaniem; można go rozprowadzać dalej i/lub modyfikować na warunkach "
+"<citetitle>Powszechnej Licencji Publicznej GNU</citetitle>, wydanej przez "
+"Fundację Wolnego Oprogramowania (Free Software Foundation) - według wersji "
+"drugiej tej Licencji lub którejś z późniejszych wersji."
+
+#: C/mahjongg.xml:730(para)
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
+"License</citetitle> for more details."
+msgstr ""
+"Niniejszy program rozpowszechniany jest z nadzieją, iż będzie on użyteczny - "
+"jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji PRZYDATNOŚCI "
+"HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. W celu uzyskania "
+"bliższych informacji należy zapoznać się z <citetitle>Powszechną Licencją "
+"Publiczną GNU</citetitle>."
+
+#: C/mahjongg.xml:736(para)
+msgid ""
+"A copy of the <citetitle>GNU General Public License</citetitle> is included "
+"as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
+"obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <address> Free "
+"Software Foundation, Inc. <street>51 Franklin Street, Fifth Floor</"
+"street><city>Boston</city>, <state>MA</state><postcode>02110-1301</"
+"postcode><country>USA</country></address>"
+msgstr ""
+"Kopia <citetitle>Powszechnej Licencji Publicznej GNU</citetitle> znajduje "
+"się w załączniku do <citetitle>Podręcznika użytkownika GNOME</citetitle>. "
+"Istnieje także możliwość uzyskania kopii Licencji od Fundacji Wolnego "
+"Oprogramowania ze <ulink type=\"http\" url=\"http://www.fsf.org\">strony "
+"internetowej Fundacji</ulink> lub  wysyłając list z prośbą o kopię na adres: "
+"<address> Free Software Foundation, Inc. <street>51 Franklin Street, Fifth "
+"Floor</street><city>Boston</city>, <state>MA</state><postcode>02110-1301</"
+"postcode><country>USA</country></address>"
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: C/mahjongg.xml:0(None)
+msgid "translator-credits"
+msgstr "Aviary.pl <gnomepl@aviary.pl>, 2009"

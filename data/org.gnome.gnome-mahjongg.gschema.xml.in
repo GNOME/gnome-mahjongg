@@ -1,0 +1,21 @@
+<schemalist>
+  <schema id="org.gnome.gnome-mahjongg" path="/org/gnome/gnome-mahjongg/" gettext-domain="gnome-games">
+
+    <key name="show-toolbar" type="b">
+      <default>true</default>
+    </key>
+
+    <key name="tileset" type="s">
+      <default>"postmodern.svg"</default>
+    </key>
+
+    <key name="mapset" type="s">
+      <default>"Easy"</default>
+    </key>
+
+    <key name="bgcolour" type="s">
+      <default>"#34385b"</default>
+    </key>
+
+  </schema>
+</schemalist>

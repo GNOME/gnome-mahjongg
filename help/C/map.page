@@ -1,0 +1,102 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="map">
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="0.1" date="2012-03-08" status="final"/>
+
+    <credit type="author copyright">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+  </info>
+
+  <title>Change tile layout</title>
+
+  <p>There are 9 different layouts. To select a different tile layout:</p>
+  <steps>
+   <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p></item>
+   <item><p>Under <gui>Maps</gui> select a layout from the drop-down menu.</p></item>
+   <item><p>Click <gui>Close</gui></p></item>
+  </steps>
+
+  <p>Your new tile layout will take effect immediately.</p>
+
+<table>
+ <tr>
+   <td>
+  <media type="image" src="figures/layout-easy.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-ziggurat.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-bridges.png" width="200">
+    <p></p>
+  </media>
+    </td>
+   </tr>
+   <tr>
+     <td><p><em>Easy</em></p></td>
+     <td><p><em>The Ziggurat</em></p></td>
+     <td><p><em>Four Bridges</em></p></td>
+   </tr>
+</table>
+
+<table>
+ <tr>
+   <td>
+  <media type="image" src="figures/layout-cloud.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-tic-tac-toe.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-red-dragon.png" width="200">
+    <p></p>
+  </media>
+    </td>
+   </tr>
+   <tr>
+     <td><p><em>Cloud</em></p></td>
+     <td><p><em>Tic-tac-toe</em></p></td>
+     <td><p><em>Red Dragon</em></p></td>
+   </tr>
+</table>
+
+<table>
+ <tr>
+   <td>
+  <media type="image" src="figures/layout-pyramid-walls.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-conf-cross.png" width="200">
+    <p></p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/layout-difficult.png" width="200">
+    <p></p>
+  </media>
+    </td>
+   </tr>
+   <tr>
+     <td><p><em>Pyramid's Walls</em></p></td>
+     <td><p><em>Confounding Cross</em></p></td>
+     <td><p><em>Difficult</em></p></td>
+   </tr>
+</table>
+
+</page>

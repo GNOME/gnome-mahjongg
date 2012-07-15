@@ -1,0 +1,59 @@
+2008-03-07  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es/es.po: Updated Spanish translation.
+
+2008-02-12  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
+
+	* es/es.po: Updated Spanish translation.
+
+2008-02-05  Claude Paroz  <claude@2xlibre.net>
+
+	* fr/fr.po: Updated french translation.
+
+2008-01-16  Gil Forcada  <gforcada@gnome.org>
+
+	* ca/ca.po: Added Catalan translation by Joan Duran.
+	* ca/figures/*.png: Added Catalan screenshots.
+	* Makefile.am: Added ca to DOC_LINGUAS.
+
+2008-01-04  Jorge Gonzalez <jorgegonz@svn.gnome.org>
+
+	* es/es.po: Updated Spanish translation
+
+2008-01-03  Andreas Røsdal  <andreasr@gnome.org>
+
+	* C/mahjongg.xml: Remove duplicate links to toolbar in
+	documentation. Reported by Aloriel <aloriel@gmail.com>
+	in bug #437705.
+
+2007-12-31  Yannig Marchegay <yannig@marchegay.org>
+
+	* oc.po: Updated Occitan translation.
+
+2007-08-30  Claude Paroz  <claude@2xlibre.net>
+
+	* fr/*: Added French translation.
+	* Makefile.am: Added fr to DOC_LINGUAS.
+
+2007-08-01  Daniel Nylander <po@danielnylander.se>
+
+	* sv/sv.po: Updated Swedish translation.
+
+2007-07-22  Jorge Gonzalez <jorgegonz@svn.gnome.org>
+
+        * es/es.po: Updated Spanish translation
+
+2007-07-22  Claude Paroz <claude@2xlibre.net>
+
+	* C/mahjongg.xml: Updated doc.
+
+2007-05-11  Jorge Gonzalez <jorgegonz@svn.gnome.org>
+
+	* es/es.po: Added Spanish translation
+	* es/figures/*.png: Added screenshots
+	* Makefile.am: Added es to DOC_LINGUAS
+
+2007-04-30  Daniel Nylander <po@danielnylander.se>
+
+	* sv/sv.po: Added Swedish translation.
+	* Makefile.am: Added sv to DOC_LINGUAS.

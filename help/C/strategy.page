@@ -1,0 +1,50 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="strategy">
+  <info>
+    <link type="guide" xref="index#play" />
+    <revision version="0.1" date="2012-03-08" status="final"/>
+
+    <credit type="author copyright">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Strategy</title>
+
+  <p>Since each <link xref="map">tile layout</link> requires a different
+   approach, there is no one universal strategy. However, there are some
+   strategy tips to keep in mind while you play:</p>
+
+  <list>
+    <item><p>The general strategy is to keep removing matching tiles in such a
+     way that each removed tile will expose further tiles.  A good strategy
+     would be to expose new tiles with every set of tiles you match and
+     eliminate.</p></item>
+    <item><p>Choosing easily accessible tiles, such as those from the top levels,
+     is not beneficial.  This strategy leaves essential tiles under cover,
+     increasing your chances of losing the game.</p></item>
+    <item><p>Since you are <link xref="scoring">scored</link> by how quickly you
+     finish the game, time is the most important factor in the game. It is
+     therefore important to be fast.</p>
+
+      <note>
+        <list>
+          <item><p>Using the <link xref="hints">hint</link> option adds a
+           30-second penalty to your time.</p></item>
+          <item><p>Shuffling tiles adds a 60-second penalty to your
+           time.</p></item>
+        </list>
+      </note>
+
+    </item>
+  </list>
+</page>

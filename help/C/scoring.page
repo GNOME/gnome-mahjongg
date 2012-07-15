@@ -1,0 +1,26 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="scoring">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
+   <credit type="author">
+    <name>Chris Beiser</name>
+    <email>ctbeiser@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+  </info>
+
+  <title>Scoring</title>
+
+    <p>In <app>Mahjongg</app>, you are scored by how quickly you can complete a board.</p>
+    <p>To view the highscore board:</p>
+    <list>
+      <item><p><guiseq><gui>Game</gui><gui>Scores</gui></guiseq></p></item>
+    </list>
+    <note><p>The scores are stored on a per <link xref="map">map</link> basis.
+    You can view the highscores for a particular map by selecting it from the drop-down menu.</p></note>
+</page>

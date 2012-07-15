@@ -1,0 +1,42 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  id="index"
+  type="guide"
+  style="2column">
+
+  <info>
+    <title type="link" role="trail"><media type="image" src="figures/logo.png" /></title>
+    <title type="link">Mahjongg</title>
+    <title type="text">Mahjongg</title>
+    <desc>GNOME Mahjongg help.</desc>
+    <revision version="3.2.1" date="2012-03-08" status="final"/>
+    <credit type="author">
+      <name>Chris Beiser</name>
+      <email>ctbeiser@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+  </info>
+
+ <title><media type="image" src="figures/logo32.png">Mahjongg logo</media>Mahjongg</title>
+  <p>
+  Mahjongg is a simple pattern recognition game. You score points by matching identical tiles.
+  </p>
+
+  <section id="play" style="2column">
+    <title>Playing Mahjongg</title>
+  </section>
+
+  <section id="tips" style="2column">
+    <title>Useful tips</title>
+  </section>
+
+
+  <section id="advanced" style="2column">
+    <title>Advanced</title>
+  </section>
+
+  <section id="get-involved" style="2column">
+    <title>Get involved</title>
+  </section>
+</page>

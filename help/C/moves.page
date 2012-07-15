@@ -1,0 +1,32 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="moves">
+      
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <!--desc></desc-->
+    <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
+   <credit type="author">
+    <name>Chris Beiser</name>
+    <email>ctbeiser@gmail.com</email>
+   </credit>
+   <credit type="editor">
+     <name>Michael Hill</name>
+     <email>mdhillca@gmail.com</email>
+   </credit>
+   <license>
+     <p>Creative Commons Share Alike 3.0</p>
+   </license>
+  </info>
+
+  <title>Moves left</title>
+
+  <p>The <gui>Moves Left</gui> counter is located on the
+   <link xref="toolbar">toolbar</link>. It displays the number of different
+   moves that can be made. It can help you see how far you are from running out
+   of moves, and whether you've seen all possible moves.</p>
+
+  <media type="image" src="figures/moves-left.png">
+    <p>Mahjongg counters</p>
+  </media>
+</page>
