@@ -269,7 +269,20 @@ public class Game
             foreach (var t in tiles)
             {
                 foreach (var match in find_matches (t))
-                    matches.append (match);
+                {
+	                bool already_matched = false;
+	                foreach (var existing_match in matches)
+	                {
+		                if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0)
+		                {
+			                already_matched = true;
+			                break;
+		                }
+	                }
+
+	                if (!already_matched)
+		                matches.append (match);
+                }
             }
         }
         else
@@ -279,20 +292,7 @@ public class Game
                 if (t == tile || !tile_can_move (t))
                     continue;
 
-                if (!t.matches (tile))
-                    continue;
-
-                var already_matched = false;
-                foreach (var match in matches)
-                {
-                    if (match.tile0 == tile && match.tile1 == t)
-                    {
-                        already_matched = true;
-                        break;
-                    }
-                }
-
-                if (!already_matched)
+                if (t.matches (tile))
                     matches.append (new Match (t, tile));
             }       
         }
