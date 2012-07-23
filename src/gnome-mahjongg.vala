@@ -334,19 +334,12 @@ public class Mahjongg : Gtk.Application
         preferences_dialog.set_default_response (Gtk.ResponseType.CLOSE);
         preferences_dialog.response.connect (preferences_dialog_response_cb);
 
-        var top_grid = new Gtk.Grid ();
-        top_grid.border_width = 5;
-        top_grid.set_row_spacing (18);
-        top_grid.set_column_spacing (0);
-
-        var frame = new GnomeGamesSupport.Frame (_("Tiles"));
-        top_grid.attach (frame, 0, 0, 1, 1);
-
         var grid = new Gtk.Grid ();
+        grid.border_width = 5;
         grid.set_row_spacing (6);
-        grid.set_column_spacing (12);
+        grid.set_column_spacing (18);
 
-        var label = new Gtk.Label.with_mnemonic (_("_Tile set:"));
+        var label = new Gtk.Label.with_mnemonic (_("_Theme:"));
         label.set_alignment (0, 0.5f);
         grid.attach (label, 0, 0, 1, 1);
 
@@ -374,18 +367,9 @@ public class Mahjongg : Gtk.Application
         grid.attach (theme_combo, 1, 0, 1, 1);
         label.set_mnemonic_widget (theme_combo);
 
-        frame.add (grid);
-
-        frame = new GnomeGamesSupport.Frame (_("Maps"));
-        top_grid.attach (frame, 0, 1, 1, 1);
-
-        grid = new Gtk.Grid ();
-        grid.set_row_spacing (6);
-        grid.set_column_spacing (12);
-
-        label = new Gtk.Label.with_mnemonic (_("_Select map:"));
+        label = new Gtk.Label.with_mnemonic (_("_Map:"));
         label.set_alignment (0, 0.5f);
-        grid.attach (label, 0, 0, 1, 1);
+        grid.attach (label, 0, 1, 1, 1);
 
         var map_combo = new Gtk.ComboBox ();
         var map_store = new Gtk.ListStore (2, typeof (string), typeof (string));
@@ -406,32 +390,21 @@ public class Mahjongg : Gtk.Application
         }
         map_combo.changed.connect (map_changed_cb);
         map_combo.set_hexpand (true);
-        grid.attach (map_combo, 1, 0, 1, 1);
+        grid.attach (map_combo, 1, 1, 1, 1);
         label.set_mnemonic_widget (map_combo);
-
-        frame.add (grid);
-
-        frame = new GnomeGamesSupport.Frame (_("Colors"));
-        top_grid.attach (frame, 0, 2, 1, 1);
-
-        grid = new Gtk.Grid ();
-        grid.set_row_spacing (6);
-        grid.set_column_spacing (12);
 
         label = new Gtk.Label.with_mnemonic (_("_Background color:"));
         label.set_alignment (0, 0.5f);
-        grid.attach (label, 0, 0, 1, 1);
+        grid.attach (label, 0, 2, 1, 1);
 
         var widget = new Gtk.ColorButton ();
         widget.set_rgba (game_view.background_color);
         widget.color_set.connect (background_changed_cb);
         widget.set_hexpand (true);
-        grid.attach (widget, 1, 0, 1, 1);
+        grid.attach (widget, 1, 2, 1, 1);
         label.set_mnemonic_widget (widget);
 
-        frame.add (grid);
-
-        dialog_content_area.pack_start (top_grid, true, true, 0);
+        dialog_content_area.pack_start (grid, true, true, 0);
 
         preferences_dialog.show_all ();
     }
