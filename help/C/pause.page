@@ -6,28 +6,42 @@
     <link type="guide" xref="index#tips"/>
     
     <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
-   <credit type="author">
-    <name>Chris Beiser</name>
-    <email>ctbeiser@gmail.com</email>
-   </credit>
-   <credit type="editor">
-     <name>Michael Hill</name>
-     <email>mdhillca@gmail.com</email>
-   </credit>
-   <license>
-     <p>Creative Commons Share Alike 3.0</p>
-   </license>
+    <credit type="author">
+      <name>Chris Beiser</name>
+      <email>ctbeiser@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+     </credit>
+     <credit type="editor">
+       <name>Ekaterina Gerasimova</name>
+       <email>kittykat3756@gmail.com</email>
+     </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
   </info>
 
   <title>Pausing your game</title>
   
   <p>You can pause your current game using one of the following methods:</p>
 
-  <steps>
-    <item><p>The <gui>Pause</gui> button on the
-     <link xref="toolbar">toolbar</link>.</p></item>
-    <item><p>The <key>Pause</key> key on your keyboard.  Not all keyboards
-     have this key.</p></item>
-    <item><p>The <link xref="shortcuts">keyboard shortcut</link>.</p></item>
-  </steps>
+  <list>
+    <item>
+      <p>The <gui>Pause</gui> button in the
+      <link xref="toolbar">toolbar</link>.</p>
+    </item>
+  <comment>
+    <cite date="2012-07-26" href="mailto:kittykat3756@gmail.com">Kat</cite>
+    <p>The following two items do not work in 3.5.4</p>
+  </comment>
+<!--    <item>
+      <p>The <key>Pause</key> key on your keyboard. Not all keyboards have
+      this key.</p>
+    </item>
+    <item>
+      <p>The <link xref="shortcuts">keyboard shortcut</link>.</p>
+    </item>-->
+  </list>
 </page>
