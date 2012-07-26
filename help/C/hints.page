@@ -4,22 +4,26 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
-   <credit type="author">
-    <name>Chris Beiser</name>
-    <email>ctbeiser@gmail.com</email>
-   </credit>
-   <credit type="editor">
-    <name>Tiffany Antopolski</name>
-    <email>tiffany.antopolski@gmail.com</email>
-   </credit>
-   <credit type="editor">
-     <name>Michael Hill</name>
-     <email>mdhillca@gmail.com</email>
-   </credit>
-   <license>
-     <p>Creative Commons Share Alike 3.0</p>
-   </license>
+    <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
+    <credit type="author">
+      <name>Chris Beiser</name>
+      <email>ctbeiser@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
   </info>
 
   <title>Hints</title>
@@ -29,18 +33,18 @@
   exists.</p>
 
   <p><gui>Hint</gui> can be accessed by clicking
-   <guiseq><gui>Game</gui><gui>Hint</gui></guiseq>. Alternatively, use the
-   <gui>Hint</gui> button on the <link xref="toolbar">toolbar</link>, or press
-   <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
+  <guiseq><gui>Mahjongg</gui><gui>Hint</gui></guiseq>. Alternatively, use the
+  <gui>Hint</gui> button in the <link xref="toolbar">toolbar</link>, or press
+  <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
 
   <note>
     <p><gui>Hint</gui> can make Mahjongg too easy, and should be used
-     sparingly.</p>
+    sparingly.</p>
     <p>There is a 30-second penalty for each use of the "hint" option.</p>
   </note>
 
   <section id="hints-video">
-    <title>Video demonstation</title>
+    <title>Video demonstration</title>
     <media type="video" width="500" mime="application/ogg" src="figures/hints-video.ogv">
     <tt:tt xmlns:tt="http://www.w3.org/ns/ttml">
      <tt:body>

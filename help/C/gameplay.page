@@ -4,7 +4,7 @@
 
   <info>
     <link type="guide" xref="index#play"/>
-    <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
+    <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
    <credit type="author">
     <name>Chris Beiser</name>
     <email>ctbeiser@gmail.com</email>
@@ -13,28 +13,44 @@
      <name>Tiffany Antopolski</name>
      <email>tiffany.antopolski@gmail.com</email>
    </credit>
+   <credit type="editor">
+     <name>Ekaterina Gerasimova</name>
+     <email>kittykat3756@gmail.com</email>
+   </credit>
    <license>
      <p>Creative Commons Share Alike 3.0</p>
    </license>
   </info>
 
   <title>Basic gameplay</title>
-    <p>
-	Mahjongg is played by matching two identical tiles per turn. A tile is eligible for matching if no part of another tile is lying directly on it, and it has a free long edge on either the left or the right. You win by removing all tiles, and you are scored by the amount of time it takes you to do so.
-    </p>
-    <p>There are many different <link xref="map">tile layouts</link> to choose from.</p>
-    <p>
-      To match two tiles:
-    </p>
-    <steps>
-     <item><p>Click on the a tile you want to match. If it is an eligible tile, it will be highlighted.</p></item>
-     <item><p>Click on a matching tile. If it is a truely a matching tile, both tiles will vanish.</p></item>
-    </steps>
 
-    <section id="usage-video">
-      <title>Video demonstration</title>
-       <media type="video" mime="application/ogg" src="figures/mahjongg-video.ogv">
+  <p>Mahjongg is played by matching two identical tiles per turn. A tile is
+  eligible for matching if no part of another tile is lying directly on it, and
+  it has a free long edge on either the left or the right. You win by removing
+  all tiles, and you are scored by the amount of time it takes you to do so.
+  </p>
 
-        </media>
-    </section>
+  <p>There are many different <link xref="map">tile layouts</link> to choose
+  from.</p>
+
+  <p>To match two tiles:</p>
+
+  <steps>
+    <item>
+      <p>Click on the a tile you want to match. If it is an eligible tile, it
+      will be highlighted.</p>
+    </item>
+    <item>
+      <p>Click on a matching tile. If it is a truly a matching tile, both
+      tiles will vanish.</p>
+    </item>
+  </steps>
+
+  <section id="usage-video">
+  <title>Video demonstration</title>
+
+  <media type="video" mime="application/ogg"
+  src="figures/mahjongg-video.ogv"><p>Video of gameplay</p></media>
+
+  </section>
 </page>

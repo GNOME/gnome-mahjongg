@@ -3,7 +3,7 @@
       id="toolbar">
   <info>
     <link type="guide" xref="index#tips"/>
-    <revision version="0.1" date="2012-03-08" status="final"/>
+    <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
@@ -13,6 +13,10 @@
       <name>Michael Hill</name>
       <email>mdhillca@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+    </credit>
 
     <desc></desc>
   </info>
@@ -20,7 +24,7 @@
   <title>Show/hide the toolbar</title>
 
   <p>To show or hide the toolbar, click
-  <guiseq><gui>Settings</gui><gui>Toolbar</gui></guiseq>.</p>
+  <guiseq><gui>Mahjongg</gui><gui>Toolbar</gui></guiseq>.</p>
 
   <p>The toolbar, located under the menu bar, lets you perform common actions
   with your mouse. To use a toolbar item, just click on it. The buttons, from

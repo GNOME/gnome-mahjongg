@@ -3,11 +3,16 @@
       id="map">
   <info>
     <link type="guide" xref="index#play"/>
-    <revision version="0.1" date="2012-03-08" status="final"/>
+    <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
 
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
+      <years>2012</years>
+    </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
       <years>2012</years>
     </credit>
 
@@ -16,13 +21,18 @@
   <title>Change tile layout</title>
 
   <p>There are 9 different layouts. To select a different tile layout:</p>
+
   <steps>
-   <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p></item>
-   <item><p>Under <gui>Maps</gui> select a layout from the drop-down menu.</p></item>
-   <item><p>Click <gui>Close</gui></p></item>
+    <item><p>Click
+    <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>.</p></item>
+    <item><p>Under <gui>Maps</gui> select a layout from the drop-down
+    menu.</p></item>
+    <item><p>Click <gui>Close</gui></p></item>
   </steps>
 
-  <p>Your new tile layout will take effect immediately.</p>
+  <p>Your new tile layout will take effect immediately unless you have already
+  started a game and chose for the effect to take place after you are
+  finished.</p>
 
 <table>
  <tr>
