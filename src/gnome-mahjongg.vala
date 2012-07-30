@@ -262,7 +262,7 @@ public class Mahjongg : Gtk.Application
 
             var p = highscores.add_time_score ((seconds / 60) * 1.0 + (seconds % 60) / 100.0);
             var scores_dialog = new GnomeGamesSupport.ScoresDialog (window, highscores, _("Mahjongg Scores"));
-            scores_dialog.set_category_description (_("Map:"));
+            scores_dialog.set_category_description (_("Layout:"));
             var title = _("Puzzle solved!");
             var message = _("You didn't make the top ten, better luck next time.");
             if (p == 1)
@@ -367,7 +367,7 @@ public class Mahjongg : Gtk.Application
         grid.attach (theme_combo, 1, 0, 1, 1);
         label.set_mnemonic_widget (theme_combo);
 
-        label = new Gtk.Label.with_mnemonic (_("_Map:"));
+        label = new Gtk.Label.with_mnemonic (_("_Layout:"));
         label.set_alignment (0, 0.5f);
         grid.attach (label, 0, 1, 1, 1);
 
@@ -539,7 +539,7 @@ public class Mahjongg : Gtk.Application
     private void scores_cb ()
     {
         var map_scores_dialog = new GnomeGamesSupport.ScoresDialog (window, highscores, _("Mahjongg Scores"));
-        map_scores_dialog.set_category_description (_("Map:"));
+        map_scores_dialog.set_category_description (_("Layout:"));
         map_scores_dialog.run ();
         map_scores_dialog.destroy ();
     }
