@@ -47,15 +47,50 @@ public class Game
     public int move_number;
 
     /* Hint animation */
-    private uint hint_timer = 0;
+    private uint hint_timout = 0;
     public uint hint_blink_counter = 0;
+
+    /* Game timer */
+    private double clock_elapsed;
+    private Timer? clock;
+    private uint clock_timeout;
 
     public signal void redraw_tile (Tile tile);
     public signal void moved ();
+    public signal void paused_changed ();
+    public signal void tick ();
 
     public bool started
     {
         get { return move_number > 1; }
+    }
+
+    public double elapsed
+    {
+        get
+        {
+            if (clock == null)
+                return 0.0;
+            return clock_elapsed + clock.elapsed ();
+        }
+    }
+
+    private bool _paused = false;
+    public bool paused
+    {
+        set
+        {
+            _paused = value;
+            if (clock != null)
+            {
+                if (value)
+                    stop_clock ();
+                else
+                    continue_clock ();
+            }
+            paused_changed ();
+        }
+        get { return _paused; }
     }
 
     private Tile? _selected_tile = null;
@@ -169,6 +204,8 @@ public class Game
 
     public void reset ()
     {
+        clock = null;
+        clock_elapsed = 0.0;
         selected_tile = null;
         set_hint (null, null);
         foreach (var tile in tiles)
@@ -196,19 +233,24 @@ public class Game
         hint_tiles[0] = tile0;
         hint_tiles[1] = tile1;
         hint_blink_counter = 6;
-        if (hint_timer != 0)
-            Source.remove (hint_timer);
-        hint_timer = Timeout.add (250, hint_timeout_cb);
+        if (hint_timout != 0)
+            Source.remove (hint_timout);
+        hint_timout = Timeout.add (250, hint_timeout_cb);
         hint_timeout_cb ();
+
+        /* 30s penalty */
+        start_clock ();
+        clock_elapsed += 30.0;
+        tick ();
     }
 
     private bool hint_timeout_cb ()
     {
         if (hint_blink_counter == 0)
         {
-            if (hint_timer != 0)
-                Source.remove (hint_timer);
-            hint_timer = 0;
+            if (hint_timout != 0)
+                Source.remove (hint_timout);
+            hint_timout = 0;
             return false;
         }
         hint_blink_counter--;
@@ -326,11 +368,56 @@ public class Game
             if (tile.move_number >= move_number)
                 tile.move_number = 0;
 
+        if (complete)
+            stop_clock ();
+        else
+            start_clock ();        
+
         moved ();
 
         return true;
     }
-    
+
+    private void start_clock ()
+    {
+        if (clock == null)
+            clock = new Timer ();
+        timeout_cb ();
+    }
+
+    private void stop_clock ()
+    {
+        if (clock == null)
+            return;
+        if (clock_timeout != 0)
+            Source.remove (clock_timeout);
+        clock_timeout = 0;
+        clock.stop ();
+        tick ();
+    }
+
+    private void continue_clock ()
+    {
+        if (clock == null)
+            clock = new Timer ();
+        else
+            clock.continue ();
+        timeout_cb ();
+    }
+
+    private bool timeout_cb ()
+    {
+        /* Notify on the next tick */
+        var elapsed = clock.elapsed ();
+        var next = (int) (elapsed + 1.0);
+        var wait = next - elapsed;
+        clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
+
+        tick ();
+
+        return false;
+    }
+
     public bool can_undo
     {
         get { return move_number > 1; }

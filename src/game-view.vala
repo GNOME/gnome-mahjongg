@@ -20,6 +20,7 @@ public class GameView : Gtk.DrawingArea
         {
             _game = value;
             _game.redraw_tile.connect (redraw_tile_cb);
+            _game.paused_changed.connect (paused_changed_cb);
             queue_draw ();
         }
     }
@@ -31,13 +32,6 @@ public class GameView : Gtk.DrawingArea
         set { _theme = value; tile_pattern = null; queue_draw (); }
     }
     
-    private bool _paused = false;
-    public bool paused
-    {
-        get { return _paused; }
-        set { _paused = value; queue_draw (); }
-    }
-
     public GameView ()
     {
         can_focus = true;
@@ -98,7 +92,7 @@ public class GameView : Gtk.DrawingArea
             /* Select image for this tile, or blank image if paused */
             var texture_x = get_image_offset (tile.number) * image_width;
             var texture_y = 0;
-            if (paused)
+            if (game.paused)
             {
                 texture_x = get_image_offset (-1) * image_width;
                 texture_y = 0;
@@ -122,7 +116,7 @@ public class GameView : Gtk.DrawingArea
         }
 
         /* Draw pause overlay */
-        if (paused)
+        if (game.paused)
         {
             cr.set_source_rgba (0, 0, 0, 0.75);
             cr.paint ();
@@ -206,6 +200,11 @@ public class GameView : Gtk.DrawingArea
         queue_draw_area (x, y, tile_pattern_width, tile_pattern_height);
     }
 
+    private void paused_changed_cb ()
+    {
+        queue_draw ();
+    }
+
     public override bool draw (Cairo.Context cr)
     {
         if (game == null)
@@ -220,7 +219,7 @@ public class GameView : Gtk.DrawingArea
 
     public override bool button_press_event (Gdk.EventButton event)
     {
-        if (game == null || paused)
+        if (game == null || game.paused)
             return false;
 
         /* Ignore the 2BUTTON and 3BUTTON events. */

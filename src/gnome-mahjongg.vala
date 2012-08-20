@@ -12,7 +12,7 @@ public class Mahjongg : Gtk.Application
     private Gtk.UIManager ui_manager;
     private Gtk.Toolbar toolbar;
     private Gtk.Label moves_label;
-    private GnomeGamesSupport.Clock game_clock;
+    private Gtk.Label clock_label;
     private Gtk.Dialog? preferences_dialog = null;
 
     private GnomeGamesSupport.PauseAction pause_action;
@@ -64,14 +64,8 @@ public class Mahjongg : Gtk.Application
         group_box.pack_start (moves_label, false, false, 0);
         status_box.pack_start (group_box, false, false, 0);
 
-        group_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var game_clock_label = new Gtk.Label (_("Time:"));
-        group_box.pack_start (game_clock_label, false, false, 0);
-        spacer = new Gtk.Label (" ");
-        group_box.pack_start (spacer, false, false, 0);
-        game_clock = new GnomeGamesSupport.Clock ();
-        group_box.pack_start (game_clock, false, false, 0);
-        status_box.pack_start (group_box, false, false, 0);
+        clock_label = new Gtk.Label ("");
+        status_box.pack_start (clock_label, false, false, 0);
         
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
@@ -129,6 +123,7 @@ public class Mahjongg : Gtk.Application
         leave_fullscreen_action.set_visible_policy (GnomeGamesSupport.VisiblePolicy.ON_FULLSCREEN);
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
+        tick_cb ();
     }
 
     public override void activate ()
@@ -141,7 +136,7 @@ public class Mahjongg : Gtk.Application
         pause_action.sensitive = game_view.game.move_number > 1;
         restart_action.sensitive = game_view.game.move_number > 1;
 
-        if (game_view.paused)
+        if (game_view.game.paused)
         {
             hint_action.sensitive = false;
             undo_action.sensitive = false;
@@ -248,17 +243,11 @@ public class Mahjongg : Gtk.Application
 
     private void moved_cb ()
     {
-        /* Start game once moved */
-        if (game_clock.get_seconds () == 0)
-            game_clock.start ();
-
         update_ui ();
 
         if (game_view.game.complete)
         {
-            game_clock.stop ();
-
-            var seconds = game_clock.get_seconds ();
+            var seconds = (int) (game_view.game.elapsed + 0.5);
 
             var p = highscores.add_time_score ((seconds / 60) * 1.0 + (seconds % 60) / 100.0);
             var scores_dialog = new GnomeGamesSupport.ScoresDialog (window, highscores, _("Mahjongg Scores"));
@@ -461,10 +450,6 @@ public class Mahjongg : Gtk.Application
             var match = matches.nth_data (n);
             game_view.game.set_hint (match.tile0, match.tile1);
         }
-
-        /* 30s penalty */
-        game_clock.start ();
-        game_clock.add_seconds (30);
     }
 
     private void about_cb ()
@@ -524,14 +509,9 @@ public class Mahjongg : Gtk.Application
 
     private void pause_cb (GnomeGamesSupport.PauseAction action)
     {
-        game_view.paused = action.get_is_paused ();
+        game_view.game.paused = action.get_is_paused ();
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
-
-        if (game_view.paused)
-            game_clock.stop ();
-        else
-            game_clock.start ();
 
         update_ui ();
     }
@@ -562,7 +542,7 @@ public class Mahjongg : Gtk.Application
 
     private void redo_cb ()
     {
-        if (game_view.paused)
+        if (game_view.game.paused)
             return;
 
         game_view.game.redo ();
@@ -578,11 +558,6 @@ public class Mahjongg : Gtk.Application
     private void restart_game ()
     {
         game_view.game.reset ();
-
-        /* Prepare clock */
-        game_clock.stop ();
-        game_clock.reset ();
-
         update_ui ();
     }
 
@@ -602,6 +577,7 @@ public class Mahjongg : Gtk.Application
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
+        game_view.game.tick.connect (tick_cb);
         highscores.set_category (game_view.game.map.score_name);
 
         /* Set window title */
@@ -609,11 +585,18 @@ public class Mahjongg : Gtk.Application
         /* Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon' */
         window.set_title (_("Mahjongg - %s").printf (display_name));
 
-        /* Prepare clock */
-        game_clock.stop ();
-        game_clock.reset ();
-
         update_ui ();
+    }
+
+    private void tick_cb ()
+    {
+        var elapsed = 0;
+        if (game_view.game != null)
+            elapsed = (int) (game_view.game.elapsed + 0.5);
+        var hours = elapsed / 3600;
+        var minutes = (elapsed - hours * 3600) / 60;
+        var seconds = elapsed - hours * 3600 - minutes * 60;
+        clock_label.set_text ("%s: %02d:%02d:%02d".printf (_("Time"), hours, minutes, seconds));
     }
 
     private void help_cb ()
