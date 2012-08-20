@@ -19,7 +19,6 @@ public class Mahjongg : Gtk.Application
     private Gtk.Action hint_action;
     private Gtk.Action redo_action;
     private Gtk.Action undo_action;
-    private Gtk.Action restart_action;
     private GnomeGamesSupport.FullscreenAction fullscreen_action;
     private GnomeGamesSupport.FullscreenAction leave_fullscreen_action;
 
@@ -134,7 +133,6 @@ public class Mahjongg : Gtk.Application
     private void update_ui ()
     {
         pause_action.sensitive = game_view.game.started;
-        restart_action.sensitive = game_view.game.started;
 
         if (game_view.game.paused)
         {
