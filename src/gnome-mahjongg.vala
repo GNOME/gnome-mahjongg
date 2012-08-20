@@ -133,8 +133,8 @@ public class Mahjongg : Gtk.Application
 
     private void update_ui ()
     {
-        pause_action.sensitive = game_view.game.move_number > 1;
-        restart_action.sensitive = game_view.game.move_number > 1;
+        pause_action.sensitive = game_view.game.started;
+        restart_action.sensitive = game_view.game.started;
 
         if (game_view.game.paused)
         {
@@ -450,6 +450,8 @@ public class Mahjongg : Gtk.Application
             var match = matches.nth_data (n);
             game_view.game.set_hint (match.tile0, match.tile1);
         }
+
+        update_ui ();
     }
 
     private void about_cb ()

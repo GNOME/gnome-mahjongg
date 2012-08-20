@@ -62,7 +62,7 @@ public class Game
 
     public bool started
     {
-        get { return move_number > 1; }
+        get { return clock != null; }
     }
 
     public double elapsed
