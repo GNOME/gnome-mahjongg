@@ -8,19 +8,11 @@ public class Mahjongg : Gtk.Application
 
     private Gtk.ApplicationWindow window;
     private GameView game_view;
+    private Gtk.ToolButton pause_button;
     private Gtk.ToolItem status_item;
-    private Gtk.UIManager ui_manager;
-    private Gtk.Toolbar toolbar;
     private Gtk.Label moves_label;
     private Gtk.Label clock_label;
     private Gtk.Dialog? preferences_dialog = null;
-
-    private GnomeGamesSupport.PauseAction pause_action;
-    private Gtk.Action hint_action;
-    private Gtk.Action redo_action;
-    private Gtk.Action undo_action;
-    private GnomeGamesSupport.FullscreenAction fullscreen_action;
-    private GnomeGamesSupport.FullscreenAction leave_fullscreen_action;
 
     public Mahjongg ()
     {
@@ -68,11 +60,6 @@ public class Mahjongg : Gtk.Application
         
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
-        ui_manager = new Gtk.UIManager ();
-
-        create_menus (ui_manager);
-        window.add_accel_group (ui_manager.get_accel_group ());
-
         /* Create the menus */
         var menu = new Menu ();
         var section = new Menu ();
@@ -94,9 +81,38 @@ public class Mahjongg : Gtk.Application
         game_view.button_press_event.connect (view_button_press_event);        
         game_view.set_size_request (600, 400);
 
-        toolbar = (Gtk.Toolbar) ui_manager.get_widget ("/Toolbar");
+        var toolbar = new Gtk.Toolbar ();
         toolbar.show_arrow = false;
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
+
+        var new_game_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        new_game_button.action_name = "app.new-game";
+        new_game_button.show ();
+        toolbar.insert (new_game_button, -1);
+
+        var undo_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_UNDO_MOVE);
+        undo_button.action_name = "app.undo";
+        undo_button.is_important = true;
+        undo_button.show ();
+        toolbar.insert (undo_button, -1);
+
+        var redo_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_REDO_MOVE);
+        redo_button.action_name = "app.redo";
+        redo_button.is_important = true;
+        redo_button.show ();
+        toolbar.insert (redo_button, -1);
+
+        var hint_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_HINT);
+        hint_button.action_name = "app.hint";
+        hint_button.is_important = true;
+        hint_button.show ();
+        toolbar.insert (hint_button, -1);
+
+        pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
+        pause_button.action_name = "app.pause";
+        pause_button.is_important = true;
+        pause_button.show ();
+        toolbar.insert (pause_button, -1);
 
         var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
         status_alignment.add (status_box);
@@ -119,7 +135,6 @@ public class Mahjongg : Gtk.Application
 
         game_view.grab_focus ();
 
-        leave_fullscreen_action.set_visible_policy (GnomeGamesSupport.VisiblePolicy.ON_FULLSCREEN);
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
         tick_cb ();
@@ -132,19 +147,24 @@ public class Mahjongg : Gtk.Application
 
     private void update_ui ()
     {
-        pause_action.sensitive = game_view.game.started;
+        var pause_action = lookup_action ("pause") as SimpleAction;
+        var hint_action = lookup_action ("hint") as SimpleAction;
+        var undo_action = lookup_action ("undo") as SimpleAction;
+        var redo_action = lookup_action ("redo") as SimpleAction;
+
+        pause_action.set_enabled (game_view.game.started);
 
         if (game_view.game.paused)
         {
-            hint_action.sensitive = false;
-            undo_action.sensitive = false;
-            redo_action.sensitive = false;
+            hint_action.set_enabled (false);
+            undo_action.set_enabled (false);
+            redo_action.set_enabled (false);
         }
         else
         {
-            hint_action.sensitive = game_view.game.moves_left > 0;
-            undo_action.sensitive = game_view.game.can_undo;
-            redo_action.sensitive = game_view.game.can_redo;
+            hint_action.set_enabled (game_view.game.moves_left > 0);
+            undo_action.set_enabled (game_view.game.can_undo);
+            redo_action.set_enabled (game_view.game.can_redo);
         }
 
         moves_label.set_text ("%2u".printf (game_view.game.moves_left));
@@ -198,9 +218,9 @@ public class Mahjongg : Gtk.Application
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
-        if (pause_action.get_is_paused ())
+        if (game_view.game.paused)
         {
-            pause_action.set_is_paused (false);
+            game_view.game.paused = false;
             return true;
         }
 
@@ -488,11 +508,15 @@ public class Mahjongg : Gtk.Application
                                null);
     }
 
-    private void pause_cb (GnomeGamesSupport.PauseAction action)
+    private void pause_cb ()
     {
-        game_view.game.paused = action.get_is_paused ();
+        game_view.game.paused = !game_view.game.paused;
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
+        if (game_view.game.paused)
+            pause_button.stock_id = GnomeGamesSupport.STOCK_RESUME_GAME;
+        else
+            pause_button.stock_id = GnomeGamesSupport.STOCK_PAUSE_GAME;
 
         update_ui ();
     }
@@ -595,6 +619,10 @@ public class Mahjongg : Gtk.Application
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",      new_game_cb     },
+        { "undo",          undo_cb         },
+        { "redo",          redo_cb         },
+        { "hint",          hint_cb         },
+        { "pause",         pause_cb        },
         { "restart-game",  restart_game_cb },
         { "scores",        scores_cb       },
         { "preferences",   preferences_cb  },
@@ -602,60 +630,6 @@ public class Mahjongg : Gtk.Application
         { "about",         about_cb        },
         { "quit",          quit_cb         }
     };
-
-    private const string ui_description =
-      "<ui>" +
-      "  <toolbar name='Toolbar'>" +
-      "    <toolitem action='NewGame'/>" +
-      "    <toolitem action='UndoMove'/>" +
-      "    <toolitem action='RedoMove'/>" +
-      "    <toolitem action='Hint'/>" +
-      "    <toolitem action='PauseGame'/>" +
-      "    <toolitem action='LeaveFullscreen'/>" +
-      "  </toolbar>" +
-      "</ui>";
-
-    private const Gtk.ActionEntry actions[] =
-    {
-        {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, N_("Start a new game"), new_game_cb},
-        {"UndoMove", GnomeGamesSupport.STOCK_UNDO_MOVE, null, null, N_("Undo the last move"), undo_cb},
-        {"RedoMove", GnomeGamesSupport.STOCK_REDO_MOVE, null, null, N_("Redo the last move"), redo_cb},
-        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb}
-    };
-
-    private void create_menus (Gtk.UIManager ui_manager)
-    {
-        var action_group = new Gtk.ActionGroup ("group");
-
-        action_group.set_translation_domain (GETTEXT_PACKAGE);
-        action_group.add_actions (actions, this);
-
-        ui_manager.insert_action_group (action_group, 0);
-        try
-        {
-            ui_manager.add_ui_from_string (ui_description, -1);
-        }
-        catch (Error e)
-        {
-        }
-
-        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
-        pause_action.is_important = true;
-        pause_action.state_changed.connect (pause_cb);
-        action_group.add_action_with_accel (pause_action, null);
-        hint_action = action_group.get_action ("Hint");
-        hint_action.is_important = true;
-        undo_action = action_group.get_action ("UndoMove");
-        undo_action.is_important = true;
-        redo_action = action_group.get_action ("RedoMove");
-        redo_action.is_important = true;
-
-        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
-        action_group.add_action_with_accel (fullscreen_action, null);
-
-        leave_fullscreen_action = new GnomeGamesSupport.FullscreenAction ("LeaveFullscreen", window);
-        action_group.add_action_with_accel (leave_fullscreen_action, null);
-    }
 
     private void load_maps ()
     {
