@@ -25,8 +25,8 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private GnomeGamesSupport.Preimage? _theme = null;
-    public GnomeGamesSupport.Preimage? theme
+    private string? _theme = null;
+    public string? theme
     {
         get { return _theme; }
         set { _theme = value; tile_pattern = null; queue_draw (); }
@@ -68,7 +68,7 @@ public class GameView : Gtk.DrawingArea
 
             var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
             var c = new Cairo.Context (surface);
-            var pixbuf = theme.render (width, height);
+            var pixbuf = load_theme (width, height);
             if (pixbuf == null)
                 return;
             Gdk.cairo_set_source_pixbuf (c, pixbuf, 0, 0);
@@ -133,6 +133,27 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
+    private Gdk.Pixbuf load_theme (int width, int height)
+    {
+        try
+        {
+            return Rsvg.pixbuf_from_file_at_size (theme, width, height);
+        }
+        catch (Error e)
+        {
+        }
+        
+        try
+        {
+            return new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
+        }
+        catch (Error e)
+        {
+        }
+
+        return new Gdk.Pixbuf (Gdk.Colorspace.RGB, true, 8, width, height);
+    }
+
     private void update_dimensions ()
     {
         var width = get_allocated_width ();
@@ -141,8 +162,12 @@ public class GameView : Gtk.DrawingArea
         if (theme == null)
             return;
 
+        int theme_width, theme_height;
+        if (!get_theme_dimensions (out theme_width, out theme_height))
+            return;
+            
         /* Get aspect ratio from theme - contains 43x2 tiles */
-        var aspect = ((double) theme.get_height () / 2) / ((double) theme.get_width () / 43);
+        var aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
 
         /* Need enough space for the whole map and one unit border */
         var map_width = game.map.width + 2.0;
@@ -163,6 +188,22 @@ public class GameView : Gtk.DrawingArea
         /* Center the map */
         x_offset = (int) (width - game.map.width * unit_width) / 2;
         y_offset = (int) (height - game.map.height * unit_height) / 2;
+    }
+
+    private bool get_theme_dimensions (out int width, out int height)
+    {
+        try
+        {
+            var svg = new Rsvg.Handle.from_file (theme);
+            width = svg.width;
+            height = svg.height;
+            return true;
+        }
+        catch (Error e)
+        {
+            Gdk.Pixbuf.get_file_info (theme, out width, out height);
+            return true;
+        }
     }
     
     private void get_tile_position (Tile tile, out int x, out int y)

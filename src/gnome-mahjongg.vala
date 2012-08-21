@@ -164,12 +164,7 @@ public class Mahjongg : Gtk.Application
         if (key == "tileset")
         {
             var theme = settings.get_string ("tileset");
-            game_view.theme = load_theme_texture (theme);
-            if (game_view.theme == null)
-            {
-                warning ("Unable to load theme %s, falling back to default", theme);
-                game_view.theme = load_theme_texture ("postmodern.svg", true);
-            }
+            game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
         }
         else if (key == "bgcolour")
         {
@@ -197,20 +192,6 @@ public class Mahjongg : Gtk.Application
             }
             else
                 new_game ();
-        }
-    }
-
-    private GnomeGamesSupport.Preimage? load_theme_texture (string filename, bool fail_on_error = false)
-    {
-        var path = Path.build_filename (DATA_DIRECTORY, "themes", filename);
-        try
-        {
-            return new GnomeGamesSupport.Preimage.from_file (path);
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load theme %s: %s", filename, path);
-            return null;
         }
     }
 

@@ -11,6 +11,7 @@ gnome_mahjongg_SOURCES = 	\
 gnome_mahjongg_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
+	--pkg librsvg-2.0 \
 	--vapidir $(top_srcdir)/libgames-support \
 	--pkg GnomeGamesSupport-1.0
 
