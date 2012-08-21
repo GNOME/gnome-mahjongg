@@ -683,10 +683,23 @@ public class Mahjongg : Gtk.Application
         /* Add the builtin map */
         maps.append (new Map.builtin ());
 
-        var filelist = new GnomeGamesSupport.FileList ("*.map", ".", Path.build_filename (DATA_DIRECTORY, "maps"), null);
-        for (var i = 0; i < filelist.length (); i++)
+        Dir dir;
+        try
         {
-            var filename = filelist.get_nth (i);
+            dir = Dir.open (Path.build_filename (DATA_DIRECTORY, "maps"));
+        }
+        catch (FileError e)
+        {
+            return;
+        }
+        while (true)
+        {
+            var filename = dir.read_name ();
+            if (filename == null)
+                break;
+
+            if (!filename.has_suffix (".map"))
+                continue;
 
             var loader = new MapLoader ();
             try
