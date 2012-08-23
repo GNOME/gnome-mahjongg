@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.master\n"
 "POT-Creation-Date: 2012-08-11 22:44+0000\n"
-"PO-Revision-Date: 2012-08-22 00:58+0200\n"
+"PO-Revision-Date: 2012-08-23 13:41+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team:  <el@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -455,11 +455,11 @@ msgstr "Να αντιγράψετε, να διανείμετε και να με�
 
 #: C/license.page:29(item/title)
 msgid "<em>To remix</em>"
-msgstr "<em>Να τροποιήσετε</em>"
+msgstr "<em>Να τροποποιήσετε</em>"
 
 #: C/license.page:30(item/p)
 msgid "To adapt the work."
-msgstr "Να τροποποιήσετε το έργο."
+msgstr "Να προσαρμόσετε το έργο."
 
 #: C/license.page:33(page/p)
 msgid "Under the following conditions:"
