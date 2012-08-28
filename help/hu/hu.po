@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"POT-Creation-Date: 2012-06-22 05:23+0000\n"
-"PO-Revision-Date: 2012-07-23 14:31+0200\n"
+"POT-Creation-Date: 2012-08-05 09:25+0000\n"
+"PO-Revision-Date: 2012-08-28 14:29+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.4\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -48,8 +48,10 @@ msgstr "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:21(media)
 msgctxt "_"
-msgid "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-msgstr "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+msgid ""
+"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+msgstr ""
+"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
 
 #: C/index.page:8(info/title)
 msgctxt "link"
@@ -75,11 +77,11 @@ msgstr "Chris Beiser"
 
 #: C/index.page:17(license/p) C/bug-filing.page:15(license/p)
 #: C/choosing.page:14(license/p) C/develop.page:15(license/p)
-#: C/documentation.page:13(license/p) C/gameplay.page:17(license/p)
-#: C/hints.page:21(license/p) C/moves.page:18(license/p)
-#: C/pause.page:18(license/p) C/rules.page:21(license/p)
-#: C/scoring.page:13(license/p) C/shortcuts.page:18(license/p)
-#: C/translate.page:19(license/p)
+#: C/documentation.page:13(license/p) C/gameplay.page:21(license/p)
+#: C/hints.page:25(license/p) C/moves.page:18(license/p)
+#: C/pause.page:22(license/p) C/rules.page:21(license/p)
+#: C/scoring.page:17(license/p) C/shortcuts.page:18(license/p)
+#: C/translate.page:23(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -221,8 +223,7 @@ msgid ""
 "community. You are welcome to participate."
 msgstr ""
 "A <app>GNOME játékokat</app> egy önkéntes közösség fejleszti és tartja "
-"karban. "
-"Közreműködését szívesen fogadjuk!"
+"karban. Közreműködését szívesen fogadjuk!"
 
 #: C/develop.page:23(page/p)
 msgid ""
@@ -233,8 +234,8 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Ha szeretne <link href=\"https://live.gnome.org/GnomeGames/Contributing\">"
-"közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
+"Ha szeretne <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
 "fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
 "\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
@@ -259,8 +260,8 @@ msgid ""
 "gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
-"A dokumentációs projekthez csatlakozáshoz keresse fel az <link "
-"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
+"A dokumentációs projekthez csatlakozáshoz keresse fel az <link href="
+"\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
 "\">irc</link> csatornát vagy a <link href=\"http://mail.gnome.org/mailman/"
 "listinfo/gnome-doc-list\">levelezőlistát</link>."
 
@@ -276,7 +277,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/gameplay.page:36(media)
+#: C/gameplay.page:53(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/mahjongg-video.ogv' "
@@ -285,11 +286,17 @@ msgstr ""
 "external ref='figures/mahjongg-video.ogv' "
 "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
 
-#: C/gameplay.page:21(page/title)
+#: C/gameplay.page:17(credit/name) C/hints.page:21(credit/name)
+#: C/map.page:14(credit/name) C/pause.page:18(credit/name)
+#: C/toolbar.page:17(credit/name) C/translate.page:19(credit/name)
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#: C/gameplay.page:25(page/title)
 msgid "Basic gameplay"
 msgstr "Alapvető játékmenet"
 
-#: C/gameplay.page:22(page/p)
+#: C/gameplay.page:27(page/p)
 msgid ""
 "Mahjongg is played by matching two identical tiles per turn. A tile is "
 "eligible for matching if no part of another tile is lying directly on it, "
@@ -297,51 +304,60 @@ msgid ""
 "removing all tiles, and you are scored by the amount of time it takes you to "
 "do so."
 msgstr ""
-"A Mahjonggot két azonos kő körönkénti párosításával játsszák. Egy kő "
-"akkor párosítható, ha közvetlenül egy másik azt nem fedi és van egy szabad "
-"éle bal vagy jobb oldalon. Az összes kő eltávolításával nyer a játékos, "
-"és erre az eltelt idő alapján kap pontokat."
+"A Mahjonggot két azonos kő körönkénti párosításával játsszák. Egy kő akkor "
+"párosítható, ha közvetlenül egy másik azt nem fedi és van egy szabad éle bal "
+"vagy jobb oldalon. Az összes kő eltávolításával nyer a játékos, és erre az "
+"eltelt idő alapján kap pontokat."
 
-#: C/gameplay.page:25(page/p)
+#: C/gameplay.page:33(page/p)
 msgid ""
 "There are many different <link xref=\"map\">tile layouts</link> to choose "
 "from."
 msgstr ""
-"Különböző <link xref=\"map\">kőelrendezések</link> közül lehet "
-"választani."
+"Különböző <link xref=\"map\">kőelrendezések</link> közül lehet választani."
 
-#: C/gameplay.page:26(page/p)
+#: C/gameplay.page:36(page/p)
 msgid "To match two tiles:"
 msgstr "Két kő párosítása:"
 
-#: C/gameplay.page:30(item/p)
+#: C/gameplay.page:40(item/p)
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
 msgstr ""
-"Kattintson arra a kőre, amelyet párosítani szeretne. Ha az adott kő "
-"alkalmas a műveletre, akkor ki lesz emelve."
+"Kattintson arra a kőre, amelyet párosítani szeretne. Ha az adott kő alkalmas "
+"a műveletre, akkor ki lesz emelve."
 
-#: C/gameplay.page:31(item/p)
+#: C/gameplay.page:44(item/p)
+#| msgid ""
+#| "Click on a matching tile. If it is a truely a matching tile, both tiles "
+#| "will vanish."
 msgid ""
-"Click on a matching tile. If it is a truely a matching tile, both tiles will "
+"Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
 msgstr ""
-"Kattintson a párosítandó kőre. Ha az tényleg azonos, akkor mindkét "
-"kő eltűnik."
+"Kattintson a párosítandó kőre. Ha az tényleg azonos, akkor mindkét kő "
+"eltűnik."
 
-#: C/gameplay.page:35(section/title)
+#: C/gameplay.page:50(section/title) C/hints.page:47(section/title)
 msgid "Video demonstration"
 msgstr "Videóbemutató"
+
+#: C/gameplay.page:53(media/p)
+#| msgid "Basic gameplay"
+msgid "Video of gameplay"
+msgstr "Videó a játékmenetről"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/hints.page:44(media)
+#: C/hints.page:48(media)
 msgctxt "_"
-msgid "external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-msgstr "external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
+msgid ""
+"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
+msgstr ""
+"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
 
 #: C/hints.page:17(credit/name) C/moves.page:14(credit/name)
 #: C/pause.page:14(credit/name) C/rules.page:17(credit/name)
@@ -350,11 +366,11 @@ msgstr "external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
-#: C/hints.page:25(page/title)
+#: C/hints.page:29(page/title)
 msgid "Hints"
 msgstr "Javaslatok"
 
-#: C/hints.page:27(page/p)
+#: C/hints.page:31(page/p)
 msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
@@ -362,46 +378,48 @@ msgstr ""
 "A <gui>Javaslat</gui> kiemel két párosítható csempét. Ha már kijelölt egyet "
 "és annak van párja, akkor megmutatja azt."
 
-#: C/hints.page:31(page/p)
+#: C/hints.page:35(page/p)
+#| msgid ""
+#| "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Game</"
+#| "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> "
+#| "button on the <link xref=\"toolbar\">toolbar</link>, or press "
+#| "<keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgid ""
-"<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Game</"
+"<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
-"on the <link xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</"
+"in the <link xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</"
 "key><key>H</key></keyseq>."
 msgstr ""
-"A <gui>Javaslat</gui> elérhető a <guiseq><gui>Játék</gui><gui>Javaslat</"
+"A <gui>Javaslat</gui> elérhető a <guiseq><gui>Mahjongg</gui><gui>Javaslat</"
 "gui></guiseq> menüpontban. Ennek alternatívájaként használhatja a "
 "<gui>Javaslat</gui> gombot az <link xref=\"toolbar\">eszköztáron</link>, "
 "vagy nyomja meg a <keyseq><key>Ctrl</key><key>H</key></keyseq> "
 "billentyűkombinációt."
 
-#: C/hints.page:37(note/p)
-msgid "<gui>Hint</gui> can make Mahjongg too easy, and should be used sparingly."
+#: C/hints.page:41(note/p)
+msgid ""
+"<gui>Hint</gui> can make Mahjongg too easy, and should be used sparingly."
 msgstr ""
 "A <gui>Javaslat</gui> könnyűvé teheti a Mahjonggot, emiatt ne használja túl "
 "gyakran."
 
-#: C/hints.page:39(note/p)
+#: C/hints.page:43(note/p)
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr "30 másodperces büntetés jár a „Javaslat” minden egyes használatáért."
 
-#: C/hints.page:43(section/title)
-msgid "Video demonstation"
-msgstr "Videóbemutató"
-
-#: C/hints.page:48(div/p)
+#: C/hints.page:52(div/p)
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr ""
 "Az azonos kövek megtalálásában segítséget nyújt a <gui>Javaslat</gui> "
 "menüpont."
 
-#: C/hints.page:53(div/p)
+#: C/hints.page:57(div/p)
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr ""
 "Nyomja meg a <keyseq><key>Ctrl</key><key>H</key></keyseq> "
 "billentyűkombinációt."
 
-#: C/hints.page:58(div/p)
+#: C/hints.page:62(div/p)
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "30 másodperces büntetés jár ezen lehetőség minden egyes használatáért."
 
@@ -494,62 +512,38 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:30(media)
-msgctxt "_"
-msgid "external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-msgstr "external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:35(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-msgstr ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
 #: C/map.page:40(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
 msgstr ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:55(media)
+#: C/map.page:45(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
+"external ref='figures/layout-ziggurat.png' "
+"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
 msgstr ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
+"external ref='figures/layout-ziggurat.png' "
+"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:60(media)
+#: C/map.page:50(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
+"external ref='figures/layout-bridges.png' "
+"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
 msgstr ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
+"external ref='figures/layout-bridges.png' "
+"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -558,37 +552,37 @@ msgstr ""
 #: C/map.page:65(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+"external ref='figures/layout-cloud.png' "
+"md5='7a33babaa2335c6520f07ef5d0f346ac'"
 msgstr ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+"external ref='figures/layout-cloud.png' "
+"md5='7a33babaa2335c6520f07ef5d0f346ac'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:80(media)
+#: C/map.page:70(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
+"external ref='figures/layout-tic-tac-toe.png' "
+"md5='36e306ca40222e92694d69a7fd6e33d6'"
 msgstr ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
+"external ref='figures/layout-tic-tac-toe.png' "
+"md5='36e306ca40222e92694d69a7fd6e33d6'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:85(media)
+#: C/map.page:75(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
+"external ref='figures/layout-red-dragon.png' "
+"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
 msgstr ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
+"external ref='figures/layout-red-dragon.png' "
+"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -597,77 +591,109 @@ msgstr ""
 #: C/map.page:90(media)
 msgctxt "_"
 msgid ""
+"external ref='figures/layout-pyramid-walls.png' "
+"md5='ae9c551967f4d7280d5d875c0491ae67'"
+msgstr ""
+"external ref='figures/layout-pyramid-walls.png' "
+"md5='ae9c551967f4d7280d5d875c0491ae67'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/map.page:95(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/layout-conf-cross.png' "
+"md5='3d81154393ca2db223d7f61c905c3a17'"
+msgstr ""
+"external ref='figures/layout-conf-cross.png' "
+"md5='3d81154393ca2db223d7f61c905c3a17'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/map.page:100(media)
+msgctxt "_"
+msgid ""
 "external ref='figures/layout-difficult.png' "
 "md5='c38bb2ada00187cdb40b59eae1476cdd'"
 msgstr ""
 "external ref='figures/layout-difficult.png' "
 "md5='c38bb2ada00187cdb40b59eae1476cdd'"
 
-#: C/map.page:11(credit/years) C/strategy.page:11(credit/years)
+#: C/map.page:11(credit/years) C/map.page:16(credit/years)
+#: C/strategy.page:11(credit/years)
 msgid "2012"
 msgstr "2012"
 
-#: C/map.page:16(page/title)
+#: C/map.page:21(page/title)
 msgid "Change tile layout"
 msgstr "Kőelrendezés módosítása"
 
-#: C/map.page:18(page/p)
+#: C/map.page:23(page/p)
 msgid "There are 9 different layouts. To select a different tile layout:"
 msgstr "Kilenc különböző elrendezés található. Másik kőelrendezés választása:"
 
-#: C/map.page:20(item/p)
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#: C/map.page:26(item/p)
+#| msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
-"Válassza a <guiseq><gui>Beállítások</gui><gui>Beállítások</gui></guiseq> "
+"Válassza a <guiseq><gui>Mahjongg</gui><gui>Beállítások</gui></guiseq> "
 "menüpontot."
 
-#: C/map.page:21(item/p)
+#: C/map.page:28(item/p)
 msgid "Under <gui>Maps</gui> select a layout from the drop-down menu."
 msgstr ""
 "Válasszon kőelrendezést a <gui>Térképek</gui> alatt található legördülő "
 "menüből."
 
-#: C/map.page:22(item/p)
+#: C/map.page:30(item/p)
 msgid "Click <gui>Close</gui>"
 msgstr "Nyomja meg a <gui>Bezárás</gui> gombot."
 
-#: C/map.page:25(page/p)
-msgid "Your new tile layout will take effect immediately."
-msgstr "A kőelrendezés változásai azonnal életbe lépnek."
+#: C/map.page:33(page/p)
+msgid ""
+"Your new tile layout will take effect immediately unless you have already "
+"started a game and chose for the effect to take place after you are finished."
+msgstr ""
+"A kőelrendezés változásai azonnal életbe lépnek, kivéve ha már elindított egy "
+"játékot, és a befejezés utáni életbe lépést választja."
 
-#: C/map.page:46(td/p)
+#: C/map.page:56(td/p)
 msgid "<em>Easy</em>"
 msgstr "<em>Könnyű</em>"
 
-#: C/map.page:47(td/p)
+#: C/map.page:57(td/p)
 msgid "<em>The Ziggurat</em>"
 msgstr "<em>Zikkurat</em>"
 
-#: C/map.page:48(td/p)
+#: C/map.page:58(td/p)
 msgid "<em>Four Bridges</em>"
 msgstr "<em>Négy híd</em>"
 
-#: C/map.page:71(td/p)
+#: C/map.page:81(td/p)
 msgid "<em>Cloud</em>"
 msgstr "<em>Felhő</em>"
 
-#: C/map.page:72(td/p)
+#: C/map.page:82(td/p)
 msgid "<em>Tic-tac-toe</em>"
 msgstr "<em>Tic-Tac-Toe</em>"
 
-#: C/map.page:73(td/p)
+#: C/map.page:83(td/p)
 msgid "<em>Red Dragon</em>"
 msgstr "<em>Vörös sárkány</em>"
 
-#: C/map.page:96(td/p)
+#: C/map.page:106(td/p)
 msgid "<em>Pyramid's Walls</em>"
 msgstr "<em>Piramisfal</em>"
 
-#: C/map.page:97(td/p)
+#: C/map.page:107(td/p)
 msgid "<em>Confounding Cross</em>"
 msgstr "<em>Zavarba ejtő kereszt</em>"
 
-#: C/map.page:98(td/p)
+#: C/map.page:108(td/p)
 msgid "<em>Difficult</em>"
 msgstr "<em>Nehéz</em>"
 
@@ -677,7 +703,8 @@ msgstr "<em>Nehéz</em>"
 #. whatever you like once you have updated your copy of the file.
 #: C/moves.page:29(media)
 msgctxt "_"
-msgid "external ref='figures/moves-left.png' md5='14c686ce7c508a81d4c246091d54febc'"
+msgid ""
+"external ref='figures/moves-left.png' md5='14c686ce7c508a81d4c246091d54febc'"
 msgstr "moves-left.png-KÉSZ"
 
 #: C/moves.page:22(page/title)
@@ -700,27 +727,21 @@ msgstr ""
 msgid "Mahjongg counters"
 msgstr "Mahjongg számlálók"
 
-#: C/pause.page:22(page/title)
+#: C/pause.page:26(page/title)
 msgid "Pausing your game"
 msgstr "A játék szüneteltetése"
 
-#: C/pause.page:24(page/p)
+#: C/pause.page:28(page/p)
 msgid "You can pause your current game using one of the following methods:"
-msgstr "A játék szüneteltethető a következő módszerek bármelyikének használatával:"
-
-#: C/pause.page:27(item/p)
-msgid "The <gui>Pause</gui> button on the <link xref=\"toolbar\">toolbar</link>."
-msgstr "A <gui>Szünet</gui> gomb az <link xref=\"toolbar\">eszköztáron</link>."
-
-#: C/pause.page:29(item/p)
-msgid "The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
 msgstr ""
-"A <key>Pause</key> gomb a billentyűzetén. Nem mindegyik billentyűzet "
-"tartalmazza."
+"A játék szüneteltethető a következő módszerek bármelyikének használatával:"
 
-#: C/pause.page:31(item/p)
-msgid "The <link xref=\"shortcuts\">keyboard shortcut</link>."
-msgstr "A <link xref=\"shortcuts\">gyorsbillentyű</link>."
+#: C/pause.page:32(item/p)
+#| msgid ""
+#| "The <gui>Pause</gui> button on the <link xref=\"toolbar\">toolbar</link>."
+msgid ""
+"The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
+msgstr "A <gui>Szünet</gui> gomb az <link xref=\"toolbar\">eszköztáron</link>."
 
 #: C/rules.page:25(page/title)
 msgid "Rules"
@@ -736,7 +757,8 @@ msgstr "Teljesen és részlegesen fedett kövek nem párosíthatóak."
 
 #: C/rules.page:29(item/p)
 msgid "Tiles must have a free long edge in order to be eligible for matching."
-msgstr "A köveknek rendelkezniük kell szabad éllel, hogy párosítani lehessen azokat."
+msgstr ""
+"A köveknek rendelkezniük kell szabad éllel, hogy párosítani lehessen azokat."
 
 #: C/rules.page:31(item/p)
 msgid "You can undo a move without penalty."
@@ -747,26 +769,31 @@ msgid ""
 "Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty "
 "to your time."
 msgstr ""
-"A <link xref=\"hints\">javaslat</link> használata 30 másodperc büntetést "
-"ad az aktuális idejéhez."
+"A <link xref=\"hints\">javaslat</link> használata 30 másodperc büntetést ad "
+"az aktuális idejéhez."
 
 #: C/rules.page:34(item/p)
 msgid ""
 "If the arrangement does not allow further tiles to be matched, you will be "
 "given the option to shuffle the tiles in order to keep playing."
 msgstr ""
-"Ha az elrendezés nem engedi további kőpárosítást elvégezni, akkor "
-"felajánlja a kövek megkeverését, hogy tovább tudjon játszani."
+"Ha az elrendezés nem engedi további kőpárosítást elvégezni, akkor felajánlja "
+"a kövek megkeverését, hogy tovább tudjon játszani."
 
 #: C/rules.page:37(item/p) C/strategy.page:43(item/p)
 msgid "Shuffling tiles adds a 60-second penalty to your time."
-msgstr "A kövek felcserélése esetén 60 másodperc büntetést ad az aktuális idejéhez."
+msgstr ""
+"A kövek felcserélése esetén 60 másodperc büntetést ad az aktuális idejéhez."
 
-#: C/scoring.page:17(page/title)
+#: C/scoring.page:13(credit/name)
+msgid "Ekateirna Gerasimova"
+msgstr "Ekateirna Gerasimova"
+
+#: C/scoring.page:21(page/title)
 msgid "Scoring"
 msgstr "Pontozás"
 
-#: C/scoring.page:19(page/p)
+#: C/scoring.page:23(page/p)
 msgid ""
 "In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
 "board."
@@ -774,15 +801,18 @@ msgstr ""
 "A <app>Mahjongg</app> játékban az alapján kapja a pontokat, hogy milyen "
 "gyorsan végez a táblával."
 
-#: C/scoring.page:20(page/p)
+#: C/scoring.page:26(page/p)
 msgid "To view the highscore board:"
 msgstr "Eredmények megtekintése:"
 
-#: C/scoring.page:22(item/p)
-msgid "<guiseq><gui>Game</gui><gui>Scores</gui></guiseq>"
-msgstr "<guiseq><gui>Játék</gui><gui>Pontszámok</gui></guiseq>"
+#: C/scoring.page:28(item/p)
+#| msgid "<guiseq><gui>Game</gui><gui>Scores</gui></guiseq>"
+msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
+msgstr ""
+"Válassza a <guiseq><gui>Mahjongg</gui><gui>Pontszámok</gui></guiseq> "
+"menüpontot."
 
-#: C/scoring.page:24(note/p)
+#: C/scoring.page:33(note/p)
 msgid ""
 "The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
 "view the highscores for a particular map by selecting it from the drop-down "
@@ -912,45 +942,57 @@ msgstr ""
 "gyorsan végez a játékkal, ezért az idő a legfontosabb tényező. Ennek "
 "következtében fontos, hogy gyors legyen."
 
-#: C/toolbar.page:20(page/title)
+#: C/toolbar.page:24(page/title)
 msgid "Show/hide the toolbar"
 msgstr "Eszköztár megjelenítése vagy elrejtése"
 
-#: C/toolbar.page:22(page/p)
+#: C/toolbar.page:26(page/p)
+#| msgid ""
+#| "To show or hide the toolbar, click <guiseq><gui>Settings</"
+#| "gui><gui>Toolbar</gui></guiseq>."
 msgid ""
-"To show or hide the toolbar, click <guiseq><gui>Settings</gui><gui>Toolbar</"
+"To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
 "gui></guiseq>."
 msgstr ""
-"Az eszköztár megjelenítéséhez vagy elrejtéséhez kattintson a "
-"<guiseq><gui>Beállítások</gui><gui>Eszköztár</gui></guiseq> menüpontra."
+"Az eszköztár megjelenítéséhez vagy elrejtéséhez válassza a "
+"<guiseq><gui>Mahjongg</gui><gui>Eszköztár</gui></guiseq> menüpontot."
 
-#: C/toolbar.page:25(page/p)
+#: C/toolbar.page:29(page/p)
+#| msgid ""
+#| "The toolbar, located under the menu bar, lets you perform common actions "
+#| "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#| "from left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <link "
+#| "xref=\"hints\">Hint</link> and <gui>Pause</gui>."
 msgid ""
 "The toolbar, located under the menu bar, lets you perform common actions "
 "with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <link xref="
-"\"hints\">Hint</link> and <gui>Pause</gui>."
+"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <gui>Redo "
+"Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</gui>."
 msgstr ""
-"Az eszköztár a menüsor alatt található, amelyen alapvető műveleteket "
-"tud végrehajtani az egér segítségével. Egy eszköztárművelet használatához "
+"Az eszköztár a menüsor alatt található, amelyen alapvető műveleteket tud "
+"végrehajtani az egér segítségével. Egy eszköztárművelet használatához "
 "kattintson rá. A gombok balról jobbra a következőek: <gui>Új</gui> játék, "
-"<gui>Mozgatás visszavonása</gui>, <link xref=\"hints\">Javaslat</link> és "
+"<gui>Mozgatás visszavonása</gui>, <gui>Mozgatás újra</gui>, <link "
+"xref=\"hints\">Javaslat</link> és "
 "<gui>Szünet</gui>."
 
-#: C/translate.page:23(page/title)
+#: C/translate.page:27(page/title)
 msgid "Help translate"
 msgstr "Segítsen a fordításban"
 
-#: C/translate.page:25(page/p)
-msgid ""
-"The <app>GNOME Games</app> user interface and documentation is being "
-"translated by a world-wide volunteer community. You are welcome to "
-"participate."
-msgstr ""
-"A <gui>GNOME játékok</gui> felhasználói felületét és súgóját egy világszintű "
-"önkéntes közösség fordítja. Közreműködését szívesen fogadjuk!"
-
 #: C/translate.page:29(page/p)
+#| msgid ""
+#| "The <app>GNOME Games</app> user interface and documentation is being "
+#| "translated by a world-wide volunteer community. You are welcome to "
+#| "participate."
+msgid ""
+"The GNOME Games user interface and documentation is being translated by a "
+"world-wide volunteer community: you are welcome to participate."
+msgstr ""
+"A GNOME játékok felhasználói felületét és súgóját egy világszintű "
+"önkéntes közösség fordítja: közreműködését szívesen fogadjuk!"
+
+#: C/translate.page:32(page/p)
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
 "languages</link> for which translations are still needed."
@@ -958,32 +1000,40 @@ msgstr ""
 "<link href=\"http://l10n.gnome.org/module/gnome-games/\">Számos nyelv van</"
 "link>, amelyhez még szükség van fordításokra."
 
-#: C/translate.page:32(page/p)
+#: C/translate.page:35(page/p)
+#| msgid ""
+#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
+#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
+#| "org/teams/\">translation team</link> for your language. This will give "
+#| "you the ability to upload new translations."
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
 "A fordítás elkezdéséhez <link href=\"http://l10n.gnome.org\">létre kell "
-"hoznia "
-"egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link href="
-"\"http://l10n.gnome.org/teams/\">fordítócsapathoz</link>. Ez lehetővé teszi "
-"Önnek az új fordítások feltöltését."
+"hoznia egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link "
+"href=\"http://l10n.gnome.org/teams/\">fordítócsapathoz</link>. Ez lehetővé "
+"teszi Önnek az új fordítások feltöltését."
 
-#: C/translate.page:37(page/p)
+#: C/translate.page:40(page/p)
+#| msgid ""
+#| "You can chat with GNOME translators using <link href=\"https://cbe003."
+#| "chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
+#| "People on the channel are located worldwide, so you may not get an "
+#| "immediate response as a result of timezone differences."
 msgid ""
-"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
-"channel are located worldwide, so you may not get an immediate response as a "
-"result of timezone differences."
+"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"irc.gnome.org server. People on the channel are located worldwide, so you "
+"may not get an immediate response as a result of timezone differences."
 msgstr ""
-"A GNOME fordítókkal <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
-"%2F%2Firc.gnome.org%2Fi18n\">IRC-en</link> is cseveghet. A csatornán a világ "
+"A GNOME fordítókkal IRC-en is cseveghet: csatlakozzon az irc.gnome.org "
+"kiszolgáló #i18n csatornájához. A csatornán a világ "
 "minden részéről vannak emberek, így előfordulhat, hogy az időzóna-eltérések "
 "miatt nem kap azonnal választ."
 
-#: C/translate.page:42(page/p)
+#: C/translate.page:44(page/p)
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
@@ -995,3 +1045,18 @@ msgstr ""
 "\">kezdőoldalán</link> megtalálja a magyar levelezőlista címét és a "
 "fordítások megkezdéséhez szükséges információkat."
 
+#~ msgid "Video demonstation"
+#~ msgstr "Videóbemutató"
+
+#~ msgid "Your new tile layout will take effect immediately."
+#~ msgstr "A kőelrendezés változásai azonnal életbe lépnek."
+
+#~ msgid ""
+#~ "The <key>Pause</key> key on your keyboard. Not all keyboards have this "
+#~ "key."
+#~ msgstr ""
+#~ "A <key>Pause</key> gomb a billentyűzetén. Nem mindegyik billentyűzet "
+#~ "tartalmazza."
+
+#~ msgid "The <link xref=\"shortcuts\">keyboard shortcut</link>."
+#~ msgstr "A <link xref=\"shortcuts\">gyorsbillentyű</link>."
