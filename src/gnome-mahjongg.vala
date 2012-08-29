@@ -24,6 +24,12 @@ public class Mahjongg : Gtk.Application
         Object (application_id: "org.gnome.gnome-mahjongg", flags: ApplicationFlags.FLAGS_NONE);
 
         add_action_entries (action_entries, this);
+        add_accelerator ("<Primary>n", "app.new-game", null);
+        add_accelerator ("Pause", "app.pause", null);
+        add_accelerator ("<Primary>h", "app.hint", null);
+        add_accelerator ("<Primary>z", "app.undo", null);
+        add_accelerator ("<Primary><Shift>z", "app.redo", null);
+        add_accelerator ("<Primary>q", "app.quit", null);
     }
 
     protected override void startup ()
@@ -95,30 +101,40 @@ public class Mahjongg : Gtk.Application
         toolbar.show_arrow = false;
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
 
-        var new_game_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        var new_game_button = new Gtk.ToolButton (null, _("_New"));
+        new_game_button.use_underline = true;
+        new_game_button.icon_name = "document-new";
         new_game_button.action_name = "app.new-game";
         new_game_button.show ();
         toolbar.insert (new_game_button, -1);
 
-        var undo_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_UNDO_MOVE);
+        var undo_button = new Gtk.ToolButton (null, _("_Undo Move"));
+        undo_button.use_underline = true;
+        undo_button.icon_name = "edit-undo";
         undo_button.action_name = "app.undo";
         undo_button.is_important = true;
         undo_button.show ();
         toolbar.insert (undo_button, -1);
 
-        var redo_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_REDO_MOVE);
+        var redo_button = new Gtk.ToolButton (null, _("_Redo Move"));
+        redo_button.use_underline = true;
+        redo_button.icon_name = "edit-redo";
         redo_button.action_name = "app.redo";
         redo_button.is_important = true;
         redo_button.show ();
         toolbar.insert (redo_button, -1);
 
-        var hint_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_HINT);
+        var hint_button = new Gtk.ToolButton (null, _("Hint"));
+        hint_button.use_underline = true;
+        hint_button.icon_name = "dialog-information";
         hint_button.action_name = "app.hint";
         hint_button.is_important = true;
         hint_button.show ();
         toolbar.insert (hint_button, -1);
 
-        pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
+        pause_button = new Gtk.ToolButton (null, _("_Pause"));
+        pause_button.icon_name = "media-playback-pause";
+        pause_button.use_underline = true;
         pause_button.action_name = "app.pause";
         pause_button.is_important = true;
         pause_button.show ();
@@ -555,9 +571,15 @@ public class Mahjongg : Gtk.Application
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
         if (game_view.game.paused)
-            pause_button.stock_id = GnomeGamesSupport.STOCK_RESUME_GAME;
+        {
+            pause_button.icon_name = "media-playback-start";
+            pause_button.label = _("Res_ume");
+        }
         else
-            pause_button.stock_id = GnomeGamesSupport.STOCK_PAUSE_GAME;
+        {
+            pause_button.icon_name = "media-playback-pause";
+            pause_button.label = _("_Pause");
+        }
 
         update_ui ();
     }
@@ -736,8 +758,6 @@ public class Mahjongg : Gtk.Application
             stdout.printf ("%s\n", e.message);
             return Posix.EXIT_FAILURE;
         }
-
-        GnomeGamesSupport.stock_init ();
 
         Environment.set_application_name (_("Mahjongg"));
         Gtk.Window.set_default_icon_name ("gnome-mahjongg");
