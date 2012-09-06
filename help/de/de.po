@@ -9,10 +9,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2012-04-22 22:39+0000\n"
-"PO-Revision-Date: 2012-05-06 16:48+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2012-09-04 19:33+0000\n"
+"PO-Revision-Date: 2012-09-04 23:54+0100\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +27,7 @@ msgid "translator-credits"
 msgstr ""
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012\n"
 "Andre Klapper <ak47@gmx.net>, 2009\n"
-"Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012"
+"Christian Kirbach <Christian.Kirbach@gmail.com>, 2012"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -53,7 +54,8 @@ msgstr "original"
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:21(media)
 msgctxt "_"
-msgid "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+msgid ""
+"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
 msgstr "original"
 
 #: C/index.page:8(info/title)
@@ -80,19 +82,21 @@ msgstr "Chris Beiser"
 
 #: C/index.page:17(license/p) C/bug-filing.page:15(license/p)
 #: C/choosing.page:14(license/p) C/develop.page:15(license/p)
-#: C/documentation.page:13(license/p) C/gameplay.page:17(license/p)
-#: C/hints.page:21(license/p) C/moves.page:18(license/p)
-#: C/pause.page:18(license/p) C/rules.page:21(license/p)
-#: C/scoring.page:13(license/p) C/shortcuts.page:18(license/p)
-#: C/translate.page:19(license/p)
+#: C/documentation.page:13(license/p) C/gameplay.page:21(license/p)
+#: C/hints.page:25(license/p) C/moves.page:18(license/p)
+#: C/pause.page:22(license/p) C/rules.page:21(license/p)
+#: C/scoring.page:17(license/p) C/shortcuts.page:18(license/p)
+#: C/translate.page:23(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #: C/index.page:21(page/title)
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media>Mahjongg"
+"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</"
+"media>Mahjongg"
 msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg-Logo</media>Mahjongg"
+"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg-Logo</"
+"media>Mahjongg"
 
 #: C/index.page:22(page/p)
 msgid ""
@@ -143,9 +147,9 @@ msgid ""
 "To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
 "<app>Mahjongg</app> wird von einer Gemeinschaft aus Freiwilligen entwickelt. "
-"Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein Problem "
-"entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. Besuchen Sie "
-"hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
+"Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein "
+"Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. "
+"Besuchen Sie hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #: C/bug-filing.page:23(page/p)
 msgid ""
@@ -182,8 +186,8 @@ msgstr ""
 "guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
 "\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
 "guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler vielleicht "
-"schon gemeldet wurde."
+"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler "
+"vielleicht schon gemeldet wurde."
 
 #: C/bug-filing.page:33(page/p)
 msgid ""
@@ -259,15 +263,15 @@ msgstr ""
 
 #: C/documentation.page:22(page/p)
 msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with us "
-"using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
-"org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
 "<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">IRC</link> oder über die <link href=\"http://mail.gnome.org/mailman/"
-"listinfo/gnome-doc-list\">Mailingliste</link> mit uns Kontakt auf."
+"%2Fdocs\">IRC</link> oder über die <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">Mailingliste</link> mit uns Kontakt auf."
 
 #: C/documentation.page:24(page/p)
 msgid ""
@@ -281,31 +285,38 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/gameplay.page:36(media)
+#: C/gameplay.page:53(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/mahjongg-video.ogv' "
 "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
 msgstr "original"
 
-#: C/gameplay.page:21(page/title)
+#: C/gameplay.page:17(credit/name) C/hints.page:21(credit/name)
+#: C/map.page:14(credit/name) C/pause.page:18(credit/name)
+#: C/toolbar.page:17(credit/name) C/translate.page:19(credit/name)
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#: C/gameplay.page:25(page/title)
 msgid "Basic gameplay"
 msgstr "Grundlagen des Spiels"
 
-#: C/gameplay.page:22(page/p)
+#: C/gameplay.page:27(page/p)
 msgid ""
 "Mahjongg is played by matching two identical tiles per turn. A tile is "
-"eligible for matching if no part of another tile is lying directly on it, and "
-"it has a free long edge on either the left or the right. You win by removing "
-"all tiles, and you are scored by the amount of time it takes you to do so."
+"eligible for matching if no part of another tile is lying directly on it, "
+"and it has a free long edge on either the left or the right. You win by "
+"removing all tiles, and you are scored by the amount of time it takes you to "
+"do so."
 msgstr ""
 "In Mahjongg werden pro Zug zwei identische Spielsteine entfernt. Ein "
 "Spielstein ist entfernbar, falls kein weiterer Stein direkt auf diesem "
-"aufliegt und die lange Seite des Steins rechts oder links frei ist. Das Spiel "
-"endet, wenn alle Spielsteine entfernt wurden. Die Wertung erfolgt nach der "
-"dafür benötigten Zeit."
+"aufliegt und die lange Seite des Steins rechts oder links frei ist. Das "
+"Spiel endet, wenn alle Spielsteine entfernt wurden. Die Wertung erfolgt nach "
+"der dafür benötigten Zeit."
 
-#: C/gameplay.page:25(page/p)
+#: C/gameplay.page:33(page/p)
 msgid ""
 "There are many different <link xref=\"map\">tile layouts</link> to choose "
 "from."
@@ -313,35 +324,39 @@ msgstr ""
 "Es gibt viele verschiedene <link xref=\"map\">Spielsteinsätze</link>, aus "
 "denen Sie wählen können."
 
-#: C/gameplay.page:26(page/p)
+#: C/gameplay.page:36(page/p)
 msgid "To match two tiles:"
 msgstr "So finden Sie zwei übereinstimmende Spielsteine:"
 
-#: C/gameplay.page:30(item/p)
+#: C/gameplay.page:40(item/p)
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
 msgstr ""
-"Klicken Sie auf einen Spielstein. Falls dieser Spielstein verfügbar ist, wird "
-"er hervorgehoben."
+"Klicken Sie auf einen Spielstein. Falls dieser Spielstein verfügbar ist, "
+"wird er hervorgehoben."
 
-#: C/gameplay.page:31(item/p)
+#: C/gameplay.page:44(item/p)
 msgid ""
-"Click on a matching tile. If it is a truely a matching tile, both tiles will "
+"Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
 msgstr ""
 "Klicken Sie auf einen übereinstimmenden Stein. Falls dieser tatsächlich "
 "übereinstimmt, verschwinden beide Steine vom Spielfeld."
 
-#: C/gameplay.page:35(section/title)
+#: C/gameplay.page:50(section/title) C/hints.page:47(section/title)
 msgid "Video demonstration"
 msgstr "Video-Demonstration"
+
+#: C/gameplay.page:53(media/p)
+msgid "Video of gameplay"
+msgstr "Video des Spiels"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/hints.page:44(media)
+#: C/hints.page:48(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
@@ -354,59 +369,56 @@ msgstr "original"
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
-#: C/hints.page:25(page/title)
+#: C/hints.page:29(page/title)
 msgid "Hints"
 msgstr "Tipps"
 
-#: C/hints.page:27(page/p)
+#: C/hints.page:31(page/p)
 msgid ""
-"<gui>Hint</gui> highlights two tiles that can be matched. If you have already "
-"selected one tile, it will show a match for that piece if one exists."
+"<gui>Hint</gui> highlights two tiles that can be matched. If you have "
+"already selected one tile, it will show a match for that piece if one exists."
 msgstr ""
 "<gui>Tipp</gui> hebt zwei Steine hervor, die übereinstimmen. Falls Sie "
 "bereits einen Spielstein ausgewählt haben, wird ein diesem Stein "
 "entsprechender Stein angezeigt, falls verfügbar."
 
-#: C/hints.page:31(page/p)
+#: C/hints.page:35(page/p)
 msgid ""
-"<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Game</gui><gui>Hint</"
-"gui></guiseq>. Alternatively, use the <gui>Hint</gui> button on the <link "
-"xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</key><key>H</"
-"key></keyseq>."
+"<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
+"gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
+"in the <link xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</"
+"key><key>H</key></keyseq>."
 msgstr ""
 "Einen <gui>Tipp</gui> können Sie anzeigen lassen, indem Sie "
-"<guiseq><gui>Spiel</gui><gui>Tipp</gui></guiseq> wählen. Alternativ können "
-"Sie den <gui>Tipp</gui>-Knopf in der <link xref=\"toolbar\">Werkzeugleiste</"
-"link> oder <keyseq><key>Strg</key><key>H</key></keyseq> drücken."
+"<guiseq><gui>Mahjongg</gui><gui>Tipp</gui></guiseq> wählen. Alternativ "
+"können Sie den <gui>Tipp</gui>-Knopf in der <link xref=\"toolbar"
+"\">Werkzeugleiste</link> oder <keyseq><key>Strg</key><key>H</key></keyseq> "
+"drücken."
 
-#: C/hints.page:37(note/p)
+#: C/hints.page:41(note/p)
 msgid ""
 "<gui>Hint</gui> can make Mahjongg too easy, and should be used sparingly."
 msgstr ""
 "Ein <gui>Tipp</gui> kann Mahjongg zu leicht machen und sollte sparsam "
 "verwendet werden."
 
-#: C/hints.page:39(note/p)
+#: C/hints.page:43(note/p)
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr ""
-"Jedes Mal, wenn Sie einen <gui>Tipp</gui> anzeigen lassen, erhalten Sie einen "
-"Zeitaufschlag von 30 Sekunden."
+"Jedes Mal, wenn Sie einen <gui>Tipp</gui> anzeigen lassen, erhalten Sie "
+"einen Zeitaufschlag von 30 Sekunden."
 
-#: C/hints.page:43(section/title)
-msgid "Video demonstation"
-msgstr "Video-Demonstation"
-
-#: C/hints.page:48(div/p)
+#: C/hints.page:52(div/p)
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr ""
 "Sie können <gui>Tipps</gui> anzeigen lassen, um identische Spielsteine zu "
 "finden."
 
-#: C/hints.page:53(div/p)
+#: C/hints.page:57(div/p)
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr "Drücken Sie <keyseq><key>Strg</key><key>H</key></keyseq>."
 
-#: C/hints.page:58(div/p)
+#: C/hints.page:62(div/p)
 msgid "There is a 30 s penalty for each use of this option."
 msgstr ""
 "Jedes Mal, wenn Sie diese Option verwenden, erhalten Sie einen Zeitaufschlag "
@@ -468,13 +480,13 @@ msgstr "<em>Weitergabe</em>"
 
 #: C/license.page:39(item/p)
 msgid ""
-"You must attribute the work in the manner specified by the author or licensor "
-"(but not in any way that suggests that they endorse you or your use of the "
-"work)."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
 "Sie dürfen das Werk nur unter gleichen Bedingungen weitergeben, wie Sie vom "
-"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr Werk "
-"aussieht)."
+"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr "
+"Werk aussieht)."
 
 #: C/license.page:46(item/title)
 msgid "<em>Share Alike</em>"
@@ -493,10 +505,10 @@ msgstr ""
 
 #: C/license.page:53(page/p)
 msgid ""
-"For the full text of the license, see the <link href=\"http://creativecommons."
-"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
-"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
-"\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Den vollständigen Text der Lizenz finden sie auf der <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons-Webseite</"
@@ -507,7 +519,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:30(media)
+#: C/map.page:40(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
@@ -517,7 +529,7 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:35(media)
+#: C/map.page:45(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-ziggurat.png' "
@@ -528,7 +540,7 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:40(media)
+#: C/map.page:50(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-bridges.png' "
@@ -539,17 +551,18 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:55(media)
+#: C/map.page:65(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/layout-cloud.png' md5='7a33babaa2335c6520f07ef5d0f346ac'"
+"external ref='figures/layout-cloud.png' "
+"md5='7a33babaa2335c6520f07ef5d0f346ac'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:60(media)
+#: C/map.page:70(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-tic-tac-toe.png' "
@@ -560,7 +573,7 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:65(media)
+#: C/map.page:75(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-red-dragon.png' "
@@ -571,7 +584,7 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:80(media)
+#: C/map.page:90(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-pyramid-walls.png' "
@@ -582,7 +595,7 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:85(media)
+#: C/map.page:95(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-conf-cross.png' "
@@ -593,77 +606,82 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/map.page:90(media)
+#: C/map.page:100(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/layout-difficult.png' "
 "md5='c38bb2ada00187cdb40b59eae1476cdd'"
 msgstr "original"
 
-#: C/map.page:11(credit/years) C/strategy.page:11(credit/years)
+#: C/map.page:11(credit/years) C/map.page:16(credit/years)
+#: C/strategy.page:11(credit/years)
 msgid "2012"
 msgstr "2012"
 
-#: C/map.page:16(page/title)
+#: C/map.page:21(page/title)
 msgid "Change tile layout"
 msgstr "Ändern des Spielsteinsatzes"
 
-#: C/map.page:18(page/p)
+#: C/map.page:23(page/p)
 msgid "There are 9 different layouts. To select a different tile layout:"
 msgstr "Es gibt 9 verschiedene Karten. So wählen Sie einen andere Karte:"
 
-#: C/map.page:20(item/p)
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#: C/map.page:26(item/p)
+msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
-"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
-"guiseq>."
+"Klicken Sie auf <guiseq><gui>Mahjongg</gui><gui>Einstellungen</gui></guiseq>."
 
-#: C/map.page:21(item/p)
+#: C/map.page:28(item/p)
 msgid "Under <gui>Maps</gui> select a layout from the drop-down menu."
 msgstr ""
 "Wählen Sie unter <gui>Karten</gui> eine Anordnung in der Auswahlliste aus."
 
-#: C/map.page:22(item/p)
+#: C/map.page:30(item/p)
 msgid "Click <gui>Close</gui>"
 msgstr "Klicken Sie auf <gui>Schließen</gui>."
 
-#: C/map.page:25(page/p)
-msgid "Your new tile layout will take effect immediately."
-msgstr "Ihr neuer Spielsteinsatz wird sofort verwendet."
+#: C/map.page:33(page/p)
+msgid ""
+"Your new tile layout will take effect immediately unless you have already "
+"started a game and chose for the effect to take place after you are finished."
+msgstr ""
+"Die neue Spielstein-Anordnung wird sofort aktiv, es sei denn, dass Sie "
+"bereits ein Spiel begonnen haben und gewählt haben, dass die Änderungen erst "
+"nach Spielende wirksam werden."
 
-#: C/map.page:46(td/p)
+#: C/map.page:56(td/p)
 msgid "<em>Easy</em>"
 msgstr "<em>Leicht</em>"
 
-#: C/map.page:47(td/p)
+#: C/map.page:57(td/p)
 msgid "<em>The Ziggurat</em>"
 msgstr "<em>Der Ziggurat</em>"
 
-#: C/map.page:48(td/p)
+#: C/map.page:58(td/p)
 msgid "<em>Four Bridges</em>"
 msgstr "<em>Vier Brücken</em>"
 
-#: C/map.page:71(td/p)
+#: C/map.page:81(td/p)
 msgid "<em>Cloud</em>"
 msgstr "<em>Wolke</em>"
 
-#: C/map.page:72(td/p)
+#: C/map.page:82(td/p)
 msgid "<em>Tic-tac-toe</em>"
 msgstr "<em>Tic-tac-toe</em>"
 
-#: C/map.page:73(td/p)
+#: C/map.page:83(td/p)
 msgid "<em>Red Dragon</em>"
 msgstr "<em>Roter Drache</em>"
 
-#: C/map.page:96(td/p)
+#: C/map.page:106(td/p)
 msgid "<em>Pyramid's Walls</em>"
 msgstr "<em>Pyramidenwände</em>"
 
-#: C/map.page:97(td/p)
+#: C/map.page:107(td/p)
 msgid "<em>Confounding Cross</em>"
 msgstr "<em>Durchbrochenes Kreuz</em>"
 
-#: C/map.page:98(td/p)
+#: C/map.page:108(td/p)
 msgid "<em>Difficult</em>"
 msgstr "<em>Schwer</em>"
 
@@ -698,31 +716,20 @@ msgstr ""
 msgid "Mahjongg counters"
 msgstr "Mahjongg-Zähler"
 
-#: C/pause.page:22(page/title)
+#: C/pause.page:26(page/title)
 msgid "Pausing your game"
 msgstr "Ihr Spiel unterbrechen"
 
-#: C/pause.page:24(page/p)
+#: C/pause.page:28(page/p)
 msgid "You can pause your current game using one of the following methods:"
 msgstr "Sie können Ihr Spiel folgendermaßen unterbrechen:"
 
-#: C/pause.page:27(item/p)
+#: C/pause.page:32(item/p)
 msgid ""
-"The <gui>Pause</gui> button on the <link xref=\"toolbar\">toolbar</link>."
+"The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
 msgstr ""
-"Mit dem <gui>Pause</gui>-Knopf in der <link xref=\"toolbar\">Werkzeugleiste</"
+"Der <gui>Pause</gui>-Knopf in der <link xref=\"toolbar\">Werkzeugleiste</"
 "link>."
-
-#: C/pause.page:29(item/p)
-msgid ""
-"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
-msgstr ""
-"Mit der <key>Pause</key>-Taste auf Ihrer Tastatur. Nicht alle Tastaturen "
-"verfügen über diese Taste."
-
-#: C/pause.page:31(item/p)
-msgid "The <link xref=\"shortcuts\">keyboard shortcut</link>."
-msgstr "Über die <link xref=\"shortcuts\">Tastenkombination</link>."
 
 #: C/rules.page:25(page/title)
 msgid "Rules"
@@ -735,7 +742,8 @@ msgstr "Spielsteine müssen identisch sein, um entfernt werden zu können."
 #: C/rules.page:28(item/p)
 msgid "Fully and partially covered tiles cannot be matched."
 msgstr ""
-"Teilweise oder vollständig verdeckte Spielsteine können nicht entfernt werden."
+"Teilweise oder vollständig verdeckte Spielsteine können nicht entfernt "
+"werden."
 
 #: C/rules.page:29(item/p)
 msgid "Tiles must have a free long edge in order to be eligible for matching."
@@ -746,15 +754,16 @@ msgstr ""
 #: C/rules.page:31(item/p)
 msgid "You can undo a move without penalty."
 msgstr ""
-"Sie können einen Zug zurücknehmen, ohne dafür einen Zeitaufschlag zu erhalten."
+"Sie können einen Zug zurücknehmen, ohne dafür einen Zeitaufschlag zu "
+"erhalten."
 
 #: C/rules.page:32(item/p) C/strategy.page:41(item/p)
 msgid ""
-"Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty to "
-"your time."
+"Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty "
+"to your time."
 msgstr ""
-"Durch einen <link xref=\"hints\">Tipp</link> erhalten Sie einen Aufschlag von "
-"30 Sekunden auf Ihre Spielzeit."
+"Durch einen <link xref=\"hints\">Tipp</link> erhalten Sie einen Aufschlag "
+"von 30 Sekunden auf Ihre Spielzeit."
 
 #: C/rules.page:34(item/p)
 msgid ""
@@ -771,11 +780,15 @@ msgstr ""
 "Durch das Mischen der Spielsteine erhalten Sie einen Zeitaufschlag von 60 "
 "Sekunden."
 
-#: C/scoring.page:17(page/title)
+#: C/scoring.page:13(credit/name)
+msgid "Ekateirna Gerasimova"
+msgstr "Ekateirna Gerasimova"
+
+#: C/scoring.page:21(page/title)
 msgid "Scoring"
 msgstr "Wertung"
 
-#: C/scoring.page:19(page/p)
+#: C/scoring.page:23(page/p)
 msgid ""
 "In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
 "board."
@@ -783,15 +796,15 @@ msgstr ""
 "Die Wertung in <app>Mahjongg</app> erfolgt nach der Zeit, die Sie zum Leeren "
 "des Spielfeldes benötigen."
 
-#: C/scoring.page:20(page/p)
+#: C/scoring.page:26(page/p)
 msgid "To view the highscore board:"
 msgstr "So zeigen Sie die Ergebnisse an:"
 
-#: C/scoring.page:22(item/p)
-msgid "<guiseq><gui>Game</gui><gui>Scores</gui></guiseq>"
-msgstr "<guiseq><gui>Spiel</gui><gui>Ergebnisse</gui></guiseq>."
+#: C/scoring.page:28(item/p)
+msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
+msgstr "Wählen Sie <guiseq><gui>Mahjongg</gui><gui>Ergebnisse</gui></guiseq>."
 
-#: C/scoring.page:24(note/p)
+#: C/scoring.page:33(note/p)
 msgid ""
 "The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
 "view the highscores for a particular map by selecting it from the drop-down "
@@ -847,8 +860,8 @@ msgstr "<key>Pause</key>"
 
 #: C/shortcuts.page:43(note/p)
 msgid ""
-"Use the <link xref=\"toolbar\">toolbar</link> <gui>Pause</gui> button if your "
-"keyboard does not have a <key>Pause</key> key."
+"Use the <link xref=\"toolbar\">toolbar</link> <gui>Pause</gui> button if "
+"your keyboard does not have a <key>Pause</key> key."
 msgstr ""
 "Verwenden Sie den <gui>Pause</gui>-Knopf der <link xref=\"toolbar"
 "\">Werkzeugleiste</link>, falls Ihre Tastatur nicht über eine <key>Pause</"
@@ -889,7 +902,7 @@ msgid ""
 "strategy tips to keep in mind while you play:"
 msgstr ""
 "Da jede <link xref=\"map\">Spielsteinanordnung</link> andere Anforderungen "
-"stellt, kann es keine allgemeingültige Strategie geben. Dennoch gibt es "
+"stellt, kann es keine allgemein gültige Strategie geben. Dennoch gibt es "
 "einige strategische Tipps, die Sie beim Spiel beachten sollten:"
 
 # Klingt bekloppt und doppelt gemoppelt sowieso. Der zweite Satz ist völlig überflüssig.
@@ -907,8 +920,8 @@ msgstr ""
 #: C/strategy.page:32(item/p)
 msgid ""
 "Choosing easily accessible tiles, such as those from the top levels, is not "
-"beneficial. This strategy leaves essential tiles under cover, increasing your "
-"chances of losing the game."
+"beneficial. This strategy leaves essential tiles under cover, increasing "
+"your chances of losing the game."
 msgstr ""
 "Die Auswahl leicht zugänglicher Steine wie oben aufliegende ist nicht "
 "vorteilhaft. Durch diese Strategie verbleiben wichtige Steine verdeckt. "
@@ -924,46 +937,46 @@ msgstr ""
 "Sie benötigen, ist die Zeit der bedeutendste Faktor des Spiels. Es ist daher "
 "wichtig, schnell zu sein."
 
-#: C/toolbar.page:20(page/title)
+#: C/toolbar.page:24(page/title)
 msgid "Show/hide the toolbar"
 msgstr "Die Werkzeugleiste anzeigen oder verbergen"
 
-#: C/toolbar.page:22(page/p)
+#: C/toolbar.page:26(page/p)
 msgid ""
-"To show or hide the toolbar, click <guiseq><gui>Settings</gui><gui>Toolbar</"
+"To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
 "gui></guiseq>."
 msgstr ""
 "Um die Werkzeugleiste anzuzeigen oder zu verbergen, wählen Sie "
-"<guiseq><gui>Einstellungen</gui><gui>Werkzeugleiste</gui></guiseq>."
+"<guiseq><gui>Mahjongg</gui><gui>Werkzeugleiste</gui></guiseq>."
 
-#: C/toolbar.page:25(page/p)
+#: C/toolbar.page:29(page/p)
 msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions with "
-"your mouse. To use a toolbar item, just click on it. The buttons, from left "
-"to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <link xref=\"hints"
-"\">Hint</link> and <gui>Pause</gui>."
+"The toolbar, located under the menu bar, lets you perform common actions "
+"with your mouse. To use a toolbar item, just click on it. The buttons, from "
+"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <gui>Redo "
+"Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</gui>."
 msgstr ""
-"Mit der unterhalb der Menüleiste angezeigten Werkzeugleiste können Sie häufig "
-"verwendete Aktionen mit der Maus ausführen. Um ein Werkzeugleistenobjekt zu "
-"nutzen, klicken Sie es einfach an. Die Knöpfe bedeuten (von links nach "
-"rechts): <gui>Neues Spiel</gui>, <gui>Rückgängig</gui>, <link xref=\"hints"
-"\">Tipp</link> und <gui>Pause</gui>."
+"Mit der unterhalb der Menüleiste angezeigten Werkzeugleiste können Sie "
+"häufig verwendete Aktionen mit der Maus ausführen. Um ein "
+"Werkzeugleistenobjekt zu nutzen, klicken Sie es einfach an. Die Knöpfe "
+"bedeuten (von links nach rechts): <gui>Neues</gui> Spiel, <gui>Rückgängig</"
+"gui>, <gui>Wiederholen</gui>, <link xref=\"hints\">Tipp</link> und "
+"<gui>Pause</gui>."
 
-#: C/translate.page:23(page/title)
+#: C/translate.page:27(page/title)
 msgid "Help translate"
 msgstr "Beim Übersetzen helfen"
 
-#: C/translate.page:25(page/p)
-msgid ""
-"The <app>GNOME Games</app> user interface and documentation is being "
-"translated by a world-wide volunteer community. You are welcome to "
-"participate."
-msgstr ""
-"Die Benutzeroberfläche und die Dokumentation der <app>GNOME games</app> "
-"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie sind "
-"herzlich eingeladen, sich daran zu beteiligen."
-
 #: C/translate.page:29(page/p)
+msgid ""
+"The GNOME Games user interface and documentation is being translated by a "
+"world-wide volunteer community: you are welcome to participate."
+msgstr ""
+"Die Benutzeroberfläche und die Dokumentation der <app>GNOME Games</app> "
+"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie "
+"sind herzlich eingeladen, sich daran zu beteiligen."
+
+#: C/translate.page:32(page/p)
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
 "languages</link> for which translations are still needed."
@@ -971,32 +984,31 @@ msgstr ""
 "Übersetzungen sind noch für <link href=\"http://l10n.gnome.org/module/gnome-"
 "games/\">zahlreiche Sprachen</link> nötig."
 
-#: C/translate.page:32(page/p)
+#: C/translate.page:35(page/p)
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
 "Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"http:"
 "l10n.gnome.org\">ein Konto erstellen</link> und einem <link href=\"http://"
-"l10n.gnome.org/teams/\">Übersetzungstteam</link> für Ihre Sprache beitreten. "
+"l10n.gnome.org/teams/\">Übersetzungsteam</link> für Ihre Sprache beitreten. "
 "So erhalten Sie die Möglichkeit, neue Übersetzungen hochzuladen."
 
-#: C/translate.page:37(page/p)
+#: C/translate.page:40(page/p)
 msgid ""
-"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
-"channel are located worldwide, so you may not get an immediate response as a "
-"result of timezone differences."
+"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"irc.gnome.org server. People on the channel are located worldwide, so you "
+"may not get an immediate response as a result of timezone differences."
 msgstr ""
-"Sie können mit GNOME-Übersetzern im <link href=\"https://cbe003.chat.mibbit."
-"com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link> chatten. Die "
-"Teilnehmer in diesem Kanal sind über die ganze Welt verstreut, so dass Sie "
-"aufgrund der unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort "
-"erhalten werden."
+"Sie können mit GNOME-Übersetzern im IRC chatten: Treten Sie dem Kanal #i18n "
+"auf dem Server irc.gnome.org bei. Die Teilnehmer in diesem Kanal sind über "
+"die ganze Welt verstreut. Dies bedeutet,  dass Sie aufgrund der "
+"unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort erhalten "
+"werden."
 
-#: C/translate.page:42(page/p)
+#: C/translate.page:44(page/p)
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
@@ -1005,3 +1017,19 @@ msgstr ""
 "Alternativ können Sie das Internationaliserungsteam über dessen <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
+
+#~ msgid "Video demonstation"
+#~ msgstr "Video-Demonstation"
+
+#~ msgid "Your new tile layout will take effect immediately."
+#~ msgstr "Ihr neuer Spielsteinsatz wird sofort verwendet."
+
+#~ msgid ""
+#~ "The <key>Pause</key> key on your keyboard. Not all keyboards have this "
+#~ "key."
+#~ msgstr ""
+#~ "Mit der <key>Pause</key>-Taste auf Ihrer Tastatur. Nicht alle Tastaturen "
+#~ "verfügen über diese Taste."
+
+#~ msgid "The <link xref=\"shortcuts\">keyboard shortcut</link>."
+#~ msgstr "Über die <link xref=\"shortcuts\">Tastenkombination</link>."
