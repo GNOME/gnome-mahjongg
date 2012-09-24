@@ -722,13 +722,14 @@ public class Mahjongg : Gtk.Application
                 continue;
 
             var loader = new MapLoader ();
+            var path = Path.build_filename (DATA_DIRECTORY, "maps", filename);
             try
             {
-                loader.load (filename);
+                loader.load (path);
             }
             catch (Error e)
             {
-                warning ("Could not load map %s: %s\n", filename, e.message);
+                warning ("Could not load map %s: %s\n", path, e.message);
                 continue;
             }
             foreach (var map in loader.maps)
