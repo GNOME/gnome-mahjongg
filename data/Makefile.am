@@ -30,16 +30,6 @@ EXTRA_DIST = \
 CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
 DISTCLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
 
-install-scorefiles-local:
-	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-for i in easy difficult confounding pyramid tictactoe cloud dragon bridges ziggurat; do \
-		touch $(DESTDIR)$(scoredir)/gnome-mahjongg.$$i.scores; \
-		chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gnome-mahjongg.$$i.scores; \
-		chmod 664 $(DESTDIR)$(scoredir)/gnome-mahjongg.$$i.scores; \
-	done
-
-install-data-local: install-scorefiles-local
-
 @INTLTOOL_DESKTOP_RULE@
 
 -include $(top_srcdir)/git.mk
