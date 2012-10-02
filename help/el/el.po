@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.master\n"
-"POT-Creation-Date: 2012-09-06 15:58+0000\n"
-"PO-Revision-Date: 2012-09-13 13:32+0200\n"
+"POT-Creation-Date: 2012-09-24 23:49+0000\n"
+"PO-Revision-Date: 2012-09-29 12:55+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team:  <el@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -264,16 +264,16 @@ msgid ""
 msgstr ""
 "Για συμμετοχή στο έργο τεκμηρίωσης, επικοινωνήστε μαζί μας χρησιμοποιώντας "
 "το <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">irc</link>, ή μέσα από την <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">λίστα αλληλογραφίας μας</link>"
+"%2Fdocs\">irc</link>, ή μέσα από τη <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">λίστα αλληλογραφίας</link> μας."
 
 #: C/documentation.page:24(page/p)
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Το <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> μας περιέχει χρήσιμες πληροφορίες."
+"Επίσης το <link href=\"https://live.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> μας περιέχει χρήσιμες πληροφορίες."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -375,8 +375,8 @@ msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
 msgstr ""
-"Η <gui>Υπόδειξη</gui> επισημαίνει δύο πλακίδια που μπορούν να ταιριάσουν. Αν "
-"έχετε ήδη επιλέξει ένα πλακίδιο, θα σας εμφανίσει αν υπάρχει κομμάτι για "
+"Η <gui>Υπόδειξη</gui> επισημαίνει δύο πλακίδια που μπορούν να ταιριαστούν. "
+"Αν έχετε επιλέξει ήδη ένα πλακίδιο, θα σας εμφανίσει αν υπάρχει κομμάτι για "
 "ταίριασμα."
 
 #: C/hints.page:35(page/p)
@@ -747,7 +747,8 @@ msgstr "Τα πλακίδια πρέπει να είναι όμοια για ν�
 
 #: C/rules.page:28(item/p)
 msgid "Fully and partially covered tiles cannot be matched."
-msgstr "Δεν μπορούν να ταιριάσουν τα πλήρως ή τα εν μέρη καλυπτόμενα πλακίδια."
+msgstr ""
+"Δεν μπορούν να ταιριαστούν τα πλήρως ή τα εν μέρη καλυπτόμενα πλακίδια."
 
 #: C/rules.page:29(item/p)
 msgid "Tiles must have a free long edge in order to be eligible for matching."
@@ -764,7 +765,7 @@ msgid ""
 "Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty "
 "to your time."
 msgstr ""
-"Χρησιμοποιώντας τις <link xref=\"hints\">υπόδειξη</link> θα προστεθεί μια "
+"Χρησιμοποιώντας την <link xref=\"hints\">υπόδειξη</link> θα προστεθεί μια "
 "ποινή 30 δευτερολέπτων στο χρόνο σας."
 
 #: C/rules.page:34(item/p)
@@ -811,7 +812,7 @@ msgid ""
 "view the highscores for a particular map by selecting it from the drop-down "
 "menu."
 msgstr ""
-"Οι βαθμολογίες αποθηκεύονται με βάση τον <link xref=\"map\">χάρτη</link>. "
+"Οι βαθμολογίες αποθηκεύονται με βάση το <link xref=\"map\">χάρτη</link>. "
 "Μπορείτε να δείτε τις υψηλότερες βαθμολογίες για ένα συγκεκριμένο χάρτη "
 "επιλέγοντας τον από το αναπτυσσόμενο μενού."
 
@@ -992,9 +993,9 @@ msgid ""
 "ability to upload new translations."
 msgstr ""
 "Για να ξεκινήσετε να μεταφράζετε πρέπει να <link href=\"http://l10n.gnome.org"
-"\">δημιουργήσετε έναν λογαριασμό</link> και να συμμετάσχετε στην <link href="
+"\">δημιουργήσετε ένα λογαριασμό</link> και να συμμετάσχετε στην <link href="
 "\"http://l10n.gnome.org/teams/\">ομάδα μετάφρασης</link> της γλώσσας σας. "
-"Αυτό θα σας δώσει την δυνατότητα να ανεβάσετε νέες μεταφράσεις."
+"Αυτό θα σας δώσει τη δυνατότητα να ανεβάσετε νέες μεταφράσεις."
 
 #: C/translate.page:40(page/p)
 msgid ""
@@ -1014,8 +1015,8 @@ msgid ""
 "list</link>."
 msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
-"χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
-"gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+"χρησιμοποιώντας τη <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">λίστα αλληλογραφίας</link> τους."
 
 #~ msgid "Video demonstation"
 #~ msgstr "Επιλογές βίντεο"
