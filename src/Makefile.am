@@ -19,13 +19,10 @@ gnome_mahjongg_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/gnome-mahjongg\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GTK_CFLAGS) \
-	$(RSVG_CFLAGS)
+	$(GNOME_MAHJONGG_CFLAGS)
 
 gnome_mahjongg_LDADD = \
-	$(GTK_LIBS)	\
-	$(RSVG_LIBS) \
-	$(INTLLIBS)
+	$(GNOME_MAHJONGG_LIBS)
 
 CLEANFILES = \
 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
