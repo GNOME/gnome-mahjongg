@@ -26,7 +26,7 @@ dnl Internationalization
 dnl ###########################################################################
 
 IT_PROG_INTLTOOL([0.35.0])
-AC_SUBST(GETTEXT_PACKAGE, gnome-mahjong)
+AC_SUBST(GETTEXT_PACKAGE, gnome-mahjongg)
 
 dnl ###########################################################################
 dnl Documentation
