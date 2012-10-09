@@ -4,7 +4,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">gnome-games</name>
+  <name xml:lang="en">gnome-mahjongg</name>
   <shortdesc xml:lang="en">Disassemble a pile of tiles by removing matching pairs</shortdesc>
   <description xml:lang="en">Disassemble a pile of tiles by removing matching pairs</description>
   <homepage rdf:resource="http://live.gnome.org/Mahjongg" />
