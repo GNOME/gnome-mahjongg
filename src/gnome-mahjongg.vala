@@ -29,6 +29,7 @@ public class Mahjongg : Gtk.Application
         add_accelerator ("<Primary>h", "app.hint", null);
         add_accelerator ("<Primary>z", "app.undo", null);
         add_accelerator ("<Primary><Shift>z", "app.redo", null);
+        add_accelerator ("F1", "app.help", null);
         add_accelerator ("<Primary>q", "app.quit", null);
     }
 
