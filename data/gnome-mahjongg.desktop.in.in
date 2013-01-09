@@ -1,6 +1,7 @@
 [Desktop Entry]
 _Name=Mahjongg
 _Comment=Disassemble a pile of tiles by removing matching pairs
+_Keywords=game;strategy;puzzle;board;
 Exec=gnome-mahjongg
 Icon=gnome-mahjongg
 Terminal=false
