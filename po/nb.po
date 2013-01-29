@@ -1,14 +1,14 @@
-# Norwegian bokmål translation of gnome-games.
+# Norwegian bokmål translation of gnome-mahjonng.
 # Copyright © 1998-2002 Free Software Foundation, Inc.
 # Kjartan Maraas <kmaraas@gnome.org>, 1998-2013.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games 3.7.x\n"
+"Project-Id-Version: gnome-mahjonng 3.7.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-21 11:47+0100\n"
-"PO-Revision-Date: 2013-01-21 11:47+0100\n"
+"POT-Creation-Date: 2013-01-29 19:10+0100\n"
+"PO-Revision-Date: 2013-01-29 19:11+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -25,6 +25,10 @@ msgstr "Mahjongg"
 #: ../data/gnome-mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Ta fra hverandre en haug med fliser ved å finne like par"
+
+#: ../data/gnome-mahjongg.desktop.in.in.h:3
+msgid "game;strategy;puzzle;board;"
+msgstr "spill;strategi;puslespill;brett;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
