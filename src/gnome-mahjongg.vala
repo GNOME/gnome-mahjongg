@@ -642,6 +642,10 @@ public class Mahjongg : Gtk.Application
         window.set_title (_("Mahjongg - %s").printf (display_name));
 
         update_ui ();
+        
+        /* Reset the pause button in case it was set to resume */
+        pause_button.icon_name = "media-playback-pause";
+        pause_button.label = _("_Pause");
     }
 
     private void tick_cb ()
