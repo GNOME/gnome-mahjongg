@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-02-02 13:08+0900\n"
+"POT-Creation-Date: 2013-02-02 09:42+0000\n"
+"PO-Revision-Date: 2013-02-20 20:56+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../data/gnome-mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr "game؛strategy؛puzzle؛board؛ئويۇن؛ئىستراتېگىيە؛تېپىشماق؛تاختا؛"
+msgstr "game;strategy;puzzle;board;ئويۇن;تەدبىر‏;تېپىشماق;تاختا;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
