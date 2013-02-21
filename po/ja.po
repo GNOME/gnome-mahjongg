@@ -12,10 +12,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 00:03+0900\n"
-"PO-Revision-Date: 2012-09-24 13:07+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-02-15 20:26+0000\n"
+"PO-Revision-Date: 2013-02-15 22:41+0900\n"
+"Last-Translator: catback <catback@lindwurm.biz>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -146,9 +146,8 @@ msgid "_Redo Move"
 msgstr "移動をやり直す(_R)"
 
 #: ../src/gnome-mahjongg.vala:121
-#, fuzzy
 msgid "Hint"
-msgstr "ヒント(_H)"
+msgstr "ヒント"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
 msgid "_Pause"
@@ -234,6 +233,7 @@ msgstr ""
 "Yuusuke Tahara <tahara@gnome.gr.jp>\n"
 "Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
 "Yukihiro Nakai <Nakai@technologist.com>\n"
+"catback(Hiromi Imazato) <catback@lindwurm.biz>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
 #: ../src/gnome-mahjongg.vala:556
@@ -253,7 +253,7 @@ msgstr "GNOME 上海 - %s"
 #: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
 #, c-format
 msgid "Time"
-msgstr "タイム"
+msgstr "経過時間"
 
 #: ../src/gnome-mahjongg.vala:778
 msgid "New Game"
