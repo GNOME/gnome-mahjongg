@@ -6,8 +6,13 @@ map_DATA = \
 
 themedir = $(datadir)/gnome-mahjongg/themes
 theme_DATA = \
-	smooth.png	\
-	postmodern.svg
+	default.png	\
+	default2.png	\
+	greek-letters.png \
+	maya.png	\
+	postmodern.svg	\
+	seta.png	\
+	smooth.png
 
 gsettings_in_file = org.gnome.gnome-mahjongg.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
