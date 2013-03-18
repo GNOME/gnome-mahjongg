@@ -21,7 +21,7 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 man_MANS = gnome-mahjongg.6
 
-desktop_in_files = gnome-mahjongg.desktop.in.in
+desktop_in_files = mahjongg.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 

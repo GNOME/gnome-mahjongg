@@ -1,4 +1,4 @@
-data/gnome-mahjongg.desktop.in
+data/mahjongg.desktop.in
 src/game.c
 src/game-view.c
 src/gnome-mahjongg.c
