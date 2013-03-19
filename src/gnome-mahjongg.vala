@@ -732,7 +732,7 @@ public class Mahjongg : Gtk.Application
 
         Gtk.init (ref args);
 
-        var context = new OptionContext ("");
+        var context = new OptionContext (null);
         context.set_translation_domain (GETTEXT_PACKAGE);
         context.add_group (Gtk.get_option_group (true));
 
