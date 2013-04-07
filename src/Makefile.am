@@ -1,5 +1,10 @@
 bin_PROGRAMS = gnome-mahjongg
 
+BUILT_SOURCES = resources.c
+
+resources.c: gnome-mahjongg.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(srcdir) $(srcdir)/gnome-mahjongg.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $<
+
 gnome_mahjongg_SOURCES = 	\
 	config.vapi	\
 	fixes.vapi	\
@@ -7,7 +12,8 @@ gnome_mahjongg_SOURCES = 	\
 	game-view.vala	\
 	gnome-mahjongg.vala	\
 	history.vala	\
-	map.vala
+	map.vala	\
+	$(BUILT_SOURCES)
 
 gnome_mahjongg_VALAFLAGS = \
 	--pkg posix \
@@ -27,5 +33,9 @@ gnome_mahjongg_LDADD = \
 CLEANFILES = \
 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
 	*_vala.stamp
+
+EXTRA_DIST = \
+	gnome-mahjongg.gresource.xml \
+	menu.ui
 
 -include $(top_srcdir)/git.mk

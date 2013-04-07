@@ -24,13 +24,10 @@ public class Mahjongg : Gtk.Application
         Object (application_id: "org.gnome.gnome-mahjongg", flags: ApplicationFlags.FLAGS_NONE);
 
         add_action_entries (action_entries, this);
-        add_accelerator ("<Primary>n", "app.new-game", null);
         add_accelerator ("Pause", "app.pause", null);
         add_accelerator ("<Primary>h", "app.hint", null);
         add_accelerator ("<Primary>z", "app.undo", null);
         add_accelerator ("<Primary><Shift>z", "app.redo", null);
-        add_accelerator ("F1", "app.help", null);
-        add_accelerator ("<Primary>q", "app.quit", null);
     }
 
     protected override void startup ()
@@ -38,6 +35,16 @@ public class Mahjongg : Gtk.Application
         base.startup ();
 
         settings = new Settings ("org.gnome.gnome-mahjongg");
+
+        var builder = new Gtk.Builder ();
+        try {
+            builder.add_from_resource ("/org/gnome/mahjongg/ui/menu.ui");
+        } catch (Error e) {
+            error ("loading menu builder file: %s", e.message);
+        }
+
+        var app_menu = builder.get_object ("appmenu") as MenuModel;
+        set_app_menu (app_menu);
 
         load_maps ();
 
@@ -69,23 +76,6 @@ public class Mahjongg : Gtk.Application
         status_box.pack_start (clock_label, false, false, 0);
         
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-
-        /* Create the menus */
-        var menu = new Menu ();
-        var section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_New Game"), "app.new-game");
-        section.append (_("_Restart Game"), "app.restart-game");
-        section.append (_("_Scores"), "app.scores");
-        section.append (_("_Preferences"), "app.preferences");
-        section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Help"), "app.help");
-        section.append (_("_About"), "app.about");
-        section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Quit"), "app.quit");
-        set_app_menu (menu);
 
         game_view = new GameView ();
         game_view.button_press_event.connect (view_button_press_event);        
