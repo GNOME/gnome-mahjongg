@@ -2,13 +2,13 @@
 # translation of mahjongg manual to spanish
 #
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2012-08-05 09:25+0000\n"
-"PO-Revision-Date: 2012-08-09 09:39+0200\n"
+"POT-Creation-Date: 2013-04-17 19:33+0000\n"
+"PO-Revision-Date: 2013-04-24 12:07+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -170,31 +170,30 @@ msgstr ""
 "Si todavía no tiene una cuenta, simplemente pulse en el enlace <gui>New "
 "Account</gui> para crear una."
 
-#: C/bug-filing.page:29(page/p)
+#: C/bug-filing.page:30(page/p)
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before reporting "
-"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
-"for the bug to see if it already exists."
+"gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mahjongg"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Una vez que tenga su cuenta, inicie sesión y pulse en <guiseq><gui>Informar "
-"de un error</gui><gui>Aplicaciones</gui><gui>gnome-games</gui></guiseq>. "
+"de un error</gui><gui>Aplicaciones</gui><gui>gnome-mahjongg</gui></guiseq>. "
 "Antes de informar de un error, lea las <link href=\"https://bugzilla.gnome."
 "org/page.cgi?id=bug-writing.html\">guías para informar de un error</link> y "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=evince\">busque</"
-"link> el error para ver si ya existe."
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mahjongg"
+"\">busque</link> el error para ver si ya existe."
 
-#: C/bug-filing.page:33(page/p)
-msgid ""
-"To file your bug, choose the component <gui>mahjongg</gui> in the "
-"<gui>Component</gui> menu."
-msgstr ""
-"Para enviar su informe de error, elija el componente <gui>mahjongg</gui> en "
-"el menú <gui>Component</gui>."
-
-#: C/bug-filing.page:36(page/p)
+#: C/bug-filing.page:38(page/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -204,7 +203,7 @@ msgstr ""
 "en el menú <gui>Severity</gui>. Rellene las secciones «Summary» y "
 "«Description» y pulse en <gui>Commit</gui>."
 
-#: C/bug-filing.page:40(page/p)
+#: C/bug-filing.page:42(page/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -291,7 +290,8 @@ msgstr ""
 
 #: C/gameplay.page:17(credit/name) C/hints.page:21(credit/name)
 #: C/map.page:14(credit/name) C/pause.page:18(credit/name)
-#: C/toolbar.page:17(credit/name) C/translate.page:19(credit/name)
+#: C/scoring.page:13(credit/name) C/toolbar.page:17(credit/name)
+#: C/translate.page:19(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -330,9 +330,6 @@ msgid ""
 msgstr "Puse en la ficha que quiere emparejar. Si es elegible, se resaltará."
 
 #: C/gameplay.page:44(item/p)
-#| msgid ""
-#| "Click on a matching tile. If it is a truely a matching tile, both tiles "
-#| "will vanish."
 msgid ""
 "Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
@@ -344,7 +341,6 @@ msgid "Video demonstration"
 msgstr "Vídeo de demostración"
 
 #: C/gameplay.page:53(media/p)
-#| msgid "Basic gameplay"
 msgid "Video of gameplay"
 msgstr "Vídeo de una partida"
 
@@ -380,11 +376,6 @@ msgstr ""
 "existe."
 
 #: C/hints.page:35(page/p)
-#| msgid ""
-#| "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Game</"
-#| "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> "
-#| "button on the <link xref=\"toolbar\">toolbar</link>, or press "
-#| "<keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
@@ -640,7 +631,6 @@ msgid "There are 9 different layouts. To select a different tile layout:"
 msgstr "Hay 9 modelos de fichas diferentes. Para elegir un modelo diferente:"
 
 #: C/map.page:26(item/p)
-#| msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
 msgstr "Pulse en <guiseq><gui>Mahjongg</gui><gui>Preferencias</gui></guiseq>."
 
@@ -738,8 +728,6 @@ msgid "You can pause your current game using one of the following methods:"
 msgstr "Puede pausar el juego actual usando uno de los siguientes métodos:"
 
 #: C/pause.page:32(item/p)
-#| msgid ""
-#| "The <gui>Pause</gui> button on the <link xref=\"toolbar\">toolbar</link>."
 msgid ""
 "The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
 msgstr ""
@@ -786,10 +774,6 @@ msgstr ""
 msgid "Shuffling tiles adds a 60-second penalty to your time."
 msgstr "Mezclar las fichas añade 60 segundos de penalización a su marcador."
 
-#: C/scoring.page:13(credit/name)
-msgid "Ekateirna Gerasimova"
-msgstr "Ekateirna Gerasimova"
-
 #: C/scoring.page:21(page/title)
 msgid "Scoring"
 msgstr "Puntuación"
@@ -807,7 +791,6 @@ msgid "To view the highscore board:"
 msgstr "Para ver el cuadro de puntuaciones:"
 
 #: C/scoring.page:28(item/p)
-#| msgid "<guiseq><gui>Game</gui><gui>Scores</gui></guiseq>"
 msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
 msgstr "<guiseq><gui>Mahjongg</gui><gui>Puntuación</gui></guiseq>"
 
@@ -947,9 +930,6 @@ msgid "Show/hide the toolbar"
 msgstr "Mostrar/ocultar la barra de herramientas"
 
 #: C/toolbar.page:26(page/p)
-#| msgid ""
-#| "To show or hide the toolbar, click <guiseq><gui>Settings</"
-#| "gui><gui>Toolbar</gui></guiseq>."
 msgid ""
 "To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
 "gui></guiseq>."
@@ -958,11 +938,6 @@ msgstr ""
 "<guiseq><gui>Mahjongg</gui><gui>Barra de herramientas</gui></guiseq>."
 
 #: C/toolbar.page:29(page/p)
-#| msgid ""
-#| "The toolbar, located under the menu bar, lets you perform common actions "
-#| "with your mouse. To use a toolbar item, just click on it. The buttons, "
-#| "from left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <link "
-#| "xref=\"hints\">Hint</link> and <gui>Pause</gui>."
 msgid ""
 "The toolbar, located under the menu bar, lets you perform common actions "
 "with your mouse. To use a toolbar item, just click on it. The buttons, from "
@@ -980,10 +955,6 @@ msgid "Help translate"
 msgstr "Ayudar a traducir"
 
 #: C/translate.page:29(page/p)
-#| msgid ""
-#| "The <app>GNOME Games</app> user interface and documentation is being "
-#| "translated by a world-wide volunteer community. You are welcome to "
-#| "participate."
 msgid ""
 "The GNOME Games user interface and documentation is being translated by a "
 "world-wide volunteer community: you are welcome to participate."
@@ -1001,11 +972,6 @@ msgstr ""
 "link> para los que se siguen necesitando traducciones."
 
 #: C/translate.page:35(page/p)
-#| msgid ""
-#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
-#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
-#| "org/teams/\">translation team</link> for your language. This will give "
-#| "you the ability to upload new translations."
 msgid ""
 "To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
@@ -1018,11 +984,6 @@ msgstr ""
 "subir traducciones nuevas."
 
 #: C/translate.page:40(page/p)
-#| msgid ""
-#| "You can chat with GNOME translators using <link href=\"https://cbe003."
-#| "chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
-#| "People on the channel are located worldwide, so you may not get an "
-#| "immediate response as a result of timezone differences."
 msgid ""
 "You can chat with GNOME translators using irc: join the #i18n chanel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
@@ -1042,6 +1003,16 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid ""
+#~ "To file your bug, choose the component <gui>mahjongg</gui> in the "
+#~ "<gui>Component</gui> menu."
+#~ msgstr ""
+#~ "Para enviar su informe de error, elija el componente <gui>mahjongg</gui> "
+#~ "en el menú <gui>Component</gui>."
+
+#~ msgid "Ekateirna Gerasimova"
+#~ msgstr "Ekateirna Gerasimova"
 
 #~ msgid "Video demonstation"
 #~ msgstr "Vídeo de demostración"
