@@ -13,3 +13,5 @@ icon48_DATA = 48x48/gnome-mahjongg.png
 icon256_DATA = 256x256/gnome-mahjongg.png
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(icon256_DATA)
+
+-include $(top_srcdir)/git.mk
