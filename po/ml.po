@@ -36,7 +36,7 @@ msgstr "ചേരുന്ന ജോടികളെ ഒഴിവാക്കി 
 
 #: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr "കളി; ഉപായം ;ഗൂഢപ്രശ്നം ;ബോര്‍ഡ്; "
+msgstr "കളി;ഉപായം;ഗൂഢപ്രശ്നം;ബോര്‍ഡ്;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
