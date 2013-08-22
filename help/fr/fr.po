@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2012-12-02 21:56+0000\n"
-"PO-Revision-Date: 2013-03-24 19:16+0100\n"
+"POT-Creation-Date: 2013-07-20 14:51+0000\n"
+"PO-Revision-Date: 2013-08-22 10:21+0200\n"
 "Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -90,11 +90,11 @@ msgstr "Creative Commons Partage des Conditions Initiales à l'Identique 3.0"
 
 #: C/index.page:21(page/title)
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</"
-"media>Mahjongg"
+"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
+"Mahjongg"
 msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">Logo de Mahjongg</"
-"media>Mahjongg"
+"media> Mahjongg"
 
 #: C/index.page:22(page/p)
 msgid ""
@@ -172,33 +172,25 @@ msgstr ""
 "d'en créer un en cliquant sur le lien <gui>New Account</gui> (Nouveau "
 "compte)."
 
-#: C/bug-filing.page:29(page/p)
+#: C/bug-filing.page:30(page/p)
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before reporting "
-"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
-"for the bug to see if it already exists."
+"gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mahjongg"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Une fois inscrit, connectez vous, cliquez sur <guiseq><gui>File a Bug "
-"(enregistrer un bogue)</gui><gui>Applications</gui><gui>gnome-games (jeux "
-"gnome)</gui></guiseq> Avant de signaler un bogue, il est important de lire "
+"(enregistrer un bogue)</gui><gui>Applications</gui><gui>gnome-mahjongg"
+"</gui></guiseq> Avant de signaler un bogue, il est important de lire "
 "le <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html"
 "\">bug writing guidelines (guide sur le rapport de bogue)</link> et de "
-"cliquer sur <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gome-"
-"games\">Browse (rechercher)</link> pour voir si le bogue n'est pas déjà "
+"cliquer sur <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-"
+"mahjongg\">Browse (rechercher)</link> pour voir si le bogue n'est pas déjà "
 "signalé."
 
-#: C/bug-filing.page:33(page/p)
-msgid ""
-"To file your bug, choose the component <gui>mahjongg</gui> in the "
-"<gui>Component</gui> menu."
-msgstr ""
-"Pour signaler votre bogue, choisissez le composant <gui>Mahjongg</gui> dans "
-"le menu <gui>Component (composant)</gui>. "
-
-#: C/bug-filing.page:36(page/p)
+#: C/bug-filing.page:38(page/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -209,7 +201,7 @@ msgstr ""
 "les sections « Summary » (résumé) et « description » et cliquez sur "
 "<gui>Commit (soumettre)</gui>."
 
-#: C/bug-filing.page:40(page/p)
+#: C/bug-filing.page:42(page/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -296,7 +288,8 @@ msgstr ""
 
 #: C/gameplay.page:17(credit/name) C/hints.page:21(credit/name)
 #: C/map.page:14(credit/name) C/pause.page:18(credit/name)
-#: C/toolbar.page:17(credit/name) C/translate.page:19(credit/name)
+#: C/scoring.page:13(credit/name) C/toolbar.page:17(credit/name)
+#: C/translate.page:19(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -991,10 +984,10 @@ msgstr ""
 
 #: C/translate.page:32(page/p)
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mahjongg/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Il y  a de <link href=\"http://l10n.gnome.org/module/gnome-games/"
+"Il y  a de <link href=\"http://l10n.gnome.org/module/gnome-mahjongg/"
 "\">nombreuses langues</link> pour lesquelles une traduction est encore à "
 "faire."
 
@@ -1030,6 +1023,13 @@ msgstr ""
 "Vous pouvez aussi contacter l'équipe d'internationalisation par leur <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">liste de "
 "diffusion</link>."
+
+#~ msgid ""
+#~ "To file your bug, choose the component <gui>mahjongg</gui> in the "
+#~ "<gui>Component</gui> menu."
+#~ msgstr ""
+#~ "Pour signaler votre bogue, choisissez le composant <gui>Mahjongg</gui> "
+#~ "dans le menu <gui>Component (composant)</gui>. "
 
 #~ msgid "Video demonstation"
 #~ msgstr "Démonstration vidéo"
