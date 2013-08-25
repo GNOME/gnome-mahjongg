@@ -1,17 +1,19 @@
 # translation of mahjongg.master.po to
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.master\n"
-"POT-Creation-Date: 2012-09-24 23:49+0000\n"
-"PO-Revision-Date: 2012-09-29 12:55+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team:  <el@li.org>\n"
+"POT-Creation-Date: 2013-08-18 16:42+0000\n"
+"PO-Revision-Date: 2013-08-25 16:37+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -21,7 +23,7 @@ msgstr ""
 " Τζένη Πετούμενου <epetoumenou@gmail.com>, 2009\n"
 " Τουρνάρης Παύλος <p.tournaris@gmail.com>, 2009\n"
 " Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
-"\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
 
 #. This is a reference to an external file such as an image or video. When
@@ -290,7 +292,8 @@ msgstr ""
 
 #: C/gameplay.page:17(credit/name) C/hints.page:21(credit/name)
 #: C/map.page:14(credit/name) C/pause.page:18(credit/name)
-#: C/toolbar.page:17(credit/name) C/translate.page:19(credit/name)
+#: C/scoring.page:13(credit/name) C/toolbar.page:17(credit/name)
+#: C/translate.page:19(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -782,10 +785,6 @@ msgstr ""
 "Το ανακάτεμα των πλακιδίων προσθέτει μια ποινή 60 δευτερολέπτων στο χρόνο "
 "σας."
 
-#: C/scoring.page:13(credit/name)
-msgid "Ekateirna Gerasimova"
-msgstr "Ekateirna Gerasimova"
-
 #: C/scoring.page:21(page/title)
 msgid "Scoring"
 msgstr "Βαθμολογία"
@@ -978,11 +977,14 @@ msgstr ""
 "συμμετάσχετε."
 
 #: C/translate.page:32(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mahjongg/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Υπάρχουν <link href=\"http://l10n.gnome.org/module/gnome-games/\">πολλές "
+"Υπάρχουν <link href=\"http://l10n.gnome.org/module/gnome-mahjongg/\">πολλές "
 "γλώσσες</link> για τις οποίες απαιτούνται μεταφράσεις."
 
 #: C/translate.page:35(page/p)
@@ -1017,6 +1019,9 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας τη <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
 "i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid "Ekateirna Gerasimova"
+#~ msgstr "Ekateirna Gerasimova"
 
 #~ msgid "Video demonstation"
 #~ msgstr "Επιλογές βίντεο"
