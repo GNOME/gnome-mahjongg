@@ -353,6 +353,11 @@ public class Game
         selected_tile = null;
         set_hint (null, null);
 
+        /* You lose your re-do queue when you make a move */
+        foreach (var tile in tiles)
+            if (tile.move_number >= move_number)
+                tile.move_number = 0;
+
         tile0.visible = false;
         tile0.move_number = move_number;
         tile1.visible = false;
@@ -362,11 +367,6 @@ public class Game
 
         redraw_tile (tile0);
         redraw_tile (tile1);
-
-        /* You lose your re-do queue when you make a move */
-        foreach (var tile in tiles)
-            if (tile.move_number >= move_number)
-                tile.move_number = 0;
 
         if (complete)
             stop_clock ();
