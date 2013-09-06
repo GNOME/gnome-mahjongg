@@ -107,7 +107,7 @@ msgstr "Matoucí kříž"
 #: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Difficult"
-msgstr "Obtížná"
+msgstr "Obtížné"
 
 #: ../src/game-view.vala:127
 msgid "Paused"
