@@ -3,6 +3,7 @@
  * Add this file to your project's POTFILES.in.
  * DO NOT compile it as part of your application.
  */
+NC_("mahjongg map name", "Easy")
 NC_("mahjongg map name", "The Ziggurat")
 NC_("mahjongg map name", "Four Bridges")
 NC_("mahjongg map name", "Cloud")

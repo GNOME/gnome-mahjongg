@@ -38,7 +38,7 @@ public class Map
 
     public Map.test ()
     {
-        name = dpgettext2 (null, "mahjongg map name", "Test");
+        name = "Test";
         score_name = "test";
         slots.append (new Slot (0, 0, 0));
         slots.append (new Slot (2, 0, 0));
@@ -52,7 +52,7 @@ public class Map
 
     public Map.builtin ()
     {
-        name = dpgettext2 (null, "mahjongg map name", "Easy");
+        name = "Easy";
         score_name = "easy";
         slots.append (new Slot (13, 7, 4));
         slots.append (new Slot (12, 8, 3));
