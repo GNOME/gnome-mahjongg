@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 22:31+0100\n"
-"PO-Revision-Date: 2013-01-30 22:32+0100\n"
+"POT-Creation-Date: 2013-09-06 22:56+0200\n"
+"PO-Revision-Date: 2013-09-06 22:56+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -20,17 +20,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Smonta una catasta di tessere rimuovendo le coppie corrispondenti"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "gioco;giochi;strategia;rompicapo;tavola;ripiano;"
 
@@ -57,79 +58,56 @@ msgstr "VERO se la finestra è a schermo intero"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Facile"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "La ziqqurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Quattro ponti"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Nuvola"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tris"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Dragone rosso"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Muri della piramide"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Croce confusionaria"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Difficile"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "In pausa"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Mosse rimaste:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "_Nuova partita"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "_Ricomincia partita"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Punteggi"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "Preferen_ze"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "A_iuto"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "I_nformazioni"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Esci"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -148,6 +126,7 @@ msgid "Hint"
 msgstr "Indizio"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -250,19 +229,47 @@ msgstr "Ripr_endi"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "Tempo"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Nuova partita"
 
-#: ../src/gnome-mahjongg.vala:793
+#: ../src/gnome-mahjongg.vala:800
 msgid "Size:"
 msgstr "Dimensione:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Data"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Nuova partita"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Ricomincia partita"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Punteggi"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "Preferen_ze"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "A_iuto"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "I_nformazioni"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Esci"
