@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-02-17 23:36+0100\n"
+"POT-Creation-Date: 2013-09-06 19:35+0000\n"
+"PO-Revision-Date: 2013-09-06 21:51+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -35,16 +35,16 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Rozebrat hromadu kamenů odstraňováním odpovídajících si dvojic"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "hra;strategická;logická;hlavolam;desková;"
 
@@ -71,79 +71,56 @@ msgstr "Zapnuto, pokud je okno v režimu celé obrazovky"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Snadné"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Zikkurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Čtyři mosty"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Mrak"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Piškvorky"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Červený drak"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Stěny pyramidy"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Matoucí kříž"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Obtížné"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Pozastaveno"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Zbývá tahů:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "_Nová hra"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "Hru _znovu od začátku"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Skóre"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Předvolby"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "_Nápověda"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "O _aplikaci"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "U_končit"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -162,6 +139,7 @@ msgid "Hint"
 msgstr "Rada"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pozastavit"
 
@@ -272,19 +250,47 @@ msgstr "_Pokračovat"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "Čas"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Nová hra"
 
-#: ../src/gnome-mahjongg.vala:793
+#: ../src/gnome-mahjongg.vala:800
 msgid "Size:"
 msgstr "Velikost:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Datum"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "Hru _znovu od začátku"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "U_končit"
