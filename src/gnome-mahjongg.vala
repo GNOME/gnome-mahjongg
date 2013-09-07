@@ -794,7 +794,7 @@ public class ScoreDialog : Gtk.Dialog
         hbox.show ();
         vbox.pack_start (hbox, false, false, 0);
 
-        var label = new Gtk.Label (_("Size:"));
+        var label = new Gtk.Label (_("Layout:"));
         label.show ();
         hbox.pack_start (label, false, false, 0);
 
