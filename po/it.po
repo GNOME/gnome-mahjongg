@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-06 22:56+0200\n"
-"PO-Revision-Date: 2013-09-06 22:56+0200\n"
+"POT-Creation-Date: 2013-09-07 18:49+0200\n"
+"PO-Revision-Date: 2013-09-07 18:49+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -239,8 +239,8 @@ msgid "New Game"
 msgstr "Nuova partita"
 
 #: ../src/gnome-mahjongg.vala:800
-msgid "Size:"
-msgstr "Dimensione:"
+msgid "Layout:"
+msgstr "Disposizione:"
 
 #: ../src/gnome-mahjongg.vala:825
 msgid "Date"
