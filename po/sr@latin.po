@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Gnomove igre\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-06 19:35+0000\n"
-"PO-Revision-Date: 2013-09-07 06:27+0200\n"
+"POT-Creation-Date: 2013-09-07 19:40+0000\n"
+"PO-Revision-Date: 2013-09-08 07:00+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -241,8 +241,9 @@ msgid "New Game"
 msgstr "Nova igra"
 
 #: ../src/gnome-mahjongg.vala:800
-msgid "Size:"
-msgstr "Veličina:"
+#| msgid "_Layout:"
+msgid "Layout:"
+msgstr "Raspored:"
 
 #: ../src/gnome-mahjongg.vala:825
 msgid "Date"
