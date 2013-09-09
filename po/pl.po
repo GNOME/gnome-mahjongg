@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-06 21:43+0200\n"
-"PO-Revision-Date: 2013-09-06 21:44+0200\n"
+"POT-Creation-Date: 2013-09-10 00:57+0200\n"
+"PO-Revision-Date: 2013-09-10 00:58+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -259,8 +259,8 @@ msgid "New Game"
 msgstr "Nowa gra"
 
 #: ../src/gnome-mahjongg.vala:800
-msgid "Size:"
-msgstr "Rozmiar:"
+msgid "Layout:"
+msgstr "Plansza:"
 
 #: ../src/gnome-mahjongg.vala:825
 msgid "Date"
