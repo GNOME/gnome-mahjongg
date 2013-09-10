@@ -1,14 +1,14 @@
 # Ales Nyakhaychyk <nab@mail.by>, 2003.
-# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011, 2013.
 # Kasia Bondarava <kasia.bondarava@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
+"POT-Creation-Date: 2013-09-07 16:43+0000\n"
 "PO-Revision-Date: 2012-09-07 18:13+0300\n"
-"Last-Translator: Kasia Bondarava <kasia.bondarava@gmail.com>\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -19,16 +19,16 @@ msgstr ""
 "X-Generator: Virtaal 0.7.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Маджонг"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Разбор кучы касцей для маджонгу праз пошук аднолькавых касцей"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "гульня;стратэгія;галаваломка;настольная гульня;"
 
@@ -55,79 +55,56 @@ msgstr "Уключана, калі акно разгорнута на ўвесь
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Простая карта"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Зігурат"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Чатыры масты"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Воблака"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Крыжыкі-нулікі"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Чырвоны дракон"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Сцены пірамідаў"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Дзіўнае скрыжаванне"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Цяжкая"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Паўза"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Засталося хадоў:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "_Новая гульня"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "_Перазапусціць гульню"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Рэкорды"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Настройкі"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "_Дапамога"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "_Аб праграме"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Выйсці"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -146,6 +123,7 @@ msgid "Hint"
 msgstr "Падказка"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Паўза"
 
@@ -245,20 +223,48 @@ msgstr "_Працягнуць"
 msgid "Mahjongg - %s"
 msgstr "Маджонг - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "Час"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Новая гульня"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Памер:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Расклад:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Дата"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Новая гульня"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Перазапусціць гульню"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Рэкорды"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Настройкі"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Дапамога"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "_Аб праграме"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Выйсці"
 
