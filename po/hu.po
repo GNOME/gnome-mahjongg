@@ -1,8 +1,6 @@
-# Hungarian translation of gnome-games.
+# Hungarian translation of gnome-mahjongg.
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-games package.
-#
-# sakk szakkifejezés-ügyi kisokos: http://mek.oszk.hu/00000/00056/html/141.htm
+# This file is distributed under the same license as the gnome-mahjongg package.
 #
 # Szabolcs Ban <shooby at gnome dot hu>, 1999, 2000, 2001.
 # Gergely Nagy <greg at gnome dot hu>, 2001.
@@ -10,34 +8,33 @@
 # Andras Timar <timar at gnome dot hu>, 2002, 2003.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
 # Balázs Úr <urbalazs at gmail dot com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-03-14 22:41+0100\n"
-"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
-"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Project-Id-Version: gnome-mahjongg master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-13 11:38+0200\n"
+"PO-Revision-Date: 2013-09-13 11:36+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Kőcsoportok leszedése egyező párok eltávolításával"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "játék;stratégia;kirakó;tábla;"
 
@@ -64,79 +61,56 @@ msgstr "Az ablak teljes képernyős-e"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Könnyű"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Zikkurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Négy híd"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Felhő"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tic-Tac-Toe"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Vörös sárkány"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Piramisfal"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Zavarba ejtő kereszt"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Nehéz"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Szüneteltetve"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Hátralévő lépések:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "Ú_j játék"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "Játék új_raindítása"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Pontszámok"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Beállítások"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "_Névjegy"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Kilépés"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -155,6 +129,7 @@ msgid "Hint"
 msgstr "Javaslat"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Szünet"
 
@@ -261,22 +236,52 @@ msgstr "_Folytatás"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg – %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
-#, c-format
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 msgid "Time"
 msgstr "Idő"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Új játék"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Méret:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Elrendezés:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Dátum"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "Ú_j játék"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "Játék új_raindítása"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Pontszámok"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#~ msgid "Size:"
+#~ msgstr "Méret:"
 
 #~ msgid "Chess"
 #~ msgstr "Sakk"
@@ -1903,9 +1908,6 @@ msgstr "Dátum"
 #~ msgid "Mahjongg Scores"
 #~ msgstr "Mahjongg pontszámok"
 
-#~ msgid "Layout:"
-#~ msgstr "Elrendezés:"
-
 #~ msgid "Puzzle solved!"
 #~ msgstr "Ezt kirakta!"
 
@@ -1982,9 +1984,6 @@ msgstr "Dátum"
 #~ "egy népszerű ál-japán logikai fejtörő.\n"
 #~ "\n"
 #~ "A GNOME Sudoku a GNOME játékok része."
-
-#~ msgid "Easy"
-#~ msgstr "Könnyű"
 
 #~ msgid "Medium"
 #~ msgstr "Közepes"
