@@ -25,7 +25,11 @@ desktop_in_files = mahjongg.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 
+appdatadir = $(datadir)/appdata
+appdata_DATA = gnome-mahjongg.appdata.xml
+
 EXTRA_DIST = \
+	$(appdata_DATA)		\
 	$(theme_DATA)		\
 	$(gsettings_in_file)	\
 	$(man_MANS)	\
