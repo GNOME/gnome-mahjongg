@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-30 21:34+0000\n"
-"PO-Revision-Date: 2013-01-31 20:12+0100\n"
+"POT-Creation-Date: 2013-09-11 17:40+0000\n"
+"PO-Revision-Date: 2013-09-12 10:04+0100\n"
 "Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -22,16 +22,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Rozoberte kopu kameňov odstraňovaním zhodných párov"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "hra;strategická;hlavolam;stolová;stratégia;"
 
@@ -58,79 +58,56 @@ msgstr "true, ak je okno v celoobrazovkovom režime"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Jednoduchá"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Zikkurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Štyri mosty"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Mrak"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Piškvorky"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Červený drak"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Steny pyramídy"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Mätúci kríž"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Zložitá"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Pozastavené"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Zostáva ťahov:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "_Nová hra"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "_Hrať odznova"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Skóre"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Nastavenia"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "_Pomocník"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "_O programe"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Ukončiť"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -149,6 +126,7 @@ msgid "Hint"
 msgstr "Rada"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pozastaviť"
 
@@ -249,149 +227,47 @@ msgstr "Po_kračovať"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "Čas"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Nová hra"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Veľkosť:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Rozloženie:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Dátum"
 
-#~ msgid "Chess"
-#~ msgstr "Šach"
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Nová hra"
 
-#~ msgid "Play the classic two-player boardgame of chess"
-#~ msgstr "Hrajte klasický stolný šach pre dvoch hráčov"
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Hrať odznova"
 
-#~ msgid "_Game"
-#~ msgstr "_Hra"
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Skóre"
 
-#~ msgid "_Resign"
-#~ msgstr "V_zdať sa"
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Nastavenia"
 
-#~ msgid "Claim _Draw"
-#~ msgstr "Navrhnúť _remízu"
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Pomocník"
 
-#~ msgid "_Settings"
-#~ msgstr "_Nastavenia"
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "_O programe"
 
-#~ msgid "_Contents"
-#~ msgstr "Ob_sah"
-
-#~ msgid "Start a new game"
-#~ msgstr "Začať novú hru"
-
-#~ msgid "Undo Move"
-#~ msgstr "Vrátiť ťah"
-
-#~ msgid "Resign"
-#~ msgstr "Vzdať sa"
-
-#~ msgid "Rewind to the game start"
-#~ msgstr "Presunie hru na začiatok"
-
-#~ msgid "Show the previous move"
-#~ msgstr "Ukáže predchádzajúci ťah"
-
-#~ msgid "Show the next move"
-#~ msgstr "Ukáže ďalší ťah"
-
-#~ msgid "Show the current move"
-#~ msgstr "Ukáže aktuálny stav hry"
-
-#~ msgid "The width of the window"
-#~ msgstr "Šírka okna"
-
-#~ msgid "The height of the window"
-#~ msgstr "Výška okna"
-
-#~ msgid "A flag to enable maximized mode"
-#~ msgstr "Príznak povoľujúci režim maximalizovaného okna"
-
-#~ msgid "A flag to enable fullscreen mode"
-#~ msgstr "Príznak povoľujúci režim zobrazenia na celú obrazovku"
-
-#~ msgid "The piece to promote pawns to"
-#~ msgstr "Figúrka, na ktorú premieňať pešiakov"
-
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
-#~ msgstr ""
-#~ "Figúrka, na ktorú sa premení pešiak, keď ho hráč posunie na posledné pole"
-
-#~ msgid "A flag to enable 3D mode"
-#~ msgstr "Príznak povoľujúci 3D režim"
-
-#~ msgid "A flag to smooth (anti-alias) the 3D display"
-#~ msgstr "Príznak vyhladzujúci (anti-alias) 3D zobrazenie"
-
-#~ msgid "The piece theme to use"
-#~ msgstr "Téma figúrok, ktorá sa má použiť"
-
-#~ msgid "A flag to enable move hints"
-#~ msgstr "Príznak povoľujúci zobrazenie možných ťahov"
-
-#~ msgid "A flag to enable board numbering"
-#~ msgstr "Príznak povoľujúci číslovanie šachovnice"
-
-#~ msgid "A flag to enable the move history browser"
-#~ msgstr "Príznak povoľujúci prechádzať históriou ťahov"
-
-#~ msgid "A flag to enable the toolbar"
-#~ msgstr "Príznak povoľujúci lištu nástrojov"
-
-#~ msgid "The directory to open the save game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na uloženie hry"
-
-#~ msgid "The directory to open the load game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na nahranie hry"
-
-#~ msgid "The format to display moves in"
-#~ msgstr "Formát zobrazenia ťahov"
-
-#~ msgid "The side of the board that is in the foreground"
-#~ msgstr "Strana šachovnice, ktorá je vpredu"
-
-#~ msgid "The duration of a game in seconds (0 for no limit)"
-#~ msgstr "Trvanie hry v sekundách (0 znamená bez obmedzenia)"
-
-#~ msgid "true if the human player is playing white"
-#~ msgstr "true, ak človek hrá bielymi figúrkami"
-
-#~ msgid "The opponent player"
-#~ msgstr "Protihráč"
-
-#~ msgid ""
-#~ "Can be 'human' (play against another human player), '' (use the first "
-#~ "available chess engine) or the name of a specific engine to play against"
-#~ msgstr ""
-#~ "Môže byť 'human' (hra proti druhému človeku v úlohe protihráča), "
-#~ "'' (použije prvý dostupný šachový stroj) alebo názov konkrétneho "
-#~ "šachového stroja, proti ktorému sa bude hrať"
-
-#~ msgid "Difficulty of the opponent chess engine"
-#~ msgstr "Obtiažnosť šachového stroja v úlohe protihráča"
-
-#~ msgid "Preferences"
-#~ msgstr "Nastavenia"
-
-#~ msgid "Play as:"
-#~ msgstr "Hrá ako:"
-
-#~ msgid "Opposing Player:"
-#~ msgstr "Protihráč:"
-
-#~ msgid "Difficulty:"
-#~ msgstr "Obtiažnosť:"
-
-#~ msgid "Game Duration:"
-#~ msgstr "Trvanie hry:"
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "U_končiť"
