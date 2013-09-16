@@ -1,3 +1,11 @@
+GNOME Mahjongg 3.9.92
+=====================
+
+* Fix Redo sometimes removing too many pieces
+* Fix map label on scores dialog
+* Add an appdata file
+* Translation updates
+
 GNOME Mahjongg 3.9.90
 =====================
 
