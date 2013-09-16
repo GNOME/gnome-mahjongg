@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../src/gnome-mahjongg.vala:556
 msgid "GNOME Games web site"
-msgstr "Situa web Permainan GNOME"
+msgstr "Situs web Permainan GNOME"
 
 #: ../src/gnome-mahjongg.vala:568
 msgid "Res_ume"
