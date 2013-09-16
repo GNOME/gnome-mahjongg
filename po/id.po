@@ -7,11 +7,11 @@
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mahjongg gnome-3-8\n"
+"Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-27 16:53+0000\n"
-"PO-Revision-Date: 2013-05-03 02:47+0700\n"
+"POT-Creation-Date: 2013-09-14 12:23+0000\n"
+"PO-Revision-Date: 2013-09-16 19:34+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id_ID\n"
@@ -20,10 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
-#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -58,79 +58,56 @@ msgstr "bernilai \"true\" bila jendela sepenuh layar"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Mudah"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Ziggurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Four Bridges"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Awan"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tic-Tac-Toe"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Red Dragon"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Tembok Piramida"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Confounding Cross"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Sulit"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Jeda"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Sisa Langkah:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "Mai_nkan Permainan Baru"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "Ulangi Pe_rmainan"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Nilai"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Preferensi"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "Tent_ang"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Keluar"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -149,6 +126,7 @@ msgid "Hint"
 msgstr "Petunjuk"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Jeda"
 
@@ -252,19 +230,47 @@ msgstr "Lanj_utkan"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "Waktu"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Permainan Baru"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Ukuran:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Tata Letak:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Tanggal"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "Mai_nkan Permainan Baru"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "Ulangi Pe_rmainan"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Nilai"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Preferensi"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "Tent_ang"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Keluar"
