@@ -1,3 +1,12 @@
+gnome-mahjongg 3.8.1
+====================
+
+ * Fix Redo sometimes removing too many pieces from the board
+ * Fix pause button icon when starting a new game when paused
+ * Mark "Easy" layout name for translation
+ * Fix a broken link in user help
+ * Translation updates
+
 gnome-mahjongg 3.8.0
 ====================
 
