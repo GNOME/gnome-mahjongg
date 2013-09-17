@@ -8,14 +8,15 @@
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-15 20:26+0000\n"
-"PO-Revision-Date: 2013-02-15 22:41+0900\n"
-"Last-Translator: catback <catback@lindwurm.biz>\n"
+"POT-Creation-Date: 2013-09-07 16:43+0000\n"
+"PO-Revision-Date: 2013-09-16 10:48+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -23,18 +24,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "GNOME 上海"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "同じ牌を取り去って牌の山を崩してください"
+msgstr "盤面から全ての牌を取り終わるまで同じ牌を二つずつ取っていきます"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr ""
+msgstr "game;strategy;puzzle;board;ゲーム;ストラテジー;パズル;ボード;logic;ロジック;論理;思考;Mahjongg;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
@@ -59,79 +60,56 @@ msgstr "ウィンドウがフルスクリーンの場合は TRUE"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "簡単"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "ジッグラト"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "四つの橋"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "雲"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "三目並べ"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "赤い龍"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "ピラミッドの壁"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "交差する十字"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "上級"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "一時停止"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "取れる牌の組:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "ゲームをやり直す(_R)"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "得点(_S)"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "設定(_P)"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "このアプリケーションについて(_A)"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "終了(_Q)"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -150,6 +128,7 @@ msgid "Hint"
 msgstr "ヒント"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "一時停止(_P)"
 
@@ -250,19 +229,47 @@ msgstr "再開(_U)"
 msgid "Mahjongg - %s"
 msgstr "GNOME 上海 - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 #, c-format
 msgid "Time"
 msgstr "経過時間"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "新しいゲーム"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "大きさ:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "レイアウト:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "日付"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "新しいゲーム(_N)"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "ゲームをやり直す(_R)"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "得点(_S)"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "設定(_P)"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "このアプリケーションについて(_A)"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "終了(_Q)"
