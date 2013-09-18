@@ -35,8 +35,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-03-08 12:58+0300\n"
+"POT-Creation-Date: 2013-09-07 18:29+0000\n"
+"PO-Revision-Date: 2013-09-18 06:52+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -47,17 +47,17 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:753
 msgid "Mahjongg"
 msgstr "Ματζόνγκ"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr ""
 "Αποσυναρμολόγηση σωρών από πλακίδια με την αφαίρεση ζευγαριών που ταιριάζουν"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "παιχνίδι;στρατηγική;παζλ;πίνακας;"
 
@@ -83,41 +83,47 @@ msgstr "αληθής αν το παράθυρο είναι σε πλήρη οθ�
 #. * DO NOT compile it as part of your application.
 #.
 #: ../data/translatable_game_names.h:6
+#| msgid "Easy"
+msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Εύκολο"
+
+#: ../data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Ζιγκουράτ"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Τέσσερις γέφυρες"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Σύννεφο"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Τρίλιζα"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Κόκκινος δράκος"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Πυραμίδα"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Σταυρός"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Δύσκολο"
@@ -175,6 +181,7 @@ msgid "Hint"
 msgstr "Υπόδειξη"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "Π_αύση"
 
@@ -276,20 +283,20 @@ msgstr "Συνέχιση"
 msgid "Mahjongg - %s"
 msgstr "Ματζόνγκ- %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:825
 #, c-format
 msgid "Time"
 msgstr "Χρόνος"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:782
 msgid "New Game"
 msgstr "Νέο Παιχνίδι"
 
-#: ../src/gnome-mahjongg.vala:793
+#: ../src/gnome-mahjongg.vala:797
 msgid "Size:"
 msgstr "Μέγεθος:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:822
 msgid "Date"
 msgstr "Ημερομηνία"
 
@@ -2028,9 +2035,6 @@ msgstr "Ημερομηνία"
 #~ "λογική.\n"
 #~ "\n"
 #~ "Το Σουντόκου GNOME είναι μέρος των παιχνιδιών του GNOME."
-
-#~ msgid "Easy"
-#~ msgstr "Εύκολο"
 
 #~ msgid "Medium"
 #~ msgstr "Μεσαίο"
