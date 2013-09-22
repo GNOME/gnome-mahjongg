@@ -3,32 +3,32 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-04 22:38+0100\n"
-"PO-Revision-Date: 2013-02-04 22:52+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"POT-Creation-Date: 2013-09-22 11:21+0200\n"
+"PO-Revision-Date: 2013-09-21 21:27+0200\n"
+"Last-Translator: \n"
+"Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Desegin fitxa-piloa bat datozen bikoteak kenduz"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "jokoa;estrategia;puzzlea;mahai-jokoa;"
 
@@ -55,79 +55,56 @@ msgstr "egia leihoa pantaila osoko moduan badago"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Erraza"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Ziggurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Lau zubiak"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Lainoa"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Artzain-jokoa"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Dragoi gorria"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Piramidearen hormak"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Gurutze nahaspilatsua"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Zailtasuna"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:137
 msgid "Paused"
 msgstr "Pausarazita"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Zenbat mugimendu:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "_Joko berria"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "_Hasi berriro jokoa"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Puntuazioak"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Hobespenak"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "La_guntza"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "Honi _buruz"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Irten"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -146,6 +123,7 @@ msgid "Hint"
 msgstr "Iradokizuna"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pausarazi"
 
@@ -242,22 +220,52 @@ msgstr "_Berrekin"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
-#, c-format
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 msgid "Time"
 msgstr "Denbora"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Joko berria"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Tamaina:"
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Diseinua:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Data"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Joko berria"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Hasi berriro jokoa"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Puntuazioak"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Hobespenak"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "La_guntza"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "Honi _buruz"
+
+#: ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Irten"
+
+#~ msgid "Size:"
+#~ msgstr "Tamaina:"
 
 #~ msgid "Chess"
 #~ msgstr "Xakea"
@@ -3602,10 +3610,6 @@ msgstr "Data"
 
 #~ msgid "Remove matching pairs of tiles."
 #~ msgstr "Kendu bat datozen fitxa-pareak."
-
-#~ msgctxt "mahjongg map name"
-#~ msgid "Easy"
-#~ msgstr "Erraza"
 
 #~ msgid "A list of recently played games."
 #~ msgstr "Oraintsu jolastutako jokoen zerrenda."
