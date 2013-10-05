@@ -32,16 +32,9 @@
       <p>The <gui>Pause</gui> button in the
       <link xref="toolbar">toolbar</link>.</p>
     </item>
-  <comment>
-    <cite date="2012-07-26" href="mailto:kittykat3756@gmail.com">Kat</cite>
-    <p>The following two items do not work in 3.5.4</p>
-  </comment>
-<!--    <item>
+    <item>
       <p>The <key>Pause</key> key on your keyboard. Not all keyboards have
       this key.</p>
     </item>
-    <item>
-      <p>The <link xref="shortcuts">keyboard shortcut</link>.</p>
-    </item>-->
   </list>
 </page>
