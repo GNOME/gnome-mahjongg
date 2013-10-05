@@ -2,7 +2,7 @@
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
 data/mahjongg.desktop.in
-data/org.gnome.gnome-mahjongg.gschema.xml.in
+data/org.gnome.gnome-mahjongg.gschema.xml
 data/translatable_game_names.h
 src/game.vala
 src/game-view.vala
