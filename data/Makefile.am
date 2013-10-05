@@ -21,15 +21,17 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 man_MANS = gnome-mahjongg.6
 
-desktop_in_files = mahjongg.desktop.in.in
 desktopdir = $(datadir)/applications
-desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
+desktop_in_files = mahjongg.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
 appdatadir = $(datadir)/appdata
 appdata_DATA = gnome-mahjongg.appdata.xml
 
 EXTRA_DIST = \
 	$(appdata_DATA)		\
+	$(desktop_in_files)	\
 	$(theme_DATA)		\
 	$(gsettings_in_file)	\
 	$(man_MANS)	\
@@ -37,12 +39,10 @@ EXTRA_DIST = \
 	translatable_game_names.h
 
 CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
-DISTCLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(gsettings_SCHEMAS)
 
 check-local: $(appdata_DATA) $(desktop_DATA)
 	$(APPDATA_VALIDATE) $(appdata_DATA)
 	$(DESKTOP_FILE_VALIDATE) $(desktop_DATA)
-
-@INTLTOOL_DESKTOP_RULE@
 
 -include $(top_srcdir)/git.mk
