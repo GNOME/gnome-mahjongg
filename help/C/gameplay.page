@@ -24,7 +24,7 @@
 
   <title>Basic gameplay</title>
 
-  <p>Mahjongg is played by matching two identical tiles per turn. A tile is
+  <p><app>Mahjongg</app> is played by matching two identical tiles per turn. A tile is
   eligible for matching if no part of another tile is lying directly on it, and
   it has a free long edge on either the left or the right. You win by removing
   all tiles, and you are scored by the amount of time it takes you to do so.

@@ -38,7 +38,7 @@
   <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
 
   <note>
-    <p><gui>Hint</gui> can make Mahjongg too easy, and should be used
+    <p><gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used
     sparingly.</p>
     <p>There is a 30-second penalty for each use of the "hint" option.</p>
   </note>

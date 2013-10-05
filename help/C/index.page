@@ -20,7 +20,7 @@
 
  <title><media type="image" src="figures/logo32.png">Mahjongg logo</media> Mahjongg</title>
   <p>
-  Mahjongg is a simple pattern recognition game. You score points by matching identical tiles.
+  <app>Mahjongg</app> is a simple pattern recognition game. You score points by matching identical tiles.
   </p>
 
   <section id="play" style="2column">
