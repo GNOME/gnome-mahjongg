@@ -25,6 +25,7 @@ gnome_mahjongg_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/gnome-mahjongg\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-w \
 	$(GNOME_MAHJONGG_CFLAGS)
 
 gnome_mahjongg_LDADD = \
