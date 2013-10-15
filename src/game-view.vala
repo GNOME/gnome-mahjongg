@@ -78,12 +78,7 @@ public class GameView : Gtk.DrawingArea
 
             var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
             var c = new Cairo.Context (surface);
-            var pixbuf = load_theme (width, height);
-            if (pixbuf == null)
-                return;
-            Gdk.cairo_set_source_pixbuf (c, pixbuf, 0, 0);
-            c.paint ();
-
+            load_theme (c, width, height);
             tile_pattern = new Cairo.Pattern.for_surface (surface);
         }
 
@@ -143,25 +138,34 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private Gdk.Pixbuf load_theme (int width, int height)
+    private void load_theme (Cairo.Context c, int width, int height)
     {
         try
         {
-            return Rsvg.pixbuf_from_file_at_size (theme, width, height);
+            var h = new Rsvg.Handle.from_file (theme);
+
+            var m = Cairo.Matrix.identity ();
+            m.scale ((double) width / h.width, (double) height / h.height);
+            c.set_matrix (m);
+            h.render_cairo (c);
+
+            return;
         }
         catch (Error e)
         {
+            /* Fall through and try loading as a pixbuf */
         }
         
         try
         {
-            return new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
+            var p = new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
+            Gdk.cairo_set_source_pixbuf (c, p, 0, 0);
+            c.paint ();
         }
         catch (Error e)
         {
+            warning ("Failed to load theme %s: %s", theme, e.message);
         }
-
-        return new Gdk.Pixbuf (Gdk.Colorspace.RGB, true, 8, width, height);
     }
 
     private void update_dimensions ()
