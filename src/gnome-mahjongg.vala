@@ -315,7 +315,7 @@ public class Mahjongg : Gtk.Application
                                                 Gtk.ButtonsType.NONE,
                                                 "%s", _("There are no more moves."));
             dialog.format_secondary_text (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution for a time penalty, restart this game or start an new one."));
-            dialog.add_buttons (Gtk.Stock.UNDO, Gtk.ResponseType.REJECT,
+            dialog.add_buttons (_("_Undo"), Gtk.ResponseType.REJECT,
                                 _("_Restart"), Gtk.ResponseType.CANCEL,
                                 _("_New game"), Gtk.ResponseType.ACCEPT);
 
@@ -360,7 +360,7 @@ public class Mahjongg : Gtk.Application
         preferences_dialog = new Gtk.Dialog.with_buttons (_("Mahjongg Preferences"),
                                                    window,
                                                    Gtk.DialogFlags.DESTROY_WITH_PARENT,
-                                                   Gtk.Stock.CLOSE,
+                                                   _("_Close"),
                                                    Gtk.ResponseType.CLOSE, null);
         preferences_dialog.set_border_width (5);
         var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
@@ -781,11 +781,11 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (Gtk.Stock.QUIT, Gtk.ResponseType.CLOSE);
+            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
             add_button (_("New Game"), Gtk.ResponseType.OK);
         }
         else
-            add_button (Gtk.Stock.OK, Gtk.ResponseType.DELETE_EVENT);
+            add_button (_("OK"), Gtk.ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
