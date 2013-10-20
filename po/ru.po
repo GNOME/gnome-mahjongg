@@ -19,8 +19,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-09-09 22:57+0000\n"
-"PO-Revision-Date: 2013-09-10 20:44+0600\n"
-"Last-Translator: Dmitriy S. Seregin <dseregin@59.ru>\n"
+"PO-Revision-Date: 2013-10-20 16:56+0300\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
 #: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
@@ -67,7 +67,7 @@ msgstr "истинно, если окно раскрыто на полный э�
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
-msgstr "Лёгкая"
+msgstr "Просто"
 
 #: ../data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
