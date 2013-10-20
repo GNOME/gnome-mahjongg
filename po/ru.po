@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-02 19:50+0000\n"
-"PO-Revision-Date: 2013-03-26 15:48+0600\n"
+"POT-Creation-Date: 2013-10-20 12:54+0000\n"
+"PO-Revision-Date: 2013-10-17 10:55+0600\n"
 "Last-Translator: Dmitriy S. Seregin <dseregin@59.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -28,10 +28,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:753
 msgid "Mahjongg"
 msgstr "Маджонг"
 
@@ -66,40 +66,45 @@ msgstr "истинно, если окно раскрыто на полный э�
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Легко"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Зиггурат"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Четыре моста"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Облако"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Крестики-нолики"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Красный дракон"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Стены пирамиды"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Смешанный крест"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Тяжёлая"
@@ -157,6 +162,7 @@ msgid "Hint"
 msgstr "Подсказка"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Пауза"
 
@@ -258,19 +264,18 @@ msgstr "_Продолжить"
 msgid "Mahjongg - %s"
 msgstr "Маджонг — %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
-#, c-format
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:825
 msgid "Time"
 msgstr "Время"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:782
 msgid "New Game"
 msgstr "Новая игра"
 
-#: ../src/gnome-mahjongg.vala:793
+#: ../src/gnome-mahjongg.vala:797
 msgid "Size:"
 msgstr "Размер:"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:822
 msgid "Date"
 msgstr "Дата"
