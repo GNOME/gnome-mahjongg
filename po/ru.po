@@ -18,9 +18,9 @@ msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-09 22:57+0000\n"
-"PO-Revision-Date: 2013-09-10 20:44+0600\n"
-"Last-Translator: Dmitriy S. Seregin <dseregin@59.ru>\n"
+"POT-Creation-Date: 2013-10-20 03:08+0000\n"
+"PO-Revision-Date: 2013-10-20 17:08+0300\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,34 +28,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#| msgid "Mahjongg"
+msgid "GNOME Mahjongg"
+msgstr "Маджонг GNOME"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid ""
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"Солитер классической азиатской игры. В начале игры фишки расположены поверх "
+"друг друга на игровом столе. Цель игры — убрать все фишки, затратив на это "
+"как можно меньше времени. Чтобы убрать фишки, найдите и выделите две "
+"одинаковые фишки, и они исчезнут с игрового стола. Можно выбирать только те "
+"фишки, которые расположены на одном и том же уровне и у которых свободна "
+"левая или правая грань. Будьте внимательны: некоторые фишки немного похожи "
+"друг на друга, но на самом деле являются разными."
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+msgid ""
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"В маджонге GNOME используются различные исходные расположения фишек, "
+"некоторые расположения проще, некоторые сложнее. Если вы затрудняетесь "
+"сделать ход, можете воспользоваться подсказкой, но в этом случае будет "
+"начислено штрафное время."
+
+#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
 #: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Маджонг"
 
-#: ../data/mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Разберите большую кучу фишек, убирая совпадающие пары картинок"
 
-#: ../data/mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "игра;стратегия;головоломка;настольная;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:2
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:3
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "истинно, если окно имеет максимальный размер"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:4
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:4
 msgid "true if the window is fullscren"
 msgstr "истинно, если окно раскрыто на полный экран"
 
@@ -67,7 +100,7 @@ msgstr "истинно, если окно раскрыто на полный э�
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
-msgstr "Лёгкая"
+msgstr "Просто"
 
 #: ../data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
@@ -96,20 +129,25 @@ msgstr "Красный дракон"
 
 #: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "Переход"
+
+#: ../data/translatable_game_names.h:13
+msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Стены пирамиды"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Смешанный крест"
 
-#: ../data/translatable_game_names.h:14
+#: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Тяжёлая"
 
-#: ../src/game-view.vala:137
+#: ../src/game-view.vala:132
 msgid "Paused"
 msgstr "Пауза"
 
@@ -167,6 +205,11 @@ msgstr ""
 "сделанные ходы и попытаться найти решение со штрафом времени, перезапустить "
 "эту игру или начать новую."
 
+#: ../src/gnome-mahjongg.vala:318
+#| msgid "_Undo Move"
+msgid "_Undo"
+msgstr "_Отменить"
+
 #: ../src/gnome-mahjongg.vala:319
 msgid "_Restart"
 msgstr "_Начать заново"
@@ -178,6 +221,10 @@ msgstr "_Новая игра"
 #: ../src/gnome-mahjongg.vala:360
 msgid "Mahjongg Preferences"
 msgstr "Параметры игры «Маджонг»"
+
+#: ../src/gnome-mahjongg.vala:363
+msgid "_Close"
+msgstr "_Закрыть"
 
 #: ../src/gnome-mahjongg.vala:377
 msgid "_Theme:"
@@ -237,13 +284,20 @@ msgid "Mahjongg - %s"
 msgstr "Маджонг — %s"
 
 #: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
-#, c-format
 msgid "Time"
 msgstr "Время"
+
+#: ../src/gnome-mahjongg.vala:784 ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Закончить"
 
 #: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Новая игра"
+
+#: ../src/gnome-mahjongg.vala:788
+msgid "OK"
+msgstr "OK"
 
 #: ../src/gnome-mahjongg.vala:800
 msgid "Layout:"
@@ -276,7 +330,3 @@ msgstr "_Справка"
 #: ../src/menu.ui.h:6
 msgid "_About"
 msgstr "_О программе"
-
-#: ../src/menu.ui.h:7
-msgid "_Quit"
-msgstr "_Закончить"
