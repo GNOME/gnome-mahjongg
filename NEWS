@@ -1,3 +1,16 @@
+GNOME Mahjongg 3.11.1
+=====================
+
+Dependencies: intltool >= 0.50
+
+* Add Overpass map by Wa
+* Remove deprecated function usage
+* Help: restore note on using the Pause key
+* Appdata is now translatable
+* Translation updates
+
+Contributors: Robert Ancell, Michael Catanzaro, Wa
+
 GNOME Mahjongg 3.9.92
 =====================
 
