@@ -280,9 +280,7 @@ public class Mahjongg : Gtk.Application
 
     private void background_changed_cb (Gtk.ColorButton widget)
     {
-        Gdk.RGBA colour;
-        /* See https://bugzilla.gnome.org/show_bug.cgi?id=669386 */
-        Gtk.color_button_get_rgba (widget, out colour);
+        var colour = widget.get_rgba ();
         settings.set_string ("bgcolour", "#%04x%04x%04x".printf ((int) (colour.red * 65536 + 0.5), (int) (colour.green * 65536 + 0.5), (int) (colour.blue * 65536 + 0.5)));
     }
 

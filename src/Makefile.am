@@ -7,7 +7,6 @@ resources.c: gnome-mahjongg.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --ge
 
 gnome_mahjongg_SOURCES = 	\
 	config.vapi	\
-	fixes.vapi	\
 	game.vala	\
 	game-view.vala	\
 	gnome-mahjongg.vala	\
