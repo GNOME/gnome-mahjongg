@@ -867,6 +867,8 @@ public class ScoreDialog : Gtk.Dialog
         var d = strcmp (a.name, b.name);
         if (d != 0)
             return d;
+        if (a.duration != b.duration)
+            return (int) a.duration - (int) b.duration;
         return a.date.compare (b.date);
     }
 
