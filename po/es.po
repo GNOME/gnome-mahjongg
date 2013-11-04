@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-01-30 14:17+0100\n"
+"POT-Creation-Date: 2013-10-20 03:08+0000\n"
+"PO-Revision-Date: 2013-11-04 16:08+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -24,32 +24,63 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.5\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#| msgid "Mahjongg"
+msgid "GNOME Mahjongg"
+msgstr "GNOME Mahjongg"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid ""
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"Una versión del solitario Eastern. Las fichas se apilan en el tablero al "
+"principio del juego. El objetivo es quitar todas las fichas en el menor "
+"tiempo posible. Seleccione dos fichas iguales y desaparecerán del tablero, "
+"pero sólo puede seleccionar una ficha si tiene un espacio vacío a su "
+"izquierda o a su derecha en el mismo nivel. Tenga cuidado: hay fichas que "
+"parecen iguales pero que son ligeramente diferentes."
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+msgid ""
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"GNOME Mahjongg tiene varias distribuciones iniciales, algunas fáciles y "
+"algunas difíciles. Si tiene problemas, puede pedir una pista, pero esto "
+"añade una penalización de tiempo."
+
+#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Desmonte un montón de fichas eliminando parejas coincidentes"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "juego;estrategia;puzle;tablero;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "Anchura de la ventana en píxeles"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:2
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "Altura de la ventana en píxeles"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:3
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:4
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:4
 msgid "true if the window is fullscren"
 msgstr "cierto si la ventana está en pantalla completa"
 
@@ -60,79 +91,61 @@ msgstr "cierto si la ventana está en pantalla completa"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Fácil"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "El Zigurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Cuatro puentes"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Nube"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tic-Tac-Toe"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Dragón rojo"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
+msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "Paso a desnivel"
+
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Muro de la pirámide"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Cruce confuso"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Dificultad"
 
-#: ../src/game-view.vala:127
+#: ../src/game-view.vala:132
 msgid "Paused"
 msgstr "Detenido"
 
-#: ../src/gnome-mahjongg.vala:60
+#: ../src/gnome-mahjongg.vala:77
 msgid "Moves Left:"
 msgstr "Movimientos restantes:"
-
-#: ../src/gnome-mahjongg.vala:77
-msgid "_New Game"
-msgstr "Juego _nuevo"
-
-#: ../src/gnome-mahjongg.vala:78
-msgid "_Restart Game"
-msgstr "_Reiniciar partida"
-
-#: ../src/gnome-mahjongg.vala:79
-msgid "_Scores"
-msgstr "_Puntuación"
-
-#: ../src/gnome-mahjongg.vala:80
-msgid "_Preferences"
-msgstr "_Preferencias"
-
-#: ../src/gnome-mahjongg.vala:83
-msgid "_Help"
-msgstr "Ay_uda"
-
-#: ../src/gnome-mahjongg.vala:84
-msgid "_About"
-msgstr "_Acerca de"
-
-#: ../src/gnome-mahjongg.vala:87
-msgid "_Quit"
-msgstr "_Salir"
 
 #: ../src/gnome-mahjongg.vala:98
 msgid "_New"
@@ -151,6 +164,7 @@ msgid "Hint"
 msgstr "Sugerencia"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -183,6 +197,10 @@ msgstr ""
 "intentar encontrar la solución con una penalización de tiempo, reiniciar el "
 "juego o empezar uno nuevo."
 
+#: ../src/gnome-mahjongg.vala:318
+msgid "_Undo"
+msgstr "_Deshacer"
+
 #: ../src/gnome-mahjongg.vala:319
 msgid "_Restart"
 msgstr "_Reiniciar"
@@ -194,6 +212,10 @@ msgstr "Partida _nueva"
 #: ../src/gnome-mahjongg.vala:360
 msgid "Mahjongg Preferences"
 msgstr "Preferencias de Mahjongg"
+
+#: ../src/gnome-mahjongg.vala:363
+msgid "_Close"
+msgstr "_Cerrar"
 
 #: ../src/gnome-mahjongg.vala:377
 msgid "_Theme:"
@@ -252,22 +274,57 @@ msgstr "C_ontinuar"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
-#, c-format
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
 msgid "Time"
 msgstr "Tiempo"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:784 ../src/menu.ui.h:7
+msgid "_Quit"
+msgstr "_Salir"
+
+#: ../src/gnome-mahjongg.vala:785
 msgid "New Game"
 msgstr "Partida nueva"
 
-#: ../src/gnome-mahjongg.vala:793
-msgid "Size:"
-msgstr "Tamaño:"
+#: ../src/gnome-mahjongg.vala:788
+#| msgid "_OK"
+msgid "OK"
+msgstr "Aceptar"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:800
+msgid "Layout:"
+msgstr "Disposición:"
+
+#: ../src/gnome-mahjongg.vala:825
 msgid "Date"
 msgstr "Fecha"
+
+#: ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "Juego _nuevo"
+
+#: ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Reiniciar partida"
+
+#: ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Puntuación"
+
+#: ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+#: ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "Ay_uda"
+
+#: ../src/menu.ui.h:6
+msgid "_About"
+msgstr "_Acerca de"
+
+#~ msgid "Size:"
+#~ msgstr "Tamaño:"
 
 #~ msgid "Chess"
 #~ msgstr "Ajedrez"
@@ -1907,9 +1964,6 @@ msgstr "Fecha"
 #~ msgid "Mahjongg Scores"
 #~ msgstr "Puntuación Mahjongg"
 
-#~ msgid "Layout:"
-#~ msgstr "Disposición:"
-
 #~ msgid "Puzzle solved!"
 #~ msgstr "Puzle resuelto."
 
@@ -2057,9 +2111,6 @@ msgstr "Fecha"
 
 #~ msgid "New game"
 #~ msgstr "Partida nueva"
-
-#~ msgid "_Undo"
-#~ msgstr "_Deshacer"
 
 #~ msgid "Undo last action"
 #~ msgstr "Deshace la última acción"
@@ -3700,10 +3751,6 @@ msgstr "Fecha"
 #~ msgid "Remove matching pairs of tiles."
 #~ msgstr "Quitar parejas de fichas coincidentes."
 
-#~ msgctxt "mahjongg map name"
-#~ msgid "Easy"
-#~ msgstr "Fácil"
-
 #~ msgctxt "preferences"
 #~ msgid "General"
 #~ msgstr "General"
@@ -4543,12 +4590,6 @@ msgstr "Fecha"
 
 #~ msgid "_Cancel"
 #~ msgstr "_Cancelar"
-
-#~ msgid "_Close"
-#~ msgstr "_Cerrar"
-
-#~ msgid "_OK"
-#~ msgstr "_Aceptar"
 
 #~ msgid "Could not show link"
 #~ msgstr "No se ha podido mostrar el enlace"
