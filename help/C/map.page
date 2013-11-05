@@ -1,21 +1,21 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="map">
   <info>
     <link type="guide" xref="index#play"/>
-    <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
+    <revision pkgversion="3.10" version="0.1" date="2013-11-05" status="final"/>
 
-    <credit type="author copyright">
+    <credit type="author copyright editor">
       <name>Tiffany Antopolski</name>
-      <email>tiffany.antopolski@gmail.com</email>
-      <years>2012</years>
+      <email its:translate="no">tiffany.antopolski@gmail.com</email>
+      <years>2012 2013</years>
     </credit>
     <credit type="editor">
       <name>Ekaterina Gerasimova</name>
-      <email>kittykat3756@gmail.com</email>
+      <email its:translate="no">kittykat3756@gmail.com</email>
       <years>2012</years>
     </credit>
-
   </info>
 
   <title>Change tile layout</title>
@@ -25,7 +25,7 @@
   <steps>
     <item><p>Click
     <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>.</p></item>
-    <item><p>Under <gui>Maps</gui> select a layout from the drop-down
+    <item><p>Select a <gui>Layout</gui> from the drop-down
     menu.</p></item>
     <item><p>Click <gui>Close</gui></p></item>
   </steps>
@@ -38,24 +38,30 @@
  <tr>
    <td>
   <media type="image" src="figures/layout-easy.png" width="200">
-    <p></p>
+    <p>easy image</p>
   </media>
    </td>
    <td>
   <media type="image" src="figures/layout-ziggurat.png" width="200">
-    <p></p>
+    <p>the ziggurat layout image</p>
   </media>
    </td>
    <td>
   <media type="image" src="figures/layout-bridges.png" width="200">
-    <p></p>
+    <p>four bridges laybout image</p>
   </media>
+    </td>
+    <td>
+      <media type="image" src="figures/layout-overpass.png" width="200">
+       <p>overpass layout image</p>
+      </media>
     </td>
    </tr>
    <tr>
      <td><p><em>Easy</em></p></td>
      <td><p><em>The Ziggurat</em></p></td>
      <td><p><em>Four Bridges</em></p></td>
+     <td><p><em>Overpass</em></p></td>
    </tr>
 </table>
 
@@ -63,47 +69,47 @@
  <tr>
    <td>
   <media type="image" src="figures/layout-cloud.png" width="200">
-    <p></p>
+    <p>cloud layout image/p>
   </media>
    </td>
    <td>
   <media type="image" src="figures/layout-tic-tac-toe.png" width="200">
-    <p></p>
+    <p>tic tac toe layout image</p>
   </media>
    </td>
    <td>
   <media type="image" src="figures/layout-red-dragon.png" width="200">
-    <p></p>
+    <p>red dragon layout image</p>
   </media>
     </td>
-   </tr>
+    <td>
+  <media type="image" src="figures/layout-pyramid-walls.png" width="200">
+    <p>pyramid walls layout image</p>
+  </media>
+   </td>
+  </tr>
    <tr>
      <td><p><em>Cloud</em></p></td>
      <td><p><em>Tic-tac-toe</em></p></td>
      <td><p><em>Red Dragon</em></p></td>
+     <td><p><em>Pyramid's Walls</em></p></td>
    </tr>
 </table>
 
 <table>
  <tr>
    <td>
-  <media type="image" src="figures/layout-pyramid-walls.png" width="200">
-    <p></p>
-  </media>
-   </td>
-   <td>
   <media type="image" src="figures/layout-conf-cross.png" width="200">
-    <p></p>
+    <p>confounding cross layout image</p>
   </media>
    </td>
    <td>
   <media type="image" src="figures/layout-difficult.png" width="200">
-    <p></p>
+    <p>difficult layout image</p>
   </media>
     </td>
    </tr>
    <tr>
-     <td><p><em>Pyramid's Walls</em></p></td>
      <td><p><em>Confounding Cross</em></p></td>
      <td><p><em>Difficult</em></p></td>
    </tr>

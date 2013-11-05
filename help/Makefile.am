@@ -11,6 +11,7 @@ HELP_MEDIA = \
 	figures/layout-pyramid-walls.png\
 	figures/layout-red-dragon.png	\
 	figures/layout-tic-tac-toe.png	\
+	figures/layout-overpass.png	\
 	figures/layout-ziggurat.png	\
 	figures/logo32.png		\
 	figures/logo.png		\
