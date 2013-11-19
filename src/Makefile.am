@@ -12,6 +12,7 @@ gnome_mahjongg_SOURCES = 	\
 	gnome-mahjongg.vala	\
 	history.vala	\
 	map.vala	\
+	score-dialog.vala	\
 	$(BUILT_SOURCES)
 
 gnome_mahjongg_VALAFLAGS = \
