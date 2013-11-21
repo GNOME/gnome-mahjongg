@@ -10,3 +10,4 @@ src/game-view.vala
 src/gnome-mahjongg.vala
 src/map.vala
 [type: gettext/glade]src/menu.ui
+src/score-dialog.vala
