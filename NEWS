@@ -1,3 +1,15 @@
+GNOME Mahjongg 3.11.3
+=====================
+
+* Scores dialog: scroll to new high score
+* Split ScoreDialog into its own file
+* About dialog: remove period from fragment
+* About dialog: use GtkLicense
+* appdata: update homepage
+* app menu: standardize Help/About/Quit
+* Updated POTFILES.in and POTFILES.skip
+* Translation updates (Spanish, Greek, Chinese simplified)
+
 GNOME Mahjongg 3.11.2
 =====================
 
