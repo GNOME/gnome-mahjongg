@@ -30,7 +30,7 @@ msgstr "移除匹配的牌对以拆除牌堆"
 
 #: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr "game;strategy;puzzle;board;游戏;策略;拼图;板"
+msgstr "game;strategy;puzzle;board;游戏;策略;拼图;板;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
