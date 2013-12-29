@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 01:22+0100\n"
-"PO-Revision-Date: 2013-12-19 01:23+0200\n"
+"POT-Creation-Date: 2013-12-30 00:15+0100\n"
+"PO-Revision-Date: 2013-12-30 00:22+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -40,6 +40,12 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
+"Unha versión do solitario Eastern. As fichas apílanse no taboleiro ao "
+"principio do xogo. O obxectivo é quitar todas as fichas no menor tempo "
+"posíbel. Seleccione dúas fichas iguais e desaparecerán do taboleiro, pero só "
+"pode seleccionar unha ficha se ten un espazo baleiro á súa esquerda ou a á "
+"súa dereita no mesmo nivel. Teña coidado: hai fichas que parecen iguais pero "
+"que son lixeiramente diferentes."
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:3
 msgid ""
@@ -118,7 +124,7 @@ msgstr "Dragón Vermello"
 #: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
-msgstr ""
+msgstr "Paso a nivel"
 
 #: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
@@ -238,13 +244,12 @@ msgid "Tiles:"
 msgstr "Fichas:"
 
 #: ../src/gnome-mahjongg.vala:542
-#, fuzzy
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
-"Un xogo de coincidir pares que se xoga con fichas de Mahjongg.\n"
+"Un xogo de coincidir pares que se xoga con fichas de Mahjongg\n"
 "\n"
 "O Mahjongg forma parte do GNOME Games."
 
@@ -316,9 +321,8 @@ msgid "New Game"
 msgstr "Xogo novo"
 
 #: ../src/score-dialog.vala:32
-#, fuzzy
 msgid "OK"
-msgstr "_Aceptar"
+msgstr "Aceptar"
 
 #: ../src/score-dialog.vala:44
 msgid "Layout:"
