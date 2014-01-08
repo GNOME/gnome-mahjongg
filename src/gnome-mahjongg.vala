@@ -481,21 +481,18 @@ public class Mahjongg : Gtk.Application
     private void hint_cb ()
     {
         var matches = game_view.game.find_matches (game_view.game.selected_tile);
-        var n_matches = matches.length ();
 
-        /* No match, just flash the selected tile */
-        if (n_matches == 0)
+        /* No match, find any random match as if nothing was selected */
+        if (matches.length () == 0)
         {
             if (game_view.game.selected_tile == null)
                 return;
-            game_view.game.set_hint (game_view.game.selected_tile, null);
+            matches = game_view.game.find_matches ();
         }
-        else
-        {
-            var n = Random.int_range (0, (int) n_matches);
-            var match = matches.nth_data (n);
-            game_view.game.set_hint (match.tile0, match.tile1);
-        }
+
+        var n = Random.int_range (0, (int) matches.length ());
+        var match = matches.nth_data (n);
+        game_view.game.set_hint (match.tile0, match.tile1);
 
         update_ui ();
     }
