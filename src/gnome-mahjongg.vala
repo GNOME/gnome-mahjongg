@@ -544,8 +544,7 @@ public class Mahjongg : Gtk.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "gnome-mahjongg",
-                               "website", "http://www.gnome.org/projects/gnome-games",
-                               "website-label", _("GNOME Games web site"),
+                               "website", "https://wiki.gnome.org/Apps/Mahjongg",
                                null);
     }
 
