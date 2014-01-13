@@ -29,22 +29,22 @@
 # Simos Xenitellis <simos.lists@googlemail.com>, 2010.
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-12 15:36+0000\n"
-"PO-Revision-Date: 2013-11-14 17:42+0300\n"
+"POT-Creation-Date: 2014-01-12 18:13+0000\n"
+"PO-Revision-Date: 2014-01-11 14:45+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
-"Language-Team: team@lists.gnome.gr\n"
+"Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
@@ -79,7 +79,7 @@ msgstr ""
 "αυτό προσθέτει μια ποινή μεγάλου χρόνου."
 
 #: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:541 ../src/gnome-mahjongg.vala:754
+#: ../src/gnome-mahjongg.vala:536 ../src/gnome-mahjongg.vala:747
 msgid "Mahjongg"
 msgstr "Ματζόνγκ"
 
@@ -187,8 +187,8 @@ msgstr "_Επανάληψη κίνησης"
 msgid "Hint"
 msgstr "Υπόδειξη"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:571
-#: ../src/gnome-mahjongg.vala:646
+#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:564
+#: ../src/gnome-mahjongg.vala:639
 msgid "_Pause"
 msgstr "Π_αύση"
 
@@ -254,29 +254,29 @@ msgstr "Δ_ιάταξη"
 msgid "_Background color:"
 msgstr "_Χρώμα παρασκηνίου:"
 
-#: ../src/gnome-mahjongg.vala:505
+#: ../src/gnome-mahjongg.vala:502
 msgid "Main game:"
 msgstr "Κυρίως παιχνίδι:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: ../src/gnome-mahjongg.vala:511
 msgid "Maps:"
 msgstr "Χάρτες:"
 
-#: ../src/gnome-mahjongg.vala:522
+#: ../src/gnome-mahjongg.vala:519
 msgid "Tiles:"
 msgstr "Πλακίδια:"
 
-#: ../src/gnome-mahjongg.vala:544
+#: ../src/gnome-mahjongg.vala:539
 msgid ""
-"A matching game played with Mahjongg tiles.\n"
+"A matching game played with Mahjongg tiles\n"
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
-"Ένα παιχνίδι που παίζεται με τα πλακίδια του Ματζόνγκ.\n"
+"Ένα παιχνίδι ταιριάσματος που παίζεται με τα πλακίδια του Ματζόνγκ.\n"
 "\n"
 "Το Ματζόνγκ είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/gnome-mahjongg.vala:551
+#: ../src/gnome-mahjongg.vala:545
 msgid "translator-credits"
 msgstr ""
 "Spiros Papadimitriou <spapadim+@cs.cmu.edu>\n"
@@ -284,43 +284,19 @@ msgstr ""
 "Κώστας Παπαδήμας <pkst@gmx.net>\n"
 "Τζένη Πετούμενου <epetoumenou@gmail.com>"
 
-#: ../src/gnome-mahjongg.vala:554
-msgid "GNOME Games web site"
-msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
-
-#: ../src/gnome-mahjongg.vala:566
+#: ../src/gnome-mahjongg.vala:559
 msgid "Res_ume"
 msgstr "Συνέχιση"
 
 #. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:640
+#: ../src/gnome-mahjongg.vala:633
 #, c-format
 msgid "Mahjongg - %s"
 msgstr "Ματζόνγκ- %s"
 
-#: ../src/gnome-mahjongg.vala:657 ../src/gnome-mahjongg.vala:826
+#: ../src/gnome-mahjongg.vala:650 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Χρόνος"
-
-#: ../src/gnome-mahjongg.vala:782 ../src/menu.ui.h:7
-msgid "_Quit"
-msgstr "Έ_ξοδος"
-
-#: ../src/gnome-mahjongg.vala:783
-msgid "New Game"
-msgstr "Νέο Παιχνίδι"
-
-#: ../src/gnome-mahjongg.vala:786
-msgid "OK"
-msgstr "Εντάξει"
-
-#: ../src/gnome-mahjongg.vala:798
-msgid "Layout:"
-msgstr "Διάταξη:"
-
-#: ../src/gnome-mahjongg.vala:823
-msgid "Date"
-msgstr "Ημερομηνία"
 
 #: ../src/menu.ui.h:1
 msgid "_New Game"
@@ -345,6 +321,29 @@ msgstr "_Βοήθεια"
 #: ../src/menu.ui.h:6
 msgid "_About"
 msgstr "_Περί"
+
+#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Νέο Παιχνίδι"
+
+#: ../src/score-dialog.vala:32
+msgid "OK"
+msgstr "Εντάξει"
+
+#: ../src/score-dialog.vala:44
+msgid "Layout:"
+msgstr "Διάταξη:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
 
 #~ msgid "Size:"
 #~ msgstr "Μέγεθος:"
