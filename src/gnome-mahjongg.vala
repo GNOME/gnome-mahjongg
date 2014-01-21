@@ -537,7 +537,7 @@ public class Mahjongg : Gtk.Application
                                "version", VERSION,
                                "comments",
                                _("A matching game played with Mahjongg tiles\n\nMahjongg is a part of GNOME Games."),
-                               "copyright", "Copyright \xc2\xa9 1998-2008 Free Software Foundation, Inc.",
+                               "copyright", "Copyright © 1998–2008 Free Software Foundation, Inc.",
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "artists", artists,
