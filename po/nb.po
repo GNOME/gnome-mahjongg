@@ -1,14 +1,14 @@
-# Norwegian bokmål translation of gnome-mahjonng.
+# Norwegian bokmål translation of gnome-mahjongg.
 # Copyright © 1998-2002 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1998-2013.
+# Kjartan Maraas <kmaraas@gnome.org>, 1998-2014.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mahjonng 3.7.x\n"
+"Project-Id-Version: gnome-mahjongg 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-08 19:37+0200\n"
-"PO-Revision-Date: 2013-09-08 19:37+0200\n"
+"POT-Creation-Date: 2014-01-25 12:35+0100\n"
+"PO-Revision-Date: 2014-01-25 12:37+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -17,32 +17,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
+#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+msgid "GNOME Mahjongg"
+msgstr "GNOME Mahjongg"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid ""
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+msgid ""
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+
+#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:536 ../src/gnome-mahjongg.vala:747
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Ta fra hverandre en haug med fliser ved å finne like par"
 
-#: ../data/mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "spill;strategi;puslespill;brett;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "Bredden på vinduet i piksler"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:2
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "Høyden på vinduet i piksler"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:3
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "«true» hvis vinduet er maksimert"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:4
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:4
 msgid "true if the window is fullscren"
 msgstr "«true» hvis vinduet er fullskjerm"
 
@@ -83,20 +104,25 @@ msgstr "Rød drage"
 
 #: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "Pass"
+
+#: ../data/translatable_game_names.h:13
+msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Pyramidens vegger"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Forvirrende kors"
 
-#: ../data/translatable_game_names.h:14
+#: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Vanskelig"
 
-#: ../src/game-view.vala:137
+#: ../src/game-view.vala:132
 msgid "Paused"
 msgstr "Pause"
 
@@ -120,8 +146,8 @@ msgstr "_Gjenopprett trekk"
 msgid "Hint"
 msgstr "Hint"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
-#: ../src/gnome-mahjongg.vala:648
+#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:564
+#: ../src/gnome-mahjongg.vala:639
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -141,11 +167,11 @@ msgstr "_Fortsett spill"
 msgid "Use _new map"
 msgstr "Bruk _nytt kart"
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:314
 msgid "There are no more moves."
 msgstr "Ingen flere trekk."
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:315
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution for a time penalty, restart this game or start an new one."
@@ -154,89 +180,80 @@ msgstr ""
 "finne løsningen med en tidsstraff. Start dette spillet på nytt eller start "
 "et nytt et."
 
-#: ../src/gnome-mahjongg.vala:319
+#: ../src/gnome-mahjongg.vala:316
+msgid "_Undo"
+msgstr "_Angre"
+
+#: ../src/gnome-mahjongg.vala:317
 msgid "_Restart"
 msgstr "Sta_rt på nytt"
 
-#: ../src/gnome-mahjongg.vala:320
+#: ../src/gnome-mahjongg.vala:318
 msgid "_New game"
 msgstr "_Nytt spill"
 
-#: ../src/gnome-mahjongg.vala:360
+#: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
 msgstr "Brukervalg for Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:377
+#: ../src/gnome-mahjongg.vala:361
+msgid "_Close"
+msgstr "_Lukk"
+
+#: ../src/gnome-mahjongg.vala:375
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../src/gnome-mahjongg.vala:405
+#: ../src/gnome-mahjongg.vala:403
 msgid "_Layout:"
 msgstr "_Utforming:"
 
-#: ../src/gnome-mahjongg.vala:431
+#: ../src/gnome-mahjongg.vala:429
 msgid "_Background color:"
 msgstr "_Bakgrunnsfarge:"
 
-#: ../src/gnome-mahjongg.vala:507
+#: ../src/gnome-mahjongg.vala:502
 msgid "Main game:"
 msgstr "Hovedspill:"
 
-#: ../src/gnome-mahjongg.vala:516
+#: ../src/gnome-mahjongg.vala:511
 msgid "Maps:"
 msgstr "Kart:"
 
-#: ../src/gnome-mahjongg.vala:524
+#: ../src/gnome-mahjongg.vala:519
 msgid "Tiles:"
 msgstr "Steiner:"
 
-#: ../src/gnome-mahjongg.vala:546
+#: ../src/gnome-mahjongg.vala:539
 msgid ""
-"A matching game played with Mahjongg tiles.\n"
+"A matching game played with Mahjongg tiles\n"
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
-"Et spill hvor du skal finne to like Mahjongg-fliser.\n"
+"Et spill hvor du skal finne to like Mahjongg-fliser\n"
 "\n"
-"Mahjongg er en del av GNOME-spillene."
+"Mahjongg er en del av GNOME-spill."
 
-#: ../src/gnome-mahjongg.vala:553
+#: ../src/gnome-mahjongg.vala:545
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/gnome-mahjongg.vala:556
-msgid "GNOME Games web site"
-msgstr "GNOME spill nettsted"
-
-#: ../src/gnome-mahjongg.vala:568
+#: ../src/gnome-mahjongg.vala:559
 msgid "Res_ume"
 msgstr "Fort_sett"
 
 #. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:642
+#: ../src/gnome-mahjongg.vala:633
 #, c-format
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
-#, c-format
+#: ../src/gnome-mahjongg.vala:650 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tid"
-
-#: ../src/gnome-mahjongg.vala:785
-msgid "New Game"
-msgstr "Nytt spill"
-
-#: ../src/gnome-mahjongg.vala:800
-msgid "Layout:"
-msgstr "Utforming:"
-
-#: ../src/gnome-mahjongg.vala:825
-msgid "Date"
-msgstr "Dato"
 
 #: ../src/menu.ui.h:1
 msgid "_New Game"
@@ -262,6 +279,22 @@ msgstr "_Hjelp"
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/menu.ui.h:7
+#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "A_vslutt"
+
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Nytt spill"
+
+#: ../src/score-dialog.vala:32
+msgid "OK"
+msgstr "OK"
+
+#: ../src/score-dialog.vala:44
+msgid "Layout:"
+msgstr "Utforming:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Dato"
