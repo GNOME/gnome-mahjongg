@@ -9,44 +9,66 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-17 19:37+0800\n"
-"PO-Revision-Date: 2013-09-17 19:38+0800\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mahjongg&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-01-12 18:13+0000\n"
+"PO-Revision-Date: 2014-02-01 07:20+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.3\n"
 
-#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
+#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#| msgid "Mahjongg"
+msgid "GNOME Mahjongg"
+msgstr "GNOME 上海麻雀"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid ""
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr "傳統東方麻雀遊戲的啤牌版本。遊戲開始時麻雀牌都堆疊在棋盤上。目標是儘可能在最短時間內移除所有的麻雀牌。選擇兩個相同的麻雀牌，它們就會從棋盤上消失，但你只能選擇在同一層中左右有空位的麻雀牌。注意：看起來很像的麻雀牌可能實際上還是會有一點差別。"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+msgid ""
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr "GNOME 麻雀有多種起始的配置，有些簡單有些困難。如果你遇到難題，可以要求提示，但這樣會加上大量的時間。"
+
+#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
+#: ../src/gnome-mahjongg.vala:536 ../src/gnome-mahjongg.vala:747
 msgid "Mahjongg"
 msgstr "上海麻雀"
 
-#: ../data/mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "把相同牌面的麻雀一對對地移走"
 
-#: ../data/mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;遊戲;策略;解題;桌面遊戲;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "視窗的闊度 (像素)"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:2
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "視窗的高度 (像素)"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:3
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "如果視窗為最大化則設定為‘TRUE’"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:4
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:4
 msgid "true if the window is fullscren"
 msgstr "如果視窗為全螢幕則設定為‘TRUE’"
 
@@ -87,20 +109,25 @@ msgstr "Red Dragon"
 
 #: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "越過"
+
+#: ../data/translatable_game_names.h:13
+msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Pyramid's Walls"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Confounding Cross"
 
-#: ../data/translatable_game_names.h:14
+#: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "高難度"
 
-#: ../src/game-view.vala:137
+#: ../src/game-view.vala:132
 msgid "Paused"
 msgstr "暫停"
 
@@ -124,8 +151,8 @@ msgstr "取消復原移動(_R)"
 msgid "Hint"
 msgstr "提示"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
-#: ../src/gnome-mahjongg.vala:648
+#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:564
+#: ../src/gnome-mahjongg.vala:639
 msgid "_Pause"
 msgstr "暫停(_P)"
 
@@ -145,55 +172,68 @@ msgstr "繼續玩(_C)"
 msgid "Use _new map"
 msgstr "使用新的排列(_N)"
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:314
 msgid "There are no more moves."
 msgstr "沒有任何可移走的牌了。"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:315
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution for a time penalty, restart this game or start an new one."
 msgstr "每個題目都至少會有一種解法。你可以復原你的動作，並在時間內找出解答、重新開始這局或挑戰別關。"
 
-#: ../src/gnome-mahjongg.vala:319
+#: ../src/gnome-mahjongg.vala:316
+#| msgid "_Undo Move"
+msgid "_Undo"
+msgstr "復原移動(_U)"
+
+#: ../src/gnome-mahjongg.vala:317
 msgid "_Restart"
 msgstr "再玩(_R)"
 
-#: ../src/gnome-mahjongg.vala:320
+#: ../src/gnome-mahjongg.vala:318
 msgid "_New game"
 msgstr "開新局(_N)"
 
-#: ../src/gnome-mahjongg.vala:360
+#: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
 msgstr "上海麻雀偏好設定"
 
-#: ../src/gnome-mahjongg.vala:377
+#: ../src/gnome-mahjongg.vala:361
+msgid "_Close"
+msgstr "關閉(_C)"
+
+#: ../src/gnome-mahjongg.vala:375
 msgid "_Theme:"
 msgstr "佈景主題(_T)："
 
-#: ../src/gnome-mahjongg.vala:405
+#: ../src/gnome-mahjongg.vala:403
 msgid "_Layout:"
 msgstr "配置(_L):"
 
-#: ../src/gnome-mahjongg.vala:431
+#: ../src/gnome-mahjongg.vala:429
 msgid "_Background color:"
 msgstr "背景顏色(_B)："
 
-#: ../src/gnome-mahjongg.vala:507
+#: ../src/gnome-mahjongg.vala:502
 msgid "Main game:"
 msgstr "主遊戲："
 
-#: ../src/gnome-mahjongg.vala:516
+#: ../src/gnome-mahjongg.vala:511
 msgid "Maps:"
 msgstr "排列:"
 
-#: ../src/gnome-mahjongg.vala:524
+#: ../src/gnome-mahjongg.vala:519
 msgid "Tiles:"
 msgstr "牌面:"
 
-#: ../src/gnome-mahjongg.vala:546
+#: ../src/gnome-mahjongg.vala:539
+#| msgid ""
+#| "A matching game played with Mahjongg tiles.\n"
+#| "\n"
+#| "Mahjongg is a part of GNOME Games."
 msgid ""
-"A matching game played with Mahjongg tiles.\n"
+"A matching game played with Mahjongg tiles\n"
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
@@ -201,7 +241,7 @@ msgstr ""
 "\n"
 "上海麻雀(Mahjongg)是 GNOME 遊戲的一部分。"
 
-#: ../src/gnome-mahjongg.vala:553
+#: ../src/gnome-mahjongg.vala:545
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -211,36 +251,19 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/gnome-mahjongg.vala:556
-msgid "GNOME Games web site"
-msgstr "GNOME Games 網站"
-
-#: ../src/gnome-mahjongg.vala:568
+#: ../src/gnome-mahjongg.vala:559
 msgid "Res_ume"
 msgstr "繼續(_U)"
 
 #. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:642
+#: ../src/gnome-mahjongg.vala:633
 #, c-format
 msgid "Mahjongg - %s"
 msgstr "上海麻雀 - %s"
 
-#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
-#, c-format
+#: ../src/gnome-mahjongg.vala:650 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "時間"
-
-#: ../src/gnome-mahjongg.vala:785
-msgid "New Game"
-msgstr "開新局"
-
-#: ../src/gnome-mahjongg.vala:800
-msgid "Layout:"
-msgstr "配置："
-
-#: ../src/gnome-mahjongg.vala:825
-msgid "Date"
-msgstr "日期"
 
 #: ../src/menu.ui.h:1
 msgid "_New Game"
@@ -266,9 +289,28 @@ msgstr "求助(_H)"
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/menu.ui.h:7
+#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "結束(_Q)"
+
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "開新局"
+
+#: ../src/score-dialog.vala:32
+msgid "OK"
+msgstr "確定"
+
+#: ../src/score-dialog.vala:44
+msgid "Layout:"
+msgstr "配置："
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "日期"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME Games 網站"
 
 #~ msgid "Size:"
 #~ msgstr "大小："
