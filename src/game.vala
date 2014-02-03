@@ -36,6 +36,18 @@ private static int compare_tiles (Tile a, Tile b)
     return compare_slots (a.slot, b.slot);
 }
 
+private static bool switch_tiles (Tile a, Tile b)
+{
+    if (a.visible && b.visible)
+    {
+        Slot h = a.slot;
+        a.slot = b.slot;
+        b.slot = h;
+        return true;
+    }
+    return false;
+}
+
 public class Match
 {
     public Tile tile0;
@@ -175,6 +187,32 @@ public class Game
         
         /* Make everything visible again */
         reset ();
+    }
+
+    public void shuffle_remaining (bool redraw = true) {
+        // Fisher Yates Shuffle
+        var n = tiles.length();
+        for (var i = n-1; i > 0; i--) {
+            int j = Random.int_range(0,(int)i+1);
+            // switch internal positions
+            switch_tiles (tiles.nth_data(j), tiles.nth_data(i));
+        }
+        // resort for drawing order
+        tiles.sort(compare_tiles);
+        // reset moves and move numbers
+        move_number = 1;
+        foreach (var tile in tiles)
+            tile.move_number = 0;
+        find_matches ();
+        moved ();
+        if (redraw)
+            redraw_all_tiles ();
+    }
+
+    public void redraw_all_tiles () {
+        foreach (var tile in tiles)
+            if (tile.visible)
+                redraw_tile (tile);
     }
 
     private bool shuffle (int[] numbers, int depth = 0)
