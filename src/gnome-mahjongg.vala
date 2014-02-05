@@ -725,9 +725,6 @@ public class Mahjongg : Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
-        /* Required because the binary does not match the desktop file */
-        Environment.set_prgname ("mahjongg");
-
         Gtk.init (ref args);
 
         var context = new OptionContext (null);

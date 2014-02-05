@@ -16,7 +16,7 @@ gsettings_SCHEMAS = org.gnome.gnome-mahjongg.gschema.xml
 man_MANS = gnome-mahjongg.6
 
 desktopdir = $(datadir)/applications
-desktop_in_files = mahjongg.desktop.in
+desktop_in_files = gnome-mahjongg.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
