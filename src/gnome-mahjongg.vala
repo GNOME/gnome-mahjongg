@@ -312,7 +312,7 @@ public class Mahjongg : Gtk.Application
                                                 Gtk.MessageType.INFO,
                                                 Gtk.ButtonsType.NONE,
                                                 "%s", _("There are no more moves."));
-            dialog.format_secondary_text (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution for a time penalty, restart this game or start an new one. You can also reshuffle the game which does not guarantee you a solution."));
+            dialog.format_secondary_text (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution, restart this game, or start a new one. You can also try to reshuffle the game, but this does not guarantee a solution."));
             dialog.add_buttons (_("_Undo"), Gtk.ResponseType.REJECT,
                                 _("_Restart"), Gtk.ResponseType.CANCEL,
                                 _("_New game"), Gtk.ResponseType.ACCEPT,
