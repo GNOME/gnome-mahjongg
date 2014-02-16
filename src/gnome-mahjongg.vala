@@ -17,14 +17,15 @@ public class Mahjongg : Gtk.Application
     private List<Map> maps = null;
 
     private Gtk.ApplicationWindow window;
+    private Gtk.HeaderBar header_bar;
+    private Gtk.Label title;
     private int window_width;
     private int window_height;
     private bool is_fullscreen;
     private bool is_maximized;
 
     private GameView game_view;
-    private Gtk.ToolButton pause_button;
-    private Gtk.ToolItem status_item;
+    private Gtk.Button pause_button;
     private Gtk.Label moves_label;
     private Gtk.Label clock_label;
     private Gtk.Dialog? preferences_dialog = null;
@@ -62,7 +63,6 @@ public class Mahjongg : Gtk.Application
         history.load ();
 
         window = new Gtk.ApplicationWindow (this);
-        window.title = _("Mahjongg");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
@@ -91,63 +91,59 @@ public class Mahjongg : Gtk.Application
         game_view.button_press_event.connect (view_button_press_event);        
         game_view.set_size_request (600, 400);
 
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.show_arrow = false;
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
+        header_bar = new Gtk.HeaderBar ();
+        header_bar.set_show_close_button (true);
 
-        var new_game_button = new Gtk.ToolButton (null, _("_New"));
-        new_game_button.use_underline = true;
-        new_game_button.icon_name = "document-new";
-        new_game_button.action_name = "app.new-game";
-        new_game_button.show ();
-        toolbar.insert (new_game_button, -1);
+        title = new Gtk.Label ("");
+        title.get_style_context().add_class("title");
 
-        var undo_button = new Gtk.ToolButton (null, _("_Undo Move"));
-        undo_button.use_underline = true;
-        undo_button.icon_name = "edit-undo";
+        var undo_image_name = "";
+        if (Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL)
+            undo_image_name = "edit-undo-rtl-symbolic";
+        else
+            undo_image_name = "edit-undo-symbolic";
+
+        var undo_button = new Gtk.Button.from_icon_name (undo_image_name, Gtk.IconSize.BUTTON);
+        undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
-        undo_button.is_important = true;
-        undo_button.show ();
-        toolbar.insert (undo_button, -1);
+        undo_button.set_tooltip_text (_("Undo your last move"));
+        header_bar.pack_start (undo_button);
 
-        var redo_button = new Gtk.ToolButton (null, _("_Redo Move"));
-        redo_button.use_underline = true;
-        redo_button.icon_name = "edit-redo";
+        var redo_image_name = "";
+        if (Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL)
+            redo_image_name = "edit-redo-rtl-symbolic";
+        else
+            redo_image_name = "edit-redo-symbolic";
+
+        var redo_button = new Gtk.Button.from_icon_name (redo_image_name, Gtk.IconSize.BUTTON);
+        redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
-        redo_button.is_important = true;
-        redo_button.show ();
-        toolbar.insert (redo_button, -1);
+        redo_button.set_tooltip_text (_("Redo your last move"));
+        header_bar.pack_start (redo_button);
 
-        var hint_button = new Gtk.ToolButton (null, _("Hint"));
-        hint_button.use_underline = true;
-        hint_button.icon_name = "dialog-information";
+        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
+        hint_button.valign = Gtk.Align.CENTER;
         hint_button.action_name = "app.hint";
-        hint_button.is_important = true;
-        hint_button.show ();
-        toolbar.insert (hint_button, -1);
+        hint_button.set_tooltip_text (_("Receive a hint for your next move"));
+        header_bar.pack_end (hint_button);
 
-        pause_button = new Gtk.ToolButton (null, _("_Pause"));
-        pause_button.icon_name = "media-playback-pause";
-        pause_button.use_underline = true;
+        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
+        pause_button.valign = Gtk.Align.CENTER;
         pause_button.action_name = "app.pause";
-        pause_button.is_important = true;
-        pause_button.show ();
-        toolbar.insert (pause_button, -1);
+        pause_button.set_tooltip_text (_("Pause the game"));
+        header_bar.pack_end (pause_button);
 
-        var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
-        status_alignment.add (status_box);
+        var title_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+        title_box.pack_start (title, false, false, 0);
+        title_box.pack_start (status_box, false, false, 0);
 
-        status_item = new Gtk.ToolItem ();
-        status_item.set_expand (true);
-        status_item.add (status_alignment);
+        header_bar.set_custom_title (title_box);
 
-        toolbar.insert (status_item, -1);
-
-        vbox.pack_start (toolbar, false, false, 0);
+        window.set_titlebar (header_bar);
         vbox.pack_start (game_view, true, true, 0);
 
         window.add (vbox);
-        vbox.show_all ();
+        window.show_all ();
 
         settings.changed.connect (conf_value_changed_cb);
 
@@ -562,15 +558,17 @@ public class Mahjongg : Gtk.Application
         game_view.game.paused = !game_view.game.paused;
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
+
+        var pause_image = (Gtk.Image) pause_button.image;
         if (game_view.game.paused)
         {
-            pause_button.icon_name = "media-playback-start";
-            pause_button.label = _("Res_ume");
+            pause_image.icon_name = "media-playback-start-symbolic";
+            pause_button.set_tooltip_text (_("Unpause the game"));
         }
         else
         {
-            pause_button.icon_name = "media-playback-pause";
-            pause_button.label = _("_Pause");
+            pause_image.icon_name = "media-playback-pause-symbolic";
+            pause_button.set_tooltip_text (_("Pause the game"));
         }
 
         update_ui ();
@@ -638,14 +636,13 @@ public class Mahjongg : Gtk.Application
 
         /* Set window title */
         var display_name = dpgettext2 (null, "mahjongg map name", game_view.game.map.name);
-        /* Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon' */
-        window.set_title (_("Mahjongg - %s").printf (display_name));
+        title.set_label (_(display_name));
 
         update_ui ();
         
         /* Reset the pause button in case it was set to resume */
-        pause_button.icon_name = "media-playback-pause";
-        pause_button.label = _("_Pause");
+        var pause_image = (Gtk.Image) pause_button.image;
+        pause_image.icon_name = "media-playback-pause-symbolic";
     }
 
     private void tick_cb ()
