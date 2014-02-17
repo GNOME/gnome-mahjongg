@@ -1,3 +1,9 @@
+GNOME Mahjongg 3.11.90
+=====================
+
+* Added shuffle when no more moves are left
+* Removed toolbar in favor of GtkHeaderBar (Alex Muñoz)
+
 GNOME Mahjongg 3.11.5
 =====================
 
