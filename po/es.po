@@ -5,15 +5,15 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-19 05:43+0000\n"
-"PO-Revision-Date: 2013-11-19 16:35+0100\n"
+"POT-Creation-Date: 2014-02-17 09:19+0000\n"
+"PO-Revision-Date: 2014-02-17 16:27+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -54,16 +54,16 @@ msgstr ""
 "algunas difíciles. Si tiene problemas, puede pedir una pista, pero esto "
 "añade una penalización de tiempo."
 
-#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:539 ../src/gnome-mahjongg.vala:751
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:541
+#: ../src/gnome-mahjongg.vala:751
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/mahjongg.desktop.in.h:2
+#: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Desmonte un montón de fichas eliminando parejas coincidentes"
 
-#: ../data/mahjongg.desktop.in.h:3
+#: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "juego;estrategia;puzle;tablero;"
 
@@ -146,67 +146,74 @@ msgstr "Detenido"
 msgid "Moves Left:"
 msgstr "Movimientos restantes:"
 
-#: ../src/gnome-mahjongg.vala:98
-msgid "_New"
-msgstr "_Nuevo"
-
-#: ../src/gnome-mahjongg.vala:105
-msgid "_Undo Move"
-msgstr "_Deshacer movimiento"
-
-#: ../src/gnome-mahjongg.vala:113
-msgid "_Redo Move"
-msgstr "_Rehacer movimiento"
+#: ../src/gnome-mahjongg.vala:109
+#| msgid "Undo the last move"
+msgid "Undo your last move"
+msgstr "Deshacer el último movimiento"
 
 #: ../src/gnome-mahjongg.vala:121
-msgid "Hint"
-msgstr "Sugerencia"
+#| msgid "Redo the last move"
+msgid "Redo your last move"
+msgstr "Rehacer el último movimiento"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:568
-#: ../src/gnome-mahjongg.vala:643
-msgid "_Pause"
-msgstr "_Pausa"
+#: ../src/gnome-mahjongg.vala:127
+#| msgid "Get a hint for your next move"
+msgid "Receive a hint for your next move"
+msgstr "Obtener una pista para el siguiente movimiento"
 
-#: ../src/gnome-mahjongg.vala:253
+#: ../src/gnome-mahjongg.vala:133 ../src/gnome-mahjongg.vala:571
+msgid "Pause the game"
+msgstr "Pausar el juego"
+
+#: ../src/gnome-mahjongg.vala:249
 msgid "Do you want to start a new game with this map?"
 msgstr "¿Quiere empezar un juego nuevo con este mapa?"
 
-#: ../src/gnome-mahjongg.vala:254
+#: ../src/gnome-mahjongg.vala:250
 msgid "If you continue playing the next game will use the new map."
 msgstr "Si elige continuar jugando el siguiente juego usará el mapa nuevo."
 
-#: ../src/gnome-mahjongg.vala:255
+#: ../src/gnome-mahjongg.vala:251
 msgid "_Continue playing"
 msgstr "_Continuar jugando"
 
-#: ../src/gnome-mahjongg.vala:256
+#: ../src/gnome-mahjongg.vala:252
 msgid "Use _new map"
 msgstr "Usar mapa _nuevo"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:310
 msgid "There are no more moves."
 msgstr "No hay más movimientos válidos."
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:311
+#| msgid ""
+#| "Each puzzle has at least one solution.  You can undo your moves and try "
+#| "and find the solution for a time penalty, restart this game or start an "
+#| "new one."
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution for a time penalty, restart this game or start an new one."
+"find the solution, restart this game, or start a new one. You can also try "
+"to reshuffle the game, but this does not guarantee a solution."
 msgstr ""
 "Cada puzle tiene, al menos, una solución. Puede deshacer sus movimientos e "
-"intentar encontrar la solución con una penalización de tiempo, reiniciar el "
-"juego o empezar uno nuevo."
+"intentar encontrar la solución, reiniciar el juego o empezar uno nuevo. "
+"También puede mezclar las piezas, pero esto no garantiza una solución."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:312
 msgid "_Undo"
 msgstr "_Deshacer"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:313
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: ../src/gnome-mahjongg.vala:318
+#: ../src/gnome-mahjongg.vala:314
 msgid "_New game"
 msgstr "Partida _nueva"
+
+#: ../src/gnome-mahjongg.vala:315
+msgid "_Shuffle"
+msgstr "_Revolver"
 
 #: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
@@ -228,23 +235,19 @@ msgstr "_Disposición:"
 msgid "_Background color:"
 msgstr "Color de _fondo:"
 
-#: ../src/gnome-mahjongg.vala:505
+#: ../src/gnome-mahjongg.vala:507
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: ../src/gnome-mahjongg.vala:516
 msgid "Maps:"
 msgstr "Mapas:"
 
-#: ../src/gnome-mahjongg.vala:522
+#: ../src/gnome-mahjongg.vala:524
 msgid "Tiles:"
 msgstr "Fichas:"
 
-#: ../src/gnome-mahjongg.vala:542
-#| msgid ""
-#| "A matching game played with Mahjongg tiles.\n"
-#| "\n"
-#| "Mahjongg is a part of GNOME Games."
+#: ../src/gnome-mahjongg.vala:544
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
@@ -254,7 +257,7 @@ msgstr ""
 "\n"
 "Mahjongg es parte de los juegos de GNOME."
 
-#: ../src/gnome-mahjongg.vala:548
+#: ../src/gnome-mahjongg.vala:550
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -263,21 +266,12 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gnome-mahjongg.vala:551
-msgid "GNOME Games web site"
-msgstr "Página web de los juegos de GNOME"
+#: ../src/gnome-mahjongg.vala:566
+#| msgid "Pause the game"
+msgid "Unpause the game"
+msgstr "Reanudar el juego"
 
-#: ../src/gnome-mahjongg.vala:563
-msgid "Res_ume"
-msgstr "C_ontinuar"
-
-#. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:637
-#, c-format
-msgid "Mahjongg - %s"
-msgstr "Mahjongg - %s"
-
-#: ../src/gnome-mahjongg.vala:654
+#: ../src/gnome-mahjongg.vala:656 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tiempo"
 
@@ -305,22 +299,49 @@ msgstr "Ay_uda"
 msgid "_About"
 msgstr "_Acerca de"
 
-#: ../src/menu.ui.h:7
+#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Salir"
 
-#~ msgid "New Game"
-#~ msgstr "Partida nueva"
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Partida nueva"
 
-#~| msgid "_OK"
-#~ msgid "OK"
-#~ msgstr "Aceptar"
+#: ../src/score-dialog.vala:32
+msgid "OK"
+msgstr "Aceptar"
 
-#~ msgid "Layout:"
-#~ msgstr "Disposición:"
+#: ../src/score-dialog.vala:44
+msgid "Layout:"
+msgstr "Disposición:"
 
-#~ msgid "Date"
-#~ msgstr "Fecha"
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Fecha"
+
+#~ msgid "_New"
+#~ msgstr "_Nuevo"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Deshacer movimiento"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Rehacer movimiento"
+
+#~ msgid "Hint"
+#~ msgstr "Sugerencia"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pausa"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Página web de los juegos de GNOME"
+
+#~ msgid "Res_ume"
+#~ msgstr "C_ontinuar"
+
+#~ msgid "Mahjongg - %s"
+#~ msgstr "Mahjongg - %s"
 
 #~ msgid "Size:"
 #~ msgstr "Tamaño:"
@@ -1039,9 +1060,6 @@ msgstr "_Salir"
 #~ msgid "Toggle fullscreen mode"
 #~ msgstr "Activar pantalla completa"
 
-#~ msgid "Get a hint for your next move"
-#~ msgstr "Obtener una pista para el siguiente movimiento"
-
 #~ msgid "Leave fullscreen mode"
 #~ msgstr "Abandonar pantalla completa"
 
@@ -1050,9 +1068,6 @@ msgstr "_Salir"
 
 #~ msgid "End the current network game and return to network server"
 #~ msgstr "Terminar la partida de red actual y volver al servidor de red"
-
-#~ msgid "Pause the game"
-#~ msgstr "Pausar el juego"
 
 #~ msgid "Show a list of players in the network game"
 #~ msgstr "Mostrar una lista de jugadores en la partida de red"
@@ -1068,9 +1083,6 @@ msgstr "_Salir"
 
 #~ msgid "View the scores"
 #~ msgstr "Ver la puntuación"
-
-#~ msgid "Undo the last move"
-#~ msgstr "Anular el último movimiento"
 
 #~ msgid "About this game"
 #~ msgstr "Acerca de este juego"
@@ -2302,7 +2314,8 @@ msgstr "_Salir"
 #~ msgstr "Usar la bandera de «desconocido»"
 
 #~ msgid "Set to true to be able to mark squares as unknown."
-#~ msgstr "Ponga el valor a «true» para poder marcar cuadros como desconocidos."
+#~ msgstr ""
+#~ "Ponga el valor a «true» para poder marcar cuadros como desconocidos."
 
 #~ msgid "Warning about too many flags"
 #~ msgstr "Advertir acerca de demasiadas banderas"
@@ -3243,9 +3256,6 @@ msgstr "_Salir"
 #~ msgid "Solve the game"
 #~ msgstr "Resolver el juego"
 
-#~ msgid "Redo the last move"
-#~ msgstr "Rehacer el último movimiento"
-
 #~ msgid "Time: "
 #~ msgstr "Tiempo: "
 
@@ -3743,9 +3753,6 @@ msgstr "_Salir"
 
 #~ msgid "Could not load tile set"
 #~ msgstr "No se pudo cargar el conjunto de fichas"
-
-#~ msgid "_Shuffle"
-#~ msgstr "_Revolver"
 
 #~ msgid "Remove matching pairs of tiles."
 #~ msgstr "Quitar parejas de fichas coincidentes."
@@ -5372,8 +5379,8 @@ msgstr "_Salir"
 #~ "'lan' (long algebraic notation) or 'san' (standard algebraic notation)"
 #~ msgstr ""
 #~ "El formato en el que mostrar jugadas, puede ser «humano» (legible por "
-#~ "personas), «lan» (notación algebraica larga - «long algebraic notation») o "
-#~ "«san» (notación algebraica estándar - «standard algebraic notation»)"
+#~ "personas), «lan» (notación algebraica larga - «long algebraic notation») "
+#~ "o «san» (notación algebraica estándar - «standard algebraic notation»)"
 
 #~ msgid "The piece style to use. Can be one of: 'simple' or 'fancy'"
 #~ msgstr "El estilo de pieza que usar. Puede ser «simple» o «fantasía»."
@@ -5385,9 +5392,9 @@ msgstr "_Salir"
 #~ "g. handhelds)"
 #~ msgstr ""
 #~ "El lado del tablero que está en primero plano, "
-#~ "«white» (blanco),«black» (negro), «current» (el jugador actual), «human» (el "
-#~ "lado del jugador humano actual) o «facetoface» (apropiado para jugadores a "
-#~ "cada lado de la pantalla, ej. dispositivos portátiles)"
+#~ "«white» (blanco),«black» (negro), «current» (el jugador actual), "
+#~ "«human» (el lado del jugador humano actual) o «facetoface» (apropiado "
+#~ "para jugadores a cada lado de la pantalla, ej. dispositivos portátiles)"
 
 #~ msgid "Logs"
 #~ msgstr "Registros"
