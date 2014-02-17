@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="topic"
+      id="bonustiles">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision pkgversion="3.12" date="2014-02-26" status="candidate"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+  </info>
+
+  <title>Bonus tiles</title>
+
+  <p>There are eight bonus tiles: four flowers and four seasons. The flower
+  group consists of blue winter motives in the postmodern theme and yellow
+  symbols in the smooth theme. The season group consists of yellow spring
+  motives in the postmodern theme and black symbols in the smooth theme. The
+  identical bonus tiles are matched in the postmodern theme and the bonus
+  tiles with the same symbol color are matched in the smooth theme.</p>
+
+  <p>Some of the matching bonus tiles in smooth theme are shown below:</p>
+
+  <figure>
+    <title>Bonus tiles</title>
+    <media type="image" mime="image/png" src="figures/black-symbol.png"/>
+    <media type="image" mime="image/png" src="figures/yellow-symbol.png"/>
+  </figure>
+
+</page>

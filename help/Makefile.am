@@ -16,10 +16,13 @@ HELP_MEDIA = \
 	figures/logo32.png		\
 	figures/logo.png		\
 	figures/mahjongg-video.ogv	\
+	figures/yellow-symbol.png	\
+	figures/black-symbol.png	\
 	figures/moves-left.png
 
 HELP_FILES = \
 	bug-filing.page			\
+	bonustiles.page 		\
 	choosing.page			\
 	develop.page			\
 	documentation.page		\
