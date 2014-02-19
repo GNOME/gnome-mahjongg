@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 12:35+0100\n"
-"PO-Revision-Date: 2014-01-25 12:37+0100\n"
+"POT-Creation-Date: 2014-02-19 23:36+0100\n"
+"PO-Revision-Date: 2014-02-19 23:38+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -38,16 +38,16 @@ msgid ""
 "time penalty."
 msgstr ""
 
-#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:536 ../src/gnome-mahjongg.vala:747
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:541
+#: ../src/gnome-mahjongg.vala:751
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/mahjongg.desktop.in.h:2
+#: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Ta fra hverandre en haug med fliser ved å finne like par"
 
-#: ../data/mahjongg.desktop.in.h:3
+#: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "spill;strategi;puslespill;brett;"
 
@@ -130,67 +130,64 @@ msgstr "Pause"
 msgid "Moves Left:"
 msgstr "Trekk igjen:"
 
-#: ../src/gnome-mahjongg.vala:98
-msgid "_New"
-msgstr "_Nytt"
-
-#: ../src/gnome-mahjongg.vala:105
-msgid "_Undo Move"
-msgstr "_Angre trekk"
-
-#: ../src/gnome-mahjongg.vala:113
-msgid "_Redo Move"
-msgstr "_Gjenopprett trekk"
+#: ../src/gnome-mahjongg.vala:109
+msgid "Undo your last move"
+msgstr "Angre siste trekk"
 
 #: ../src/gnome-mahjongg.vala:121
-msgid "Hint"
-msgstr "Hint"
+msgid "Redo your last move"
+msgstr "Gjør siste trekk på nytt"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:564
-#: ../src/gnome-mahjongg.vala:639
-msgid "_Pause"
-msgstr "_Pause"
+#: ../src/gnome-mahjongg.vala:127
+msgid "Receive a hint for your next move"
+msgstr "Få et hint for ditt neste trekk"
 
-#: ../src/gnome-mahjongg.vala:253
+#: ../src/gnome-mahjongg.vala:133 ../src/gnome-mahjongg.vala:571
+msgid "Pause the game"
+msgstr "Sett spillet på pause"
+
+#: ../src/gnome-mahjongg.vala:249
 msgid "Do you want to start a new game with this map?"
 msgstr "Vil du starte et nytt spill med dette kartet?"
 
-#: ../src/gnome-mahjongg.vala:254
+#: ../src/gnome-mahjongg.vala:250
 msgid "If you continue playing the next game will use the new map."
 msgstr "Hvis du fortsetter å spille vil det nye kartet brukes i neste spill."
 
-#: ../src/gnome-mahjongg.vala:255
+#: ../src/gnome-mahjongg.vala:251
 msgid "_Continue playing"
 msgstr "_Fortsett spill"
 
-#: ../src/gnome-mahjongg.vala:256
+#: ../src/gnome-mahjongg.vala:252
 msgid "Use _new map"
 msgstr "Bruk _nytt kart"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:310
 msgid "There are no more moves."
 msgstr "Ingen flere trekk."
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:311
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution for a time penalty, restart this game or start an new one."
-msgstr ""
-"Hvert puslespill har minst en løsning. Du kan angre dine trekk og prøve å "
-"finne løsningen med en tidsstraff. Start dette spillet på nytt eller start "
-"et nytt et."
+"find the solution, restart this game, or start a new one. You can also try "
+"to reshuffle the game, but this does not guarantee a solution."
+msgstr "Hvert puslespill har minst en løsning. Du kan angre dine trekk og prøve å finne løsningen, starte spillet på nytt eller starte et nytt. Du kan også prøve å stokke om spillet, men dette garanterer ikke en løsning."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:312
 msgid "_Undo"
 msgstr "_Angre"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:313
 msgid "_Restart"
 msgstr "Sta_rt på nytt"
 
-#: ../src/gnome-mahjongg.vala:318
+#: ../src/gnome-mahjongg.vala:314
 msgid "_New game"
 msgstr "_Nytt spill"
+
+#: ../src/gnome-mahjongg.vala:315
+msgid "_Shuffle"
+msgstr "_Stokk om"
 
 #: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
@@ -212,19 +209,19 @@ msgstr "_Utforming:"
 msgid "_Background color:"
 msgstr "_Bakgrunnsfarge:"
 
-#: ../src/gnome-mahjongg.vala:502
+#: ../src/gnome-mahjongg.vala:507
 msgid "Main game:"
 msgstr "Hovedspill:"
 
-#: ../src/gnome-mahjongg.vala:511
+#: ../src/gnome-mahjongg.vala:516
 msgid "Maps:"
 msgstr "Kart:"
 
-#: ../src/gnome-mahjongg.vala:519
+#: ../src/gnome-mahjongg.vala:524
 msgid "Tiles:"
 msgstr "Steiner:"
 
-#: ../src/gnome-mahjongg.vala:539
+#: ../src/gnome-mahjongg.vala:544
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
@@ -234,24 +231,18 @@ msgstr ""
 "\n"
 "Mahjongg er en del av GNOME-spill."
 
-#: ../src/gnome-mahjongg.vala:545
+#: ../src/gnome-mahjongg.vala:550
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/gnome-mahjongg.vala:559
-msgid "Res_ume"
-msgstr "Fort_sett"
+#: ../src/gnome-mahjongg.vala:566
+msgid "Unpause the game"
+msgstr "Start spillet igjen"
 
-#. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:633
-#, c-format
-msgid "Mahjongg - %s"
-msgstr "Mahjongg - %s"
-
-#: ../src/gnome-mahjongg.vala:650 ../src/score-dialog.vala:72
+#: ../src/gnome-mahjongg.vala:656 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tid"
 
