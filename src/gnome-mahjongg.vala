@@ -639,6 +639,9 @@ public class Mahjongg : Gtk.Application
         title.set_label (_(display_name));
 
         update_ui ();
+
+        /* Update clock label */
+        tick_cb ();
         
         /* Reset the pause button in case it was set to resume */
         var pause_image = (Gtk.Image) pause_button.image;
