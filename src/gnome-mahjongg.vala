@@ -586,8 +586,7 @@ public class Mahjongg : Gtk.Application
 
     private void restart_game_cb ()
     {
-        game_view.game.reset ();
-        game_view.queue_draw ();
+        restart_game ();
     }
 
     private void quit_cb ()
