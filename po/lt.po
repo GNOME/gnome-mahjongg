@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-12 19:31+0000\n"
-"PO-Revision-Date: 2013-09-12 22:35+0300\n"
+"POT-Creation-Date: 2014-02-20 19:53+0000\n"
+"PO-Revision-Date: 2014-02-20 23:07+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -27,32 +27,63 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:756
+#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#| msgid "Mahjongg"
+msgid "GNOME Mahjongg"
+msgstr "GNOME Mahjongg"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid ""
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"Klasikinio rytietiško koklių žaidimo soliterio versija. Žaidimo pradžioje "
+"kokliai yra sudėlioti lentoje. Tikslas yra kiek galima greičiau pašalinti "
+"visus koklius. Pasirinkus du vienodus koklius jie pradingsta iš lentos, bet "
+"galite pasirinkti koklį tik jei tame pačiame lygyje kairėje arba dešinėje "
+"yra tuščia vieta. Atsargiai: panašiai atrodantys kokliai gali iš tiesų šiek "
+"tiek skirtis."
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+msgid ""
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"GNOME Mahjongg turi daug skirtingų išdėstymų, kai kurie paprasti, kiti "
+"sudėtingesni. Jei užstrigsite, galite prašyti patarimo, bet dėl to gausite "
+"didelę laiko baudą."
+
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:541
+#: ../src/gnome-mahjongg.vala:755
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/mahjongg.desktop.in.in.h:2
+#: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Išvalykite kortelių krūvą surinkdami sutampančias kortelių poras"
 
-#: ../data/mahjongg.desktop.in.in.h:3
+#: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "žaidimas;strategija;galvosūkis;lenta;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "Lango plotis pikseliais"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:2
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "Lango aukštis pikseliais"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:3
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "teigiama, jei langas yra išdidintas"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:4
+#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:4
 msgid "true if the window is fullscren"
 msgstr "teigiama, jei langas yra visamo ekrano veiksenoje"
 
@@ -93,20 +124,25 @@ msgstr "Raudonasis drakonas"
 
 #: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "Perdavimas"
+
+#: ../data/translatable_game_names.h:13
+msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Piramidės sienos"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Prakeiksmo kryžius"
 
-#: ../data/translatable_game_names.h:14
+#: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Sunkus"
 
-#: ../src/game-view.vala:137
+#: ../src/game-view.vala:132
 msgid "Paused"
 msgstr "Pauzė"
 
@@ -114,77 +150,91 @@ msgstr "Pauzė"
 msgid "Moves Left:"
 msgstr "Ėjimų liko: "
 
-#: ../src/gnome-mahjongg.vala:98
-msgid "_New"
-msgstr "_Naujas"
-
-#: ../src/gnome-mahjongg.vala:105
-msgid "_Undo Move"
-msgstr "_Atšaukti ėjimą"
-
-#: ../src/gnome-mahjongg.vala:113
-msgid "_Redo Move"
-msgstr "A_tstatyti ėjimą"
+#: ../src/gnome-mahjongg.vala:109
+msgid "Undo your last move"
+msgstr "Atšaukti paskutinį ėjimą"
 
 #: ../src/gnome-mahjongg.vala:121
-msgid "Hint"
-msgstr "Užuomina"
+msgid "Redo your last move"
+msgstr "Pakartoti paskutinį ėjimą"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
-#: ../src/gnome-mahjongg.vala:648
-msgid "_Pause"
-msgstr "_Pauzė"
+#: ../src/gnome-mahjongg.vala:127
+msgid "Receive a hint for your next move"
+msgstr "Gaukite patarimą kitam ėjimui"
 
-#: ../src/gnome-mahjongg.vala:253
+#: ../src/gnome-mahjongg.vala:133 ../src/gnome-mahjongg.vala:571
+msgid "Pause the game"
+msgstr "Pristabdyti ėjimą"
+
+#: ../src/gnome-mahjongg.vala:249
 msgid "Do you want to start a new game with this map?"
 msgstr "Ar norite pradėti naują žaidimą su šiuo žemėlapiu?"
 
-#: ../src/gnome-mahjongg.vala:254
+#: ../src/gnome-mahjongg.vala:250
 msgid "If you continue playing the next game will use the new map."
 msgstr "Jeigu tęsite žaidimą, kitame žaidime bus naudojamas naujas žemėlapis."
 
-#: ../src/gnome-mahjongg.vala:255
+#: ../src/gnome-mahjongg.vala:251
 msgid "_Continue playing"
 msgstr "_Tęsti žaidimą"
 
-#: ../src/gnome-mahjongg.vala:256
+#: ../src/gnome-mahjongg.vala:252
 msgid "Use _new map"
 msgstr "_Naudoti naują žemėlapį"
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:310
 msgid "There are no more moves."
 msgstr "Nebėra galimų ėjimų."
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:311
+#| msgid ""
+#| "Each puzzle has at least one solution.  You can undo your moves and try "
+#| "and find the solution for a time penalty, restart this game or start an "
+#| "new one."
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution for a time penalty, restart this game or start an new one."
+"find the solution, restart this game, or start a new one. You can also try "
+"to reshuffle the game, but this does not guarantee a solution."
 msgstr ""
 "Kiekvienas galvosūkis turi bent vieną sprendimą.  Galite atšaukti ėjimus ir "
 "mėginti rasti sprendimą už laiko nuobaudą, žaisti iš naujo arba pradėti "
-"naują žaidimą."
+"naują žaidimą. Taip pat galite permaišyti žaidimą, tačiau tai negarantuoja "
+"sprendimo."
 
-#: ../src/gnome-mahjongg.vala:319
+#: ../src/gnome-mahjongg.vala:312
+#| msgid "_Undo Move"
+msgid "_Undo"
+msgstr "_Atšaukti"
+
+#: ../src/gnome-mahjongg.vala:313
 msgid "_Restart"
 msgstr "_Perkrauti"
 
-#: ../src/gnome-mahjongg.vala:320
+#: ../src/gnome-mahjongg.vala:314
 msgid "_New game"
 msgstr "_Naujas žaidimas"
 
-#: ../src/gnome-mahjongg.vala:360
+#: ../src/gnome-mahjongg.vala:315
+msgid "_Shuffle"
+msgstr "_Maišyti"
+
+#: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
 msgstr "Mahjongg nustatymai"
 
-#: ../src/gnome-mahjongg.vala:377
+#: ../src/gnome-mahjongg.vala:361
+msgid "_Close"
+msgstr "_Užverti"
+
+#: ../src/gnome-mahjongg.vala:375
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../src/gnome-mahjongg.vala:405
+#: ../src/gnome-mahjongg.vala:403
 msgid "_Layout:"
 msgstr "_Išdėstymas:"
 
-#: ../src/gnome-mahjongg.vala:431
+#: ../src/gnome-mahjongg.vala:429
 msgid "_Background color:"
 msgstr "_Fono spalva:"
 
@@ -200,17 +250,21 @@ msgstr "Planai:"
 msgid "Tiles:"
 msgstr "Kokliai:"
 
-#: ../src/gnome-mahjongg.vala:546
+#: ../src/gnome-mahjongg.vala:544
+#| msgid ""
+#| "A matching game played with Mahjongg tiles.\n"
+#| "\n"
+#| "Mahjongg is a part of GNOME Games."
 msgid ""
-"A matching game played with Mahjongg tiles.\n"
+"A matching game played with Mahjongg tiles\n"
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
 "Atitikmenų žaidimas žaidžiamas su Mahjongg kokliais.\n"
 "\n"
-"Mahjongg yra GNOME Games dalis."
+"Mahjongg yra GNOME žaidimų dalis."
 
-#: ../src/gnome-mahjongg.vala:553
+#: ../src/gnome-mahjongg.vala:550
 msgid "translator-credits"
 msgstr ""
 "Paskutinieji vertėjai:\n"
@@ -221,37 +275,13 @@ msgstr ""
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
 
-#: ../src/gnome-mahjongg.vala:556
-msgid "GNOME Games web site"
-msgstr "GNOME Games tinklalapis"
+#: ../src/gnome-mahjongg.vala:566
+msgid "Unpause the game"
+msgstr "Tęsti žaidimą"
 
-#: ../src/gnome-mahjongg.vala:568
-msgid "Res_ume"
-msgstr "Ats_tatyti"
-
-#. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:642
-#, c-format
-msgid "Mahjongg - %s"
-msgstr "Mahjongg – %s"
-
-#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:828
-#, c-format
+#: ../src/gnome-mahjongg.vala:660 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Laikas"
-
-#: ../src/gnome-mahjongg.vala:785
-msgid "New Game"
-msgstr "Naujas žaidimas"
-
-#: ../src/gnome-mahjongg.vala:800
-#| msgid "_Layout:"
-msgid "Layout:"
-msgstr "Išdėstymas:"
-
-#: ../src/gnome-mahjongg.vala:825
-msgid "Date"
-msgstr "Data"
 
 #: ../src/menu.ui.h:1
 msgid "_New Game"
@@ -277,7 +307,23 @@ msgstr "_Žinynas"
 msgid "_About"
 msgstr "_Apie"
 
-#: ../src/menu.ui.h:7
+#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Išeiti"
+
+#: ../src/score-dialog.vala:29
+msgid "New Game"
+msgstr "Naujas žaidimas"
+
+#: ../src/score-dialog.vala:32
+msgid "OK"
+msgstr "Gerai"
+
+#: ../src/score-dialog.vala:44
+msgid "Layout:"
+msgstr "Išdėstymas:"
+
+#: ../src/score-dialog.vala:69
+msgid "Date"
+msgstr "Data"
 
