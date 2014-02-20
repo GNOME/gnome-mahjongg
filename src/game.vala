@@ -252,9 +252,7 @@ public class Game
 
     public void reset ()
     {
-        stop_clock ();
-        clock = null;
-        clock_elapsed = 0.0;
+        reset_clock ();
         selected_tile = null;
         set_hint (null, null);
         foreach (var tile in tiles)
@@ -452,6 +450,13 @@ public class Game
         else
             clock.continue ();
         timeout_cb ();
+    }
+
+    private void reset_clock ()
+    {
+        stop_clock ();
+        clock = null;
+        clock_elapsed = 0.0;
     }
 
     private bool timeout_cb ()
