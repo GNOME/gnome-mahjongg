@@ -253,6 +253,7 @@ public class Game
     public void reset ()
     {
         reset_clock ();
+        move_number = 1;
         selected_tile = null;
         set_hint (null, null);
         foreach (var tile in tiles)
