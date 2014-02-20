@@ -252,6 +252,7 @@ public class Game
 
     public void reset ()
     {
+        stop_clock ();
         clock = null;
         clock_elapsed = 0.0;
         selected_tile = null;
