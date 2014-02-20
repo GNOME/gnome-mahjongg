@@ -612,6 +612,8 @@ public class Mahjongg : Gtk.Application
     private void restart_game ()
     {
         game_view.game.reset ();
+        if (game_view.game.paused)
+            pause_cb ();
         update_ui ();
     }
 
