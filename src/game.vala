@@ -457,6 +457,8 @@ public class Game
         stop_clock ();
         clock = null;
         clock_elapsed = 0.0;
+        /* Ensure the clock label is updated */
+        tick ();
     }
 
     private bool timeout_cb ()
