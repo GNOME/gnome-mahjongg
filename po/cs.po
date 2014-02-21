@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-12 18:13+0000\n"
-"PO-Revision-Date: 2014-01-12 21:03+0100\n"
+"POT-Creation-Date: 2014-02-21 19:52+0000\n"
+"PO-Revision-Date: 2014-02-21 21:07+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -65,16 +65,16 @@ msgstr ""
 "snadné, jiné obtížné. Když budete v koncích, můžete požádat o radu, ale k ní "
 "obdržíte také časovou penalizaci."
 
-#: ../data/mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:65
-#: ../src/gnome-mahjongg.vala:536 ../src/gnome-mahjongg.vala:747
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:541
+#: ../src/gnome-mahjongg.vala:757
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/mahjongg.desktop.in.h:2
+#: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Rozebrat hromadu kamenů odstraňováním odpovídajících si dvojic"
 
-#: ../data/mahjongg.desktop.in.h:3
+#: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "hra;strategická;logická;hlavolam;desková;"
 
@@ -157,68 +157,69 @@ msgstr "Pozastaveno"
 msgid "Moves Left:"
 msgstr "Zbývá tahů:"
 
-#: ../src/gnome-mahjongg.vala:98
-msgid "_New"
-msgstr "_Nová"
-
-#: ../src/gnome-mahjongg.vala:105
-msgid "_Undo Move"
-msgstr "Tah _zpět"
-
-#: ../src/gnome-mahjongg.vala:113
-msgid "_Redo Move"
-msgstr "Tah zn_ovu"
+#: ../src/gnome-mahjongg.vala:109
+msgid "Undo your last move"
+msgstr "Vrátit zpět váš poslední tah"
 
 #: ../src/gnome-mahjongg.vala:121
-msgid "Hint"
-msgstr "Rada"
+msgid "Redo your last move"
+msgstr "Znovu provést váš poslední tah"
 
-#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:564
-#: ../src/gnome-mahjongg.vala:639
-msgid "_Pause"
-msgstr "_Pozastavit"
+#: ../src/gnome-mahjongg.vala:127
+msgid "Receive a hint for your next move"
+msgstr "Obdržet radu pro váš následující tah"
 
-#: ../src/gnome-mahjongg.vala:253
+#: ../src/gnome-mahjongg.vala:133 ../src/gnome-mahjongg.vala:573
+msgid "Pause the game"
+msgstr "Pozastavit hru"
+
+#: ../src/gnome-mahjongg.vala:249
 msgid "Do you want to start a new game with this map?"
 msgstr "Chcete začít novou hru s touto mapou?"
 
-#: ../src/gnome-mahjongg.vala:254
+#: ../src/gnome-mahjongg.vala:250
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Pokud chcete pokračovat ve hře, nová mapa bude použita až na další hru."
 
-#: ../src/gnome-mahjongg.vala:255
+#: ../src/gnome-mahjongg.vala:251
 msgid "_Continue playing"
 msgstr "_Pokračovat ve hře"
 
-#: ../src/gnome-mahjongg.vala:256
+#: ../src/gnome-mahjongg.vala:252
 msgid "Use _new map"
 msgstr "Použít _novou mapu"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:310
 msgid "There are no more moves."
 msgstr "Nejsou možné žádné další tahy."
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:311
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution for a time penalty, restart this game or start an new one."
+"find the solution, restart this game, or start a new one. You can also try "
+"to reshuffle the game, but this does not guarantee a solution."
 msgstr ""
 "Každé rozložení má nejméně jedno řešení. Můžete své tahy vrátit zpět a "
 "zkoušet a hledat řešení za cenu horšího času nebo začít tuto hru znovu a "
-"nebo začít úplně novou hru."
+"nebo začít úplně novou hru. Můžete také zkusit hru náhodně zamíchat, ale to "
+"negarantuje úspěšné řešení."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:312
 msgid "_Undo"
 msgstr "_Zpět"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:313
 msgid "_Restart"
 msgstr "_Restartovat"
 
-#: ../src/gnome-mahjongg.vala:318
+#: ../src/gnome-mahjongg.vala:314
 msgid "_New game"
 msgstr "_Nová hra"
+
+#: ../src/gnome-mahjongg.vala:315
+msgid "_Shuffle"
+msgstr "Za_míchat"
 
 #: ../src/gnome-mahjongg.vala:358
 msgid "Mahjongg Preferences"
@@ -240,19 +241,19 @@ msgstr "Roz_ložení:"
 msgid "_Background color:"
 msgstr "Barva _pozadí:"
 
-#: ../src/gnome-mahjongg.vala:502
+#: ../src/gnome-mahjongg.vala:507
 msgid "Main game:"
 msgstr "Hlavní hra:"
 
-#: ../src/gnome-mahjongg.vala:511
+#: ../src/gnome-mahjongg.vala:516
 msgid "Maps:"
 msgstr "Mapy:"
 
-#: ../src/gnome-mahjongg.vala:519
+#: ../src/gnome-mahjongg.vala:524
 msgid "Tiles:"
 msgstr "Kameny:"
 
-#: ../src/gnome-mahjongg.vala:539
+#: ../src/gnome-mahjongg.vala:544
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
@@ -262,7 +263,7 @@ msgstr ""
 "\n"
 "Mahjongg je součástí her GNOME."
 
-#: ../src/gnome-mahjongg.vala:545
+#: ../src/gnome-mahjongg.vala:550
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -279,17 +280,11 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/gnome-mahjongg.vala:559
-msgid "Res_ume"
-msgstr "_Pokračovat"
+#: ../src/gnome-mahjongg.vala:568
+msgid "Unpause the game"
+msgstr "Pokračovat ve hře"
 
-#. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../src/gnome-mahjongg.vala:633
-#, c-format
-msgid "Mahjongg - %s"
-msgstr "Mahjongg - %s"
-
-#: ../src/gnome-mahjongg.vala:650 ../src/score-dialog.vala:72
+#: ../src/gnome-mahjongg.vala:662 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Čas"
 
