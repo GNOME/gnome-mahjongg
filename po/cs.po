@@ -167,7 +167,7 @@ msgstr "Znovu provést váš poslední tah"
 
 #: ../src/gnome-mahjongg.vala:127
 msgid "Receive a hint for your next move"
-msgstr "Obdržet radu pro váš následující tah"
+msgstr "Získat radu pro váš další tah"
 
 #: ../src/gnome-mahjongg.vala:133 ../src/gnome-mahjongg.vala:573
 msgid "Pause the game"
