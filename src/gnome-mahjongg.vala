@@ -562,7 +562,9 @@ public class Mahjongg : Gtk.Application
         var pause_image = (Gtk.Image) pause_button.image;
         if (game_view.game.paused)
         {
-            pause_image.icon_name = "media-playback-start-symbolic";
+            bool rtl = Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL;
+            pause_image.icon_name = rtl ? "media-playback-start-rtl-symbolic" :
+                                          "media-playback-start-symbolic";
             pause_button.set_tooltip_text (_("Unpause the game"));
         }
         else
