@@ -21,7 +21,6 @@ public class Mahjongg : Gtk.Application
     private Gtk.Label title;
     private int window_width;
     private int window_height;
-    private bool is_fullscreen;
     private bool is_maximized;
 
     private GameView game_view;
@@ -66,9 +65,7 @@ public class Mahjongg : Gtk.Application
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
-        if (settings.get_boolean ("window-is-fullscreen"))
-            window.fullscreen ();
-        else if (settings.get_boolean ("window-is-maximized"))
+        if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
@@ -158,7 +155,7 @@ public class Mahjongg : Gtk.Application
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
     {
-        if (!is_maximized && !is_fullscreen)
+        if (!is_maximized)
         {
             window_width = event.width;
             window_height = event.height;
@@ -171,8 +168,6 @@ public class Mahjongg : Gtk.Application
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
-            is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
         return false;
     }
     
@@ -184,7 +179,6 @@ public class Mahjongg : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
-        settings.set_boolean ("window-is-fullscreen", is_fullscreen);
     }
 
     public override void activate ()
