@@ -28,8 +28,8 @@
 
   <figure>
     <title>Bonus tiles</title>
-    <media type="image" mime="image/png" src="figures/black-symbol.png"/>
-    <media type="image" mime="image/png" src="figures/yellow-symbol.png"/>
+    <media type="image" mime="image/png" its:translate="no" src="figures/black-symbol.png"/>
+    <media type="image" mime="image/png" its:translate="no" src="figures/yellow-symbol.png"/>
   </figure>
 
 </page>
