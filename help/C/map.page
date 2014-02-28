@@ -37,23 +37,23 @@
 <table>
  <tr>
    <td>
-  <media type="image" src="figures/layout-easy.png" width="200">
-    <p>easy image</p>
+  <media its:translate="no" type="image" src="figures/layout-easy.png" width="200">
+    <p its:translate="yes">easy image</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/layout-ziggurat.png" width="200">
-    <p>the ziggurat layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-ziggurat.png" width="200">
+    <p its:translate="yes">the ziggurat layout image</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/layout-bridges.png" width="200">
-    <p>four bridges layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-bridges.png" width="200">
+    <p its:translate="yes">four bridges layout image</p>
   </media>
     </td>
     <td>
-      <media type="image" src="figures/layout-overpass.png" width="200">
-       <p>overpass layout image</p>
+      <media its:translate="no" type="image" src="figures/layout-overpass.png" width="200">
+       <p its:translate="yes" >overpass layout image</p>
       </media>
     </td>
    </tr>
@@ -68,23 +68,23 @@
 <table>
  <tr>
    <td>
-  <media type="image" src="figures/layout-cloud.png" width="200">
-    <p>cloud layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-cloud.png" width="200">
+    <p its:translate="yes">cloud layout image</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/layout-tic-tac-toe.png" width="200">
-    <p>tic tac toe layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-tic-tac-toe.png" width="200">
+    <p its:translate="yes">tic tac toe layout image</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/layout-red-dragon.png" width="200">
-    <p>red dragon layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-red-dragon.png" width="200">
+    <p its:translate="yes">red dragon layout image</p>
   </media>
     </td>
     <td>
-  <media type="image" src="figures/layout-pyramid-walls.png" width="200">
-    <p>pyramid walls layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-pyramid-walls.png" width="200">
+    <p its:translate="yes">pyramid walls layout image</p>
   </media>
    </td>
   </tr>
@@ -99,13 +99,13 @@
 <table>
  <tr>
    <td>
-  <media type="image" src="figures/layout-conf-cross.png" width="200">
-    <p>confounding cross layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-conf-cross.png" width="200">
+    <p its:translate="yes">confounding cross layout image</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/layout-difficult.png" width="200">
-    <p>difficult layout image</p>
+  <media its:translate="no" type="image" src="figures/layout-difficult.png" width="200">
+    <p its:translate="yes">difficult layout image</p>
   </media>
     </td>
    </tr>

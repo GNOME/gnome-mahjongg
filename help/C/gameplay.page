@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+  xmlns:its="http://www.w3.org/2005/11/its"
   type="topic"
   id="gameplay">
 
@@ -49,8 +50,8 @@
   <section id="usage-video">
   <title>Video demonstration</title>
 
-  <media type="video" mime="application/ogg"
-  src="figures/mahjongg-video.ogv"><p>Video of gameplay</p></media>
+  <media its:translate="no" type="video" mime="application/ogg"
+  src="figures/mahjongg-video.ogv"><p its:translate="yes">Video of gameplay</p></media>
 
   </section>
 </page>

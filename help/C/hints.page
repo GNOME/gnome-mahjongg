@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+  xmlns:its="http://www.w3.org/2005/11/its"
   type="topic"
   id="hints">
 
@@ -45,8 +46,8 @@
 
   <section id="hints-video">
     <title>Video demonstration</title>
-    <media type="video" width="500" mime="application/ogg" src="figures/hints-video.ogv">
-    <tt:tt xmlns:tt="http://www.w3.org/ns/ttml">
+    <media its:translate="no" type="video" width="500" mime="application/ogg" src="figures/hints-video.ogv">
+    <tt:tt its:translate="yes" xmlns:tt="http://www.w3.org/ns/ttml">
      <tt:body>
       <tt:div begin="1s" end="5s">
        <tt:p>
