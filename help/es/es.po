@@ -2,127 +2,32 @@
 # translation of mahjongg manual to spanish
 #
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2013-11-17 22:24+0000\n"
-"PO-Revision-Date: 2013-11-20 10:54+0100\n"
+"POT-Creation-Date: 2014-02-28 11:00+0000\n"
+"PO-Revision-Date: 2014-02-28 16:53+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 2.91.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2012\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2014\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2009"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:7
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-msgstr "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:21
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-msgstr ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-
-#. (itstool) path: info/title
-#: C/index.page:8
-msgctxt "link"
-msgid "Mahjongg"
-msgstr "Mahjongg"
-
-#. (itstool) path: info/title
-#: C/index.page:9
-msgctxt "text"
-msgid "Mahjongg"
-msgstr "Mahjongg"
-
-#. (itstool) path: info/desc
-#: C/index.page:10
-msgid "GNOME Mahjongg help."
-msgstr "Ayuda de GNOME Mahjongg."
-
-#. (itstool) path: credit/name
-#: C/index.page:13 C/choosing.page:10 C/gameplay.page:9 C/hints.page:9
-#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
-#: C/shortcuts.page:10
-msgid "Chris Beiser"
-msgstr "Chris Beiser"
-
-#. (itstool) path: license/p
-#: C/index.page:17 C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:21 C/hints.page:25 C/moves.page:18
-#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
-#: C/translate.page:23
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Compartir Igual 3.0"
-
-#. (itstool) path: page/title
-#: C/index.page:21
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
-"Mahjongg"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Mahjongg</"
-"media>Mahjongg"
-
-#. (itstool) path: page/p
-#: C/index.page:22
-#| msgid ""
-#| "Mahjongg is a simple pattern recognition game. You score points by "
-#| "matching identical tiles."
-msgid ""
-"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
-"by matching identical tiles."
-msgstr ""
-"<app>Mahjongg</app> es un sencillo juego de reconocimiento de patrones. Se "
-"acumulan puntos al emparejar fichas iguales."
-
-#. (itstool) path: section/title
-#: C/index.page:27
-msgid "Playing Mahjongg"
-msgstr "Jugar a Mahjongg"
-
-#. (itstool) path: section/title
-#: C/index.page:31
-msgid "Useful tips"
-msgstr "Consejos útiles"
-
-#. (itstool) path: section/title
-#: C/index.page:36
-msgid "Advanced"
-msgstr "Avanzado"
-
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Get involved"
-msgstr "Involucrarse"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/develop.page:10 C/documentation.page:8
-#: C/gameplay.page:13 C/hints.page:13 C/map.page:10 C/rules.page:13
+#: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
 #: C/strategy.page:9 C/toolbar.page:8 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -132,6 +37,14 @@ msgstr "Tiffany Antopolski"
 #: C/toolbar.page:10 C/translate.page:12
 msgid "2011"
 msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
+#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
+#: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
+#: C/shortcuts.page:18 C/translate.page:23
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Compartir Igual 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -211,6 +124,49 @@ msgstr ""
 "Se le asignará un número de ID a su informe y su estado se actualizará a "
 "medida que se trate."
 
+#. (itstool) path: credit/name
+#: C/bonustiles.page:11
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#. (itstool) path: figure/title
+#: C/bonustiles.page:18 C/bonustiles.page:30
+msgid "Bonus tiles"
+msgstr "Casillas con bonificaciones"
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:20
+msgid ""
+"There are eight bonus tiles: four flowers and four seasons. The flower group "
+"consists of blue winter motives in the postmodern theme and yellow symbols "
+"in the smooth theme. The season group consists of yellow spring motives in "
+"the postmodern theme and black symbols in the smooth theme. The identical "
+"bonus tiles are matched in the postmodern theme and the bonus tiles with the "
+"same symbol color are matched in the smooth theme."
+msgstr ""
+"Hay 8 tipos de casillas con bonificaciones: cuatro flores y cuatro "
+"estaciones. El grupo de flores consiste en motivos invernales azules para el "
+"tema postmoderno y en símbolos amarillos para el tema claro. El grupo de "
+"estaciones consiste en motivos primaverales amarillos en el tema postmoderno "
+"y en símbolos negros en el tema claro. Las casilla con bonificaciones "
+"idénticas coinciden coinciden con el tema postmoderno y las casillas con el "
+"mismo color coinciden en el tema claro."
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:27
+msgid "Some of the matching bonus tiles in smooth theme are shown below:"
+msgstr ""
+"A continuación se muestran algunas de las casillas con bonificaciones en el "
+"tema claro:"
+
+#. (itstool) path: credit/name
+#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
+#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
+#: C/shortcuts.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
+
 #. (itstool) path: page/title
 #: C/choosing.page:18
 msgid "Select a board"
@@ -283,39 +239,19 @@ msgstr ""
 "El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> contiene información útil."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gameplay.page:53
-msgctxt "_"
-msgid ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-msgstr ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-
 #. (itstool) path: credit/name
-#: C/gameplay.page:17 C/hints.page:21 C/map.page:15 C/pause.page:18
+#: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
 #: C/scoring.page:13 C/toolbar.page:17 C/translate.page:19
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: page/title
-#: C/gameplay.page:25
+#: C/gameplay.page:26
 msgid "Basic gameplay"
 msgstr "Juego básico"
 
 #. (itstool) path: page/p
-#: C/gameplay.page:27
-#| msgid ""
-#| "Mahjongg is played by matching two identical tiles per turn. A tile is "
-#| "eligible for matching if no part of another tile is lying directly on it, "
-#| "and it has a free long edge on either the left or the right. You win by "
-#| "removing all tiles, and you are scored by the amount of time it takes you "
-#| "to do so."
+#: C/gameplay.page:28
 msgid ""
 "<app>Mahjongg</app> is played by matching two identical tiles per turn. A "
 "tile is eligible for matching if no part of another tile is lying directly "
@@ -330,7 +266,7 @@ msgstr ""
 "conseguirlo."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:33
+#: C/gameplay.page:34
 msgid ""
 "There are many different <link xref=\"map\">tile layouts</link> to choose "
 "from."
@@ -338,19 +274,19 @@ msgstr ""
 "Hay varios <link xref=\"map\">modelos de fichas</link> entre los que elegir."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:36
+#: C/gameplay.page:37
 msgid "To match two tiles:"
 msgstr "Para emparejar dos fichas:"
 
 #. (itstool) path: item/p
-#: C/gameplay.page:40
+#: C/gameplay.page:41
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
 msgstr "Puse en la ficha que quiere emparejar. Si es elegible, se resaltará."
 
 #. (itstool) path: item/p
-#: C/gameplay.page:44
+#: C/gameplay.page:45
 msgid ""
 "Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
@@ -358,41 +294,29 @@ msgstr ""
 "Pulse en una ficha que coincida. Si es correcta, ambas fichas desaparecerán."
 
 #. (itstool) path: section/title
-#: C/gameplay.page:50 C/hints.page:47
+#: C/gameplay.page:51 C/hints.page:48
 msgid "Video demonstration"
 msgstr "Vídeo de demostración"
 
 #. (itstool) path: media/p
-#: C/gameplay.page:53
+#: C/gameplay.page:54
 msgid "Video of gameplay"
 msgstr "Vídeo de una partida"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/hints.page:48
-msgctxt "_"
-msgid ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-msgstr ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-
 #. (itstool) path: credit/name
-#: C/hints.page:17 C/moves.page:14 C/pause.page:14 C/rules.page:17
+#: C/hints.page:18 C/moves.page:14 C/pause.page:14 C/rules.page:17
 #: C/shortcuts.page:14 C/strategy.page:14 C/toolbar.page:13
 #: C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
 #. (itstool) path: page/title
-#: C/hints.page:29
+#: C/hints.page:30
 msgid "Hints"
 msgstr "Sugerencias"
 
 #. (itstool) path: page/p
-#: C/hints.page:31
+#: C/hints.page:32
 msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
@@ -402,7 +326,7 @@ msgstr ""
 "existe."
 
 #. (itstool) path: page/p
-#: C/hints.page:35
+#: C/hints.page:36
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
@@ -415,9 +339,7 @@ msgstr ""
 "link>, o pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
-#: C/hints.page:41
-#| msgid ""
-#| "<gui>Hint</gui> can make Mahjongg too easy, and should be used sparingly."
+#: C/hints.page:42
 msgid ""
 "<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
 "sparingly."
@@ -426,28 +348,79 @@ msgstr ""
 "fácil, por lo que se deben usar con moderación."
 
 #. (itstool) path: note/p
-#: C/hints.page:43
+#: C/hints.page:44
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr ""
 "Hay una penalización de 30 segundos por cada uso de la opción «Sugerencia»."
 
 #. (itstool) path: div/p
-#: C/hints.page:52
+#: C/hints.page:53
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr ""
 "Puede usar las <gui>Sugerencias</gui> para ayudarle a encontrar fichas "
 "idénticas."
 
 #. (itstool) path: div/p
-#: C/hints.page:57
+#: C/hints.page:58
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr "Pulse <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: div/p
-#: C/hints.page:62
+#: C/hints.page:63
 msgid "There is a 30 s penalty for each use of this option."
 msgstr ""
 "Hay una penalización de 30 segundos por cada vez que se usa esta opción."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Mahjongg"
+msgstr "Mahjongg"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Mahjongg"
+msgstr "Mahjongg"
+
+#. (itstool) path: info/desc
+#: C/index.page:11
+msgid "GNOME Mahjongg help."
+msgstr "Ayuda de GNOME Mahjongg."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Mahjongg"
+
+#. (itstool) path: page/p
+#: C/index.page:23
+msgid ""
+"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
+"by matching identical tiles."
+msgstr ""
+"<app>Mahjongg</app> es un sencillo juego de reconocimiento de patrones. Se "
+"acumulan puntos al emparejar fichas iguales."
+
+#. (itstool) path: section/title
+#: C/index.page:28
+msgid "Playing Mahjongg"
+msgstr "Jugar a Mahjongg"
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Useful tips"
+msgstr "Consejos útiles"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. (itstool) path: section/title
+#: C/index.page:41
+msgid "Get involved"
+msgstr "Involucrarse"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -553,151 +526,8 @@ msgstr ""
 "Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Escrito de Commons</link>."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:40
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-msgstr ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:45
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-msgstr ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:50
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-msgstr ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:55
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/layout-easy.png' "
-#| "md5='188554f9efd15abd2acd1444279970cf'"
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-msgstr ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:71
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-msgstr ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:76
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-msgstr ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:81
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-msgstr ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:86
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-msgstr ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:102
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-msgstr ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:107
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
-msgstr ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
-
 #. (itstool) path: credit/years
 #: C/map.page:12
-#| msgid "2012"
 msgid "2012 2013"
 msgstr "2012 2013"
 
@@ -723,7 +553,6 @@ msgstr "Pulse en <guiseq><gui>Mahjongg</gui><gui>Preferencias</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/map.page:28
-#| msgid "Under <gui>Maps</gui> select a layout from the drop-down menu."
 msgid "Select a <gui>Layout</gui> from the drop-down menu."
 msgstr "Seleccione una <gui>Distribución</gui> en el menú desplegable."
 
@@ -779,7 +608,6 @@ msgstr "<em>Cuatro puentes</em>"
 
 #. (itstool) path: td/p
 #: C/map.page:64
-#| msgid "<em>Easy</em>"
 msgid "<em>Overpass</em>"
 msgstr "<em>Overpass</em>"
 
@@ -1219,6 +1047,125 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
+#~ msgstr ""
+#~ "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+#~ msgstr ""
+#~ "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+
+#~ msgid ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
+#~ "Mahjongg"
+#~ msgstr ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Logo de Mahjongg</"
+#~ "media>Mahjongg"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/mahjongg-video.ogv' "
+#~ "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
+#~ msgstr ""
+#~ "external ref='figures/mahjongg-video.ogv' "
+#~ "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/hints-video.ogv' "
+#~ "md5='128295113f1b22493193997d105f325e'"
+#~ msgstr ""
+#~ "external ref='figures/hints-video.ogv' "
+#~ "md5='128295113f1b22493193997d105f325e'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-easy.png' "
+#~ "md5='188554f9efd15abd2acd1444279970cf'"
+#~ msgstr ""
+#~ "external ref='figures/layout-easy.png' "
+#~ "md5='188554f9efd15abd2acd1444279970cf'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-ziggurat.png' "
+#~ "md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
+#~ msgstr ""
+#~ "external ref='figures/layout-ziggurat.png' "
+#~ "md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-bridges.png' "
+#~ "md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+#~ msgstr ""
+#~ "external ref='figures/layout-bridges.png' "
+#~ "md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+
+#~| msgctxt "_"
+#~| msgid ""
+#~| "external ref='figures/layout-easy.png' "
+#~| "md5='188554f9efd15abd2acd1444279970cf'"
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-overpass.png' "
+#~ "md5='feba714ae116f8c2d4176cd6701820e4'"
+#~ msgstr ""
+#~ "external ref='figures/layout-overpass.png' "
+#~ "md5='feba714ae116f8c2d4176cd6701820e4'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-cloud.png' "
+#~ "md5='7a33babaa2335c6520f07ef5d0f346ac'"
+#~ msgstr ""
+#~ "external ref='figures/layout-cloud.png' "
+#~ "md5='7a33babaa2335c6520f07ef5d0f346ac'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-tic-tac-toe.png' "
+#~ "md5='36e306ca40222e92694d69a7fd6e33d6'"
+#~ msgstr ""
+#~ "external ref='figures/layout-tic-tac-toe.png' "
+#~ "md5='36e306ca40222e92694d69a7fd6e33d6'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-red-dragon.png' "
+#~ "md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+#~ msgstr ""
+#~ "external ref='figures/layout-red-dragon.png' "
+#~ "md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-pyramid-walls.png' "
+#~ "md5='ae9c551967f4d7280d5d875c0491ae67'"
+#~ msgstr ""
+#~ "external ref='figures/layout-pyramid-walls.png' "
+#~ "md5='ae9c551967f4d7280d5d875c0491ae67'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-conf-cross.png' "
+#~ "md5='3d81154393ca2db223d7f61c905c3a17'"
+#~ msgstr ""
+#~ "external ref='figures/layout-conf-cross.png' "
+#~ "md5='3d81154393ca2db223d7f61c905c3a17'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-difficult.png' "
+#~ "md5='c38bb2ada00187cdb40b59eae1476cdd'"
+#~ msgstr ""
+#~ "external ref='figures/layout-difficult.png' "
+#~ "md5='c38bb2ada00187cdb40b59eae1476cdd'"
 
 #~ msgid ""
 #~ "To file your bug, choose the component <gui>mahjongg</gui> in the "
@@ -2158,8 +2105,8 @@ msgstr ""
 #~ "citetitle> from the Free Software Foundation by visiting <ulink type="
 #~ "\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing "
 #~ "to <address> Free Software Foundation, Inc. <street>51 Franklin Street, "
-#~ "Fifth Floor</street><city>Boston</city>, <state>MA</state><postcode>02110-"
-#~ "1301</postcode><country>USA</country></address>"
+#~ "Fifth Floor</street><city>Boston</city>, <state>MA</"
+#~ "state><postcode>02110-1301</postcode><country>USA</country></address>"
 #~ msgstr ""
 #~ "Una copia de la <citetitle>Licencia Pública General GNU</citetitle> está "
 #~ "incluida en el apéndice de la <citetitle>Guía de Usuario de GNOME</"
