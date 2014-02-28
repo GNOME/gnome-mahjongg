@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-02-27 07:52+0000\n"
-"PO-Revision-Date: 2014-02-27 18:00+0100\n"
+"POT-Creation-Date: 2014-02-27 23:16+0000\n"
+"PO-Revision-Date: 2014-02-28 05:07+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -40,7 +40,7 @@ msgstr "2011"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:21 C/hints.page:25 C/index.page:17
+#: C/documentation.page:13 C/gameplay.page:21 C/hints.page:25 C/index.page:18
 #: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
 #: C/shortcuts.page:18 C/translate.page:23
 msgid "Creative Commons Share Alike 3.0"
@@ -124,34 +124,6 @@ msgstr ""
 "Vaše hlášení dostane přiděleno identifikační číslo a jak bude postupně "
 "řešeno, bude se měnit jeho stav."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/bonustiles.page:31
-msgctxt "_"
-msgid ""
-"external ref='figures/black-symbol.png' "
-"md5='d2f311d4377b3656450feeffaca174ed'"
-msgstr ""
-"external ref='figures/black-symbol.png' "
-"md5='d2f311d4377b3656450feeffaca174ed'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/bonustiles.page:32
-msgctxt "_"
-msgid ""
-"external ref='figures/yellow-symbol.png' "
-"md5='f82ca50fbedc2b7cf5816da06c3a04fd'"
-msgstr ""
-"external ref='figures/yellow-symbol.png' "
-"md5='f82ca50fbedc2b7cf5816da06c3a04fd'"
-
 #. (itstool) path: credit/name
 #: C/bonustiles.page:11
 msgid "Rashi Aswani"
@@ -187,7 +159,7 @@ msgstr ""
 "Některé z párových bonusových kamenů v motivu smooth jsou ukázány níže:"
 
 #. (itstool) path: credit/name
-#: C/choosing.page:10 C/gameplay.page:9 C/hints.page:9 C/index.page:13
+#: C/choosing.page:10 C/gameplay.page:9 C/hints.page:9 C/index.page:14
 #: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
 #: C/shortcuts.page:10
 msgid "Chris Beiser"
@@ -423,56 +395,30 @@ msgstr "Zmáčkněte <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Za použití rady je časová penalizace 30 sekund."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:7
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-msgstr "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:21
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-msgstr ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-
 #. (itstool) path: info/title
-#: C/index.page:8
+#: C/index.page:9
 msgctxt "link"
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:10
 msgctxt "text"
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
 #. (itstool) path: info/desc
-#: C/index.page:10
+#: C/index.page:11
 msgid "GNOME Mahjongg help."
 msgstr "Nápověda ke hře GNOME Mahjongg"
 
 #. (itstool) path: page/title
-#: C/index.page:21
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
-"Mahjongg"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo Mahjongg</media> "
-"Mahjongg"
+#: C/index.page:22
+msgid "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Mahjongg"
 
 #. (itstool) path: page/p
-#: C/index.page:22
+#: C/index.page:23
 msgid ""
 "<app>Mahjongg</app> is a simple pattern recognition game. You score points "
 "by matching identical tiles."
@@ -481,22 +427,22 @@ msgstr ""
 "Za nalezení shodných kamenů dostáváte body."
 
 #. (itstool) path: section/title
-#: C/index.page:27
+#: C/index.page:28
 msgid "Playing Mahjongg"
 msgstr "Hraní hry Mahjongg"
 
 #. (itstool) path: section/title
-#: C/index.page:31
+#: C/index.page:32
 msgid "Useful tips"
 msgstr "Užitečné tipy"
 
 #. (itstool) path: section/title
-#: C/index.page:36
+#: C/index.page:37
 msgid "Advanced"
 msgstr "Pokročilé"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:41
 msgid "Get involved"
 msgstr "Zapojte se"
 
