@@ -38,7 +38,6 @@ HELP_FILES = \
 	scoring.page			\
 	shortcuts.page			\
 	strategy.page			\
-	toolbar.page			\
 	translate.page
 
 HELP_LINGUAS = ca cs da el en_GB es eu fr hu it oc pl ru sl sr sr@latin sv de zh_CN
