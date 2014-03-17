@@ -1,3 +1,9 @@
+GNOME Mahjongg 3.11.92
+=====================
+* Changed default window size (Michael Catanzaro)
+* Updated help to reflect ui changes (Rashi Aswani)
+* Translation Updates (Korean, Traditional Chinese, French, Ukrainian, Polish, Latvian, Finnish, Hebrew)
+
 GNOME Mahjongg 3.11.91
 =====================
 * Fixed several issues with resetting and restarting the game (Michael Catanzaro)
