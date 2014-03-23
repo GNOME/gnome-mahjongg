@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-03-07 19:56+0000\n"
-"PO-Revision-Date: 2014-03-23 00:09+0100\n"
+"PO-Revision-Date: 2014-03-23 01:16+0100\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
 msgid "GNOME Mahjongg"
-msgstr "Mahjongg GNOME"
+msgstr "Madžong GNOME"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:2
 msgid ""
@@ -48,13 +48,13 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Hra Mahjongg GNOME ponúka viaceré počiatočné rozloženia, ľahké a aj náročné. "
+"Hra Madžong GNOME ponúka viaceré počiatočné rozloženia, ľahké a aj náročné. "
 "Ak si neviete poradiť, môžete požiadať o radu, ale za časovú penalizáciu."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:535
 #: ../src/gnome-mahjongg.vala:749
 msgid "Mahjongg"
-msgstr "Mahjongg"
+msgstr "Madžong"
 
 #: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -241,7 +241,7 @@ msgid ""
 msgstr ""
 "Hra, v ktorej sa spárujú kamene Mahjongg.\n"
 "\n"
-"Hra Mahjongg je súčasťou Hier GNOME."
+"Hra Madžong je súčasťou Hier GNOME."
 
 #: ../src/gnome-mahjongg.vala:544
 msgid "translator-credits"
