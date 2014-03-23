@@ -464,13 +464,16 @@ public class Game
 
     private bool timeout_cb ()
     {
-        /* Notify on the next tick */
-        var elapsed = clock.elapsed ();
-        var next = (int) (elapsed + 1.0);
-        var wait = next - elapsed;
-        clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
+        if (clock != null)
+        {
+            /* Notify on the next tick */
+            var elapsed = clock.elapsed ();
+            var next = (int) (elapsed + 1.0);
+            var wait = next - elapsed;
+            clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
 
-        tick ();
+            tick ();
+        }
 
         return false;
     }
