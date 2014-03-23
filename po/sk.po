@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-03-07 19:56+0000\n"
-"PO-Revision-Date: 2014-03-23 01:16+0100\n"
+"PO-Revision-Date: 2014-03-23 01:25+0100\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -203,7 +203,7 @@ msgstr "Za_miešať"
 
 #: ../src/gnome-mahjongg.vala:352
 msgid "Mahjongg Preferences"
-msgstr "Mahjongg - Nastavenia"
+msgstr "Nastavenia hry Madžong"
 
 #: ../src/gnome-mahjongg.vala:355
 msgid "_Close"
@@ -239,7 +239,7 @@ msgid ""
 "\n"
 "Mahjongg is a part of GNOME Games."
 msgstr ""
-"Hra, v ktorej sa spárujú kamene Mahjongg.\n"
+"Hra, v ktorej sa spárujú kamene Madžong.\n"
 "\n"
 "Hra Madžong je súčasťou Hier GNOME."
 
