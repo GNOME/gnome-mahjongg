@@ -1,11 +1,11 @@
 # translation of mahjongg.master.po to
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.master\n"
-"POT-Creation-Date: 2013-11-21 00:25+0000\n"
-"PO-Revision-Date: 2013-11-23 19:25+0300\n"
+"POT-Creation-Date: 2014-04-04 07:16+0000\n"
+"PO-Revision-Date: 2014-04-04 15:01+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
@@ -25,112 +25,29 @@ msgstr ""
 " Τουρνάρης Παύλος <p.tournaris@gmail.com>, 2009\n"
 " Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
 " Παπαναστασίου Νικολέτα <papa.nikoleta@ymail.com>, 2013\n"
+" Μαρία Θουκυδιδου <marablack3@gmail.com>\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:7
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-msgstr "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:21
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-msgstr ""
-"external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-
-#. (itstool) path: info/title
-#: C/index.page:8
-msgctxt "link"
-msgid "Mahjongg"
-msgstr "Ματζόνγκ"
-
-#. (itstool) path: info/title
-#: C/index.page:9
-msgctxt "text"
-msgid "Mahjongg"
-msgstr "Ματζόνγκ"
-
-#. (itstool) path: info/desc
-#: C/index.page:10
-msgid "GNOME Mahjongg help."
-msgstr "Βοήθεια του Ματζόνγκ."
-
-#. (itstool) path: credit/name
-#: C/index.page:13 C/choosing.page:10 C/gameplay.page:9 C/hints.page:9
-#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
-#: C/shortcuts.page:10
-msgid "Chris Beiser"
-msgstr "Chris Beiser"
-
-#. (itstool) path: license/p
-#: C/index.page:17 C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:21 C/hints.page:25 C/moves.page:18
-#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
-#: C/translate.page:23
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
-
-#. (itstool) path: page/title
-#: C/index.page:21
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
-"Mahjongg"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Λογότυπο του Ματζόνγκ</"
-"media>Ματζόνγκ"
-
-#. (itstool) path: page/p
-#: C/index.page:22
-msgid ""
-"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
-"by matching identical tiles."
-msgstr ""
-"Το <app>Ματζόνγκ</app> είναι ένα απλό παιχνίδι αναγνώρισης μοτίβων. Παίρνετε "
-"βαθμούς ταιριάζοντας πανομοιότυπα πλακίδια."
-
-#. (itstool) path: section/title
-#: C/index.page:27
-msgid "Playing Mahjongg"
-msgstr "Παίζοντας Ματζόνγκ"
-
-#. (itstool) path: section/title
-#: C/index.page:31
-msgid "Useful tips"
-msgstr "Χρήσιμες συμβουλές"
-
-#. (itstool) path: section/title
-#: C/index.page:36
-msgid "Advanced"
-msgstr "Για προχωρημένους"
-
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Get involved"
-msgstr "Συμμετοχή"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/develop.page:10 C/documentation.page:8
-#: C/gameplay.page:13 C/hints.page:13 C/map.page:10 C/rules.page:13
-#: C/strategy.page:9 C/toolbar.page:8 C/translate.page:10
+#: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
+#: C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
 #: C/bug-filing.page:12 C/develop.page:12 C/documentation.page:10
-#: C/toolbar.page:10 C/translate.page:12
+#: C/translate.page:12
 msgid "2011"
 msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
+#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
+#: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
+#: C/shortcuts.page:18 C/translate.page:23
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -146,8 +63,8 @@ msgid ""
 msgstr ""
 "Το <app>Ματζόνγκ</app> διατηρείται από μια εθελοντική κοινότητα. Είστε "
 "ευπρόσδεκτοι να συμμετάσχετε. Αν παρατηρήσετε κάποιο πρόβλημα μπορείτε να "
-"κάνετε μια <em>αναφορά σφάλματος (bug report)</em>. Για να κάνετε αναφορά "
-"σφάλματος πηγαίνετε <link href=\"https://bugzilla.gnome.org/\"/>."
+"υποβάλετε μια <em>αναφορά σφάλματος (bug report)</em>. Για να υποβάλετε "
+"αναφορά σφάλματος πηγαίνετε στο <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
@@ -167,11 +84,11 @@ msgid ""
 "receive updates by e-mail about the status of your bug. If you don't already "
 "have an account, just click on the <gui>New Account</gui> link to create one."
 msgstr ""
-"Για να λάβετε μέρος χρειάζεστε ένα λογαριασμό που θα σας δώσει πρόσβαση, να "
+"Για να λάβετε μέρος χρειάζεστε ένα λογαριασμό που θα σας δίνει πρόσβαση, να "
 "κάνετε αναφορές σφαλμάτων καθώς και σχόλια. Επίσης, πρέπει να εγγραφείτε για "
-"να δέχεστε ενημερώσεις μέσω ηλεκτρονικού ταχυδρομείου για την κατάσταση του "
+"να δέχεσθε ενημερώσεις μέσω ηλεκτρονικού ταχυδρομείου για την κατάσταση του "
 "σφάλματος σας. Εάν δεν έχετε ήδη λογαριασμό, απλά πατήστε <gui>Νέος "
-"λογαριασμός</gui> για να δημιουργήσετε."
+"λογαριασμός</gui> για να δημιουργήσετε έναν."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
@@ -183,13 +100,13 @@ msgid ""
 "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mahjongg"
 "\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Μόλις δημιουργήσετε λογαριασμό, συνδεθείτε, πατήστε στο <guiseq><gui>Αναφορά "
-"Σφάλματος</gui><gui>Εφαρμογές</gui><gui>gnome-Ματζόνγκ</gui></guiseq>. Πριν "
-"αναφέρετε ένα σφάλμα, παρακαλώ διαβάστε το <link href=\"https://bugzilla."
-"gnome.org/page.cgi?id=bug-writing.html\">οδηγίες καταγραφής σφάλματος</link> "
-"και παρακαλούμε <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-mahjongg\">περιηγηθείτε</link> για να δείτε αν υπάρχει η ίδια "
-"αναφορά ήδη."
+"Μόλις δημιουργήσετε έναν λογαριασμό, συνδεθείτε, πατήστε στο "
+"<guiseq><gui>Αναφορά Σφάλματος</gui><gui>Εφαρμογές</gui><gui>gnome-Ματζόνγκ</"
+"gui></guiseq>. Πριν αναφέρετε ένα σφάλμα, παρακαλώ διαβάστε το <link href="
+"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">Οδηγίες "
+"καταγραφής σφάλματος</link> και παρακαλούμε <link href=\"https://bugzilla."
+"gnome.org/browse.cgi?product=gnome-mahjongg\">κάντε αναζήτηση</link> για να "
+"ελέγξετε μήπως υπάρχει ήδη η αναφορά για το ίδιο σφάλμα."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:38
@@ -198,9 +115,9 @@ msgid ""
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
 "click <gui>Commit</gui>."
 msgstr ""
-"Αν θέλετε κάποιο καινούργιο χαρακτηριστικό, διαλέξτε <gui>enhancement</gui> "
-"στο μενού <gui>Severity</gui>. Συμπληρώστε την Περίληψη και την Περιγραφή "
-"και πατήστε <gui>Commit</gui>."
+"Αν θέλετε ένα νέο χαρακτηριστικό, επιλέξτε <gui>βελτίωση</gui> στο μενού "
+"<gui>Σημαντικότητα</gui>. Συμπληρώστε την Περίληψη και την Περιγραφή και "
+"πατήστε <gui>Υποβολή</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:42
@@ -208,8 +125,50 @@ msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-"Θα δοθεί ένας αριθμός ID στην αναφορά σας, και η κατάσταση του θα ενημερωθεί "
-"σαν να αντιμετωπίστηκε."
+"Θα δοθεί ένας αριθμός ID στην αναφορά σας, και η κατάσταση της θα "
+"ενημερώνεται καθώς αυτή θα αντιμετωπίζεται."
+
+#. (itstool) path: credit/name
+#: C/bonustiles.page:11
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#. (itstool) path: figure/title
+#: C/bonustiles.page:18 C/bonustiles.page:30
+msgid "Bonus tiles"
+msgstr "Πλακίδια επιβράβευσης (bonus)"
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:20
+msgid ""
+"There are eight bonus tiles: four flowers and four seasons. The flower group "
+"consists of blue winter motives in the postmodern theme and yellow symbols "
+"in the smooth theme. The season group consists of yellow spring motives in "
+"the postmodern theme and black symbols in the smooth theme. The identical "
+"bonus tiles are matched in the postmodern theme and the bonus tiles with the "
+"same symbol color are matched in the smooth theme."
+msgstr ""
+"Υπάρχουν οκτώ πλακίδια επιβράβευσης (bonus): τέσσερα λουλούδια και τέσσερις "
+"εποχές. Η ομάδα των λουλουδιών περιλαμβάνει μπλε χειμωνιάτικα μοτίβα και "
+"κίτρινα σύμβολα, στο ομαλό θέμα. Η ομάδα των εποχιακών περιλαμβάνει κίτρινα "
+"ανοιξιάτικα μοτίβα στο μεταμοντέρνο θέμα, και μαύρα σύμβολα στο ομαλό θέμα. "
+"Τα όμοια πλακίδια επιβράβευσης αντιστοιχίζονται στο μεταμοντέρνο θέμα, ενώ "
+"τα πλακίδια επιβράβευσης με το ίδιο σύμβολο αντιστοιχίζονται στο ομαλό θέμα."
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:27
+msgid "Some of the matching bonus tiles in smooth theme are shown below:"
+msgstr ""
+"Μερικά από τα ταιριαστά πλακίδια επιβράβευσης στο ομαλό θέμα εμφανίζονται "
+"παρακάτω:"
+
+#. (itstool) path: credit/name
+#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
+#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
+#: C/shortcuts.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
 
 #. (itstool) path: page/title
 #: C/choosing.page:18
@@ -219,7 +178,7 @@ msgstr "Επιλογή πίνακα"
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
-msgstr "Βοήθεια στην ανάπτυξη"
+msgstr "Βοηθήστε στην ανάπτυξη"
 
 #. (itstool) path: page/p
 #: C/develop.page:20
@@ -227,7 +186,7 @@ msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"Τα <app>παιχνίδια του GNOME</app> αναπτύσσονται και συντηρούνται από μια "
+"Τα <app>Παιχνίδια του GNOME</app> αναπτύσσονται και συντηρούνται από μια "
 "εθελοντική κοινότητα. Είσαστε καλοδεχούμενοι να συμμετάσχετε."
 
 #. (itstool) path: page/p
@@ -250,7 +209,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/documentation.page:17
 msgid "Help write documentation"
-msgstr "Βοήθεια συγγραφής τεκμηρίωσης"
+msgstr "Βοηθήστε στην τεκμηρίωση"
 
 #. (itstool) path: page/p
 #: C/documentation.page:19
@@ -258,7 +217,7 @@ msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"Τα <app>παιχνίδια του GNOME</app> αναπτύσσονται και συντηρούνται από μια "
+"Τα <app>Παιχνίδια του GNOME</app> αναπτύσσονται και συντηρούνται από μια "
 "εθελοντική κοινότητα. Είσαστε καλοδεχούμενοι να συμμετάσχετε."
 
 #. (itstool) path: page/p
@@ -283,33 +242,19 @@ msgstr ""
 "Επίσης το <link href=\"https://live.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> μας περιέχει χρήσιμες πληροφορίες."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gameplay.page:53
-msgctxt "_"
-msgid ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-msgstr ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-
 #. (itstool) path: credit/name
-#: C/gameplay.page:17 C/hints.page:21 C/map.page:15 C/pause.page:18
-#: C/scoring.page:13 C/toolbar.page:17 C/translate.page:19
+#: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
+#: C/scoring.page:13 C/translate.page:19
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: page/title
-#: C/gameplay.page:25
+#: C/gameplay.page:26
 msgid "Basic gameplay"
 msgstr "Βασικό παιχνίδι"
 
 #. (itstool) path: page/p
-#: C/gameplay.page:27
+#: C/gameplay.page:28
 msgid ""
 "<app>Mahjongg</app> is played by matching two identical tiles per turn. A "
 "tile is eligible for matching if no part of another tile is lying directly "
@@ -317,29 +262,28 @@ msgid ""
 "by removing all tiles, and you are scored by the amount of time it takes you "
 "to do so."
 msgstr ""
-"Το <app>Ματζόνγκ</app> παίζεται με το ταίριασμα δύο όμοιων πλακιδίων την "
-"κάθε φορά. Ένα πλακίδιο είναι επιλέξιμο για ταίριασμα εάν δεν βρίσκεται "
-"κανένα μέρος ενός άλλου πλακίδιο πάνω σε αυτό, και έχει μια μεγάλη ελεύθερη "
-"άκρη είτε αριστερά ή δεξιά. Θα κερδίσετε αφαιρώντας όλα τα πλακίδια, και θα "
-"βαθμολογηθείτε από το ποσό του χρόνου που θα χρειαστείτε να κάνετε κάτι "
-"τέτοιο."
+"Το <app>Ματζόνγκ</app> παίζεται ταιριάζοντας δύο όμοια πλακίδια κάθε φορά. "
+"Ένα πλακίδιο είναι επιλέξιμο για ταίριασμα εάν κανένα μέρος άλλου πλακιδίου "
+"δεν βρίσκεται άμεσα επάνω του, και έχει μια ελεύθερη μεγάλη πλευρά, είτε "
+"αριστερά, είτε δεξιά. Θα κερδίσετε αφαιρώντας όλα τα πλακίδια, και θα "
+"βαθμολογηθείτε από το ποσό του χρόνου που θα χρειασθείτε για να το πετύχετε."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:33
+#: C/gameplay.page:34
 msgid ""
 "There are many different <link xref=\"map\">tile layouts</link> to choose "
 "from."
 msgstr ""
 "Υπάρχουν πολλές διαφορετικές <link xref=\"map\">διατάξεις πλακιδίων</link> "
-"για να διαλέξετε."
+"για να επιλέξετε."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:36
+#: C/gameplay.page:37
 msgid "To match two tiles:"
 msgstr "Για να αντιστοιχίσετε δύο πλακίδια:"
 
 #. (itstool) path: item/p
-#: C/gameplay.page:40
+#: C/gameplay.page:41
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
@@ -348,60 +292,47 @@ msgstr ""
 "θα επισημανθεί."
 
 #. (itstool) path: item/p
-#: C/gameplay.page:44
+#: C/gameplay.page:45
 msgid ""
 "Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
 msgstr ""
 "Κάντε κλικ σε ένα πλακίδιο που ταιριάζει. Αν πραγματικά είναι ταίρι, τα δύο "
-"πλακίδια θα εξαφανιστούν."
+"πλακίδια θα εξαφανισθούν."
 
 #. (itstool) path: section/title
-#: C/gameplay.page:50 C/hints.page:47
+#: C/gameplay.page:51 C/hints.page:48
 msgid "Video demonstration"
 msgstr "Βίντεο επίδειξης"
 
 #. (itstool) path: media/p
-#: C/gameplay.page:53
+#: C/gameplay.page:54
 msgid "Video of gameplay"
 msgstr "Βίντεο παιξίματος του παιχνιδιού"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/hints.page:48
-msgctxt "_"
-msgid ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-msgstr ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-
 #. (itstool) path: credit/name
-#: C/hints.page:17 C/moves.page:14 C/pause.page:14 C/rules.page:17
-#: C/shortcuts.page:14 C/strategy.page:14 C/toolbar.page:13
-#: C/translate.page:15
+#: C/hints.page:18 C/moves.page:14 C/pause.page:14 C/rules.page:17
+#: C/shortcuts.page:14 C/strategy.page:14 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
 #. (itstool) path: page/title
-#: C/hints.page:29
+#: C/hints.page:30
 msgid "Hints"
 msgstr "Yπoδείξεις"
 
 #. (itstool) path: page/p
-#: C/hints.page:31
+#: C/hints.page:32
 msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
 msgstr ""
-"Η <gui>Υπόδειξη</gui> επισημαίνει δύο πλακίδια που μπορούν να ταιριαστούν. "
-"Αν έχετε επιλέξει ήδη ένα πλακίδιο, θα σας εμφανίσει αν υπάρχει κομμάτι για "
+"Η <gui>Υπόδειξη</gui> επισημαίνει δύο πλακίδια που μπορούν να ταιριάξουν. Αν "
+"έχετε επιλέξει ήδη ένα πλακίδιο, θα σας εμφανίσει αν υπάρχει κομμάτι για "
 "ταίριασμα."
 
 #. (itstool) path: page/p
-#: C/hints.page:35
+#: C/hints.page:36
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
@@ -415,7 +346,7 @@ msgstr ""
 "keyseq>."
 
 #. (itstool) path: note/p
-#: C/hints.page:41
+#: C/hints.page:42
 msgid ""
 "<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
 "sparingly."
@@ -424,31 +355,84 @@ msgstr ""
 "θα πρέπει να χρησιμοποιείται με φειδώ."
 
 #. (itstool) path: note/p
-#: C/hints.page:43
+#: C/hints.page:44
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
-msgstr "Υπάρχει ποινή 30 δευτερολέπτων για κάθε χρήση μιας \"υπόδειξης\"."
+msgstr ""
+"Υπάρχει ποινή 30 δευτερολέπτων κάθε φορά που χρησιμοποιείτε μια \"Υπόδειξη\"."
 
 #. (itstool) path: div/p
-#: C/hints.page:52
+#: C/hints.page:53
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr ""
 "Μπορείτε να χρησιμοποιήσετε τις <gui>Υποδείξεις</gui> για να βοηθηθείτε να "
 "βρείτε όμοια πλακίδια."
 
 #. (itstool) path: div/p
-#: C/hints.page:57
+#: C/hints.page:58
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr "Πατήστε <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: div/p
-#: C/hints.page:62
+#: C/hints.page:63
 msgid "There is a 30 s penalty for each use of this option."
-msgstr "Υπάρχει ποινή 30 δευτερολέπτων για κάθε χρήση αυτής της επιλογής."
+msgstr ""
+"Υπάρχει ποινή 30 δευτερολέπτων κάθε φορά που χρησιμοποιείτε αυτή την επιλογή."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Mahjongg"
+msgstr "Ματζόνγκ"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Mahjongg"
+msgstr "Ματζόνγκ"
+
+#. (itstool) path: info/desc
+#: C/index.page:11
+msgid "GNOME Mahjongg help."
+msgstr "Βοήθεια του Ματζόνγκ."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Mahjongg"
+
+#. (itstool) path: page/p
+#: C/index.page:23
+msgid ""
+"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
+"by matching identical tiles."
+msgstr ""
+"Το <app>Ματζόνγκ</app> είναι ένα απλό παιχνίδι αναγνώρισης μοτίβων. Παίρνετε "
+"βαθμούς ταιριάζοντας πανομοιότυπα πλακίδια."
+
+#. (itstool) path: section/title
+#: C/index.page:28
+msgid "Playing Mahjongg"
+msgstr "Παίζοντας Ματζόνγκ"
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Useful tips"
+msgstr "Χρήσιμες συμβουλές"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#. (itstool) path: section/title
+#: C/index.page:41
+msgid "Get involved"
+msgstr "Συμμετοχή"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Άδεια Creative Commons Attribution-ShareAlike 3.0 Unported"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
@@ -517,8 +501,8 @@ msgid ""
 "of the work)."
 msgstr ""
 "Πρέπει να αναφέρετε την πηγή του έργου με τον τρόπο που καθορίζεται από το "
-"δημιουργό του ή αυτόν που παρέχει την άδεια (αλλά όχι με τρόπο που να εννοεί "
-"ότι εγκρίνουν εσάς ή τη δική σας χρήση του έργου)."
+"δημιουργό του ή αυτόν που παρέχει την άδεια (αλλά όχι με τρόπο που να "
+"υπονοεί ότι εγκρίνουν εσάς ή τη δική σας χρήση του έργου)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
@@ -546,144 +530,6 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">ιστότοπο CreativeCommons</"
 "link>, ή διαβάστε όλη την <link href=\"http://creativecommons.org/licenses/"
 "by-sa/3.0/\">Πράξη Commons</link>."
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:40
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-msgstr ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:45
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-msgstr ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:50
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-msgstr ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:55
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-msgstr ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:71
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-msgstr ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:76
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-msgstr ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:81
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-msgstr ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:86
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-msgstr ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:102
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-msgstr ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:107
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
-msgstr ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
 
 #. (itstool) path: credit/years
 #: C/map.page:12
@@ -750,7 +596,7 @@ msgstr "εικόνα διάταξης τεσσάρων γεφυρών"
 #. (itstool) path: media/p
 #: C/map.page:56
 msgid "overpass layout image"
-msgstr "εικόνα διάταξης υπερυψωμένη οδός"
+msgstr "εικόνα διάταξης υπερυψωμένης οδού"
 
 #. (itstool) path: td/p
 #: C/map.page:61
@@ -857,10 +703,11 @@ msgid ""
 "made. It can help you see how far you are from running out of moves, and "
 "whether you've seen all possible moves."
 msgstr ""
-"Ο μετρητής <gui>Κινήσεις που απομένουν</gui> βρίσκεται στην <link xref="
-"\"toolbar\">εργαλειοθήκη</link> και εμφανίζει τον αριθμό των διαφορετικών "
-"κινήσεων που μπορούν να γίνουν. Μπορεί να σας βοηθήσει για να δείτε πόσες "
-"κινήσεις σας έχουν απομείνει και αν έχετε δει όλες τις πιθανές κινήσεις."
+"Ο καταμετρητής για τις <gui>Κινήσεις που απομένουν</gui> βρίσκεται στην "
+"<link xref=\"toolbar\">Εργαλειοθήκη</link> και εμφανίζει τον αριθμό των "
+"διαφόρων κινήσεων που μπορούν να γίνουν. Μπορεί να σας βοηθήσει για να δείτε "
+"πόσες κινήσεις σας έχουν απομείνει και αν έχετε δει όλες τις πιθανές "
+"κινήσεις."
 
 #. (itstool) path: media/p
 #: C/moves.page:30
@@ -876,7 +723,7 @@ msgstr "Παύση του παιχνιδιού σας"
 #: C/pause.page:28
 msgid "You can pause your current game using one of the following methods:"
 msgstr ""
-"Μπορείτε να διακόψετε το τρέχον σας παιχνίδι χρησιμοποιώντας μία από τις "
+"Μπορείτε να διακόψετε το τρέχον παιχνίδι σας χρησιμοποιώντας μία από τις "
 "ακόλουθες μεθόδους:"
 
 #. (itstool) path: item/p
@@ -908,13 +755,13 @@ msgstr "Τα πλακίδια πρέπει να είναι όμοια για ν�
 #: C/rules.page:28
 msgid "Fully and partially covered tiles cannot be matched."
 msgstr ""
-"Δεν μπορούν να ταιριαστούν τα πλήρως ή τα εν μέρη καλυπτόμενα πλακίδια."
+"Τα πλήρως ή τα εν μέρει καλυπτόμενα πλακίδια δεν μπορούν να ταιριάξουν."
 
 #. (itstool) path: item/p
 #: C/rules.page:29
 msgid "Tiles must have a free long edge in order to be eligible for matching."
 msgstr ""
-"Τα πλακίδια πρέπει να έχουν μια μεγάλη ελεύθερη άκρη προκειμένου να είναι "
+"Τα πλακίδια πρέπει να έχουν μια μεγάλη ελεύθερη πλευρά προκειμένου να είναι "
 "επιλέξιμα για ταίριασμα."
 
 #. (itstool) path: item/p
@@ -958,8 +805,8 @@ msgid ""
 "In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
 "board."
 msgstr ""
-"Στο <app>Ματζόνγκ</app>, βαθμολογείστε με το κατά πόσο γρήγορα ολοκληρώνετε "
-"έναν πίνακα."
+"Στο <app>Ματζόνγκ</app>, βαθμολογείσθε ανάλογα με το πόσο γρήγορα μπορείτε "
+"να ολοκληρώσετε έναν πίνακα."
 
 #. (itstool) path: page/p
 #: C/scoring.page:26
@@ -1089,8 +936,9 @@ msgid ""
 "strategy tips to keep in mind while you play:"
 msgstr ""
 "Από τι στιγμή που κάθε <link xref=\"map\">διάταξη πλακιδίων</link> απαιτεί "
-"διαφορετική προσέγγιση, δεν υπάρχει κάποια καθολική στρατηγική. Ωστόσο, "
-"υπάρχουν κάποιες συμβουλές στρατηγικής που μπορείτε να θυμάστε καθώς παίζετε:"
+"διαφορετική προσέγγιση, δεν υπάρχει καμία μοναδική και συνολικά ισχύουσα "
+"στρατηγική. Ωστόσο, υπάρχουν κάποιες συμβουλές στρατηγικής που μπορείτε να "
+"θυμάστε καθώς παίζετε:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:28
@@ -1100,8 +948,8 @@ msgid ""
 "expose new tiles with every set of tiles you match and eliminate."
 msgstr ""
 "Η γενική στρατηγική είναι να συνεχίσετε να αφαιρείτε πλακίδια με τέτοιο "
-"τρόπο ώστε τα αφαιρούμενα πλακίδια να εμφανίσουν επιπλέον πλακίδια. Μια καλή "
-"στρατηγική είναι να εμφανίζετε νέα πλακίδια με κάθε σετ πλακιδίων που "
+"τρόπο ώστε τα αφαιρούμενα πλακίδια να εκθέτουν περαιτέρω πλακίδια. Μια καλή "
+"στρατηγική είναι να αποκαλύπτετε νέα πλακίδια με κάθε σετ πλακιδίων που "
 "ταιριάζετε και αφαιρείτε."
 
 #. (itstool) path: item/p
@@ -1125,35 +973,6 @@ msgstr ""
 "Από τη στιγμή που <link xref=\"scoring\">βαθμολογείστε</link> από το πόσο "
 "γρήγορα τελειώνετε το παιχνίδι, ο χρόνος είναι ο πιο σημαντικός παράγοντας "
 "στο παιχνίδι. Συνεπώς, είναι σημαντικό να είστε γρήγορος/η."
-
-#. (itstool) path: page/title
-#: C/toolbar.page:24
-msgid "Show/hide the toolbar"
-msgstr "Προβολή/απόκρυψη της εργαλειοθήκης"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:26
-msgid ""
-"To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
-"gui></guiseq>."
-msgstr ""
-"Για να εμφανίσετε ή να κρύψετε την εργαλειοθήκη, κάντε κλικ στο "
-"<guiseq><gui>Ματζόνγκ</gui><gui>Εργαλειοθήκη</gui></guiseq>."
-
-#. (itstool) path: page/p
-#: C/toolbar.page:29
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <gui>Redo "
-"Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</gui>."
-msgstr ""
-"Η εργαλειοθήκη που βρίσκεται κάτω από τη γραμμή του μενού, σας επιτρέπει να "
-"εκτελέσετε κοινές ενέργειες με το ποντίκι σας. Για να χρησιμοποιήσετε ένα "
-"αντικείμενο της εργαλειοθήκης, απλά κάντε κλικ σε αυτό. Τα πλήκτρα από "
-"αριστερά προς τα δεξιά, είναι <gui>Νέο</gui> παιχνίδι, <gui>Αναίρεση "
-"κίνησης</gui>, <gui>Επανάληψη κίνησης</gui>, <link xref=\"hints\">Υπόδειξη</"
-"link> και <gui>Παύση</gui>."
 
 #. (itstool) path: page/title
 #: C/translate.page:27
@@ -1213,6 +1032,145 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας τη <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
 "i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid "Show/hide the toolbar"
+#~ msgstr "Προβολή/απόκρυψη της εργαλειοθήκης"
+
+#~ msgid ""
+#~ "To show or hide the toolbar, click <guiseq><gui>Mahjongg</"
+#~ "gui><gui>Toolbar</gui></guiseq>."
+#~ msgstr ""
+#~ "Για να εμφανίσετε ή να κρύψετε την εργαλειοθήκη, κάντε κλικ στο "
+#~ "<guiseq><gui>Ματζόνγκ</gui><gui>Εργαλειοθήκη</gui></guiseq>."
+
+#~ msgid ""
+#~ "The toolbar, located under the menu bar, lets you perform common actions "
+#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#~ "from left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, "
+#~ "<gui>Redo Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</"
+#~ "gui>."
+#~ msgstr ""
+#~ "Η εργαλειοθήκη που βρίσκεται κάτω από τη γραμμή του μενού, σας επιτρέπει "
+#~ "να εκτελέσετε κοινές ενέργειες με το ποντίκι σας. Για να χρησιμοποιήσετε "
+#~ "ένα αντικείμενο της εργαλειοθήκης, απλά κάντε κλικ σε αυτό. Τα πλήκτρα "
+#~ "από αριστερά προς τα δεξιά, είναι <gui>Νέο</gui> παιχνίδι, <gui>Αναίρεση "
+#~ "κίνησης</gui>, <gui>Επανάληψη κίνησης</gui>, <link xref=\"hints"
+#~ "\">Υπόδειξη</link> και <gui>Παύση</gui>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
+#~ msgstr ""
+#~ "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+#~ msgstr ""
+#~ "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
+
+#~ msgid ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</media> "
+#~ "Mahjongg"
+#~ msgstr ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Λογότυπο του Ματζόνγκ</"
+#~ "media>Ματζόνγκ"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/mahjongg-video.ogv' "
+#~ "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
+#~ msgstr ""
+#~ "external ref='figures/mahjongg-video.ogv' "
+#~ "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/hints-video.ogv' "
+#~ "md5='128295113f1b22493193997d105f325e'"
+#~ msgstr ""
+#~ "external ref='figures/hints-video.ogv' "
+#~ "md5='128295113f1b22493193997d105f325e'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-easy.png' "
+#~ "md5='188554f9efd15abd2acd1444279970cf'"
+#~ msgstr ""
+#~ "external ref='figures/layout-easy.png' "
+#~ "md5='188554f9efd15abd2acd1444279970cf'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-ziggurat.png' "
+#~ "md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
+#~ msgstr ""
+#~ "external ref='figures/layout-ziggurat.png' "
+#~ "md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-bridges.png' "
+#~ "md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+#~ msgstr ""
+#~ "external ref='figures/layout-bridges.png' "
+#~ "md5='f7b1ee53a56a2d2dd44564c5b497f766'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-overpass.png' "
+#~ "md5='feba714ae116f8c2d4176cd6701820e4'"
+#~ msgstr ""
+#~ "external ref='figures/layout-overpass.png' "
+#~ "md5='feba714ae116f8c2d4176cd6701820e4'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-cloud.png' "
+#~ "md5='7a33babaa2335c6520f07ef5d0f346ac'"
+#~ msgstr ""
+#~ "external ref='figures/layout-cloud.png' "
+#~ "md5='7a33babaa2335c6520f07ef5d0f346ac'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-tic-tac-toe.png' "
+#~ "md5='36e306ca40222e92694d69a7fd6e33d6'"
+#~ msgstr ""
+#~ "external ref='figures/layout-tic-tac-toe.png' "
+#~ "md5='36e306ca40222e92694d69a7fd6e33d6'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-red-dragon.png' "
+#~ "md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+#~ msgstr ""
+#~ "external ref='figures/layout-red-dragon.png' "
+#~ "md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-pyramid-walls.png' "
+#~ "md5='ae9c551967f4d7280d5d875c0491ae67'"
+#~ msgstr ""
+#~ "external ref='figures/layout-pyramid-walls.png' "
+#~ "md5='ae9c551967f4d7280d5d875c0491ae67'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-conf-cross.png' "
+#~ "md5='3d81154393ca2db223d7f61c905c3a17'"
+#~ msgstr ""
+#~ "external ref='figures/layout-conf-cross.png' "
+#~ "md5='3d81154393ca2db223d7f61c905c3a17'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/layout-difficult.png' "
+#~ "md5='c38bb2ada00187cdb40b59eae1476cdd'"
+#~ msgstr ""
+#~ "external ref='figures/layout-difficult.png' "
+#~ "md5='c38bb2ada00187cdb40b59eae1476cdd'"
 
 #~ msgid ""
 #~ "To file your bug, choose the component <gui>mahjongg</gui> in the "
