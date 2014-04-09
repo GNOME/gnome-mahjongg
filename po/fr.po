@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
+"POT-Creation-Date: 2014-04-09 07:19+0000\n"
 "PO-Revision-Date: 2013-03-15 16:11+0100\n"
 "Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -38,16 +38,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
+#: ../data/mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:753
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:2
+#: ../data/mahjongg.desktop.in.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Désassembler une pile de tuiles en enlevant les paires correspondantes"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:3
+#: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
 msgstr "jeu;stratégie;énigmes;plateau;"
 
@@ -74,40 +74,45 @@ msgstr "vrai si la fenêtre est en plein écran"
 #.
 #: ../data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Facile"
+
+#: ../data/translatable_game_names.h:7
+msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "La Ziggurat"
 
-#: ../data/translatable_game_names.h:7
+#: ../data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Quatre ponts"
 
-#: ../data/translatable_game_names.h:8
+#: ../data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Nuage"
 
-#: ../data/translatable_game_names.h:9
+#: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tic-Tac-Toe"
 
-#: ../data/translatable_game_names.h:10
+#: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Dragon rouge"
 
-#: ../data/translatable_game_names.h:11
+#: ../data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Les murs de la pyramide"
 
-#: ../data/translatable_game_names.h:12
+#: ../data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Croix de confusion"
 
-#: ../data/translatable_game_names.h:13
+#: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Difficile"
@@ -165,6 +170,7 @@ msgid "Hint"
 msgstr "Astuce"
 
 #: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:648
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -274,20 +280,19 @@ msgstr "_Continuer"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
-#, c-format
+#: ../src/gnome-mahjongg.vala:659 ../src/gnome-mahjongg.vala:825
 msgid "Time"
 msgstr "Durée"
 
-#: ../src/gnome-mahjongg.vala:778
+#: ../src/gnome-mahjongg.vala:782
 msgid "New Game"
 msgstr "Nouvelle partie"
 
-#: ../src/gnome-mahjongg.vala:793
+#: ../src/gnome-mahjongg.vala:797
 msgid "Size:"
 msgstr "Taille :"
 
-#: ../src/gnome-mahjongg.vala:818
+#: ../src/gnome-mahjongg.vala:822
 msgid "Date"
 msgstr "Date"
 
@@ -2022,9 +2027,6 @@ msgstr "Date"
 #~ "est un jeu de logique japonais.\n"
 #~ "\n"
 #~ "GNOME Sudoku fait partie des jeux GNOME."
-
-#~ msgid "Easy"
-#~ msgstr "Facile"
 
 #~ msgid "Medium"
 #~ msgstr "Moyenne"
