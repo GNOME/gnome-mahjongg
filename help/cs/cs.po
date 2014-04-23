@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-02-27 23:16+0000\n"
-"PO-Revision-Date: 2014-02-28 05:07+0100\n"
+"POT-Creation-Date: 2014-04-23 07:07+0000\n"
+"PO-Revision-Date: 2014-04-23 09:09+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,33 +26,33 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:10 C/develop.page:10 C/documentation.page:8
-#: C/gameplay.page:13 C/hints.page:13 C/map.page:10 C/rules.page:13
-#: C/strategy.page:9 C/toolbar.page:8 C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:8
+#: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
+#: C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
-#: C/bug-filing.page:12 C/develop.page:12 C/documentation.page:10
-#: C/toolbar.page:10 C/translate.page:12
+#: C/bug-filing.page:11 C/develop.page:12 C/documentation.page:10
+#: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:21 C/hints.page:25 C/index.page:18
+#: C/bug-filing.page:14 C/choosing.page:14 C/develop.page:15
+#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
 #: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
 #: C/shortcuts.page:18 C/translate.page:23
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
-#: C/bug-filing.page:19
+#: C/bug-filing.page:18
 msgid "Report a Problem"
 msgstr "Hlaste problémy"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:20
+#: C/bug-filing.page:19
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
@@ -64,7 +64,7 @@ msgstr ""
 "\"/>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:23
+#: C/bug-filing.page:22
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -74,7 +74,7 @@ msgstr ""
 "angličtině."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:26
+#: C/bug-filing.page:25
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -87,7 +87,7 @@ msgstr ""
 "zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Nový účet</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:30
+#: C/bug-filing.page:29
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
@@ -105,7 +105,7 @@ msgstr ""
 "nenahlásil už někdo jiný."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:38
+#: C/bug-filing.page:37
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -116,7 +116,7 @@ msgstr ""
 "klikněte na <gui>Commit</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:42
+#: C/bug-filing.page:41
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -159,7 +159,7 @@ msgstr ""
 "Některé z párových bonusových kamenů v motivu smooth jsou ukázány níže:"
 
 #. (itstool) path: credit/name
-#: C/choosing.page:10 C/gameplay.page:9 C/hints.page:9 C/index.page:14
+#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
 #: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
 #: C/shortcuts.page:10
 msgid "Chris Beiser"
@@ -187,14 +187,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
 "%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
@@ -238,33 +238,19 @@ msgstr ""
 "Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gameplay.page:53
-msgctxt "_"
-msgid ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-msgstr ""
-"external ref='figures/mahjongg-video.ogv' "
-"md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-
 #. (itstool) path: credit/name
-#: C/gameplay.page:17 C/hints.page:21 C/map.page:15 C/pause.page:18
-#: C/scoring.page:13 C/toolbar.page:17 C/translate.page:19
+#: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
+#: C/scoring.page:13 C/translate.page:19
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: page/title
-#: C/gameplay.page:25
+#: C/gameplay.page:26
 msgid "Basic gameplay"
 msgstr "Základy hraní"
 
 #. (itstool) path: page/p
-#: C/gameplay.page:27
+#: C/gameplay.page:28
 msgid ""
 "<app>Mahjongg</app> is played by matching two identical tiles per turn. A "
 "tile is eligible for matching if no part of another tile is lying directly "
@@ -279,7 +265,7 @@ msgstr ""
 "kolik vám to zabralo času."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:33
+#: C/gameplay.page:34
 msgid ""
 "There are many different <link xref=\"map\">tile layouts</link> to choose "
 "from."
@@ -288,12 +274,12 @@ msgstr ""
 "si můžete vybírat."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:36
+#: C/gameplay.page:37
 msgid "To match two tiles:"
 msgstr "Dva kameny spárujete následovně:"
 
 #. (itstool) path: item/p
-#: C/gameplay.page:40
+#: C/gameplay.page:41
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
@@ -302,7 +288,7 @@ msgstr ""
 "zvýrazní se."
 
 #. (itstool) path: item/p
-#: C/gameplay.page:44
+#: C/gameplay.page:45
 msgid ""
 "Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
@@ -310,41 +296,28 @@ msgstr ""
 "Klikněte na kámen do páru. V případě, že je opravdu stejný, oba kameny zmizí."
 
 #. (itstool) path: section/title
-#: C/gameplay.page:50 C/hints.page:47
+#: C/gameplay.page:51 C/hints.page:48
 msgid "Video demonstration"
 msgstr "Videoukázka"
 
 #. (itstool) path: media/p
-#: C/gameplay.page:53
+#: C/gameplay.page:54
 msgid "Video of gameplay"
 msgstr "Video s hraním hry"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/hints.page:48
-msgctxt "_"
-msgid ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-msgstr ""
-"external ref='figures/hints-video.ogv' md5='128295113f1b22493193997d105f325e'"
-
 #. (itstool) path: credit/name
-#: C/hints.page:17 C/moves.page:14 C/pause.page:14 C/rules.page:17
-#: C/shortcuts.page:14 C/strategy.page:14 C/toolbar.page:13
-#: C/translate.page:15
+#: C/hints.page:18 C/moves.page:14 C/pause.page:14 C/rules.page:17
+#: C/shortcuts.page:14 C/strategy.page:14 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
 #. (itstool) path: page/title
-#: C/hints.page:29
+#: C/hints.page:30
 msgid "Hints"
 msgstr "Rady"
 
 #. (itstool) path: page/p
-#: C/hints.page:31
+#: C/hints.page:32
 msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
@@ -354,7 +327,7 @@ msgstr ""
 "existuje."
 
 #. (itstool) path: page/p
-#: C/hints.page:35
+#: C/hints.page:36
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
@@ -367,7 +340,7 @@ msgstr ""
 "<keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
-#: C/hints.page:41
+#: C/hints.page:42
 msgid ""
 "<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
 "sparingly."
@@ -376,22 +349,22 @@ msgstr ""
 "jednoduchá, takže byste je měli používat jen zřídka."
 
 #. (itstool) path: note/p
-#: C/hints.page:43
+#: C/hints.page:44
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr "Navíc je za každé použití rady časová penalizace 30 sekund."
 
 #. (itstool) path: div/p
-#: C/hints.page:52
+#: C/hints.page:53
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr "Můžete použít <gui>Rady</gui> pro pomoc s nalezením stejných kamenů"
 
 #. (itstool) path: div/p
-#: C/hints.page:57
+#: C/hints.page:58
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr "Zmáčkněte <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: div/p
-#: C/hints.page:62
+#: C/hints.page:63
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Za použití rady je časová penalizace 30 sekund."
 
@@ -546,144 +519,6 @@ msgstr ""
 "org/licenses/by-sa/3.0/legalcode\">webových stránkách CreativeCommons</link> "
 "nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\">výtah dokumentu pro neprávníky</link>."
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:40
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-msgstr ""
-"external ref='figures/layout-easy.png' md5='188554f9efd15abd2acd1444279970cf'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:45
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-msgstr ""
-"external ref='figures/layout-ziggurat.png' "
-"md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:50
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-msgstr ""
-"external ref='figures/layout-bridges.png' "
-"md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:55
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-msgstr ""
-"external ref='figures/layout-overpass.png' "
-"md5='feba714ae116f8c2d4176cd6701820e4'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:71
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-msgstr ""
-"external ref='figures/layout-cloud.png' "
-"md5='7a33babaa2335c6520f07ef5d0f346ac'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:76
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-msgstr ""
-"external ref='figures/layout-tic-tac-toe.png' "
-"md5='36e306ca40222e92694d69a7fd6e33d6'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:81
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-msgstr ""
-"external ref='figures/layout-red-dragon.png' "
-"md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:86
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-msgstr ""
-"external ref='figures/layout-pyramid-walls.png' "
-"md5='ae9c551967f4d7280d5d875c0491ae67'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:102
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-msgstr ""
-"external ref='figures/layout-conf-cross.png' "
-"md5='3d81154393ca2db223d7f61c905c3a17'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/map.page:107
-msgctxt "_"
-msgid ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
-msgstr ""
-"external ref='figures/layout-difficult.png' "
-"md5='c38bb2ada00187cdb40b59eae1476cdd'"
 
 #. (itstool) path: credit/years
 #: C/map.page:12
@@ -1118,34 +953,6 @@ msgstr ""
 "Protože se vaše <link xref=\"scoring\">skóre</link> odvíjí od rychlosti s "
 "jakou hru dokončíte, je čas nejdůležitějším faktorem hry. Proto je především "
 "důležité být rychlý."
-
-#. (itstool) path: page/title
-#: C/toolbar.page:24
-msgid "Show/hide the toolbar"
-msgstr "Jak zobrazit/skrýt nástrojovou lištu"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:26
-msgid ""
-"To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
-"gui></guiseq>."
-msgstr ""
-"Pro zobrazení či skrytí nástrojové lišty klikněte na <guiseq><gui>Mahjongg</"
-"gui> <gui>Nástrojová lišta</gui></guiseq>."
-
-#. (itstool) path: page/p
-#: C/toolbar.page:29
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <gui>Redo "
-"Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</gui>."
-msgstr ""
-"Nástrojová lišta umístěná pod nabídkovou lištou umožňuje provádět "
-"nejběžnější činnosti pomocí myši. Když chcete využít položku na nástrojové "
-"liště, stačí na ni kliknout. Tlačítka jsou, zleva doprava, <gui>Nová</gui> "
-"hra, <gui>Tah zpět</gui>, <gui>Tah znovu</gui>, <link xref=\"hints\">Rada</"
-"link> a <gui>Pozastavit</gui>."
 
 #. (itstool) path: page/title
 #: C/translate.page:27
