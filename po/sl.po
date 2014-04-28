@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-31 19:19+0000\n"
-"PO-Revision-Date: 2014-03-31 22:49+0100\n"
+"POT-Creation-Date: 2014-04-28 06:48+0000\n"
+"PO-Revision-Date: 2014-04-28 20:00+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -38,6 +38,9 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
+"Igra Mahjongg je znana vzhodnjaška igra. Ploščice so na začetku igre "
+"postavljene na plošči. Cilj igre je čim hitreje počistiti vse pare. Z "
+"izborom dveh enakih ploščic"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:3
 msgid ""
@@ -45,9 +48,12 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
+"Igra GNOME Mahjongg omogoča igranje različnih postavitev ploščic. Nekatere "
+"postavitve so enostavne, druge zelo zahtevne. Igra omogoča namige, ki pa se "
+"kaznujejo s časovnim pribitkom."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:535
-#: ../src/gnome-mahjongg.vala:749
+#: ../src/gnome-mahjongg.vala:751
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -252,7 +258,7 @@ msgstr ""
 msgid "Unpause the game"
 msgstr "Prekini premor igre"
 
-#: ../src/gnome-mahjongg.vala:654 ../src/score-dialog.vala:72
+#: ../src/gnome-mahjongg.vala:656 ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Čas"
 
