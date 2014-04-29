@@ -1,3 +1,9 @@
+GNOME Mahjongg 3.13.1
+=====================
+* Translation Updates (Swedish, Basque, Czech, Slovenian, Italian, Greek)
+* Documentation Updates (Andre Klapper)
+* Fix critical warning in Game.timeout_cb, Ensure game is unpaused after Restart Game (Michael Catanzaro)
+
 GNOME Mahjongg 3.12.0
 =====================
 * Translation Updates (Indonesian, Danish, Hungarian, slovak, Catalan, Brazilian Portuguese, Portuguese, Russian, Serbian)
