@@ -7,16 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2014-02-28 11:00+0000\n"
-"PO-Revision-Date: 2014-02-28 16:53+0100\n"
+"POT-Creation-Date: 2014-05-08 18:51+0000\n"
+"PO-Revision-Date: 2014-05-10 18:34+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -26,20 +26,20 @@ msgstr ""
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2009"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:10 C/develop.page:10 C/documentation.page:8
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:8
 #: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
-#: C/strategy.page:9 C/toolbar.page:8 C/translate.page:10
+#: C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
-#: C/bug-filing.page:12 C/develop.page:12 C/documentation.page:10
-#: C/toolbar.page:10 C/translate.page:12
+#: C/bug-filing.page:11 C/develop.page:12 C/documentation.page:10
+#: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
+#: C/bug-filing.page:14 C/choosing.page:14 C/develop.page:15
 #: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
 #: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
 #: C/shortcuts.page:18 C/translate.page:23
@@ -47,12 +47,12 @@ msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
 #. (itstool) path: page/title
-#: C/bug-filing.page:19
+#: C/bug-filing.page:18
 msgid "Report a Problem"
 msgstr "Informar de un error"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:20
+#: C/bug-filing.page:19
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
@@ -64,7 +64,7 @@ msgstr ""
 "\"https://bugzilla.gnome.org/\"/>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:23
+#: C/bug-filing.page:22
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -74,7 +74,7 @@ msgstr ""
 "solicitudes de mejoras."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:26
+#: C/bug-filing.page:25
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -88,7 +88,7 @@ msgstr ""
 "Account</gui> para crear una."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:30
+#: C/bug-filing.page:29
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
@@ -105,7 +105,7 @@ msgstr ""
 "\">busque</link> el error para ver si ya existe."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:38
+#: C/bug-filing.page:37
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -116,7 +116,7 @@ msgstr ""
 "«Description» y pulse en <gui>Commit</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:42
+#: C/bug-filing.page:41
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -188,15 +188,22 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
+#| msgid ""
+#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Si quiere <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"Si quiere <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">contribuir al desarrollo de los <app>juegos de GNOME</app></link>, puede "
 "ponerse en contacto con los desarrolladores usando <link href=\"https://"
 "cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
@@ -241,7 +248,7 @@ msgstr ""
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
-#: C/scoring.page:13 C/toolbar.page:17 C/translate.page:19
+#: C/scoring.page:13 C/translate.page:19
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -305,8 +312,7 @@ msgstr "Vídeo de una partida"
 
 #. (itstool) path: credit/name
 #: C/hints.page:18 C/moves.page:14 C/pause.page:14 C/rules.page:17
-#: C/shortcuts.page:14 C/strategy.page:14 C/toolbar.page:13
-#: C/translate.page:15
+#: C/shortcuts.page:14 C/strategy.page:14 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -961,34 +967,6 @@ msgstr ""
 "lo que es importante ser rápido."
 
 #. (itstool) path: page/title
-#: C/toolbar.page:24
-msgid "Show/hide the toolbar"
-msgstr "Mostrar/ocultar la barra de herramientas"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:26
-msgid ""
-"To show or hide the toolbar, click <guiseq><gui>Mahjongg</gui><gui>Toolbar</"
-"gui></guiseq>."
-msgstr ""
-"Para mostrar u ocultar la barra de herramientas, pulse en "
-"<guiseq><gui>Mahjongg</gui><gui>Barra de herramientas</gui></guiseq>."
-
-#. (itstool) path: page/p
-#: C/toolbar.page:29
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, <gui>Redo "
-"Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</gui>."
-msgstr ""
-"La barra de herramientas, situada debajo de la barra de menú, le permite "
-"realizar ciertas acciones comunes con el ratón. Para usar un elemento de la "
-"barra de herramientas, simplemente púlselo. Los botones, de izquierda a "
-"derecha, son juego <gui>Nuevo</gui>, <gui>Deshacer movimiento</gui>, <link "
-"xref=\"hints\">Sugerencia</link> y <gui>Pausa</gui>."
-
-#. (itstool) path: page/title
 #: C/translate.page:27
 msgid "Help translate"
 msgstr "Ayudar a traducir"
@@ -1047,6 +1025,29 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Show/hide the toolbar"
+#~ msgstr "Mostrar/ocultar la barra de herramientas"
+
+#~ msgid ""
+#~ "To show or hide the toolbar, click <guiseq><gui>Mahjongg</"
+#~ "gui><gui>Toolbar</gui></guiseq>."
+#~ msgstr ""
+#~ "Para mostrar u ocultar la barra de herramientas, pulse en "
+#~ "<guiseq><gui>Mahjongg</gui><gui>Barra de herramientas</gui></guiseq>."
+
+#~ msgid ""
+#~ "The toolbar, located under the menu bar, lets you perform common actions "
+#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#~ "from left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, "
+#~ "<gui>Redo Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</"
+#~ "gui>."
+#~ msgstr ""
+#~ "La barra de herramientas, situada debajo de la barra de menú, le permite "
+#~ "realizar ciertas acciones comunes con el ratón. Para usar un elemento de "
+#~ "la barra de herramientas, simplemente púlselo. Los botones, de izquierda "
+#~ "a derecha, son juego <gui>Nuevo</gui>, <gui>Deshacer movimiento</gui>, "
+#~ "<link xref=\"hints\">Sugerencia</link> y <gui>Pausa</gui>."
 
 #~ msgctxt "_"
 #~ msgid ""
