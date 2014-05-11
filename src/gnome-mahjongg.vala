@@ -351,9 +351,8 @@ public class Mahjongg : Gtk.Application
 
         preferences_dialog = new Gtk.Dialog.with_buttons (_("Mahjongg Preferences"),
                                                    window,
-                                                   Gtk.DialogFlags.DESTROY_WITH_PARENT,
-                                                   _("_Close"),
-                                                   Gtk.ResponseType.CLOSE, null);
+                                                   Gtk.DialogFlags.USE_HEADER_BAR,
+                                                   null);
         preferences_dialog.set_border_width (5);
         var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
         dialog_content_area.set_spacing (2);
