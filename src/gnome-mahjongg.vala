@@ -94,25 +94,13 @@ public class Mahjongg : Gtk.Application
         title = new Gtk.Label ("");
         title.get_style_context().add_class("title");
 
-        var undo_image_name = "";
-        if (Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL)
-            undo_image_name = "edit-undo-rtl-symbolic";
-        else
-            undo_image_name = "edit-undo-symbolic";
-
-        var undo_button = new Gtk.Button.from_icon_name (undo_image_name, Gtk.IconSize.BUTTON);
+        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
         header_bar.pack_start (undo_button);
 
-        var redo_image_name = "";
-        if (Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL)
-            redo_image_name = "edit-redo-rtl-symbolic";
-        else
-            redo_image_name = "edit-redo-symbolic";
-
-        var redo_button = new Gtk.Button.from_icon_name (redo_image_name, Gtk.IconSize.BUTTON);
+        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
@@ -555,9 +543,7 @@ public class Mahjongg : Gtk.Application
         var pause_image = (Gtk.Image) pause_button.image;
         if (game_view.game.paused)
         {
-            bool rtl = Gtk.Widget.get_default_direction () == Gtk.TextDirection.RTL;
-            pause_image.icon_name = rtl ? "media-playback-start-rtl-symbolic" :
-                                          "media-playback-start-symbolic";
+            pause_image.icon_name = "media-playback-start-symbolic";
             pause_button.set_tooltip_text (_("Unpause the game"));
         }
         else
