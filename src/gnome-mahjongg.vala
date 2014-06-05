@@ -92,7 +92,7 @@ public class Mahjongg : Gtk.Application
         header_bar.set_show_close_button (true);
 
         title = new Gtk.Label ("");
-        title.get_style_context().add_class("title");
+        title.get_style_context ().add_class ("title");
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.get_style_context ().add_class ("linked");
