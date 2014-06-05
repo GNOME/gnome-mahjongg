@@ -94,17 +94,22 @@ public class Mahjongg : Gtk.Application
         title = new Gtk.Label ("");
         title.get_style_context().add_class("title");
 
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        hbox.get_style_context ().add_class ("linked");
+
         var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
-        header_bar.pack_start (undo_button);
+        hbox.pack_start (undo_button);
 
         var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
-        header_bar.pack_start (redo_button);
+        hbox.pack_start (redo_button);
+
+        header_bar.pack_start (hbox);
 
         var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
         hint_button.valign = Gtk.Align.CENTER;
