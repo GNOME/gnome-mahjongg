@@ -337,7 +337,7 @@ public class Mahjongg : Gtk.Application
             return;
         }
 
-        preferences_dialog = new Gtk.Dialog.with_buttons (_("Mahjongg Preferences"),
+        preferences_dialog = new Gtk.Dialog.with_buttons (_("Preferences"),
                                                    window,
                                                    Gtk.DialogFlags.USE_HEADER_BAR,
                                                    null);
