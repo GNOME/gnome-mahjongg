@@ -8,7 +8,7 @@
  * license.
  */
 
-public class Tile
+public class Tile : Object
 {
     public int number;
     public Slot slot;
@@ -48,7 +48,7 @@ private static bool switch_tiles (Tile a, Tile b)
     return false;
 }
 
-public class Match
+public class Match : Object
 {
     public Tile tile0;
     public Tile tile1;
@@ -60,7 +60,7 @@ public class Match
     }
 }
 
-public class Game
+public class Game : Object
 {
     public Map map;
     public List<Tile> tiles = null;
