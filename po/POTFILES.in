@@ -3,7 +3,7 @@
 [encoding: UTF-8]
 data/gnome-mahjongg.appdata.xml.in
 data/gnome-mahjongg.desktop.in
-data/org.gnome.gnome-mahjongg.gschema.xml
+data/org.gnome.mahjongg.gschema.xml
 data/translatable_game_names.h
 src/game.vala
 src/game-view.vala

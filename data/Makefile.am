@@ -10,7 +10,7 @@ theme_DATA = \
 	postmodern.svg	\
 	smooth.png
 
-gsettings_SCHEMAS = org.gnome.gnome-mahjongg.gschema.xml
+gsettings_SCHEMAS = org.gnome.mahjongg.gschema.xml
 @GSETTINGS_RULES@
 
 man_MANS = gnome-mahjongg.6

@@ -44,7 +44,7 @@ public class Mahjongg : Gtk.Application
     {
         base.startup ();
 
-        settings = new Settings ("org.gnome.gnome-mahjongg");
+        settings = new Settings ("org.gnome.mahjongg");
 
         var builder = new Gtk.Builder ();
         try {
