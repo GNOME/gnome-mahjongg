@@ -17,7 +17,6 @@ public class Mahjongg : Gtk.Application
     private List<Map> maps = null;
 
     private Gtk.ApplicationWindow window;
-    private Gtk.HeaderBar header_bar;
     private Gtk.Label title;
     private int window_width;
     private int window_height;
@@ -53,9 +52,6 @@ public class Mahjongg : Gtk.Application
             error ("loading menu builder file: %s", e.message);
         }
 
-        var app_menu = builder.get_object ("appmenu") as MenuModel;
-        set_app_menu (app_menu);
-
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
@@ -88,48 +84,90 @@ public class Mahjongg : Gtk.Application
         game_view.button_press_event.connect (view_button_press_event);        
         game_view.set_size_request (600, 400);
 
-        header_bar = new Gtk.HeaderBar ();
-        header_bar.set_show_close_button (true);
-
         title = new Gtk.Label ("");
         title.get_style_context ().add_class ("title");
+
+        var icon_size = Gtk.IconSize.BUTTON;
+        if (shell_shows_menubar)
+            icon_size = Gtk.IconSize.LARGE_TOOLBAR;
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.get_style_context ().add_class ("linked");
 
-        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
+        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", icon_size);
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
         hbox.pack_start (undo_button);
 
-        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
+        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", icon_size);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
         hbox.pack_start (redo_button);
 
-        header_bar.pack_start (hbox);
-
-        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
+        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", icon_size);
         hint_button.valign = Gtk.Align.CENTER;
         hint_button.action_name = "app.hint";
         hint_button.set_tooltip_text (_("Receive a hint for your next move"));
-        header_bar.pack_end (hint_button);
 
-        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
+        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", icon_size);
         pause_button.valign = Gtk.Align.CENTER;
         pause_button.action_name = "app.pause";
         pause_button.set_tooltip_text (_("Pause the game"));
-        header_bar.pack_end (pause_button);
 
         var title_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
         title_box.pack_start (title, false, false, 0);
+        status_box.halign = Gtk.Align.CENTER;
         title_box.pack_start (status_box, false, false, 0);
 
-        header_bar.set_custom_title (title_box);
+        if (!shell_shows_menubar)
+        {
+            var app_menu = builder.get_object ("appmenu") as MenuModel;
+            set_app_menu (app_menu);
 
-        window.set_titlebar (header_bar);
+            var header_bar = new Gtk.HeaderBar ();
+            header_bar.set_show_close_button (true);
+            header_bar.set_custom_title (title_box);
+            header_bar.pack_start (hbox);
+            header_bar.pack_end (hint_button);
+            header_bar.pack_end (pause_button);
+            window.set_titlebar (header_bar);
+        }
+        else
+        {
+            var menu = new Menu ();
+            var mahjongg_menu = new Menu ();
+            menu.append_submenu (_("_Mahjongg"), mahjongg_menu);
+            mahjongg_menu.append (_("_New Game"), "app.new-game");
+            mahjongg_menu.append (_("_Restart Game"), "app.new-game");
+            mahjongg_menu.append (_("_Scores"), "app.scores");
+            mahjongg_menu.append (_("_Preferences"), "app.preferences");
+            mahjongg_menu.append (_("_Quit"), "app.quit");
+            var help_menu = new Menu ();
+            menu.append_submenu (_("_Help"), help_menu);
+            help_menu.append (_("_Contents"), "app.help");
+            help_menu.append (_("_About"), "app.about");
+            set_menubar (menu);
+
+            var toolbar = new Gtk.Toolbar ();
+            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
+            var item = new Gtk.ToolItem ();
+            item.add (hbox);
+            toolbar.insert (item, -1);
+            item = new Gtk.ToolItem ();
+            item.set_expand (true);
+            item.add (title_box);
+            toolbar.insert (item, -1);
+            item = new Gtk.ToolItem ();
+            item.add (hint_button);
+            toolbar.insert (item, -1);
+            item = new Gtk.ToolItem ();
+            item.add (pause_button);
+            toolbar.insert (item, -1);
+            vbox.pack_start (toolbar, false, true, 0);
+        }
+
         vbox.pack_start (game_view, true, true, 0);
 
         window.add (vbox);
@@ -144,6 +182,16 @@ public class Mahjongg : Gtk.Application
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
         tick_cb ();
+    }
+
+    private bool shell_shows_menubar
+    {
+        get
+        {
+            bool shell_shows_menubar;
+            Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
+            return shell_shows_menubar;
+        }
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
@@ -343,9 +391,9 @@ public class Mahjongg : Gtk.Application
         }
 
         preferences_dialog = new Gtk.Dialog.with_buttons (_("Preferences"),
-                                                   window,
-                                                   Gtk.DialogFlags.USE_HEADER_BAR,
-                                                   null);
+                                                          window,
+                                                          shell_shows_menubar ? 0 : Gtk.DialogFlags.USE_HEADER_BAR,
+                                                          null);
         preferences_dialog.set_border_width (5);
         var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
         dialog_content_area.set_spacing (2);
