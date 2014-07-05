@@ -18,9 +18,9 @@ msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-20 19:57+0000\n"
-"PO-Revision-Date: 2014-03-21 08:22+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"POT-Creation-Date: 2014-07-05 18:52+0000\n"
+"PO-Revision-Date: 2014-07-05 23:42+0400\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
 msgid "GNOME Mahjongg"
@@ -62,8 +62,8 @@ msgstr ""
 "сделать ход, можете воспользоваться подсказкой, но в этом случае будет "
 "начислено штрафное время."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:535
-#: ../src/gnome-mahjongg.vala:749
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:615
+#: ../src/gnome-mahjongg.vala:848
 msgid "Mahjongg"
 msgstr "Маджонг"
 
@@ -75,15 +75,15 @@ msgstr "Разберите большую кучу фишек, убирая со
 msgid "game;strategy;puzzle;board;"
 msgstr "игра;стратегия;головоломка;настольная;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
+#: ../data/org.gnome.mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
+#: ../data/org.gnome.mahjongg.gschema.xml.h:2
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
+#: ../data/org.gnome.mahjongg.gschema.xml.h:3
 msgid "true if the window is maximized"
 msgstr "истинно, если окно имеет максимальный размер"
 
@@ -146,51 +146,85 @@ msgstr "Тяжёлая"
 msgid "Paused"
 msgstr "Пауза"
 
-#: ../src/gnome-mahjongg.vala:74
+#: ../src/gnome-mahjongg.vala:70
 msgid "Moves Left:"
 msgstr "Осталось ходов:"
 
-#: ../src/gnome-mahjongg.vala:106
+#: ../src/gnome-mahjongg.vala:103
 msgid "Undo your last move"
 msgstr "Отменить последний ход"
 
-#: ../src/gnome-mahjongg.vala:118
+#: ../src/gnome-mahjongg.vala:109
 msgid "Redo your last move"
 msgstr "Вернуть последний ход"
 
-#: ../src/gnome-mahjongg.vala:124
+#: ../src/gnome-mahjongg.vala:115
 msgid "Receive a hint for your next move"
 msgstr "Получить подсказку для следующего хода"
 
-#: ../src/gnome-mahjongg.vala:130 ../src/gnome-mahjongg.vala:567
+#: ../src/gnome-mahjongg.vala:120 ../src/gnome-mahjongg.vala:645
 msgid "Pause the game"
 msgstr "Приостановить игру"
 
-#: ../src/gnome-mahjongg.vala:243
+#: ../src/gnome-mahjongg.vala:146
+#| msgid "Mahjongg"
+msgid "_Mahjongg"
+msgstr "_Маджонг"
+
+#: ../src/gnome-mahjongg.vala:153 ../src/menu.ui.h:1
+msgid "_New Game"
+msgstr "_Новая игра"
+
+#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:2
+msgid "_Restart Game"
+msgstr "_Начать заново"
+
+#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:3
+msgid "_Scores"
+msgstr "_Результаты"
+
+#: ../src/gnome-mahjongg.vala:171 ../src/menu.ui.h:4
+msgid "_Preferences"
+msgstr "_Параметры"
+
+#: ../src/gnome-mahjongg.vala:177 ../src/menu.ui.h:7
+#: ../src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "_Закончить"
+
+#: ../src/gnome-mahjongg.vala:183 ../src/menu.ui.h:5
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../src/gnome-mahjongg.vala:190
+msgid "_Contents"
+msgstr "_Содержание"
+
+#: ../src/gnome-mahjongg.vala:196 ../src/menu.ui.h:6
+msgid "_About"
+msgstr "_О приложении"
+
+#: ../src/gnome-mahjongg.vala:324
 msgid "Do you want to start a new game with this map?"
 msgstr "Начать новую игру с этой картой?"
 
-#: ../src/gnome-mahjongg.vala:244
+#: ../src/gnome-mahjongg.vala:325
 msgid "If you continue playing the next game will use the new map."
 msgstr "Если продолжить, следующая игра будет иметь другую карту."
 
-#: ../src/gnome-mahjongg.vala:245
+#: ../src/gnome-mahjongg.vala:326
 msgid "_Continue playing"
 msgstr "_Продолжить игру"
 
-#: ../src/gnome-mahjongg.vala:246
+#: ../src/gnome-mahjongg.vala:327
 msgid "Use _new map"
 msgstr "В_ыбрать карту"
 
-#: ../src/gnome-mahjongg.vala:304
+#: ../src/gnome-mahjongg.vala:385
 msgid "There are no more moves."
 msgstr "Больше нет вариантов ходов."
 
-#: ../src/gnome-mahjongg.vala:305
-#| msgid ""
-#| "Each puzzle has at least one solution.  You can undo your moves and try "
-#| "and find the solution for a time penalty, restart this game or start an "
-#| "new one."
+#: ../src/gnome-mahjongg.vala:386
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one. You can also try "
@@ -200,59 +234,52 @@ msgstr ""
 "сделанные ходы и попытаться найти решение, перезапустить эту игру или начать "
 "новую. Вы также можете перемешать фишки, но это не гарантирует решение."
 
-#: ../src/gnome-mahjongg.vala:306
+#: ../src/gnome-mahjongg.vala:387
 msgid "_Undo"
 msgstr "_Отменить"
 
-#: ../src/gnome-mahjongg.vala:307
+#: ../src/gnome-mahjongg.vala:388
 msgid "_Restart"
 msgstr "_Начать заново"
 
-#: ../src/gnome-mahjongg.vala:308
+#: ../src/gnome-mahjongg.vala:389
 msgid "_New game"
 msgstr "_Новая игра"
 
-#: ../src/gnome-mahjongg.vala:309
+#: ../src/gnome-mahjongg.vala:390
 msgid "_Shuffle"
 msgstr "_Перемешать"
 
-#: ../src/gnome-mahjongg.vala:352
-msgid "Mahjongg Preferences"
-msgstr "Параметры игры «Маджонг»"
+#: ../src/gnome-mahjongg.vala:433
+#| msgid "_Preferences"
+msgid "Preferences"
+msgstr "Параметры"
 
-#: ../src/gnome-mahjongg.vala:355
-msgid "_Close"
-msgstr "_Закрыть"
-
-#: ../src/gnome-mahjongg.vala:369
+#: ../src/gnome-mahjongg.vala:449
 msgid "_Theme:"
 msgstr "_Тема:"
 
-#: ../src/gnome-mahjongg.vala:397
+#: ../src/gnome-mahjongg.vala:477
 msgid "_Layout:"
 msgstr "_Расположение:"
 
-#: ../src/gnome-mahjongg.vala:423
+#: ../src/gnome-mahjongg.vala:503
 msgid "_Background color:"
 msgstr "_Цвет фона:"
 
-#: ../src/gnome-mahjongg.vala:501
+#: ../src/gnome-mahjongg.vala:581
 msgid "Main game:"
 msgstr "Основная игра:"
 
-#: ../src/gnome-mahjongg.vala:510
+#: ../src/gnome-mahjongg.vala:590
 msgid "Maps:"
 msgstr "Карты:"
 
-#: ../src/gnome-mahjongg.vala:518
+#: ../src/gnome-mahjongg.vala:598
 msgid "Tiles:"
 msgstr "Фишки:"
 
-#: ../src/gnome-mahjongg.vala:538
-#| msgid ""
-#| "A matching game played with Mahjongg tiles.\n"
-#| "\n"
-#| "Mahjongg is a part of GNOME Games."
+#: ../src/gnome-mahjongg.vala:618
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
@@ -262,7 +289,7 @@ msgstr ""
 "\n"
 "Маджонг является частью GNOME Games."
 
-#: ../src/gnome-mahjongg.vala:544
+#: ../src/gnome-mahjongg.vala:624
 msgid "translator-credits"
 msgstr ""
 "Валек Филиппов aka frob\n"
@@ -271,41 +298,31 @@ msgstr ""
 "Михаил Яхонтов\n"
 "Леонид Кантер"
 
-#: ../src/gnome-mahjongg.vala:562
+#: ../src/gnome-mahjongg.vala:640
 msgid "Unpause the game"
 msgstr "Возобновить игру"
 
-#: ../src/gnome-mahjongg.vala:654 ../src/score-dialog.vala:72
-msgid "Time"
-msgstr "Время"
+#. Translators: sorry. This is the clock label when the game has exceeded
+#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
+#. * and the last is seconds. In between are ratio characters and LTR order
+#. * marks, so that nothing gets reversed in RTL languages. You probably only
+#. * need to change the English on the left. Probably.
+#.
+#: ../src/gnome-mahjongg.vala:742
+#, c-format
+msgid "Time: %02d∶‎%02d∶‎%02d"
+msgstr "Время: %02d∶‎%02d∶‎%02d"
 
-#: ../src/menu.ui.h:1
-msgid "_New Game"
-msgstr "_Новая игра"
-
-#: ../src/menu.ui.h:2
-msgid "_Restart Game"
-msgstr "_Начать заново"
-
-#: ../src/menu.ui.h:3
-msgid "_Scores"
-msgstr "_Результаты"
-
-#: ../src/menu.ui.h:4
-msgid "_Preferences"
-msgstr "_Параметры"
-
-#: ../src/menu.ui.h:5
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../src/menu.ui.h:6
-msgid "_About"
-msgstr "_О программе"
-
-#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Закончить"
+#. Translators: sorry. This is the clock label when the game is less than
+#. * one hour in length. The first %02d is minutes and the last is seconds.
+#. * In between is a ratio character and LTR order mark, so that nothing gets
+#. * reversed in RTL languages. You probably only need to change the English
+#. * on the left. Probably.
+#.
+#: ../src/gnome-mahjongg.vala:752
+#, c-format
+msgid "Time: %02d∶‎%02d"
+msgstr "Время: %02d∶‎%02d"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
@@ -323,29 +340,6 @@ msgstr "Расположение:"
 msgid "Date"
 msgstr "Дата"
 
-#~ msgid "true if the window is fullscren"
-#~ msgstr "истинно, если окно раскрыто на полный экран"
-
-#~ msgid "_New"
-#~ msgstr "_Новая игра"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Отменить"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Возвратить"
-
-#~ msgid "Hint"
-#~ msgstr "Подсказка"
-
-#~ msgid "_Pause"
-#~ msgstr "_Пауза"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Веб-сайт GNOME Games"
-
-#~ msgid "Res_ume"
-#~ msgstr "_Продолжить"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Маджонг — %s"
+#: ../src/score-dialog.vala:72
+msgid "Time"
+msgstr "Время"
