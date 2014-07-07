@@ -17,6 +17,7 @@ public class Mahjongg : Gtk.Application
     private List<Map> maps = null;
 
     private Gtk.ApplicationWindow window;
+    private Gtk.HeaderBar header_bar;
     private Gtk.Label title;
     private int window_width;
     private int window_height;
@@ -52,6 +53,9 @@ public class Mahjongg : Gtk.Application
             error ("loading menu builder file: %s", e.message);
         }
 
+        var app_menu = builder.get_object ("appmenu") as MenuModel;
+        set_app_menu (app_menu);
+
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
@@ -84,140 +88,48 @@ public class Mahjongg : Gtk.Application
         game_view.button_press_event.connect (view_button_press_event);        
         game_view.set_size_request (600, 400);
 
+        header_bar = new Gtk.HeaderBar ();
+        header_bar.set_show_close_button (true);
+
         title = new Gtk.Label ("");
         title.get_style_context ().add_class ("title");
-
-        bool shell_shows_menubar;
-        Gtk.Settings.get_default ().get ("gtk-shell-shows-app-menu", out shell_shows_menubar);
-
-        var icon_size = Gtk.IconSize.BUTTON;
-        if (shell_shows_menubar)
-            icon_size = Gtk.IconSize.LARGE_TOOLBAR;
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.get_style_context ().add_class ("linked");
 
-        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", icon_size);
+        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
         hbox.pack_start (undo_button);
 
-        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", icon_size);
+        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
         hbox.pack_start (redo_button);
 
-        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", icon_size);
+        header_bar.pack_start (hbox);
+
+        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
         hint_button.valign = Gtk.Align.CENTER;
         hint_button.action_name = "app.hint";
         hint_button.set_tooltip_text (_("Receive a hint for your next move"));
+        header_bar.pack_end (hint_button);
 
-        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", icon_size);
+        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
         pause_button.valign = Gtk.Align.CENTER;
         pause_button.action_name = "app.pause";
         pause_button.set_tooltip_text (_("Pause the game"));
+        header_bar.pack_end (pause_button);
 
         var title_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
         title_box.pack_start (title, false, false, 0);
-        var alignment = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
-        alignment.add (status_box);
-        title_box.pack_start (alignment, false, false, 0);
+        title_box.pack_start (status_box, false, false, 0);
 
-        if (!shell_shows_menubar)
-        {
-            var app_menu = builder.get_object ("appmenu") as MenuModel;
-            set_app_menu (app_menu);
+        header_bar.set_custom_title (title_box);
 
-            var header_bar = new Gtk.HeaderBar ();
-            header_bar.set_show_close_button (true);
-            header_bar.set_custom_title (title_box);
-            header_bar.pack_start (hbox);
-            header_bar.pack_end (hint_button);
-            header_bar.pack_end (pause_button);
-            window.set_titlebar (header_bar);
-        }
-        else
-        {
-            var menubar = new Gtk.MenuBar ();
-
-            var menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Mahjongg"));
-            menu_item.use_underline = true;
-            var mahjongg_menu = new Gtk.Menu ();
-            menu_item.submenu = mahjongg_menu;
-            menubar.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_New Game"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { new_game_cb (); });
-            mahjongg_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Restart Game"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { restart_game_cb (); });
-            mahjongg_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Scores"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { scores_cb (); });
-            mahjongg_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Preferences"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { preferences_cb (); });
-            mahjongg_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Quit"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { quit_cb (); });
-            mahjongg_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Help"));
-            menu_item.use_underline = true;
-            var help_menu = new Gtk.Menu ();
-            menu_item.submenu = help_menu;
-            menubar.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_Contents"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { help_cb (); });
-            help_menu.append (menu_item);
-
-            menu_item = new Gtk.MenuItem ();
-            menu_item.set_label (_("_About"));
-            menu_item.use_underline = true;
-            menu_item.activate.connect (() => { about_cb (); });
-            help_menu.append (menu_item);
-
-            vbox.pack_start (menubar, false, true, 0);
-
-            var toolbar = new Gtk.Toolbar ();
-            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-            var item = new Gtk.ToolItem ();
-            item.add (hbox);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.set_expand (true);
-            item.add (title_box);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.add (hint_button);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.add (pause_button);
-            toolbar.insert (item, -1);
-            vbox.pack_start (toolbar, false, true, 0);
-        }
-
+        window.set_titlebar (header_bar);
         vbox.pack_start (game_view, true, true, 0);
 
         window.add (vbox);
