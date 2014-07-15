@@ -60,7 +60,7 @@ public class Mahjongg : Gtk.Application
         window = new Gtk.ApplicationWindow (this);
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
-        window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
+        window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
@@ -77,11 +77,11 @@ public class Mahjongg : Gtk.Application
 
         clock_label = new Gtk.Label ("");
         status_box.pack_start (clock_label, false, false, 0);
-        
+
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
         game_view = new GameView ();
-        game_view.button_press_event.connect (view_button_press_event);        
+        game_view.button_press_event.connect (view_button_press_event);
         game_view.set_size_request (600, 400);
 
         title = new Gtk.Label ("");
@@ -211,7 +211,7 @@ public class Mahjongg : Gtk.Application
             is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
         return false;
     }
-    
+
     protected override void shutdown ()
     {
         base.shutdown ();
@@ -677,7 +677,7 @@ public class Mahjongg : Gtk.Application
 
         /* Update clock label */
         tick_cb ();
-        
+
         /* Reset the pause button in case it was set to resume */
         var pause_image = (Gtk.Image) pause_button.image;
         pause_image.icon_name = "media-playback-pause-symbolic";

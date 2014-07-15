@@ -14,7 +14,7 @@ public class GameView : Gtk.DrawingArea
     private Cairo.Pattern? tile_pattern = null;
     private int tile_pattern_width = 0;
     private int tile_pattern_height = 0;
-    
+
     private int x_offset;
     private int y_offset;
     private int tile_width;
@@ -41,7 +41,7 @@ public class GameView : Gtk.DrawingArea
         get { return _theme; }
         set { _theme = value; tile_pattern = null; queue_draw (); }
     }
-    
+
     public GameView ()
     {
         can_focus = true;
@@ -55,7 +55,7 @@ public class GameView : Gtk.DrawingArea
             background_color.red = background_color.green = background_color.blue = 0;
         queue_draw ();
     }
-   
+
     private void draw_game (Cairo.Context cr, bool render_indexes = false)
     {
         if (theme == null)
@@ -155,7 +155,7 @@ public class GameView : Gtk.DrawingArea
         {
             /* Fall through and try loading as a pixbuf */
         }
-        
+
         try
         {
             var p = new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
@@ -172,14 +172,14 @@ public class GameView : Gtk.DrawingArea
     {
         var width = get_allocated_width ();
         var height = get_allocated_height ();
-        
+
         if (theme == null)
             return;
 
         int theme_width, theme_height;
         if (!get_theme_dimensions (out theme_width, out theme_height))
             return;
-            
+
         /* Get aspect ratio from theme - contains 43x2 tiles */
         var aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
 
@@ -219,7 +219,7 @@ public class GameView : Gtk.DrawingArea
             return true;
         }
     }
-    
+
     private void get_tile_position (Tile tile, out int x, out int y)
     {
         x = x_offset + tile.slot.x * tile_width / 2 + tile.slot.layer * tile_layer_offset_x;
@@ -246,7 +246,7 @@ public class GameView : Gtk.DrawingArea
         /* Everything else is in set order */
         return set;
     }
-    
+
     private void redraw_tile_cb (Tile tile)
     {
         update_dimensions ();
@@ -266,7 +266,7 @@ public class GameView : Gtk.DrawingArea
             return false;
 
         Gdk.cairo_set_source_rgba (cr, background_color);
-        cr.paint ();        
+        cr.paint ();
         draw_game (cr);
 
         return true;

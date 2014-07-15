@@ -19,12 +19,12 @@ public class Tile : Object
     {
         get { return number / 4; }
     }
- 
+
     public Tile (Slot slot)
     {
         this.slot = slot;
     }
-    
+
     public bool matches (Tile tile)
     {
         return tile.set == set;
@@ -52,7 +52,7 @@ public class Match : Object
 {
     public Tile tile0;
     public Tile tile1;
-    
+
     public Match (Tile tile0, Tile tile1)
     {
         this.tile0 = tile0;
@@ -150,7 +150,7 @@ public class Game : Object
     {
         get { return visible_tiles == 0; }
     }
-    
+
     public bool can_move
     {
         get { return moves_left != 0; }
@@ -184,7 +184,7 @@ public class Game : Object
             numbers[n] = t;
         }
         shuffle (numbers);
-        
+
         /* Make everything visible again */
         reset ();
     }
@@ -269,7 +269,7 @@ public class Game : Object
             redraw_tile (hint_tiles[0]);
         if (hint_tiles[1] != null)
             redraw_tile (hint_tiles[1]);
-    
+
         /* Stop hints */
         if (tile0 == null && tile1 == null)
         {
@@ -327,7 +327,7 @@ public class Game : Object
             var s = t.slot;
 
             /* Can't move if blocked by a tile above */
-            if (s.layer == slot.layer + 1 && 
+            if (s.layer == slot.layer + 1 &&
                 (s.x >= slot.x - 1 && s.x <= slot.x + 1) &&
                 (s.y >= slot.y - 1 && s.y <= slot.y + 1))
                 return false;
@@ -360,18 +360,18 @@ public class Game : Object
             {
                 foreach (var match in find_matches (t))
                 {
-	                bool already_matched = false;
-	                foreach (var existing_match in matches)
-	                {
-		                if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0)
-		                {
-			                already_matched = true;
-			                break;
-		                }
-	                }
+                    bool already_matched = false;
+                    foreach (var existing_match in matches)
+                    {
+                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0)
+                        {
+                            already_matched = true;
+                            break;
+                        }
+                    }
 
-	                if (!already_matched)
-		                matches.append (match);
+                    if (!already_matched)
+                        matches.append (match);
                 }
             }
         }
@@ -384,7 +384,7 @@ public class Game : Object
 
                 if (t.matches (tile))
                     matches.append (new Match (t, tile));
-            }       
+            }
         }
 
         return matches;
@@ -419,7 +419,7 @@ public class Game : Object
         if (complete)
             stop_clock ();
         else
-            start_clock ();        
+            start_clock ();
 
         moved ();
 

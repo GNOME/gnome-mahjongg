@@ -7,7 +7,7 @@
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
- 
+
 public class ScoreDialog : Gtk.Dialog
 {
     private History history;
@@ -166,7 +166,7 @@ public class ScoreDialog : Gtk.Dialog
 
             size_model.append (out iter);
             size_model.set (iter, 0, label, 1, entry.name);
-    
+
             /* Select this entry if don't have any */
             if (size_combo.get_active () == -1)
                 size_combo.set_active_iter (iter);

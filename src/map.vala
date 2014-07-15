@@ -13,7 +13,7 @@ public class Slot : Object
     public int x;
     public int y;
     public int layer;
-    
+
     public Slot (int x, int y, int layer)
     {
         this.x = x;
@@ -209,7 +209,7 @@ public class Map : Object
         slots.append (new Slot (26, 7, 0));
         slots.append (new Slot (28, 7, 0));
     }
-    
+
     public uint width
     {
         get
@@ -220,7 +220,7 @@ public class Map : Object
                 if (slot.x > w)
                     w = slot.x;
             }
-            
+
             /* Width is x location of right most tile and the width of that tile (2 units) */
             return w + 2;
         }
