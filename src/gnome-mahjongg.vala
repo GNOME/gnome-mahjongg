@@ -28,6 +28,22 @@ public class Mahjongg : Gtk.Application
     private Gtk.Label clock_label;
     private Gtk.Dialog? preferences_dialog = null;
 
+    private const GLib.ActionEntry[] action_entries =
+    {
+        { "new-game",      new_game_cb     },
+        { "undo",          undo_cb         },
+        { "redo",          redo_cb         },
+        { "hint",          hint_cb         },
+        { "shuffle",       shuffle_cb      },
+        { "pause",         pause_cb        },
+        { "restart-game",  restart_game_cb },
+        { "scores",        scores_cb       },
+        { "preferences",   preferences_cb  },
+        { "help",          help_cb         },
+        { "about",         about_cb        },
+        { "quit",          quit_cb         }
+    };
+
     public Mahjongg ()
     {
         Object (application_id: "org.gnome.gnome-mahjongg", flags: ApplicationFlags.FLAGS_NONE);
@@ -724,22 +740,6 @@ public class Mahjongg : Gtk.Application
             warning ("Failed to show help: %s", e.message);
         }
     }
-
-    private const GLib.ActionEntry[] action_entries =
-    {
-        { "new-game",      new_game_cb     },
-        { "undo",          undo_cb         },
-        { "redo",          redo_cb         },
-        { "hint",          hint_cb         },
-        { "shuffle",       shuffle_cb      },
-        { "pause",         pause_cb        },
-        { "restart-game",  restart_game_cb },
-        { "scores",        scores_cb       },
-        { "preferences",   preferences_cb  },
-        { "help",          help_cb         },
-        { "about",         about_cb        },
-        { "quit",          quit_cb         }
-    };
 
     private void load_maps ()
     {
