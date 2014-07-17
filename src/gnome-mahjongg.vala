@@ -28,6 +28,12 @@ public class Mahjongg : Gtk.Application
     private Gtk.Label clock_label;
     private Gtk.Dialog? preferences_dialog = null;
 
+    private const OptionEntry[] option_entries =
+    {
+        { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
+        { null }
+    };
+
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",      new_game_cb     },
@@ -47,6 +53,8 @@ public class Mahjongg : Gtk.Application
     public Mahjongg ()
     {
         Object (application_id: "org.gnome.gnome-mahjongg", flags: ApplicationFlags.FLAGS_NONE);
+
+        add_main_option_entries (option_entries);
     }
 
     protected override void startup ()
@@ -236,6 +244,19 @@ public class Mahjongg : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
+    }
+
+    protected override int handle_local_options (GLib.VariantDict options)
+    {
+        if (options.contains ("version"))
+        {
+            /* NOTE: Is not translated so can be easily parsed */
+            stderr.printf ("%1$s %2$s\n", "gnome-mahjongg", VERSION);
+            return Posix.EXIT_SUCCESS;
+        }
+
+        /* Activate */
+        return -1;
     }
 
     public override void activate ()
@@ -789,27 +810,11 @@ public class Mahjongg : Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
-        Gtk.init (ref args);
-
-        var context = new OptionContext (null);
-        context.set_translation_domain (GETTEXT_PACKAGE);
-        context.add_group (Gtk.get_option_group (true));
-
-        try
-        {
-            context.parse (ref args);
-        }
-        catch (Error e)
-        {
-            stdout.printf ("%s\n", e.message);
-            return Posix.EXIT_FAILURE;
-        }
-
         Environment.set_application_name (_("Mahjongg"));
         Gtk.Window.set_default_icon_name ("gnome-mahjongg");
 
         var app = new Mahjongg ();
-        var result = app.run ();
+        var result = app.run (args);
 
         Settings.sync();
 
