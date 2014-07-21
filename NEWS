@@ -1,3 +1,12 @@
+GNOME Mahjongg 3.13.4
+=====================
+* added version command line option (Arnaud Bonatti)
+* Translation Updates (Lithuanian, Spanish, Belarusian, Greek, Russian)
+* Don't show HeaderBar/app menu on systems that don't support it (Robert Ancell)
+* Appdata Changes, general fixup (Arnaud Bonatti, Michael Catanzaro)
+* Dependency Changes (GTK+ 3.13.2, Vala 0.24)
+* Updated Smooth Tileset from Jim Evins
+
 GNOME Mahjongg 3.13.1
 =====================
 * Translation Updates (Swedish, Basque, Czech, Slovenian, Italian, Greek)
