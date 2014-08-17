@@ -347,6 +347,14 @@ public class Game : Object
         return true;
     }
 
+    public int number_of_movable_tiles () {
+        int count = 0;
+        foreach (var tile in tiles)
+            if (tile_can_move(tile))
+                count++;
+        return count;
+    }
+
     public List<Match> find_matches (Tile? tile = null)
     {
         List<Match> matches = null;
