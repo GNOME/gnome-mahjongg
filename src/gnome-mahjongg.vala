@@ -383,15 +383,19 @@ public class Mahjongg : Gtk.Application
         }
         else if (!game_view.game.can_move)
         {
+            bool allow_shuffle = game_view.game.number_of_movable_tiles () > 1;
+
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,
                                                 Gtk.MessageType.INFO,
                                                 Gtk.ButtonsType.NONE,
                                                 "%s", _("There are no more moves."));
-            dialog.format_secondary_text (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution, restart this game, or start a new one. You can also try to reshuffle the game, but this does not guarantee a solution."));
+            dialog.format_secondary_text ("%s%s%s".printf (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution, restart this game, or start a new one."),
+                                                           allow_shuffle ? " " : "",
+                                                           allow_shuffle ? _("You can also try to reshuffle the game, but this does not guarantee a solution.") : ""));
             dialog.add_buttons (_("_Undo"), NoMovesDialogResponse.UNDO,
                                 _("_Restart"), NoMovesDialogResponse.RESTART,
                                 _("_New game"), NoMovesDialogResponse.NEW_GAME,
-                                _("_Shuffle"), NoMovesDialogResponse.SHUFFLE);
+                                allow_shuffle ? _("_Shuffle") : null, NoMovesDialogResponse.SHUFFLE);
 
             var result = dialog.run ();
             /* Shuffling may cause the dialog to appear again immediately,
