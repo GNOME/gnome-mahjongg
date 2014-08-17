@@ -393,7 +393,12 @@ public class Mahjongg : Gtk.Application
                                 _("_New game"), NoMovesDialogResponse.NEW_GAME,
                                 _("_Shuffle"), NoMovesDialogResponse.SHUFFLE);
 
-            switch (dialog.run ())
+            var result = dialog.run ();
+            /* Shuffling may cause the dialog to appear again immediately,
+               so we destroy BEFORE doing anything with the result. */
+            dialog.destroy ();
+
+            switch (result)
             {
             case NoMovesDialogResponse.UNDO:
                 undo_cb ();
@@ -412,7 +417,6 @@ public class Mahjongg : Gtk.Application
             default:
                 assert_not_reached ();
             }
-            dialog.destroy ();
         }
     }
 
