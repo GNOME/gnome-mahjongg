@@ -23,7 +23,6 @@ HELP_MEDIA = \
 HELP_FILES = \
 	bug-filing.page			\
 	bonustiles.page 		\
-	choosing.page			\
 	develop.page			\
 	documentation.page		\
 	gameplay.page			\
