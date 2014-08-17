@@ -356,6 +356,14 @@ public class Mahjongg : Gtk.Application
         settings.set_string ("mapset", maps.nth_data (widget.active).name);
     }
 
+    enum NoMovesDialogResponse
+    {
+        UNDO,
+        SHUFFLE,
+        RESTART,
+        NEW_GAME
+    }
+
     private void moved_cb ()
     {
         update_ui ();
@@ -380,27 +388,29 @@ public class Mahjongg : Gtk.Application
                                                 Gtk.ButtonsType.NONE,
                                                 "%s", _("There are no more moves."));
             dialog.format_secondary_text (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution, restart this game, or start a new one. You can also try to reshuffle the game, but this does not guarantee a solution."));
-            dialog.add_buttons (_("_Undo"), Gtk.ResponseType.REJECT,
-                                _("_Restart"), Gtk.ResponseType.CANCEL,
-                                _("_New game"), Gtk.ResponseType.ACCEPT,
-                                _("_Shuffle"), Gtk.ResponseType.DELETE_EVENT);
+            dialog.add_buttons (_("_Undo"), NoMovesDialogResponse.UNDO,
+                                _("_Restart"), NoMovesDialogResponse.RESTART,
+                                _("_New game"), NoMovesDialogResponse.NEW_GAME,
+                                _("_Shuffle"), NoMovesDialogResponse.SHUFFLE);
 
-            dialog.set_default_response (Gtk.ResponseType.ACCEPT);
             switch (dialog.run ())
             {
-            case Gtk.ResponseType.REJECT:
+            case NoMovesDialogResponse.UNDO:
                 undo_cb ();
                 break;
-            case Gtk.ResponseType.DELETE_EVENT:
+            case NoMovesDialogResponse.SHUFFLE:
                 shuffle_cb ();
                 break;
-            case Gtk.ResponseType.CANCEL:
+            case NoMovesDialogResponse.RESTART:
                 restart_game ();
                 break;
-            default:
-            case Gtk.ResponseType.ACCEPT:
+            case NoMovesDialogResponse.NEW_GAME:
                 new_game ();
                 break;
+            case Gtk.ResponseType.DELETE_EVENT:
+                break;
+            default:
+                assert_not_reached ();
             }
             dialog.destroy ();
         }
