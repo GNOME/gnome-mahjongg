@@ -40,7 +40,6 @@ public class Mahjongg : Gtk.Application
         { "undo",          undo_cb         },
         { "redo",          redo_cb         },
         { "hint",          hint_cb         },
-        { "shuffle",       shuffle_cb      },
         { "pause",         pause_cb        },
         { "restart-game",  restart_game_cb },
         { "scores",        scores_cb       },
