@@ -261,6 +261,7 @@ public class Game : Object
             tile.visible = true;
             tile.move_number = 0;
         }
+        redraw_all_tiles ();
     }
 
     public void set_hint (Tile? tile0, Tile? tile1)
