@@ -1,3 +1,11 @@
+GNOME Mahjongg 3.13.90
+=====================
+
+* Translation Updates (Lithuanian, Hungarian, Catalan (Valencian), German, Spanish, Catalan, Basque, Norwegian bokmål, Greek, Traditional Chinese)
+* Removed empty page in help (Michael Catanzaro)
+* doap changes
+* various bugfixes and little improvements
+
 GNOME Mahjongg 3.13.4
 =====================
 * added version command line option (Arnaud Bonatti)
