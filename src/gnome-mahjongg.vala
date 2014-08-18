@@ -163,7 +163,7 @@ public class Mahjongg : Gtk.Application
             var mahjongg_menu = new Menu ();
             menu.append_submenu (_("_Mahjongg"), mahjongg_menu);
             mahjongg_menu.append (_("_New Game"), "app.new-game");
-            mahjongg_menu.append (_("_Restart Game"), "app.new-game");
+            mahjongg_menu.append (_("_Restart Game"), "app.restart-game");
             mahjongg_menu.append (_("_Scores"), "app.scores");
             mahjongg_menu.append (_("_Preferences"), "app.preferences");
             mahjongg_menu.append (_("_Quit"), "app.quit");
