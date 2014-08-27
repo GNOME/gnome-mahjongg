@@ -35,16 +35,16 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-03 06:56+0000\n"
-"PO-Revision-Date: 2014-08-03 15:38+0200\n"
-"Last-Translator: Maria Mavridou <mavridou@gmail.com>\n"
+"POT-Creation-Date: 2014-08-27 06:56+0000\n"
+"PO-Revision-Date: 2014-08-27 16:51+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
@@ -78,8 +78,8 @@ msgstr ""
 "και κάποιες δύσκολες. Αν κολλήσετε, μπορείτε να ζητήσετε μια υπόδειξη, αλλά "
 "αυτό προσθέτει μια ποινή μεγάλου χρόνου."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:612
-#: ../src/gnome-mahjongg.vala:813
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
+#: ../src/gnome-mahjongg.vala:830
 msgid "Mahjongg"
 msgstr "Ματζόνγκ"
 
@@ -167,140 +167,150 @@ msgstr "Παύση"
 msgid "Print release version and exit"
 msgstr "Εκτύπωση της έκδοσης και έξοδος"
 
-#: ../src/gnome-mahjongg.vala:94
+#: ../src/gnome-mahjongg.vala:93
 msgid "Moves Left:"
 msgstr "Κινήσεις που απομένουν:"
 
-#: ../src/gnome-mahjongg.vala:124
+#: ../src/gnome-mahjongg.vala:123
 msgid "Undo your last move"
 msgstr "Αναίρεση της τελευταίας σας κίνησης"
 
-#: ../src/gnome-mahjongg.vala:130
+#: ../src/gnome-mahjongg.vala:129
 msgid "Redo your last move"
 msgstr "Επανεκτέλεση της τελευταίας σας κίνησης"
 
-#: ../src/gnome-mahjongg.vala:136
+#: ../src/gnome-mahjongg.vala:135
 msgid "Receive a hint for your next move"
 msgstr "Λήψη υπόδειξης για την επόμενη κίνησή σας"
 
-#: ../src/gnome-mahjongg.vala:141 ../src/gnome-mahjongg.vala:642
+#: ../src/gnome-mahjongg.vala:140 ../src/gnome-mahjongg.vala:659
 msgid "Pause the game"
 msgstr "Παύση παιχνιδιού"
 
-#: ../src/gnome-mahjongg.vala:165
+#: ../src/gnome-mahjongg.vala:164
 msgid "_Mahjongg"
 msgstr "_Ματζόνγκ"
 
-#: ../src/gnome-mahjongg.vala:166 ../src/menu.ui.h:1
+#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:1
 msgid "_New Game"
 msgstr "_Νέο παιχνίδι"
 
-#: ../src/gnome-mahjongg.vala:167 ../src/menu.ui.h:2
+#: ../src/gnome-mahjongg.vala:166 ../src/menu.ui.h:2
 msgid "_Restart Game"
 msgstr "_Επανεκκίνηση του παιχνιδιού"
 
-#: ../src/gnome-mahjongg.vala:168 ../src/menu.ui.h:3
+#: ../src/gnome-mahjongg.vala:167 ../src/menu.ui.h:3
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
-#: ../src/gnome-mahjongg.vala:169 ../src/menu.ui.h:4
+#: ../src/gnome-mahjongg.vala:168 ../src/menu.ui.h:4
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: ../src/gnome-mahjongg.vala:170 ../src/menu.ui.h:7
+#: ../src/gnome-mahjongg.vala:169 ../src/menu.ui.h:7
 #: ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: ../src/gnome-mahjongg.vala:172 ../src/menu.ui.h:5
+#: ../src/gnome-mahjongg.vala:171 ../src/menu.ui.h:5
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: ../src/gnome-mahjongg.vala:173
+#: ../src/gnome-mahjongg.vala:172
 msgid "_Contents"
 msgstr "_Περιεχόμενα"
 
-#: ../src/gnome-mahjongg.vala:174 ../src/menu.ui.h:6
+#: ../src/gnome-mahjongg.vala:173 ../src/menu.ui.h:6
 msgid "_About"
 msgstr "_Περί"
 
-#: ../src/gnome-mahjongg.vala:321
+#: ../src/gnome-mahjongg.vala:320
 msgid "Do you want to start a new game with this map?"
 msgstr "Θέλετε να ξεκινήσετε νέο παιχνίδι με αυτό το χάρτη;"
 
-#: ../src/gnome-mahjongg.vala:322
+#: ../src/gnome-mahjongg.vala:321
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Αν συνεχίσετε να παίζετε, το επόμενο παιχνίδι θα χρησιμοποιήσει το νέο χάρτη."
 
-#: ../src/gnome-mahjongg.vala:323
+#: ../src/gnome-mahjongg.vala:322
 msgid "_Continue playing"
 msgstr "_Συνέχεια παιχνιδιού"
 
-#: ../src/gnome-mahjongg.vala:324
+#: ../src/gnome-mahjongg.vala:323
 msgid "Use _new map"
 msgstr "Χρήση νέου _χάρτη"
 
-#: ../src/gnome-mahjongg.vala:382
+#: ../src/gnome-mahjongg.vala:391
 msgid "There are no more moves."
 msgstr "Δεν υπάρχουν άλλες κινήσεις."
 
-#: ../src/gnome-mahjongg.vala:383
+#: ../src/gnome-mahjongg.vala:392
+#| msgid ""
+#| "Each puzzle has at least one solution.  You can undo your moves and try "
+#| "and find the solution, restart this game, or start a new one. You can "
+#| "also try to reshuffle the game, but this does not guarantee a solution."
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution, restart this game, or start a new one. You can also try "
-"to reshuffle the game, but this does not guarantee a solution."
+"find the solution, restart this game, or start a new one."
 msgstr ""
 "Κάθε παζλ έχει τουλάχιστον μια λύση. Μπορείτε να αναιρέσετε τις κινήσεις σας "
 "και να προσπαθήσετε να βρείτε τη λύση, να επανεκκινήσετε το παιχνίδι ή "
-"ξεκινήστε ένα νέο. Μπορείτε επίσης να προσπαθήσετε να ανακατανείμετε το "
-"παιχνίδι, αλλά αυτή η ενέργεια δεν εγγυάται τη λύση."
+"ξεκινήστε ένα νέο."
 
-#: ../src/gnome-mahjongg.vala:384
+#: ../src/gnome-mahjongg.vala:394
+msgid ""
+"You can also try to reshuffle the game, but this does not guarantee a "
+"solution."
+msgstr ""
+"Μπορείτε επίσης να προσπαθήσετε να ανακατανείμετε το παιχνίδι, αλλά αυτή η "
+"ενέργεια δεν εγγυάται τη λύση."
+
+#: ../src/gnome-mahjongg.vala:395
 msgid "_Undo"
 msgstr "Α_ναίρεση"
 
-#: ../src/gnome-mahjongg.vala:385
+#: ../src/gnome-mahjongg.vala:396
 msgid "_Restart"
 msgstr "_Επανεκκίνηση"
 
-#: ../src/gnome-mahjongg.vala:386
+#: ../src/gnome-mahjongg.vala:397
 msgid "_New game"
 msgstr "_Νέο παιχνίδι"
 
-#: ../src/gnome-mahjongg.vala:387
+#: ../src/gnome-mahjongg.vala:398
 msgid "_Shuffle"
 msgstr "_Μοίρασμα"
 
-#: ../src/gnome-mahjongg.vala:430
+#: ../src/gnome-mahjongg.vala:447
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../src/gnome-mahjongg.vala:446
+#: ../src/gnome-mahjongg.vala:463
 msgid "_Theme:"
 msgstr "_Θέμα:"
 
-#: ../src/gnome-mahjongg.vala:474
+#: ../src/gnome-mahjongg.vala:491
 msgid "_Layout:"
 msgstr "Δ_ιάταξη:"
 
-#: ../src/gnome-mahjongg.vala:500
+#: ../src/gnome-mahjongg.vala:517
 msgid "_Background color:"
 msgstr "_Χρώμα παρασκηνίου:"
 
-#: ../src/gnome-mahjongg.vala:578
+#: ../src/gnome-mahjongg.vala:595
 msgid "Main game:"
 msgstr "Κυρίως παιχνίδι:"
 
-#: ../src/gnome-mahjongg.vala:587
+#: ../src/gnome-mahjongg.vala:604
 msgid "Maps:"
 msgstr "Χάρτες:"
 
-#: ../src/gnome-mahjongg.vala:595
+#: ../src/gnome-mahjongg.vala:612
 msgid "Tiles:"
 msgstr "Πλακίδια:"
 
-#: ../src/gnome-mahjongg.vala:615
+#: ../src/gnome-mahjongg.vala:632
 msgid ""
 "A matching game played with Mahjongg tiles\n"
 "\n"
@@ -310,11 +320,11 @@ msgstr ""
 "\n"
 "Το Ματζόνγκ είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/gnome-mahjongg.vala:621
+#: ../src/gnome-mahjongg.vala:638
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
-" Spiros Papadimitriou <spapadim+@cs.cmu.edu>\n"
+" Σπύρος Παπαδημητρίου <spapadim+@cs.cmu.edu>\n"
 " Συμεών (Σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
 " Κώστας Παπαδήμας <pkst@gmx.net>\n"
 " Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
@@ -323,7 +333,7 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/gnome-mahjongg.vala:637
+#: ../src/gnome-mahjongg.vala:654
 msgid "Unpause the game"
 msgstr "Αναίρεση παύσης παιχνιδιού"
 
@@ -333,7 +343,7 @@ msgstr "Αναίρεση παύσης παιχνιδιού"
 #. * marks, so that nothing gets reversed in RTL languages. You probably only
 #. * need to change the English on the left. Probably.
 #.
-#: ../src/gnome-mahjongg.vala:739
+#: ../src/gnome-mahjongg.vala:756
 #, c-format
 msgid "Time: %02d∶‎%02d∶‎%02d"
 msgstr "Χρόνος: %02d∶‎%02d∶‎%02d"
@@ -344,14 +354,14 @@ msgstr "Χρόνος: %02d∶‎%02d∶‎%02d"
 #. * reversed in RTL languages. You probably only need to change the English
 #. * on the left. Probably.
 #.
-#: ../src/gnome-mahjongg.vala:749
+#: ../src/gnome-mahjongg.vala:766
 #, c-format
 msgid "Time: %02d∶‎%02d"
 msgstr "Χρόνος: %02d∶‎%02d"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
-msgstr "Νέο Παιχνίδι"
+msgstr "Νέο παιχνίδι"
 
 #: ../src/score-dialog.vala:32
 msgid "OK"
