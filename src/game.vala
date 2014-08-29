@@ -192,18 +192,21 @@ public class Game : Object
     public void shuffle_remaining (bool redraw = true) {
         // Fisher Yates Shuffle
         var n = tiles.length();
-        for (var i = n-1; i > 0; i--) {
-            int j = Random.int_range(0,(int)i+1);
-            // switch internal positions
-            switch_tiles (tiles.nth_data(j), tiles.nth_data(i));
-        }
-        // resort for drawing order
-        tiles.sort(compare_tiles);
-        // reset moves and move numbers
-        move_number = 1;
-        foreach (var tile in tiles)
-            tile.move_number = 0;
-        find_matches ();
+        do {
+          for (var i = n-1; i > 0; i--) {
+              int j = Random.int_range(0,(int)i+1);
+              // switch internal positions
+              switch_tiles (tiles.nth_data(j), tiles.nth_data(i));
+          }
+          // resort for drawing order
+          tiles.sort(compare_tiles);
+          // reset moves and move numbers
+          move_number = 1;
+          foreach (var tile in tiles)
+              tile.move_number = 0;
+          find_matches ();
+        } while (!can_move && visible_tiles > 1);
+        // only continue shuffling when there is a possible pairing
         moved ();
         if (redraw)
             redraw_all_tiles ();
