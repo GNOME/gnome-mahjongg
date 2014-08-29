@@ -189,22 +189,25 @@ public class Game : Object
         reset ();
     }
 
-    public void shuffle_remaining (bool redraw = true) {
+    public void shuffle_remaining (bool redraw = true)
+    {
         // Fisher Yates Shuffle
-        var n = tiles.length();
-        do {
-          for (var i = n-1; i > 0; i--) {
-              int j = Random.int_range(0,(int)i+1);
-              // switch internal positions
-              switch_tiles (tiles.nth_data(j), tiles.nth_data(i));
-          }
-          // resort for drawing order
-          tiles.sort(compare_tiles);
-          // reset moves and move numbers
-          move_number = 1;
-          foreach (var tile in tiles)
-              tile.move_number = 0;
-          find_matches ();
+        var n = tiles.length ();
+        do
+        {
+            for (var i = n-1; i > 0; i--)
+            {
+                int j = Random.int_range (0, (int) i+1);
+                // switch internal positions
+                switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
+            }
+            // resort for drawing order
+            tiles.sort (compare_tiles);
+            // reset moves and move numbers
+            move_number = 1;
+            foreach (var tile in tiles)
+                tile.move_number = 0;
+            find_matches ();
         } while (!can_move && visible_tiles > 1);
         // only continue shuffling when there is a possible pairing
         moved ();
@@ -212,7 +215,8 @@ public class Game : Object
             redraw_all_tiles ();
     }
 
-    public void redraw_all_tiles () {
+    public void redraw_all_tiles ()
+    {
         foreach (var tile in tiles)
             if (tile.visible)
                 redraw_tile (tile);
@@ -351,7 +355,8 @@ public class Game : Object
         return true;
     }
 
-    public int number_of_movable_tiles () {
+    public int number_of_movable_tiles ()
+    {
         int count = 0;
         foreach (var tile in tiles)
             if (tile_can_move(tile))
