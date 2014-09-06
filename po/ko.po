@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-09-06 06:56+0000\n"
-"PO-Revision-Date: 2014-09-06 19:45+0900\n"
+"PO-Revision-Date: 2014-09-06 21:03+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -195,7 +195,7 @@ msgstr "도움말(_H)"
 
 #: ../src/gnome-mahjongg.vala:172
 msgid "_Contents"
-msgstr ""
+msgstr "차례(_C)"
 
 #: ../src/gnome-mahjongg.vala:173 ../src/menu.ui.h:6
 msgid "_About"
@@ -231,7 +231,7 @@ msgstr "모든 퍼즐은 최소한 한 개 이상의 풀이가 있습니다. 움
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
-msgstr ""
+msgstr "게임을 섞을 수도 있지만, 풀이가 나온다고 보장할 수는 없습니다."
 
 #: ../src/gnome-mahjongg.vala:395
 msgid "_Undo"
@@ -336,9 +336,3 @@ msgstr "시각"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "시간"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "마작 기본 설정"
-
-#~ msgid "_Close"
-#~ msgstr "닫기(_C)"
