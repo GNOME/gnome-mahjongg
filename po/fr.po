@@ -336,7 +336,7 @@ msgstr "Reprendre la partie"
 #: ../src/gnome-mahjongg.vala:756
 #, c-format
 msgid "Time: %02d∶‎%02d∶‎%02d"
-msgstr "Durée : %02d∶<200e>%02d∶<200e>%02d"
+msgstr "Durée : %02d∶‎%02d∶‎%02d"
 
 #. Translators: sorry. This is the clock label when the game is less than
 #. * one hour in length. The first %02d is minutes and the last is seconds.
@@ -347,7 +347,7 @@ msgstr "Durée : %02d∶<200e>%02d∶<200e>%02d"
 #: ../src/gnome-mahjongg.vala:766
 #, c-format
 msgid "Time: %02d∶‎%02d"
-msgstr "Durée : %02d∶<200e>%02d"
+msgstr "Durée : %02d∶‎%02d"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
