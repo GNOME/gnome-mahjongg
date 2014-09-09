@@ -61,10 +61,10 @@ public class Mahjongg : Gtk.Application
         base.startup ();
 
         add_action_entries (action_entries, this);
-        add_accelerator ("Pause", "app.pause", null);
-        add_accelerator ("<Primary>h", "app.hint", null);
-        add_accelerator ("<Primary>z", "app.undo", null);
-        add_accelerator ("<Primary><Shift>z", "app.redo", null);
+        set_accels_for_action ("app.pause", {"Pause"});
+        set_accels_for_action ("app.hint", {"<Primary>h"});
+        set_accels_for_action ("app.undo", {"<Primary>z"});
+        set_accels_for_action ("app.redo", {"<Primary><Shift>z"});
 
         settings = new Settings ("org.gnome.mahjongg");
 
