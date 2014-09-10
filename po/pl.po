@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-03 03:01+0200\n"
-"PO-Revision-Date: 2014-09-03 03:03+0200\n"
+"POT-Creation-Date: 2014-09-10 02:54+0200\n"
+"PO-Revision-Date: 2014-09-10 02:55+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -330,7 +330,7 @@ msgstr "Wznawia grę"
 #: ../src/gnome-mahjongg.vala:756
 #, c-format
 msgid "Time: %02d∶‎%02d∶‎%02d"
-msgstr "Czas: %02d∶‎%02d∶‎%02d"
+msgstr "Czas: %02d∶%02d∶%02d"
 
 #. Translators: sorry. This is the clock label when the game is less than
 #. * one hour in length. The first %02d is minutes and the last is seconds.
@@ -341,7 +341,7 @@ msgstr "Czas: %02d∶‎%02d∶‎%02d"
 #: ../src/gnome-mahjongg.vala:766
 #, c-format
 msgid "Time: %02d∶‎%02d"
-msgstr "Czas: %02d∶‎%02d"
+msgstr "Czas: %02d∶%02d"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
