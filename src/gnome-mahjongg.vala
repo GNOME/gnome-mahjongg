@@ -110,31 +110,27 @@ public class Mahjongg : Gtk.Application
         title = new Gtk.Label ("");
         title.get_style_context ().add_class ("title");
 
-        var icon_size = Gtk.IconSize.BUTTON;
-        if (shell_shows_menubar)
-            icon_size = Gtk.IconSize.LARGE_TOOLBAR;
-
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.get_style_context ().add_class ("linked");
 
-        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", icon_size);
+        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
         hbox.pack_start (undo_button);
 
-        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", icon_size);
+        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
         hbox.pack_start (redo_button);
 
-        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", icon_size);
+        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
         hint_button.valign = Gtk.Align.CENTER;
         hint_button.action_name = "app.hint";
         hint_button.set_tooltip_text (_("Receive a hint for your next move"));
 
-        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", icon_size);
+        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
         pause_button.valign = Gtk.Align.CENTER;
         pause_button.action_name = "app.pause";
         pause_button.set_tooltip_text (_("Pause the game"));
@@ -144,18 +140,13 @@ public class Mahjongg : Gtk.Application
         status_box.halign = Gtk.Align.CENTER;
         title_box.pack_start (status_box, false, false, 0);
 
+        bool shell_shows_menubar;
+        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
+
         if (!shell_shows_menubar)
         {
             var app_menu = builder.get_object ("appmenu") as MenuModel;
             set_app_menu (app_menu);
-
-            var header_bar = new Gtk.HeaderBar ();
-            header_bar.set_show_close_button (true);
-            header_bar.set_custom_title (title_box);
-            header_bar.pack_start (hbox);
-            header_bar.pack_end (hint_button);
-            header_bar.pack_end (pause_button);
-            window.set_titlebar (header_bar);
         }
         else
         {
@@ -172,24 +163,25 @@ public class Mahjongg : Gtk.Application
             help_menu.append (_("_Contents"), "app.help");
             help_menu.append (_("_About"), "app.about");
             set_menubar (menu);
-
-            var toolbar = new Gtk.Toolbar ();
-            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-            var item = new Gtk.ToolItem ();
-            item.add (hbox);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.set_expand (true);
-            item.add (title_box);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.add (hint_button);
-            toolbar.insert (item, -1);
-            item = new Gtk.ToolItem ();
-            item.add (pause_button);
-            toolbar.insert (item, -1);
-            vbox.pack_start (toolbar, false, true, 0);
         }
+
+        var header_bar = new Gtk.HeaderBar ();
+        header_bar.set_custom_title (title_box);
+        header_bar.pack_start (hbox);
+        header_bar.pack_end (hint_button);
+        header_bar.pack_end (pause_button);
+
+        var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        if (desktop == null || desktop != "Unity")
+        {
+            header_bar.set_show_close_button (true);
+            window.set_titlebar (header_bar);
+        }
+        else
+        {
+            vbox.pack_start (header_bar, false, false, 0);
+        }
+
 
         vbox.pack_start (game_view, true, true, 0);
 
@@ -205,16 +197,6 @@ public class Mahjongg : Gtk.Application
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
         tick_cb ();
-    }
-
-    private bool shell_shows_menubar
-    {
-        get
-        {
-            bool shell_shows_menubar;
-            Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
-            return shell_shows_menubar;
-        }
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
@@ -444,9 +426,12 @@ public class Mahjongg : Gtk.Application
             return;
         }
 
+        bool dialogs_use_header;
+        Gtk.Settings.get_default ().get ("gtk-dialogs-use-header", out dialogs_use_header);
+
         preferences_dialog = new Gtk.Dialog.with_buttons (_("Preferences"),
                                                           window,
-                                                          shell_shows_menubar ? 0 : Gtk.DialogFlags.USE_HEADER_BAR,
+                                                          dialogs_use_header ? Gtk.DialogFlags.USE_HEADER_BAR : 0,
                                                           null);
         preferences_dialog.set_border_width (5);
         var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
