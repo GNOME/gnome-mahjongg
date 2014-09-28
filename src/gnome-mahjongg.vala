@@ -512,6 +512,9 @@ public class Mahjongg : Gtk.Application
 
         dialog_content_area.pack_start (grid, true, true, 0);
 
+        if (!dialogs_use_header)
+            preferences_dialog.add_button (_("_Close"), Gtk.ResponseType.CLOSE);
+
         preferences_dialog.show_all ();
     }
 
