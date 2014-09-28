@@ -15,7 +15,7 @@ public class Tile : Object
     public bool visible = true;
     public int move_number;
 
-    public int set
+    public new int set
     {
         get { return number / 4; }
     }
