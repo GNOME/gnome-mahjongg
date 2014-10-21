@@ -573,7 +573,7 @@ public class Mahjongg : Gtk.Application
 
     private void shuffle_cb ()
     {
-        game_view.game.shuffle_remaining();
+        game_view.game.shuffle_remaining ();
     }
 
     private void about_cb ()
@@ -805,7 +805,7 @@ public class Mahjongg : Gtk.Application
         var app = new Mahjongg ();
         var result = app.run (args);
 
-        Settings.sync();
+        Settings.sync ();
 
         return result;
     }

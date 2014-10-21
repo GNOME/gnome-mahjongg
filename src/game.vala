@@ -359,7 +359,7 @@ public class Game : Object
     {
         int count = 0;
         foreach (var tile in tiles)
-            if (tile_can_move(tile))
+            if (tile_can_move (tile))
                 count++;
         return count;
     }

@@ -275,7 +275,7 @@ public class MapLoader : Object
     {
         for (var i = 0; attribute_names[i] != null; i++)
         {
-            if (attribute_names[i].down() == name)
+            if (attribute_names[i].down () == name)
                 return attribute_values[i];
         }
 
