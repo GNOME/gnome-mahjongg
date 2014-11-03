@@ -172,7 +172,7 @@ public class Mahjongg : Gtk.Application
         header_bar.pack_end (pause_button);
 
         var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        if (desktop == null || desktop != "Unity")
+        if (!is_desktop ("Unity"))
         {
             header_bar.set_show_close_button (true);
             window.set_titlebar (header_bar);
@@ -181,7 +181,6 @@ public class Mahjongg : Gtk.Application
         {
             vbox.pack_start (header_bar, false, false, 0);
         }
-
 
         vbox.pack_start (game_view, true, true, 0);
 
@@ -197,6 +196,19 @@ public class Mahjongg : Gtk.Application
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
         tick_cb ();
+    }
+
+    private bool is_desktop (string name)
+    {
+        var desktop_name_list = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        if (desktop_name_list == null)
+            return false;
+
+        foreach (var n in desktop_name_list.split (":"))
+            if (n == name)
+                return true;
+
+        return false;
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
