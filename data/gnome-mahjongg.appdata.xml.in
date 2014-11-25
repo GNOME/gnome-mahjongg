@@ -5,6 +5,7 @@
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
  <_name>GNOME Mahjongg</_name>
+ <_summary>Match tiles and clear the board</_summary>
  <description>
   <_p>
    A solitaire version of the classic Eastern tile game. Tiles are stacked on
