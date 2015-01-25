@@ -12,6 +12,8 @@
         <attribute name="label" translatable="yes">_Restart Game</attribute>
         <attribute name="action">app.restart-game</attribute>
       </item>
+    </section>
+    <section>
       <item>
         <attribute name="label" translatable="yes">_Scores</attribute>
         <attribute name="action">app.scores</attribute>
