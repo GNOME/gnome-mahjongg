@@ -81,7 +81,7 @@ public class Mahjongg : Gtk.Application
         history.load ();
 
         window = new Gtk.ApplicationWindow (this);
-        window.configure_event.connect (window_configure_event_cb);
+        window.size_allocate.connect (size_allocate_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
@@ -211,15 +211,12 @@ public class Mahjongg : Gtk.Application
         return false;
     }
 
-    private bool window_configure_event_cb (Gdk.EventConfigure event)
+    private void size_allocate_cb (Gtk.Allocation allocation)
     {
-        if (!is_maximized)
-        {
-            window_width = event.width;
-            window_height = event.height;
-        }
-
-        return false;
+        if (is_maximized)
+            return;
+        window_width = allocation.width;
+        window_height = allocation.height;
     }
 
     private bool window_state_event_cb (Gdk.EventWindowState event)
