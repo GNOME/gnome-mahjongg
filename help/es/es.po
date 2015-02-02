@@ -2,13 +2,13 @@
 # translation of mahjongg manual to spanish
 #
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2014-05-08 18:51+0000\n"
-"PO-Revision-Date: 2014-05-10 18:34+0200\n"
+"POT-Creation-Date: 2015-01-27 07:53+0000\n"
+"PO-Revision-Date: 2015-02-02 11:18+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -39,10 +39,10 @@ msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:14 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
-#: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
-#: C/shortcuts.page:18 C/translate.page:23
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:13
+#: C/gameplay.page:22 C/hints.page:26 C/index.page:18 C/moves.page:18
+#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
+#: C/translate.page:23
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
@@ -160,18 +160,6 @@ msgstr ""
 "A continuación se muestran algunas de las casillas con bonificaciones en el "
 "tema claro:"
 
-#. (itstool) path: credit/name
-#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
-#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
-#: C/shortcuts.page:10
-msgid "Chris Beiser"
-msgstr "Chris Beiser"
-
-#. (itstool) path: page/title
-#: C/choosing.page:18
-msgid "Select a board"
-msgstr "Seleccione un tablero"
-
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
@@ -188,13 +176,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
-#| msgid ""
-#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
-#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
-#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
-#| "list</link>."
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
@@ -245,6 +226,12 @@ msgid ""
 msgstr ""
 "El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> contiene información útil."
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:10 C/hints.page:10 C/index.page:14 C/moves.page:10
+#: C/pause.page:10 C/rules.page:9 C/scoring.page:9 C/shortcuts.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
@@ -1005,15 +992,19 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:40
+#| msgid ""
+#| "You can chat with GNOME translators using irc: join the #i18n chanel on "
+#| "the irc.gnome.org server. People on the channel are located worldwide, so "
+#| "you may not get an immediate response as a result of timezone differences."
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
 "may not get an immediate response as a result of timezone differences."
 msgstr ""
 "Puede chatear con los traductores de GNOME usando irc, entrando al canal "
-"#i18n. La gente de los canales se encuentra en cualquier parte del mundo, "
-"por lo que puede que no obtenga una respuesta inmediata debido a las "
-"diferencias horarias."
+"#i18n del servidor irc.gnome.org. La gente de los canales se encuentra en "
+"cualquier parte del mundo, por lo que puede que no obtenga una respuesta "
+"inmediata debido a las diferencias horarias."
 
 #. (itstool) path: page/p
 #: C/translate.page:44
@@ -1025,6 +1016,9 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Select a board"
+#~ msgstr "Seleccione un tablero"
 
 #~ msgid "Show/hide the toolbar"
 #~ msgstr "Mostrar/ocultar la barra de herramientas"
