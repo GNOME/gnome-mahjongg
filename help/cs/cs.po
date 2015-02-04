@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-04-23 07:07+0000\n"
+"POT-Creation-Date: 2015-02-04 07:57+0000\n"
 "PO-Revision-Date: 2014-04-23 09:09+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -39,10 +39,10 @@ msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:14 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
-#: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
-#: C/shortcuts.page:18 C/translate.page:23
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:13
+#: C/gameplay.page:22 C/hints.page:26 C/index.page:18 C/moves.page:18
+#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
+#: C/translate.page:23
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -158,18 +158,6 @@ msgid "Some of the matching bonus tiles in smooth theme are shown below:"
 msgstr ""
 "Některé z párových bonusových kamenů v motivu smooth jsou ukázány níže:"
 
-#. (itstool) path: credit/name
-#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
-#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
-#: C/shortcuts.page:10
-msgid "Chris Beiser"
-msgstr "Chris Beiser"
-
-#. (itstool) path: page/title
-#: C/choosing.page:18
-msgid "Select a board"
-msgstr "Jak vybrat desku"
-
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
@@ -237,6 +225,12 @@ msgid ""
 msgstr ""
 "Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:10 C/hints.page:10 C/index.page:14 C/moves.page:10
+#: C/pause.page:10 C/rules.page:9 C/scoring.page:9 C/shortcuts.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
@@ -993,14 +987,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:40
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
 "may not get an immediate response as a result of timezone differences."
 msgstr ""
-"S ostatními překladateli můžete komunikovat pomocí <link href=\"https://"
-"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>. "
-"Lidé na tomto kanále jsou z celého světa, tak počítejte s tím, že kvůli "
-"rozdílným časovým pásmům, nemusí reagovat hned."
+"S ostatními překladateli můžete komunikovat pomocí IRC – připojte se ke "
+"kanálu #i18n na serveru irc.gnome.org. Lidé na tomto kanále jsou z celého "
+"světa, tak počítejte s tím, že kvůli rozdílným časovým pásmům, nemusí "
+"reagovat hned."
 
 #. (itstool) path: page/p
 #: C/translate.page:44
