@@ -4,12 +4,12 @@
 #
 # László Ádám Kohajda <kla.kohi at gmail dot com>, 2012.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2013, 2014.
-# Balázs Úr <urbalazs at gmail dot com>, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2014-09-20 18:58+0000\n"
-"PO-Revision-Date: 2014-09-21 01:10+0200\n"
+"POT-Creation-Date: 2015-03-01 08:05+0000\n"
+"PO-Revision-Date: 2015-03-01 18:17+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -174,13 +174,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
-#| msgid ""
-#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
-#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
-#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
-#| "list</link>."
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
@@ -189,12 +182,12 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">"
-"közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
-"fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit."
-"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán<"
-"/link> veheti fel."
+"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
+"fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
+"\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
+"veheti fel."
 
 #. (itstool) path: page/title
 #: C/documentation.page:17
@@ -996,8 +989,12 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:40
+#| msgid ""
+#| "You can chat with GNOME translators using irc: join the #i18n chanel on "
+#| "the irc.gnome.org server. People on the channel are located worldwide, so "
+#| "you may not get an immediate response as a result of timezone differences."
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
 "may not get an immediate response as a result of timezone differences."
 msgstr ""
