@@ -63,7 +63,7 @@ msgstr "Rasklopi gomilu pločica uklanjanjem odgovarajućih parova"
 
 #: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr "igra;strategija;zagonetka;ploča"
+msgstr "igra;strategija;zagonetka;ploča;"
 
 #: ../data/org.gnome.mahjongg.gschema.xml.h:1
 msgid "Width of the window in pixels"
