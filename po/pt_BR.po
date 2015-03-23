@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-mahjongg.
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright (C) 1999-2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -22,15 +22,15 @@
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2012, 2013, 2014.
-# Enrico Nicoletto <liverig@gmail.com>, 2014.
+# Enrico Nicoletto <liverig@gmail.com>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-02 06:58+0000\n"
-"PO-Revision-Date: 2014-09-02 10:38-0300\n"
+"POT-Creation-Date: 2015-03-23 21:35+0000\n"
+"PO-Revision-Date: 2015-03-23 19:04-0300\n"
 "Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -38,7 +38,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
@@ -46,6 +46,10 @@ msgid "GNOME Mahjongg"
 msgstr "GNOME Mahjongg"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:2
+msgid "Match tiles and clear the board"
+msgstr "Combine pedras e limpe o tabuleiro"
+
+#: ../data/gnome-mahjongg.appdata.xml.in.h:3
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -62,7 +66,7 @@ msgstr ""
 "direita no mesmo nível. Tenha cuidado: pedras parecidas podem, na verdade, "
 "ser levemente diferentes."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: ../data/gnome-mahjongg.appdata.xml.in.h:4
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -72,8 +76,8 @@ msgstr ""
 "alguns difíceis. Se você ficar sem saída, você pode pedir uma dica, mas isso "
 "adicionar uma grande penalidade de tempo."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:830
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
+#: ../src/gnome-mahjongg.vala:815
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -156,94 +160,88 @@ msgstr "Difícil"
 msgid "Paused"
 msgstr "Pausado"
 
-#: ../src/gnome-mahjongg.vala:33
-#| msgid "Show release version"
+#: ../src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Imprime a versão de lançamento e sai"
 
-#: ../src/gnome-mahjongg.vala:93
+#: ../src/gnome-mahjongg.vala:94
 msgid "Moves Left:"
 msgstr "Jogadas restantes:"
 
-#: ../src/gnome-mahjongg.vala:123
+#: ../src/gnome-mahjongg.vala:120
 msgid "Undo your last move"
 msgstr "Desfaz sua última jogada"
 
-#: ../src/gnome-mahjongg.vala:129
+#: ../src/gnome-mahjongg.vala:126
 msgid "Redo your last move"
 msgstr "Refaz sua última jogada"
 
-#: ../src/gnome-mahjongg.vala:135
+#: ../src/gnome-mahjongg.vala:132
 msgid "Receive a hint for your next move"
 msgstr "Recebe uma dica para sua próxima jogada"
 
-#: ../src/gnome-mahjongg.vala:140 ../src/gnome-mahjongg.vala:659
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:660
 msgid "Pause the game"
 msgstr "Pausa o jogo"
 
-#: ../src/gnome-mahjongg.vala:164
-#| msgid "Mahjongg"
+#: ../src/gnome-mahjongg.vala:156
 msgid "_Mahjongg"
 msgstr "_Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:1
+#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
 msgid "_New Game"
 msgstr "_Novo jogo"
 
-#: ../src/gnome-mahjongg.vala:166 ../src/menu.ui.h:2
+#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
 msgid "_Restart Game"
 msgstr "_Reiniciar jogo"
 
-#: ../src/gnome-mahjongg.vala:167 ../src/menu.ui.h:3
+#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
 msgid "_Scores"
 msgstr "_Pontuações"
 
-#: ../src/gnome-mahjongg.vala:168 ../src/menu.ui.h:4
+#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: ../src/gnome-mahjongg.vala:169 ../src/menu.ui.h:7
+#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
 #: ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "Sai_r"
 
-#: ../src/gnome-mahjongg.vala:171 ../src/menu.ui.h:5
+#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: ../src/gnome-mahjongg.vala:172
+#: ../src/gnome-mahjongg.vala:164
 msgid "_Contents"
 msgstr "S_umário"
 
-#: ../src/gnome-mahjongg.vala:173 ../src/menu.ui.h:6
+#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/gnome-mahjongg.vala:320
+#: ../src/gnome-mahjongg.vala:315
 msgid "Do you want to start a new game with this map?"
 msgstr "Você quer iniciar um novo jogo com este mapa?"
 
-#: ../src/gnome-mahjongg.vala:321
+#: ../src/gnome-mahjongg.vala:316
 msgid "If you continue playing the next game will use the new map."
 msgstr "Se você continuar jogando, o próximo jogo usará o novo mapa."
 
-#: ../src/gnome-mahjongg.vala:322
+#: ../src/gnome-mahjongg.vala:317
 msgid "_Continue playing"
 msgstr "_Continuar jogando"
 
-#: ../src/gnome-mahjongg.vala:323
+#: ../src/gnome-mahjongg.vala:318
 msgid "Use _new map"
 msgstr "Usar _novo mapa"
 
-#: ../src/gnome-mahjongg.vala:391
+#: ../src/gnome-mahjongg.vala:386
 msgid "There are no more moves."
 msgstr "Não há mais jogadas válidas."
 
-#: ../src/gnome-mahjongg.vala:392
-#| msgid ""
-#| "Each puzzle has at least one solution.  You can undo your moves and try "
-#| "and find the solution, restart this game, or start a new one. You can "
-#| "also try to reshuffle the game, but this does not guarantee a solution."
+#: ../src/gnome-mahjongg.vala:387
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -251,7 +249,7 @@ msgstr ""
 "Cada enigma tem pelo menos uma solução. Você pode desfazer suas jogadas e "
 "tentar encontrar a solução, reiniciar este jogo ou iniciar um novo jogo."
 
-#: ../src/gnome-mahjongg.vala:394
+#: ../src/gnome-mahjongg.vala:389
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -259,61 +257,59 @@ msgstr ""
 "Você também pode tentar reembaralhar o jogo, mas isto não garante uma "
 "solução."
 
-#: ../src/gnome-mahjongg.vala:395
+#: ../src/gnome-mahjongg.vala:390
 msgid "_Undo"
 msgstr "Desfa_zer"
 
-#: ../src/gnome-mahjongg.vala:396
+#: ../src/gnome-mahjongg.vala:391
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: ../src/gnome-mahjongg.vala:397
+#: ../src/gnome-mahjongg.vala:392
 msgid "_New game"
 msgstr "_Novo jogo"
 
-#: ../src/gnome-mahjongg.vala:398
+#: ../src/gnome-mahjongg.vala:393
 msgid "_Shuffle"
 msgstr "_Embaralhar"
 
-#: ../src/gnome-mahjongg.vala:447
+#: ../src/gnome-mahjongg.vala:445
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../src/gnome-mahjongg.vala:463
+#: ../src/gnome-mahjongg.vala:461
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../src/gnome-mahjongg.vala:491
+#: ../src/gnome-mahjongg.vala:489
 msgid "_Layout:"
 msgstr "_Layout:"
 
-#: ../src/gnome-mahjongg.vala:517
+#: ../src/gnome-mahjongg.vala:515
 msgid "_Background color:"
 msgstr "Cor de _fundo:"
 
-#: ../src/gnome-mahjongg.vala:595
+#: ../src/gnome-mahjongg.vala:529
+msgid "_Close"
+msgstr "_Fechar"
+
+#: ../src/gnome-mahjongg.vala:596
 msgid "Main game:"
 msgstr "Jogo principal:"
 
-#: ../src/gnome-mahjongg.vala:604
+#: ../src/gnome-mahjongg.vala:605
 msgid "Maps:"
 msgstr "Mapas:"
 
-#: ../src/gnome-mahjongg.vala:612
+#: ../src/gnome-mahjongg.vala:613
 msgid "Tiles:"
 msgstr "Pedras:"
 
-#: ../src/gnome-mahjongg.vala:632
-msgid ""
-"A matching game played with Mahjongg tiles\n"
-"\n"
-"Mahjongg is a part of GNOME Games."
-msgstr ""
-"Um jogo de memória jogado com as pedras do Mahjongg\n"
-"\n"
-"Mahjongg faz parte do GNOME Games."
+#: ../src/gnome-mahjongg.vala:633
+msgid "A matching game played with Mahjongg tiles"
+msgstr "Um jogo de combinação jogado com as pedras do Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:638
+#: ../src/gnome-mahjongg.vala:639
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -332,31 +328,9 @@ msgstr ""
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: ../src/gnome-mahjongg.vala:655
 msgid "Unpause the game"
 msgstr "Continua o jogo"
-
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably only
-#. * need to change the English on the left. Probably.
-#.
-#: ../src/gnome-mahjongg.vala:756
-#, c-format
-msgid "Time: %02d∶‎%02d∶‎%02d"
-msgstr "Tempo: %02d∶‎%02d∶‎%02d"
-
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably only need to change the English
-#. * on the left. Probably.
-#.
-#: ../src/gnome-mahjongg.vala:766
-#, c-format
-msgid "Time: %02d∶‎%02d"
-msgstr "Tempo: %02d∶‎%02d"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
@@ -378,11 +352,14 @@ msgstr "Data"
 msgid "Time"
 msgstr "Temp"
 
+#~ msgid "Time: %02d∶‎%02d∶‎%02d"
+#~ msgstr "Tempo: %02d∶‎%02d∶‎%02d"
+
+#~ msgid "Time: %02d∶‎%02d"
+#~ msgstr "Tempo: %02d∶‎%02d"
+
 #~ msgid "Mahjongg Preferences"
 #~ msgstr "Preferências do Mahjongg"
-
-#~ msgid "_Close"
-#~ msgstr "_Fechar"
 
 #~ msgid "true if the window is fullscren"
 #~ msgstr "verdadeiro se a janela estiver em tela cheia"
