@@ -2,15 +2,17 @@
 # Copyright (C) 1998-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+#
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mahjongg master\n"
+"Project-Id-Version: gnome-mahjongg gnome-3-16\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-31 17:14+0100\n"
-"PO-Revision-Date: 2014-12-05 23:35+0100\n"
+"POT-Creation-Date: 2015-03-24 14:36+0100\n"
+"PO-Revision-Date: 2015-03-24 14:36+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -53,8 +55,8 @@ msgstr ""
 "besteak zailak. Larri zaudenean, eskatu argibide bat (honek ordea zigor gisa "
 "denbora handiagotzen du)."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:814
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
+#: ../src/gnome-mahjongg.vala:815
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -137,89 +139,88 @@ msgstr "Zailtasuna"
 msgid "Paused"
 msgstr "Pausarazita"
 
-#: ../src/gnome-mahjongg.vala:33
+#: ../src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Erakutsi bertsioaren informazioa eta irten"
 
-#: ../src/gnome-mahjongg.vala:93
+#: ../src/gnome-mahjongg.vala:94
 msgid "Moves Left:"
 msgstr "Zenbat mugimendu:"
 
-#: ../src/gnome-mahjongg.vala:119
+#: ../src/gnome-mahjongg.vala:120
 msgid "Undo your last move"
 msgstr "Desegin zure azken mugimendua"
 
-#: ../src/gnome-mahjongg.vala:125
+#: ../src/gnome-mahjongg.vala:126
 msgid "Redo your last move"
 msgstr "Berregin zure azken mugimendua"
 
-#: ../src/gnome-mahjongg.vala:131
+#: ../src/gnome-mahjongg.vala:132
 msgid "Receive a hint for your next move"
 msgstr "Jaso argibidea zure hurrengo mugimendurako"
 
-#: ../src/gnome-mahjongg.vala:136 ../src/gnome-mahjongg.vala:659
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:660
 msgid "Pause the game"
 msgstr "Jokoa pausarazten du"
 
-#: ../src/gnome-mahjongg.vala:155
+#: ../src/gnome-mahjongg.vala:156
 msgid "_Mahjongg"
 msgstr "_Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:156 ../src/menu.ui.h:1
+#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
 msgid "_New Game"
 msgstr "_Joko berria"
 
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:2
+#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
 msgid "_Restart Game"
 msgstr "_Hasi berriro jokoa"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:3
+#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
 msgid "_Scores"
 msgstr "_Puntuazioak"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:4
+#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
 msgid "_Preferences"
 msgstr "_Hobespenak"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:7
+#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
 #: ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../src/gnome-mahjongg.vala:162 ../src/menu.ui.h:5
+#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/gnome-mahjongg.vala:163
+#: ../src/gnome-mahjongg.vala:164
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: ../src/gnome-mahjongg.vala:164 ../src/menu.ui.h:6
+#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:315
 msgid "Do you want to start a new game with this map?"
 msgstr "Mapa honekin joko berria hastea nahi duzu?"
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:316
 msgid "If you continue playing the next game will use the new map."
 msgstr "Jokatzen jarraitzen baduzu, hurrengo jokoak mapa berria erabiliko du."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:317
 msgid "_Continue playing"
 msgstr "_Jarraitu jokatzen"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:318
 msgid "Use _new map"
 msgstr "Erabili _mapa berria"
 
-#: ../src/gnome-mahjongg.vala:385
+#: ../src/gnome-mahjongg.vala:386
 msgid "There are no more moves."
 msgstr "Ezin da mugimendu gehiago egin."
 
-#: ../src/gnome-mahjongg.vala:386
-#, c-format
+#: ../src/gnome-mahjongg.vala:387
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -228,76 +229,70 @@ msgstr ""
 "ditzakezu eta irtenbidea aurkitzen saiatu, joko hau berrabiarazi edo hasi "
 "berri bat."
 
-#: ../src/gnome-mahjongg.vala:388
+#: ../src/gnome-mahjongg.vala:389
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
 " Jokoa ausaz nahas dezakezu, baina horrek ez dizu ebazpen bat ziurtatzen."
 
-#: ../src/gnome-mahjongg.vala:389
+#: ../src/gnome-mahjongg.vala:390
 msgid "_Undo"
 msgstr "_Desegin"
 
-#: ../src/gnome-mahjongg.vala:390
+#: ../src/gnome-mahjongg.vala:391
 msgid "_Restart"
 msgstr "_Hasi berriro"
 
-#: ../src/gnome-mahjongg.vala:391
+#: ../src/gnome-mahjongg.vala:392
 msgid "_New game"
 msgstr "Joko _berria"
 
-#: ../src/gnome-mahjongg.vala:392
+#: ../src/gnome-mahjongg.vala:393
 msgid "_Shuffle"
 msgstr "_Nahasi"
 
-#: ../src/gnome-mahjongg.vala:444
+#: ../src/gnome-mahjongg.vala:445
 msgid "Preferences"
 msgstr "Hobespenak"
 
-#: ../src/gnome-mahjongg.vala:460
+#: ../src/gnome-mahjongg.vala:461
 msgid "_Theme:"
 msgstr "_Gaia:"
 
-#: ../src/gnome-mahjongg.vala:488
+#: ../src/gnome-mahjongg.vala:489
 msgid "_Layout:"
 msgstr "_Diseinua:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: ../src/gnome-mahjongg.vala:515
 msgid "_Background color:"
 msgstr "Atzeko pla_noaren kolorea:"
 
-#: ../src/gnome-mahjongg.vala:528
+#: ../src/gnome-mahjongg.vala:529
 msgid "_Close"
 msgstr "It_xi"
 
-#: ../src/gnome-mahjongg.vala:595
+#: ../src/gnome-mahjongg.vala:596
 msgid "Main game:"
 msgstr "Joko nagusia:"
 
-#: ../src/gnome-mahjongg.vala:604
+#: ../src/gnome-mahjongg.vala:605
 msgid "Maps:"
 msgstr "Mapak:"
 
-#: ../src/gnome-mahjongg.vala:612
+#: ../src/gnome-mahjongg.vala:613
 msgid "Tiles:"
 msgstr "Fitxak:"
 
-#: ../src/gnome-mahjongg.vala:632
-msgid ""
-"A matching game played with Mahjongg tiles\n"
-"\n"
-"Mahjongg is a part of GNOME Games."
-msgstr ""
-"Mahjongg fitxak bat etorrarazteko jokoa.\n"
-"\n"
-"GNOME Games-ekoa da GNOME Mahjongg."
+#: ../src/gnome-mahjongg.vala:633
+msgid "A matching game played with Mahjongg tiles"
+msgstr "Mahjongg fitxak bat etorrarazteko jokoa."
 
-#: ../src/gnome-mahjongg.vala:638
+#: ../src/gnome-mahjongg.vala:639
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: ../src/gnome-mahjongg.vala:655
 msgid "Unpause the game"
 msgstr "Jokoa jarraitzen du"
 
