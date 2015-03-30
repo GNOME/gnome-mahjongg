@@ -10,7 +10,9 @@ icon22_DATA = 22x22/gnome-mahjongg.png
 icon24_DATA = 24x24/gnome-mahjongg.png
 icon32_DATA = 32x32/gnome-mahjongg.png
 icon48_DATA = 48x48/gnome-mahjongg.png
-iconscalable_DATA = scalable/gnome-mahjongg.svg
+iconscalable_DATA = \
+  scalable/gnome-mahjongg.svg \
+  scalable/gnome-mahjongg-symbolic.svg
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(iconscalable_DATA)
 
