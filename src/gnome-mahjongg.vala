@@ -172,7 +172,6 @@ public class Mahjongg : Gtk.Application
         header_bar.pack_end (hint_button);
         header_bar.pack_end (pause_button);
 
-        var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         if (!is_desktop ("Unity"))
         {
             header_bar.set_show_close_button (true);
