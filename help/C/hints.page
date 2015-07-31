@@ -35,7 +35,7 @@
 
   <p><gui>Hint</gui> can be accessed by clicking
   <guiseq><gui>Mahjongg</gui><gui>Hint</gui></guiseq>. Alternatively, use the
-  <gui>Hint</gui> button in the <link xref="toolbar">toolbar</link>, or press
+  <gui>Hint</gui> button in the header bar, or press
   <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
 
   <note>

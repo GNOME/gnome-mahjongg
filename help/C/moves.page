@@ -22,7 +22,7 @@
   <title>Moves left</title>
 
   <p>The <gui>Moves Left</gui> counter is located on the
-   <link xref="toolbar">toolbar</link>. It displays the number of different
+   header bar. It displays the number of different
    moves that can be made. It can help you see how far you are from running out
    of moves, and whether you've seen all possible moves.</p>
 
