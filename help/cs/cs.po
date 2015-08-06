@@ -1,13 +1,14 @@
 # Czech translation of mahjongg help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the mahjongg help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014.
+#
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2015-02-04 07:57+0000\n"
-"PO-Revision-Date: 2014-04-23 09:09+0100\n"
+"POT-Creation-Date: 2015-08-06 07:21+0000\n"
+"PO-Revision-Date: 2015-08-06 09:40+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -325,13 +326,11 @@ msgstr ""
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
-"in the <link xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</"
-"key><key>H</key></keyseq>."
+"in the header bar, or press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr ""
 "K <gui>radě</gui> se můžete dostat kliknutím na <guiseq><gui>Mahjongg</gui> "
 "<gui>Rada</gui></guiseq>. Případně můžete použít tlačítko <gui>Rada</gui> na "
-"<link xref=\"toolbar\">nástrojové liště</link> nebo zmáčknout "
-"<keyseq><key>Ctrl</key><key>H</key></keyseq>."
+"hlavičkové liště nebo zmáčknout <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/hints.page:42
@@ -667,9 +666,9 @@ msgstr "<em>Obtížné</em>"
 #: C/moves.page:29
 msgctxt "_"
 msgid ""
-"external ref='figures/moves-left.png' md5='14c686ce7c508a81d4c246091d54febc'"
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
 msgstr ""
-"external ref='figures/moves-left.png' md5='14c686ce7c508a81d4c246091d54febc'"
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
 
 #. (itstool) path: page/title
 #: C/moves.page:22
@@ -679,15 +678,15 @@ msgstr "Kolik zbývá tahů"
 #. (itstool) path: page/p
 #: C/moves.page:24
 msgid ""
-"The <gui>Moves Left</gui> counter is located on the <link xref=\"toolbar"
-"\">toolbar</link>. It displays the number of different moves that can be "
-"made. It can help you see how far you are from running out of moves, and "
-"whether you've seen all possible moves."
+"The <gui>Moves Left</gui> counter is located on the header bar. It displays "
+"the number of different moves that can be made. It can help you see how far "
+"you are from running out of moves, and whether you've seen all possible "
+"moves."
 msgstr ""
-"Počítadlo <gui>Zbývajících tahů</gui> je umístěno na <link xref=\"toolbar"
-"\">nástrojové liště</link>. Zobrazuje počet různých tahů, které je možné "
-"vykonat. Pomůže vám to se zorientovat, kolik tahů vám zbývá, než se "
-"dostanete do situace, kdy nebude žádný tah možný."
+"Počítadlo <gui>Zbývajících tahů</gui> je umístěno na hlavičkové liště. "
+"Zobrazuje počet různých tahů, které je možné vykonat. Pomůže vám to se "
+"zorientovat, kolik tahů vám zbývá, než se dostanete do situace, kdy nebude "
+"žádný tah možný."
 
 #. (itstool) path: media/p
 #: C/moves.page:30
@@ -706,11 +705,8 @@ msgstr "Svoji hru můžete pozastavit následujícími způsoby:"
 
 #. (itstool) path: item/p
 #: C/pause.page:32
-msgid ""
-"The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
-msgstr ""
-"Tlačítko <gui>Pozastavit</gui> na <link xref=\"toolbar\">nástrojové liště</"
-"link>."
+msgid "The <gui>Pause</gui> button in the header bar."
+msgstr "Tlačítko <gui>Pozastavit</gui> na hlavičkové liště."
 
 #. (itstool) path: item/p
 #: C/pause.page:36
@@ -862,12 +858,11 @@ msgstr "<key>Pause</key>"
 #. (itstool) path: note/p
 #: C/shortcuts.page:43
 msgid ""
-"Use the <link xref=\"toolbar\">toolbar</link> <gui>Pause</gui> button if "
-"your keyboard does not have a <key>Pause</key> key."
+"Use the header bar <gui>Pause</gui> button if your keyboard does not have a "
+"<key>Pause</key> key."
 msgstr ""
 "V případě, že vaše klávesnice nemá tlačítko <key>Pause</key>, použijte "
-"tlačítko <gui>Pozastavit</gui> na <link xref=\"toolbar\">nástrojové liště</"
-"link>."
+"tlačítko <gui>Pozastavit</gui> na hlavičkové liště."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:50
