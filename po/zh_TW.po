@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-20 20:00+0000\n"
+"POT-Creation-Date: 2015-07-21 19:18+0000\n"
 "PO-Revision-Date: 2015-02-21 15:52+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
@@ -53,8 +53,8 @@ msgstr ""
 "GNOME 上海麻將有多種起始的配置，有些簡單有些困難。如果您遇到難題，可以要求提"
 "示，但這樣會加上大量的時間。"
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
-#: ../src/gnome-mahjongg.vala:815
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
+#: ../src/gnome-mahjongg.vala:814
 msgid "Mahjongg"
 msgstr "上海麻將"
 
@@ -157,7 +157,7 @@ msgstr "取消還原上一步"
 msgid "Receive a hint for your next move"
 msgstr "給下一步的提示"
 
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:660
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:659
 msgid "Pause the game"
 msgstr "暫停遊戲"
 
@@ -198,27 +198,27 @@ msgstr "內容(_C)"
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:314
 msgid "Do you want to start a new game with this map?"
 msgstr "您是否要以這個排列開始新的遊戲？"
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:315
 msgid "If you continue playing the next game will use the new map."
 msgstr "如果您選擇繼續玩，下一局就會用新的麻將排列。"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:316
 msgid "_Continue playing"
 msgstr "繼續玩(_C)"
 
-#: ../src/gnome-mahjongg.vala:318
+#: ../src/gnome-mahjongg.vala:317
 msgid "Use _new map"
 msgstr "使用新的排列(_N)"
 
-#: ../src/gnome-mahjongg.vala:386
+#: ../src/gnome-mahjongg.vala:385
 msgid "There are no more moves."
 msgstr "沒有任何可移走的牌了。"
 
-#: ../src/gnome-mahjongg.vala:387
+#: ../src/gnome-mahjongg.vala:386
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -226,65 +226,65 @@ msgstr ""
 "每個題目都至少會有一種解法。您可以復原您的動作，並在時間內找出解答、重新開始"
 "這局或挑戰別關。"
 
-#: ../src/gnome-mahjongg.vala:389
+#: ../src/gnome-mahjongg.vala:388
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr "您也可以將遊戲重新洗牌，但這不保證會有解答。"
 
-#: ../src/gnome-mahjongg.vala:390
+#: ../src/gnome-mahjongg.vala:389
 msgid "_Undo"
 msgstr "復原移動(_U)"
 
-#: ../src/gnome-mahjongg.vala:391
+#: ../src/gnome-mahjongg.vala:390
 msgid "_Restart"
 msgstr "再玩(_R)"
 
-#: ../src/gnome-mahjongg.vala:392
+#: ../src/gnome-mahjongg.vala:391
 msgid "_New game"
 msgstr "開新局(_N)"
 
-#: ../src/gnome-mahjongg.vala:393
+#: ../src/gnome-mahjongg.vala:392
 msgid "_Shuffle"
 msgstr "洗牌(_S)"
 
-#: ../src/gnome-mahjongg.vala:445
+#: ../src/gnome-mahjongg.vala:444
 msgid "Preferences"
 msgstr "偏好設定"
 
-#: ../src/gnome-mahjongg.vala:461
+#: ../src/gnome-mahjongg.vala:460
 msgid "_Theme:"
 msgstr "佈景主題(_T)："
 
-#: ../src/gnome-mahjongg.vala:489
+#: ../src/gnome-mahjongg.vala:488
 msgid "_Layout:"
 msgstr "配置(_L):"
 
-#: ../src/gnome-mahjongg.vala:515
+#: ../src/gnome-mahjongg.vala:514
 msgid "_Background color:"
 msgstr "背景顏色(_B)："
 
-#: ../src/gnome-mahjongg.vala:529
+#: ../src/gnome-mahjongg.vala:528
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../src/gnome-mahjongg.vala:596
+#: ../src/gnome-mahjongg.vala:595
 msgid "Main game:"
 msgstr "主遊戲："
 
-#: ../src/gnome-mahjongg.vala:605
+#: ../src/gnome-mahjongg.vala:604
 msgid "Maps:"
 msgstr "排列:"
 
-#: ../src/gnome-mahjongg.vala:613
+#: ../src/gnome-mahjongg.vala:612
 msgid "Tiles:"
 msgstr "牌面:"
 
-#: ../src/gnome-mahjongg.vala:633
+#: ../src/gnome-mahjongg.vala:632
 msgid "A matching game played with Mahjongg tiles"
 msgstr "使用麻將牌玩的配對遊戲"
 
-#: ../src/gnome-mahjongg.vala:639
+#: ../src/gnome-mahjongg.vala:638
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -294,7 +294,7 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/gnome-mahjongg.vala:655
+#: ../src/gnome-mahjongg.vala:654
 msgid "Unpause the game"
 msgstr "取消暫停遊戲"
 
@@ -995,7 +995,7 @@ msgstr "時間"
 #~ msgstr "棋子款式"
 
 #~ msgid "Ball style. The filename of the images to use for the balls."
-#~ msgstr "棋子款式。設定值為棋子的圖片檔名。"
+#~ msgstr "棋子款式。設定值為棋子的影像檔名。"
 
 #~ msgid "Background color"
 #~ msgstr "背景顏色"
@@ -1255,7 +1255,7 @@ msgstr "時間"
 #~ "Unable to load image:\n"
 #~ "%s"
 #~ msgstr ""
-#~ "無法載入圖片:\n"
+#~ "無法載入影像:\n"
 #~ "%s"
 
 #~ msgid "It's a draw!"
