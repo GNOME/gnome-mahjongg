@@ -45,7 +45,7 @@ public class GameView : Gtk.DrawingArea
     public GameView ()
     {
         can_focus = true;
-        add_events (Gdk.EventMask.BUTTON_PRESS_MASK);
+        add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
     }
 
     public void set_background (string? colour)
