@@ -1,3 +1,8 @@
+GNOME Mahjongg 3.16.2
+=====================
+
+* Fixed event propagation for gestures (Carlos Garnacho)
+
 GNOME Mahjongg 3.16.1
 =====================
 
