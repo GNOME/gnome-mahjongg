@@ -5,20 +5,21 @@
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2009, 2012.
 # Philipp Kerling <k.philipp@gmail.com>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2014-08-01 23:52+0000\n"
-"PO-Revision-Date: 2014-07-27 18:14+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"POT-Creation-Date: 2015-10-28 07:03+0000\n"
+"PO-Revision-Date: 2015-10-30 07:04+0100\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -26,37 +27,37 @@ msgid "translator-credits"
 msgstr ""
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012\n"
 "Andre Klapper <ak47@gmx.net>, 2009\n"
-"Christian Kirbach <Christian.Kirbach@gmail.com>, 2012\n"
+"Christian Kirbach <Christian.Kirbach@gmail.com>, 2012, 2015\n"
 "Benjamin Steinwender <b@stbe.at>, 2014"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:10 C/develop.page:10 C/documentation.page:8
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:8
 #: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
 #: C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
-#: C/bug-filing.page:12 C/develop.page:12 C/documentation.page:10
+#: C/bug-filing.page:11 C/develop.page:12 C/documentation.page:10
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:15 C/choosing.page:14 C/develop.page:15
-#: C/documentation.page:13 C/gameplay.page:22 C/hints.page:26 C/index.page:18
-#: C/moves.page:18 C/pause.page:22 C/rules.page:21 C/scoring.page:17
-#: C/shortcuts.page:18 C/translate.page:23
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:13
+#: C/gameplay.page:22 C/hints.page:26 C/index.page:18 C/moves.page:18
+#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
+#: C/translate.page:23
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
-#: C/bug-filing.page:19
+#: C/bug-filing.page:18
 msgid "Report a Problem"
 msgstr "Einen Fehlerbericht erstellen"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:20
+#: C/bug-filing.page:19
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
@@ -68,7 +69,7 @@ msgstr ""
 "Besuchen Sie hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:23
+#: C/bug-filing.page:22
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -77,7 +78,7 @@ msgstr ""
 "über Fehler, Abstürze und Verbesserungswünsche hinterlassen können."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:26
+#: C/bug-filing.page:25
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -91,7 +92,7 @@ msgstr ""
 "gui>, um eines anzulegen."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:30
+#: C/bug-filing.page:29
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
@@ -109,7 +110,7 @@ msgstr ""
 "vielleicht schon gemeldet wurde."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:38
+#: C/bug-filing.page:37
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -121,7 +122,7 @@ msgstr ""
 "Sie auf <gui>Commit</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:42
+#: C/bug-filing.page:41
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -155,7 +156,7 @@ msgstr ""
 "Symbolen im Thema »Smooth«. Die Gruppe der Jahreszeiten besteht aus gelben "
 "Frühlingsmotiven im Thema »Postmodern« und schwarzen Symbolen im Thema "
 "»Smooth«. Gleiche Bonuskacheln werden für das Thema »Postmodern« gesucht und "
-"Bonuskacheln mit den selben Symbolfarben werden für das Thema »Smooth« "
+"Bonuskacheln mit denselben Symbolfarben werden für das Thema »Smooth« "
 "gesucht. "
 
 #. (itstool) path: page/p
@@ -164,18 +165,6 @@ msgid "Some of the matching bonus tiles in smooth theme are shown below:"
 msgstr ""
 "Unten sind einige der übereinstimmenden Bonuskacheln im Thema »Smooth« "
 "gezeigt:"
-
-#. (itstool) path: credit/name
-#: C/choosing.page:10 C/gameplay.page:10 C/hints.page:10 C/index.page:14
-#: C/moves.page:10 C/pause.page:10 C/rules.page:9 C/scoring.page:9
-#: C/shortcuts.page:10
-msgid "Chris Beiser"
-msgstr "Chris Beiser"
-
-#. (itstool) path: page/title
-#: C/choosing.page:18
-msgid "Select a board"
-msgstr "Eine Karte wählen"
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -195,17 +184,17 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Falls Sie <link href=\"https://live.gnome.org/GnomeGames/Contributing\">bei "
-"der Entwicklung <app>GNOME Games</app> helfen möchten</link>, können Sie mit "
-"den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">bei "
+"der Entwicklung von <app>GNOME Games</app> helfen möchten</link>, können Sie "
+"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc"
+"%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
 "\"http://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
 "Kontakt aufnehmen."
 
@@ -244,6 +233,12 @@ msgid ""
 msgstr ""
 "Unser <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:10 C/hints.page:10 C/index.page:14 C/moves.page:10
+#: C/pause.page:10 C/rules.page:9 C/scoring.page:9 C/shortcuts.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
@@ -339,14 +334,12 @@ msgstr ""
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
-"in the <link xref=\"toolbar\">toolbar</link>, or press <keyseq><key>Ctrl</"
-"key><key>H</key></keyseq>."
+"in the header bar, or press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr ""
 "Einen <gui>Tipp</gui> können Sie anzeigen lassen, indem Sie "
 "<guiseq><gui>Mahjongg</gui><gui>Tipp</gui></guiseq> wählen. Alternativ "
-"können Sie den <gui>Tipp</gui>-Knopf in der <link xref=\"toolbar"
-"\">Werkzeugleiste</link> oder <keyseq><key>Strg</key><key>H</key></keyseq> "
-"drücken."
+"können Sie den <gui>Tipp</gui>-Knopf in der Kopfleiste oder "
+"<keyseq><key>Strg</key><key>H</key></keyseq> drücken."
 
 #. (itstool) path: note/p
 #: C/hints.page:42
@@ -537,7 +530,7 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Den vollständigen Text der Lizenz finden sie auf der <link href=\"http://"
+"Den vollständigen Text der Lizenz finden Sie auf der <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons-Webseite</"
 "link>. Oder Sie können den vollständigen <link href=\"http://creativecommons."
 "org/licenses/by-sa/3.0/\">Commons Deed</link> lesen."
@@ -694,9 +687,14 @@ msgstr "<em>Schwer</em>"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/moves.page:29
+#, fuzzy
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/moves-left.png' "
+#| "md5='14c686ce7c508a81d4c246091d54febc'"
 msgctxt "_"
 msgid ""
-"external ref='figures/moves-left.png' md5='14c686ce7c508a81d4c246091d54febc'"
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
 msgstr "translated"
 
 #. (itstool) path: page/title
@@ -707,16 +705,15 @@ msgstr "Verbleibende Züge"
 #. (itstool) path: page/p
 #: C/moves.page:24
 msgid ""
-"The <gui>Moves Left</gui> counter is located on the <link xref=\"toolbar"
-"\">toolbar</link>. It displays the number of different moves that can be "
-"made. It can help you see how far you are from running out of moves, and "
-"whether you've seen all possible moves."
+"The <gui>Moves Left</gui> counter is located on the header bar. It displays "
+"the number of different moves that can be made. It can help you see how far "
+"you are from running out of moves, and whether you've seen all possible "
+"moves."
 msgstr ""
-"In der <link xref=\"toolbar\">Werkzeugleiste</link> finden Sie einen Zähler "
-"für verbleibende Züge. Er zeigt die Anzahl der möglichen Züge für die "
-"aktuelle Anordnung. Dadurch sehen Sie, wie weit Sie davon entfernt sind, "
-"keine Züge mehr vornehmen zu können, und ob Ihnen vielleicht mögliche Züge "
-"entgangen sind."
+"In der Kopfleiste finden Sie einen Zähler für verbleibende Züge. Er zeigt "
+"die Anzahl der möglichen Züge für die aktuelle Anordnung. Dadurch sehen Sie, "
+"wie weit Sie davon entfernt sind, keine Züge mehr vornehmen zu können, und "
+"ob Ihnen vielleicht mögliche Züge entgangen sind."
 
 #. (itstool) path: media/p
 #: C/moves.page:30
@@ -735,11 +732,8 @@ msgstr "Sie können Ihr Spiel folgendermaßen unterbrechen:"
 
 #. (itstool) path: item/p
 #: C/pause.page:32
-msgid ""
-"The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
-msgstr ""
-"Der <gui>Pause</gui>-Knopf in der <link xref=\"toolbar\">Werkzeugleiste</"
-"link>."
+msgid "The <gui>Pause</gui> button in the header bar."
+msgstr "Der <gui>Pause</gui>-Knopf in der Kopfleiste."
 
 #. (itstool) path: item/p
 #: C/pause.page:36
@@ -899,12 +893,11 @@ msgstr "<key>Pause</key>"
 #. (itstool) path: note/p
 #: C/shortcuts.page:43
 msgid ""
-"Use the <link xref=\"toolbar\">toolbar</link> <gui>Pause</gui> button if "
-"your keyboard does not have a <key>Pause</key> key."
+"Use the header bar <gui>Pause</gui> button if your keyboard does not have a "
+"<key>Pause</key> key."
 msgstr ""
-"Verwenden Sie den <gui>Pause</gui>-Knopf der <link xref=\"toolbar"
-"\">Werkzeugleiste</link>, falls Ihre Tastatur nicht über eine <key>Pause</"
-"key>-Taste verfügt."
+"Verwenden Sie den <gui>Pause</gui>-Knopf der Kopfleiste, falls Ihre Tastatur "
+"nicht über eine <key>Pause</key>-Taste verfügt."
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:50
@@ -1027,15 +1020,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:40
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n chanel on the "
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
 "may not get an immediate response as a result of timezone differences."
 msgstr ""
-"Sie können mit GNOME-Übersetzern im IRC chatten: Treten Sie dem Kanal #i18n "
-"auf dem Server irc.gnome.org bei. Die Teilnehmer in diesem Kanal sind über "
-"die ganze Welt verstreut. Dies bedeutet,  dass Sie aufgrund der "
-"unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort erhalten "
-"werden."
+"Sie können sich mit GNOME-Übersetzern im IRC unterhalten: Treten Sie dem "
+"Kanal #i18n auf dem Server irc.gnome.org bei. Die Teilnehmer in diesem Kanal "
+"sind über die ganze Welt verstreut. Es kann sein, dass Sie aufgrund der "
+"unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort erhalten."
 
 #. (itstool) path: page/p
 #: C/translate.page:44
@@ -1044,9 +1036,12 @@ msgid ""
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Alternativ können Sie das Internationaliserungsteam über dessen <link href="
+"Alternativ können Sie das Internationalisierungsteam über dessen <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
+
+#~ msgid "Select a board"
+#~ msgstr "Eine Karte wählen"
 
 #~ msgctxt "_"
 #~ msgid ""
