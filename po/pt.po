@@ -52,9 +52,9 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"O GNOME Mahjongg dispõe de uma variedade de disposições, algumas fáceis e "
-"algumas difíceis. Se ficar bloqueado pode pedir uma dica, mas isso adiciona "
-"uma grande penalização de tempo."
+"O GNOME Mahjongg mostra uma variedade de disposições, algumas fáceis e "
+"algumas difíceis. Se ficar bloqueado pode pedir uma dica, mas isso "
+"adicionará uma grande penalização de tempo."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
 #: ../src/gnome-mahjongg.vala:815
@@ -207,7 +207,7 @@ msgstr "Deseja iniciar um novo jogo com este mapa?"
 
 #: ../src/gnome-mahjongg.vala:316
 msgid "If you continue playing the next game will use the new map."
-msgstr "Se continuar a jogar o próximo jogo irá utilizar o novo mapa."
+msgstr "Se continuar a jogar o próximo jogo utilizará o novo mapa."
 
 #: ../src/gnome-mahjongg.vala:317
 msgid "_Continue playing"
@@ -300,7 +300,7 @@ msgstr ""
 
 #: ../src/gnome-mahjongg.vala:655
 msgid "Unpause the game"
-msgstr "Continuar o jogo"
+msgstr "Prosseguir o jogo"
 
 #: ../src/score-dialog.vala:29
 msgid "New Game"
