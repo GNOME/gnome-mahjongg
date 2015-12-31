@@ -10,15 +10,15 @@
 # Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
-# Muhammet Kara <muhammetk@gmail.com>, 2011, 2014.
+# Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-25 11:43+0000\n"
-"PO-Revision-Date: 2014-12-04 23:01+0200\n"
+"POT-Creation-Date: 2015-12-31 09:23+0000\n"
+"PO-Revision-Date: 2015-12-31 21:33+0200\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -26,10 +26,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
-#| msgid "Mahjongg"
 msgid "GNOME Mahjongg"
 msgstr "GNOME Mahjongg"
 
@@ -65,15 +64,13 @@ msgstr "Eşleşen çiftleri çıkartarak bir duzlemi kullanılır hale getirin"
 
 #: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr ""
+msgstr "oyun;strateji;bulmaca;tahta;"
 
 #: ../data/org.gnome.mahjongg.gschema.xml.h:1
-#| msgid "The width of the main window in pixels."
 msgid "Width of the window in pixels"
 msgstr "Pencerenin piksel olarak genişliği"
 
 #: ../data/org.gnome.mahjongg.gschema.xml.h:2
-#| msgid "The height of the main window in pixels."
 msgid "Height of the window in pixels"
 msgstr "Pencerenin piksel olarak yüksekliği"
 
@@ -140,74 +137,66 @@ msgstr "Zor"
 msgid "Paused"
 msgstr "Dondur"
 
-#: ../src/gnome-mahjongg.vala:33
-#| msgid "Show release version"
+#: ../src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Yayım sürümünü yazdır ve çık"
 
-#: ../src/gnome-mahjongg.vala:93
+#: ../src/gnome-mahjongg.vala:94
 msgid "Moves Left:"
 msgstr "Kalan Hareket:"
 
-#: ../src/gnome-mahjongg.vala:119
-#| msgid "Undo the last move"
+#: ../src/gnome-mahjongg.vala:120
 msgid "Undo your last move"
 msgstr "Son hareketinizi geri alın"
 
-#: ../src/gnome-mahjongg.vala:125
-#| msgid "Redo the last move"
+#: ../src/gnome-mahjongg.vala:126
 msgid "Redo your last move"
 msgstr "Son hareketinizi yineleyin"
 
-#: ../src/gnome-mahjongg.vala:131
-#, fuzzy
+#: ../src/gnome-mahjongg.vala:132
 #| msgid "Get a hint for your next move"
 msgid "Receive a hint for your next move"
-msgstr "Bir sonra ki hamle için ipucu al"
+msgstr "Sonraki hamleniz için bir ipucu alın"
 
-#: ../src/gnome-mahjongg.vala:136 ../src/gnome-mahjongg.vala:659
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:659
 msgid "Pause the game"
 msgstr "Oyunu duraklat"
 
-#: ../src/gnome-mahjongg.vala:155
-#| msgid "Mahjongg"
+#: ../src/gnome-mahjongg.vala:156
 msgid "_Mahjongg"
 msgstr "_Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:156 ../src/menu.ui.h:1
+#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
 msgid "_New Game"
 msgstr "Yeni _Oyun"
 
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:2
-#, fuzzy
+#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
 #| msgid "_Restart"
 msgid "_Restart Game"
-msgstr "_Tekrar Başla"
+msgstr "Oyunu _Yeniden Başlat"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:3
+#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
 msgid "_Scores"
 msgstr "_Puanlar"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:4
-#| msgid "Preferences"
+#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
 msgid "_Preferences"
 msgstr "_Tercihler"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:7
+#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
 #: ../src/score-dialog.vala:28
-#| msgid "Quit"
 msgid "_Quit"
 msgstr "_Çıkış"
 
-#: ../src/gnome-mahjongg.vala:162 ../src/menu.ui.h:5
+#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../src/gnome-mahjongg.vala:163
+#: ../src/gnome-mahjongg.vala:164
 msgid "_Contents"
 msgstr "İ_çindekiler"
 
-#: ../src/gnome-mahjongg.vala:164 ../src/menu.ui.h:6
+#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
 msgid "_About"
 msgstr "H_akkında"
 
@@ -297,10 +286,7 @@ msgstr "Desenler:"
 #| "A matching game played with Mahjongg tiles.\n"
 #| "\n"
 #| "Mahjongg is a part of GNOME Games."
-msgid ""
-"A matching game played with Mahjongg tiles\n"
-"\n"
-"Mahjongg is a part of GNOME Games."
+msgid "A matching game played with Mahjongg tiles"
 msgstr ""
 "Mahjongg karoları ile oynanan bir eşleme oyunu.\n"
 "\n"
@@ -310,10 +296,9 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
-"Muhammet Kara <muhammet.k@gmail.com>"
+"Muhammet Kara <muhammetk@gmail.com>"
 
 #: ../src/gnome-mahjongg.vala:654
-#| msgid "Pause the game"
 msgid "Unpause the game"
 msgstr "Oyunu devam ettir"
 
@@ -322,7 +307,6 @@ msgid "New Game"
 msgstr "Yeni Oyun"
 
 #: ../src/score-dialog.vala:32
-#| msgid "_OK"
 msgid "OK"
 msgstr "Tamam"
 
