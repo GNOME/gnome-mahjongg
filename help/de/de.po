@@ -2,7 +2,7 @@
 # Copyright (C) 1998-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 #
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2009, 2012.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2012, 2016.
 # Philipp Kerling <k.philipp@gmail.com>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2015.
@@ -10,9 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2015-10-28 07:03+0000\n"
-"PO-Revision-Date: 2015-10-30 07:04+0100\n"
-"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
+"POT-Creation-Date: 2016-01-01 21:23+0000\n"
+"PO-Revision-Date: 2016-01-01 23:27+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012\n"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2016\n"
 "Andre Klapper <ak47@gmx.net>, 2009\n"
 "Christian Kirbach <Christian.Kirbach@gmail.com>, 2012, 2015\n"
 "Benjamin Steinwender <b@stbe.at>, 2014"
@@ -687,11 +687,6 @@ msgstr "<em>Schwer</em>"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/moves.page:29
-#, fuzzy
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/moves-left.png' "
-#| "md5='14c686ce7c508a81d4c246091d54febc'"
 msgctxt "_"
 msgid ""
 "external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
@@ -1040,131 +1035,3 @@ msgstr ""
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
 
-#~ msgid "Select a board"
-#~ msgstr "Eine Karte wählen"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/logo.png' md5='30e7c21f9d7f9d2b8f129a27cdc5b8e4'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/logo32.png' md5='f93d76f0d72fabf20ba014de92694458'"
-#~ msgstr "original"
-
-#~ msgid ""
-#~ "<media type=\"image\" src=\"figures/logo32.png\">Mahjongg logo</"
-#~ "media>Mahjongg"
-#~ msgstr ""
-#~ "<media type=\"image\" src=\"figures/logo32.png\">Mahjongg-Logo</"
-#~ "media>Mahjongg"
-
-#~ msgid ""
-#~ "To file your bug, choose the component <gui>mahjongg</gui> in the "
-#~ "<gui>Component</gui> menu."
-#~ msgstr ""
-#~ "Um einen Fehler zu melden, wählen Sie <gui>mahjongg</gui> im "
-#~ "<gui>Component</gui>-Menü."
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/mahjongg-video.ogv' "
-#~ "md5='9d16f43fafcb0a80a1fc2afb00f7eb32'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/hints-video.ogv' "
-#~ "md5='128295113f1b22493193997d105f325e'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-easy.png' "
-#~ "md5='188554f9efd15abd2acd1444279970cf'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-ziggurat.png' "
-#~ "md5='ed517c52a0b87c66e64d8fa4db66f9ea'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-bridges.png' "
-#~ "md5='f7b1ee53a56a2d2dd44564c5b497f766'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-cloud.png' "
-#~ "md5='7a33babaa2335c6520f07ef5d0f346ac'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-tic-tac-toe.png' "
-#~ "md5='36e306ca40222e92694d69a7fd6e33d6'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-red-dragon.png' "
-#~ "md5='db5551bcc44c4a4fb879bd7b5179d1f2'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-pyramid-walls.png' "
-#~ "md5='ae9c551967f4d7280d5d875c0491ae67'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-conf-cross.png' "
-#~ "md5='3d81154393ca2db223d7f61c905c3a17'"
-#~ msgstr "original"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/layout-difficult.png' "
-#~ "md5='c38bb2ada00187cdb40b59eae1476cdd'"
-#~ msgstr "original"
-
-#~ msgid "Ekateirna Gerasimova"
-#~ msgstr "Ekateirna Gerasimova"
-
-#~ msgid "Show/hide the toolbar"
-#~ msgstr "Die Werkzeugleiste anzeigen oder verbergen"
-
-#~ msgid ""
-#~ "To show or hide the toolbar, click <guiseq><gui>Mahjongg</"
-#~ "gui><gui>Toolbar</gui></guiseq>."
-#~ msgstr ""
-#~ "Um die Werkzeugleiste anzuzeigen oder zu verbergen, wählen Sie "
-#~ "<guiseq><gui>Mahjongg</gui><gui>Werkzeugleiste</gui></guiseq>."
-
-#~ msgid ""
-#~ "The toolbar, located under the menu bar, lets you perform common actions "
-#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
-#~ "from left to right, are <gui>New</gui> Game, <gui>Undo Move</gui>, "
-#~ "<gui>Redo Move</gui>, <link xref=\"hints\">Hint</link> and <gui>Pause</"
-#~ "gui>."
-#~ msgstr ""
-#~ "Mit der unterhalb der Menüleiste angezeigten Werkzeugleiste können Sie "
-#~ "häufig verwendete Aktionen mit der Maus ausführen. Um ein "
-#~ "Werkzeugleistenobjekt zu nutzen, klicken Sie es einfach an. Die Knöpfe "
-#~ "bedeuten (von links nach rechts): <gui>Neues</gui> Spiel, "
-#~ "<gui>Rückgängig</gui>, <gui>Wiederholen</gui>, <link xref=\"hints\">Tipp</"
-#~ "link> und <gui>Pause</gui>."
-
-#~ msgid "Video demonstation"
-#~ msgstr "Video-Demonstation"
-
-#~ msgid "Your new tile layout will take effect immediately."
-#~ msgstr "Ihr neuer Spielsteinsatz wird sofort verwendet."
-
-#~ msgid "The <link xref=\"shortcuts\">keyboard shortcut</link>."
-#~ msgstr "Über die <link xref=\"shortcuts\">Tastenkombination</link>."
