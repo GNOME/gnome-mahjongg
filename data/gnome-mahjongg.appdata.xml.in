@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<application>
- <id type="desktop">gnome-mahjongg.desktop</id>
- <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
- <_name>GNOME Mahjongg</_name>
- <_summary>Match tiles and clear the board</_summary>
- <description>
-  <_p>
+<component type="desktop">
+  <id>gnome-mahjongg.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <_name>GNOME Mahjongg</_name>
+  <_summary>Match tiles and clear the board</_summary>
+  <description>
+    <_p>
    A solitaire version of the classic Eastern tile game. Tiles are stacked on
    the board at the start of the game. The goal is to remove all the tiles in
    as little time as possible. Select two matching tiles and they will disappear
@@ -15,22 +15,29 @@
    its left or right at the same level. Be careful: tiles that look alike
    may actually be slightly different.
   </_p>
-  <_p>
+    <_p>
    GNOME Mahjongg features a variety of starting layouts, some easy and some
    difficult. If you get stuck, you can ask for a hint, but this adds a large
    time penalty.
   </_p>
- </description>
- <screenshots>
-  <screenshot type="default" width="972" height="524">https://people.gnome.org/~mcatanzaro/gnome-mahjongg.png</screenshot>
- </screenshots>
- <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
- <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
- <project_group>GNOME</project_group>
- <kudos>
-  <kudo>AppMenu</kudo>
-  <kudo>HiDpiIcon</kudo>
-  <kudo>ModernToolkit</kudo>
-  <kudo>UserDocs</kudo>
- </kudos>
-</application>
+  </description>
+  <screenshots>
+    <screenshot height="524" width="972" type="default">
+      <image>https://people.gnome.org/~mcatanzaro/gnome-mahjongg.png</image>
+      <_caption><!-- Describe this screenshot in less than ~10 words --></_caption>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
+  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <project_group>GNOME</project_group>
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
+  <translation type="gettext">gnome-mahjongg</translation>
+</component>
