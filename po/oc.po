@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-21 18:44+0000\n"
+"POT-Creation-Date: 2016-02-18 09:22+0000\n"
 "PO-Revision-Date: 2015-10-31 08:20+0200\n"
 "Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot en òc (totenoc.eu)\n"
@@ -55,8 +55,8 @@ msgstr ""
 "aisidas, d'autras mai dificilas. Se sètz blocat, podètz demandar un indici "
 "mas recevètz alara una penalitat de temps importanta."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:814
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:628
+#: ../src/gnome-mahjongg.vala:813
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -159,7 +159,7 @@ msgstr "Restablir lo darrièr desplaçament"
 msgid "Receive a hint for your next move"
 msgstr "Afichar una astúcia pel còp que ven"
 
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:659
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:658
 msgid "Pause the game"
 msgstr "Met la partida en pausa"
 
@@ -200,29 +200,29 @@ msgstr "_Ensenhador"
 msgid "_About"
 msgstr "A _prepaus"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:313
 msgid "Do you want to start a new game with this map?"
 msgstr "Volètz començar una novèla partida amb aquesta disposicion ?"
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:314
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Se causissètz de contunhar aquesta partida, la partida que ven utilizarà la "
 "novèla disposicion."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:315
 msgid "_Continue playing"
 msgstr "_Contunhar la partida"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:316
 msgid "Use _new map"
 msgstr "Utilizar la _novèla disposicion"
 
-#: ../src/gnome-mahjongg.vala:385
+#: ../src/gnome-mahjongg.vala:384
 msgid "There are no more moves."
 msgstr "O planhèm, i a pas mai de desplaçament possible."
 
-#: ../src/gnome-mahjongg.vala:386
+#: ../src/gnome-mahjongg.vala:385
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -230,7 +230,7 @@ msgstr ""
 "Cada enigma possedís al mens una solucion. Podètz anullar vòstres movements "
 "e ensajar de trobar la solucion, reaviar la partida o n'aviar una novèla."
 
-#: ../src/gnome-mahjongg.vala:388
+#: ../src/gnome-mahjongg.vala:387
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -238,63 +238,63 @@ msgstr ""
 "Tanben podètz ensajar de remesclar los teules, mas aquò garantís pas "
 "l'existéncia d'una solucion."
 
-#: ../src/gnome-mahjongg.vala:389
+#: ../src/gnome-mahjongg.vala:388
 msgid "_Undo"
 msgstr "An_ullar"
 
-#: ../src/gnome-mahjongg.vala:390
+#: ../src/gnome-mahjongg.vala:389
 msgid "_Restart"
 msgstr "_Recomençar"
 
-#: ../src/gnome-mahjongg.vala:391
+#: ../src/gnome-mahjongg.vala:390
 msgid "_New game"
 msgstr "_Novèla partida"
 
-#: ../src/gnome-mahjongg.vala:392
+#: ../src/gnome-mahjongg.vala:391
 msgid "_Shuffle"
 msgstr "_Mesclar"
 
-#: ../src/gnome-mahjongg.vala:444
+#: ../src/gnome-mahjongg.vala:443
 msgid "Preferences"
 msgstr "Preferéncias"
 
-#: ../src/gnome-mahjongg.vala:460
+#: ../src/gnome-mahjongg.vala:459
 msgid "_Theme:"
 msgstr "_Tèma :"
 
-#: ../src/gnome-mahjongg.vala:488
+#: ../src/gnome-mahjongg.vala:487
 msgid "_Layout:"
 msgstr "_Disposicion :"
 
-#: ../src/gnome-mahjongg.vala:514
+#: ../src/gnome-mahjongg.vala:513
 msgid "_Background color:"
-msgstr "C_olor de rèire plan :"
+msgstr "C_olor de rèireplan :"
 
-#: ../src/gnome-mahjongg.vala:528
+#: ../src/gnome-mahjongg.vala:527
 msgid "_Close"
 msgstr "_Tampar"
 
-#: ../src/gnome-mahjongg.vala:595
+#: ../src/gnome-mahjongg.vala:594
 msgid "Main game:"
 msgstr "Jòc principal :"
 
-#: ../src/gnome-mahjongg.vala:604
+#: ../src/gnome-mahjongg.vala:603
 msgid "Maps:"
 msgstr "Disposicions :"
 
-#: ../src/gnome-mahjongg.vala:612
+#: ../src/gnome-mahjongg.vala:611
 msgid "Tiles:"
 msgstr "Teules :"
 
-#: ../src/gnome-mahjongg.vala:632
+#: ../src/gnome-mahjongg.vala:631
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Un jòc de correspondéncias amb de teules Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:638
+#: ../src/gnome-mahjongg.vala:637
 msgid "translator-credits"
 msgstr "Cédric Valmary <cvalmary@yahoo.fr>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: ../src/gnome-mahjongg.vala:653
 msgid "Unpause the game"
 msgstr "Repréner la partida"
 
