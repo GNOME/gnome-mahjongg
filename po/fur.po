@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-27 21:15+0000\n"
-"PO-Revision-Date: 2015-10-28 15:14+0100\n"
+"POT-Creation-Date: 2016-04-08 08:40+0000\n"
+"PO-Revision-Date: 2016-04-08 12:17+0200\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "X-Generator: Poedit 1.8.5\n"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:1
@@ -37,10 +37,10 @@ msgid ""
 msgstr ""
 "Une version dal classic zûc orientâl des tessaris. Al inizi dal zûc lis "
 "tessaris a son metudis in pile su la taule; l'obietîf al è di gjavâ dutis lis "
-"tessaris tal mancul timp pussibil. Selezion dôs tessaris che a si cumbinin e "
+"tessaris tal mancul timp pussibil. Selezion dôs tessaris che si cumbinin e "
 "chestis a sparissin de taule, ma tu puedis selezionâ une tessare dome se al è "
 "un spazi libar te sô çampe o diestre dal stes nivel. Sta atent: tessaris che "
-"a semein compagnis a podaressin sedi in realtât diferentis."
+"a semein compagnis a podaressin jessi in realtât diferentis."
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:4
 msgid ""
@@ -52,14 +52,14 @@ msgstr ""
 "altris dificii. Se tu restis blocât tu puedis domandâ un aiût, ma chest al "
 "zonte une penalitât al timp."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:814
+#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:628
+#: ../src/gnome-mahjongg.vala:813
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
 #: ../data/gnome-mahjongg.desktop.in.h:2
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "Smonte une tasse di tessaris gjavant lis cubiis che a si cumbinin"
+msgstr "Smonte une tasse di tessaris gjavant lis cubiis che si cumbinin"
 
 #: ../data/gnome-mahjongg.desktop.in.h:3
 msgid "game;strategy;puzzle;board;"
@@ -156,7 +156,7 @@ msgstr "Ripet la tô ultime mosse"
 msgid "Receive a hint for your next move"
 msgstr "Ricêf un aiût pe tô prossime mosse"
 
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:659
+#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:658
 msgid "Pause the game"
 msgstr "Met la partide in pause"
 
@@ -197,28 +197,28 @@ msgstr "_Contignûts"
 msgid "_About"
 msgstr "_Informazions"
 
-#: ../src/gnome-mahjongg.vala:314
+#: ../src/gnome-mahjongg.vala:313
 msgid "Do you want to start a new game with this map?"
 msgstr "Vûstu tacâ une gnove partide cun cheste disposizion?"
 
-#: ../src/gnome-mahjongg.vala:315
+#: ../src/gnome-mahjongg.vala:314
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Se tu continuis a zuiâ, la prossime partide a doprarà la gnove disposizion."
 
-#: ../src/gnome-mahjongg.vala:316
+#: ../src/gnome-mahjongg.vala:315
 msgid "_Continue playing"
 msgstr "_Continue a zuiâ"
 
-#: ../src/gnome-mahjongg.vala:317
+#: ../src/gnome-mahjongg.vala:316
 msgid "Use _new map"
 msgstr "Dopre la _gnove disposizion"
 
-#: ../src/gnome-mahjongg.vala:385
+#: ../src/gnome-mahjongg.vala:384
 msgid "There are no more moves."
 msgstr "No restin plui mossis."
 
-#: ../src/gnome-mahjongg.vala:386
+#: ../src/gnome-mahjongg.vala:385
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -226,7 +226,7 @@ msgstr ""
 "Ogni berdei al à almancul une soluzion. Tu puedis anulâ lis tôs mossis e cirî "
 "di cjatâ une soluzion, tornâ a començâ la partide o tacâ une gnove."
 
-#: ../src/gnome-mahjongg.vala:388
+#: ../src/gnome-mahjongg.vala:387
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -234,63 +234,63 @@ msgstr ""
 "Tu puedis ancje provâ a tornâ a messedâ lis tessaris, ma chest nol garantìs "
 "simpri une soluzion."
 
-#: ../src/gnome-mahjongg.vala:389
+#: ../src/gnome-mahjongg.vala:388
 msgid "_Undo"
 msgstr "A_nule mosse"
 
-#: ../src/gnome-mahjongg.vala:390
+#: ../src/gnome-mahjongg.vala:389
 msgid "_Restart"
 msgstr "_Torne tache"
 
-#: ../src/gnome-mahjongg.vala:391
+#: ../src/gnome-mahjongg.vala:390
 msgid "_New game"
 msgstr "_Gnove partide"
 
-#: ../src/gnome-mahjongg.vala:392
+#: ../src/gnome-mahjongg.vala:391
 msgid "_Shuffle"
 msgstr "_Messede"
 
-#: ../src/gnome-mahjongg.vala:444
+#: ../src/gnome-mahjongg.vala:443
 msgid "Preferences"
 msgstr "Preferencis"
 
-#: ../src/gnome-mahjongg.vala:460
+#: ../src/gnome-mahjongg.vala:459
 msgid "_Theme:"
 msgstr "_Teme:"
 
-#: ../src/gnome-mahjongg.vala:488
+#: ../src/gnome-mahjongg.vala:487
 msgid "_Layout:"
 msgstr "_Disposizion:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: ../src/gnome-mahjongg.vala:513
 msgid "_Background color:"
 msgstr "Colôr di _sfont:"
 
-#: ../src/gnome-mahjongg.vala:528
+#: ../src/gnome-mahjongg.vala:527
 msgid "_Close"
 msgstr "_Siere"
 
-#: ../src/gnome-mahjongg.vala:595
+#: ../src/gnome-mahjongg.vala:594
 msgid "Main game:"
 msgstr "Zûc principâl:"
 
-#: ../src/gnome-mahjongg.vala:604
+#: ../src/gnome-mahjongg.vala:603
 msgid "Maps:"
 msgstr "Disposizions:"
 
-#: ../src/gnome-mahjongg.vala:612
+#: ../src/gnome-mahjongg.vala:611
 msgid "Tiles:"
 msgstr "Tessaris:"
 
-#: ../src/gnome-mahjongg.vala:632
+#: ../src/gnome-mahjongg.vala:631
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Un zûc di imbinaments cun lis tessaris Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:638
+#: ../src/gnome-mahjongg.vala:637
 msgid "translator-credits"
 msgstr "Fabio Tomat <f.t.public@gmail.com>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: ../src/gnome-mahjongg.vala:653
 msgid "Unpause the game"
 msgstr "Jes de pause"
 
