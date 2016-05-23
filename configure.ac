@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Mahjongg], [3.20.0], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Mahjongg], [3.21.2], [https://bugzilla.gnome.org/],
         [gnome-mahjongg], [https://wiki.gnome.org/Apps/Mahjongg])
 AC_CONFIG_MACRO_DIR([m4])
 
