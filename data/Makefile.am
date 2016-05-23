@@ -8,7 +8,8 @@ themedir = $(datadir)/gnome-mahjongg/themes
 theme_DATA = \
 	maya.png	\
 	postmodern.svg	\
-	smooth.png
+	smooth.png	\
+	edu_kang_xi.png
 
 gsettings_SCHEMAS = org.gnome.mahjongg.gschema.xml
 @GSETTINGS_RULES@
