@@ -1,3 +1,10 @@
+GNOME Mahjongg 3.21.90
+======================
+
+* Simplify style-checker enabling code(Sahil Sareen)
+* Fix style-checker with new libgnome-games-support(Sahil Sareen)
+* Translation Updates
+
 GNOME Mahjongg 3.21.2
 ======================
 
