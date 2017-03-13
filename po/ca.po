@@ -289,7 +289,7 @@ msgstr "Fitxes:"
 
 #: ../src/gnome-mahjongg.vala:631
 msgid "A matching game played with Mahjongg tiles"
-msgstr "Un joc d'emparellament amb les fitxes del Mahjongg"
+msgstr "Un joc d'aparellament amb les fitxes del Mahjongg"
 
 #: ../src/gnome-mahjongg.vala:637
 msgid "translator-credits"
@@ -315,7 +315,7 @@ msgstr "D'acord"
 
 #: ../src/score-dialog.vala:44
 msgid "Layout:"
-msgstr "Disposició:"
+msgstr "Disposició:"
 
 #: ../src/score-dialog.vala:69
 msgid "Date"
