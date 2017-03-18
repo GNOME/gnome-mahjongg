@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2015 Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
@@ -7,7 +7,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015, 2017
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-07 16:43+0100\n"
-"PO-Revision-Date: 2016-02-04 19:10+0100\n"
+"PO-Revision-Date: 2017-03-18 17:49+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -108,10 +108,11 @@ msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Sky"
 
+# Banen er formet som #
 #: ../data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
-msgstr "Tre på stribe"
+msgstr "Kryds og bolle"
 
 #: ../data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
@@ -131,12 +132,12 @@ msgstr "Pyramidens vægge"
 #: ../data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
-msgstr "Sammenblandet kors"
+msgstr "Forviklet kors"
 
 #: ../data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
-msgstr "Svært"
+msgstr "Vanskelig"
 
 #: ../src/game-view.vala:132
 msgid "Paused"
