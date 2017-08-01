@@ -2,7 +2,7 @@
 # Copyright (C) 1998-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 #
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2012, 2016.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2012, 2016-2017.
 # Philipp Kerling <k.philipp@gmail.com>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2015.
@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2016-01-01 21:23+0000\n"
-"PO-Revision-Date: 2016-01-01 23:27+0100\n"
+"POT-Creation-Date: 2017-07-31 12:10+0000\n"
+"PO-Revision-Date: 2017-08-01 22:23+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -114,12 +114,12 @@ msgstr ""
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie "
 "<gui>enhancement</gui> im Menü <gui>Severity</gui>. Füllen Sie die Felder "
 "»Summary« (Zusammenfassung) und »Description« (Beschreibung) aus und klicken "
-"Sie auf <gui>Commit</gui>."
+"Sie auf <gui>Submit Bug</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:41
@@ -681,17 +681,6 @@ msgstr "<em>Durchbrochenes Kreuz</em>"
 msgid "<em>Difficult</em>"
 msgstr "<em>Schwer</em>"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/moves.page:29
-msgctxt "_"
-msgid ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-msgstr "translated"
-
 #. (itstool) path: page/title
 #: C/moves.page:22
 msgid "Moves left"
@@ -709,6 +698,17 @@ msgstr ""
 "die Anzahl der möglichen Züge für die aktuelle Anordnung. Dadurch sehen Sie, "
 "wie weit Sie davon entfernt sind, keine Züge mehr vornehmen zu können, und "
 "ob Ihnen vielleicht mögliche Züge entgangen sind."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/moves.page:29
+msgctxt "_"
+msgid ""
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
+msgstr "translated"
 
 #. (itstool) path: media/p
 #: C/moves.page:30
@@ -1034,4 +1034,3 @@ msgstr ""
 "Alternativ können Sie das Internationalisierungsteam über dessen <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
-
