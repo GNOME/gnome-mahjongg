@@ -2,13 +2,13 @@
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the mahjongg help.
 #
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2015-08-06 07:21+0000\n"
-"PO-Revision-Date: 2015-08-06 09:40+0100\n"
+"POT-Creation-Date: 2017-07-31 12:10+0000\n"
+"PO-Revision-Date: 2017-08-05 16:05+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -110,11 +110,11 @@ msgstr ""
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "V případě, že žádáte o novou funkčnost, zvolte v nabídce <gui>Severity</gui> "
 "položku <gui>enhancement</gui>. Vyplňte pole Summary a Description a "
-"klikněte na <gui>Commit</gui>."
+"klikněte na <gui>Submit Bug</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:41
@@ -658,18 +658,6 @@ msgstr "<em>Matoucí kříž</em>"
 msgid "<em>Difficult</em>"
 msgstr "<em>Obtížné</em>"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/moves.page:29
-msgctxt "_"
-msgid ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-msgstr ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-
 #. (itstool) path: page/title
 #: C/moves.page:22
 msgid "Moves left"
@@ -687,6 +675,18 @@ msgstr ""
 "Zobrazuje počet různých tahů, které je možné vykonat. Pomůže vám to se "
 "zorientovat, kolik tahů vám zbývá, než se dostanete do situace, kdy nebude "
 "žádný tah možný."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/moves.page:29
+msgctxt "_"
+msgid ""
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
+msgstr ""
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
 
 #. (itstool) path: media/p
 #: C/moves.page:30
