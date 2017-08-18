@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-mahjongg help.
 #
 # László Ádám Kohajda <kla.kohi at gmail dot com>, 2012.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2013, 2014, 2015, 2016.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2013, 2014, 2015, 2016, 2017.
 # Balázs Úr <urbalazs at gmail dot com>, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2015-08-18 07:20+0000\n"
-"PO-Revision-Date: 2016-03-19 09:53+0100\n"
+"POT-Creation-Date: 2017-07-31 12:10+0000\n"
+"PO-Revision-Date: 2017-08-18 10:35+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
-"Language-Team: Hungarian <openscope at gmail dot com>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,14 +107,18 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:37
+#| msgid ""
+#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
+#| "and click <gui>Commit</gui>."
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "Ha új szolgáltatást kér, válassza az <gui>enhancement</gui> lehetőséget a "
 "<gui>Severity</gui> menüben. Töltse ki a Summary és Description szakaszokat, "
-"és kattintson a <gui>Commit</gui> gombra."
+"és kattintson a <gui>Submit Bug</gui> gombra."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:41
@@ -319,11 +323,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/hints.page:36
-#| msgid ""
-#| "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
-#| "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> "
-#| "button in the <link xref=\"toolbar\">toolbar</link>, or press "
-#| "<keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgid ""
 "<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
@@ -331,9 +330,8 @@ msgid ""
 msgstr ""
 "A <gui>Javaslat</gui> elérhető a <guiseq><gui>Mahjongg</gui><gui>Javaslat</"
 "gui></guiseq> menüpontban. Ennek alternatívájaként használhatja a "
-"<gui>Javaslat</gui> gombot a fejléc sávon, vagy nyomja meg a <keyseq><key>"
-"Ctrl</key><key>H</key></keyseq> "
-"billentyűkombinációt."
+"<gui>Javaslat</gui> gombot a fejléc sávon, vagy nyomja meg a "
+"<keyseq><key>Ctrl</key><key>H</key></keyseq> billentyűkombinációt."
 
 #. (itstool) path: note/p
 #: C/hints.page:42
@@ -666,21 +664,6 @@ msgstr "<em>Zavarba ejtő kereszt</em>"
 msgid "<em>Difficult</em>"
 msgstr "<em>Nehéz</em>"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/moves.page:29
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/moves-left.png' "
-#| "md5='14c686ce7c508a81d4c246091d54febc'"
-msgctxt "_"
-msgid ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-msgstr "LEFORDÍTVA"
-
 #. (itstool) path: page/title
 #: C/moves.page:22
 msgid "Moves left"
@@ -688,11 +671,6 @@ msgstr "Hátralévő lépések"
 
 #. (itstool) path: page/p
 #: C/moves.page:24
-#| msgid ""
-#| "The <gui>Moves Left</gui> counter is located on the <link xref=\"toolbar"
-#| "\">toolbar</link>. It displays the number of different moves that can be "
-#| "made. It can help you see how far you are from running out of moves, and "
-#| "whether you've seen all possible moves."
 msgid ""
 "The <gui>Moves Left</gui> counter is located on the header bar. It displays "
 "the number of different moves that can be made. It can help you see how far "
@@ -700,9 +678,19 @@ msgid ""
 "moves."
 msgstr ""
 "A <gui>Hátralévő lépések</gui> számlálója a fejlécsávon található. Az "
-"elvégezhető lépések számát jelzi, "
-"segítségével láthatja, hogy mikor fognak elfogyni, illetve észrevette-e az "
-"összes lehetséges lépést."
+"elvégezhető lépések számát jelzi, segítségével láthatja, hogy mikor fognak "
+"elfogyni, illetve észrevette-e az összes lehetséges lépést."
+
+#. (itstool) path: page/media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/moves.page:29
+msgctxt "_"
+msgid ""
+"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
+msgstr "LEFORDÍTVA"
 
 #. (itstool) path: media/p
 #: C/moves.page:30
@@ -722,8 +710,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/pause.page:32
-#| msgid ""
-#| "The <gui>Pause</gui> button in the <link xref=\"toolbar\">toolbar</link>."
 msgid "The <gui>Pause</gui> button in the header bar."
 msgstr "A <gui>Szünet</gui> gomb a fejlécsávon."
 
@@ -879,9 +865,6 @@ msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
 #: C/shortcuts.page:43
-#| msgid ""
-#| "Use the <link xref=\"toolbar\">toolbar</link> <gui>Pause</gui> button if "
-#| "your keyboard does not have a <key>Pause</key> key."
 msgid ""
 "Use the header bar <gui>Pause</gui> button if your keyboard does not have a "
 "<key>Pause</key> key."
