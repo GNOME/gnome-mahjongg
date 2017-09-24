@@ -411,7 +411,7 @@ msgid ""
 "<app>Mahjongg</app> is a simple pattern recognition game. You score points "
 "by matching identical tiles."
 msgstr ""
-"<app>Mahjongg<app> est un jeu de reconnaissance de motifs. Vous faites "
+"<app>Mahjongg</app> est un jeu de reconnaissance de motifs. Vous faites "
 "correspondre les tuiles pour marquer des points."
 
 #. (itstool) path: section/title
