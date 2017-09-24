@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"POT-Creation-Date: 2017-07-31 12:10+0000\n"
-"PO-Revision-Date: 2017-08-01 01:41+0200\n"
+"POT-Creation-Date: 2017-07-31 23:43+0000\n"
+"PO-Revision-Date: 2017-09-24 15:44+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -326,7 +326,7 @@ msgid ""
 msgstr ""
 "<gui>Tips</gui> kan nås genom att klicka <guiseq><gui>Mahjong</"
 "gui><gui>Tips</gui></guiseq>. Alternativt kan du använda <gui>Tips</gui>-"
-"knappen i rubrikfältet, eller tryck <keyseq><key>Ctrl</key><key>H</key></"
+"knappen i rubrikraden, eller tryck <keyseq><key>Ctrl</key><key>H</key></"
 "keyseq>."
 
 #. (itstool) path: note/p
@@ -671,7 +671,7 @@ msgid ""
 "you are from running out of moves, and whether you've seen all possible "
 "moves."
 msgstr ""
-"Räknaren <gui>Drag kvar</gui> ligger i rubrikfältet. Den visar hur många "
+"Räknaren <gui>Drag kvar</gui> ligger i rubrikraden. Den visar hur många "
 "olika drag som kan göras. Den kan hjälpa dig att se hur många drag du har "
 "kvar, och om du har sett alla tänkbara drag."
 
@@ -706,7 +706,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/pause.page:32
 msgid "The <gui>Pause</gui> button in the header bar."
-msgstr "<gui>Paus</gui>-knappen i rubrikfältet."
+msgstr "<gui>Paus</gui>-knappen i rubrikraden."
 
 #. (itstool) path: item/p
 #: C/pause.page:36
@@ -859,7 +859,7 @@ msgid ""
 "Use the header bar <gui>Pause</gui> button if your keyboard does not have a "
 "<key>Pause</key> key."
 msgstr ""
-"Använd rubrikfältets <gui>Paus</gui>-knapp om ditt tangentbord inte har en "
+"Använd rubrikradens <gui>Paus</gui>-knapp om ditt tangentbord inte har en "
 "<key>Paus</key>-tangent."
 
 #. (itstool) path: td/p
