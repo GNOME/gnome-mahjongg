@@ -321,36 +321,3 @@ msgstr "Datum"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Čas"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Možnosti Mahjongg"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "prav, če je okno razpeto čez celoten zaslon"
-
-#~ msgid "_New"
-#~ msgstr "_Nova"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Razveljavi potezo"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Obnovi potezo"
-
-#~ msgid "Hint"
-#~ msgstr "Namig"
-
-#~ msgid "_Pause"
-#~ msgstr "_Premor"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Spletna stran iger GNOME"
-
-#~ msgid "Res_ume"
-#~ msgstr "Na_daljuj"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Mahjongg - %s"
-
-#~ msgid "Size:"
-#~ msgstr "Velikost:"

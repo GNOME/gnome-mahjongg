@@ -6,7 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-02-17 22:37+0000\n"
 "PO-Revision-Date: 2013-02-19 19:54+0100\n"
 "Last-Translator: Daniel Martinez <entaltoaragon@gmail.com>\n"
@@ -16,10 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/gnome-mahjongg.desktop.in.in.h:1
-#: ../src/gnome-mahjongg.vala:48
-#: ../src/gnome-mahjongg.vala:543
-#: ../src/gnome-mahjongg.vala:749
+#: ../data/gnome-mahjongg.desktop.in.in.h:1 ../src/gnome-mahjongg.vala:48
+#: ../src/gnome-mahjongg.vala:543 ../src/gnome-mahjongg.vala:749
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -144,8 +143,7 @@ msgstr "_Refer movimiento"
 msgid "Hint"
 msgstr "Sucherencia"
 
-#: ../src/gnome-mahjongg.vala:129
-#: ../src/gnome-mahjongg.vala:573
+#: ../src/gnome-mahjongg.vala:129 ../src/gnome-mahjongg.vala:573
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -170,8 +168,13 @@ msgid "There are no more moves."
 msgstr "No i hai mas movimientos validos."
 
 #: ../src/gnome-mahjongg.vala:317
-msgid "Each puzzle has at least one solution.  You can undo your moves and try and find the solution for a time penalty, restart this game or start an new one."
-msgstr "Cada puzle tiene, a lo menos, una solución. Puede desfer os suyos movimientos y intentar trobar a solución con una penalización de tiempo, reiniciar o chuego u empecipiar un nuevo."
+msgid ""
+"Each puzzle has at least one solution.  You can undo your moves and try and "
+"find the solution for a time penalty, restart this game or start an new one."
+msgstr ""
+"Cada puzle tiene, a lo menos, una solución. Puede desfer os suyos "
+"movimientos y intentar trobar a solución con una penalización de tiempo, "
+"reiniciar o chuego u empecipiar un nuevo."
 
 #: ../src/gnome-mahjongg.vala:319
 msgid "_Restart"
@@ -242,8 +245,7 @@ msgstr "C_ontinar"
 msgid "Mahjongg - %s"
 msgstr "Mahjongg - %s"
 
-#: ../src/gnome-mahjongg.vala:655
-#: ../src/gnome-mahjongg.vala:821
+#: ../src/gnome-mahjongg.vala:655 ../src/gnome-mahjongg.vala:821
 #, c-format
 msgid "Time"
 msgstr "Tiempo"
@@ -259,4 +261,3 @@ msgstr "Grandaria:"
 #: ../src/gnome-mahjongg.vala:818
 msgid "Date"
 msgstr "Calendata"
-

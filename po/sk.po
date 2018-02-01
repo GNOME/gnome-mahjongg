@@ -32,25 +32,28 @@ msgstr "Spárujte kamene a vyčistite hraciu plochu"
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:3
 msgid ""
-"A solitaire version of the classic Eastern tile game. Tiles are stacked on the board "
-"at the start of the game. The goal is to remove all the tiles in as little time as "
-"possible. Select two matching tiles and they will disappear from the board, but you "
-"can only select a tile if there is an empty space to its left or right at the same "
-"level. Be careful: tiles that look alike may actually be slightly different."
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
+"the board at the start of the game. The goal is to remove all the tiles in "
+"as little time as possible. Select two matching tiles and they will "
+"disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
 msgstr ""
-"Solitér verzia klasickej hry s kameňmi Eastern. Na začiatku hry sú kamene poukladané "
-"na hracej ploche. Cieľom je odstrániť všetky kamene v čo najkratšom čase. Výberom "
-"dvoch rovnakých kameňov ich odstránite z hracej plochy, ale vybrať sa dajú len "
-"kamene, ktoré nie sú obklopené zľava a ani sprava inými kameňmi na rovnakej úrovni. "
-"Buďte opatrní, aj kamene, ktoré vyzerajú podobne sa môžu v skutočnosti trocha líšiť."
+"Solitér verzia klasickej hry s kameňmi Eastern. Na začiatku hry sú kamene "
+"poukladané na hracej ploche. Cieľom je odstrániť všetky kamene v čo "
+"najkratšom čase. Výberom dvoch rovnakých kameňov ich odstránite z hracej "
+"plochy, ale vybrať sa dajú len kamene, ktoré nie sú obklopené zľava a ani "
+"sprava inými kameňmi na rovnakej úrovni. Buďte opatrní, aj kamene, ktoré "
+"vyzerajú podobne sa môžu v skutočnosti trocha líšiť."
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:4
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some difficult. "
-"If you get stuck, you can ask for a hint, but this adds a large time penalty."
+"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
 msgstr ""
-"Hra Madžong GNOME ponúka viaceré počiatočné rozloženia, ľahké a aj náročné. Ak si "
-"neviete poradiť, môžete požiadať o radu, ale za časovú penalizáciu."
+"Hra Madžong GNOME ponúka viaceré počiatočné rozloženia, ľahké a aj náročné. "
+"Ak si neviete poradiť, môžete požiadať o radu, ale za časovú penalizáciu."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
 #: ../src/gnome-mahjongg.vala:815
@@ -181,7 +184,8 @@ msgstr "_Skóre"
 msgid "_Preferences"
 msgstr "_Nastavenia"
 
-#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7 ../src/score-dialog.vala:28
+#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
+#: ../src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "U_končiť"
 
@@ -219,14 +223,16 @@ msgstr "Žiadne platné ťahy už nie sú k dispozícii."
 
 #: ../src/gnome-mahjongg.vala:387
 msgid ""
-"Each puzzle has at least one solution.  You can undo your moves and try and find the "
-"solution, restart this game, or start a new one."
+"Each puzzle has at least one solution.  You can undo your moves and try and "
+"find the solution, restart this game, or start a new one."
 msgstr ""
-"Každý hlavolam má najmenej jedno riešenie. Môžete vrátiť ťahy a znova sa pokúsiť "
-"riešenie nájsť, hrať túto odznova alebo začať novú hru."
+"Každý hlavolam má najmenej jedno riešenie. Môžete vrátiť ťahy a znova sa "
+"pokúsiť riešenie nájsť, hrať túto odznova alebo začať novú hru."
 
 #: ../src/gnome-mahjongg.vala:389
-msgid "You can also try to reshuffle the game, but this does not guarantee a solution."
+msgid ""
+"You can also try to reshuffle the game, but this does not guarantee a "
+"solution."
 msgstr "Taktiež môžete skúsiť hru zamiešať, ale bez garancie riešenia."
 
 #: ../src/gnome-mahjongg.vala:390
@@ -313,30 +319,3 @@ msgstr "Dátum"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Čas"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Nastavenia hry Madžong"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "true, ak je okno v celoobrazovkovom režime"
-
-#~ msgid "_New"
-#~ msgstr "_Nová"
-
-#~ msgid "_Redo Move"
-#~ msgstr "Z_opakovať vrátený ťah"
-
-#~ msgid "Hint"
-#~ msgstr "Rada"
-
-#~ msgid "_Pause"
-#~ msgstr "_Pozastaviť"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Webové stránky Hier GNOME"
-
-#~ msgid "Res_ume"
-#~ msgstr "Po_kračovať"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Mahjongg - %s"

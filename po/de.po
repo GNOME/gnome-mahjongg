@@ -354,33 +354,3 @@ msgstr "Datum"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Zeit"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "Wahr, falls das Fenster im Vollbildmodus ist"
-
-#~ msgid "_New"
-#~ msgstr "_Neu"
-
-#~ msgid "_Redo Move"
-#~ msgstr "Zug _wiederholen"
-
-#~ msgid "Hint"
-#~ msgstr "Tipp"
-
-#~ msgid "_Pause"
-#~ msgstr "_Pause"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Mahjongg Einstellungen"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "GNOME Games-Website"
-
-#~ msgid "Res_ume"
-#~ msgstr "_Fortsetzen"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Mahjongg - %s"
-
-#~ msgid "Size:"
-#~ msgstr "Größe:"

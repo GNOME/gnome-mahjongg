@@ -70,7 +70,9 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Mahjongg de GNOME comprend une variété de dispositions de départ, certaines faciles, d’autres plus difficiles. Si vous êtes bloqué, vous pouvez demander un indice mais vous recevez alors une pénalité de temps importante."
+"Mahjongg de GNOME comprend une variété de dispositions de départ, certaines "
+"faciles, d’autres plus difficiles. Si vous êtes bloqué, vous pouvez demander "
+"un indice mais vous recevez alors une pénalité de temps importante."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:628
 #: ../src/gnome-mahjongg.vala:813
@@ -346,9 +348,3 @@ msgstr "Date"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Durée"
-
-#~ msgid "Time: %02d∶‎%02d∶‎%02d"
-#~ msgstr "Durée : %02d∶‎%02d∶‎%02d"
-
-#~ msgid "Time: %02d∶‎%02d"
-#~ msgstr "Durée : %02d∶‎%02d"

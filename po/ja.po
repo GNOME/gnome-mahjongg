@@ -13,7 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-09-07 16:43+0000\n"
 "PO-Revision-Date: 2013-09-16 10:48+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
@@ -35,7 +36,9 @@ msgstr "盤面から全ての牌を取り終わるまで同じ牌を二つずつ
 
 #: ../data/mahjongg.desktop.in.in.h:3
 msgid "game;strategy;puzzle;board;"
-msgstr "game;strategy;puzzle;board;ゲーム;ストラテジー;パズル;ボード;logic;ロジック;論理;思考;Mahjongg;"
+msgstr ""
+"game;strategy;puzzle;board;ゲーム;ストラテジー;パズル;ボード;logic;ロジック;"
+"論理;思考;Mahjongg;"
 
 #: ../data/org.gnome.gnome-mahjongg.gschema.xml.in.h:1
 msgid "Width of the window in pixels"
@@ -153,8 +156,13 @@ msgid "There are no more moves."
 msgstr "残念ながら、手詰まりです。"
 
 #: ../src/gnome-mahjongg.vala:317
-msgid "Each puzzle has at least one solution.  You can undo your moves and try and find the solution for a time penalty, restart this game or start an new one."
-msgstr "各パズルは少なくとも一つは答えがあります。時間のペナルティと引き換えに移動を元に戻して答えを探したり、このゲームをやり直すか新しいゲームを開始することができます。"
+msgid ""
+"Each puzzle has at least one solution.  You can undo your moves and try and "
+"find the solution for a time penalty, restart this game or start an new one."
+msgstr ""
+"各パズルは少なくとも一つは答えがあります。時間のペナルティと引き換えに移動を"
+"元に戻して答えを探したり、このゲームをやり直すか新しいゲームを開始することが"
+"できます。"
 
 #: ../src/gnome-mahjongg.vala:319
 msgid "_Restart"

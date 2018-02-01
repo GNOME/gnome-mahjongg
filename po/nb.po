@@ -33,14 +33,22 @@ msgid ""
 "disappear from the board, but you can only select a tile if there is an "
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
-msgstr "En solitaire-versjon av det klassiske flisspillet fra østen. Flisene stables på brettet ved starten av spillet. Målet er å fjerne alle flisene på så liten tid som mulig. Velg to like fliser for å fjerne dem fra brettet, men du kan kun velge en flis hvis det er tomt på venstre eller høyre side på samme nivå. Vær nøye, fliser som ser like ut kan likevel ha små forskjeller."
+msgstr ""
+"En solitaire-versjon av det klassiske flisspillet fra østen. Flisene stables "
+"på brettet ved starten av spillet. Målet er å fjerne alle flisene på så "
+"liten tid som mulig. Velg to like fliser for å fjerne dem fra brettet, men "
+"du kan kun velge en flis hvis det er tomt på venstre eller høyre side på "
+"samme nivå. Vær nøye, fliser som ser like ut kan likevel ha små forskjeller."
 
 #: ../data/gnome-mahjongg.appdata.xml.in.h:4
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
-msgstr "GNOME Mahjongg har en rekke forskjellige utforminger, noen enkle og noen vanskelige. Hvis du står fast kan du spørre om et hint, men dette gir deg en stor straff på tid."
+msgstr ""
+"GNOME Mahjongg har en rekke forskjellige utforminger, noen enkle og noen "
+"vanskelige. Hvis du står fast kan du spørre om et hint, men dette gir deg en "
+"stor straff på tid."
 
 #: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
 #: ../src/gnome-mahjongg.vala:814

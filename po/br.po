@@ -306,33 +306,3 @@ msgstr "Deiziad"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Amzer"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "gwir mard eo \te mod skramm a-bezh ar prenestr"
-
-#~ msgid "_New"
-#~ msgstr "_Nevez"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Adlakaat en e-sav an dilec'h"
-
-#~ msgid "Hint"
-#~ msgstr "Korvigell"
-
-#~ msgid "_Pause"
-#~ msgstr "_Ehan"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Gwellvezioù Mahjongg"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Lec'hiad c'hoarioù GNOME "
-
-#~ msgid "Res_ume"
-#~ msgstr "_Kenderc'hel"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Mahjongg - %s"
-
-#~ msgid "Size:"
-#~ msgstr "Ment :"

@@ -18,8 +18,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
@@ -236,14 +236,14 @@ msgid ""
 "find the solution, restart this game, or start a new one."
 msgstr ""
 "Кожна головоломка має принаймні один розв'язок. Ви можете повернути зроблені "
-"ходи й спробувати знайти розв'язок, перезавантажити цю гру, або почати "
-"нову."
+"ходи й спробувати знайти розв'язок, перезавантажити цю гру, або почати нову."
 
 #: ../src/gnome-mahjongg.vala:389
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
-msgstr "Ви також можете спробувати перемішати гру але це не гарантує розв'язку."
+msgstr ""
+"Ви також можете спробувати перемішати гру але це не гарантує розв'язку."
 
 #: ../src/gnome-mahjongg.vala:390
 msgid "_Undo"
@@ -334,6 +334,3 @@ msgstr "Дата"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Час"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Параметри гри Магджонґ"

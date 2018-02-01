@@ -328,9 +328,3 @@ msgstr "Data"
 #: ../src/score-dialog.vala:72
 msgid "Time"
 msgstr "Laikas"
-
-#~ msgid "Time: %02d∶‎%02d∶‎%02d"
-#~ msgstr "Laikas: %02d∶‎%02d∶‎%02d"
-
-#~ msgid "Time: %02d∶‎%02d"
-#~ msgstr "Laikas: %02d∶‎%02d"
