@@ -4,27 +4,27 @@
   <id>gnome-mahjongg.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
-  <_name>GNOME Mahjongg</_name>
-  <_summary>Match tiles and clear the board</_summary>
+  <name>GNOME Mahjongg</name>
+  <summary>Match tiles and clear the board</summary>
   <description>
-    <_p>
+    <p>
    A solitaire version of the classic Eastern tile game. Tiles are stacked on
    the board at the start of the game. The goal is to remove all the tiles in
    as little time as possible. Select two matching tiles and they will disappear
    from the board, but you can only select a tile if there is an empty space to
    its left or right at the same level. Be careful: tiles that look alike
    may actually be slightly different.
-  </_p>
-    <_p>
+  </p>
+    <p>
    GNOME Mahjongg features a variety of starting layouts, some easy and some
    difficult. If you get stuck, you can ask for a hint, but this adds a large
    time penalty.
-  </_p>
+  </p>
   </description>
   <screenshots>
     <screenshot height="524" width="972" type="default">
       <image>https://people.gnome.org/~mcatanzaro/gnome-mahjongg.png</image>
-      <_caption><!-- Describe this screenshot in less than ~10 words --></_caption>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>

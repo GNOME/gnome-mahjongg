@@ -1,6 +1,5 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-[encoding: UTF-8]
 data/gnome-mahjongg.appdata.xml.in
 data/gnome-mahjongg.desktop.in
 data/org.gnome.mahjongg.gschema.xml
@@ -9,5 +8,5 @@ src/game.vala
 src/game-view.vala
 src/gnome-mahjongg.vala
 src/map.vala
-[type: gettext/glade]src/menu.ui
+src/menu.ui
 src/score-dialog.vala

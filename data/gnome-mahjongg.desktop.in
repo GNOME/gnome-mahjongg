@@ -1,8 +1,10 @@
 [Desktop Entry]
-_Name=Mahjongg
-_Comment=Disassemble a pile of tiles by removing matching pairs
-_Keywords=game;strategy;puzzle;board;
+Name=Mahjongg
+Comment=Disassemble a pile of tiles by removing matching pairs
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=game;strategy;puzzle;board;
 Exec=gnome-mahjongg
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=gnome-mahjongg
 Terminal=false
 Type=Application
