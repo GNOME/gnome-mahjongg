@@ -58,7 +58,7 @@ msgid ""
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
 "To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
-"Gra <app>Mahjongg</app> jest tworzona przez społeczność ochotników. "
+"Gra <app>Madżong</app> jest tworzona przez społeczność ochotników. "
 "Zapraszamy do współpracy. Jeśli wystąpił jakiś błąd, to można go zgłosić na "
 "stronie <link href=\"https://bugzilla.gnome.org/\"/> (w języku angielskim)."
 
@@ -251,10 +251,10 @@ msgid ""
 "by removing all tiles, and you are scored by the amount of time it takes you "
 "to do so."
 msgstr ""
-"<app>Mahjongg</app> to gra w dopasowywanie dwóch identycznych kostek "
-"w każdej turze. Kostkę można dopasować, jeśli nie leży na niej inna kostka "
-"i ma wolną krawędź po prawej lub lewej stronie. Wygrywa się przez usunięcie "
-"wszystkich kostek, a wynik to czas rozgrywki."
+"<app>Madżong</app> to gra w dopasowywanie dwóch identycznych kostek w każdej "
+"turze. Kostkę można dopasować, jeśli nie leży na niej inna kostka i ma wolną "
+"krawędź po prawej lub lewej stronie. Wygrywa się przez usunięcie wszystkich "
+"kostek, a wynik to czas rozgrywki."
 
 #. (itstool) path: page/p
 #: C/gameplay.page:34
@@ -320,7 +320,7 @@ msgid ""
 "gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
 "in the header bar, or press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr ""
-"<gui>Podpowiedź</gui> można użyć klikając <guiseq><gui>Mahjongg</"
+"<gui>Podpowiedź</gui> można użyć klikając <guiseq><gui>Madżong</"
 "gui><gui>Podpowiedź</gui></guiseq>. Można także użyć przycisku "
 "<gui>Podpowiedź</gui> na pasku nagłówka lub nacisnąć klawisze "
 "<keyseq><key>Ctrl</key><key>H</key></keyseq>."
@@ -358,23 +358,23 @@ msgstr "Za każde użycie podpowiedzi naliczana jest kara 30 sekund."
 #: C/index.page:9
 msgctxt "link"
 msgid "Mahjongg"
-msgstr "Mahjongg"
+msgstr "Madżong"
 
 #. (itstool) path: info/title
 #: C/index.page:10
 msgctxt "text"
 msgid "Mahjongg"
-msgstr "Mahjongg"
+msgstr "Madżong"
 
 #. (itstool) path: info/desc
 #: C/index.page:11
 msgid "GNOME Mahjongg help."
-msgstr "Pomoc gry Mahjongg GNOME."
+msgstr "Pomoc gry Madżong GNOME."
 
 #. (itstool) path: page/title
 #: C/index.page:22
 msgid "<_:media-1/> Mahjongg"
-msgstr "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Madżong"
 
 #. (itstool) path: page/p
 #: C/index.page:23
@@ -382,13 +382,13 @@ msgid ""
 "<app>Mahjongg</app> is a simple pattern recognition game. You score points "
 "by matching identical tiles."
 msgstr ""
-"<app>Mahjongg</app> to prosta gra w rozpoznawanie wzorców. Dopasowanie "
+"<app>Madżong</app> to prosta gra w rozpoznawanie wzorców. Dopasowanie "
 "identycznych kostek zapewnia punkty."
 
 #. (itstool) path: section/title
 #: C/index.page:28
 msgid "Playing Mahjongg"
-msgstr "Gra w Mahjongg"
+msgstr "Gra w madżong"
 
 #. (itstool) path: section/title
 #: C/index.page:32
@@ -528,7 +528,7 @@ msgstr "Dostępne jest 9 różnych plansz. Aby wybrać inną planszę:"
 #. (itstool) path: item/p
 #: C/map.page:26
 msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
-msgstr "Kliknij <guiseq><gui>Mahjongg</gui><gui>Preferencje</gui></guiseq>."
+msgstr "Kliknij <guiseq><gui>Madżong</gui><gui>Preferencje</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/map.page:28
@@ -765,7 +765,7 @@ msgid ""
 "In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
 "board."
 msgstr ""
-"Wynik gry <app>Mahjongg</app> to czas, w jaki usunięto wszystkie kostki. Im "
+"Wynik gry <app>Madżong</app> to czas, w jaki usunięto wszystkie kostki. Im "
 "szybciej, tym lepiej."
 
 #. (itstool) path: page/p
@@ -776,7 +776,7 @@ msgstr "Aby wyświetlić najlepsze wyniki:"
 #. (itstool) path: item/p
 #: C/scoring.page:28
 msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
-msgstr "Wybierz <guiseq><gui>Mahjongg</gui><gui>Wyniki</gui></guiseq>"
+msgstr "Wybierz <guiseq><gui>Madżong</gui><gui>Wyniki</gui></guiseq>"
 
 #. (itstool) path: note/p
 #: C/scoring.page:33
