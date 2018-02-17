@@ -10,15 +10,16 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-22 02:16+0100\n"
-"PO-Revision-Date: 2015-02-22 02:18+0200\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mahjongg&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2018-02-03 16:54+0000\n"
+"PO-Revision-Date: 2018-02-17 13:55+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,15 +28,15 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/gnome-mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "Mahjongg de GNOME"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/gnome-mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr "Emparelle pezas e limpe o taboleiro"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/gnome-mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -51,7 +52,7 @@ msgstr ""
 "súa dereita no mesmo nivel. Teña coidado: hai fichas que parecen iguais pero "
 "que son lixeiramente diferentes."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:4
+#: data/gnome-mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -61,28 +62,35 @@ msgstr ""
 "doadas e outras máis difíciles. Se se atasca pode solicitar axuda, pero isto "
 "engade unha penalización de tempo."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:630
-#: ../src/gnome-mahjongg.vala:815
+#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:628
+#: src/gnome-mahjongg.vala:813
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
+#: data/gnome-mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Desmonte un montón de pezas retirando as parellas coincidentes"
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/gnome-mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "xogo;estratexia;quebracabezas;taboleiro;"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/gnome-mahjongg.desktop.in:9
+#| msgid "Mahjongg"
+msgid "gnome-mahjongg"
+msgstr "gnome-mahjongg"
+
+#: data/org.gnome.mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Largura da xanela en píxeles"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:2
+#: data/org.gnome.mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Altura da xanela en píxeles"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:3
+#: data/org.gnome.mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a xanela está maximizada"
 
@@ -91,142 +99,141 @@ msgstr "verdadeiro se a xanela está maximizada"
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
 msgstr "Fácil"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "O Ziggurat"
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Catro pontes"
 
-#: ../data/translatable_game_names.h:9
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Nube"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tres en liña"
 
-#: ../data/translatable_game_names.h:11
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Dragón Vermello"
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "Paso a nivel"
 
-#: ../data/translatable_game_names.h:13
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Os muros da pirámide"
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Cruzamento confuso"
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Dificultade"
 
-#: ../src/game-view.vala:132
+#: src/game-view.vala:132
 msgid "Paused"
 msgstr "Detido"
 
-#: ../src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Mostrar o número de versión e sae"
 
-#: ../src/gnome-mahjongg.vala:94
+#: src/gnome-mahjongg.vala:94
 msgid "Moves Left:"
 msgstr "Movementos restantes:"
 
-#: ../src/gnome-mahjongg.vala:120
+#: src/gnome-mahjongg.vala:120
 msgid "Undo your last move"
 msgstr "Desfacer o seu último movemento"
 
-#: ../src/gnome-mahjongg.vala:126
+#: src/gnome-mahjongg.vala:126
 msgid "Redo your last move"
 msgstr "Refacer o seu último movemento"
 
-#: ../src/gnome-mahjongg.vala:132
+#: src/gnome-mahjongg.vala:132
 msgid "Receive a hint for your next move"
 msgstr "Recibir unha suxestión para o seguinte movemento"
 
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:660
+#: src/gnome-mahjongg.vala:137 src/gnome-mahjongg.vala:658
 msgid "Pause the game"
 msgstr "Deter o xogo"
 
-#: ../src/gnome-mahjongg.vala:156
+#: src/gnome-mahjongg.vala:156
 msgid "_Mahjongg"
 msgstr "_Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
+#: src/gnome-mahjongg.vala:157 src/menu.ui:7
 msgid "_New Game"
 msgstr "Xogo _novo"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
+#: src/gnome-mahjongg.vala:158 src/menu.ui:12
 msgid "_Restart Game"
 msgstr "_Reiniciar xogo"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
+#: src/gnome-mahjongg.vala:159 src/menu.ui:18
 msgid "_Scores"
 msgstr "_Puntuacións"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
+#: src/gnome-mahjongg.vala:160 src/menu.ui:22
 msgid "_Preferences"
 msgstr "_Preferencias"
 
-#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
-#: ../src/score-dialog.vala:28
+#: src/gnome-mahjongg.vala:161 src/menu.ui:37 src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "_Saír"
 
-#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
+#: src/gnome-mahjongg.vala:163 src/menu.ui:28
 msgid "_Help"
 msgstr "_Axuda"
 
-#: ../src/gnome-mahjongg.vala:164
+#: src/gnome-mahjongg.vala:164
 msgid "_Contents"
 msgstr "_Contidos"
 
-#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
+#: src/gnome-mahjongg.vala:165 src/menu.ui:33
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:313
 msgid "Do you want to start a new game with this map?"
 msgstr "Quere comezar unha partida nova con este mapa?"
 
-#: ../src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:314
 msgid "If you continue playing the next game will use the new map."
 msgstr "Se continúa xogando a seguinte partida usará o mapa novo."
 
-#: ../src/gnome-mahjongg.vala:317
+#: src/gnome-mahjongg.vala:315
 msgid "_Continue playing"
 msgstr "_Continuar xogando"
 
-#: ../src/gnome-mahjongg.vala:318
+#: src/gnome-mahjongg.vala:316
 msgid "Use _new map"
 msgstr "Usar o mapa _novo"
 
-#: ../src/gnome-mahjongg.vala:386
+#: src/gnome-mahjongg.vala:384
 msgid "There are no more moves."
 msgstr "Non hai máis movementos válidos."
 
-#: ../src/gnome-mahjongg.vala:387
+#: src/gnome-mahjongg.vala:385
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -234,66 +241,66 @@ msgstr ""
 "Cada quebracabezas ten unha solución. Pode desfacer os seus movementos e "
 "tentar atopar a solución, reiniciar este xogo, ou iniciar un novo."
 
-#: ../src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:387
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
 "Tamén pode tentar reordenar o xogo, pero isto non garante unha solución."
 
-#: ../src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:388
 msgid "_Undo"
 msgstr "_Desfacer"
 
-#: ../src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:389
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: ../src/gnome-mahjongg.vala:392
+#: src/gnome-mahjongg.vala:390
 msgid "_New game"
 msgstr "Partida _nova"
 
-#: ../src/gnome-mahjongg.vala:393
+#: src/gnome-mahjongg.vala:391
 msgid "_Shuffle"
 msgstr "_Barallar"
 
-#: ../src/gnome-mahjongg.vala:445
+#: src/gnome-mahjongg.vala:443
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../src/gnome-mahjongg.vala:461
+#: src/gnome-mahjongg.vala:459
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: ../src/gnome-mahjongg.vala:489
+#: src/gnome-mahjongg.vala:487
 msgid "_Layout:"
 msgstr "_Disposición:"
 
-#: ../src/gnome-mahjongg.vala:515
+#: src/gnome-mahjongg.vala:513
 msgid "_Background color:"
 msgstr "Cor de _fondo:"
 
-#: ../src/gnome-mahjongg.vala:529
+#: src/gnome-mahjongg.vala:527
 msgid "_Close"
 msgstr "Pecha_r"
 
-#: ../src/gnome-mahjongg.vala:596
+#: src/gnome-mahjongg.vala:594
 msgid "Main game:"
 msgstr "Xogo principal:"
 
-#: ../src/gnome-mahjongg.vala:605
+#: src/gnome-mahjongg.vala:603
 msgid "Maps:"
 msgstr "Mapas:"
 
-#: ../src/gnome-mahjongg.vala:613
+#: src/gnome-mahjongg.vala:611
 msgid "Tiles:"
 msgstr "Fichas:"
 
-#: ../src/gnome-mahjongg.vala:633
+#: src/gnome-mahjongg.vala:631
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Un xogo de emparellar que se xoga con fichas de Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:639
+#: src/gnome-mahjongg.vala:637
 msgid "translator-credits"
 msgstr ""
 "Fran Dieguez <frandieguez@gnome.org>, 2009-2015;\n"
@@ -309,26 +316,26 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/gnome-mahjongg.vala:655
+#: src/gnome-mahjongg.vala:653
 msgid "Unpause the game"
 msgstr "Reanudar o xogo"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Xogo novo"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "OK"
 msgstr "Aceptar"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Layout:"
 msgstr "Disposición:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Data"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tempo"
