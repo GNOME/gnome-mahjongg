@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mahjongg&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2018-03-13 22:43+0000\n"
-"PO-Revision-Date: 2018-03-13 23:45+0100\n"
+"PO-Revision-Date: 2018-03-14 13:30+0100\n"
 "Last-Translator: Launchpad Translations Administrators <Unknown>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -47,9 +47,9 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"GNOME Mahjongg obiluje različitim početnim rasporedima, neki su lagani a "
-"neki teži. Ako zapnete, možete pitati za sljedeći potez, ali to dodaje "
-"veliku kaznu u vremenu."
+"GNOME Mahjongg obiluje različitim početnim rasporedima, neki su lakši a neki "
+"teži. Ako zapnete, možete pitati za sljedeći potez, ali to dodaje veliku "
+"kaznu u vremenu."
 
 #: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:628
 #: src/gnome-mahjongg.vala:813
@@ -191,7 +191,7 @@ msgstr "_Zatvori"
 
 #: src/gnome-mahjongg.vala:163 src/menu.ui:28
 msgid "_Help"
-msgstr "_Pomoć"
+msgstr "_Priručnik"
 
 #: src/gnome-mahjongg.vala:164
 msgid "_Contents"
@@ -234,7 +234,7 @@ msgstr ""
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
-msgstr "Možete pokušati ponovno izmješati igru, ali to ne jamči rješenje."
+msgstr "Možete pokušati ponovno promješati igru, ali to ne jamči rješenje."
 
 #: src/gnome-mahjongg.vala:388
 msgid "_Undo"
@@ -250,7 +250,7 @@ msgstr "_Nova igra"
 
 #: src/gnome-mahjongg.vala:391
 msgid "_Shuffle"
-msgstr "_Izmješaj"
+msgstr "_Promješaj"
 
 #: src/gnome-mahjongg.vala:443
 msgid "Preferences"
@@ -291,27 +291,12 @@ msgstr "Igra podudaranja koja se igra Mahjongg pločicama"
 #: src/gnome-mahjongg.vala:637
 msgid "translator-credits"
 msgstr ""
-"lokalizacija@linux.hr\n"
-"  Antun Krasic <butch@gawab.com>\n"
-"  Automatski Prijevod <>\n"
-"  Danijel Studen <dstuden@vuka.hr>\n"
-"  Davorin Vlahovic <aburn@fly.srk.fer.hr>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Ivan Knežević <kn3z@lycos.com>\n"
-"  Mato Kutlić <mate@iskraemeco.hr>\n"
-"  Nikola Planinac <>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"  Sasa Poznanovic <sasa.poznanovic@vuka.hr>\n"
-"  Tomislav Cavrag <tcavrag@vuka.hr>\n"
-"  Vedran Vyroubal <vedran.vyroubal@inet.hr>\n"
-"\n"
 "Launchpad Contributions:\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
 #: src/gnome-mahjongg.vala:653
 msgid "Unpause the game"
-msgstr "Pokreni igru"
+msgstr "Nastavi igru"
 
 #: src/score-dialog.vala:29
 msgid "New Game"
