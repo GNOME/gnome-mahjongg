@@ -2,7 +2,7 @@
 # Copyright (C) 1998-2008 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 #
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2012, 2016-2017.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2012, 2016-2018.
 # Philipp Kerling <k.philipp@gmail.com>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Wolfgang Stöggl <c72578@yahoo.de>, 2015.
@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2017-07-31 12:10+0000\n"
-"PO-Revision-Date: 2017-08-01 22:23+0200\n"
+"POT-Creation-Date: 2018-08-13 21:36+0000\n"
+"PO-Revision-Date: 2018-08-15 09:38+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2016\n"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2016-2018\n"
 "Andre Klapper <ak47@gmx.net>, 2009\n"
 "Christian Kirbach <Christian.Kirbach@gmail.com>, 2012, 2015\n"
 "Benjamin Steinwender <b@stbe.at>, 2014"
@@ -61,12 +61,14 @@ msgstr "Einen Fehlerbericht erstellen"
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
-"To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+"To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues/\"/>."
 msgstr ""
 "<app>Mahjongg</app> wird von einer Gemeinschaft aus Freiwilligen entwickelt. "
 "Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein "
 "Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. "
-"Besuchen Sie hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
+"Besuchen Sie hierzu <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues/\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:22
@@ -83,46 +85,45 @@ msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
 "receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"have an account, just click on the <gui>Sign in / Register</gui> link to "
+"create one."
 msgstr ""
 "Dazu benötigen Sie ein Konto, über das Sie Fehler melden und Kommentare "
 "hinterlassen können. Außerdem müssen Sie sich registrieren, um "
 "Statusmeldungen zu Ihrem Fehlerbericht per E-Mail erhalten zu können. Falls "
-"Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>New Account</"
-"gui>, um eines anzulegen."
+"Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>Sign in / "
+"Register</gui>, um eines anzulegen."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:29
+#: C/bug-filing.page:28
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-mahjongg</gui></guiseq>. Before "
+"Once you have an account, log in, and click on <gui>New issue</gui>. Before "
 "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
 "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mahjongg"
-"\">browse</link> for the bug to see if it already exists."
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
-"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
-"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></"
-"guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
+"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf <gui>New "
+"issue</gui>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
 "\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
-"guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler "
-"vielleicht schon gemeldet wurde."
+"guidelines</link> und <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues\">schauen Sie bitte nach</link>, ob der Fehler vielleicht "
+"schon gemeldet wurde."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:37
+#: C/bug-filing.page:32
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Submit Bug</gui>."
+"If you are requesting a new feature, choose <gui>1. Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit Issue</gui>."
 msgstr ""
 "Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie "
-"<gui>enhancement</gui> im Menü <gui>Severity</gui>. Füllen Sie die Felder "
-"»Summary« (Zusammenfassung) und »Description« (Beschreibung) aus und klicken "
-"Sie auf <gui>Submit Bug</gui>."
+"<gui>1. Feature</gui> im Menü <gui>Labels</gui>. Füllen Sie die Felder "
+"»Title« (Titel) und »Description« (Beschreibung) aus und klicken Sie auf "
+"<gui>Submit Issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:41
+#: C/bug-filing.page:36
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -157,7 +158,7 @@ msgstr ""
 "Frühlingsmotiven im Thema »Postmodern« und schwarzen Symbolen im Thema "
 "»Smooth«. Gleiche Bonuskacheln werden für das Thema »Postmodern« gesucht und "
 "Bonuskacheln mit denselben Symbolfarben werden für das Thema »Smooth« "
-"gesucht. "
+"gesucht."
 
 #. (itstool) path: page/p
 #: C/bonustiles.page:27
@@ -569,7 +570,7 @@ msgstr "Wählen Sie eine <gui>Anordnung</gui> in der Auswahlliste aus."
 #. (itstool) path: item/p
 #: C/map.page:30
 msgid "Click <gui>Close</gui>"
-msgstr "Klicken Sie auf <gui>Schließen</gui>."
+msgstr "Klicken Sie auf <gui>Schließen</gui>"
 
 #. (itstool) path: page/p
 #: C/map.page:33
@@ -589,7 +590,7 @@ msgstr "Leichtes Bild"
 #. (itstool) path: media/p
 #: C/map.page:46
 msgid "the ziggurat layout image"
-msgstr "Bild zu »Zikkurat«"
+msgstr "Bild zu »Der Ziggurat«"
 
 #. (itstool) path: media/p
 #: C/map.page:51
@@ -817,7 +818,7 @@ msgstr "So zeigen Sie die Ergebnisse an:"
 #. (itstool) path: item/p
 #: C/scoring.page:28
 msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
-msgstr "Wählen Sie <guiseq><gui>Mahjongg</gui><gui>Ergebnisse</gui></guiseq>."
+msgstr "Wählen Sie <guiseq><gui>Mahjongg</gui><gui>Ergebnisse</gui></guiseq>"
 
 #. (itstool) path: note/p
 #: C/scoring.page:33
