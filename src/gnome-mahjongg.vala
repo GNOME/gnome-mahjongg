@@ -62,19 +62,15 @@ public class Mahjongg : Gtk.Application
         base.startup ();
 
         add_action_entries (action_entries, this);
+        set_accels_for_action ("app.new-game", {"<Primary>n"});
         set_accels_for_action ("app.pause", {"Pause"});
         set_accels_for_action ("app.hint", {"<Primary>h"});
         set_accels_for_action ("app.undo", {"<Primary>z"});
         set_accels_for_action ("app.redo", {"<Primary><Shift>z"});
+        set_accels_for_action ("app.help", {"F1"});
+        set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
 
         settings = new Settings ("org.gnome.mahjongg");
-
-        var builder = new Gtk.Builder ();
-        try {
-            builder.add_from_resource ("/org/gnome/mahjongg/ui/menu.ui");
-        } catch (Error e) {
-            error ("loading menu builder file: %s", e.message);
-        }
 
         load_maps ();
 
@@ -141,46 +137,31 @@ public class Mahjongg : Gtk.Application
         status_box.halign = Gtk.Align.CENTER;
         title_box.pack_start (status_box, false, false, 0);
 
-        bool shell_shows_menubar;
-        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
+        var menu = new Menu ();
+        var mahjongg_menu = new Menu ();
+        menu.append_section (null, mahjongg_menu);
+        mahjongg_menu.append (_("_New Game"), "app.new-game");
+        mahjongg_menu.append (_("_Restart Game"), "app.restart-game");
+        mahjongg_menu.append (_("_Scores"), "app.scores");
+        mahjongg_menu.append (_("_Preferences"), "app.preferences");
+        var help_menu = new Menu ();
+        menu.append_section (null, help_menu);
+        help_menu.append (_("_Help"), "app.help");
+        help_menu.append (_("_About Mahjongg"), "app.about");
 
-        if (!shell_shows_menubar)
-        {
-            var app_menu = builder.get_object ("appmenu") as MenuModel;
-            set_app_menu (app_menu);
-        }
-        else
-        {
-            var menu = new Menu ();
-            var mahjongg_menu = new Menu ();
-            menu.append_submenu (_("_Mahjongg"), mahjongg_menu);
-            mahjongg_menu.append (_("_New Game"), "app.new-game");
-            mahjongg_menu.append (_("_Restart Game"), "app.restart-game");
-            mahjongg_menu.append (_("_Scores"), "app.scores");
-            mahjongg_menu.append (_("_Preferences"), "app.preferences");
-            mahjongg_menu.append (_("_Quit"), "app.quit");
-            var help_menu = new Menu ();
-            menu.append_submenu (_("_Help"), help_menu);
-            help_menu.append (_("_Contents"), "app.help");
-            help_menu.append (_("_About"), "app.about");
-            set_menubar (menu);
-        }
+        var menu_button = new Gtk.MenuButton ();
+        menu_button.valign = Gtk.Align.CENTER;
+        menu_button.set_menu_model (menu);
+        menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
 
         var header_bar = new Gtk.HeaderBar ();
         header_bar.set_custom_title (title_box);
+        header_bar.set_show_close_button (true);
         header_bar.pack_start (hbox);
+        header_bar.pack_end (menu_button);
         header_bar.pack_end (hint_button);
         header_bar.pack_end (pause_button);
-
-        if (!is_desktop ("Unity"))
-        {
-            header_bar.set_show_close_button (true);
-            window.set_titlebar (header_bar);
-        }
-        else
-        {
-            vbox.pack_start (header_bar, false, false, 0);
-        }
+        window.set_titlebar (header_bar);
 
         vbox.pack_start (game_view, true, true, 0);
 
@@ -196,19 +177,6 @@ public class Mahjongg : Gtk.Application
         conf_value_changed_cb (settings, "tileset");
         conf_value_changed_cb (settings, "bgcolour");
         tick_cb ();
-    }
-
-    private bool is_desktop (string name)
-    {
-        var desktop_name_list = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        if (desktop_name_list == null)
-            return false;
-
-        foreach (var n in desktop_name_list.split (":"))
-            if (n == name)
-                return true;
-
-        return false;
     }
 
     private void size_allocate_cb (Gtk.Allocation allocation)

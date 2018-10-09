@@ -1,7 +1,3 @@
-resources = gnome.compile_resources ('resources', 'gnome-mahjongg.gresource.xml',
-                                     source_dir: '.',
-                                     c_name: 'resources')
-
 gnome_mahjongg = executable ('gnome-mahjongg',
                              [ 'config.vapi',
                                'game.vala',
@@ -9,7 +5,7 @@ gnome_mahjongg = executable ('gnome-mahjongg',
                                'gnome-mahjongg.vala',
                                'history.vala',
                                'map.vala',                               
-                               'score-dialog.vala'] + resources,
+                               'score-dialog.vala'],
                              dependencies: [ glib_dep,
                                              gtk_dep,
                                              librsvg_dep ],
