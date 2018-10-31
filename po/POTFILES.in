@@ -8,5 +8,4 @@ src/game.vala
 src/game-view.vala
 src/gnome-mahjongg.vala
 src/map.vala
-src/menu.ui
 src/score-dialog.vala
