@@ -10,10 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-05 15:24+0000\n"
-"PO-Revision-Date: 2018-04-05 20:09+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2018-11-22 15:14+0000\n"
+"PO-Revision-Date: 2018-12-01 21:53+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -23,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: data/gnome-mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -58,8 +57,8 @@ msgstr ""
 "postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
 "ki pa se kaznujejo s časovnim pribitkom."
 
-#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:628
-#: src/gnome-mahjongg.vala:813
+#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:596
+#: src/gnome-mahjongg.vala:781
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -152,83 +151,71 @@ msgstr "Premor"
 msgid "Print release version and exit"
 msgstr "Izpiši različico programa in končaj"
 
-#: src/gnome-mahjongg.vala:94
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
 msgstr "Število preostalih premikov:"
 
-#: src/gnome-mahjongg.vala:120
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
 msgstr "Razveljavi zadnjo potezo"
 
-#: src/gnome-mahjongg.vala:126
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
 msgstr "Ponovno uveljavi zadnjo potezo"
 
-#: src/gnome-mahjongg.vala:132
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
 msgstr "Namig za naslednjo potezo"
 
-#: src/gnome-mahjongg.vala:137 src/gnome-mahjongg.vala:658
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:626
 msgid "Pause the game"
 msgstr "Premor igranja"
 
-#: src/gnome-mahjongg.vala:156
-msgid "_Mahjongg"
-msgstr "_Mahjongg"
-
-#: src/gnome-mahjongg.vala:157 src/menu.ui:7
+#: src/gnome-mahjongg.vala:143
 msgid "_New Game"
 msgstr "_Nova igra"
 
-#: src/gnome-mahjongg.vala:158 src/menu.ui:12
+#: src/gnome-mahjongg.vala:144
 msgid "_Restart Game"
 msgstr "_Začni igro znova"
 
-#: src/gnome-mahjongg.vala:159 src/menu.ui:18
+#: src/gnome-mahjongg.vala:145
 msgid "_Scores"
 msgstr "_Točke"
 
-#: src/gnome-mahjongg.vala:160 src/menu.ui:22
+#: src/gnome-mahjongg.vala:146
 msgid "_Preferences"
 msgstr "_Možnosti"
 
-#: src/gnome-mahjongg.vala:161 src/menu.ui:37 src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Končaj"
-
-#: src/gnome-mahjongg.vala:163 src/menu.ui:28
+#: src/gnome-mahjongg.vala:149
 msgid "_Help"
 msgstr "Pomo_č"
 
-#: src/gnome-mahjongg.vala:164
-msgid "_Contents"
-msgstr "_Vsebina"
+#: src/gnome-mahjongg.vala:150
+msgid "_About Mahjongg"
+msgstr "_O igri"
 
-#: src/gnome-mahjongg.vala:165 src/menu.ui:33
-msgid "_About"
-msgstr "_O Programu"
-
-#: src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:281
 msgid "Do you want to start a new game with this map?"
 msgstr "Ali želite zagnati novo igro s tem zemljevidom?"
 
-#: src/gnome-mahjongg.vala:314
+#: src/gnome-mahjongg.vala:282
 msgid "If you continue playing the next game will use the new map."
 msgstr "Če boste nadaljevali z igro, bo v novi igri uporabljen nov zemljevid."
 
-#: src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:283
 msgid "_Continue playing"
 msgstr "_Nadaljevanje igre"
 
-#: src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:284
 msgid "Use _new map"
 msgstr "Uporabi _nov zemljevid"
 
-#: src/gnome-mahjongg.vala:384
+#: src/gnome-mahjongg.vala:352
 msgid "There are no more moves."
 msgstr "Ni več mogočih premikov."
 
-#: src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:353
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -236,66 +223,66 @@ msgstr ""
 "Vsaka uganka ima vsaj eno rešitev. Dovoljeno je razveljaviti premike in "
 "poiskati ustrezno rešitve, vendar s časovno kaznijo."
 
-#: src/gnome-mahjongg.vala:387
+#: src/gnome-mahjongg.vala:355
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
 "Lahko tudi ponovno premešate predmete, vendar to ne zagotavlja rešitve."
 
-#: src/gnome-mahjongg.vala:388
+#: src/gnome-mahjongg.vala:356
 msgid "_Undo"
 msgstr "_Razveljavi"
 
-#: src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:357
 msgid "_Restart"
 msgstr "_Ponoven zagon"
 
-#: src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:358
 msgid "_New game"
 msgstr "_Nova igra"
 
-#: src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:359
 msgid "_Shuffle"
 msgstr "_Premešaj"
 
-#: src/gnome-mahjongg.vala:443
+#: src/gnome-mahjongg.vala:411
 msgid "Preferences"
 msgstr "Možnosti"
 
-#: src/gnome-mahjongg.vala:459
+#: src/gnome-mahjongg.vala:427
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: src/gnome-mahjongg.vala:487
+#: src/gnome-mahjongg.vala:455
 msgid "_Layout:"
 msgstr "_Postavitev:"
 
-#: src/gnome-mahjongg.vala:513
+#: src/gnome-mahjongg.vala:481
 msgid "_Background color:"
 msgstr "Barva _ozadja:"
 
-#: src/gnome-mahjongg.vala:527
+#: src/gnome-mahjongg.vala:495
 msgid "_Close"
 msgstr "_Zapri"
 
-#: src/gnome-mahjongg.vala:594
+#: src/gnome-mahjongg.vala:562
 msgid "Main game:"
 msgstr "Osnovna igra:"
 
-#: src/gnome-mahjongg.vala:603
+#: src/gnome-mahjongg.vala:571
 msgid "Maps:"
 msgstr "Zemljevidi:"
 
-#: src/gnome-mahjongg.vala:611
+#: src/gnome-mahjongg.vala:579
 msgid "Tiles:"
 msgstr "Ploščice:"
 
-#: src/gnome-mahjongg.vala:631
+#: src/gnome-mahjongg.vala:599
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Igra iskanja parov ploščic Mahjongg."
 
-#: src/gnome-mahjongg.vala:637
+#: src/gnome-mahjongg.vala:605
 msgid "translator-credits"
 msgstr ""
 "Matej Urbančič <mateju@svn.gnome.org>\n"
@@ -303,9 +290,13 @@ msgstr ""
 "Matej Erman\n"
 "Tadej Janež"
 
-#: src/gnome-mahjongg.vala:653
+#: src/gnome-mahjongg.vala:621
 msgid "Unpause the game"
 msgstr "Nadaljuj z igro"
+
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "_Končaj"
 
 #: src/score-dialog.vala:29
 msgid "New Game"
@@ -326,6 +317,12 @@ msgstr "Datum"
 #: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Čas"
+
+#~ msgid "_Contents"
+#~ msgstr "_Vsebina"
+
+#~ msgid "_About"
+#~ msgstr "_O Programu"
 
 #~ msgid "Mahjongg Preferences"
 #~ msgstr "Možnosti Mahjongg"
