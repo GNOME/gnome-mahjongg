@@ -1,12 +1,8 @@
-app-id: org.gnome.gnome-mahjongg
+app-id: org.gnome.Mahjongg
 runtime: org.gnome.Platform
 sdk: org.gnome.Sdk
-runtime-version: '3.30'
+runtime-version: master
 command: gnome-mahjongg
-rename-desktop-file: gnome-mahjongg.desktop
-rename-appdata-file: gnome-mahjongg.appdata.xml
-rename-icon: gnome-mahjongg
-
 finish-args:
   - --share=ipc
   - --socket=x11

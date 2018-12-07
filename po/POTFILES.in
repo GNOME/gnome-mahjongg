@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-data/gnome-mahjongg.appdata.xml.in
-data/gnome-mahjongg.desktop.in
-data/org.gnome.mahjongg.gschema.xml
+data/org.gnome.Mahjongg.appdata.xml.in
+data/org.gnome.Mahjongg.desktop.in
+data/org.gnome.Mahjongg.gschema.xml
 data/translatable_game_names.h
 src/game.vala
 src/game-view.vala
