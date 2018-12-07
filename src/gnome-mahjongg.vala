@@ -146,6 +146,7 @@ public class Mahjongg : Gtk.Application
         mahjongg_menu.append (_("_Preferences"), "app.preferences");
         var help_menu = new Menu ();
         menu.append_section (null, help_menu);
+        help_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
         help_menu.append (_("_Help"), "app.help");
         help_menu.append (_("_About Mahjongg"), "app.about");
 
