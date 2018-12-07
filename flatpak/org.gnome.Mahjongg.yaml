@@ -1,7 +1,7 @@
 app-id: org.gnome.Mahjongg
 runtime: org.gnome.Platform
 sdk: org.gnome.Sdk
-runtime-version: master
+runtime-version: "3.30"
 command: gnome-mahjongg
 finish-args:
   - --share=ipc
@@ -21,4 +21,4 @@ modules:
           url: https://gitlab.gnome.org/GNOME/gnome-mahjongg.git
 
 cleanup:
-  - "/share/man"
+  - /share/man
