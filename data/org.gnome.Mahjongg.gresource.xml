@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/Mahjongg/gtk">
+    <file preprocess="xml-stripblanks" compressed="true">help-overlay.ui</file>
+  </gresource>
+</gresources>

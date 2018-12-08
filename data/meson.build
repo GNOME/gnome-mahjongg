@@ -17,6 +17,11 @@ install_data ('postmodern.svg', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('smooth.png', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
 
+resources = gnome.compile_resources ('resources', 'org.gnome.Mahjongg.gresource.xml',
+                                     source_dir: '.',
+                                     c_name: 'resources')
+
+
 i18n.merge_file ('desktop-file',
                  input: 'org.gnome.Mahjongg.desktop.in',
                  output: 'org.gnome.Mahjongg.desktop',
