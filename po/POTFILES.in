@@ -3,6 +3,7 @@
 data/org.gnome.Mahjongg.appdata.xml.in
 data/org.gnome.Mahjongg.desktop.in
 data/org.gnome.Mahjongg.gschema.xml
+data/help-overlay.ui
 data/translatable_game_names.h
 src/game.vala
 src/game-view.vala
