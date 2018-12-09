@@ -1,3 +1,18 @@
+GNOME Mahjongg 3.31.3
+=====================
+* Development release
+* Switch from autotools to meson (Robert A.)
+* Follow GNOME 3.32 app menu recommendations (Robert A.)
+* Add Keyboard Shortcuts overlay (Jeremy)
+* Hide Keyboard Shortcuts section in app help (Jeremy)
+* Add Flatpak manifest (Jiri)
+* Stop using intltool (Robert R.)
+* Miscellaneous improvements (Anders, Andre, Carlos, Piotr)
+
+Contributors:
+ Robert Ancell, Jeremy Bicha, Piotr Drąg, Jiri Eischmann,
+ Anders Jonsson, Andre Klapper, Robert Roth, Carlos Soriano
+
 GNOME Mahjongg 3.22.0
 =====================
 
