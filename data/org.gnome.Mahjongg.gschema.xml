@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.mahjongg" path="/org/gnome/mahjongg/" gettext-domain="gnome-mahjongg">
+  <schema id="org.gnome.Mahjongg" path="/org/gnome/Mahjongg/" gettext-domain="gnome-mahjongg">
     <key name="show-toolbar" type="b">
       <default>true</default>
     </key>

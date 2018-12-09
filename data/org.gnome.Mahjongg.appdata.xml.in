@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
 <component type="desktop">
-  <id>gnome-mahjongg.desktop</id>
+  <id>org.gnome.Mahjongg</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
   <name>GNOME Mahjongg</name>
@@ -27,6 +27,7 @@
       <caption><!-- Describe this screenshot in less than ~10 words --></caption>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg</url>
   <url type="donation">http://www.gnome.org/friends/</url>

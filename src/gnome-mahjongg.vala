@@ -52,7 +52,7 @@ public class Mahjongg : Gtk.Application
 
     public Mahjongg ()
     {
-        Object (application_id: "org.gnome.gnome-mahjongg", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.Mahjongg", flags: ApplicationFlags.FLAGS_NONE);
 
         add_main_option_entries (option_entries);
     }
@@ -70,7 +70,7 @@ public class Mahjongg : Gtk.Application
         set_accels_for_action ("app.help", {"F1"});
         set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
 
-        settings = new Settings ("org.gnome.mahjongg");
+        settings = new Settings ("org.gnome.Mahjongg");
 
         load_maps ();
 
@@ -604,7 +604,7 @@ public class Mahjongg : Gtk.Application
                                "artists", artists,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "gnome-mahjongg",
+                               "logo-icon-name", "org.gnome.Mahjongg",
                                "website", "https://wiki.gnome.org/Apps/Mahjongg",
                                null);
     }
@@ -780,7 +780,7 @@ public class Mahjongg : Gtk.Application
         Intl.textdomain (GETTEXT_PACKAGE);
 
         Environment.set_application_name (_("Mahjongg"));
-        Gtk.Window.set_default_icon_name ("gnome-mahjongg");
+        Gtk.Window.set_default_icon_name ("org.gnome.Mahjongg");
 
         var app = new Mahjongg ();
         var result = app.run (args);
