@@ -300,7 +300,7 @@ public class Mahjongg : Gtk.Application
         /* Cancel pause on click */
         if (game_view.game.paused)
         {
-            game_view.game.paused = false;
+            pause_cb ();
             return true;
         }
 
