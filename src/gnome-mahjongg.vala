@@ -298,9 +298,12 @@ public class Mahjongg : Gtk.Application
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
+        var pause_image = (Gtk.Image) pause_button.image;
+
         if (game_view.game.paused)
         {
             game_view.game.paused = false;
+            pause_image.icon_name = "media-playback-pause-symbolic";
             return true;
         }
 
