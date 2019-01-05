@@ -35,5 +35,3 @@ install_man ('gnome-mahjongg.6')
 resources = gnome.compile_resources ('resources', 'org.gnome.Mahjongg.gresource.xml',
                                      source_dir: '.',
                                      c_name: 'resources')
-
-
