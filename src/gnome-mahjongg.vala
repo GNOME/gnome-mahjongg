@@ -300,9 +300,7 @@ public class Mahjongg : Gtk.Application
         /* Cancel pause on click */
         if (game_view.game.paused)
         {
-            var pause_image = (Gtk.Image) pause_button.image;
-            game_view.game.paused = false;
-            pause_image.icon_name = "media-playback-pause-symbolic";
+            pause_cb ();
             return true;
         }
 
