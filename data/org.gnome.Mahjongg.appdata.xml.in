@@ -29,8 +29,8 @@
   </screenshots>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
-  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mahjongg</url>
-  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues</url>
+  <url type="donation">https://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
