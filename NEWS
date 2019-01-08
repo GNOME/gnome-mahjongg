@@ -1,3 +1,16 @@
+GNOME Mahjongg 3.31.4
+=====================
+* Development release
+* Consistently use org.gnome.Mahjongg as app ID
+  Note that this renames the icons, .desktop, and
+  AppStream metadata (Bilal)
+* Fix pause button when clicking on game to unpause (Elnee)
+* Miscellaneous improvements (Andre, Jeremy)
+* Translation updates
+
+Contributors:
+ Jeremy Bicha, Bilal ELmoussaoui, Andre Klapper, Elnee
+
 GNOME Mahjongg 3.31.3
 =====================
 * Development release
