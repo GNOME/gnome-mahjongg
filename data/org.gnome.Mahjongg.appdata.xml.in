@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<component type="desktop">
+<component type="desktop-application">
   <id>org.gnome.Mahjongg</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
@@ -24,7 +24,6 @@
   <screenshots>
     <screenshot height="524" width="972" type="default">
       <image>https://people.gnome.org/~mcatanzaro/gnome-mahjongg.png</image>
-      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
     </screenshot>
   </screenshots>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
@@ -34,8 +33,8 @@
   <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
+  <developer_name>The GNOME Project</developer_name>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
     <kudo>UserDocs</kudo>
