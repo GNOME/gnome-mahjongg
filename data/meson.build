@@ -15,20 +15,39 @@ install_data ('postmodern.svg', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('smooth.png', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
 
-i18n.merge_file ('desktop-file',
+desktop_file = i18n.merge_file ('desktop-file',
                  input: 'org.gnome.Mahjongg.desktop.in',
                  output: 'org.gnome.Mahjongg.desktop',
                  install: true,
                  install_dir: join_paths (datadir, 'applications'),
                  po_dir: '../po',
                  type: 'desktop')
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+  test(
+    'validate-desktop',
+    desktop_file_validate,
+    args: [
+      desktop_file.full_path()
+    ]
+  )
+endif
 
-i18n.merge_file ('appdata-file',
+appdata_file = i18n.merge_file ('appdata-file',
                  input: 'org.gnome.Mahjongg.appdata.xml.in',
                  output: 'org.gnome.Mahjongg.appdata.xml',
                  install: true,
                  install_dir: join_paths (datadir, 'metainfo'),
                  po_dir: '../po')
+appstream_util = find_program('appstream-util', required: false)
+if appstream_util.found()
+  test(
+    'validate-appdata', appstream_util,
+    args: [
+      'validate-relax', '--nonet', appdata_file.full_path()
+    ]
+  )
+endif
 
 install_man ('gnome-mahjongg.6')
 
