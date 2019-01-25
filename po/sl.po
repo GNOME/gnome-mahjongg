@@ -5,14 +5,14 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2018.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2018-12-09 20:51+0000\n"
-"PO-Revision-Date: 2018-12-09 21:57+0100\n"
+"POT-Creation-Date: 2019-01-25 13:02+0000\n"
+"PO-Revision-Date: 2019-01-25 18:22+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -22,17 +22,17 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
-#: data/gnome-mahjongg.appdata.xml.in:7
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "GNOME Mahjongg"
 
-#: data/gnome-mahjongg.appdata.xml.in:8
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr "Poišči pare ploščic in počisti igralno ploščo."
 
-#: data/gnome-mahjongg.appdata.xml.in:10
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -47,7 +47,7 @@ msgstr ""
 "če sta obe na isti globinski ravni in na levi ali na desni nista v stiku z "
 "drugo ploščico. Opozorilo: nekatere ploščice so si sila podobne ..."
 
-#: data/gnome-mahjongg.appdata.xml.in:18
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -57,24 +57,25 @@ msgstr ""
 "postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
 "ki pa se kaznujejo s časovnim pribitkom."
 
-#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/gnome-mahjongg.desktop.in:4
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Razstavi skladovnico ploščic z odstranjevanjem parov"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mahjongg.desktop.in:6
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "igra;strateška;sestavljanka;tabla;plošča;kitajska;mahjong;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mahjongg.desktop.in:9
-msgid "gnome-mahjongg"
-msgstr "gnome-mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:9
+#| msgid "gnome-mahjongg"
+msgid "org.gnome.Mahjongg"
+msgstr "org.gnome.Mahjongg"
 
 #: data/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -131,15 +132,15 @@ msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Pokaži tipkovne bližnjice"
 
-#: data/org.gnome.mahjongg.gschema.xml:17
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Širina okna v točkah"
 
-#: data/org.gnome.mahjongg.gschema.xml:21
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Višina okna v točkah"
 
-#: data/org.gnome.mahjongg.gschema.xml:25
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "PRAV, če je okno razpeto"
 
