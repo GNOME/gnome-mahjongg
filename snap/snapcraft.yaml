@@ -65,6 +65,7 @@ parts:
     organize:
       snap/gnome-mahjongg/current/usr: usr
     build-packages:
+      - gettext
       - itstool
       - libglib2.0-dev
       - libgtk-3-dev
