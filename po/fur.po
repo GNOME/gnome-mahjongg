@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2018-12-07 22:39+0000\n"
-"PO-Revision-Date: 2018-12-24 18:38+0100\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-04 13:08+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
 
-#: data/gnome-mahjongg.appdata.xml.in:7
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "GNOME Mahjongg"
 
-#: data/gnome-mahjongg.appdata.xml.in:8
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr "Cumbine lis tessaris e nete la taule"
 
-#: data/gnome-mahjongg.appdata.xml.in:10
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -41,7 +41,7 @@ msgstr ""
 "al è un spazi libar te sô çampe o diestre dal stes nivel. Sta atent: "
 "tessaris che a semein compagnis a podaressin jessi in realtât diferentis."
 
-#: data/gnome-mahjongg.appdata.xml.in:18
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -51,24 +51,29 @@ msgstr ""
 "altris dificii. Se tu restis blocât tu puedis domandâ un aiût, ma chest al "
 "zonte une penalitât al timp."
 
-#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "Il progjet GNOME"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/gnome-mahjongg.desktop.in:4
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Smonte une tasse di tessaris gjavant lis cubiis che si cumbinin"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mahjongg.desktop.in:6
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "zûc;strategjie;berdei;taule;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mahjongg.desktop.in:9
-msgid "gnome-mahjongg"
-msgstr "gnome-mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:9
+#| msgid "gnome-mahjongg"
+msgid "org.gnome.Mahjongg"
+msgstr "org.gnome.Mahjongg"
 
 #: data/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -125,15 +130,15 @@ msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Mostre scurtis di tastiere"
 
-#: data/org.gnome.mahjongg.gschema.xml:17
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Largjece dal barcon in pixel"
 
-#: data/org.gnome.mahjongg.gschema.xml:21
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Altece dal barcon in pixel"
 
-#: data/org.gnome.mahjongg.gschema.xml:25
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "VÊR se il barcon al è slargjât"
 
@@ -232,7 +237,7 @@ msgstr "_Torne tache partide"
 msgid "_Scores"
 msgstr "_Risultâts"
 
-#: src/gnome-mahjongg.vala:146
+#: src/gnome-mahjongg.vala:148
 msgid "_Preferences"
 msgstr "_Preferencis"
 
