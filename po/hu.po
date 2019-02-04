@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-01-05 21:24+0000\n"
-"PO-Revision-Date: 2019-01-27 16:11+0100\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-07 07:41+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -57,6 +57,10 @@ msgid ""
 msgstr ""
 "A GNOME Mahjongg számos kezdő elrendezést tartalmaz, némelyik könnyű, "
 "némelyik nehéz. Ha elakad, kérhet tippet, de ez nagy időbüntetéssel jár."
+
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "A GNOME projekt"
 
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
@@ -382,4 +386,3 @@ msgstr "Dátum"
 #: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Idő"
-
