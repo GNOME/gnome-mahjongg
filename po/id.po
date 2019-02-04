@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-01-05 21:24+0000\n"
-"PO-Revision-Date: 2019-01-12 19:54+0700\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-04 14:24+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural= n!=1;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -54,6 +54,10 @@ msgstr ""
 "GNOME Mahjongg memiliki tata letak awal yang bervariasi, beberapa mudah dan "
 "beberapa sulit. Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk, "
 "tapi ini menambahkan penalti waktu yang besar."
+
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "Proyek GNOME"
 
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
