@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-02-01 17:56+0000\n"
-"PO-Revision-Date: 2019-02-03 18:02+0100\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-06 22:02+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -62,6 +62,10 @@ msgid ""
 msgstr ""
 "Madżong GNOME zawiera wiele plansz, niektóre łatwe, a niektóre trudne. "
 "W razie utknięcia można użyć podpowiedzi, ale dodaje to karę czasową."
+
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
