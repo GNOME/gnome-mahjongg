@@ -5,14 +5,14 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2015, 2018, 2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-01-05 21:24+0000\n"
-"PO-Revision-Date: 2019-01-09 09:42+0100\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-06 10:34+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.31.90\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
@@ -57,6 +57,10 @@ msgstr ""
 "algunas difíciles. Si tiene problemas, puede pedir una pista, pero esto "
 "añade una penalización de tiempo."
 
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "El Proyecto GNOME"
+
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
@@ -73,7 +77,6 @@ msgstr "juego;estrategia;puzle;tablero;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mahjongg.desktop.in:9
-#| msgid "gnome-mahjongg"
 msgid "org.gnome.Mahjongg"
 msgstr "org.gnome.Mahjongg"
 
@@ -88,13 +91,11 @@ msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
 #: data/help-overlay.ui:24
-#| msgid "Pause the game"
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pausar el juego"
 
 #: data/help-overlay.ui:31
-#| msgid "_Undo"
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Deshacer"
@@ -110,13 +111,11 @@ msgid "Fullscreen"
 msgstr "Pantalla completa"
 
 #: data/help-overlay.ui:52
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
 
 #: data/help-overlay.ui:59
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Ayuda"
