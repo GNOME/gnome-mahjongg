@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-01-05 21:24+0000\n"
-"PO-Revision-Date: 2019-01-25 14:00+0100\n"
+"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"PO-Revision-Date: 2019-02-07 21:16+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -55,6 +55,10 @@ msgstr ""
 "GNOME Mahjong har ett antal startlayouter, några enkla och några svåra. Om "
 "du fastnar kan du be om ett tips, men detta ger en stort tidstillägg."
 
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
@@ -71,7 +75,6 @@ msgstr "spel;strategi;pussel;brädspel;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mahjongg.desktop.in:9
-#| msgid "gnome-mahjongg"
 msgid "org.gnome.Mahjongg"
 msgstr "org.gnome.Mahjongg"
 
@@ -245,7 +248,7 @@ msgstr "_Inställningar"
 
 #: src/gnome-mahjongg.vala:149
 msgid "_Keyboard Shortcuts"
-msgstr "_Tangenbordsgenvägar"
+msgstr "_Tangentbordsgenvägar"
 
 #: src/gnome-mahjongg.vala:150
 msgid "_Help"
