@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-01-25 13:02+0000\n"
-"PO-Revision-Date: 2019-01-25 18:22+0100\n"
+"POT-Creation-Date: 2019-02-10 17:31+0000\n"
+"PO-Revision-Date: 2019-02-12 12:54+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -57,6 +57,10 @@ msgstr ""
 "postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
 "ki pa se kaznujejo s časovnim pribitkom."
 
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
@@ -73,7 +77,6 @@ msgstr "igra;strateška;sestavljanka;tabla;plošča;kitajska;mahjong;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mahjongg.desktop.in:9
-#| msgid "gnome-mahjongg"
 msgid "org.gnome.Mahjongg"
 msgstr "org.gnome.Mahjongg"
 
