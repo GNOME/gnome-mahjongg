@@ -1,11 +1,7 @@
-foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48' ]
-    install_data (join_paths ('icons', 'hicolor', size, 'org.gnome.Mahjongg.png'),
-                  install_dir: join_paths (datadir, 'icons', 'hicolor', size, 'apps'))
-endforeach
 install_data (join_paths ('icons', 'hicolor', 'scalable', 'org.gnome.Mahjongg.svg'),
               install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
-install_data (join_paths ('icons', 'hicolor', 'scalable', 'org.gnome.Mahjongg-symbolic.svg'),
-              install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
+install_data (join_paths ('icons', 'hicolor', 'symbolic', 'org.gnome.Mahjongg-symbolic.svg'),
+              install_dir: join_paths (datadir, 'icons', 'hicolor', 'symbolic', 'apps'))
 
 install_data ('org.gnome.Mahjongg.gschema.xml',
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="org.gnome.Mahjongg-symbolic.svg"
+   height="16"
+   id="svg7384"
+   version="1.1"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   width="16">
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnome Symbolic Icon Theme</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:bbox-paths="true"
+     bordercolor="#666666"
+     borderopacity="1"
+     inkscape:current-layer="layer9"
+     inkscape:cx="-8.1833769"
+     inkscape:cy="3.5544162"
+     gridtolerance="10"
+     inkscape:guide-bbox="true"
+     guidetolerance="10"
+     id="namedview88"
+     inkscape:object-nodes="false"
+     inkscape:object-paths="false"
+     objecttolerance="10"
+     pagecolor="#555753"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     showborder="true"
+     showgrid="false"
+     showguides="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-global="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="false"
+     inkscape:snap-to-guides="true"
+     inkscape:window-height="1376"
+     inkscape:window-maximized="1"
+     inkscape:window-width="2560"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:zoom="16">
+    <inkscape:grid
+       empspacing="2"
+       enabled="true"
+       id="grid4866"
+       originx="-182"
+       originy="-362"
+       snapvisiblegridlinesonly="true"
+       spacingx="1"
+       spacingy="1"
+       type="xygrid"
+       visible="true" />
+  </sodipodi:namedview>
+  <title
+     id="title9167">Gnome Symbolic Icon Theme</title>
+  <defs
+     id="defs7386">
+    <linearGradient
+       id="linearGradient7212"
+       osb:paint="solid">
+      <stop
+         id="stop7214"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="apps"
+     style="display:inline"
+     transform="translate(-423.0002,145)">
+    <path
+       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17677668;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:normal;enable-background:new"
+       d="M 4.3730469 1 C 3.60597 1 2.9882812 1.5313212 2.9882812 2.1914062 L 2.9882812 13.808594 C 2.9882812 14.468679 3.60597 15 4.3730469 15 L 10.603516 15 C 11.370593 15 11.988281 14.468679 11.988281 13.808594 L 11.988281 2.1914062 C 11.988281 1.5313212 11.370593 1 10.603516 1 L 4.3730469 1 z M 6.9882812 3.3808594 L 8.3164062 4.5722656 L 7.9882812 4.6464844 C 7.9882812 5.2357951 7.8737825 6.0928105 7.6660156 6.9941406 L 10.046875 7 L 10.337891 6.6152344 L 11 8 L 8.7480469 8 C 8.7480469 8.98551 9.9882812 10 9.9882812 10 L 9.9882812 11.689453 C 9.9882813 11.689453 8.1720981 11.302566 8.0371094 8 L 7.390625 8 C 6.8973526 9.576845 6.1042774 11.077189 4.9882812 11.414062 L 5 9.9726562 C 5.6439002 9.5874911 6.0831676 8.8700307 6.3847656 8 L 4.4492188 8 L 4.2617188 6.9863281 L 6.6582031 6.9921875 C 6.9090352 5.8218402 6.9882812 4.5171614 6.9882812 3.3808594 z "
+       transform="translate(423.0002,-145)"
+       id="rect1105-3" />
+  </g>
+</svg>
