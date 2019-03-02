@@ -90,7 +90,7 @@ public class ScoreDialog : Gtk.Dialog
             if (entry.name != name)
                 continue;
 
-            var date_label = entry.date.format ("%d/%m/%Y");
+            var date_label = entry.date.format ("%x");
 
             var time_label = "%us".printf (entry.duration);
             if (entry.duration >= 60)
