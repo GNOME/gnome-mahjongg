@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-02-04 01:16+0000\n"
+"POT-Creation-Date: 2019-03-26 17:50+0000\n"
 "PO-Revision-Date: 2019-02-13 00:12+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -75,11 +75,6 @@ msgstr "Pil en bunke fliser fra hinanden ved at fjerne identiske par"
 #: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "spil;strategi;tænkespil;hjernebryder;bræt;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mahjongg.desktop.in:9
-msgid "org.gnome.Mahjongg"
-msgstr "org.gnome.Mahjongg"
 
 #: data/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -358,8 +353,9 @@ msgstr ""
 "Ole Laursen\n"
 "Ask Hjorth Larsen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
@@ -389,8 +385,12 @@ msgstr "Dato"
 msgid "Time"
 msgstr "Tid"
 
+#~ msgid "org.gnome.Mahjongg"
+#~ msgstr "org.gnome.Mahjongg"
+
 #~ msgid "_Contents"
 #~ msgstr "_Indhold"
 
 #~ msgid "_About"
 #~ msgstr "_Om"
+
