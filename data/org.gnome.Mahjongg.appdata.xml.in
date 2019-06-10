@@ -26,6 +26,9 @@
       <image>https://people.gnome.org/~mcatanzaro/gnome-mahjongg.png</image>
     </screenshot>
   </screenshots>
+  <releases>
+    <release version="3.32.0" data="2019-03-11" />
+  </releases>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues</url>
@@ -40,4 +43,5 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <translation type="gettext">gnome-mahjongg</translation>
+  <content_rating type="oars-1.1" />
 </component>
