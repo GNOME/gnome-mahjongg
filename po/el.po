@@ -35,10 +35,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-05 15:24+0000\n"
-"PO-Revision-Date: 2018-03-08 13:40+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2019-03-26 17:51+0000\n"
+"PO-Revision-Date: 2019-06-11 14:02+0300\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
 "Language: el\n"
@@ -49,15 +48,15 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: data/gnome-mahjongg.appdata.xml.in:7
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "Ματζόνγκ"
 
-#: data/gnome-mahjongg.appdata.xml.in:8
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr "Ταιριάξτε τα πλακίδια και καθαρίστε τον πίνακα"
 
-#: data/gnome-mahjongg.appdata.xml.in:10
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -74,7 +73,7 @@ msgstr ""
 "στο ίδιο επίπεδο. Προσοχή: τα πλακίδια που φαίνονται όμοια μπορεί στην "
 "πραγματικότητα να είναι λίγο διαφορετικά."
 
-#: data/gnome-mahjongg.appdata.xml.in:18
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -84,35 +83,89 @@ msgstr ""
 "και κάποιες δύσκολες. Αν κολλήσετε, μπορείτε να ζητήσετε μια υπόδειξη, αλλά "
 "αυτό προσθέτει μια ποινή μεγάλου χρόνου."
 
-#: data/gnome-mahjongg.desktop.in:3 src/gnome-mahjongg.vala:628
-#: src/gnome-mahjongg.vala:813
+#: data/org.gnome.Mahjongg.appdata.xml.in:36
+msgid "The GNOME Project"
+msgstr "Το έργο GNOME"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "Ματζόνγκ"
 
-#: data/gnome-mahjongg.desktop.in:4
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr ""
 "Αποσυναρμολόγηση σωρών από πλακίδια με την αφαίρεση ζευγαριών που ταιριάζουν"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mahjongg.desktop.in:6
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "παιχνίδι;στρατηγική;παζλ;πίνακας;game;strategy;puzzle;board;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mahjongg.desktop.in:9
-msgid "gnome-mahjongg"
-msgstr "gnome-mahjongg"
+#: data/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Γενικά"
 
-#: data/org.gnome.mahjongg.gschema.xml:17
+#: data/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#: data/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Παύση παιχνιδιού"
+
+#: data/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Αναίρεση"
+
+#: data/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Επαναφορά"
+
+#: data/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "Πλήρης οθόνη"
+
+#: data/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "Εμφάνιση υπόδειξης"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Εμφάνιση βοήθειας"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
+
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Το πλάτος του παραθύρου σε εικονοστοιχεία"
 
-#: data/org.gnome.mahjongg.gschema.xml:21
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Το ύψος του παραθύρου σε εικονοστοιχεία"
 
-#: data/org.gnome.mahjongg.gschema.xml:25
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
@@ -179,84 +232,76 @@ msgstr "Παύση"
 msgid "Print release version and exit"
 msgstr "Εκτύπωση της έκδοσης και έξοδος"
 
-#: src/gnome-mahjongg.vala:94
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
 msgstr "Κινήσεις που απομένουν:"
 
-#: src/gnome-mahjongg.vala:120
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
 msgstr "Αναίρεση της τελευταίας σας κίνησης"
 
-#: src/gnome-mahjongg.vala:126
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
 msgstr "Επανεκτέλεση της τελευταίας σας κίνησης"
 
-#: src/gnome-mahjongg.vala:132
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
 msgstr "Λήψη υπόδειξης για την επόμενη κίνησή σας"
 
-#: src/gnome-mahjongg.vala:137 src/gnome-mahjongg.vala:658
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
 msgstr "Παύση παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:156
-msgid "_Mahjongg"
-msgstr "_Ματζόνγκ"
-
-#: src/gnome-mahjongg.vala:157 src/menu.ui:7
+#: src/gnome-mahjongg.vala:143
 msgid "_New Game"
 msgstr "_Νέο παιχνίδι"
 
-#: src/gnome-mahjongg.vala:158 src/menu.ui:12
+#: src/gnome-mahjongg.vala:144
 msgid "_Restart Game"
 msgstr "_Επανεκκίνηση του παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:159 src/menu.ui:18
+#: src/gnome-mahjongg.vala:145
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
-#: src/gnome-mahjongg.vala:160 src/menu.ui:22
+#: src/gnome-mahjongg.vala:148
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: src/gnome-mahjongg.vala:161 src/menu.ui:37 src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "Έ_ξοδος"
+#: src/gnome-mahjongg.vala:149
+msgid "_Keyboard Shortcuts"
+msgstr "Συντομεύσεις _πληκτρολογίου"
 
-#: src/gnome-mahjongg.vala:163 src/menu.ui:28
+#: src/gnome-mahjongg.vala:150
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: src/gnome-mahjongg.vala:164
-msgid "_Contents"
-msgstr "_Περιεχόμενα"
+#: src/gnome-mahjongg.vala:151
+msgid "_About Mahjongg"
+msgstr "_Περί Ματζόνγκ"
 
-#: src/gnome-mahjongg.vala:165 src/menu.ui:33
-msgid "_About"
-msgstr "_Περί"
-
-#: src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
 msgstr "Θέλετε να ξεκινήσετε νέο παιχνίδι με αυτό το χάρτη;"
 
-#: src/gnome-mahjongg.vala:314
+#: src/gnome-mahjongg.vala:283
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Αν συνεχίσετε να παίζετε, το επόμενο παιχνίδι θα χρησιμοποιήσει το νέο χάρτη."
 
-#: src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:284
 msgid "_Continue playing"
 msgstr "_Συνέχεια παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:285
 msgid "Use _new map"
 msgstr "Χρήση νέου _χάρτη"
 
-#: src/gnome-mahjongg.vala:384
+#: src/gnome-mahjongg.vala:353
 msgid "There are no more moves."
 msgstr "Δεν υπάρχουν άλλες κινήσεις."
 
-#: src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:354
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -265,7 +310,7 @@ msgstr ""
 "και να προσπαθήσετε να βρείτε τη λύση, να επανεκκινήσετε το παιχνίδι ή "
 "ξεκινήστε ένα νέο."
 
-#: src/gnome-mahjongg.vala:387
+#: src/gnome-mahjongg.vala:356
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -273,59 +318,59 @@ msgstr ""
 "Μπορείτε επίσης να προσπαθήσετε να ανακατανείμετε το παιχνίδι, αλλά αυτή η "
 "ενέργεια δεν εγγυάται τη λύση."
 
-#: src/gnome-mahjongg.vala:388
+#: src/gnome-mahjongg.vala:357
 msgid "_Undo"
 msgstr "Α_ναίρεση"
 
-#: src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:358
 msgid "_Restart"
 msgstr "_Επανεκκίνηση"
 
-#: src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:359
 msgid "_New game"
 msgstr "_Νέο παιχνίδι"
 
-#: src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
 msgstr "_Μοίρασμα"
 
-#: src/gnome-mahjongg.vala:443
+#: src/gnome-mahjongg.vala:412
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: src/gnome-mahjongg.vala:459
+#: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
 msgstr "_Θέμα:"
 
-#: src/gnome-mahjongg.vala:487
+#: src/gnome-mahjongg.vala:456
 msgid "_Layout:"
 msgstr "Δ_ιάταξη:"
 
-#: src/gnome-mahjongg.vala:513
+#: src/gnome-mahjongg.vala:482
 msgid "_Background color:"
 msgstr "_Χρώμα παρασκηνίου:"
 
-#: src/gnome-mahjongg.vala:527
+#: src/gnome-mahjongg.vala:496
 msgid "_Close"
 msgstr "Κ_λείσιμο"
 
-#: src/gnome-mahjongg.vala:594
+#: src/gnome-mahjongg.vala:563
 msgid "Main game:"
 msgstr "Κυρίως παιχνίδι:"
 
-#: src/gnome-mahjongg.vala:603
+#: src/gnome-mahjongg.vala:572
 msgid "Maps:"
 msgstr "Χάρτες:"
 
-#: src/gnome-mahjongg.vala:611
+#: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
 msgstr "Πλακίδια:"
 
-#: src/gnome-mahjongg.vala:631
+#: src/gnome-mahjongg.vala:600
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Ένα παιχνίδι ταιριάσματος που παίζεται με τα πλακίδια του Ματζόνγκ."
 
-#: src/gnome-mahjongg.vala:637
+#: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -338,9 +383,13 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/gnome-mahjongg.vala:653
+#: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
 msgstr "Αναίρεση παύσης παιχνιδιού"
+
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "Έ_ξοδος"
 
 #: src/score-dialog.vala:29
 msgid "New Game"
@@ -361,3 +410,12 @@ msgstr "Ημερομηνία"
 #: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Χρόνος"
+
+#~ msgid "gnome-mahjongg"
+#~ msgstr "gnome-mahjongg"
+
+#~ msgid "_Contents"
+#~ msgstr "_Περιεχόμενα"
+
+#~ msgid "_About"
+#~ msgstr "_Περί"
