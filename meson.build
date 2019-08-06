@@ -1,5 +1,5 @@
 project ('gnome-mahjongg', ['vala', 'c'],
-         version: '3.32.0',
+         version: '3.33.90',
          license: 'GPLv3+',
          default_options: [
              'warning_level=1',
