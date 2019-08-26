@@ -107,7 +107,7 @@ msgstr "Desfés"
 #: data/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Redo"
-msgstr "Torna a fer"
+msgstr "Refés"
 
 #: data/help-overlay.ui:45
 msgctxt "shortcut window"
