@@ -3,20 +3,21 @@
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
-# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2009.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
+# sicklylife <translation@sicklylife.jp>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
 "POT-Creation-Date: 2019-06-11 11:03+0000\n"
-"PO-Revision-Date: 2013-09-16 10:48+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"PO-Revision-Date: 2019-09-07 19:00+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +26,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#, fuzzy
-#| msgid "Mahjongg"
 msgid "GNOME Mahjongg"
 msgstr "GNOME 上海"
 
@@ -53,7 +52,7 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:36
 msgid "The GNOME Project"
-msgstr ""
+msgstr "The GNOME Project"
 
 #: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
 #: src/gnome-mahjongg.vala:782
@@ -74,61 +73,57 @@ msgstr ""
 #: data/help-overlay.ui:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "全般"
 
 #: data/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr ""
+msgstr "新しいゲームを開始する"
 
 #: data/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Pause the game"
-msgstr ""
+msgstr "ゲームを一時停止する"
 
 #: data/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Undo"
-msgstr ""
+msgstr "元に戻す"
 
 #: data/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Redo"
-msgstr ""
+msgstr "やり直す"
 
 #: data/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Fullscreen"
-msgstr ""
+msgstr "フルスクリーン"
 
 #: data/help-overlay.ui:52
-#, fuzzy
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "終了(_Q)"
+msgstr "終了する"
 
 #: data/help-overlay.ui:59
-#, fuzzy
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
-msgstr "ヘルプ(_H)"
+msgstr "ヘルプ"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Show a hint"
-msgstr ""
+msgstr "ヒントを表示する"
 
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr ""
+msgstr "ヘルプを表示する"
 
 #: data/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカットを表示する"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -180,7 +175,7 @@ msgstr "赤い龍"
 #: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
-msgstr ""
+msgstr "立体交差"
 
 #: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
@@ -203,7 +198,7 @@ msgstr "一時停止"
 
 #: src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
-msgstr ""
+msgstr "バージョンを表示して終了する"
 
 #: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
@@ -211,19 +206,19 @@ msgstr "取れる牌の組:"
 
 #: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
-msgstr ""
+msgstr "直近の操作を元に戻す"
 
 #: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
-msgstr ""
+msgstr "直近の操作をやり直す"
 
 #: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
-msgstr ""
+msgstr "次の操作のヒントを得る"
 
 #: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
-msgstr ""
+msgstr "ゲームを一時停止"
 
 #: src/gnome-mahjongg.vala:143
 msgid "_New Game"
@@ -243,17 +238,15 @@ msgstr "設定(_P)"
 
 #: src/gnome-mahjongg.vala:149
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #: src/gnome-mahjongg.vala:150
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
 #: src/gnome-mahjongg.vala:151
-#, fuzzy
-#| msgid "Mahjongg"
 msgid "_About Mahjongg"
-msgstr "GNOME 上海"
+msgstr "GNOME 上海について(_A)"
 
 #: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
@@ -276,30 +269,23 @@ msgid "There are no more moves."
 msgstr "残念ながら、手詰まりです。"
 
 #: src/gnome-mahjongg.vala:354
-#, fuzzy
-#| msgid ""
-#| "Each puzzle has at least one solution.  You can undo your moves and try "
-#| "and find the solution for a time penalty, restart this game or start an "
-#| "new one."
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr ""
-"各パズルは少なくとも一つは答えがあります。時間のペナルティと引き換えに移動を"
-"元に戻して答えを探したり、このゲームをやり直すか新しいゲームを開始することが"
-"できます。"
+"各パズルは少なくとも一つは答えがあります。牌を元に戻して答えを探すか、"
+"このゲームをやり直すか、新しいゲームを開始するか選択してください。"
 
 #: src/gnome-mahjongg.vala:356
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
+"牌を混ぜ直すこともできますが、解答に繋がる保証はありません。"
 
 #: src/gnome-mahjongg.vala:357
-#, fuzzy
-#| msgid "_Undo Move"
 msgid "_Undo"
-msgstr "移動を元に戻す(_U)"
+msgstr "元に戻す(_U)"
 
 #: src/gnome-mahjongg.vala:358
 msgid "_Restart"
@@ -311,13 +297,11 @@ msgstr "新しいゲーム(_N)"
 
 #: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
-msgstr ""
+msgstr "混ぜる(_S)"
 
 #: src/gnome-mahjongg.vala:412
-#, fuzzy
-#| msgid "_Preferences"
 msgid "Preferences"
-msgstr "設定(_P)"
+msgstr "設定"
 
 #: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
@@ -333,7 +317,7 @@ msgstr "背景色(_B):"
 
 #: src/gnome-mahjongg.vala:496
 msgid "_Close"
-msgstr ""
+msgstr "閉じる(_C)"
 
 #: src/gnome-mahjongg.vala:563
 msgid "Main game:"
@@ -348,33 +332,27 @@ msgid "Tiles:"
 msgstr "牌:"
 
 #: src/gnome-mahjongg.vala:600
-#, fuzzy
-#| msgid ""
-#| "A matching game played with Mahjongg tiles.\n"
-#| "\n"
-#| "Mahjongg is a part of GNOME Games."
 msgid "A matching game played with Mahjongg tiles"
-msgstr ""
-"同じ麻雀牌を見つけていくゲームです。\n"
-"\n"
-"GNOME 上海は GNOME ゲーム集の一部です。"
+msgstr "同じ麻雀牌を見つけていくゲームです"
 
 #: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
-"佐藤 暁 <ss@gnome.gr.jp>\n"
-"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
-"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"日本 GNOME ユーザー会 <http://www.gnome.gr.jp>\n"
 "Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
-"Yukihiro Nakai <Nakai@technologist.com>\n"
 "catback(Hiromi Imazato) <catback@lindwurm.biz>\n"
-"日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Shushi KUROSE <md81bird@hitaki.net>\n"
+"sicklylife <translation@sicklylife.jp>\n"
+"Yukihiro Nakai <Nakai@technologist.com>\n"
+"Yuusuke Tahara <tahara@gnome.gr.jp>"
 
 #: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
-msgstr ""
+msgstr "ゲームを再開"
 
 #: src/score-dialog.vala:28
 msgid "_Quit"
@@ -386,7 +364,7 @@ msgstr "新しいゲーム"
 
 #: src/score-dialog.vala:32
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/score-dialog.vala:44
 msgid "Layout:"
