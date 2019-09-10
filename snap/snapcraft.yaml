@@ -66,10 +66,10 @@ parts:
     source: .
     source-type: git
     override-build: |
-      sed -i.bak -e 's|=org.gnome.Mahjongg$|=${SNAP}/meta/gui/org.gnome.Mahjongg.png|g' data/org.gnome.Mahjongg.desktop.in
+      sed -i.bak -e 's|=org.gnome.Mahjongg$|=${SNAP}/meta/gui/org.gnome.Mahjongg.svg|g' data/org.gnome.Mahjongg.desktop.in
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp ../src/data/icons/hicolor/48x48/org.gnome.Mahjongg.png $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp ../src/data/icons/hicolor/scalable/org.gnome.Mahjongg.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
       cp ../install/snap/gnome-mahjongg/current/usr/share/applications/org.gnome.Mahjongg.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
     plugin: meson
     meson-parameters: [--prefix=/snap/gnome-mahjongg/current/usr]
