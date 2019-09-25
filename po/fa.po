@@ -5,17 +5,16 @@
 # Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
-# Danial Behzadi <dani.behzi@gmail.com>, 2012.
+# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014, 2015, 2016, 2017, 2018, 2019.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-16 15:21+0000\n"
-"PO-Revision-Date: 2016-09-18 21:16+0430\n"
-"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2019-09-24 20:22+0000\n"
+"PO-Revision-Date: 2019-09-25 16:32+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -23,64 +22,123 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
-msgstr "گنوم ماهجونگ"
+msgstr "ماهجونگ گنوم"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
-msgstr "خانه‌ها را جور کنید و تخته را پاک کنید"
+msgstr "خانه‌ها را جور کرده و تخته را پاک‌سازی کنید"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
-"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
-"the board at the start of the game. The goal is to remove all the tiles in "
-"as little time as possible. Select two matching tiles and they will "
-"disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on the "
+"board at the start of the game. The goal is to remove all the tiles in as "
+"little time as possible. Select two matching tiles and they will disappear "
+"from the board, but you can only select a tile if there is an empty space to "
+"its left or right at the same level. Be careful: tiles that look alike may "
+"actually be slightly different."
 msgstr ""
-"یک نسخه انفرادی از یک بازی کلاسیک شرقی. مهره‌ها در ابتدای بازی روی هم چیده "
-"شده‌اند. هدف این است که مهره‌ها را در کمترین زمان ممکن حذف کنید. دو مهره منطبق "
-"با هم را انتخاب کنید، و آنها از صفحه حذف می‌شوند، اما شما تنها مهره‌هایی را "
-"می‌توانید انتخاب کنید که یک فضای خالی در سمت راست یا چپ آن در همان سطح وجود "
-"داشته باشد. مواضب باشید: مهره‌هایی که به نظر شبیه به هم هستند، ممکن است در "
-"واقع متفاوت باشند."
+"یک نگارش انفرادی از یک بازی کلاسیک شرقی. مهره‌ها در ابتدای بازی روی هم چیده "
+"شده‌اند. هدف این است که مهره‌ها را در کم‌ترین زمان ممکن حذف کنید. دو مهرهٔ منطبق "
+"با هم را گزیده تا از صفحه حذف شوند، ولی تنها می‌توانید مهره‌هایی را برگزینید که "
+"یک فضای خالی در سمت راست یا چپ آن در همان سطح وجود داشته باشد. مواضب باشید: "
+"مهره‌هایی که به نظر شبیه همند، ممکن است در واقع متفاوت باشند."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:4
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"گنوم ماهجونگ چیدمان‌های مختلفی را فراهم می‌کند، تعدادی ساده و تعدادی سخت. اگر "
-"گیر کنید، می‌توانید درخواست راهنمایی کنید، اما اینکار یک جریمه بزرگ زمانی "
+"ماهجونگ گنوم چیدمان‌های مختلفی را فراهم می‌کند، تعدادی ساده و تعدادی سخت. اگر "
+"گیر کردید، می‌توانید درخواست راهنمایی کنید، اما این کار یک جریمهٔ بزرگ زمانی "
 "خواهد داشت."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:628
-#: ../src/gnome-mahjongg.vala:813
+#: data/org.gnome.Mahjongg.appdata.xml.in:39
+msgid "The GNOME Project"
+msgstr "پروژهٔ گنوم"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "ماهجونگ"
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "برداشتن توده‌ی کاشی‌ها با حذف جفت‌های جور شده"
+msgstr "برداشتن تودهٔ کاشی‌ها با حذف جفت‌های جور شده"
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;بازی;استراتژی;پازل;تخته;"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:1
+#: data/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "عمومی"
+
+#: data/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "شروع بازی جدید"
+
+#: data/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "مکث بازی"
+
+#: data/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "برگردان"
+
+#: data/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "انجام دوباره"
+
+#: data/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "تمام‌صفحه"
+
+#: data/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "خروج"
+
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "راهنما"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "نمایش یک راهنمایی"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "نمایش راهنما"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "نمایش میان‌برهای صفحه‌کلید"
+
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
-msgstr "عرض پنجره به پیکسل"
+msgstr "پهنای پنجره به پیکسل"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:2
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
-msgstr "ارتفاع پنجره به پیکسل"
+msgstr "بلندای پنجره به پیکسل"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:3
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
@@ -89,142 +147,133 @@ msgstr "درست اگر پنجره بیشینه باشد"
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
 msgstr "آسان"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "زیگورات"
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "چهار پل"
 
-#: ../data/translatable_game_names.h:9
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "ابر"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "دوز"
 
-#: ../data/translatable_game_names.h:11
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "اژدهای سرخ"
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "پل‌هوایی"
 
-#: ../data/translatable_game_names.h:13
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "دیوارهای هرم"
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "صلیب متعجب کننده"
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "سخت"
 
-#: ../src/game-view.vala:132
+#: src/game-view.vala:132
 msgid "Paused"
 msgstr "مکث شده"
 
-#: ../src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
-msgstr "نمایش نسخه‌ی انتشار و خروج"
+msgstr "نمایش نگارش انتشار و خروج"
 
-#: ../src/gnome-mahjongg.vala:94
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
-msgstr "حرکت‌های باقی‌مانده:"
+msgstr "حرکت‌های مانده:"
 
-#: ../src/gnome-mahjongg.vala:120
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
-msgstr "برگرداندن آخرین حرکت خود"
+msgstr "برگردان آخرین حرکتان"
 
-#: ../src/gnome-mahjongg.vala:126
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
-msgstr "انجام دوباره آخرین حرکت"
+msgstr "انجام دوبارهٔ آخرین حرکتتان"
 
-#: ../src/gnome-mahjongg.vala:132
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
-msgstr "راهنمایی گرفتن برای حرکت بعدی"
+msgstr "گرفتن راهنمایی برای حرکت بعدیتان"
 
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:658
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
-msgstr "متوقف کردن بازی"
+msgstr "مکث بازی"
 
-#: ../src/gnome-mahjongg.vala:156
-msgid "_Mahjongg"
-msgstr "_ماهجونگ"
-
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
+#: src/gnome-mahjongg.vala:143
 msgid "_New Game"
 msgstr "بازی _جدید"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
+#: src/gnome-mahjongg.vala:144
 msgid "_Restart Game"
-msgstr "شروع مجدد بازی"
+msgstr "شروع _دوبارهٔ بازی"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
+#: src/gnome-mahjongg.vala:145
 msgid "_Scores"
-msgstr "امتیا_زها"
+msgstr "_امتیازها"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
+#: src/gnome-mahjongg.vala:148
 msgid "_Preferences"
 msgstr "_ترجیحات"
 
-#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
-#: ../src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_خروج"
+#: src/gnome-mahjongg.vala:149
+msgid "_Keyboard Shortcuts"
+msgstr "میان‌برهای _صفحه‌کلید"
 
-#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
+#: src/gnome-mahjongg.vala:150
 msgid "_Help"
 msgstr "_راهنما"
 
-#: ../src/gnome-mahjongg.vala:164
-msgid "_Contents"
-msgstr "م_حتویات"
+#: src/gnome-mahjongg.vala:151
+msgid "_About Mahjongg"
+msgstr "_دربارهٔ ماهجونگ"
 
-#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
-msgid "_About"
-msgstr "_درباره"
-
-#: ../src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
-msgstr "آیا می‌خواهید بازی جدیدی با این نقشه آغاز کنید؟"
+msgstr "می‌خواهید بازی جدیدی را با این نقشه شروع کنید؟"
 
-#: ../src/gnome-mahjongg.vala:314
+#: src/gnome-mahjongg.vala:283
 msgid "If you continue playing the next game will use the new map."
-msgstr "اگر به بازی ادامه دهید، بازی بعدی از نقشه‌ی جدید استفاده خواهد کرد."
+msgstr "اگر به بازی ادامه دهید، بازی بعدی از نقشهٔ جدید استفاده خواهد کرد."
 
-#: ../src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:284
 msgid "_Continue playing"
-msgstr "_ادامه‌ی بازی"
+msgstr "_ادامهٔ بازی"
 
-#: ../src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:285
 msgid "Use _new map"
-msgstr "استفاده از نقشه‌ی _جدید"
+msgstr "استفاده از نقشهٔ _جدید"
 
-#: ../src/gnome-mahjongg.vala:384
+#: src/gnome-mahjongg.vala:353
 msgid "There are no more moves."
 msgstr "دیگر نمی‌شود حرکتی کرد."
 
-#: ../src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:354
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -232,92 +281,101 @@ msgstr ""
 "هر پازل حداقل یک راه حل دارد. شما می‌توانید حرکاتتان را برگردانید و سعی کنید "
 "راه‌حل را پیدا، بازی را مجددا راه‌اندازی یا یک بازی جدید شروع کنید."
 
-#: ../src/gnome-mahjongg.vala:387
+#: src/gnome-mahjongg.vala:356
 msgid ""
-"You can also try to reshuffle the game, but this does not guarantee a "
-"solution."
+"You can also try to reshuffle the game, but this does not guarantee a solution."
 msgstr ""
-"شما همچنین می‌توانید بازی را دوباره در هم بریزید، اما اینکار امکان پیدا کردن "
-"یک راه حل را تضمین نمی‌کند."
+"شما همچنین می‌توانید بازی را دوباره در هم بریزید، اما اینکار امکان یافتن یک راه "
+"حل را تضمین نمی‌کند."
 
-#: ../src/gnome-mahjongg.vala:388
+#: src/gnome-mahjongg.vala:357
 msgid "_Undo"
 msgstr "_برگردان"
 
-#: ../src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:358
 msgid "_Restart"
-msgstr "_شروع مجدد"
+msgstr "شروع _دوباره"
 
-#: ../src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:359
 msgid "_New game"
-msgstr "_بازی جدید"
+msgstr "بازی _جدید"
 
-#: ../src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
-msgstr "_در هم ریختن"
+msgstr "بر _زدن"
 
-#: ../src/gnome-mahjongg.vala:443
+#: src/gnome-mahjongg.vala:412
 msgid "Preferences"
 msgstr "ترجیحات"
 
-#: ../src/gnome-mahjongg.vala:459
+#: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
-msgstr "_تم:"
+msgstr "ز_مینه:"
 
-#: ../src/gnome-mahjongg.vala:487
+#: src/gnome-mahjongg.vala:456
 msgid "_Layout:"
 msgstr "_چیدمان:"
 
-#: ../src/gnome-mahjongg.vala:513
+#: src/gnome-mahjongg.vala:482
 msgid "_Background color:"
 msgstr "_رنگ پس‌زمینه:"
 
-#: ../src/gnome-mahjongg.vala:527
+#: src/gnome-mahjongg.vala:496
 msgid "_Close"
 msgstr "_خروج"
 
-#: ../src/gnome-mahjongg.vala:594
+#: src/gnome-mahjongg.vala:563
 msgid "Main game:"
 msgstr "بازی اصلی:"
 
-#: ../src/gnome-mahjongg.vala:603
+#: src/gnome-mahjongg.vala:572
 msgid "Maps:"
 msgstr "نقشه‌ها:"
 
-#: ../src/gnome-mahjongg.vala:611
+#: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
 msgstr "کاشی‌ها:"
 
-#: ../src/gnome-mahjongg.vala:631
+#: src/gnome-mahjongg.vala:600
 msgid "A matching game played with Mahjongg tiles"
 msgstr "یک بازی جور کردنی با کاشی‌های ماهجونگ"
 
-#: ../src/gnome-mahjongg.vala:637
+#: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: ../src/gnome-mahjongg.vala:653
+#: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
-msgstr "اجرا بازی"
+msgstr "رفع مکث بازی"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "_خروج"
+
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "بازی جدید"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "OK"
-msgstr "تایید"
+msgstr "قبول"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Layout:"
 msgstr "چیدمان:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "تاریخ"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Time"
 msgstr "زمان"
+
+#~ msgid "_Contents"
+#~ msgstr "م_حتویات"
+
+#~ msgid "_About"
+#~ msgstr "_درباره"
