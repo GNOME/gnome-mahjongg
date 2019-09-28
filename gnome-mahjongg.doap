@@ -16,9 +16,9 @@
 
   <maintainer>
     <foaf:Person>
-      <foaf:name>Mario Wenzel</foaf:name>
-      <foaf:mbox rdf:resource="mailto:maweki@gmail.com" />
-      <gnome:userid>mariowenzel</gnome:userid>
+      <foaf:name>Alberto Ruiz</foaf:name>
+      <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
+      <gnome:userid>aruiz</gnome:userid>
     </foaf:Person>
   </maintainer>
 </Project>
