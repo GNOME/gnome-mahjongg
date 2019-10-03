@@ -14,6 +14,7 @@ public class GameView : Gtk.DrawingArea
     private Cairo.Pattern? tile_pattern = null;
     private int tile_pattern_width = 0;
     private int tile_pattern_height = 0;
+    private Rsvg.Handle? theme_handle = null;
 
     private int x_offset;
     private int y_offset;
@@ -39,7 +40,7 @@ public class GameView : Gtk.DrawingArea
     public string? theme
     {
         get { return _theme; }
-        set { _theme = value; tile_pattern = null; queue_draw (); }
+        set { _theme = value; tile_pattern = null; theme_handle = null; queue_draw (); }
     }
 
     public GameView ()
@@ -142,12 +143,14 @@ public class GameView : Gtk.DrawingArea
     {
         try
         {
-            var h = new Rsvg.Handle.from_file (theme);
+            if (theme_handle == null) {
+                theme_handle = new Rsvg.Handle.from_file (theme);
+            };
 
             var m = Cairo.Matrix.identity ();
-            m.scale ((double) width / h.width, (double) height / h.height);
+            m.scale ((double) width / theme_handle.width, (double) height / theme_handle.height);
             c.set_matrix (m);
-            h.render_cairo (c);
+            theme_handle.render_cairo (c);
 
             return;
         }
