@@ -31,6 +31,5 @@ gnome.yelp ('gnome-mahjongg',
                      'figures/logo.png',
                      'figures/mahjongg-video.ogv',
                      'figures/yellow-symbol.png',
-                     'figures/black-symbol.png',
-                     'figures/moves-left.png' ],
+                     'figures/black-symbol.png' ],
             symlink_media: true)
