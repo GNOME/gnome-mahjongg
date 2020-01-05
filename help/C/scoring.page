@@ -5,6 +5,7 @@
   <info>
     <link type="guide" xref="index#play"/>
     <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
+    <revision pkgversion="3.34.0" version="0.3" date="2020-01-05" status="final"/>
   <credit type="author">
     <name>Chris Beiser</name>
     <email>ctbeiser@gmail.com</email>
@@ -25,8 +26,8 @@
 
   <p>To view the highscore board:</p>
   <steps>
-    <item><p>Select
-    <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq></p></item>
+    <item><p>Press the menu button in the top-right corner of the window and
+    select <gui style="menuitem">Scores</gui>.</p></item>
   </steps>
 
   <note>
