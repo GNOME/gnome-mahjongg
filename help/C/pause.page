@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
   type="topic"
   id="startstop">
       
@@ -6,6 +7,7 @@
     <link type="guide" xref="index#tips"/>
     
     <revision pkgversion="3.4" version="0.1" date="2012-03-08" status="final"/>
+    <revision pkgversion="3.34.0" version="0.3" date="2020-01-05" status="final"/>
     <credit type="author">
       <name>Chris Beiser</name>
       <email>ctbeiser@gmail.com</email>
@@ -29,8 +31,8 @@
 
   <list>
     <item>
-      <p>The <gui>Pause</gui> button in the
-      header bar.</p>
+      <p>The <media its:translate="no" mime="image/svg+xml" type="image" src="figures/keyboard-key-pause.svg">
+      pause key symbol</media> button in the header bar.</p>
     </item>
     <item>
       <p>The <key>Pause</key> key on your keyboard. Not all keyboards have
