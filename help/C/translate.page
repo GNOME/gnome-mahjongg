@@ -6,6 +6,7 @@
     <link type="guide" xref="index#get-involved"/>
 
     <revision pkgversion="3.5.4" version="0.2" date="2012-07-26" status="final"/>
+    <revision pkgversion="3.34.0" version="0.3" date="2020-01-05" status="final"/>
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
@@ -29,12 +30,12 @@
   <p>The GNOME Games user interface and documentation is being translated by a
   world-wide volunteer community: you are welcome to participate.</p>
 
-  <p>There are <link href="http://l10n.gnome.org/module/gnome-mahjongg/">many
+  <p>There are <link href="https://l10n.gnome.org/module/gnome-mahjongg/">many
   languages</link> for which translations are still needed.</p>
 
   <p>To start translating you will need to <link
-  href="http://l10n.gnome.org">create an account</link> and join the <link
-  href="http://l10n.gnome.org/teams/">translation team</link> for your
+  href="https://l10n.gnome.org">create an account</link> and join the <link
+  href="https://l10n.gnome.org/teams/">translation team</link> for your
   language. This will give you the ability to upload new translations.</p>
 
   <p>You can chat with GNOME translators using irc: join the #i18n channel on
@@ -42,7 +43,7 @@
   may not get an immediate response as a result of timezone differences.</p>
 
   <p>Alternatively, you can contact the Internationalization Team using their
-  <link href="http://mail.gnome.org/mailman/listinfo/gnome-i18n">mailing
+  <link href="https://mail.gnome.org/mailman/listinfo/gnome-i18n">mailing
   list</link>.</p>
 
 </page>
