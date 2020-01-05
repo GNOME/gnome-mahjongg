@@ -5,6 +5,7 @@
   <info>
     <link type="guide" xref="index#play"/>
     <revision pkgversion="3.10" version="0.1" date="2013-11-05" status="final"/>
+    <revision pkgversion="3.34.0" version="0.3" date="2020-01-05" status="final"/>
 
     <credit type="author copyright editor">
       <name>Tiffany Antopolski</name>
@@ -23,11 +24,10 @@
   <p>There are 9 different layouts. To select a different tile layout:</p>
 
   <steps>
-    <item><p>Click
-    <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>.</p></item>
+    <item><p>Press the menu button in the top-right corner of the window and
+    select <gui style="menuitem">Preferences</gui>.</p></item>
     <item><p>Select a <gui>Layout</gui> from the drop-down
     menu.</p></item>
-    <item><p>Click <gui>Close</gui></p></item>
   </steps>
 
   <p>Your new tile layout will take effect immediately unless you have already
