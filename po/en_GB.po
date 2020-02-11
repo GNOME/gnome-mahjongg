@@ -2,34 +2,35 @@
 # Copyright (C) 2007 gnome-games COPYRIGHT HOLDER
 # This file is distributed under the same licence as the gnome-games package.
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2007.
-# Bruce Cowan <bruce@bcowan.me.uk>, 2009, 2010, 2011, 2012.
 # Philip Withnall <philip@tecnocode.co.uk>, 2010.
+# Zander Brown <zbrown@gnome.org>, 2019.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2009-2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-25 20:55+0000\n"
-"PO-Revision-Date: 2016-09-09 08:01+0200\n"
-"Last-Translator: David King <amigadave@amigadave.com>\n"
-"Language-Team: British English <en@li.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2019-10-08 11:16+0000\n"
+"PO-Revision-Date: 2020-02-11 20:09+0000\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: English - United Kingdom <en_GB@li.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Gtranslator 3.34.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "GNOME Mahjongg"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr "Match tiles and clear the board"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -45,7 +46,7 @@ msgstr ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:4
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -55,28 +56,88 @@ msgstr ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:814
+#: data/org.gnome.Mahjongg.appdata.xml.in:39
+msgid "The GNOME Project"
+msgstr "The GNOME Project"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "Disassemble a pile of tiles by removing matching pairs"
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:1
+#: data/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: data/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Start a new game"
+
+#: data/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Pause the game"
+
+#: data/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Undo"
+
+#: data/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Redo"
+
+#: data/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+#: data/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quit"
+
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Help"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "Show a hint"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Show Help"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Show Keyboard Shortcuts"
+
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Width of the window in pixels"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:2
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Height of the window in pixels"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:3
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "true if the window is maximised"
 
@@ -85,142 +146,133 @@ msgstr "true if the window is maximised"
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
 msgstr "Easy"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "The Ziggurat"
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Four Bridges"
 
-#: ../data/translatable_game_names.h:9
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Cloud"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Tic-Tac-Toe"
 
-#: ../data/translatable_game_names.h:11
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Red Dragon"
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "Overpass"
 
-#: ../data/translatable_game_names.h:13
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Pyramid’s Walls"
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Confounding Cross"
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Difficult"
 
-#: ../src/game-view.vala:132
+#: src/game-view.vala:133
 msgid "Paused"
 msgstr "Paused"
 
-#: ../src/gnome-mahjongg.vala:33
+#: src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: ../src/gnome-mahjongg.vala:93
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
 msgstr "Moves Left:"
 
-#: ../src/gnome-mahjongg.vala:119
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
 msgstr "Undo your last move"
 
-#: ../src/gnome-mahjongg.vala:125
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
 msgstr "Redo your last move"
 
-#: ../src/gnome-mahjongg.vala:131
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
 msgstr "Receive a hint for your next move"
 
-#: ../src/gnome-mahjongg.vala:136 ../src/gnome-mahjongg.vala:659
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
 msgstr "Pause the game"
 
-#: ../src/gnome-mahjongg.vala:155
-msgid "_Mahjongg"
-msgstr "_Mahjongg"
-
-#: ../src/gnome-mahjongg.vala:156 ../src/menu.ui.h:1
+#: src/gnome-mahjongg.vala:143
 msgid "_New Game"
 msgstr "_New Game"
 
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:2
+#: src/gnome-mahjongg.vala:144
 msgid "_Restart Game"
 msgstr "_Restart Game"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:3
+#: src/gnome-mahjongg.vala:145
 msgid "_Scores"
 msgstr "_Scores"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:4
+#: src/gnome-mahjongg.vala:148
 msgid "_Preferences"
 msgstr "_Preferences"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:7
-#: ../src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Quit"
+#: src/gnome-mahjongg.vala:149
+msgid "_Keyboard Shortcuts"
+msgstr "_Keyboard Shortcuts"
 
-#: ../src/gnome-mahjongg.vala:162 ../src/menu.ui.h:5
+#: src/gnome-mahjongg.vala:150
 msgid "_Help"
 msgstr "_Help"
 
-#: ../src/gnome-mahjongg.vala:163
-msgid "_Contents"
-msgstr "_Contents"
+#: src/gnome-mahjongg.vala:151
+msgid "_About Mahjongg"
+msgstr "_About Mahjongg"
 
-#: ../src/gnome-mahjongg.vala:164 ../src/menu.ui.h:6
-msgid "_About"
-msgstr "_About"
-
-#: ../src/gnome-mahjongg.vala:314
+#: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
 msgstr "Do you want to start a new game with this map?"
 
-#: ../src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:283
 msgid "If you continue playing the next game will use the new map."
 msgstr "If you continue playing the next game will use the new map."
 
-#: ../src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:284
 msgid "_Continue playing"
 msgstr "_Continue playing"
 
-#: ../src/gnome-mahjongg.vala:317
+#: src/gnome-mahjongg.vala:285
 msgid "Use _new map"
 msgstr "Use _new map"
 
-#: ../src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:353
 msgid "There are no more moves."
 msgstr "There are no more moves."
 
-#: ../src/gnome-mahjongg.vala:386
+#: src/gnome-mahjongg.vala:354
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -228,7 +280,7 @@ msgstr ""
 "Each puzzle has at least one solution. You can undo your moves and try and "
 "find the solution, restart this game or start a new one."
 
-#: ../src/gnome-mahjongg.vala:388
+#: src/gnome-mahjongg.vala:356
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -236,59 +288,59 @@ msgstr ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 
-#: ../src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:357
 msgid "_Undo"
 msgstr "_Undo"
 
-#: ../src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:358
 msgid "_Restart"
 msgstr "_Restart"
 
-#: ../src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:359
 msgid "_New game"
 msgstr "_New game"
 
-#: ../src/gnome-mahjongg.vala:392
+#: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
 msgstr "_Shuffle"
 
-#: ../src/gnome-mahjongg.vala:444
+#: src/gnome-mahjongg.vala:412
 msgid "Preferences"
 msgstr "Preferences"
 
-#: ../src/gnome-mahjongg.vala:460
+#: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
 msgstr "_Theme:"
 
-#: ../src/gnome-mahjongg.vala:488
+#: src/gnome-mahjongg.vala:456
 msgid "_Layout:"
 msgstr "_Layout:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: src/gnome-mahjongg.vala:482
 msgid "_Background color:"
 msgstr "_Background colour:"
 
-#: ../src/gnome-mahjongg.vala:528
+#: src/gnome-mahjongg.vala:496
 msgid "_Close"
 msgstr "_Close"
 
-#: ../src/gnome-mahjongg.vala:595
+#: src/gnome-mahjongg.vala:563
 msgid "Main game:"
 msgstr "Main game:"
 
-#: ../src/gnome-mahjongg.vala:604
+#: src/gnome-mahjongg.vala:572
 msgid "Maps:"
 msgstr "Maps:"
 
-#: ../src/gnome-mahjongg.vala:612
+#: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
 msgstr "Tiles:"
 
-#: ../src/gnome-mahjongg.vala:632
+#: src/gnome-mahjongg.vala:600
 msgid "A matching game played with Mahjongg tiles"
 msgstr "A matching game played with Mahjongg tiles"
 
-#: ../src/gnome-mahjongg.vala:638
+#: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr ""
 "Robert Brady <robert@susu.org.uk>\n"
@@ -298,28 +350,39 @@ msgstr ""
 "David Lodge <dave@cirt.net>\n"
 "Philip Withnall <philip@tecnocode.co.uk>\n"
 "Bruce Cowan <bruce@bcowan.me.uk>\n"
-"David King <amigadave@amigadave.com>"
+"David King <amigadave@amigadave.com>\n"
+"Zander Brown <zbrown@gnome.org>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
 msgstr "Unpause the game"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "_Quit"
+
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "New Game"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "OK"
 msgstr "OK"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Layout:"
 msgstr "Layout:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Date"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Time"
+
+#~ msgid "_Contents"
+#~ msgstr "_Contents"
+
+#~ msgid "_About"
+#~ msgstr "_About"
