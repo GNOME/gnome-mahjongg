@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg-help\n"
-"POT-Creation-Date: 2020-01-05 20:23+0000\n"
-"PO-Revision-Date: 2020-03-05 14:10+0100\n"
+"POT-Creation-Date: 2020-03-05 13:11+0000\n"
+"PO-Revision-Date: 2020-03-05 14:13+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -524,6 +524,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
+"Kliknij przycisk menu w górnym prawym rogu okna i wybierz <gui style="
+"\"menuitem\">Preferencje</gui>."
 
 #. (itstool) path: item/p
 #: C/map.page:29
@@ -752,6 +754,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Scores</gui>."
 msgstr ""
+"Kliknij przycisk menu w górnym prawym rogu okna i wybierz <gui style="
+"\"menuitem\">Wyniki</gui>."
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
