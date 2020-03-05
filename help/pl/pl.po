@@ -1,14 +1,14 @@
 # Polish translation for gnome-mahjongg help.
-# Copyright © 2017-2018 the gnome-mahjongg authors.
+# Copyright © 2017-2020 the gnome-mahjongg authors.
 # This file is distributed under the same license as the gnome-mahjongg help.
-# Piotr Drąg <piotrdrag@gmail.com>, 2017-2018.
-# Aviary.pl <community-poland@mozilla.org>, 2017-2018.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017-2020.
+# Aviary.pl <community-poland@mozilla.org>, 2017-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg-help\n"
-"POT-Creation-Date: 2018-08-13 21:36+0000\n"
-"PO-Revision-Date: 2018-08-14 21:22+0200\n"
+"POT-Creation-Date: 2020-01-05 20:23+0000\n"
+"PO-Revision-Date: 2020-03-05 14:10+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,37 +22,36 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2017-2018\n"
-"Aviary.pl <community-poland@mozilla.org>, 2017-2018"
+"Piotr Drąg <piotrdrag@gmail.com>, 2017-2020\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017-2020"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:8
-#: C/gameplay.page:14 C/hints.page:14 C/map.page:10 C/rules.page:13
-#: C/strategy.page:9 C/translate.page:10
+#: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
+#: C/gameplay.page:14 C/hints.page:15 C/map.page:11 C/rules.page:13
+#: C/strategy.page:9 C/translate.page:11
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
-#: C/bug-filing.page:11 C/develop.page:12 C/documentation.page:10
-#: C/translate.page:12
+#: C/bug-filing.page:12 C/develop.page:13 C/documentation.page:11
+#: C/translate.page:13
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:13
-#: C/gameplay.page:22 C/hints.page:26 C/index.page:18 C/moves.page:18
-#: C/pause.page:22 C/rules.page:21 C/scoring.page:17 C/shortcuts.page:18
-#: C/translate.page:23
+#: C/bug-filing.page:15 C/develop.page:16 C/documentation.page:14
+#: C/gameplay.page:22 C/hints.page:27 C/index.page:18 C/moves.page:19
+#: C/pause.page:24 C/rules.page:21 C/scoring.page:18 C/translate.page:24
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
-#: C/bug-filing.page:18
+#: C/bug-filing.page:19
 msgid "Report a Problem"
 msgstr "Zgłaszanie problemów"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:19
+#: C/bug-filing.page:20
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
@@ -65,7 +64,7 @@ msgstr ""
 "> (w języku angielskim)."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:22
+#: C/bug-filing.page:23
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -74,7 +73,7 @@ msgstr ""
 "informacje o błędach, awariach i prośby o ulepszenia."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:25
+#: C/bug-filing.page:26
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -88,22 +87,22 @@ msgstr ""
 "kliknij odnośnik <gui>Sign in / Register</gui> (Zaloguj się/zarejestruj)."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:28
+#: C/bug-filing.page:29
 msgid ""
 "Once you have an account, log in, and click on <gui>New issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Po utworzeniu konta zaloguj się i kliknij <gui>New issue</gui> (Nowe "
 "zgłoszenie). Przed zgłoszeniem błędu prosimy przeczytać <link href=\"https://"
-"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">wytyczne opisywania "
-"błędów</link> i <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
-"issues\">poszukać</link>, czy błąd został już zgłoszony."
+"wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">wytyczne "
+"opisywania błędów</link> i <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues\">poszukać</link>, czy błąd został już zgłoszony."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:32
+#: C/bug-filing.page:33
 msgid ""
 "If you are requesting a new feature, choose <gui>1. Feature</gui> in the "
 "<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
@@ -115,7 +114,7 @@ msgstr ""
 "Issue</gui> (Wyślij zgłoszenie)."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:36
+#: C/bug-filing.page:37
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -158,12 +157,12 @@ msgid "Some of the matching bonus tiles in smooth theme are shown below:"
 msgstr "Oto kilka kostek z premiami:"
 
 #. (itstool) path: page/title
-#: C/develop.page:19
+#: C/develop.page:20
 msgid "Help develop"
 msgstr "Pomoc w programowaniu"
 
 #. (itstool) path: page/p
-#: C/develop.page:20
+#: C/develop.page:21
 msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
@@ -172,29 +171,29 @@ msgstr ""
 "współpracy."
 
 #. (itstool) path: page/p
-#: C/develop.page:23
+#: C/develop.page:24
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
 "Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz skontaktować się "
 "z programistami za pomocą sieci <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> lub przez <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
 "link> (w języku angielskim)."
 
 #. (itstool) path: page/title
-#: C/documentation.page:17
+#: C/documentation.page:18
 msgid "Help write documentation"
 msgstr "Pomoc w pisaniu dokumentacji"
 
 #. (itstool) path: page/p
-#: C/documentation.page:19
+#: C/documentation.page:20
 msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
@@ -203,37 +202,37 @@ msgstr ""
 "ochotników. Zapraszamy do współpracy."
 
 #. (itstool) path: page/p
-#: C/documentation.page:22
+#: C/documentation.page:23
 msgid ""
 "To contribute to the Documentation Project, feel free to get in touch with "
 "us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"https://mail.gnome."
+"org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Jeśli chcesz wziąć udział w projekcie dokumentacji, to skontaktuj się z nami "
 "za pomocą sieci <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fdocs\">IRC</link> lub przez <link href=\"http://mail."
+"%2Firc.gnome.org%2Fdocs\">IRC</link> lub przez <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">listę pocztową</link> (w języku "
 "angielskim)."
 
 #. (itstool) path: page/p
-#: C/documentation.page:24
+#: C/documentation.page:25
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Nasza <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
 
 #. (itstool) path: credit/name
-#: C/gameplay.page:10 C/hints.page:10 C/index.page:14 C/moves.page:10
-#: C/pause.page:10 C/rules.page:9 C/scoring.page:9 C/shortcuts.page:10
+#: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
+#: C/pause.page:12 C/rules.page:9 C/scoring.page:10
 msgid "Chris Beiser"
 msgstr "Chris Beiser"
 
 #. (itstool) path: credit/name
-#: C/gameplay.page:18 C/hints.page:22 C/map.page:15 C/pause.page:18
-#: C/scoring.page:13 C/translate.page:19
+#: C/gameplay.page:18 C/hints.page:23 C/map.page:16 C/pause.page:20
+#: C/scoring.page:14 C/translate.page:20
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -284,7 +283,7 @@ msgid ""
 msgstr "Kliknij pasującą kostkę. Jeśli naprawdę pasuje, to obie kostki znikną."
 
 #. (itstool) path: section/title
-#: C/gameplay.page:51 C/hints.page:48
+#: C/gameplay.page:51 C/hints.page:47
 msgid "Video demonstration"
 msgstr "Demonstracja wideo"
 
@@ -294,18 +293,18 @@ msgid "Video of gameplay"
 msgstr "Wideo rozgrywki"
 
 #. (itstool) path: credit/name
-#: C/hints.page:18 C/moves.page:14 C/pause.page:14 C/rules.page:17
-#: C/shortcuts.page:14 C/strategy.page:14 C/translate.page:15
+#: C/hints.page:19 C/moves.page:15 C/pause.page:16 C/rules.page:17
+#: C/strategy.page:14 C/translate.page:16
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
 #. (itstool) path: page/title
-#: C/hints.page:30
+#: C/hints.page:31
 msgid "Hints"
 msgstr "Podpowiedzi"
 
 #. (itstool) path: page/p
-#: C/hints.page:32
+#: C/hints.page:33
 msgid ""
 "<gui>Hint</gui> highlights two tiles that can be matched. If you have "
 "already selected one tile, it will show a match for that piece if one exists."
@@ -314,19 +313,18 @@ msgstr ""
 "wybrano już jedną kostkę, to wyróżnia jej parę, jeśli jest dostępna."
 
 #. (itstool) path: page/p
-#: C/hints.page:36
+#: C/hints.page:37
 msgid ""
-"<gui>Hint</gui> can be accessed by clicking <guiseq><gui>Mahjongg</"
-"gui><gui>Hint</gui></guiseq>. Alternatively, use the <gui>Hint</gui> button "
-"in the header bar, or press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
+"<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
+"gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
+"key></keyseq>."
 msgstr ""
-"<gui>Podpowiedź</gui> można użyć klikając <guiseq><gui>Madżong</"
-"gui><gui>Podpowiedź</gui></guiseq>. Można także użyć przycisku "
-"<gui>Podpowiedź</gui> na pasku nagłówka lub nacisnąć klawisze "
-"<keyseq><key>Ctrl</key><key>H</key></keyseq>."
+"<gui>Podpowiedź</gui> można użyć klikając przycisk <gui style=\"button\">�</"
+"gui> na pasku nagłówka lub naciskając klawisze <keyseq><key>Ctrl</"
+"key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
-#: C/hints.page:42
+#: C/hints.page:41
 msgid ""
 "<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
 "sparingly."
@@ -335,22 +333,22 @@ msgstr ""
 "jej używać oszczędnie."
 
 #. (itstool) path: note/p
-#: C/hints.page:44
+#: C/hints.page:43
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr "Za każde użycie podpowiedzi naliczana jest kara 30 sekund."
 
 #. (itstool) path: div/p
-#: C/hints.page:53
+#: C/hints.page:52
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr "Można używać <gui>Podpowiedzi</gui>, aby znaleźć identyczne kostki."
 
 #. (itstool) path: div/p
-#: C/hints.page:58
+#: C/hints.page:57
 msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 msgstr "Naciśnij klawisze <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: div/p
-#: C/hints.page:63
+#: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Za każde użycie podpowiedzi naliczana jest kara 30 sekund."
 
@@ -396,12 +394,7 @@ msgid "Useful tips"
 msgstr "Wskazówki"
 
 #. (itstool) path: section/title
-#: C/index.page:37
-msgid "Advanced"
-msgstr "Zaawansowane"
-
-#. (itstool) path: section/title
-#: C/index.page:41
+#: C/index.page:36
 msgid "Get involved"
 msgstr "Dołącz do nas"
 
@@ -506,39 +499,36 @@ msgstr ""
 "sa/3.0/\">podsumowanie</link>."
 
 #. (itstool) path: credit/years
-#: C/map.page:12
+#: C/map.page:13
 msgid "2012 2013"
 msgstr "2012, 2013"
 
 #. (itstool) path: credit/years
-#: C/map.page:17 C/strategy.page:11
+#: C/map.page:18 C/strategy.page:11
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/map.page:21
+#: C/map.page:22
 msgid "Change tile layout"
 msgstr "Zmiana planszy"
 
 #. (itstool) path: page/p
-#: C/map.page:23
+#: C/map.page:24
 msgid "There are 9 different layouts. To select a different tile layout:"
 msgstr "Dostępne jest 9 różnych plansz. Aby wybrać inną planszę:"
 
 #. (itstool) path: item/p
-#: C/map.page:26
-msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
-msgstr "Kliknij <guiseq><gui>Madżong</gui><gui>Preferencje</gui></guiseq>."
+#: C/map.page:27
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
 
 #. (itstool) path: item/p
-#: C/map.page:28
+#: C/map.page:29
 msgid "Select a <gui>Layout</gui> from the drop-down menu."
 msgstr "Wybierz <gui>Planszę</gui> z rozwijanego menu."
-
-#. (itstool) path: item/p
-#: C/map.page:30
-msgid "Click <gui>Close</gui>"
-msgstr "Kliknij przycisk <gui>Zamknij</gui>."
 
 #. (itstool) path: page/p
 #: C/map.page:33
@@ -650,56 +640,39 @@ msgid "<em>Difficult</em>"
 msgstr "<em>Trudne</em>"
 
 #. (itstool) path: page/title
-#: C/moves.page:22
+#: C/moves.page:23
 msgid "Moves left"
 msgstr "Pozostało ruchów"
 
 #. (itstool) path: page/p
-#: C/moves.page:24
+#: C/moves.page:25
 msgid ""
-"The <gui>Moves Left</gui> counter is located on the header bar. It displays "
-"the number of different moves that can be made. It can help you see how far "
-"you are from running out of moves, and whether you've seen all possible "
-"moves."
+"The <gui>Moves Left</gui> counter is located on the header bar, next to the "
+"time counter. It displays the number of different moves that can be made. It "
+"can help you see how far you are from running out of moves, and whether "
+"you've seen all possible moves."
 msgstr ""
-"Na pasku nagłówka znajduje się liczba <gui>Pozostałych ruchów</gui>. Tyle "
-"ruchów można wykonać. Pomaga to w określeniu, ile ich zostało, i czy "
-"wykonano już wszystkie możliwe ruchy."
-
-#. (itstool) path: page/media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/moves.page:29
-msgctxt "_"
-msgid ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-msgstr ""
-"external ref='figures/moves-left.png' md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-
-#. (itstool) path: media/p
-#: C/moves.page:30
-msgid "Mahjongg counters"
-msgstr "Liczba ruchów"
+"Na pasku nagłówka obok czasu znajduje się liczba <gui>Pozostałych ruchów</"
+"gui>. Tyle ruchów można wykonać. Pomaga to w określeniu, ile ich zostało, "
+"i czy wykonano już wszystkie możliwe ruchy."
 
 #. (itstool) path: page/title
-#: C/pause.page:26
+#: C/pause.page:28
 msgid "Pausing your game"
 msgstr "Wstrzymywanie gry"
 
 #. (itstool) path: page/p
-#: C/pause.page:28
+#: C/pause.page:30
 msgid "You can pause your current game using one of the following methods:"
 msgstr "Można wstrzymać grę za pomocą jednego z tych sposobów:"
 
 #. (itstool) path: item/p
-#: C/pause.page:32
-msgid "The <gui>Pause</gui> button in the header bar."
-msgstr "Przycisk <gui>Wstrzymaj</gui> na pasku nagłówka."
+#: C/pause.page:34
+msgid "The <_:media-1/> button in the header bar."
+msgstr "Przycisk <_:media-1/> na pasku nagłówka."
 
 #. (itstool) path: item/p
-#: C/pause.page:36
+#: C/pause.page:38
 msgid ""
 "The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
 msgstr ""
@@ -755,12 +728,12 @@ msgid "Shuffling tiles adds a 60-second penalty to your time."
 msgstr "Wymieszanie kostek dodaje 60 sekund kary do czasu gry."
 
 #. (itstool) path: page/title
-#: C/scoring.page:21
+#: C/scoring.page:22
 msgid "Scoring"
 msgstr "Wyniki"
 
 #. (itstool) path: page/p
-#: C/scoring.page:23
+#: C/scoring.page:24
 msgid ""
 "In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
 "board."
@@ -769,17 +742,19 @@ msgstr ""
 "szybciej, tym lepiej."
 
 #. (itstool) path: page/p
-#: C/scoring.page:26
+#: C/scoring.page:27
 msgid "To view the highscore board:"
 msgstr "Aby wyświetlić najlepsze wyniki:"
 
 #. (itstool) path: item/p
-#: C/scoring.page:28
-msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
-msgstr "Wybierz <guiseq><gui>Madżong</gui><gui>Wyniki</gui></guiseq>"
+#: C/scoring.page:29
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Scores</gui>."
+msgstr ""
 
 #. (itstool) path: note/p
-#: C/scoring.page:33
+#: C/scoring.page:34
 msgid ""
 "The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
 "view the highscores for a particular map by selecting it from the drop-down "
@@ -788,100 +763,6 @@ msgstr ""
 "Wyniki są przechowywane według <link xref=\"map\">plansz</link>. Można "
 "wyświetlić najlepsze wyniki dla danej planszy wybierając ją z rozwijanego "
 "menu."
-
-#. (itstool) path: page/title
-#: C/shortcuts.page:22
-msgid "Keyboard shortcuts"
-msgstr "Skróty klawiszowe"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:25
-msgid "Fullscreen"
-msgstr "Pełny ekran"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:26
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "Help"
-msgstr "Pomoc"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:30
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:33
-msgid "Hint"
-msgstr "Podpowiedź"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:34
-msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:37
-msgid "New game"
-msgstr "Nowa gra"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:38
-msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:41
-msgid "Pause"
-msgstr "Wstrzymanie gry"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:42
-msgid "<key>Pause</key>"
-msgstr "<key>Pause</key>"
-
-#. (itstool) path: note/p
-#: C/shortcuts.page:43
-msgid ""
-"Use the header bar <gui>Pause</gui> button if your keyboard does not have a "
-"<key>Pause</key> key."
-msgstr ""
-"Jeśli klawiatura nie ma klawisza <key>Pause</key>, to użyj przycisku "
-"<gui>Wstrzymaj</gui> na pasku nagłówka."
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:50
-msgid "Quit"
-msgstr "Zakończenie gry"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:51
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:54
-msgid "Redo"
-msgstr "Ponowienie"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:55
-msgid "<keyseq><key>Shift</key><key>Ctrl</key><key>Z</key></keyseq>"
-msgstr "<keyseq><key>Shift</key><key>Ctrl</key><key>Z</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:58
-msgid "Undo"
-msgstr "Cofnięcie"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:59
-msgid "<keyseq><key>Ctrl</key><key>Z</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Z</key></keyseq>"
 
 #. (itstool) path: page/title
 #: C/strategy.page:21
@@ -931,12 +812,12 @@ msgstr ""
 "czas jest najważniejszym czynnikiem. Warto się spieszyć."
 
 #. (itstool) path: page/title
-#: C/translate.page:27
+#: C/translate.page:28
 msgid "Help translate"
 msgstr "Pomoc w tłumaczeniu"
 
 #. (itstool) path: page/p
-#: C/translate.page:29
+#: C/translate.page:30
 msgid ""
 "The GNOME Games user interface and documentation is being translated by a "
 "world-wide volunteer community: you are welcome to participate."
@@ -945,29 +826,29 @@ msgstr ""
 "społeczność ochotników. Zapraszamy do współpracy."
 
 #. (itstool) path: page/p
-#: C/translate.page:32
+#: C/translate.page:33
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mahjongg/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"<link href=\"http://l10n.gnome.org/module/gnome-mahjongg/\">Wiele języków</"
+"<link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">Wiele języków</"
 "link> nadal potrzebuje tłumaczeń."
 
 #. (itstool) path: page/p
-#: C/translate.page:35
+#: C/translate.page:36
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"http://l10n.gnome.org"
-"\">utworzenie konta</link> i dołączenie do <link href=\"http://l10n.gnome."
+"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"https://l10n.gnome.org"
+"\">utworzenie konta</link> i dołączenie do <link href=\"https://l10n.gnome."
 "org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
 "wysyłanie nowych tłumaczeń."
 
 #. (itstool) path: page/p
-#: C/translate.page:40
+#: C/translate.page:41
 msgid ""
 "You can chat with GNOME translators using irc: join the #i18n channel on the "
 "irc.gnome.org server. People on the channel are located worldwide, so you "
@@ -978,12 +859,12 @@ msgstr ""
 "odpowiedź może nie przyjść od razu."
 
 #. (itstool) path: page/p
-#: C/translate.page:44
+#: C/translate.page:45
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
 "Można także skontaktować się z zespołem tłumaczeń za pomocą <link href="
-"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</link> "
-"(w języku angielskim)."
+"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</"
+"link> (w języku angielskim)."
