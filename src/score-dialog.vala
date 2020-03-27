@@ -36,15 +36,12 @@ public class ScoreDialog : Gtk.Dialog
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         vbox.border_width = 6;
-        vbox.show ();
         get_content_area ().append (vbox);
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        hbox.show ();
         vbox.append (hbox);
 
         var label = new Gtk.Label (_("Layout:"));
-        label.show ();
         hbox.append (label);
 
         size_model = new Gtk.ListStore (2, typeof (string), typeof (string));
@@ -55,13 +52,11 @@ public class ScoreDialog : Gtk.Dialog
         var renderer = new Gtk.CellRendererText ();
         size_combo.pack_start (renderer, true);
         size_combo.add_attribute (renderer, "text", 0);
-        size_combo.show ();
         hbox.append (size_combo);
 
         var scroll = new Gtk.ScrolledWindow (null, null);
         scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
         scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
-        scroll.show ();
         vbox.append (scroll);
 
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
@@ -73,7 +68,6 @@ public class ScoreDialog : Gtk.Dialog
         renderer.xalign = 1.0f;
         scores.insert_column_with_attributes (-1, _("Time"), renderer, "text", 1, "weight", 2);
         scores.model = score_model;
-        scores.show ();
         scroll.add (scores);
 
         foreach (var entry in history.entries)

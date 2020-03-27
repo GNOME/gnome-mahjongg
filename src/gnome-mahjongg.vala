@@ -177,7 +177,6 @@ public class Mahjongg : Gtk.Application
         vbox.append (game_view);
 
         window.set_child (vbox);
-        window.show_all ();
 
         settings.changed.connect (conf_value_changed_cb);
 
@@ -516,7 +515,7 @@ public class Mahjongg : Gtk.Application
         if (!dialogs_use_header)
             preferences_dialog.add_button (_("_Close"), Gtk.ResponseType.CLOSE);
 
-        preferences_dialog.show_all ();
+        preferences_dialog.present ();
     }
 
     private void preferences_dialog_response_cb (Gtk.Dialog dialog, int response)
