@@ -109,6 +109,8 @@ public class Mahjongg : Gtk.Application
         view_click_controller.pressed.connect (on_click);
         game_view.add_controller (view_click_controller);
         game_view.set_size_request (600, 400);
+        game_view.hexpand = true;
+        game_view.vexpand = true;
 
         title = new Gtk.Label ("");
         title.get_style_context ().add_class ("title");

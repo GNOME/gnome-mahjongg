@@ -60,6 +60,8 @@ public class ScoreDialog : Gtk.Dialog
         var scroll = new Gtk.ScrolledWindow (null, null);
         scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
         scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        scroll.hexpand = true;
+        scroll.vexpand = true;
         vbox.append (scroll);
 
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
