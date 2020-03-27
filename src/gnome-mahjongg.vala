@@ -167,7 +167,7 @@ public class Mahjongg : Gtk.Application
 
         var header_bar = new Gtk.HeaderBar ();
         header_bar.set_custom_title (title_box);
-        header_bar.set_show_close_button (true);
+        header_bar.set_show_title_buttons (true);
         header_bar.pack_start (hbox);
         header_bar.pack_end (menu_button);
         header_bar.pack_end (hint_button);
