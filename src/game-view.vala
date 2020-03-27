@@ -101,6 +101,7 @@ public class GameView : Gtk.DrawingArea
         can_focus = true;
         theme_timer_id = 0;
         init_mouse ();
+        set_draw_func (draw);
         size_allocate.connect(() => {
             /* Recalculate dimensions */
             update_dimensions ();
@@ -302,16 +303,14 @@ public class GameView : Gtk.DrawingArea
         queue_draw ();
     }
 
-    public override bool draw (Cairo.Context cr)
+    private inline void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (game == null)
-            return false;
+            return;
 
         Gdk.cairo_set_source_rgba (cr, background_color);
         cr.paint ();
         draw_game (cr);
-
-        return true;
     }
 
     private inline void init_mouse ()
