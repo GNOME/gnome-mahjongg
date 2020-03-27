@@ -293,7 +293,8 @@ public class GameView : Gtk.DrawingArea
         update_dimensions ();
         int x, y;
         get_tile_position (tile, out x, out y);
-        queue_draw_area (x, y, tile_pattern_width, tile_pattern_height);
+        queue_draw ();
+     // queue_draw_area (x, y, tile_pattern_width, tile_pattern_height);
     }
 
     private void paused_changed_cb ()
