@@ -448,7 +448,7 @@ public class Mahjongg : Gtk.Application
         grid.set_column_spacing (18);
 
         var label = new Gtk.Label.with_mnemonic (_("_Theme:"));
-        label.set_alignment (0, 0.5f);
+        label.halign = Gtk.Align.START;
         grid.attach (label, 0, 0, 1, 1);
 
         var themes = load_themes ();
@@ -476,7 +476,7 @@ public class Mahjongg : Gtk.Application
         label.set_mnemonic_widget (theme_combo);
 
         label = new Gtk.Label.with_mnemonic (_("_Layout:"));
-        label.set_alignment (0, 0.5f);
+        label.halign = Gtk.Align.START;
         grid.attach (label, 0, 1, 1, 1);
 
         var map_combo = new Gtk.ComboBox ();
@@ -502,7 +502,7 @@ public class Mahjongg : Gtk.Application
         label.set_mnemonic_widget (map_combo);
 
         label = new Gtk.Label.with_mnemonic (_("_Background color:"));
-        label.set_alignment (0, 0.5f);
+        label.halign = Gtk.Align.START;
         grid.attach (label, 0, 2, 1, 1);
 
         var widget = new Gtk.ColorButton ();
