@@ -433,15 +433,17 @@ public class Mahjongg : Gtk.Application
                                                           window,
                                                           dialogs_use_header ? Gtk.DialogFlags.USE_HEADER_BAR : 0,
                                                           null);
-        preferences_dialog.set_border_width (5);
         var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
         dialog_content_area.set_spacing (2);
         preferences_dialog.set_resizable (false);
         preferences_dialog.set_default_response (Gtk.ResponseType.CLOSE);
         preferences_dialog.response.connect (preferences_dialog_response_cb);
+        dialog_content_area.margin_top = 10;
+        dialog_content_area.margin_start = 10;
+        dialog_content_area.margin_end = 10;
+        dialog_content_area.margin_bottom = 10;
 
         var grid = new Gtk.Grid ();
-        grid.border_width = 5;
         grid.set_row_spacing (6);
         grid.set_column_spacing (18);
 

@@ -35,7 +35,10 @@ public class ScoreDialog : Gtk.Dialog
         set_size_request (200, 300);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        vbox.border_width = 6;
+        vbox.margin_top = 6;
+        vbox.margin_start = 6;
+        vbox.margin_end = 6;
+        vbox.margin_bottom = 6;
         get_content_area ().append (vbox);
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
