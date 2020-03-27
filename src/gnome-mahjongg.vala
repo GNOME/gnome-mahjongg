@@ -117,24 +117,24 @@ public class Mahjongg : Gtk.Application
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         hbox.get_style_context ().add_class ("linked");
 
-        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
+        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic");
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
         hbox.append (undo_button);
 
-        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
+        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic");
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
         hbox.append (redo_button);
 
-        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
+        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic");
         hint_button.valign = Gtk.Align.CENTER;
         hint_button.action_name = "app.hint";
         hint_button.set_tooltip_text (_("Receive a hint for your next move"));
 
-        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
+        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic");
         pause_button.valign = Gtk.Align.CENTER;
         pause_button.action_name = "app.pause";
         pause_button.set_tooltip_text (_("Pause the game"));
@@ -640,15 +640,14 @@ public class Mahjongg : Gtk.Application
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
 
-        var pause_image = (Gtk.Image) pause_button.image;
         if (game_view.game.paused)
         {
-            pause_image.icon_name = "media-playback-start-symbolic";
+            pause_button.icon_name = "media-playback-start-symbolic";
             pause_button.set_tooltip_text (_("Unpause the game"));
         }
         else
         {
-            pause_image.icon_name = "media-playback-pause-symbolic";
+            pause_button.icon_name = "media-playback-pause-symbolic";
             pause_button.set_tooltip_text (_("Pause the game"));
         }
 
@@ -726,8 +725,7 @@ public class Mahjongg : Gtk.Application
         tick_cb ();
 
         /* Reset the pause button in case it was set to resume */
-        var pause_image = (Gtk.Image) pause_button.image;
-        pause_image.icon_name = "media-playback-pause-symbolic";
+        pause_button.icon_name = "media-playback-pause-symbolic";
     }
 
     private void tick_cb ()
