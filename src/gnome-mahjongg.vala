@@ -83,7 +83,6 @@ public class Mahjongg : Gtk.Application
         history.load ();
 
         window = new Gtk.ApplicationWindow (this);
-        window.size_allocate.connect (size_allocate_cb);
         window.map.connect (init_state_watcher);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
@@ -189,13 +188,6 @@ public class Mahjongg : Gtk.Application
         tick_cb ();
     }
 
-    private void size_allocate_cb (Gtk.Allocation allocation)
-    {
-        if (is_maximized || is_tiled)
-            return;
-        window.get_size (out window_width, out window_height);
-    }
-
     private void init_state_watcher ()
     {
         Gdk.Surface? nullable_surface = window.get_surface ();      // TODO report bug, get_surface() returns a nullable Surface
@@ -203,6 +195,14 @@ public class Mahjongg : Gtk.Application
             assert_not_reached ();
         surface = (Gdk.Toplevel) (!) nullable_surface;
         surface.notify ["state"].connect (on_window_state_event);
+        surface.size_changed.connect (on_size_changed);
+    }
+
+    private inline void on_size_changed (Gdk.Surface _surface, int width, int height)
+    {
+        if (is_maximized || is_tiled)
+            return;
+        window.get_size (out window_width, out window_height);
     }
 
     private Gdk.Toplevel surface;
