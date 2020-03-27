@@ -84,7 +84,7 @@ public class Mahjongg : Gtk.Application
 
         window = new Gtk.ApplicationWindow (this);
         window.size_allocate.connect (size_allocate_cb);
-        window.window_state_event.connect (window_state_event_cb);
+        window.map.connect (init_state_watcher);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
@@ -197,14 +197,27 @@ public class Mahjongg : Gtk.Application
         window.get_size (out window_width, out window_height);
     }
 
-    private bool window_state_event_cb (Gdk.EventWindowState event)
+    private void init_state_watcher ()
     {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        /* We don’t save this state, but track it for saving size allocation */
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            is_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
-        return false;
+        Gdk.Surface? nullable_surface = window.get_surface ();      // TODO report bug, get_surface() returns a nullable Surface
+        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
+            assert_not_reached ();
+        surface = (Gdk.Toplevel) (!) nullable_surface;
+        surface.notify ["state"].connect (on_window_state_event);
+    }
+
+    private Gdk.Toplevel surface;
+    private const Gdk.ToplevelState tiled_state = Gdk.ToplevelState.TILED
+                                                | Gdk.ToplevelState.TOP_TILED
+                                                | Gdk.ToplevelState.BOTTOM_TILED
+                                                | Gdk.ToplevelState.LEFT_TILED
+                                                | Gdk.ToplevelState.RIGHT_TILED;
+    private inline void on_window_state_event ()
+    {
+        Gdk.ToplevelState state = surface.get_state ();
+
+        is_maximized =  (state & Gdk.ToplevelState.MAXIMIZED) != 0;
+        is_tiled =      (state & tiled_state)                 != 0;
     }
 
     protected override void shutdown ()
