@@ -163,7 +163,7 @@ public class Mahjongg : Gtk.Application
         menu_button = new Gtk.MenuButton ();
         menu_button.valign = Gtk.Align.CENTER;
         menu_button.set_menu_model (menu);
-        menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
+        menu_button.set_icon_name ("open-menu-symbolic");
 
         var header_bar = new Gtk.HeaderBar ();
         header_bar.set_custom_title (title_box);
