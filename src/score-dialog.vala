@@ -37,15 +37,15 @@ public class ScoreDialog : Gtk.Dialog
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         vbox.border_width = 6;
         vbox.show ();
-        get_content_area ().pack_start (vbox, true, true, 0);
+        get_content_area ().append (vbox);
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
         hbox.show ();
-        vbox.pack_start (hbox, false, false, 0);
+        vbox.append (hbox);
 
         var label = new Gtk.Label (_("Layout:"));
         label.show ();
-        hbox.pack_start (label, false, false, 0);
+        hbox.append (label);
 
         size_model = new Gtk.ListStore (2, typeof (string), typeof (string));
 
@@ -56,13 +56,13 @@ public class ScoreDialog : Gtk.Dialog
         size_combo.pack_start (renderer, true);
         size_combo.add_attribute (renderer, "text", 0);
         size_combo.show ();
-        hbox.pack_start (size_combo, true, true, 0);
+        hbox.append (size_combo);
 
         var scroll = new Gtk.ScrolledWindow (null, null);
         scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
         scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         scroll.show ();
-        vbox.pack_start (scroll, true, true, 0);
+        vbox.append (scroll);
 
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
 

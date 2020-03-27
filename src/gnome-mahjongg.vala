@@ -93,15 +93,15 @@ public class Mahjongg : Gtk.Application
 
         var group_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var label = new Gtk.Label (_("Moves Left:"));
-        group_box.pack_start (label, false, false, 0);
+        group_box.append (label);
         var spacer = new Gtk.Label (" ");
-        group_box.pack_start (spacer, false, false, 0);
+        group_box.append (spacer);
         moves_label = new Gtk.Label ("");
-        group_box.pack_start (moves_label, false, false, 0);
-        status_box.pack_start (group_box, false, false, 0);
+        group_box.append (moves_label);
+        status_box.append (group_box);
 
         clock_label = new Gtk.Label ("");
-        status_box.pack_start (clock_label, false, false, 0);
+        status_box.append (clock_label);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
@@ -121,13 +121,13 @@ public class Mahjongg : Gtk.Application
         undo_button.valign = Gtk.Align.CENTER;
         undo_button.action_name = "app.undo";
         undo_button.set_tooltip_text (_("Undo your last move"));
-        hbox.pack_start (undo_button);
+        hbox.append (undo_button);
 
         var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
         redo_button.valign = Gtk.Align.CENTER;
         redo_button.action_name = "app.redo";
         redo_button.set_tooltip_text (_("Redo your last move"));
-        hbox.pack_start (redo_button);
+        hbox.append (redo_button);
 
         var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
         hint_button.valign = Gtk.Align.CENTER;
@@ -140,9 +140,9 @@ public class Mahjongg : Gtk.Application
         pause_button.set_tooltip_text (_("Pause the game"));
 
         var title_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        title_box.pack_start (title, false, false, 0);
+        title_box.append (title);
         status_box.halign = Gtk.Align.CENTER;
-        title_box.pack_start (status_box, false, false, 0);
+        title_box.append (status_box);
 
         var menu = new Menu ();
         var section = new Menu ();
@@ -174,9 +174,9 @@ public class Mahjongg : Gtk.Application
         header_bar.pack_end (pause_button);
         window.set_titlebar (header_bar);
 
-        vbox.pack_start (game_view, true, true, 0);
+        vbox.append (game_view);
 
-        window.add (vbox);
+        window.set_child (vbox);
         window.show_all ();
 
         settings.changed.connect (conf_value_changed_cb);
@@ -511,7 +511,7 @@ public class Mahjongg : Gtk.Application
         grid.attach (widget, 1, 2, 1, 1);
         label.set_mnemonic_widget (widget);
 
-        dialog_content_area.pack_start (grid, true, true, 0);
+        dialog_content_area.append (grid);
 
         if (!dialogs_use_header)
             preferences_dialog.add_button (_("_Close"), Gtk.ResponseType.CLOSE);
