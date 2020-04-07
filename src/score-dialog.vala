@@ -8,14 +8,16 @@
  * license.
  */
 
-public class ScoreDialog : Gtk.Dialog
+using Gtk;
+
+public class ScoreDialog : Dialog
 {
     private History history;
     private HistoryEntry? selected_entry = null;
     private Gtk.ListStore size_model;
     private Gtk.ListStore score_model;
-    private Gtk.ComboBox size_combo;
-    private Gtk.TreeView scores;
+    private ComboBox size_combo;
+    private TreeView scores;
     private unowned List<Map> maps;
 
     public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false, List<Map> maps)
@@ -27,49 +29,49 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
-            add_button (_("New Game"), Gtk.ResponseType.OK);
+            add_button (_("_Quit"), ResponseType.CLOSE);
+            add_button (_("New Game"), ResponseType.OK);
         }
         else
-            add_button (_("OK"), Gtk.ResponseType.DELETE_EVENT);
+            add_button (_("OK"), ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+        var vbox = new Box (Orientation.VERTICAL, 5);
         vbox.margin_top = 6;
         vbox.margin_start = 6;
         vbox.margin_end = 6;
         vbox.margin_bottom = 6;
         get_content_area ().append (vbox);
 
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        var hbox = new Box (Orientation.HORIZONTAL, 6);
         vbox.append (hbox);
 
-        var label = new Gtk.Label (_("Layout:"));
+        var label = new Label (_("Layout:"));
         hbox.append (label);
 
         size_model = new Gtk.ListStore (2, typeof (string), typeof (string));
 
-        size_combo = new Gtk.ComboBox ();
+        size_combo = new ComboBox ();
         size_combo.changed.connect (size_changed_cb);
         size_combo.model = size_model;
-        var renderer = new Gtk.CellRendererText ();
+        var renderer = new CellRendererText ();
         size_combo.pack_start (renderer, true);
         size_combo.add_attribute (renderer, "text", 0);
         hbox.append (size_combo);
 
-        var scroll = new Gtk.ScrolledWindow (null, null);
-        scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
-        scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        var scroll = new ScrolledWindow (null, null);
+        scroll.shadow_type = ShadowType.ETCHED_IN;
+        scroll.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         scroll.hexpand = true;
         scroll.vexpand = true;
         vbox.append (scroll);
 
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
 
-        scores = new Gtk.TreeView ();
-        renderer = new Gtk.CellRendererText ();
+        scores = new TreeView ();
+        renderer = new CellRendererText ();
         scores.insert_column_with_attributes (-1, _("Date"), renderer, "text", 0, "weight", 2);
-        renderer = new Gtk.CellRendererText ();
+        renderer = new CellRendererText ();
         renderer.xalign = 1.0f;
         scores.insert_column_with_attributes (-1, _("Time"), renderer, "text", 1, "weight", 2);
         scores.model = score_model;
@@ -101,7 +103,7 @@ public class ScoreDialog : Gtk.Dialog
             if (entry == selected_entry)
                 weight = Pango.Weight.BOLD;
 
-            Gtk.TreeIter iter;
+            TreeIter iter;
             score_model.append (out iter);
             score_model.set (iter, 0, date_label, 1, time_label, 2, weight);
 
@@ -131,9 +133,9 @@ public class ScoreDialog : Gtk.Dialog
         return a.date.compare (b.date);
     }
 
-    private void size_changed_cb (Gtk.ComboBox combo)
+    private void size_changed_cb (ComboBox combo)
     {
-        Gtk.TreeIter iter;
+        TreeIter iter;
         if (!combo.get_active_iter (out iter))
             return;
 
@@ -145,7 +147,7 @@ public class ScoreDialog : Gtk.Dialog
     private void entry_added_cb (HistoryEntry entry)
     {
         /* Ignore if already have an entry for this */
-        Gtk.TreeIter iter;
+        TreeIter iter;
         var have_size_entry = false;
         if (size_model.get_iter_first (out iter))
         {
