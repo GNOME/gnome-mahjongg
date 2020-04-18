@@ -59,8 +59,8 @@ public class ScoreDialog : Dialog
         size_combo.add_attribute (renderer, "text", 0);
         hbox.append (size_combo);
 
-        var scroll = new ScrolledWindow (null, null);
-        scroll.shadow_type = ShadowType.ETCHED_IN;
+        var scroll = new ScrolledWindow ();
+        scroll.has_frame = true;
         scroll.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         scroll.hexpand = true;
         scroll.vexpand = true;
@@ -75,7 +75,7 @@ public class ScoreDialog : Dialog
         renderer.xalign = 1.0f;
         scores.insert_column_with_attributes (-1, _("Time"), renderer, "text", 1, "weight", 2);
         scores.model = score_model;
-        scroll.add (scores);
+        scroll.set_child (scores);
 
         foreach (var entry in history.entries)
             entry_added_cb (entry);
