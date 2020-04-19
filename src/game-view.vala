@@ -11,17 +11,23 @@
 public class GameView : Gtk.DrawingArea
 {
     public Gdk.RGBA background_color;
-    private Cairo.Pattern? tile_pattern = null;
+
     private int tile_pattern_width = 0;
     private int tile_pattern_height = 0;
-    private Rsvg.Handle? theme_handle = null;
 
-    private int x_offset;
-    private int y_offset;
-    private int tile_width;
-    private int tile_height;
-    private int tile_layer_offset_x;
-    private int tile_layer_offset_y;
+
+    private int    x_offset;
+    private int    y_offset;
+    private int    tile_width;
+    private int    tile_height;
+    private int    tile_layer_offset_x;
+    private int    tile_layer_offset_y;
+
+    private int    theme_width;
+    private int    theme_height;
+    private double theme_aspect;
+    private Rsvg.Handle? theme_handle = null;
+    private Cairo.Pattern? tile_pattern = null;
 
     private Game? _game;
     public Game? game
@@ -44,12 +50,34 @@ public class GameView : Gtk.DrawingArea
             _theme = value;
             try {
                 theme_handle = new Rsvg.Handle.from_file (value);
+                theme_width  = theme_handle.width;
+                theme_height  = theme_handle.height;
             } catch (Error e) {
                 theme_handle = null;
+                Gdk.Pixbuf.get_file_info (theme, out theme_width, out theme_height);
             }
+            theme_aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
+            update_dimensions ();
             tile_pattern = null;
-            theme_handle = null;
             queue_draw ();
+        }
+    }
+
+    public void build_pattern () {
+        if (theme_handle == null)
+            return;  // Only rebuild if SVG
+
+        /* We want to check if the existing pattern is large enough
+         * for the current widget size */
+        var a_width = get_allocated_width();
+
+        if (tile_pattern != null && theme_handle != null) {
+            Cairo.Surface? surface;
+            tile_pattern.get_surface(out surface);
+
+            if (surface != null) {
+                var w = ((Cairo.ImageSurface)surface).get_width();
+            }
         }
     }
 
@@ -57,6 +85,9 @@ public class GameView : Gtk.DrawingArea
     {
         can_focus = true;
         add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+        size_allocate.connect(() => {
+            update_dimensions ();
+        });
     }
 
     public void set_background (string? colour)
@@ -71,8 +102,6 @@ public class GameView : Gtk.DrawingArea
     {
         if (theme == null)
             return;
-
-        update_dimensions ();
 
         /* The images are bigger than the tile as they contain the isometric extension in the z-axis */
         var image_width = tile_width + tile_layer_offset_x;
@@ -151,58 +180,36 @@ public class GameView : Gtk.DrawingArea
 
     private void load_theme (Cairo.Context c, int width, int height)
     {
-        try
-        {
-            if (theme_handle == null) {
-                theme_handle = new Rsvg.Handle.from_file (theme);
-            };
-
+        if (theme_handle != null) {
             var m = Cairo.Matrix.identity ();
             m.scale ((double) width / theme_handle.width, (double) height / theme_handle.height);
             c.set_matrix (m);
             theme_handle.render_cairo (c);
-
             return;
-        }
-        catch (Error e)
-        {
-            /* Fall through and try loading as a pixbuf */
-        }
-
-        try
-        {
+        } else {
             var p = new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
             Gdk.cairo_set_source_pixbuf (c, p, 0, 0);
             c.paint ();
+            return;
         }
-        catch (Error e)
-        {
-            warning ("Failed to load theme %s: %s", theme, e.message);
-        }
+        warning ("Failed to load theme %s", theme);
     }
 
     private void update_dimensions ()
     {
-        var width = get_allocated_width ();
-        var height = get_allocated_height ();
-
         if (theme == null)
             return;
 
-        int theme_width, theme_height;
-        if (!get_theme_dimensions (out theme_width, out theme_height))
-            return;
-
-        /* Get aspect ratio from theme - contains 43x2 tiles */
-        var aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
+        var width = get_allocated_width ();
+        var height = get_allocated_height ();
 
         /* Need enough space for the whole map and one unit border */
         var map_width = game.map.width + 2.0;
-        var map_height = (game.map.height + 2.0) * aspect;
+        var map_height = (game.map.height + 2.0) * theme_aspect;
 
         /* Scale the map to fit */
         var unit_width = double.min (width / map_width, height / map_height);
-        var unit_height = unit_width * aspect;
+        var unit_height = unit_width * theme_aspect;
 
         /* The size of one tile is two units wide, and the correct aspect ratio */
         tile_width = (int) (unit_width * 2);
@@ -215,18 +222,6 @@ public class GameView : Gtk.DrawingArea
         /* Center the map */
         x_offset = (int) (width - game.map.width * unit_width) / 2;
         y_offset = (int) (height - game.map.height * unit_height) / 2;
-    }
-
-    private bool get_theme_dimensions (out int width, out int height)
-    {
-        if (theme_handle != null) {
-            width = theme_handle.width;
-            height = theme_handle.height;
-            return true;
-        } else {
-            Gdk.Pixbuf.get_file_info (theme, out width, out height);
-            return true;
-        }
     }
 
     private void get_tile_position (Tile tile, out int x, out int y)
