@@ -40,7 +40,17 @@ public class GameView : Gtk.DrawingArea
     public string? theme
     {
         get { return _theme; }
-        set { _theme = value; tile_pattern = null; theme_handle = null; queue_draw (); }
+        set {
+            _theme = value;
+            try {
+                theme_handle = new Rsvg.Handle.from_file (value);
+            } catch (Error e) {
+                theme_handle = null;
+            }
+            tile_pattern = null;
+            theme_handle = null;
+            queue_draw ();
+        }
     }
 
     public GameView ()
@@ -209,15 +219,11 @@ public class GameView : Gtk.DrawingArea
 
     private bool get_theme_dimensions (out int width, out int height)
     {
-        try
-        {
-            var svg = new Rsvg.Handle.from_file (theme);
-            width = svg.width;
-            height = svg.height;
+        if (theme_handle != null) {
+            width = theme_handle.width;
+            height = theme_handle.height;
             return true;
-        }
-        catch (Error e)
-        {
+        } else {
             Gdk.Pixbuf.get_file_info (theme, out width, out height);
             return true;
         }
