@@ -747,14 +747,7 @@ public class Mahjongg : Gtk.Application
 
     private void help_cb ()
     {
-        try
-        {
-            show_uri_on_window (window, "help:gnome-mahjongg", get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        show_uri (window, "help:gnome-mahjongg", Gdk.CURRENT_TIME);
     }
 
     private void load_maps ()
