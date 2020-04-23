@@ -29,6 +29,10 @@ public class GameView : Gtk.DrawingArea
     private Rsvg.Handle? theme_handle = null;
     private Cairo.Pattern? tile_pattern = null;
 
+    private uint   theme_resize_timer;
+    private uint   theme_timer_id;
+
+
     private Game? _game;
     public Game? game
     {
@@ -48,46 +52,108 @@ public class GameView : Gtk.DrawingArea
         get { return _theme; }
         set {
             _theme = value;
+
+            Gdk.Pixbuf? pixbuf = null;
+            theme_handle = null;
+            tile_pattern = null;
+
             try {
                 theme_handle = new Rsvg.Handle.from_file (value);
-                theme_width  = theme_handle.width;
-                theme_height  = theme_handle.height;
+
+                var dimensions = theme_handle.get_dimensions ();
+
+                theme_width = dimensions.width;
+                theme_height = dimensions.height;
             } catch (Error e) {
-                theme_handle = null;
-                Gdk.Pixbuf.get_file_info (theme, out theme_width, out theme_height);
+                try {
+                    pixbuf = new Gdk.Pixbuf.from_file (theme);
+                    theme_width  = pixbuf.get_width ();
+                    theme_height  = pixbuf.get_height ();
+                } catch (Error e) {
+                    warning ("Could not load theme %s: %s", value, e.message);
+                }
             }
+
             theme_aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
             update_dimensions ();
-            tile_pattern = null;
-            queue_draw ();
-        }
-    }
 
-    public void build_pattern () {
-        if (theme_handle == null)
-            return;  // Only rebuild if SVG
-
-        /* We want to check if the existing pattern is large enough
-         * for the current widget size */
-        var a_width = get_allocated_width();
-
-        if (tile_pattern != null && theme_handle != null) {
-            Cairo.Surface? surface;
-            tile_pattern.get_surface(out surface);
-
-            if (surface != null) {
-                var w = ((Cairo.ImageSurface)surface).get_width();
+            if (pixbuf != null) {
+                var cr = Gdk.cairo_create (get_window ());
+                var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+                var ctx = new Cairo.Context (theme_surface);
+                Gdk.cairo_set_source_pixbuf (ctx, pixbuf, 0, 0);
+                ctx.paint();
+                tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
             }
+
+            if (theme_handle != null) {
+                resize_theme ();
+            }
+
+            queue_draw ();
         }
     }
 
     public GameView ()
     {
         can_focus = true;
+        theme_timer_id = 0;
         add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
         size_allocate.connect(() => {
+            /* Recalculate dimensions */
             update_dimensions ();
+
+            /* Resize the rsvg theme lazily after 300ms of the last resize event */
+            if (theme_timer_id != 0) {
+                GLib.Source.remove(theme_timer_id);
+                theme_timer_id = 0;
+            }
+
+            if (theme_handle != null) {
+                theme_resize_timer = 2;
+                theme_timer_id = GLib.Timeout.add(100, () => {
+                    if (theme_resize_timer == 0) {
+                        resize_theme ();
+                        theme_timer_id = 0;
+                        return false;
+                    }
+
+                    theme_resize_timer--;
+                    return true;
+                });
+            }
         });
+    }
+
+    private void resize_theme () {
+        if (theme_handle == null)
+            return;
+
+        var rendered_theme_width = (tile_width + tile_layer_offset_x) * 43;
+
+
+        if (theme_width >= rendered_theme_width) {
+            var dimensions = theme_handle.get_dimensions ();
+           theme_width = dimensions.width;
+           theme_height = dimensions.height;
+        }
+
+        while (theme_width < rendered_theme_width) {
+            theme_width += theme_width;
+            theme_height += theme_height;
+        }
+
+        var cr = Gdk.cairo_create (get_window ());
+        var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+        var ctx = new Cairo.Context (theme_surface);
+
+        try {
+            theme_handle.render_document(ctx, {0,0,theme_width,theme_height});
+            tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
+            queue_draw();
+        } catch (Error e) {
+            warning ("Could not upscale theme");
+        }
     }
 
     public void set_background (string? colour)
@@ -107,25 +173,6 @@ public class GameView : Gtk.DrawingArea
         var image_width = tile_width + tile_layer_offset_x;
         var image_height = tile_height + tile_layer_offset_y;
 
-        /* Render the tiles */
-        if (!render_indexes && (tile_pattern == null || tile_pattern_width != image_width || tile_pattern_height != image_height))
-        {
-            tile_pattern_width = image_width;
-            tile_pattern_height = image_height;
-
-            var width = image_width * 43;
-            var height = image_height * 2;
-
-            var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
-            var c = new Cairo.Context (surface);
-            load_theme (c, width, height);
-            tile_pattern = new Cairo.Pattern.for_surface (surface);
-        }
-
-        /* This works because of the way the tiles are sorted. We could
-         * reverse them to make this look a little nicer, but when searching
-         * for a tile we want it the other way around. */
-
         foreach (var tile in game.tiles)
         {
             if (!tile.visible)
@@ -134,25 +181,30 @@ public class GameView : Gtk.DrawingArea
             int x, y;
             get_tile_position (tile, out x, out y);
 
-            /* Select image for this tile, or blank image if paused */
-            var texture_x = get_image_offset (tile.number) * image_width;
-            var texture_y = 0;
-            if (game.paused)
-            {
-                texture_x = get_image_offset (-1) * image_width;
-                texture_y = 0;
-            }
-            else if (tile == game.selected_tile)
-                texture_y = image_height;
-            else if (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1]))
-                texture_y = image_height;
-
             if (render_indexes)
                 cr.set_source_rgb (tile.number / 255.0, tile.number / 255.0, tile.number / 255.0);
             else
             {
+                double width_scale = (double)theme_width / ((double)image_width * 43.0);
+                double height_scale = (double)theme_height / ((double)image_height * 2);
+
+                var tile_number = game.paused ? -1 : tile.number;
+
+                /* Select image for this tile, or blank image if paused */
+                double texture_x = (double)get_image_offset (tile_number) * image_width;
+                double texture_y = 0;
+
+                if (!game.paused) {
+                    if ((tile == game.selected_tile) ||
+                        (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1])))
+                        texture_y = image_height;
+                }
+
                 var matrix = Cairo.Matrix.identity ();
+
+                matrix.scale(width_scale, height_scale);
                 matrix.translate (texture_x - x, texture_y - y);
+
                 tile_pattern.set_matrix (matrix);
                 cr.set_source (tile_pattern);
             }
@@ -176,23 +228,6 @@ public class GameView : Gtk.DrawingArea
             cr.set_source_rgb (1, 1, 1);
             cr.show_text (text);
         }
-    }
-
-    private void load_theme (Cairo.Context c, int width, int height)
-    {
-        if (theme_handle != null) {
-            var m = Cairo.Matrix.identity ();
-            m.scale ((double) width / theme_handle.width, (double) height / theme_handle.height);
-            c.set_matrix (m);
-            theme_handle.render_cairo (c);
-            return;
-        } else {
-            var p = new Gdk.Pixbuf.from_file_at_scale (theme, width, height, false);
-            Gdk.cairo_set_source_pixbuf (c, p, 0, 0);
-            c.paint ();
-            return;
-        }
-        warning ("Failed to load theme %s", theme);
     }
 
     private void update_dimensions ()
@@ -298,29 +333,26 @@ public class GameView : Gtk.DrawingArea
             if (game.selected_tile == null)
             {
                 game.selected_tile = tile;
-                return true;
             }
 
             /* Unselect tile by clicking on it again */
-            if (tile == game.selected_tile)
+            else if (tile == game.selected_tile)
             {
                 game.selected_tile = null;
-                return true;
             }
 
             /* Attempt to match second tile to the selected one */
-            if (game.selected_tile.matches (tile))
+            else if (game.selected_tile.matches (tile))
             {
                 game.remove_pair (game.selected_tile, tile);
-                return true;
             }
             else
             {
                 game.selected_tile = tile;
-                return true;
             }
         }
 
+        queue_draw();
         return false;
     }
 
