@@ -19,7 +19,7 @@ pkgdatadir = datadir / 'gnome-mahjongg'
 # Dependencies
 glib_dep    = dependency ('glib-2.0', version: '>= 2.40.0')
 gio_dep     = dependency ('gio-2.0', version: '>= 2.40.0')
-gtk_dep     = dependency ('gtk+-3.0', version: '>= 3.13.2')
+gtk_dep     = dependency ('gtk+-3.0', version: '>= 3.14.0')
 librsvg_dep = dependency ('librsvg-2.0', version: '>= 2.32.0')
 
 subdir ('po')

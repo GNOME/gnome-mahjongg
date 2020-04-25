@@ -32,6 +32,7 @@ public class GameView : Gtk.DrawingArea
     private uint   theme_resize_timer;
     private uint   theme_timer_id;
 
+    private Gtk.GestureMultiPress click_controller;     // for keeping in memory
 
     private Game? _game;
     public Game? game
@@ -94,11 +95,12 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    public GameView ()
+    construct
     {
         can_focus = true;
         theme_timer_id = 0;
         add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+        init_mouse ();
         size_allocate.connect(() => {
             /* Recalculate dimensions */
             update_dimensions ();
@@ -311,49 +313,47 @@ public class GameView : Gtk.DrawingArea
         return true;
     }
 
-    public override bool button_press_event (Gdk.EventButton event)
+    private inline void init_mouse ()
+    {
+        click_controller = new Gtk.GestureMultiPress (this);    // only reacts to Gdk.BUTTON_PRIMARY
+        click_controller.pressed.connect (on_click);
+    }
+
+    private inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.paused)
-            return false;
-
-        /* Ignore the 2BUTTON and 3BUTTON events. */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
-            return false;
+            return;
 
         /* Get the tile under the square */
-        var tile = find_tile ((uint) event.x, (uint) event.y);
+        var tile = find_tile ((uint) event_x, (uint) event_y);
 
         /* If not a valid tile then ignore the event */
         if (tile == null || !game.tile_can_move (tile))
-            return true;
+            return;
 
-        if (event.button == 1)
+        /* Select first tile */
+        if (game.selected_tile == null)
         {
-            /* Select first tile */
-            if (game.selected_tile == null)
-            {
-                game.selected_tile = tile;
-            }
+            game.selected_tile = tile;
+        }
 
-            /* Unselect tile by clicking on it again */
-            else if (tile == game.selected_tile)
-            {
-                game.selected_tile = null;
-            }
+        /* Unselect tile by clicking on it again */
+        else if (tile == game.selected_tile)
+        {
+            game.selected_tile = null;
+        }
 
-            /* Attempt to match second tile to the selected one */
-            else if (game.selected_tile.matches (tile))
-            {
-                game.remove_pair (game.selected_tile, tile);
-            }
-            else
-            {
-                game.selected_tile = tile;
-            }
+        /* Attempt to match second tile to the selected one */
+        else if (game.selected_tile.matches (tile))
+        {
+            game.remove_pair (game.selected_tile, tile);
+        }
+        else
+        {
+            game.selected_tile = tile;
         }
 
         queue_draw();
-        return false;
     }
 
     private Tile? find_tile (uint x, uint y)
