@@ -100,7 +100,6 @@ public class GameView : Gtk.DrawingArea
     {
         can_focus = true;
         theme_timer_id = 0;
-        add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
         init_mouse ();
         size_allocate.connect(() => {
             /* Recalculate dimensions */
