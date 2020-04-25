@@ -32,7 +32,7 @@ public class GameView : Gtk.DrawingArea
     private uint   theme_resize_timer;
     private uint   theme_timer_id;
 
-    private Gtk.GestureMultiPress click_controller;     // for keeping in memory
+    private Gtk.GestureClick click_controller;          // for keeping in memory
 
     private Game? _game;
     public Game? game
@@ -316,11 +316,12 @@ public class GameView : Gtk.DrawingArea
 
     private inline void init_mouse ()
     {
-        click_controller = new Gtk.GestureMultiPress (this);    // only reacts to Gdk.BUTTON_PRIMARY
+        click_controller = new Gtk.GestureClick ();     // only reacts to Gdk.BUTTON_PRIMARY
         click_controller.pressed.connect (on_click);
+        add_controller (click_controller);
     }
 
-    private inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private inline void on_click (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.paused)
             return;

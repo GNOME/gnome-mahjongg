@@ -106,8 +106,9 @@ public class Mahjongg : Gtk.Application
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
 
         game_view = new GameView ();
-        view_click_controller = new Gtk.GestureMultiPress (game_view);
+        view_click_controller = new Gtk.GestureClick ();
         view_click_controller.pressed.connect (on_click);
+        game_view.add_controller (view_click_controller);
         game_view.set_size_request (600, 400);
 
         title = new Gtk.Label ("");
@@ -306,8 +307,8 @@ public class Mahjongg : Gtk.Application
         }
     }
 
-    private Gtk.GestureMultiPress view_click_controller;    // for keeping in memory
-    private inline void on_click (Gtk.GestureMultiPress _view_click_controller, int n_press, double event_x, double event_y)
+    private Gtk.GestureClick view_click_controller;    // for keeping in memory
+    private inline void on_click (Gtk.GestureClick _view_click_controller, int n_press, double event_x, double event_y)
     {
         /* Cancel pause on click */
         if (game_view.game.paused)
