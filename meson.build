@@ -5,24 +5,24 @@ project ('gnome-mahjongg', ['vala', 'c'],
              'warning_level=1',
              'buildtype=debugoptimized',
          ],
-         meson_version: '>= 0.37.1')
+         meson_version: '>= 0.49.0')
 
 gnome = import ('gnome')
 i18n = import ('i18n')
 
 # Paths
-mandir = join_paths (get_option ('prefix'), get_option ('mandir'))
-localedir = join_paths (get_option ('prefix'), get_option ('localedir'))
-datadir = join_paths (get_option ('prefix'), get_option ('datadir'))
-pkgdatadir = join_paths (datadir, 'gnome-mahjongg')
+mandir     = get_option ('prefix') / get_option ('mandir')
+localedir  = get_option ('prefix') / get_option ('localedir')
+datadir    = get_option ('prefix') / get_option ('datadir')
+pkgdatadir = datadir / 'gnome-mahjongg'
 
 # Dependencies
-glib_dep = dependency ('glib-2.0', version: '>= 2.40.0')
-gtk_dep = dependency ('gtk+-3.0', version: '>= 3.13.2')
+glib_dep    = dependency ('glib-2.0', version: '>= 2.40.0')
+gio_dep     = dependency ('gio-2.0', version: '>= 2.40.0')
+gtk_dep     = dependency ('gtk+-3.0', version: '>= 3.13.2')
 librsvg_dep = dependency ('librsvg-2.0', version: '>= 2.32.0')
 
 subdir ('po')
 subdir ('data')
 subdir ('help')
 subdir ('src')
-meson.add_install_script ('data/meson_post_install.py')
