@@ -78,3 +78,17 @@ if get_option('update-icon-cache').enabled()
   meson.add_install_script(updateiconcache.path(), '-t', '-f', get_option('prefix') / hicolordir / 'scalable')
   meson.add_install_script(updateiconcache.path(), '-t', '-f', get_option('prefix') / hicolordir / 'symbolic')
 endif
+
+# Make D-Bus activatable
+service_conf = configuration_data()
+service_conf.set('bindir', bindir)
+
+service = 'org.gnome.Mahjongg.service'
+
+configure_file (
+  input: service + '.in',
+  output: service,
+  install: true,
+  install_dir: join_paths (datadir, 'dbus-1', 'services'),
+  configuration: service_conf
+)

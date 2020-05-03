@@ -11,10 +11,11 @@ gnome = import ('gnome')
 i18n = import ('i18n')
 
 # Paths
-mandir     = get_option ('prefix') / get_option ('mandir')
-localedir  = get_option ('prefix') / get_option ('localedir')
-datadir    = get_option ('prefix') / get_option ('datadir')
-pkgdatadir = datadir / 'gnome-mahjongg'
+mandir      = join_paths (get_option ('prefix'), get_option ('mandir'))
+localedir   = join_paths (get_option ('prefix'), get_option ('localedir'))
+datadir     = join_paths (get_option ('prefix'), get_option ('datadir'))
+pkgdatadir  = join_paths (datadir, 'gnome-mahjongg')
+bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))
 
 # Dependencies
 glib_dep    = dependency ('glib-2.0', version: '>= 2.40.0')
