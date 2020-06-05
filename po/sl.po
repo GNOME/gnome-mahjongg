@@ -5,14 +5,14 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2019.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
 "POT-Creation-Date: 2019-02-10 17:31+0000\n"
-"PO-Revision-Date: 2019-02-12 12:54+0100\n"
+"PO-Revision-Date: 2020-06-04 18:17+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -88,52 +88,52 @@ msgstr "Splošno"
 #: data/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr "Začni novo igro"
+msgstr "Začne novo igro"
 
 #: data/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Pause the game"
-msgstr "Premor igranja"
+msgstr "Naredi premor igranja"
 
 #: data/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Undo"
-msgstr "Razveljavi"
+msgstr "Razveljavi potezo"
 
 #: data/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Redo"
-msgstr "Ponovno uveljavi"
+msgstr "Ponovno uveljavi potezo"
 
 #: data/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Fullscreen"
-msgstr "Celozaslonski način"
+msgstr "Omogoči celozaslonski način"
 
 #: data/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Končaj"
+msgstr "Konča program"
 
 #: data/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Help"
-msgstr "Pomoč"
+msgstr "Pokaže pomoč"
 
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Show a hint"
-msgstr "Pokaži namig"
+msgstr "Pokaže namig"
 
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr "Pokaži pomoč"
+msgstr "Pokaže pomoč"
 
 #: data/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
-msgstr "Pokaži tipkovne bližnjice"
+msgstr "Pokaže tipkovne bližnjice"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
