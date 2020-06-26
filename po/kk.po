@@ -1,15 +1,14 @@
 # Kazakh translation for gnome-games.
 # Copyright (C) 2010 gnome-games's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-games package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mahjongg&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-25 20:55+0000\n"
-"PO-Revision-Date: 2015-09-21 16:48+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2020-05-14 14:56+0000\n"
+"PO-Revision-Date: 2020-06-26 14:18+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -17,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 2.3.1\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
-msgstr ""
+msgstr "GNOME Маджонг"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
-msgstr ""
+msgstr "Плиткаларды сәйкестендіріп, тақтаны тазалаңыз"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -36,267 +35,340 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
+"Классикалық Шығыс мозаика ойынының солитер нұсқасы. Плиткалар ойын "
+"басталғанда тақтаға жиналады. Мақсаты – барлық қатарларды мүмкіндігінше аз "
+"уақытта жою. Екі сәйкес қатарды таңдамаңыз, олар тақтадан жоғалады, бірақ "
+"плитканы оның тек сол немесе оң жағында бірдей деңгейде бос орын болған "
+"кезде ғана таңдауға болады. Мұқият болыңыз: ұқсайтын плиткалар іс жүзінде "
+"сәл басқаша болуы мүмкін."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:4
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
+"GNOME Маджонгы ішінде көптеген бастау жаймалары бар, олардың кейбіреулері "
+"оңай, кейбіреулері қиын болады. Тұрып қалсаңыз, тұспал сұрай аласыз, бірақ "
+"ол үлкен уақыт күтуін қосады."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:629
-#: ../src/gnome-mahjongg.vala:814
+#: data/org.gnome.Mahjongg.appdata.xml.in:39
+msgid "The GNOME Project"
+msgstr "GNOME жобасы"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
-msgstr ""
+msgstr "Маджонг"
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr ""
+msgstr "Сәйкес жұптарды алып тастау арқылы плиткаларды бөлшектеңіз"
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
-msgstr ""
+msgstr "game;strategy;puzzle;board;ойын;стратегия;жұмбақ;тақта;"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:1
+#: data/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Жалпы"
+
+#: data/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Жаңа ойынды бастау"
+
+#: data/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Ойынды аялдату"
+
+#: data/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Болдырмау"
+
+#: data/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Қайталау"
+
+#: data/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "Толық экран"
+
+#: data/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Шығу"
+
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Көмек"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "Тұспалды көрсету"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Көмекті көрсету"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Пернетақта жарлықтарын көрсету"
+
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Терезе ені, пиксельмен"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:2
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Терезе биіктігі, пиксельмен"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:3
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "терезе максималды болса, мәні true болады"
 
 #.
 #. * Translatable strings file generated by get_titles.pl.
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
 msgstr "Оңай"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
-msgstr ""
+msgstr "Зиккурат"
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
-msgstr ""
+msgstr "Төрт көпір"
 
-#: ../data/translatable_game_names.h:9
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
-msgstr ""
+msgstr "Бұлт"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
-msgstr ""
+msgstr "Крест-Нөлдер"
 
-#: ../data/translatable_game_names.h:11
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
-msgstr ""
+msgstr "Қызыл айдаһар"
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
-msgstr ""
+msgstr "Эстакада"
 
-#: ../data/translatable_game_names.h:13
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
-msgstr ""
+msgstr "Пирамида қабырғасы"
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
-msgstr ""
+msgstr "Араласқан крест"
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
-msgstr ""
+msgstr "Қиын"
 
-#: ../src/game-view.vala:132
+#: src/game-view.vala:133
 msgid "Paused"
 msgstr "Аялдатылған"
 
-#: ../src/gnome-mahjongg.vala:33
+#: src/gnome-mahjongg.vala:34
 msgid "Print release version and exit"
 msgstr "Нұсқа ақпаратын шығару және шығу"
 
-#: ../src/gnome-mahjongg.vala:93
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
-msgstr ""
+msgstr "Қалған жылжытулар:"
 
-#: ../src/gnome-mahjongg.vala:119
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
 msgstr "Соңғы әрекетті болдырмау"
 
-#: ../src/gnome-mahjongg.vala:125
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
-msgstr ""
+msgstr "Соңғы жылжытуды қайталау"
 
-#: ../src/gnome-mahjongg.vala:131
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
-msgstr ""
+msgstr "Келесі жылжыту үшін тұспал алу"
 
-#: ../src/gnome-mahjongg.vala:136 ../src/gnome-mahjongg.vala:659
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
-msgstr ""
+msgstr "Ойынды аялдату"
 
-#: ../src/gnome-mahjongg.vala:155
-msgid "_Mahjongg"
-msgstr ""
-
-#: ../src/gnome-mahjongg.vala:156 ../src/menu.ui.h:1
+#: src/gnome-mahjongg.vala:143
 msgid "_New Game"
 msgstr "Ж_аңа ойын"
 
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:2
+#: src/gnome-mahjongg.vala:144
 msgid "_Restart Game"
 msgstr "Қа_йта қосу"
 
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:3
+#: src/gnome-mahjongg.vala:145
 msgid "_Scores"
 msgstr "_Есептер"
 
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:4
+#: src/gnome-mahjongg.vala:148
 msgid "_Preferences"
 msgstr "_Баптаулар"
 
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:7
-#: ../src/score-dialog.vala:28
-msgid "_Quit"
-msgstr "_Шығу"
+#: src/gnome-mahjongg.vala:149
+msgid "_Keyboard Shortcuts"
+msgstr "П_ернетақта жарлықтары"
 
-#: ../src/gnome-mahjongg.vala:162 ../src/menu.ui.h:5
+#: src/gnome-mahjongg.vala:150
 msgid "_Help"
 msgstr "_Көмек"
 
-#: ../src/gnome-mahjongg.vala:163
-msgid "_Contents"
-msgstr "Құра_масы"
+#: src/gnome-mahjongg.vala:151
+msgid "_About Mahjongg"
+msgstr "Маджонг тур_алы"
 
-#: ../src/gnome-mahjongg.vala:164 ../src/menu.ui.h:6
-msgid "_About"
-msgstr "О_сы туралы"
-
-#: ../src/gnome-mahjongg.vala:314
+#: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
-msgstr ""
+msgstr "Бұл картамен жаңа ойынды бастауды қалайсыз ба?"
 
-#: ../src/gnome-mahjongg.vala:315
+#: src/gnome-mahjongg.vala:283
 msgid "If you continue playing the next game will use the new map."
-msgstr ""
+msgstr "Жалғастырсаңыз, келесі ойын жаңа картаны қолданатын болады."
 
-#: ../src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:284
 msgid "_Continue playing"
-msgstr ""
+msgstr "Ойнауды жалға_стыру"
 
-#: ../src/gnome-mahjongg.vala:317
+#: src/gnome-mahjongg.vala:285
 msgid "Use _new map"
-msgstr ""
+msgstr "_Жаңа картаны қолдану"
 
-#: ../src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:353
 msgid "There are no more moves."
-msgstr ""
+msgstr "Жылжытулар қалмады."
 
-#: ../src/gnome-mahjongg.vala:386
+#: src/gnome-mahjongg.vala:354
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr ""
+"Әрбір жұмбақтың кемінде бір шешімі болады.  Жылжытуларды болдырмауға және "
+"шешімді табуға, осы ойынды қайта іске қосуға немесе жаңасын бастауға болады."
 
-#: ../src/gnome-mahjongg.vala:388
+#: src/gnome-mahjongg.vala:356
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
+"Сіз ойынды қайта араластыра аласыз, бірақ, бұл шешім табуға кепіл бермейді."
 
-#: ../src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:357
 msgid "_Undo"
 msgstr "Бол_дырмау"
 
-#: ../src/gnome-mahjongg.vala:390
+#: src/gnome-mahjongg.vala:358
 msgid "_Restart"
 msgstr "Қа_йта қосу"
 
-#: ../src/gnome-mahjongg.vala:391
+#: src/gnome-mahjongg.vala:359
 msgid "_New game"
 msgstr "Ж_аңа ойын"
 
-#: ../src/gnome-mahjongg.vala:392
+#: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
 msgstr "Аралас_тыру"
 
-#: ../src/gnome-mahjongg.vala:444
+#: src/gnome-mahjongg.vala:412
 msgid "Preferences"
 msgstr "Қалаулар"
 
-#: ../src/gnome-mahjongg.vala:460
+#: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
 msgstr "Т_ақырыбы:"
 
-#: ../src/gnome-mahjongg.vala:488
+#: src/gnome-mahjongg.vala:456
 msgid "_Layout:"
-msgstr ""
+msgstr "Жа_йма:"
 
-#: ../src/gnome-mahjongg.vala:514
+#: src/gnome-mahjongg.vala:482
 msgid "_Background color:"
 msgstr "Ф_он түсі:"
 
-#: ../src/gnome-mahjongg.vala:528
+#: src/gnome-mahjongg.vala:496
 msgid "_Close"
 msgstr "_Жабу"
 
-#: ../src/gnome-mahjongg.vala:595
+#: src/gnome-mahjongg.vala:563
 msgid "Main game:"
-msgstr ""
+msgstr "Негізгі ойын:"
 
-#: ../src/gnome-mahjongg.vala:604
+#: src/gnome-mahjongg.vala:572
 msgid "Maps:"
-msgstr ""
+msgstr "Карталар:"
 
-#: ../src/gnome-mahjongg.vala:612
+#: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
-msgstr ""
+msgstr "Плиткалар:"
 
-#: ../src/gnome-mahjongg.vala:632
+#: src/gnome-mahjongg.vala:600
 msgid "A matching game played with Mahjongg tiles"
-msgstr ""
+msgstr "Маджонг мозаикасымен ойналатын сәйкестендіру ойыны"
 
-#: ../src/gnome-mahjongg.vala:638
+#: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
-#: ../src/gnome-mahjongg.vala:654
+#: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
-msgstr ""
+msgstr "Ойынды аялдатудан босату"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:28
+msgid "_Quit"
+msgstr "_Шығу"
+
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Жаңа ойын"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "OK"
 msgstr "_ОК"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Layout:"
 msgstr "Жайма:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "Күні"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Уақыт"
+
+#~ msgid "_Contents"
+#~ msgstr "Құра_масы"
+
+#~ msgid "_About"
+#~ msgstr "О_сы туралы"
