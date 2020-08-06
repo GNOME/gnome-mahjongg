@@ -312,10 +312,13 @@ public class Mahjongg : Gtk.Application
                 dialog.add_buttons (_("_Continue playing"), ResponseType.REJECT,
                                     _("Use _new map"), ResponseType.ACCEPT);
                 dialog.set_default_response (ResponseType.ACCEPT);
-                var response = dialog.run ();
-                if (response == ResponseType.ACCEPT)
-                    new_game ();
-                dialog.destroy ();
+
+                dialog.response.connect ((_dialog, response) => {
+                        _dialog.destroy ();
+                        if (response == ResponseType.ACCEPT)
+                            new_game ();
+                    });
+                dialog.present ();
             }
             else
                 new_game ();
@@ -361,10 +364,7 @@ public class Mahjongg : Gtk.Application
             history.add (entry);
             history.save ();
 
-            if (show_scores (entry, true) == ResponseType.CLOSE)
-                window.destroy ();
-            else
-                new_game ();
+            show_scores (entry);
         }
         else if (!game_view.game.can_move)
         {
@@ -383,43 +383,49 @@ public class Mahjongg : Gtk.Application
                                 _("_New game"), NoMovesDialogResponse.NEW_GAME,
                                 allow_shuffle ? _("_Shuffle") : null, NoMovesDialogResponse.SHUFFLE);
 
-            var result = dialog.run ();
-            /* Shuffling may cause the dialog to appear again immediately,
-               so we destroy BEFORE doing anything with the result. */
-            dialog.destroy ();
+            dialog.response.connect ((_dialog, response) => {
+                    /* Shuffling may cause the dialog to appear again immediately,
+                       so we destroy BEFORE doing anything with the result. */
+                    _dialog.destroy ();
 
-            switch (result)
-            {
-            case NoMovesDialogResponse.UNDO:
-                undo_cb ();
-                break;
-            case NoMovesDialogResponse.SHUFFLE:
-                shuffle_cb ();
-                break;
-            case NoMovesDialogResponse.RESTART:
-                restart_game ();
-                break;
-            case NoMovesDialogResponse.NEW_GAME:
-                new_game ();
-                break;
-            case ResponseType.DELETE_EVENT:
-                break;
-            default:
-                assert_not_reached ();
-            }
+                    switch (response)
+                    {
+                        case NoMovesDialogResponse.UNDO:
+                            undo_cb ();
+                            break;
+                        case NoMovesDialogResponse.SHUFFLE:
+                            shuffle_cb ();
+                            break;
+                        case NoMovesDialogResponse.RESTART:
+                            restart_game ();
+                            break;
+                        case NoMovesDialogResponse.NEW_GAME:
+                            new_game ();
+                            break;
+                        case ResponseType.DELETE_EVENT:
+                            break;
+                        default:
+                            assert_not_reached ();
+                    }
+                });
+            dialog.present ();
         }
     }
 
-    private int show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
+    private void show_scores (HistoryEntry? selected_entry)
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_quit, maps);
+        var dialog = new ScoreDialog (history, selected_entry, /* show_quit */ true, maps);
         dialog.modal = true;
         dialog.transient_for = window;
 
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        return result;
+        dialog.response.connect ((_dialog, response) => {
+                _dialog.destroy ();
+                if (response == ResponseType.CLOSE)
+                    window.destroy ();
+                else
+                    new_game ();
+            });
+        dialog.present ();
     }
 
     private void preferences_cb ()
@@ -659,7 +665,11 @@ public class Mahjongg : Gtk.Application
 
     private void scores_cb ()
     {
-        show_scores ();
+        var dialog = new ScoreDialog (history, /* selected entry */ null, /* show quit */ false, maps);
+        dialog.modal = true;
+        dialog.transient_for = window;
+
+        dialog.present ();
     }
 
     private void new_game_cb ()
