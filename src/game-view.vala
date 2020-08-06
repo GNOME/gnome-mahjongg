@@ -102,30 +102,6 @@ public class GameView : Gtk.DrawingArea
         theme_timer_id = 0;
         init_mouse ();
         set_draw_func (draw);
-        size_allocate.connect(() => {
-            /* Recalculate dimensions */
-            update_dimensions ();
-
-            /* Resize the rsvg theme lazily after 300ms of the last resize event */
-            if (theme_timer_id != 0) {
-                GLib.Source.remove(theme_timer_id);
-                theme_timer_id = 0;
-            }
-
-            if (theme_handle != null) {
-                theme_resize_timer = 2;
-                theme_timer_id = GLib.Timeout.add(100, () => {
-                    if (theme_resize_timer == 0) {
-                        resize_theme ();
-                        theme_timer_id = 0;
-                        return false;
-                    }
-
-                    theme_resize_timer--;
-                    return true;
-                });
-            }
-        });
     }
 
     private void resize_theme () {
@@ -303,10 +279,44 @@ public class GameView : Gtk.DrawingArea
         queue_draw ();
     }
 
+    private inline void on_resize ()
+    {
+        /* Recalculate dimensions */
+        update_dimensions ();
+
+        /* Resize the rsvg theme lazily after 300ms of the last resize event */
+        if (theme_timer_id != 0) {
+            GLib.Source.remove(theme_timer_id);
+            theme_timer_id = 0;
+        }
+
+        if (theme_handle != null) {
+            theme_resize_timer = 2;
+            theme_timer_id = GLib.Timeout.add(100, () => {
+                if (theme_resize_timer == 0) {
+                    resize_theme ();
+                    theme_timer_id = 0;
+                    return false;
+                }
+
+                theme_resize_timer--;
+                return true;
+            });
+        }
+    }
+
+    private int old_width  = -42;
+    private int old_height = -42;
     private inline void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (game == null)
             return;
+        if (new_width != old_width || new_height != old_height)
+        {
+            on_resize ();
+            old_width  = new_width;
+            old_height = new_height;
+        }
 
         Gdk.cairo_set_source_rgba (cr, background_color);
         cr.paint ();
