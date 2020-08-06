@@ -169,7 +169,7 @@ public class Mahjongg : Gtk.Application
         menu_button.set_icon_name ("open-menu-symbolic");
 
         var header_bar = new HeaderBar ();
-        header_bar.set_custom_title (title_box);
+        header_bar.set_title_widget (title_box);
         header_bar.set_show_title_buttons (true);
         header_bar.pack_start (hbox);
         header_bar.pack_end (menu_button);
