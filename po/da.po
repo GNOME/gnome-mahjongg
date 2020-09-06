@@ -1,20 +1,21 @@
-# Danish translation of gnome-games.
+# Danish translation of gnome-mahjongg.
 # Copyright (C) 1998-2019 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-games package.
+# This file is distributed under the same license as the gnome-mahjongg package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
-# Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
+# Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001.
 # Keld Simonsen <keld@dkuug.dk>, 2000-2002.
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015, 2017-2019
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2015, 2017-2019.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-03-26 17:50+0000\n"
+"POT-Creation-Date: 2020-06-05 07:16+0000\n"
 "PO-Revision-Date: 2019-02-13 00:12+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -55,10 +56,10 @@ msgid ""
 "time penalty."
 msgstr ""
 "GNOME Mahjongg har et udvalg af startarrangementer, hvoraf nogle er nemme og "
-"andre svære. Hvis du sidder fast, kan du bede om et fif - men dette medfører "
+"andre svære. Hvis du sidder fast, kan du bede om et tip - men dette medfører "
 "en stor straf på tid."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:36
+#: data/org.gnome.Mahjongg.appdata.xml.in:39
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -119,7 +120,7 @@ msgstr "Hjælp"
 #: data/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Show a hint"
-msgstr "Vis et fif"
+msgstr "Vis et tip"
 
 #: data/help-overlay.ui:72
 msgctxt "shortcut window"
@@ -168,7 +169,6 @@ msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Sky"
 
-# Banen er formet som #
 #: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
@@ -182,7 +182,7 @@ msgstr "Rød drage"
 #: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
-msgstr "Bro"
+msgstr "Gangbro"
 
 #: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
@@ -199,7 +199,7 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Vanskelig"
 
-#: src/game-view.vala:132
+#: src/game-view.vala:224
 msgid "Paused"
 msgstr "Pause"
 
@@ -213,7 +213,7 @@ msgstr "Tilbageværende træk:"
 
 #: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
-msgstr "Fortryd sidste træk"
+msgstr "Fortryd dit sidste træk"
 
 #: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
@@ -221,7 +221,7 @@ msgstr "Gentag sidste træk"
 
 #: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
-msgstr "Få et fif til dit næste træk"
+msgstr "Få et tip til dit næste træk"
 
 #: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
@@ -384,13 +384,3 @@ msgstr "Dato"
 #: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tid"
-
-#~ msgid "org.gnome.Mahjongg"
-#~ msgstr "org.gnome.Mahjongg"
-
-#~ msgid "_Contents"
-#~ msgstr "_Indhold"
-
-#~ msgid "_About"
-#~ msgstr "_Om"
-
