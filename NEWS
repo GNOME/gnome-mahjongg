@@ -1,3 +1,30 @@
+GNOME Mahjongg 3.38.0
+=====================
+
+Here is a new stable release! There were some drawing
+optimizations again, and a bit of cleaning in scripts
+(by Alberto Ruiz and Jordan Petridis). This is great!
+
+Translations updated (since 3.36.1):
+  Catalan: Jordi Mas
+  Chinese (China): Boyuan Yang
+  Czech: Marek Černocký
+  Danish: Ask Hjorth Larsen
+  French: Charles Monzat
+  German: Mario Blättermann
+  Kazakh: Baurzhan Muftakhidinov
+  Kurdish Sorani: Jwtiyar Nariman
+  Portuguese: Juliano Camargo
+  Slovenian: Matej Urbančič
+  Spanish: Daniel Mustieles
+  Ukrainian: Yuri Chornoivan
+
+GNOME Mahjongg 3.36.1
+=====================
+* Drawing optimizations
+* Help improvements
+* Translation updates
+
 GNOME Mahjongg 3.34.0
 =====================
 * Translation updates
