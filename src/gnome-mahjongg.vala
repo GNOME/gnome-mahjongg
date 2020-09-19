@@ -14,7 +14,7 @@ public class Mahjongg : Gtk.Application
 
     private History history;
 
-    private List<Map> maps = null;
+    private List<Map> maps = new List<Map> ();
 
     private Gtk.ApplicationWindow window;
     private Gtk.Label title;
@@ -389,7 +389,7 @@ public class Mahjongg : Gtk.Application
 
     private int show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_quit);
+        var dialog = new ScoreDialog (history, selected_entry, show_quit, maps);
         dialog.modal = true;
         dialog.transient_for = window;
 

@@ -16,9 +16,11 @@ public class ScoreDialog : Gtk.Dialog
     private Gtk.ListStore score_model;
     private Gtk.ComboBox size_combo;
     private Gtk.TreeView scores;
+    private unowned List<Map> maps;
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false, List<Map> maps)
     {
+        this.maps = maps;
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
@@ -162,10 +164,20 @@ public class ScoreDialog : Gtk.Dialog
 
         if (!have_size_entry)
         {
-            var label = "%s".printf (entry.name);
+            unowned List<Map> map = maps.first ();
+            string display_name = entry.name;
+            do
+            {
+                if (map.data.score_name == display_name)
+                {
+                    display_name = dpgettext2 (null, "mahjongg map name", map.data.name);
+                    break;
+                }
+            }
+            while ((map = map.next) != null);
 
             size_model.append (out iter);
-            size_model.set (iter, 0, label, 1, entry.name);
+            size_model.set (iter, 0, display_name, 1, entry.name);
 
             /* Select this entry if don't have any */
             if (size_combo.get_active () == -1)
