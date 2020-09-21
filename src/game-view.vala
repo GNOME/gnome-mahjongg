@@ -172,8 +172,8 @@ public class GameView : Gtk.DrawingArea
             return;
 
         /* The images are bigger than the tile as they contain the isometric extension in the z-axis */
-        var image_width = tile_width + tile_layer_offset_x;
-        var image_height = tile_height + tile_layer_offset_y;
+        tile_pattern_width = tile_width + tile_layer_offset_x;
+        tile_pattern_height = tile_height + tile_layer_offset_y;
 
         foreach (var tile in game.tiles)
         {
@@ -187,19 +187,19 @@ public class GameView : Gtk.DrawingArea
                 cr.set_source_rgb (tile.number / 255.0, tile.number / 255.0, tile.number / 255.0);
             else
             {
-                double width_scale = (double)theme_width / ((double)image_width * 43.0);
-                double height_scale = (double)theme_height / ((double)image_height * 2);
+                double width_scale = (double)theme_width / ((double)tile_pattern_width * 43.0);
+                double height_scale = (double)theme_height / ((double)tile_pattern_height * 2);
 
                 var tile_number = game.paused ? -1 : tile.number;
 
                 /* Select image for this tile, or blank image if paused */
-                double texture_x = (double)get_image_offset (tile_number) * image_width;
+                double texture_x = (double)get_image_offset (tile_number) * tile_pattern_width;
                 double texture_y = 0;
 
                 if (!game.paused) {
                     if ((tile == game.selected_tile) ||
                         (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1])))
-                        texture_y = image_height;
+                        texture_y = tile_pattern_height;
                 }
 
                 var matrix = Cairo.Matrix.identity ();
@@ -210,7 +210,7 @@ public class GameView : Gtk.DrawingArea
                 tile_pattern.set_matrix (matrix);
                 cr.set_source (tile_pattern);
             }
-            cr.rectangle (x, y, image_width, image_height);
+            cr.rectangle (x, y, tile_pattern_width, tile_pattern_height);
             cr.fill ();
         }
 
