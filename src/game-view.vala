@@ -38,6 +38,7 @@ public class GameView : Gtk.DrawingArea
             _game = value;
             _game.redraw_tile.connect (redraw_tile_cb);
             _game.paused_changed.connect (paused_changed_cb);
+            update_dimensions ();
             queue_draw ();
         }
     }
