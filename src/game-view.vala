@@ -79,18 +79,16 @@ public class GameView : Gtk.DrawingArea
             theme_aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
             update_dimensions ();
 
-            if (pixbuf != null) {
-                var cr = Gdk.cairo_create (get_window ());
-                var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+            if (get_mapped () && pixbuf != null) {
+                var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
                 var ctx = new Cairo.Context (theme_surface);
                 Gdk.cairo_set_source_pixbuf (ctx, pixbuf, 0, 0);
                 ctx.paint();
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
             }
 
-            if (theme_handle != null) {
+            if (theme_handle != null)
                 resize_theme ();
-            }
 
             queue_draw ();
         }
@@ -102,10 +100,16 @@ public class GameView : Gtk.DrawingArea
         theme_timer_id = 0;
         init_mouse ();
         set_draw_func (draw);
+        map.connect (() => {
+                if (theme_handle != null)
+                    resize_theme ();    // svg themes
+                else
+                    theme = theme;      // png themes; yes, that's hackish
+            });
     }
 
     private void resize_theme () {
-        if (theme_handle == null)
+        if (theme_handle == null || !get_mapped ())
             return;
 
         var rendered_theme_width = (tile_width + tile_layer_offset_x) * 43;
@@ -113,8 +117,8 @@ public class GameView : Gtk.DrawingArea
 
         if (theme_width >= rendered_theme_width) {
             var dimensions = theme_handle.get_dimensions ();
-           theme_width = dimensions.width;
-           theme_height = dimensions.height;
+            theme_width = dimensions.width;
+            theme_height = dimensions.height;
         }
 
         while (theme_width < rendered_theme_width) {
@@ -122,8 +126,7 @@ public class GameView : Gtk.DrawingArea
             theme_height += theme_height;
         }
 
-        var cr = Gdk.cairo_create (get_window ());
-        var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+        var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
         var ctx = new Cairo.Context (theme_surface);
 
         try {
@@ -296,11 +299,11 @@ public class GameView : Gtk.DrawingArea
                 if (theme_resize_timer == 0) {
                     resize_theme ();
                     theme_timer_id = 0;
-                    return false;
+                    return Source.REMOVE;
                 }
 
                 theme_resize_timer--;
-                return true;
+                return Source.CONTINUE;
             });
         }
     }
