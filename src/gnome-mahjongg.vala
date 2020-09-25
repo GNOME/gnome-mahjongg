@@ -141,17 +141,20 @@ public class Mahjongg : Gtk.Application
         title_box.pack_start (status_box, false, false, 0);
 
         var menu = new Menu ();
-        var mahjongg_menu = new Menu ();
-        menu.append_section (null, mahjongg_menu);
-        mahjongg_menu.append (_("_New Game"), "app.new-game");
-        mahjongg_menu.append (_("_Restart Game"), "app.restart-game");
-        mahjongg_menu.append (_("_Scores"), "app.scores");
-        var help_menu = new Menu ();
-        menu.append_section (null, help_menu);
-        help_menu.append (_("_Preferences"), "app.preferences");
-        help_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
-        help_menu.append (_("_Help"), "app.help");
-        help_menu.append (_("_About Mahjongg"), "app.about");
+        var section = new Menu ();
+        section.append (_("_New Game"),         "app.new-game");
+        section.append (_("_Restart Game"),     "app.restart-game");
+        section.append (_("_Scores"),           "app.scores");
+        section.freeze ();
+        menu.append_section (/* no title */ null, section);
+        section = new Menu ();
+        section.append (_("_Preferences"),          "app.preferences");
+        section.append (_("_Keyboard Shortcuts"),   "win.show-help-overlay");
+        section.append (_("_Help"),                 "app.help");
+        section.append (_("_About Mahjongg"),       "app.about");
+        section.freeze ();
+        menu.append_section (/* no title */ null, section);
+        menu.freeze ();
 
         var menu_button = new Gtk.MenuButton ();
         menu_button.valign = Gtk.Align.CENTER;
