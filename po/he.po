@@ -4,28 +4,34 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-16 16:42+0200\n"
-"PO-Revision-Date: 2014-03-16 16:53+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Gezer (Hebrew)\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2020-09-18 16:29+0000\n"
+"PO-Revision-Date: 2020-09-30 11:19+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.6.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.36.0\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 "X-Poedit-Language: Hebrew\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr "מא־ג׳ונג מבית GNOME"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
+msgid "Match tiles and clear the board"
+msgstr "התאמת אריחים וריקון הלוח"
+
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -34,12 +40,12 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
-"גרסה יחידנית של המשחק המערבי הקלסי. האריחים מסודרים על הלוח בתחילת המשחק. "
+"גרסה יחידנית של המשחק המזרחי הקלסי. האריחים מסודרים על הלוח בתחילת המשחק. "
 "מטרת המשחק היא להסיר את כל האריחים תוך כמה שפחות צעדים. ניתן לבחור בשני "
 "אריחים והם ייעלמו מהלוח, אך ניתן לבחור באריח רק אם יש מקום פנוי מימינו או "
 "משמאלו. אזהרה: אריחים דומים עשויים בפועל להיות שונים במקצת."
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -48,28 +54,92 @@ msgstr ""
 "מא־ג׳ונג מבית GNOME מציג מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. "
 "אם נתקעת, ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:535
-#: ../src/gnome-mahjongg.vala:749
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr "מיזם GNOME"
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
+#: src/gnome-mahjongg.vala:782
 msgid "Mahjongg"
 msgstr "מא-ג׳ונג"
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
 msgstr "פירוק ערמת אריחים על־ידי הסרת זוגות תואמים"
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "משחק;אסטרטגיה;פאזל;פזל;תצרף;לוח;"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:1
+#: data/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "כללי"
+
+#: data/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "התחלת משחק חדש"
+
+#: data/help-overlay.ui:24
+#| msgid "Pause the game"
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "השהיית המשחק"
+
+#: data/help-overlay.ui:31
+#| msgid "_Undo"
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "ביטול"
+
+#: data/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "ביצוע חוזר"
+
+#: data/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "מסך מלא"
+
+#: data/help-overlay.ui:52
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "יציאה"
+
+#: data/help-overlay.ui:59
+#| msgid "_Help"
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "עזרה"
+
+#: data/help-overlay.ui:65
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "הצגת רמז"
+
+#: data/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "הצגת עזרה"
+
+#: data/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "הצגת צירופי מקשים"
+
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
 msgstr "Width of the window in pixels"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:2
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
 msgstr "Height of the window in pixels"
 
-#: ../data/org.gnome.gnome-mahjongg.gschema.xml.h:3
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
@@ -78,169 +148,209 @@ msgstr "true if the window is maximized"
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
 msgstr "קל"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "הזיגוראט"
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "ארבע הגשרים"
 
-#: ../data/translatable_game_names.h:9
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "ענן"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "איקס-מיקס-דריקס"
 
-#: ../data/translatable_game_names.h:11
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "דרקון אדום"
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "מעבר עילי"
 
-#: ../data/translatable_game_names.h:13
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "קירות פירמידה"
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "צלב מעורבב"
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "קשה"
 
-#: ../src/game-view.vala:132
+#: src/game-view.vala:224
 msgid "Paused"
 msgstr "הושהה"
 
-#: ../src/gnome-mahjongg.vala:74
+#: src/gnome-mahjongg.vala:34
+msgid "Print release version and exit"
+msgstr "Print release version and exit"
+
+#: src/gnome-mahjongg.vala:90
 msgid "Moves Left:"
 msgstr "מהלכים שנותרו:"
 
-#: ../src/gnome-mahjongg.vala:106
+#: src/gnome-mahjongg.vala:116
 msgid "Undo your last move"
 msgstr "ביטול המהלך האחרון שלך"
 
-#: ../src/gnome-mahjongg.vala:118
+#: src/gnome-mahjongg.vala:122
 msgid "Redo your last move"
 msgstr "חזרה על המהלך שבוטל"
 
-#: ../src/gnome-mahjongg.vala:124
+#: src/gnome-mahjongg.vala:128
 msgid "Receive a hint for your next move"
 msgstr "קבלת רמז למהלך הבא שלך"
 
-#: ../src/gnome-mahjongg.vala:130 ../src/gnome-mahjongg.vala:567
+#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
 msgid "Pause the game"
 msgstr "השהיית המשחק"
 
-#: ../src/gnome-mahjongg.vala:243
+#: src/gnome-mahjongg.vala:143
+msgid "_New Game"
+msgstr "_משחק חדש"
+
+#: src/gnome-mahjongg.vala:144
+msgid "_Restart Game"
+msgstr "ה_תחלת המשחק מחדש"
+
+#: src/gnome-mahjongg.vala:145
+msgid "_Scores"
+msgstr "_תוצאות"
+
+#: src/gnome-mahjongg.vala:148
+msgid "_Preferences"
+msgstr "ה_עדפות"
+
+#: src/gnome-mahjongg.vala:149
+msgid "_Keyboard Shortcuts"
+msgstr "_צירופי מקשים"
+
+#: src/gnome-mahjongg.vala:150
+msgid "_Help"
+msgstr "ע_זרה"
+
+#: src/gnome-mahjongg.vala:151
+#| msgid "Mahjongg"
+msgid "_About Mahjongg"
+msgstr "_על אודות מא-ג׳ונג"
+
+#: src/gnome-mahjongg.vala:282
 msgid "Do you want to start a new game with this map?"
 msgstr "האם ברצונך להתחיל משחק חדש עם מפה זו?"
 
-#: ../src/gnome-mahjongg.vala:244
+#: src/gnome-mahjongg.vala:283
 msgid "If you continue playing the next game will use the new map."
 msgstr "אם בחירתך תהיה להמשיך לשחק המשחק הבא ישתמש במפה החדשה."
 
-#: ../src/gnome-mahjongg.vala:245
+#: src/gnome-mahjongg.vala:284
 msgid "_Continue playing"
 msgstr "ה_משך בשחק"
 
-#: ../src/gnome-mahjongg.vala:246
+#: src/gnome-mahjongg.vala:285
 msgid "Use _new map"
 msgstr "שימוש _במפה חדשה"
 
-#: ../src/gnome-mahjongg.vala:304
+#: src/gnome-mahjongg.vala:353
 msgid "There are no more moves."
 msgstr "לא נותרו מהלכים."
 
-#: ../src/gnome-mahjongg.vala:305
+#: src/gnome-mahjongg.vala:354
+#| msgid ""
+#| "Each puzzle has at least one solution.  You can undo your moves and try "
+#| "and find the solution, restart this game, or start a new one. You can "
+#| "also try to reshuffle the game, but this does not guarantee a solution."
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution, restart this game, or start a new one. You can also try "
-"to reshuffle the game, but this does not guarantee a solution."
+"find the solution, restart this game, or start a new one."
 msgstr ""
 "לכל תצרף יש פתרון אחד לפחות.  ניתן לבטל את המהלכים שלך ולנסות למצוא את "
-"הפתרון, או להתחיל מחדש את המשחק. ניתן גם לערבב את האריחים במשחק הנוכחי אך "
-"מצב זה אינו מבטיח פתרון."
+"הפתרון, להתחיל מחדש את המשחק או להתחיל משחק חדש. "
 
-#: ../src/gnome-mahjongg.vala:306
+#: src/gnome-mahjongg.vala:356
+msgid ""
+"You can also try to reshuffle the game, but this does not guarantee a "
+"solution."
+msgstr "ניתן גם לערבב את האריחים במשחק הנוכחי אך מצב זה אינו מבטיח פתרון."
+
+#: src/gnome-mahjongg.vala:357
 msgid "_Undo"
 msgstr "_בטל"
 
-#: ../src/gnome-mahjongg.vala:307
+#: src/gnome-mahjongg.vala:358
 msgid "_Restart"
 msgstr "ה_תחלה מחדש"
 
-#: ../src/gnome-mahjongg.vala:308
+#: src/gnome-mahjongg.vala:359
 msgid "_New game"
 msgstr "משחק _חדש"
 
-#: ../src/gnome-mahjongg.vala:309
+#: src/gnome-mahjongg.vala:360
 msgid "_Shuffle"
 msgstr "ער_בב"
 
-#: ../src/gnome-mahjongg.vala:352
-msgid "Mahjongg Preferences"
-msgstr "העדפות מא-ג׳ונג"
+#: src/gnome-mahjongg.vala:412
+#| msgid "_Preferences"
+msgid "Preferences"
+msgstr "העדפות"
 
-#: ../src/gnome-mahjongg.vala:355
-msgid "_Close"
-msgstr "_סגירה"
-
-#: ../src/gnome-mahjongg.vala:369
+#: src/gnome-mahjongg.vala:428
 msgid "_Theme:"
 msgstr "_ערכת נושא:"
 
-#: ../src/gnome-mahjongg.vala:397
+#: src/gnome-mahjongg.vala:456
 msgid "_Layout:"
 msgstr "_פריסה:"
 
-#: ../src/gnome-mahjongg.vala:423
+#: src/gnome-mahjongg.vala:482
 msgid "_Background color:"
 msgstr "_צבע הרקע:"
 
-#: ../src/gnome-mahjongg.vala:501
+#: src/gnome-mahjongg.vala:496
+msgid "_Close"
+msgstr "_סגירה"
+
+#: src/gnome-mahjongg.vala:563
 msgid "Main game:"
 msgstr "משחק ראשי:"
 
-#: ../src/gnome-mahjongg.vala:510
+#: src/gnome-mahjongg.vala:572
 msgid "Maps:"
 msgstr "מפות:"
 
-#: ../src/gnome-mahjongg.vala:518
+#: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
 msgstr "אריחים:"
 
-#: ../src/gnome-mahjongg.vala:538
-msgid ""
-"A matching game played with Mahjongg tiles\n"
-"\n"
-"Mahjongg is a part of GNOME Games."
-msgstr ""
-"משחק התאמות עם אריחי מא־ג׳ונג.\n"
-"\n"
-"מא־ג׳ונג הוא חלק מהחבילה Games מבית GNOME."
+#: src/gnome-mahjongg.vala:600
+#| msgid ""
+#| "A matching game played with Mahjongg tiles\n"
+#| "\n"
+#| "Mahjongg is a part of GNOME Games."
+msgid "A matching game played with Mahjongg tiles"
+msgstr "משחק התאמות עם אריחי מא־ג׳ונג."
 
-#: ../src/gnome-mahjongg.vala:544
+#: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -250,59 +360,40 @@ msgstr ""
 "‏Yaniv Abir https://launchpad.net/~yanivabir\n"
 "‏dod_basim https://launchpad.net/~yoav-prat\n"
 "ירון שהרבני <sh.yaron@gmail.com>\n"
+"יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
 "\n"
-"פרויקט תרגום GNOME לעברית:\n"
-"‏http://gnome-il.berlios.de"
+"<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
 
-#: ../src/gnome-mahjongg.vala:562
+#: src/gnome-mahjongg.vala:622
 msgid "Unpause the game"
 msgstr "המשך המשחק"
 
-#: ../src/gnome-mahjongg.vala:654 ../src/score-dialog.vala:72
-#, c-format
-msgid "Time"
-msgstr "זמן"
-
-#: ../src/menu.ui.h:1
-msgid "_New Game"
-msgstr "_משחק חדש"
-
-#: ../src/menu.ui.h:2
-msgid "_Restart Game"
-msgstr "ה_תחלת המשחק מחדש"
-
-#: ../src/menu.ui.h:3
-msgid "_Scores"
-msgstr "_תוצאות"
-
-#: ../src/menu.ui.h:4
-msgid "_Preferences"
-msgstr "ה_עדפות"
-
-#: ../src/menu.ui.h:5
-msgid "_Help"
-msgstr "ע_זרה"
-
-#: ../src/menu.ui.h:6
-msgid "_About"
-msgstr "על _אודות"
-
-#: ../src/menu.ui.h:7 ../src/score-dialog.vala:28
+#: src/score-dialog.vala:28
 msgid "_Quit"
 msgstr "י_ציאה"
 
-#: ../src/score-dialog.vala:29
+#: src/score-dialog.vala:29
 msgid "New Game"
 msgstr "משחק חדש"
 
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:32
 msgid "OK"
 msgstr "אישור"
 
-#: ../src/score-dialog.vala:44
+#: src/score-dialog.vala:44
 msgid "Layout:"
 msgstr "פריסה:"
 
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:69
 msgid "Date"
 msgstr "תאריך"
+
+#: src/score-dialog.vala:72
+msgid "Time"
+msgstr "זמן"
+
+#~ msgid "Mahjongg Preferences"
+#~ msgstr "העדפות מא-ג׳ונג"
+
+#~ msgid "_About"
+#~ msgstr "על _אודות"
