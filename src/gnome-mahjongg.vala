@@ -86,6 +86,7 @@ public class Mahjongg : Gtk.Application
 
         window = new ApplicationWindow (this);
         window.map.connect (init_state_watcher);
+        window.unmap.connect (on_unmap);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
@@ -223,16 +224,22 @@ public class Mahjongg : Gtk.Application
         is_tiled =      (state & tiled_state)                 != 0;
     }
 
-    protected override void shutdown ()
+    private inline void on_unmap ()
     {
-        base.shutdown ();
-
         /* Save window state */
         settings.delay ();
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
         settings.apply ();
+
+        quit ();
+    }
+
+    protected override void shutdown ()
+    {
+        window.destroy ();
+        base.shutdown ();
     }
 
     protected override int handle_local_options (GLib.VariantDict options)
