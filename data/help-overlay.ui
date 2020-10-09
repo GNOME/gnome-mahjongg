@@ -14,7 +14,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <property name="accelerator">&lt;Control&gt;N</property>
                 <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one -->
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
               </object>
@@ -22,7 +22,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;P Pause</property>
+                <property name="accelerator">&lt;Control&gt;P Pause</property>
                 <!-- Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Pause the game</property>
               </object>
@@ -30,7 +30,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;Z</property>
+                <property name="accelerator">&lt;Control&gt;Z</property>
                 <!-- Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Undo</property>
               </object>
@@ -38,7 +38,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Shift&gt;&lt;Ctrl&gt;Z</property>
+                <property name="accelerator">&lt;Shift&gt;&lt;Control&gt;Z</property>
                 <!-- Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Redo</property>
               </object>
@@ -46,7 +46,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;H</property>
+                <property name="accelerator">&lt;Control&gt;H</property>
                 <!-- Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles -->
                 <property name="title" translatable="yes" context="shortcut window">Show a hint</property>
               </object>
@@ -69,7 +69,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property name="accelerator">&lt;Control&gt;question</property>
                 <!-- Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts -->
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
@@ -93,7 +93,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="accelerator">&lt;Control&gt;Q</property>
                 <!-- Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application -->
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>

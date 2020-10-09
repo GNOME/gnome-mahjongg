@@ -66,15 +66,15 @@ public class Mahjongg : Gtk.Application
         base.startup ();
 
         add_action_entries (action_entries, this);
-        set_accels_for_action ("app.new-game",  {        "<Primary>n"       });
-        set_accels_for_action ("app.pause",     {        "<Primary>p",
+        set_accels_for_action ("app.new-game",  {        "<Control>n"       });
+        set_accels_for_action ("app.pause",     {        "<Control>p",
                                                                   "Pause"   });
-        set_accels_for_action ("app.hint",      {        "<Primary>h"       });
-        set_accels_for_action ("app.undo",      {        "<Primary>z"       });
-        set_accels_for_action ("app.redo",      { "<Shift><Primary>z"       });
+        set_accels_for_action ("app.hint",      {        "<Control>h"       });
+        set_accels_for_action ("app.undo",      {        "<Control>z"       });
+        set_accels_for_action ("app.redo",      { "<Shift><Control>z"       });
         set_accels_for_action ("app.help",      {                 "F1"      });
-        set_accels_for_action ("app.quit",      {        "<Primary>q",
-                                                         "<Primary>w"       });
+        set_accels_for_action ("app.quit",      {        "<Control>q",
+                                                         "<Control>w"       });
         set_accels_for_action ("app.hamburger", {                 "F10"     });
 
         settings = new GLib.Settings ("org.gnome.Mahjongg");
