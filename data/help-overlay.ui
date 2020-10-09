@@ -8,7 +8,7 @@
         <property name="visible">1</property>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes" context="shortcut window">General</property>
+            <property name="title" translatable="yes" context="shortcut window">Main functions</property>
             <property name="visible">1</property>
             <child>
               <object class="GtkShortcutsShortcut">
@@ -40,29 +40,22 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">0</property>
-                <property name="accelerator">F11</property>
-                <property name="title" translatable="yes" context="shortcut window">Fullscreen</property> <!-- TODO implement? or not -->
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;Q</property>
-                <property name="title" translatable="yes" context="shortcut window">Quit</property>
+                <property name="accelerator">&lt;Ctrl&gt;H</property>
+                <property name="title" translatable="yes" context="shortcut window">Show a hint</property>
               </object>
             </child>
           </object>
         </child>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="title" translatable="yes" context="shortcut window">Help</property>
+            <property name="title" translatable="yes" context="shortcut window">Generic</property>
             <property name="visible">1</property>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;H</property>
-                <property name="title" translatable="yes" context="shortcut window">Show a hint</property>
+                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
             </child>
             <child>
@@ -74,9 +67,16 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">0</property> <!-- TODO implement? or not -->
+                <property name="accelerator">F11</property>
+                <property name="title" translatable="yes" context="shortcut window">Fullscreen</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
-                <property name="accelerator">&lt;Primary&gt;question</property>
-                <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
+                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>
             </child>
           </object>
