@@ -40,9 +40,9 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
+                <property name="visible">0</property>
                 <property name="accelerator">F11</property>
-                <property name="title" translatable="yes" context="shortcut window">Fullscreen</property>
+                <property name="title" translatable="yes" context="shortcut window">Fullscreen</property> <!-- TODO implement? or not -->
               </object>
             </child>
             <child>
