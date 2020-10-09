@@ -18,6 +18,7 @@ public class Mahjongg : Gtk.Application
 
     private Gtk.ApplicationWindow window;
     private Gtk.Label title;
+    private Gtk.MenuButton menu_button;
     private int window_width;
     private int window_height;
     private bool is_maximized;
@@ -47,6 +48,7 @@ public class Mahjongg : Gtk.Application
         { "preferences",   preferences_cb  },
         { "help",          help_cb         },
         { "about",         about_cb        },
+        { "hamburger",     hamburger_cb    },
         { "quit",          quit_cb         }
     };
 
@@ -71,6 +73,7 @@ public class Mahjongg : Gtk.Application
         set_accels_for_action ("app.help",      {                 "F1"      });
         set_accels_for_action ("app.quit",      {        "<Primary>q",
                                                          "<Primary>w"       });
+        set_accels_for_action ("app.hamburger", {                 "F10"     });
 
         settings = new Settings ("org.gnome.Mahjongg");
 
@@ -156,7 +159,7 @@ public class Mahjongg : Gtk.Application
         menu.append_section (/* no title */ null, section);
         menu.freeze ();
 
-        var menu_button = new Gtk.MenuButton ();
+        menu_button = new Gtk.MenuButton ();
         menu_button.valign = Gtk.Align.CENTER;
         menu_button.set_menu_model (menu);
         menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
@@ -558,6 +561,11 @@ public class Mahjongg : Gtk.Application
     private void shuffle_cb ()
     {
         game_view.game.shuffle_remaining ();
+    }
+
+    private inline void hamburger_cb ()
+    {
+        menu_button.active = !menu_button.active;
     }
 
     private void about_cb ()

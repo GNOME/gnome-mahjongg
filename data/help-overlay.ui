@@ -61,6 +61,14 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
+                <property name="accelerator">F10</property>
+                <!-- Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu -->
+                <property name="title" translatable="yes" context="shortcut window">Toggle main menu</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
                 <property name="accelerator">&lt;Primary&gt;question</property>
                 <!-- Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts -->
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
