@@ -1,2 +1,2 @@
-option('compile-schemas', type: 'feature', value : 'disabled', description : 'Compile GSettings schemas on install')
-option('update-icon-cache', type: 'feature', value : 'disabled', description : 'Update icon cache')
+option('compile-schemas', type: 'feature', value : 'enabled', description : 'Compile GSettings schemas on install')
+option('update-icon-cache', type: 'feature', value : 'enabled', description : 'Update icon cache')
