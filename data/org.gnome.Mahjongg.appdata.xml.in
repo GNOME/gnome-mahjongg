@@ -28,7 +28,7 @@
   </screenshots>
   <releases>
     <!-- should be kept in versionning inverted order -->
-    <release version="3.38.2" date="2020-10-03" type="stable" urgency="medium"/>
+    <release version="3.38.3" date="2020-11-01" type="stable" urgency="medium"/>
   ​  <!-- release version="3.35.91" date="2020-02-15" type="development" urgency="low"/ -->
   </releases>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
