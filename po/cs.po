@@ -16,14 +16,14 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2019.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2019, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-02-04 01:16+0000\n"
-"PO-Revision-Date: 2019-02-06 11:25+0100\n"
+"POT-Creation-Date: 2020-10-09 14:52+0000\n"
+"PO-Revision-Date: 2020-11-29 01:58+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -68,12 +68,12 @@ msgstr ""
 "snadné, jiné obtížné. Když budete v koncích, můžete požádat o radu, ale k ní "
 "obdržíte také časovou penalizaci."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:36
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
-#: src/gnome-mahjongg.vala:782
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:609
+#: src/gnome-mahjongg.vala:794
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -86,70 +86,77 @@ msgstr "Rozebrat hromadu kamenů odstraňováním odpovídajících si dvojic"
 msgid "game;strategy;puzzle;board;"
 msgstr "hra;strategická;logická;hlavolam;desková;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mahjongg.desktop.in:9
-#| msgid "gnome-mahjongg"
-msgid "org.gnome.Mahjongg"
-msgstr "org.gnome.Mahjongg"
-
-#: data/help-overlay.ui:11
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "General"
-msgstr "Obecné"
+msgid "Main functions"
+msgstr "Hlavní funkce"
 
-#: data/help-overlay.ui:17
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Začít novou hru"
 
-#: data/help-overlay.ui:24
-#| msgid "Pause the game"
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pozastavit hru"
 
-#: data/help-overlay.ui:31
-#| msgid "_Undo"
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Zpět"
 
-#: data/help-overlay.ui:38
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "Znovu"
 
-#: data/help-overlay.ui:45
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "Celá obrazovka"
-
-#: data/help-overlay.ui:52
-#| msgid "_Quit"
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Ukončit"
-
-#: data/help-overlay.ui:59
-#| msgid "_Help"
-msgctxt "shortcut window"
-msgid "Help"
-msgstr "Nápověda"
-
-#: data/help-overlay.ui:65
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Show a hint"
 msgstr "Zobrazit radu"
 
-#: data/help-overlay.ui:72
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Obecné"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Zobrazit / skrýt hlavní nabídku"
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Zobrazit klávesové zkratky"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Zobrazit nápovědu"
 
-#: data/help-overlay.ui:79
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
 msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Zobrazit klávesové zkratky"
+msgid "Fullscreen"
+msgstr "Celá obrazovka"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ukončit"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -218,85 +225,84 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Obtížné"
 
-#: src/game-view.vala:132
+#: src/game-view.vala:227
 msgid "Paused"
 msgstr "Pozastaveno"
 
-#: src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:35
 msgid "Print release version and exit"
 msgstr "Vypsat verzi vydání a skončit"
 
-#: src/gnome-mahjongg.vala:90
+#: src/gnome-mahjongg.vala:95
 msgid "Moves Left:"
 msgstr "Zbývá tahů:"
 
-#: src/gnome-mahjongg.vala:116
+#: src/gnome-mahjongg.vala:122
 msgid "Undo your last move"
 msgstr "Vrátit zpět váš poslední tah"
 
-#: src/gnome-mahjongg.vala:122
+#: src/gnome-mahjongg.vala:128
 msgid "Redo your last move"
 msgstr "Znovu provést váš poslední tah"
 
-#: src/gnome-mahjongg.vala:128
+#: src/gnome-mahjongg.vala:134
 msgid "Receive a hint for your next move"
 msgstr "Získat radu pro váš další tah"
 
-#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
+#: src/gnome-mahjongg.vala:139 src/gnome-mahjongg.vala:639
 msgid "Pause the game"
 msgstr "Pozastavit hru"
 
-#: src/gnome-mahjongg.vala:143
+#: src/gnome-mahjongg.vala:148
 msgid "_New Game"
 msgstr "_Nová hra"
 
-#: src/gnome-mahjongg.vala:144
+#: src/gnome-mahjongg.vala:149
 msgid "_Restart Game"
 msgstr "Hru _znovu od začátku"
 
-#: src/gnome-mahjongg.vala:145
+#: src/gnome-mahjongg.vala:150
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: src/gnome-mahjongg.vala:148
+#: src/gnome-mahjongg.vala:154
 msgid "_Preferences"
 msgstr "_Předvolby"
 
-#: src/gnome-mahjongg.vala:149
+#: src/gnome-mahjongg.vala:155
 msgid "_Keyboard Shortcuts"
 msgstr "_Klávesové zkratky"
 
-#: src/gnome-mahjongg.vala:150
+#: src/gnome-mahjongg.vala:156
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: src/gnome-mahjongg.vala:151
-#| msgid "_Mahjongg"
+#: src/gnome-mahjongg.vala:157
 msgid "_About Mahjongg"
 msgstr "O _aplikaci Mahjongg"
 
-#: src/gnome-mahjongg.vala:282
+#: src/gnome-mahjongg.vala:293
 msgid "Do you want to start a new game with this map?"
 msgstr "Chcete začít novou hru s touto mapou?"
 
-#: src/gnome-mahjongg.vala:283
+#: src/gnome-mahjongg.vala:294
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Pokud chcete pokračovat ve hře, nová mapa bude použita až na další hru."
 
-#: src/gnome-mahjongg.vala:284
+#: src/gnome-mahjongg.vala:295
 msgid "_Continue playing"
 msgstr "_Pokračovat ve hře"
 
-#: src/gnome-mahjongg.vala:285
+#: src/gnome-mahjongg.vala:296
 msgid "Use _new map"
 msgstr "Použít _novou mapu"
 
-#: src/gnome-mahjongg.vala:353
+#: src/gnome-mahjongg.vala:360
 msgid "There are no more moves."
 msgstr "Nejsou možné žádné další tahy."
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:361
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -305,7 +311,7 @@ msgstr ""
 "zkoušet a hledat řešení za cenu horšího času nebo začít tuto hru znovu a "
 "nebo začít úplně novou hru."
 
-#: src/gnome-mahjongg.vala:356
+#: src/gnome-mahjongg.vala:363
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -313,59 +319,59 @@ msgstr ""
 "Můžete také zkusit hru náhodně zamíchat, ale není to zárukou na úspěšné "
 "řešení."
 
-#: src/gnome-mahjongg.vala:357
+#: src/gnome-mahjongg.vala:364
 msgid "_Undo"
 msgstr "_Zpět"
 
-#: src/gnome-mahjongg.vala:358
+#: src/gnome-mahjongg.vala:365
 msgid "_Restart"
 msgstr "_Restartovat"
 
-#: src/gnome-mahjongg.vala:359
+#: src/gnome-mahjongg.vala:366
 msgid "_New game"
 msgstr "_Nová hra"
 
-#: src/gnome-mahjongg.vala:360
+#: src/gnome-mahjongg.vala:367
 msgid "_Shuffle"
 msgstr "Za_míchat"
 
-#: src/gnome-mahjongg.vala:412
+#: src/gnome-mahjongg.vala:419
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: src/gnome-mahjongg.vala:428
+#: src/gnome-mahjongg.vala:435
 msgid "_Theme:"
 msgstr "_Motiv:"
 
-#: src/gnome-mahjongg.vala:456
+#: src/gnome-mahjongg.vala:463
 msgid "_Layout:"
 msgstr "Roz_ložení:"
 
-#: src/gnome-mahjongg.vala:482
+#: src/gnome-mahjongg.vala:489
 msgid "_Background color:"
 msgstr "Barva _pozadí:"
 
-#: src/gnome-mahjongg.vala:496
+#: src/gnome-mahjongg.vala:503
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: src/gnome-mahjongg.vala:563
+#: src/gnome-mahjongg.vala:575
 msgid "Main game:"
 msgstr "Hlavní hra:"
 
-#: src/gnome-mahjongg.vala:572
+#: src/gnome-mahjongg.vala:584
 msgid "Maps:"
 msgstr "Mapy:"
 
-#: src/gnome-mahjongg.vala:580
+#: src/gnome-mahjongg.vala:592
 msgid "Tiles:"
 msgstr "Kameny:"
 
-#: src/gnome-mahjongg.vala:600
+#: src/gnome-mahjongg.vala:612
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Párovací hra hraná s kameny Mahjongg"
 
-#: src/gnome-mahjongg.vala:606
+#: src/gnome-mahjongg.vala:618
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -382,33 +388,42 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: src/gnome-mahjongg.vala:622
+#: src/gnome-mahjongg.vala:634
 msgid "Unpause the game"
 msgstr "Pokračovat ve hře"
 
-#: src/score-dialog.vala:28
+#: src/score-dialog.vala:30
 msgid "_Quit"
 msgstr "U_končit"
 
-#: src/score-dialog.vala:29
+#: src/score-dialog.vala:31
 msgid "New Game"
 msgstr "Nová hra"
 
-#: src/score-dialog.vala:32
+#: src/score-dialog.vala:34
 msgid "OK"
 msgstr "Budiž"
 
-#: src/score-dialog.vala:44
+#: src/score-dialog.vala:46
 msgid "Layout:"
 msgstr "Rozložení:"
 
-#: src/score-dialog.vala:69
+#: src/score-dialog.vala:71
 msgid "Date"
 msgstr "Datum"
 
-#: src/score-dialog.vala:72
+#: src/score-dialog.vala:74
 msgid "Time"
 msgstr "Čas"
+
+#~| msgid "gnome-mahjongg"
+#~ msgid "org.gnome.Mahjongg"
+#~ msgstr "org.gnome.Mahjongg"
+
+#~| msgid "_Help"
+#~ msgctxt "shortcut window"
+#~ msgid "Help"
+#~ msgstr "Nápověda"
 
 #~ msgid "_Contents"
 #~ msgstr "O_bsah"
