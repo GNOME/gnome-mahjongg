@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-mahjongg.
-# Copyright (C) 2019 gnome-mahjongg's COPYRIGHT HOLDERS
+# Copyright (C) 2020 gnome-mahjongg's COPYRIGHT HOLDERS
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -23,22 +23,22 @@
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
 # Felipe Braga <fbobraga@gmail.com>, 2015.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-02-04 01:16+0000\n"
-"PO-Revision-Date: 2019-02-27 09:26-0300\n"
+"POT-Creation-Date: 2020-09-18 16:29+0000\n"
+"PO-Revision-Date: 2020-12-14 07:11-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Portuguese - Brazil <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.31.90\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
@@ -47,7 +47,7 @@ msgstr "GNOME Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
-msgstr "Combine pedras e limpe o tabuleiro"
+msgstr "Combine peças e limpe o tabuleiro"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
@@ -58,12 +58,12 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
-"Uma versão do jogo de paciência do clássico jogo oriental de pedras. As "
-"pedras são empilhadas em um tabuleiro no começo do jogo. O objetivo é "
-"remover todas as pedras no menor espaço de tempo possível. Selecione duas "
-"pedras correspondentes e elas vão desaparecer do tabuleiro, mas você pode "
-"selecionar apenas uma pedra, se houver um espaço vazio à sua esquerda ou "
-"direita no mesmo nível. Tenha cuidado: pedras parecidas podem, na verdade, "
+"Uma versão do jogo de paciência do clássico jogo oriental de peças. As peças "
+"são empilhadas em um tabuleiro no começo do jogo. O objetivo é remover todas "
+"as peças no menor espaço de tempo possível. Selecione duas peças "
+"correspondentes e elas vão desaparecer do tabuleiro, mas você pode "
+"selecionar apenas uma peça, se houver um espaço vazio à sua esquerda ou "
+"direita no mesmo nível. Tenha cuidado: peças parecidas podem, na verdade, "
 "ser levemente diferentes."
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
@@ -76,7 +76,7 @@ msgstr ""
 "alguns difíceis. Se você ficar sem saída, você pode pedir uma dica, mas isso "
 "adicionar uma grande penalidade de tempo."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:36
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
 
@@ -87,18 +87,12 @@ msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "Desmonte uma pilha de pedras removendo os pares iguais"
+msgstr "Desmonte uma pilha de peças removendo os pares iguais"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "jogo;game;estratégia;quebra-cabeça;enigma;tabuleiro;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mahjongg.desktop.in:9
-#| msgid "gnome-mahjongg"
-msgid "org.gnome.Mahjongg"
-msgstr "org.gnome.Mahjongg"
 
 #: data/help-overlay.ui:11
 msgctxt "shortcut window"
@@ -111,13 +105,11 @@ msgid "Start a new game"
 msgstr "Inicia um novo jogo"
 
 #: data/help-overlay.ui:24
-#| msgid "Pause the game"
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pausa o jogo"
 
 #: data/help-overlay.ui:31
-#| msgid "_Undo"
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Desfaz"
@@ -133,13 +125,11 @@ msgid "Fullscreen"
 msgstr "Tela cheia"
 
 #: data/help-overlay.ui:52
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Sai"
 
 #: data/help-overlay.ui:59
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Ajuda"
@@ -189,7 +179,7 @@ msgstr "O Ziggurat"
 #: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
-msgstr "Quatro Pontes"
+msgstr "Quatro pontes"
 
 #: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
@@ -199,12 +189,12 @@ msgstr "Nuvem"
 #: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
-msgstr "Jogo da Velha"
+msgstr "Jogo da velha"
 
 #: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
-msgstr "Dragão Vermelho"
+msgstr "Dragão vermelho"
 
 #: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
@@ -214,19 +204,19 @@ msgstr "Passagem elevada"
 #: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
-msgstr "Muros da Pirâmide"
+msgstr "Muros de pirâmide"
 
 #: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
-msgstr "Travessia Confusa"
+msgstr "Travessia confusa"
 
 #: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Difícil"
 
-#: src/game-view.vala:132
+#: src/game-view.vala:224
 msgid "Paused"
 msgstr "Pausado"
 
@@ -279,7 +269,6 @@ msgid "_Help"
 msgstr "Aj_uda"
 
 #: src/gnome-mahjongg.vala:151
-#| msgid "_Mahjongg"
 msgid "_About Mahjongg"
 msgstr "_Sobre o Mahjongg"
 
@@ -365,11 +354,11 @@ msgstr "Mapas:"
 
 #: src/gnome-mahjongg.vala:580
 msgid "Tiles:"
-msgstr "Pedras:"
+msgstr "Peças:"
 
 #: src/gnome-mahjongg.vala:600
 msgid "A matching game played with Mahjongg tiles"
-msgstr "Um jogo de memória jogado com as pedras do Mahjongg"
+msgstr "Um jogo de memória jogado com as peças do Mahjongg"
 
 #: src/gnome-mahjongg.vala:606
 msgid "translator-credits"
@@ -417,6 +406,10 @@ msgstr "Data"
 #: src/score-dialog.vala:72
 msgid "Time"
 msgstr "Tempo"
+
+#~| msgid "gnome-mahjongg"
+#~ msgid "org.gnome.Mahjongg"
+#~ msgstr "org.gnome.Mahjongg"
 
 #~ msgid "_Contents"
 #~ msgstr "S_umário"
