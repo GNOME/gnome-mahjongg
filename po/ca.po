@@ -49,7 +49,7 @@ msgstr ""
 "fitxes en el menor temps possible. Seleccioneu dues fitxes que siguin iguals "
 "i desapareixeran del tauler, però només podeu seleccionar una fitxa si té un "
 "espai buit a la seva dreta o esquerra al mateix nivell. Aneu amb compte: "
-"algunes fitxes sembla que siguin iguals però en realitat no ho són."
+"algunes fitxes sembla que siguin iguals, però en realitat no ho són."
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
@@ -241,7 +241,7 @@ msgstr "Refés l'últim moviment"
 
 #: src/gnome-mahjongg.vala:134
 msgid "Receive a hint for your next move"
-msgstr "Dóna una pista per al moviment següent"
+msgstr "Dona una pista per al moviment següent"
 
 #: src/gnome-mahjongg.vala:139 src/gnome-mahjongg.vala:639
 msgid "Pause the game"
