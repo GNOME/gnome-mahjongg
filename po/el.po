@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-03-26 17:51+0000\n"
+"POT-Creation-Date: 2021-01-26 14:42+0000\n"
 "PO-Revision-Date: 2019-06-11 14:02+0300\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
@@ -83,12 +83,12 @@ msgstr ""
 "και κάποιες δύσκολες. Αν κολλήσετε, μπορείτε να ζητήσετε μια υπόδειξη, αλλά "
 "αυτό προσθέτει μια ποινή μεγάλου χρόνου."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:36
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
-#: src/gnome-mahjongg.vala:782
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:609
+#: src/gnome-mahjongg.vala:794
 msgid "Mahjongg"
 msgstr "Ματζόνγκ"
 
@@ -102,60 +102,80 @@ msgstr ""
 msgid "game;strategy;puzzle;board;"
 msgstr "παιχνίδι;στρατηγική;παζλ;πίνακας;game;strategy;puzzle;board;"
 
-#: data/help-overlay.ui:11
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "General"
-msgstr "Γενικά"
+msgid "Main functions"
+msgstr "Κύριες λειτουργίες"
 
-#: data/help-overlay.ui:17
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Εκκίνηση νέου παιχνιδιού"
 
-#: data/help-overlay.ui:24
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Παύση παιχνιδιού"
 
-#: data/help-overlay.ui:31
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Αναίρεση"
 
-#: data/help-overlay.ui:38
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "Επαναφορά"
 
-#: data/help-overlay.ui:45
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "Πλήρης οθόνη"
-
-#: data/help-overlay.ui:52
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Έξοδος"
-
-#: data/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Help"
-msgstr "Βοήθεια"
-
-#: data/help-overlay.ui:65
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Show a hint"
 msgstr "Εμφάνιση υπόδειξης"
 
-#: data/help-overlay.ui:72
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Γενικά"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Εναλλαγή κυρίως μενού"
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Εμφάνιση βοήθειας"
 
-#: data/help-overlay.ui:79
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
 msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
+msgid "Fullscreen"
+msgstr "Πλήρης οθόνη"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Έξοδος"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -224,84 +244,84 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Δύσκολο"
 
-#: src/game-view.vala:132
+#: src/game-view.vala:227
 msgid "Paused"
 msgstr "Παύση"
 
-#: src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:35
 msgid "Print release version and exit"
 msgstr "Εκτύπωση της έκδοσης και έξοδος"
 
-#: src/gnome-mahjongg.vala:90
+#: src/gnome-mahjongg.vala:95
 msgid "Moves Left:"
 msgstr "Κινήσεις που απομένουν:"
 
-#: src/gnome-mahjongg.vala:116
+#: src/gnome-mahjongg.vala:122
 msgid "Undo your last move"
 msgstr "Αναίρεση της τελευταίας σας κίνησης"
 
-#: src/gnome-mahjongg.vala:122
+#: src/gnome-mahjongg.vala:128
 msgid "Redo your last move"
 msgstr "Επανεκτέλεση της τελευταίας σας κίνησης"
 
-#: src/gnome-mahjongg.vala:128
+#: src/gnome-mahjongg.vala:134
 msgid "Receive a hint for your next move"
 msgstr "Λήψη υπόδειξης για την επόμενη κίνησή σας"
 
-#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
+#: src/gnome-mahjongg.vala:139 src/gnome-mahjongg.vala:639
 msgid "Pause the game"
 msgstr "Παύση παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:143
+#: src/gnome-mahjongg.vala:148
 msgid "_New Game"
 msgstr "_Νέο παιχνίδι"
 
-#: src/gnome-mahjongg.vala:144
+#: src/gnome-mahjongg.vala:149
 msgid "_Restart Game"
 msgstr "_Επανεκκίνηση του παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:145
+#: src/gnome-mahjongg.vala:150
 msgid "_Scores"
 msgstr "_Βαθμολογίες"
 
-#: src/gnome-mahjongg.vala:148
+#: src/gnome-mahjongg.vala:154
 msgid "_Preferences"
 msgstr "Π_ροτιμήσεις"
 
-#: src/gnome-mahjongg.vala:149
+#: src/gnome-mahjongg.vala:155
 msgid "_Keyboard Shortcuts"
 msgstr "Συντομεύσεις _πληκτρολογίου"
 
-#: src/gnome-mahjongg.vala:150
+#: src/gnome-mahjongg.vala:156
 msgid "_Help"
 msgstr "_Βοήθεια"
 
-#: src/gnome-mahjongg.vala:151
+#: src/gnome-mahjongg.vala:157
 msgid "_About Mahjongg"
 msgstr "_Περί Ματζόνγκ"
 
-#: src/gnome-mahjongg.vala:282
+#: src/gnome-mahjongg.vala:293
 msgid "Do you want to start a new game with this map?"
 msgstr "Θέλετε να ξεκινήσετε νέο παιχνίδι με αυτό το χάρτη;"
 
-#: src/gnome-mahjongg.vala:283
+#: src/gnome-mahjongg.vala:294
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Αν συνεχίσετε να παίζετε, το επόμενο παιχνίδι θα χρησιμοποιήσει το νέο χάρτη."
 
-#: src/gnome-mahjongg.vala:284
+#: src/gnome-mahjongg.vala:295
 msgid "_Continue playing"
 msgstr "_Συνέχεια παιχνιδιού"
 
-#: src/gnome-mahjongg.vala:285
+#: src/gnome-mahjongg.vala:296
 msgid "Use _new map"
 msgstr "Χρήση νέου _χάρτη"
 
-#: src/gnome-mahjongg.vala:353
+#: src/gnome-mahjongg.vala:360
 msgid "There are no more moves."
 msgstr "Δεν υπάρχουν άλλες κινήσεις."
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:361
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -310,7 +330,7 @@ msgstr ""
 "και να προσπαθήσετε να βρείτε τη λύση, να επανεκκινήσετε το παιχνίδι ή "
 "ξεκινήστε ένα νέο."
 
-#: src/gnome-mahjongg.vala:356
+#: src/gnome-mahjongg.vala:363
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -318,59 +338,59 @@ msgstr ""
 "Μπορείτε επίσης να προσπαθήσετε να ανακατανείμετε το παιχνίδι, αλλά αυτή η "
 "ενέργεια δεν εγγυάται τη λύση."
 
-#: src/gnome-mahjongg.vala:357
+#: src/gnome-mahjongg.vala:364
 msgid "_Undo"
 msgstr "Α_ναίρεση"
 
-#: src/gnome-mahjongg.vala:358
+#: src/gnome-mahjongg.vala:365
 msgid "_Restart"
 msgstr "_Επανεκκίνηση"
 
-#: src/gnome-mahjongg.vala:359
+#: src/gnome-mahjongg.vala:366
 msgid "_New game"
 msgstr "_Νέο παιχνίδι"
 
-#: src/gnome-mahjongg.vala:360
+#: src/gnome-mahjongg.vala:367
 msgid "_Shuffle"
 msgstr "_Μοίρασμα"
 
-#: src/gnome-mahjongg.vala:412
+#: src/gnome-mahjongg.vala:419
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: src/gnome-mahjongg.vala:428
+#: src/gnome-mahjongg.vala:435
 msgid "_Theme:"
 msgstr "_Θέμα:"
 
-#: src/gnome-mahjongg.vala:456
+#: src/gnome-mahjongg.vala:463
 msgid "_Layout:"
 msgstr "Δ_ιάταξη:"
 
-#: src/gnome-mahjongg.vala:482
+#: src/gnome-mahjongg.vala:489
 msgid "_Background color:"
 msgstr "_Χρώμα παρασκηνίου:"
 
-#: src/gnome-mahjongg.vala:496
+#: src/gnome-mahjongg.vala:503
 msgid "_Close"
 msgstr "Κ_λείσιμο"
 
-#: src/gnome-mahjongg.vala:563
+#: src/gnome-mahjongg.vala:575
 msgid "Main game:"
 msgstr "Κυρίως παιχνίδι:"
 
-#: src/gnome-mahjongg.vala:572
+#: src/gnome-mahjongg.vala:584
 msgid "Maps:"
 msgstr "Χάρτες:"
 
-#: src/gnome-mahjongg.vala:580
+#: src/gnome-mahjongg.vala:592
 msgid "Tiles:"
 msgstr "Πλακίδια:"
 
-#: src/gnome-mahjongg.vala:600
+#: src/gnome-mahjongg.vala:612
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Ένα παιχνίδι ταιριάσματος που παίζεται με τα πλακίδια του Ματζόνγκ."
 
-#: src/gnome-mahjongg.vala:606
+#: src/gnome-mahjongg.vala:618
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -379,37 +399,42 @@ msgstr ""
 " Κώστας Παπαδήμας <pkst@gmx.net>\n"
 " Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
 " Μαρία Μαυρίδου <mavridou@gmail.com>\n"
+" Βασίλης Κοσμίδης <skyhirules@gmail.com\n"
 "\n"
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/gnome-mahjongg.vala:622
+#: src/gnome-mahjongg.vala:634
 msgid "Unpause the game"
 msgstr "Αναίρεση παύσης παιχνιδιού"
 
-#: src/score-dialog.vala:28
+#: src/score-dialog.vala:30
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: src/score-dialog.vala:29
+#: src/score-dialog.vala:31
 msgid "New Game"
 msgstr "Νέο παιχνίδι"
 
-#: src/score-dialog.vala:32
+#: src/score-dialog.vala:34
 msgid "OK"
 msgstr "Εντάξει"
 
-#: src/score-dialog.vala:44
+#: src/score-dialog.vala:46
 msgid "Layout:"
 msgstr "Διάταξη:"
 
-#: src/score-dialog.vala:69
+#: src/score-dialog.vala:71
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: src/score-dialog.vala:72
+#: src/score-dialog.vala:74
 msgid "Time"
 msgstr "Χρόνος"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Help"
+#~ msgstr "Βοήθεια"
 
 #~ msgid "gnome-mahjongg"
 #~ msgstr "gnome-mahjongg"
