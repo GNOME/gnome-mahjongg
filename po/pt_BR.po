@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-mahjongg.
-# Copyright (C) 2020 gnome-mahjongg's COPYRIGHT HOLDERS
+# Copyright (C) 2021 gnome-mahjongg's COPYRIGHT HOLDERS
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -23,14 +23,14 @@
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
 # Felipe Braga <fbobraga@gmail.com>, 2015.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2020.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2020-09-18 16:29+0000\n"
-"PO-Revision-Date: 2020-12-14 07:11-0300\n"
+"POT-Creation-Date: 2020-12-14 10:22+0000\n"
+"PO-Revision-Date: 2021-02-17 23:38-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -80,8 +80,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
 
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
-#: src/gnome-mahjongg.vala:782
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:609
+#: src/gnome-mahjongg.vala:794
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -94,60 +94,79 @@ msgstr "Desmonte uma pilha de peças removendo os pares iguais"
 msgid "game;strategy;puzzle;board;"
 msgstr "jogo;game;estratégia;quebra-cabeça;enigma;tabuleiro;"
 
-#: data/help-overlay.ui:11
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "General"
-msgstr "Geral"
+msgid "Main functions"
+msgstr "Funções principais"
 
-#: data/help-overlay.ui:17
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Inicia um novo jogo"
 
-#: data/help-overlay.ui:24
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pausa o jogo"
 
-#: data/help-overlay.ui:31
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Desfaz"
 
-#: data/help-overlay.ui:38
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "Refaz"
 
-#: data/help-overlay.ui:45
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "Tela cheia"
-
-#: data/help-overlay.ui:52
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Sai"
-
-#: data/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Help"
-msgstr "Ajuda"
-
-#: data/help-overlay.ui:65
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
 msgctxt "shortcut window"
 msgid "Show a hint"
 msgstr "Mostra uma dica"
 
-#: data/help-overlay.ui:72
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Genérico"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Acessa o menu principal"
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostra os atalhos de teclado"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Mostra a ajuda"
 
-#: data/help-overlay.ui:79
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
 msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Mostra os atalhos de teclado"
+msgid "Fullscreen"
+msgstr "Tela cheia"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Sai"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -216,83 +235,83 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Difícil"
 
-#: src/game-view.vala:224
+#: src/game-view.vala:227
 msgid "Paused"
 msgstr "Pausado"
 
-#: src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:35
 msgid "Print release version and exit"
 msgstr "Imprime a versão de lançamento e sai"
 
-#: src/gnome-mahjongg.vala:90
+#: src/gnome-mahjongg.vala:95
 msgid "Moves Left:"
 msgstr "Jogadas restantes:"
 
-#: src/gnome-mahjongg.vala:116
+#: src/gnome-mahjongg.vala:122
 msgid "Undo your last move"
 msgstr "Desfaz sua última jogada"
 
-#: src/gnome-mahjongg.vala:122
+#: src/gnome-mahjongg.vala:128
 msgid "Redo your last move"
 msgstr "Refaz sua última jogada"
 
-#: src/gnome-mahjongg.vala:128
+#: src/gnome-mahjongg.vala:134
 msgid "Receive a hint for your next move"
 msgstr "Recebe uma dica para sua próxima jogada"
 
-#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
+#: src/gnome-mahjongg.vala:139 src/gnome-mahjongg.vala:639
 msgid "Pause the game"
 msgstr "Pausa o jogo"
 
-#: src/gnome-mahjongg.vala:143
+#: src/gnome-mahjongg.vala:148
 msgid "_New Game"
 msgstr "_Novo jogo"
 
-#: src/gnome-mahjongg.vala:144
+#: src/gnome-mahjongg.vala:149
 msgid "_Restart Game"
 msgstr "_Reiniciar jogo"
 
-#: src/gnome-mahjongg.vala:145
+#: src/gnome-mahjongg.vala:150
 msgid "_Scores"
 msgstr "P_ontuações"
 
-#: src/gnome-mahjongg.vala:148
+#: src/gnome-mahjongg.vala:154
 msgid "_Preferences"
 msgstr "_Preferências"
 
-#: src/gnome-mahjongg.vala:149
+#: src/gnome-mahjongg.vala:155
 msgid "_Keyboard Shortcuts"
 msgstr "_Atalhos de teclado"
 
-#: src/gnome-mahjongg.vala:150
+#: src/gnome-mahjongg.vala:156
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: src/gnome-mahjongg.vala:151
+#: src/gnome-mahjongg.vala:157
 msgid "_About Mahjongg"
 msgstr "_Sobre o Mahjongg"
 
-#: src/gnome-mahjongg.vala:282
+#: src/gnome-mahjongg.vala:293
 msgid "Do you want to start a new game with this map?"
 msgstr "Você quer iniciar um novo jogo com este mapa?"
 
-#: src/gnome-mahjongg.vala:283
+#: src/gnome-mahjongg.vala:294
 msgid "If you continue playing the next game will use the new map."
 msgstr "Se você continuar jogando, o próximo jogo usará o novo mapa."
 
-#: src/gnome-mahjongg.vala:284
+#: src/gnome-mahjongg.vala:295
 msgid "_Continue playing"
 msgstr "_Continuar jogando"
 
-#: src/gnome-mahjongg.vala:285
+#: src/gnome-mahjongg.vala:296
 msgid "Use _new map"
 msgstr "Usar _novo mapa"
 
-#: src/gnome-mahjongg.vala:353
+#: src/gnome-mahjongg.vala:360
 msgid "There are no more moves."
 msgstr "Não há mais jogadas válidas."
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:361
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -300,7 +319,7 @@ msgstr ""
 "Cada enigma tem pelo menos uma solução. Você pode desfazer suas jogadas e "
 "tentar encontrar a solução, reiniciar este jogo ou iniciar um novo jogo."
 
-#: src/gnome-mahjongg.vala:356
+#: src/gnome-mahjongg.vala:363
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -308,59 +327,59 @@ msgstr ""
 "Você também pode tentar reembaralhar o jogo, mas isto não garante uma "
 "solução."
 
-#: src/gnome-mahjongg.vala:357
+#: src/gnome-mahjongg.vala:364
 msgid "_Undo"
 msgstr "Desfa_zer"
 
-#: src/gnome-mahjongg.vala:358
+#: src/gnome-mahjongg.vala:365
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#: src/gnome-mahjongg.vala:359
+#: src/gnome-mahjongg.vala:366
 msgid "_New game"
 msgstr "_Novo jogo"
 
-#: src/gnome-mahjongg.vala:360
+#: src/gnome-mahjongg.vala:367
 msgid "_Shuffle"
 msgstr "_Embaralhar"
 
-#: src/gnome-mahjongg.vala:412
+#: src/gnome-mahjongg.vala:419
 msgid "Preferences"
 msgstr "Preferências"
 
-#: src/gnome-mahjongg.vala:428
+#: src/gnome-mahjongg.vala:435
 msgid "_Theme:"
 msgstr "_Tema:"
 
-#: src/gnome-mahjongg.vala:456
+#: src/gnome-mahjongg.vala:463
 msgid "_Layout:"
 msgstr "_Layout:"
 
-#: src/gnome-mahjongg.vala:482
+#: src/gnome-mahjongg.vala:489
 msgid "_Background color:"
 msgstr "Cor de _fundo:"
 
-#: src/gnome-mahjongg.vala:496
+#: src/gnome-mahjongg.vala:503
 msgid "_Close"
 msgstr "_Fechar"
 
-#: src/gnome-mahjongg.vala:563
+#: src/gnome-mahjongg.vala:575
 msgid "Main game:"
 msgstr "Jogo principal:"
 
-#: src/gnome-mahjongg.vala:572
+#: src/gnome-mahjongg.vala:584
 msgid "Maps:"
 msgstr "Mapas:"
 
-#: src/gnome-mahjongg.vala:580
+#: src/gnome-mahjongg.vala:592
 msgid "Tiles:"
 msgstr "Peças:"
 
-#: src/gnome-mahjongg.vala:600
+#: src/gnome-mahjongg.vala:612
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Um jogo de memória jogado com as peças do Mahjongg"
 
-#: src/gnome-mahjongg.vala:606
+#: src/gnome-mahjongg.vala:618
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -379,33 +398,37 @@ msgstr ""
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Fontenelle <rafaelff@gnome.org>"
 
-#: src/gnome-mahjongg.vala:622
+#: src/gnome-mahjongg.vala:634
 msgid "Unpause the game"
 msgstr "Continua o jogo"
 
-#: src/score-dialog.vala:28
+#: src/score-dialog.vala:30
 msgid "_Quit"
 msgstr "Sai_r"
 
-#: src/score-dialog.vala:29
+#: src/score-dialog.vala:31
 msgid "New Game"
 msgstr "Novo jogo"
 
-#: src/score-dialog.vala:32
+#: src/score-dialog.vala:34
 msgid "OK"
 msgstr "OK"
 
-#: src/score-dialog.vala:44
+#: src/score-dialog.vala:46
 msgid "Layout:"
 msgstr "Layout:"
 
-#: src/score-dialog.vala:69
+#: src/score-dialog.vala:71
 msgid "Date"
 msgstr "Data"
 
-#: src/score-dialog.vala:72
+#: src/score-dialog.vala:74
 msgid "Time"
 msgstr "Tempo"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Help"
+#~ msgstr "Ajuda"
 
 #~| msgid "gnome-mahjongg"
 #~ msgid "org.gnome.Mahjongg"
