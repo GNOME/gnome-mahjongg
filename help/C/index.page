@@ -5,7 +5,7 @@
   style="2column">
 
   <info>
-    <title type="link" role="trail"><media type="image" its:translate="no" src="figures/logo.png"/></title>
+    <title type="link" role="trail">Mahjongg</title>
     <title type="link">Mahjongg</title>
     <title type="text">Mahjongg</title>
     <desc>GNOME Mahjongg help.</desc>
@@ -19,7 +19,7 @@
     </license>
   </info>
 
- <title><media type="image" its:translate="no" src="figures/logo32.png">Mahjongg logo</media> Mahjongg</title>
+ <title><media type="image" its:translate="no" width="48px" height="48px" src="figures/org.gnome.Mahjongg.svg"/> Mahjongg</title>
   <p>
   <app>Mahjongg</app> is a simple pattern recognition game. You score points by matching identical tiles.
   </p>
