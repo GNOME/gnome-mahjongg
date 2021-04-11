@@ -1,0 +1,756 @@
+# Basque translation for gnome-mahjongg.
+# Copyright (C) 2021 gnome-mahjongg's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mahjongg package.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2021.
+#
+msgid ""
+msgstr "Project-Id-Version: gnome-mahjongg master\n"
+"POT-Creation-Date: 2021-04-01 20:10+0000\n"
+"PO-Revision-Date: 2021-04-10 20:06+0000\n"
+"Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
+#: C/gameplay.page:14 C/hints.page:15 C/map.page:11 C/rules.page:13
+#: C/strategy.page:9 C/translate.page:11
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/develop.page:13 C/documentation.page:11
+#: C/translate.page:13
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:16 C/documentation.page:14
+#: C/gameplay.page:22 C/hints.page:27 C/index.page:18 C/moves.page:19
+#: C/pause.page:24 C/rules.page:21 C/scoring.page:18 C/translate.page:24
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Jakinarazi akats bat"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
+"to participate. If you notice a problem you can file a <em>bug report</em>. "
+"To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues/\"/>."
+msgstr "<app>Mahjongg</app> aplikazioa boluntarioen komunitate batek mantentzen du. Ongi etorria izango zara lagundu nahi baduzu. Arazoren bat ikusten baduzu, bete ezazu <em>akatsaren jakinarazpena</em>. Akatsa jakinarazteko, joan <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\"/> gunera."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr "Akatsei segimendua egiteko sistema bat da, erabiltzaileek eta garatzaileek akatsei eta kraskadurei buruzko xehetasunak eman ditzaten edo hobekuntza eskatu ditzaten balio duena."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already "
+"have an account, just click on the <gui>Sign in / Register</gui> link to "
+"create one."
+msgstr "Parte hartzeko, kontu bat sortu beharko duzu. Horrela, akatsak bete, iruzkinak egin eta zure akatsak duen egoerari buruzko eguneratzeak posta bidez eskuratu ahal izango dituzu. Oraindik konturik ez baduzu, egin klik <gui>Hasi saioa / Erregistratu</gui> estekan kontu bat sortzeko."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:29
+msgid ""
+"Once you have an account, log in, and click on <gui>New issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
+"issues\">browse</link> for the bug to see if it already exists."
+msgstr "Kontu bat sortu ondoren, hasi saioa eta egin klik <gui>Auzi berria</gui> aukeran. Akats bat jakinarazi baino lehen, irakurri <link href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">akatsak idazteko gidalerroak</link> eta <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\">arakatu</link> lehendik dadudenak, jakiteko ea zure akatsa jadanik badagoen ala ez."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"If you are requesting a new feature, choose <gui>1. Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit Issue</gui>."
+msgstr "Eginbide berria eskatu baduzu, aukeratu <gui>Etiketak</gui> menuko <gui>1. eginbidea</gui>. Bete izenburua eta deskribapena eta egin klik <gui>Bidali auzia</gui> aukeran."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:37
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr "Zure txostenari ID zenbaki bat emango zaio eta bere egoera eguneratu egingo da aldaketaren bat dagoenean."
+
+#. (itstool) path: credit/name
+#: C/bonustiles.page:11
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#. (itstool) path: figure/title
+#: C/bonustiles.page:18 C/bonustiles.page:30
+msgid "Bonus tiles"
+msgstr "Gainsari-lauzak"
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:20
+msgid ""
+"There are eight bonus tiles: four flowers and four seasons. The flower group "
+"consists of blue winter motives in the postmodern theme and yellow symbols "
+"in the smooth theme. The season group consists of yellow spring motives in "
+"the postmodern theme and black symbols in the smooth theme. The identical "
+"bonus tiles are matched in the postmodern theme and the bonus tiles with the "
+"same symbol color are matched in the smooth theme."
+msgstr "Zortzi gainsari-lauza daude: lau lore eta lau sasoi. Loreen taldean negu urdineko motiboak dira gai postmodernoan eta ikur horiak gai leunean. Sasoien taldean udaberriko motibo horiak dira gai postmodernoan eta ikur beltzak gai leunean. Gai postmodernoan gainsari-lauza berdinak parekatzen dira eta gai leunean ikur-kolore bereko gainsari-lauzak."
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:27
+msgid "Some of the matching bonus tiles in smooth theme are shown below:"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/develop.page:20
+msgid "Help develop"
+msgstr "Lagundu garatzen"
+
+#. (itstool) path: page/p
+#: C/develop.page:21
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr "<app>GNOME Jokoak</app> boluntarioen komunitate batek garatzen eta mantentzen du. Ongi etorria izango zara lagundu nahi baduzu."
+
+#. (itstool) path: page/p
+#: C/develop.page:24
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr "<link href=\"https://wiki.gnome.org/Apps/Games/Contributing\"><app>GNOME Jokoak</app> garapetzen lagundu</link> nahi baduzu, <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> edo <link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">posta-zerrenda</link> erabili dezakezu."
+
+#. (itstool) path: page/title
+#: C/documentation.page:18
+msgid "Help write documentation"
+msgstr "Lagundu dokumentazioa idazten"
+
+#. (itstool) path: page/p
+#: C/documentation.page:20
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr "<app>GNOME Jokoak</app> aplikazioaren dokumentazioa boluntarioen komunitate batek mantentzen du. Ongi etorria izango zara lagundu nahi baduzu."
+
+#. (itstool) path: page/p
+#: C/documentation.page:23
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"https://mail.gnome."
+"org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr "Dokumentazio-proiektuan lagundu nahi baduzu, jarri gurekin harremanetan <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> edo <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">posta-zerrenda</link> erabilita."
+
+#. (itstool) path: page/p
+#: C/documentation.page:25
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr "Gure <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link> orriak informazio erabilgarria du."
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
+#: C/pause.page:12 C/rules.page:9 C/scoring.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:18 C/hints.page:23 C/map.page:16 C/pause.page:20
+#: C/scoring.page:14 C/translate.page:20
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: page/title
+#: C/gameplay.page:26
+msgid "Basic gameplay"
+msgstr "Oinarrizko jokoa"
+
+#. (itstool) path: page/p
+#: C/gameplay.page:28
+msgid ""
+"<app>Mahjongg</app> is played by matching two identical tiles per turn. A "
+"tile is eligible for matching if no part of another tile is lying directly "
+"on it, and it has a free long edge on either the left or the right. You win "
+"by removing all tiles, and you are scored by the amount of time it takes you "
+"to do so."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/gameplay.page:34
+msgid ""
+"There are many different <link xref=\"map\">tile layouts</link> to choose "
+"from."
+msgstr "<link xref=\"map\">Lauza-diseinu</link> desberdin asko daude aukeran."
+
+#. (itstool) path: page/p
+#: C/gameplay.page:37
+msgid "To match two tiles:"
+msgstr "Bi lauza parekatzeko:"
+
+#. (itstool) path: item/p
+#: C/gameplay.page:41
+msgid ""
+"Click on the a tile you want to match. If it is an eligible tile, it will be "
+"highlighted."
+msgstr "Egin klik parekatu nahi duzun lauzan. Erabilgarri badago, nabarmenduta geratuko da."
+
+#. (itstool) path: item/p
+#: C/gameplay.page:45
+msgid ""
+"Click on a matching tile. If it is a truly a matching tile, both tiles will "
+"vanish."
+msgstr "Egin klik bat datorren beste lauza batean. Benetan bat badator, bi lauzak desagertu egingo dira."
+
+#. (itstool) path: section/title
+#: C/gameplay.page:51 C/hints.page:47
+msgid "Video demonstration"
+msgstr "Bideo-erakustaldia"
+
+#. (itstool) path: media/p
+#: C/gameplay.page:54
+msgid "Video of gameplay"
+msgstr "Jokoaren bideoa"
+
+#. (itstool) path: credit/name
+#: C/hints.page:19 C/moves.page:15 C/pause.page:16 C/rules.page:17
+#: C/strategy.page:14 C/translate.page:16
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/hints.page:31
+msgid "Hints"
+msgstr "Iradokizunak"
+
+#. (itstool) path: page/p
+#: C/hints.page:33
+msgid ""
+"<gui>Hint</gui> highlights two tiles that can be matched. If you have "
+"already selected one tile, it will show a match for that piece if one exists."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/hints.page:37
+msgid ""
+"<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
+"gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
+"key></keyseq>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/hints.page:41
+msgid ""
+"<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
+"sparingly."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/hints.page:43
+msgid "There is a 30-second penalty for each use of the \"hint\" option."
+msgstr "30 segundo galduko dira iradokizun bat erabiltzen den bakoitzean."
+
+#. (itstool) path: div/p
+#: C/hints.page:52
+msgid "You can use <gui>Hints</gui> to help you find identical tiles."
+msgstr ""
+
+#. (itstool) path: div/p
+#: C/hints.page:57
+msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
+msgstr "Sakatu <keyseq><key>Ctrl</key><key>H</key></keyseq>."
+
+#. (itstool) path: div/p
+#: C/hints.page:62
+msgid "There is a 30 s penalty for each use of this option."
+msgstr "30 segundo galduko dira aukera hau erabiltzen den bakoitzean."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Mahjongg"
+msgstr "Mahjongg"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Mahjongg"
+msgstr "Mahjongg"
+
+#. (itstool) path: info/desc
+#: C/index.page:11
+msgid "GNOME Mahjongg help."
+msgstr "GNOME Mahjongg laguntza."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Mahjongg"
+
+#. (itstool) path: page/p
+#: C/index.page:23
+msgid ""
+"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
+"by matching identical tiles."
+msgstr "<app>Mahjongg</app> ereduak ezagutzea oinarritzat duen joko sinplea da. Lauza berdinak parekatzen direnean lortzen dira puntuak."
+
+#. (itstool) path: section/title
+#: C/index.page:28
+msgid "Playing Mahjongg"
+msgstr "Jokatu Mahjongg jokoan"
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Useful tips"
+msgstr "Argibide erabilgarriak"
+
+#. (itstool) path: section/title
+#: C/index.page:36
+msgid "Get involved"
+msgstr "Hartu parte"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported lizentzia"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Lan honen lizentzia <_:link-1/> da."
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Legezko informazioa."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Lizentzia"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr "Lan  hau Creative Commons Attribution-Share Alike 3.0 Unported lizentzia pean banatzen da."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Libre zara:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Partekatzeko</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Lana kopiatu, banatu eta transmititzeko."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>Aldatzeko</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Lana moldatzeko."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Honako baldintzen pean:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Aitortu</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr "Lanaren egilea edo lizentziaren jabea nor den aitortu behar duzu, hark esandako moduan (baina zuk egiten duzun erabilera babesten duela esan edo iradoki gabe).<"
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Partekatu berdin</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr "Lan hau aldatu, transformatu edo osatzen baduzu, lizentzia bera edo lizentzia bateragarri bat erabili beharko duzu sortutako lan berria banatzeko."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr "Lizentziaren testu osoa kontsultzeko, begiratu <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons webgunean</link> edo irakurri <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons kontratu osoa</link>."
+
+#. (itstool) path: credit/years
+#: C/map.page:13
+msgid "2012 2013"
+msgstr "2012 2013"
+
+#. (itstool) path: credit/years
+#: C/map.page:18 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/map.page:22
+msgid "Change tile layout"
+msgstr "Aldatu lauza-diseinua"
+
+#. (itstool) path: page/p
+#: C/map.page:24
+msgid "There are 9 different layouts. To select a different tile layout:"
+msgstr "9 diseinu daude. Beste lauza-diseinu bat hautatzeko:"
+
+#. (itstool) path: item/p
+#: C/map.page:27
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr "Sakatu goiko eskuineko izkinako menu-botoia eta hautatu <gui style=\"menuitem\">Hobespenak</gui>."
+
+#. (itstool) path: item/p
+#: C/map.page:29
+msgid "Select a <gui>Layout</gui> from the drop-down menu."
+msgstr "Hautatu diseinu bat goitibeherako <gui>Diseinua</gui> menuan."
+
+#. (itstool) path: page/p
+#: C/map.page:33
+msgid ""
+"Your new tile layout will take effect immediately unless you have already "
+"started a game and chose for the effect to take place after you are finished."
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:41
+msgid "easy image"
+msgstr "irudi erraza"
+
+#. (itstool) path: media/p
+#: C/map.page:46
+msgid "the ziggurat layout image"
+msgstr "ziggurat-diseinuaren irudia"
+
+#. (itstool) path: media/p
+#: C/map.page:51
+msgid "four bridges layout image"
+msgstr "lau zubien diseinuaren irudia"
+
+#. (itstool) path: media/p
+#: C/map.page:56
+msgid "overpass layout image"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/map.page:61
+msgid "<em>Easy</em>"
+msgstr "<em>Erraza</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:62
+msgid "<em>The Ziggurat</em>"
+msgstr "<em>Ziggurat</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:63
+msgid "<em>Four Bridges</em>"
+msgstr "<em>Lau zubi</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:64
+msgid "<em>Overpass</em>"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:72
+msgid "cloud layout image"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:77
+msgid "tic tac toe layout image"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:82
+msgid "red dragon layout image"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:87
+msgid "pyramid walls layout image"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/map.page:92
+msgid "<em>Cloud</em>"
+msgstr "<em>Hodeia</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:93
+msgid "<em>Tic-tac-toe</em>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/map.page:94
+msgid "<em>Red Dragon</em>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/map.page:95
+msgid "<em>Pyramid's Walls</em>"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:103
+msgid "confounding cross layout image"
+msgstr ""
+
+#. (itstool) path: media/p
+#: C/map.page:108
+msgid "difficult layout image"
+msgstr "zaila-diseinuaren irudia"
+
+#. (itstool) path: td/p
+#: C/map.page:113
+msgid "<em>Confounding Cross</em>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/map.page:114
+msgid "<em>Difficult</em>"
+msgstr "<em>Zaila</em>"
+
+#. (itstool) path: page/title
+#: C/moves.page:23
+msgid "Moves left"
+msgstr "Zenbat mugimendu"
+
+#. (itstool) path: page/p
+#: C/moves.page:25
+msgid ""
+"The <gui>Moves Left</gui> counter is located on the header bar, next to the "
+"time counter. It displays the number of different moves that can be made. It "
+"can help you see how far you are from running out of moves, and whether "
+"you've seen all possible moves."
+msgstr "<gui>Zenbat mugimentu</gui> zenbagailua goiburu-barran dago, denbora-zenbagailuaren alboan. Egin daitekeen mugimendu kopurua bistaratzen du. Mugimendurik gabe geratzeko zenbat falta zaizkizun erakusten dizu, eta mugimendu posible guztiak egin dituzun ala ez."
+
+#. (itstool) path: page/title
+#: C/pause.page:28
+msgid "Pausing your game"
+msgstr "Jokoa pausatzea"
+
+#. (itstool) path: page/p
+#: C/pause.page:30
+msgid "You can pause your current game using one of the following methods:"
+msgstr "Uneko jokoa pausatzeko, honako metodoetako bat erabili daiteke:"
+
+#. (itstool) path: item/p
+#: C/pause.page:34
+msgid "The <_:media-1/> button in the header bar."
+msgstr "Goiburu-barrako <_:media-1/> botoia."
+
+#. (itstool) path: item/p
+#: C/pause.page:38
+msgid ""
+"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+msgstr "Teklatuko <key>Pausatu</key> tekla. Tekla hori ez dago teklatu guztietan."
+
+#. (itstool) path: page/title
+#: C/rules.page:25
+msgid "Rules"
+msgstr "Arauak"
+
+#. (itstool) path: item/p
+#: C/rules.page:27
+msgid "Tiles must be identical to be removed."
+msgstr "Lauzek berdin-berdinak izan behar dute haiek kendu ahal izateko."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid "Fully and partially covered tiles cannot be matched."
+msgstr "Osorik edo partzialki estalita dauden lauzak ezin dira parekatu."
+
+#. (itstool) path: item/p
+#: C/rules.page:29
+msgid "Tiles must have a free long edge in order to be eligible for matching."
+msgstr "Lauzek ertz luze bat libre izan behar dute parekatuak izan ahal izateko."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid "You can undo a move without penalty."
+msgstr "Ezin da mugimendu bat desegin zigorrik gabe."
+
+#. (itstool) path: item/p
+#: C/rules.page:32 C/strategy.page:41
+msgid ""
+"Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty "
+"to your time."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/rules.page:34
+msgid ""
+"If the arrangement does not allow further tiles to be matched, you will be "
+"given the option to shuffle the tiles in order to keep playing."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/rules.page:37 C/strategy.page:43
+msgid "Shuffling tiles adds a 60-second penalty to your time."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/scoring.page:22
+msgid "Scoring"
+msgstr "Puntuazioa"
+
+#. (itstool) path: page/p
+#: C/scoring.page:24
+msgid ""
+"In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
+"board."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/scoring.page:27
+msgid "To view the highscore board:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/scoring.page:29
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Scores</gui>."
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/scoring.page:34
+msgid ""
+"The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
+"view the highscores for a particular map by selecting it from the drop-down "
+"menu."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/strategy.page:21
+msgid "Strategy"
+msgstr "Estrategia"
+
+#. (itstool) path: page/p
+#: C/strategy.page:23
+msgid ""
+"Since each <link xref=\"map\">tile layout</link> requires a different "
+"approach, there is no one universal strategy. However, there are some "
+"strategy tips to keep in mind while you play:"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/strategy.page:28
+msgid ""
+"The general strategy is to keep removing matching tiles in such a way that "
+"each removed tile will expose further tiles. A good strategy would be to "
+"expose new tiles with every set of tiles you match and eliminate."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/strategy.page:32
+msgid ""
+"Choosing easily accessible tiles, such as those from the top levels, is not "
+"beneficial. This strategy leaves essential tiles under cover, increasing "
+"your chances of losing the game."
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/strategy.page:35
+msgid ""
+"Since you are <link xref=\"scoring\">scored</link> by how quickly you finish "
+"the game, time is the most important factor in the game. It is therefore "
+"important to be fast."
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/translate.page:28
+msgid "Help translate"
+msgstr "Lagundu itzultzen"
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"The GNOME Games user interface and documentation is being translated by a "
+"world-wide volunteer community: you are welcome to participate."
+msgstr "GNOME Jokoak aplikazioaren erabiltzaile-interfazea eta dokumentazioa boluntarioen komunitate batek itzultzen du. Ongi etorria izango zara lagundu nahi baduzu."
+
+#. (itstool) path: page/p
+#: C/translate.page:33
+msgid ""
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:36
+msgid ""
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:41
+msgid ""
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
+"irc.gnome.org server. People on the channel are located worldwide, so you "
+"may not get an immediate response as a result of timezone differences."
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/translate.page:45
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
