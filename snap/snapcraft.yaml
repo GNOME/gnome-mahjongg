@@ -43,7 +43,7 @@ parts:
       cp ../src/data/icons/hicolor/scalable/org.gnome.Mahjongg.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
       cp ../install/snap/gnome-mahjongg/current/usr/share/applications/org.gnome.Mahjongg.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
     plugin: meson
-    meson-parameters: [--prefix=/snap/gnome-mahjongg/current/usr]
+    meson-parameters: [--prefix=/snap/gnome-mahjongg/current/usr, -Dcompile-schemas=disabled, -Dupdate-icon-cache=disabled]
     organize:
       snap/gnome-mahjongg/current/usr: usr
     build-packages:
