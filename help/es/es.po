@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg.HEAD\n"
-"POT-Creation-Date: 2020-06-05 07:17+0000\n"
+"POT-Creation-Date: 2021-08-02 17:03+0000\n"
 "PO-Revision-Date: 2020-01-07 16:39+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -413,7 +413,7 @@ msgstr "Involucrarse"
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr ""
-"Licencia Creative Commons Atribución - Compartir igual 3.0 sin soporte."
+"Licencia Creative Commons Atribución - Compartir igual 3.0 no portada."
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
@@ -437,7 +437,7 @@ msgid ""
 "Unported license."
 msgstr ""
 "Este trabajo está licenciado bajo una Licencia Creative Commons Atribución - "
-"Compartir igual 3.0 sin soporte."
+"Compartir igual 3.0 no portada."
 
 #. (itstool) path: page/p
 #: C/license.page:20
