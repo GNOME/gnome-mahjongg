@@ -92,8 +92,15 @@ public class History : Object
         var minute = int.parse (date.substring (14, 2));
         var seconds = int.parse (date.substring (17, 2));
         var timezone = date.substring (19);
-
-        return new DateTime (new TimeZone (timezone), year, month, day, hour, minute, seconds);
+        try
+        {
+            var tz = new TimeZone.identifier (timezone);
+            return new DateTime (tz, year, month, day, hour, minute, seconds);
+        }
+        catch (Error e)
+        {
+            return null;
+        }
     }
 }
 
