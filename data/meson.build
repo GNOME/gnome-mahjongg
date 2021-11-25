@@ -5,21 +5,15 @@ install_data ('icons' / 'hicolor' / 'scalable' / 'org.gnome.Mahjongg.svg',
 install_data ('icons' / 'hicolor' / 'symbolic' / 'org.gnome.Mahjongg-symbolic.svg',
               install_dir: hicolordir / 'symbolic' / 'apps')
 
-schemasdir = gio_dep.get_pkgconfig_variable(
-  'schemasdir',
-  define_variable : [
-    'datadir',
-    get_option('datadir')
-  ]
-)
-
 install_data ('org.gnome.Mahjongg.gschema.xml',
-              install_dir: schemasdir)
+  install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
+)
 
 install_data ('mahjongg.map', install_dir: join_paths (pkgdatadir, 'maps'))
 install_data ('postmodern.svg', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('smooth.png', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
+install_data ('maya.png', install_dir: join_paths (pkgdatadir, 'themes'))
 
 desktop_file = i18n.merge_file (
   'desktop-file',
@@ -64,20 +58,10 @@ resources = gnome.compile_resources ('resources', 'org.gnome.Mahjongg.gresource.
                                      source_dir: '.',
                                      c_name: 'resources')
 
-# Compile GSettings schemas
-
-if get_option('compile-schemas').enabled()
-  compileschemas = gio_dep.get_pkgconfig_variable('glib_compile_schemas')
-  meson.add_install_script(compileschemas, get_option('prefix') / schemasdir)
-endif
-
-# Rebuild icon cache
-
-if get_option('update-icon-cache').enabled()
-  updateiconcache = find_program('gtk-update-icon-cache')
-  meson.add_install_script(updateiconcache.path(), '-t', '-f', get_option('prefix') / hicolordir / 'scalable')
-  meson.add_install_script(updateiconcache.path(), '-t', '-f', get_option('prefix') / hicolordir / 'symbolic')
-endif
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+)
 
 # Make D-Bus activatable
 service_conf = configuration_data()
