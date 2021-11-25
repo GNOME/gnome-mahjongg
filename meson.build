@@ -20,8 +20,9 @@ bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))
 # Dependencies
 glib_dep    = dependency ('glib-2.0', version: '>= 2.40.0')
 gio_dep     = dependency ('gio-2.0', version: '>= 2.40.0')
-gtk_dep     = dependency ('gtk+-3.0', version: '>= 3.14.0')
-librsvg_dep = dependency ('librsvg-2.0', version: '>= 2.32.0')
+gtk_dep     = dependency ('gtk4', version: '>= 4.5.0')
+adwaita_dep = dependency ('libadwaita-1')
+librsvg_dep = dependency ('librsvg-2.0', version: '>= 2.46.0')
 
 subdir ('po')
 subdir ('data')

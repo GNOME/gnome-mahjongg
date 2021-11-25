@@ -32,7 +32,7 @@ public class GameView : Gtk.DrawingArea
     private uint   theme_resize_timer;
     private uint   theme_timer_id;
 
-    private Gtk.GestureMultiPress click_controller;     // for keeping in memory
+    private Gtk.GestureClick click_controller;     // for keeping in memory
 
     private Game? _game;
     public Game? game
@@ -81,16 +81,11 @@ public class GameView : Gtk.DrawingArea
             update_dimensions ();
 
             if (pixbuf != null) {
-                var region = get_window ().get_visible_region ();
-                var draw_ctx = get_window ().begin_draw_frame (region);
-                var cr = draw_ctx.get_cairo_context ();
-
-                var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+                var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
                 var ctx = new Cairo.Context (theme_surface);
                 Gdk.cairo_set_source_pixbuf (ctx, pixbuf, 0, 0);
                 ctx.paint();
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
-                get_window ().end_draw_frame (draw_ctx);
             }
 
             if (theme_handle != null) {
@@ -105,32 +100,32 @@ public class GameView : Gtk.DrawingArea
     {
         can_focus = true;
         theme_timer_id = 0;
-        add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
         init_mouse ();
-        size_allocate.connect(() => {
-            /* Recalculate dimensions */
-            update_dimensions ();
+        set_draw_func (draw_func);
+    }
 
-            /* Resize the rsvg theme lazily after 300ms of the last resize event */
-            if (theme_timer_id != 0) {
-                GLib.Source.remove(theme_timer_id);
-                theme_timer_id = 0;
-            }
+    public override void size_allocate (int width, int height, int baseline) {
+        update_dimensions ();
 
-            if (theme_handle != null) {
-                theme_resize_timer = 2;
-                theme_timer_id = GLib.Timeout.add(100, () => {
-                    if (theme_resize_timer == 0) {
-                        resize_theme ();
-                        theme_timer_id = 0;
-                        return false;
-                    }
+        /* Resize the rsvg theme lazily after 300ms of the last resize event */
+        if (theme_timer_id != 0) {
+            GLib.Source.remove(theme_timer_id);
+            theme_timer_id = 0;
+        }
 
-                    theme_resize_timer--;
-                    return true;
-                });
-            }
-        });
+        if (theme_handle != null) {
+            theme_resize_timer = 2;
+            theme_timer_id = GLib.Timeout.add(100, () => {
+                if (theme_resize_timer == 0) {
+                    resize_theme ();
+                    theme_timer_id = 0;
+                    return false;
+                }
+
+                theme_resize_timer--;
+                return true;
+            });
+        }
     }
 
     private void resize_theme () {
@@ -147,17 +142,13 @@ public class GameView : Gtk.DrawingArea
             theme_height = (int) height;
         }
 
+
         while (theme_width < rendered_theme_width) {
             theme_width += theme_width;
             theme_height += theme_height;
         }
 
-
-        var region = get_window ().get_visible_region ();
-        var draw_ctx = get_window ().begin_draw_frame (region);
-        var cr = draw_ctx.get_cairo_context ();
-
-        var theme_surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+        var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
         var ctx = new Cairo.Context (theme_surface);
 
         try {
@@ -166,8 +157,6 @@ public class GameView : Gtk.DrawingArea
             queue_draw();
         } catch (Error e) {
             warning ("Could not upscale theme");
-        } finally {
-            get_window ().end_draw_frame (draw_ctx);
         }
     }
 
@@ -304,9 +293,7 @@ public class GameView : Gtk.DrawingArea
     private void redraw_tile_cb (Tile tile)
     {
         update_dimensions ();
-        int x, y;
-        get_tile_position (tile, out x, out y);
-        queue_draw_area (x, y, tile_pattern_width, tile_pattern_height);
+        queue_draw ();
     }
 
     private void paused_changed_cb ()
@@ -314,25 +301,24 @@ public class GameView : Gtk.DrawingArea
         queue_draw ();
     }
 
-    public override bool draw (Cairo.Context cr)
+    public void draw_func (Gtk.DrawingArea area, Cairo.Context cr, int width, int height)
     {
         if (game == null)
-            return false;
+            return;
 
         Gdk.cairo_set_source_rgba (cr, background_color);
         cr.paint ();
         draw_game (cr);
-
-        return true;
     }
 
     private inline void init_mouse ()
     {
-        click_controller = new Gtk.GestureMultiPress (this);    // only reacts to Gdk.BUTTON_PRIMARY
+        click_controller = new Gtk.GestureClick ();    // only reacts to Gdk.BUTTON_PRIMARY
+        this.add_controller (click_controller);
         click_controller.pressed.connect (on_click);
     }
 
-    private inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private inline void on_click (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.paused)
             return;

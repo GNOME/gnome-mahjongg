@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="MahjonggWindow" parent="GtkApplicationWindow">
+    <child type="titlebar">
+      <object class="AdwHeaderBar">
+        <property name="title-widget">
+          <object class="AdwWindowTitle" id="titlewidget">
+            <style>
+              <class name="numeric"/>
+            </style>
+          </object>
+        </property>
+        <child type="start">
+          <object class="GtkButton">
+            <property name="icon-name">edit-undo-symbolic</property>
+            <property name="action-name">app.undo</property>
+          </object>
+        </child>
+        <child type="start">
+          <object class="GtkButton">
+            <property name="icon-name">edit-redo-symbolic</property>
+            <property name="action-name">app.redo</property>
+          </object>
+        </child>
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="menu-model">menu</property>
+            <property name="primary">true</property>
+          </object>
+        </child>
+        <child type="end">
+          <object class="GtkButton">
+            <property name="icon-name">question-round-symbolic</property>
+            <property name="action-name">app.hint</property>
+          </object>
+        </child>
+        <child type="end">
+          <object class="GtkButton" id="pause_btn">
+            <property name="icon-name">media-playback-pause-symbolic</property>
+            <property name="action-name">app.pause</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="mainview"/>
+    </style>
+  </template>
+  <menu id="menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">New Game</attribute>
+        <attribute name="action">app.new-game</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Restart Game</attribute>
+        <attribute name="action">app.restart-game</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Scores</attribute>
+        <attribute name="action">app.scores</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Help</attribute>
+        <attribute name="action">app.help</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">About Mahjongg</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

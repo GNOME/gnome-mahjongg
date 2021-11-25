@@ -8,22 +8,35 @@
  * license.
  */
 
+[GtkTemplate (ui = "/org/gnome/Mahjongg/ui/score-dialog.ui")]
 public class ScoreDialog : Gtk.Dialog
 {
+    [GtkChild]
+    private unowned Gtk.ComboBox layouts;
+
+    [GtkChild]
+    private unowned Gtk.TreeView scores;
+
     private History history;
     private HistoryEntry? selected_entry = null;
     private Gtk.ListStore size_model;
     private Gtk.ListStore score_model;
-    private Gtk.ComboBox size_combo;
-    private Gtk.TreeView scores;
     private unowned List<Map> maps;
 
     public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false, List<Map> maps)
     {
+        Object(use_header_bar: 1);
         this.maps = maps;
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
+
+        size_model = new Gtk.ListStore (2, typeof (string), typeof (string));
+        layouts.changed.connect (size_changed_cb);
+        layouts.model = size_model;
+        var renderer = new Gtk.CellRendererText ();
+        layouts.pack_start (renderer, true);
+        layouts.add_attribute (renderer, "text", 0);
 
         if (show_quit)
         {
@@ -34,47 +47,14 @@ public class ScoreDialog : Gtk.Dialog
             add_button (_("OK"), Gtk.ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        vbox.border_width = 6;
-        vbox.show ();
-        get_content_area ().pack_start (vbox, true, true, 0);
-
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-        hbox.show ();
-        vbox.pack_start (hbox, false, false, 0);
-
-        var label = new Gtk.Label (_("Layout:"));
-        label.show ();
-        hbox.pack_start (label, false, false, 0);
-
-        size_model = new Gtk.ListStore (2, typeof (string), typeof (string));
-
-        size_combo = new Gtk.ComboBox ();
-        size_combo.changed.connect (size_changed_cb);
-        size_combo.model = size_model;
-        var renderer = new Gtk.CellRendererText ();
-        size_combo.pack_start (renderer, true);
-        size_combo.add_attribute (renderer, "text", 0);
-        size_combo.show ();
-        hbox.pack_start (size_combo, true, true, 0);
-
-        var scroll = new Gtk.ScrolledWindow (null, null);
-        scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
-        scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
-        scroll.show ();
-        vbox.pack_start (scroll, true, true, 0);
-
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
 
-        scores = new Gtk.TreeView ();
         renderer = new Gtk.CellRendererText ();
         scores.insert_column_with_attributes (-1, _("Date"), renderer, "text", 0, "weight", 2);
         renderer = new Gtk.CellRendererText ();
         renderer.xalign = 1.0f;
         scores.insert_column_with_attributes (-1, _("Time"), renderer, "text", 1, "weight", 2);
         scores.model = score_model;
-        scores.show ();
-        scroll.add (scores);
 
         foreach (var entry in history.entries)
             entry_added_cb (entry);
@@ -180,12 +160,12 @@ public class ScoreDialog : Gtk.Dialog
             size_model.set (iter, 0, display_name, 1, entry.name);
 
             /* Select this entry if don't have any */
-            if (size_combo.get_active () == -1)
-                size_combo.set_active_iter (iter);
+            if (layouts.get_active () == -1)
+                layouts.set_active_iter (iter);
 
             /* Select this entry if the same category as the selected one */
             if (selected_entry != null && entry.name == selected_entry.name)
-                size_combo.set_active_iter (iter);
+                layouts.set_active_iter (iter);
         }
     }
 }

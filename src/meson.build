@@ -9,12 +9,15 @@ gnome_mahjongg = executable (
     'gnome-mahjongg.vala',
     'history.vala',
     'map.vala',
-    'score-dialog.vala'
+    'score-dialog.vala',
+    'window.vala',
+    'preferences.vala',
   ],
   dependencies: [
     glib_dep,
     gtk_dep,
-    librsvg_dep
+    adwaita_dep,
+    librsvg_dep,
   ],
   vala_args: [ '--pkg=posix' ],
   c_args: [

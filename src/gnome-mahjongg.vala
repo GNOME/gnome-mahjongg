@@ -8,7 +8,7 @@
  * license.
  */
 
-public class Mahjongg : Gtk.Application
+public class Mahjongg : Adw.Application
 {
     private Settings settings;
 
@@ -16,19 +16,9 @@ public class Mahjongg : Gtk.Application
 
     private List<Map> maps = new List<Map> ();
 
-    private Gtk.ApplicationWindow window;
-    private Gtk.Label title;
-    private Gtk.MenuButton menu_button;
-    private int window_width;
-    private int window_height;
-    private bool is_maximized;
-    private bool is_tiled;
+    private MahjonggWindow window;
 
     private GameView game_view;
-    private Gtk.Button pause_button;
-    private Gtk.Label moves_label;
-    private Gtk.Label clock_label;
-    private Gtk.Dialog? preferences_dialog = null;
 
     private const OptionEntry[] option_entries =
     {
@@ -48,7 +38,6 @@ public class Mahjongg : Gtk.Application
         { "preferences",   preferences_cb  },
         { "help",          help_cb         },
         { "about",         about_cb        },
-        { "hamburger",     hamburger_cb    },
         { "quit",          quit_cb         }
     };
 
@@ -73,149 +62,23 @@ public class Mahjongg : Gtk.Application
         set_accels_for_action ("app.help",      {                 "F1"      });
         set_accels_for_action ("app.quit",      {        "<Primary>q",
                                                          "<Primary>w"       });
-        set_accels_for_action ("app.hamburger", {                 "F10"     });
 
         settings = new Settings ("org.gnome.Mahjongg");
-
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
         history.load ();
 
-        window = new Gtk.ApplicationWindow (this);
-        window.size_allocate.connect (size_allocate_cb);
-        window.window_state_event.connect (window_state_event_cb);
-        window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
-        if (settings.get_boolean ("window-is-maximized"))
-            window.maximize ();
-
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-
-        var group_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var label = new Gtk.Label (_("Moves Left:"));
-        group_box.pack_start (label, false, false, 0);
-        var spacer = new Gtk.Label (" ");
-        group_box.pack_start (spacer, false, false, 0);
-        moves_label = new Gtk.Label ("");
-        group_box.pack_start (moves_label, false, false, 0);
-        status_box.pack_start (group_box, false, false, 0);
-
-        clock_label = new Gtk.Label ("");
-        status_box.pack_start (clock_label, false, false, 0);
-
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-
         game_view = new GameView ();
-        view_click_controller = new Gtk.GestureMultiPress (game_view);
+        view_click_controller = new Gtk.GestureClick ();
         view_click_controller.pressed.connect (on_click);
-        game_view.set_size_request (600, 400);
+        game_view.add_controller (view_click_controller);
 
-        title = new Gtk.Label ("");
-        title.get_style_context ().add_class ("title");
+        window = new MahjonggWindow (this, game_view);
 
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        hbox.get_style_context ().add_class ("linked");
-
-        var undo_button = new Gtk.Button.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.BUTTON);
-        undo_button.valign = Gtk.Align.CENTER;
-        undo_button.action_name = "app.undo";
-        undo_button.set_tooltip_text (_("Undo your last move"));
-        hbox.pack_start (undo_button);
-
-        var redo_button = new Gtk.Button.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.BUTTON);
-        redo_button.valign = Gtk.Align.CENTER;
-        redo_button.action_name = "app.redo";
-        redo_button.set_tooltip_text (_("Redo your last move"));
-        hbox.pack_start (redo_button);
-
-        var hint_button = new Gtk.Button.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.BUTTON);
-        hint_button.valign = Gtk.Align.CENTER;
-        hint_button.action_name = "app.hint";
-        hint_button.set_tooltip_text (_("Receive a hint for your next move"));
-
-        pause_button = new Gtk.Button.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.BUTTON);
-        pause_button.valign = Gtk.Align.CENTER;
-        pause_button.action_name = "app.pause";
-        pause_button.set_tooltip_text (_("Pause the game"));
-
-        var title_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        title_box.pack_start (title, false, false, 0);
-        status_box.halign = Gtk.Align.CENTER;
-        title_box.pack_start (status_box, false, false, 0);
-
-        var menu = new Menu ();
-        var section = new Menu ();
-        section.append (_("_New Game"),         "app.new-game");
-        section.append (_("_Restart Game"),     "app.restart-game");
-        section.append (_("_Scores"),           "app.scores");
-        section.freeze ();
-        menu.append_section (/* no title */ null, section);
-        section = new Menu ();
-        section.append (_("_Preferences"),          "app.preferences");
-        section.append (_("_Keyboard Shortcuts"),   "win.show-help-overlay");
-        section.append (_("_Help"),                 "app.help");
-        section.append (_("_About Mahjongg"),       "app.about");
-        section.freeze ();
-        menu.append_section (/* no title */ null, section);
-        menu.freeze ();
-
-        menu_button = new Gtk.MenuButton ();
-        menu_button.valign = Gtk.Align.CENTER;
-        menu_button.set_menu_model (menu);
-        menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
-
-        var header_bar = new Gtk.HeaderBar ();
-        header_bar.set_custom_title (title_box);
-        header_bar.set_show_close_button (true);
-        header_bar.pack_start (hbox);
-        header_bar.pack_end (menu_button);
-        header_bar.pack_end (hint_button);
-        header_bar.pack_end (pause_button);
-        window.set_titlebar (header_bar);
-
-        vbox.pack_start (game_view, true, true, 0);
-
-        window.add (vbox);
-        window.show_all ();
-
-        settings.changed.connect (conf_value_changed_cb);
-
-        new_game ();
-
-        game_view.grab_focus ();
-
-        conf_value_changed_cb (settings, "tileset");
-        conf_value_changed_cb (settings, "bgcolour");
-        tick_cb ();
-    }
-
-    private void size_allocate_cb (Gtk.Allocation allocation)
-    {
-        if (is_maximized || is_tiled)
-            return;
-        window.get_size (out window_width, out window_height);
-    }
-
-    private bool window_state_event_cb (Gdk.EventWindowState event)
-    {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        /* We don’t save this state, but track it for saving size allocation */
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            is_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
-        return false;
-    }
-
-    protected override void shutdown ()
-    {
-        base.shutdown ();
-
-        /* Save window state */
-        settings.delay ();
-        settings.set_int ("window-width", window_width);
-        settings.set_int ("window-height", window_height);
-        settings.set_boolean ("window-is-maximized", is_maximized);
-        settings.apply ();
+        settings.bind("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
+        settings.bind("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
     }
 
     protected override int handle_local_options (GLib.VariantDict options)
@@ -234,6 +97,16 @@ public class Mahjongg : Gtk.Application
     public override void activate ()
     {
         window.present ();
+
+        settings.changed.connect (conf_value_changed_cb);
+
+        new_game ();
+
+        game_view.grab_focus ();
+
+        conf_value_changed_cb (settings, "tileset");
+        conf_value_changed_cb (settings, "bgcolour");
+        tick_cb ();
     }
 
     private void update_ui ()
@@ -257,17 +130,6 @@ public class Mahjongg : Gtk.Application
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
         }
-
-        moves_label.set_text ("%2u".printf (game_view.game.moves_left));
-    }
-
-    private void theme_changed_cb (Gtk.ComboBox widget)
-    {
-        Gtk.TreeIter iter;
-        widget.get_active_iter (out iter);
-        string theme;
-        widget.model.get (iter, 1, out theme);
-        settings.set_string ("tileset", theme);
     }
 
     private void conf_value_changed_cb (Settings settings, string key)
@@ -296,33 +158,24 @@ public class Mahjongg : Gtk.Application
                                     _("Use _new map"), Gtk.ResponseType.ACCEPT,
                                     null);
                 dialog.set_default_response (Gtk.ResponseType.ACCEPT);
-                var response = dialog.run ();
-                if (response == Gtk.ResponseType.ACCEPT)
-                    new_game ();
-                dialog.destroy ();
+                dialog.response.connect ( (resp_id) => {
+                    if (resp_id == Gtk.ResponseType.ACCEPT)
+                        new_game ();
+                    dialog.destroy ();
+                });
+                dialog.show ();
             }
             else
                 new_game ();
         }
     }
 
-    private Gtk.GestureMultiPress view_click_controller;    // for keeping in memory
-    private inline void on_click (Gtk.GestureMultiPress _view_click_controller, int n_press, double event_x, double event_y)
+    private Gtk.GestureClick view_click_controller;    // for keeping in memory
+    private inline void on_click (Gtk.GestureClick _view_click_controller, int n_press, double event_x, double event_y)
     {
         /* Cancel pause on click */
         if (game_view.game.paused)
             pause_cb ();
-    }
-
-    private void background_changed_cb (Gtk.ColorButton widget)
-    {
-        var colour = widget.get_rgba ();
-        settings.set_string ("bgcolour", "#%04x%04x%04x".printf ((int) (colour.red * 65536 + 0.5), (int) (colour.green * 65536 + 0.5), (int) (colour.blue * 65536 + 0.5)));
-    }
-
-    private void map_changed_cb (Gtk.ComboBox widget)
-    {
-        settings.set_string ("mapset", maps.nth_data (widget.active).name);
     }
 
     enum NoMovesDialogResponse
@@ -344,11 +197,7 @@ public class Mahjongg : Gtk.Application
             var entry = new HistoryEntry (date, game_view.game.map.score_name, duration);
             history.add (entry);
             history.save ();
-
-            if (show_scores (entry, true) == Gtk.ResponseType.CLOSE)
-                window.destroy ();
-            else
-                new_game ();
+            show_scores (entry, true);
         }
         else if (!game_view.game.can_move)
         {
@@ -366,149 +215,58 @@ public class Mahjongg : Gtk.Application
                                 _("_New game"), NoMovesDialogResponse.NEW_GAME,
                                 allow_shuffle ? _("_Shuffle") : null, NoMovesDialogResponse.SHUFFLE);
 
-            var result = dialog.run ();
-            /* Shuffling may cause the dialog to appear again immediately,
-               so we destroy BEFORE doing anything with the result. */
-            dialog.destroy ();
-
-            switch (result)
-            {
-            case NoMovesDialogResponse.UNDO:
-                undo_cb ();
-                break;
-            case NoMovesDialogResponse.SHUFFLE:
-                shuffle_cb ();
-                break;
-            case NoMovesDialogResponse.RESTART:
-                restart_game ();
-                break;
-            case NoMovesDialogResponse.NEW_GAME:
-                new_game ();
-                break;
-            case Gtk.ResponseType.DELETE_EVENT:
-                break;
-            default:
-                assert_not_reached ();
-            }
+            dialog.response.connect ( (resp_id) => {
+                /* Shuffling may cause the dialog to appear again immediately,
+                   so we destroy BEFORE doing anything with the result. */
+                switch (resp_id)
+                {
+                case NoMovesDialogResponse.UNDO:
+                    undo_cb ();
+                    break;
+                case NoMovesDialogResponse.SHUFFLE:
+                    shuffle_cb ();
+                    break;
+                case NoMovesDialogResponse.RESTART:
+                    restart_game ();
+                    break;
+                case NoMovesDialogResponse.NEW_GAME:
+                    new_game ();
+                    break;
+                case Gtk.ResponseType.DELETE_EVENT:
+                    break;
+                default:
+                    assert_not_reached ();
+                }
+                dialog.destroy ();
+            });
+            dialog.show ();
         }
     }
 
-    private int show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
+    private void show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
     {
         var dialog = new ScoreDialog (history, selected_entry, show_quit, maps);
         dialog.modal = true;
         dialog.transient_for = window;
+        dialog.response.connect ((resp_id) => {
+            if (resp_id == Gtk.ResponseType.CLOSE)
+                window.destroy ();
+            else if (resp_id == Gtk.ResponseType.OK)
+                new_game ();
+            dialog.destroy ();
+        });
 
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        return result;
+        dialog.show ();
     }
 
     private void preferences_cb ()
     {
-        if (preferences_dialog != null)
-        {
-            preferences_dialog.present ();
-            return;
-        }
-
-        bool dialogs_use_header;
-        Gtk.Settings.get_default ().get ("gtk-dialogs-use-header", out dialogs_use_header);
-
-        preferences_dialog = new Gtk.Dialog.with_buttons (_("Preferences"),
-                                                          window,
-                                                          dialogs_use_header ? Gtk.DialogFlags.USE_HEADER_BAR : 0,
-                                                          null);
-        preferences_dialog.set_border_width (5);
-        var dialog_content_area = (Gtk.Box) preferences_dialog.get_content_area ();
-        dialog_content_area.set_spacing (2);
-        preferences_dialog.set_resizable (false);
-        preferences_dialog.set_default_response (Gtk.ResponseType.CLOSE);
-        preferences_dialog.response.connect (preferences_dialog_response_cb);
-
-        var grid = new Gtk.Grid ();
-        grid.border_width = 5;
-        grid.set_row_spacing (6);
-        grid.set_column_spacing (18);
-
-        var label = new Gtk.Label.with_mnemonic (_("_Theme:"));
-        label.set_alignment (0, 0.5f);
-        grid.attach (label, 0, 0, 1, 1);
-
-        var themes = load_themes ();
-        var theme_combo = new Gtk.ComboBox ();
-        var theme_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-        theme_combo.model = theme_store;
-        var renderer = new Gtk.CellRendererText ();
-        theme_combo.pack_start (renderer, true);
-        theme_combo.add_attribute (renderer, "text", 0);
-        foreach (var theme in themes)
-        {
-            var tokens = theme.split (".", -1);
-            var name = tokens[0];
-
-            Gtk.TreeIter iter;
-            theme_store.append (out iter);
-            theme_store.set (iter, 0, name, 1, theme, -1);
-
-            if (theme == settings.get_string ("tileset"))
-                theme_combo.set_active_iter (iter);
-        }
-        theme_combo.changed.connect (theme_changed_cb);
-        theme_combo.set_hexpand (true);
-        grid.attach (theme_combo, 1, 0, 1, 1);
-        label.set_mnemonic_widget (theme_combo);
-
-        label = new Gtk.Label.with_mnemonic (_("_Layout:"));
-        label.set_alignment (0, 0.5f);
-        grid.attach (label, 0, 1, 1, 1);
-
-        var map_combo = new Gtk.ComboBox ();
-        var map_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-        map_combo.model = map_store;
-        renderer = new Gtk.CellRendererText ();
-        map_combo.pack_start (renderer, true);
-        map_combo.add_attribute (renderer, "text", 0);
-        foreach (var map in maps)
-        {
-            var display_name = dpgettext2 (null, "mahjongg map name", map.name);
-
-            Gtk.TreeIter iter;
-            map_store.append (out iter);
-            map_store.set (iter, 0, display_name, 1, map, -1);
-
-            if (settings.get_string ("mapset") == map.name)
-                map_combo.set_active_iter (iter);
-        }
-        map_combo.changed.connect (map_changed_cb);
-        map_combo.set_hexpand (true);
-        grid.attach (map_combo, 1, 1, 1, 1);
-        label.set_mnemonic_widget (map_combo);
-
-        label = new Gtk.Label.with_mnemonic (_("_Background color:"));
-        label.set_alignment (0, 0.5f);
-        grid.attach (label, 0, 2, 1, 1);
-
-        var widget = new Gtk.ColorButton ();
-        widget.set_rgba (game_view.background_color);
-        widget.color_set.connect (background_changed_cb);
-        widget.set_hexpand (true);
-        grid.attach (widget, 1, 2, 1, 1);
-        label.set_mnemonic_widget (widget);
-
-        dialog_content_area.pack_start (grid, true, true, 0);
-
-        if (!dialogs_use_header)
-            preferences_dialog.add_button (_("_Close"), Gtk.ResponseType.CLOSE);
-
-        preferences_dialog.show_all ();
-    }
-
-    private void preferences_dialog_response_cb (Gtk.Dialog dialog, int response)
-    {
-        preferences_dialog.destroy ();
-        preferences_dialog = null;
+        var preferences = new PreferencesWindow (settings);
+        preferences.populate_themes (load_themes ());
+        preferences.populate_layouts (maps);
+        preferences.populate_background (game_view.background_color);
+        preferences.set_transient_for (window);
+        preferences.show();
     }
 
     private List<string> load_themes ()
@@ -563,11 +321,6 @@ public class Mahjongg : Gtk.Application
         game_view.game.shuffle_remaining ();
     }
 
-    private inline void hamburger_cb ()
-    {
-        menu_button.active = !menu_button.active;
-    }
-
     private void about_cb ()
     {
         string[] authors =
@@ -580,6 +333,7 @@ public class Mahjongg : Gtk.Application
             "Philippe Chavin",
             "Callum McKenzie",
             "Robert Ancell",
+            "Günther Wagner",
             "",
             _("Maps:"),
             "Rexford Newbould",
@@ -627,16 +381,13 @@ public class Mahjongg : Gtk.Application
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
 
-        var pause_image = (Gtk.Image) pause_button.image;
         if (game_view.game.paused)
         {
-            pause_image.icon_name = "media-playback-start-symbolic";
-            pause_button.set_tooltip_text (_("Unpause the game"));
+            window.pause ();
         }
         else
         {
-            pause_image.icon_name = "media-playback-pause-symbolic";
-            pause_button.set_tooltip_text (_("Pause the game"));
+            window.unpause ();
         }
 
         update_ui ();
@@ -704,8 +455,7 @@ public class Mahjongg : Gtk.Application
         game_view.game.tick.connect (tick_cb);
 
         /* Set window title */
-        var display_name = dpgettext2 (null, "mahjongg map name", game_view.game.map.name);
-        title.set_label (_(display_name));
+        window.set_map_title (game_view);
 
         update_ui ();
 
@@ -713,12 +463,12 @@ public class Mahjongg : Gtk.Application
         tick_cb ();
 
         /* Reset the pause button in case it was set to resume */
-        var pause_image = (Gtk.Image) pause_button.image;
-        pause_image.icon_name = "media-playback-pause-symbolic";
+        window.unpause ();
     }
 
     private void tick_cb ()
     {
+        string clock;
         var elapsed = 0;
         if (game_view.game != null)
             elapsed = (int) (game_view.game.elapsed + 0.5);
@@ -726,21 +476,16 @@ public class Mahjongg : Gtk.Application
         var minutes = (elapsed - hours * 3600) / 60;
         var seconds = elapsed - hours * 3600 - minutes * 60;
         if (hours > 0)
-            clock_label.set_text ("%02d∶\xE2\x80\x8E%02d∶\xE2\x80\x8E%02d".printf (hours, minutes, seconds));
+            clock = "%02d∶\xE2\x80\x8E%02d∶\xE2\x80\x8E%02d".printf (hours, minutes, seconds);
         else
-            clock_label.set_text ("%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds));
+            clock = "%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds);
+
+        window.set_subtitle (game_view, clock);
     }
 
     private void help_cb ()
     {
-        try
-        {
-            Gtk.show_uri_on_window (window, "help:gnome-mahjongg", Gtk.get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        Gtk.show_uri (window, "help:gnome-mahjongg", Gdk.CURRENT_TIME);
     }
 
     private void load_maps ()
@@ -794,6 +539,7 @@ public class Mahjongg : Gtk.Application
         Environment.set_application_name (_("Mahjongg"));
         Gtk.Window.set_default_icon_name ("org.gnome.Mahjongg");
 
+        typeof(GameView).ensure();
         var app = new Mahjongg ();
         var result = app.run (args);
 

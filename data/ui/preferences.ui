@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="PreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="default-height">-1</property>
+    <property name="default-width">-1</property>
+    <property name="search-enabled">false</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <child>
+              <object class="AdwComboRow" id="themes_row">
+                <property name="title">Theme</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwComboRow" id="layout_row">
+                <property name="title">Layout</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title">Background color</property>
+                <child>
+                  <object class="GtkColorButton" id="background_btn">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

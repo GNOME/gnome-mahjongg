@@ -1,0 +1,36 @@
+{
+    "app-id" : "org.gnome.Mahjongg",
+    "runtime" : "org.gnome.Platform",
+    "sdk" : "org.gnome.Sdk",
+    "runtime-version" : "master",
+    "command" : "gnome-mahjongg",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--share=network"
+    ],
+    "modules" : [
+        {
+            "name" : "gnome-mahjongg",
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gnome-mahjongg.git"
+                }
+            ]
+        }
+    ],
+    "cleanup" : [
+        "/share/man"
+    ],
+    "build-options" : {
+        "env" : {        }
+    }
+}

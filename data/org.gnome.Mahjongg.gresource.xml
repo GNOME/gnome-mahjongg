@@ -3,4 +3,11 @@
   <gresource prefix="/org/gnome/Mahjongg/gtk">
     <file preprocess="xml-stripblanks" compressed="true">help-overlay.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/Mahjongg">
+    <file>ui/window.ui</file>
+    <file>ui/preferences.ui</file>
+    <file>ui/score-dialog.ui</file>
+    <file alias="icons/scalable/actions/question-round-symbolic.svg" preprocess="xml-stripblanks">icons/question-round-symbolic.svg</file>
+    <file>style.css</file>
+  </gresource>
 </gresources>
