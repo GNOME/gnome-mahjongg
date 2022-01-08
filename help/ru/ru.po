@@ -1,0 +1,888 @@
+# Russian translation for gnome-mahjongg.
+# Copyright (C) 2022 gnome-mahjongg's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mahjongg package.
+# Ser82-png <sw@atrus.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mahjongg master\n"
+"POT-Creation-Date: 2021-12-23 03:48+0000\n"
+"PO-Revision-Date: 2022-01-07 23:37+1000\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Ser82-png\n"
+"X-Generator: Poedit 2.3\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Ser82-png"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
+#: C/gameplay.page:14 C/hints.page:15 C/map.page:11 C/rules.page:13
+#: C/strategy.page:9 C/translate.page:11
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/develop.page:13 C/documentation.page:11
+#: C/translate.page:13
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:16 C/documentation.page:14
+#: C/gameplay.page:22 C/hints.page:27 C/index.page:18 C/moves.page:19
+#: C/pause.page:24 C/rules.page:21 C/scoring.page:18 C/translate.page:24
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Сообщить о проблеме"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
+"to participate. If you notice a problem you can file a <em>bug report</em>. "
+"To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mahjongg/issues/\"/>."
+msgstr ""
+"<app>Маджонг</app> поддерживается сообществом добровольцев. Вы можете "
+"принять участие. Если вы заметили проблему, можете отправить <em>отчёт об "
+"ошибке</em>. Для этого перейдите по ссылке <link href=\"https://gitlab.gnome."
+"org/GNOME/gnome-mahjongg/issues/\"/>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Это система отслеживания ошибок, в которой пользователи и разработчики могут "
+"сообщать подробности об ошибках, сбоях и запрашивать улучшения."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already "
+"have an account, just click on the <gui>Sign in / Register</gui> link to "
+"create one."
+msgstr ""
+"Для участия вам нужна учётная запись, которая даст вам возможность получать "
+"доступ к сайту, сообщать об ошибках и оставлять комментарии. Кроме того, вам "
+"необходимо зарегистрироваться, чтобы получать обновления по электронной "
+"почте о статусе вашей ошибки. Если у вас еще нет учетной записи, просто "
+"нажмите ссылку <gui>Sign in / Register</gui>, чтобы создать ее."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:29
+msgid ""
+"Once you have an account, log in, and click on <gui>New issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
+"issues\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"Если у вас есть учетная запись, войдите в нее и нажмите <gui>New issue</"
+"gui>. Прежде чем сообщать об ошибке, ознакомьтесь с <link href=\"https://"
+"wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines"
+"\">руководством по написанию ошибок</link> и, пожалуйста, <link href="
+"\"https://gitlab .gnome.org/GNOME/gnome-mahjongg/issues\">просмотрите</link> "
+"список ошибок, чтобы убедиться, что о ней ещё никто не сообщил."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"If you are requesting a new feature, choose <gui>1. Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit Issue</gui>."
+msgstr ""
+"Если вы запрашиваете новую функцию, выберите <gui>1. Функция</gui> в меню "
+"<gui>Ярлыки</gui>. Заполните разделы «Заголовок» и «Описание» и нажмите "
+"<gui>Отправить проблему</gui>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:37
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Вашему отчету будет присвоен идентификационный номер, и его статус будет "
+"обновляться по мере обработки."
+
+#. (itstool) path: credit/name
+#: C/bonustiles.page:11
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#. (itstool) path: figure/title
+#: C/bonustiles.page:18 C/bonustiles.page:30
+msgid "Bonus tiles"
+msgstr "Бонусные кости"
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:20
+msgid ""
+"There are eight bonus tiles: four flowers and four seasons. The flower group "
+"consists of blue winter motives in the postmodern theme and yellow symbols "
+"in the smooth theme. The season group consists of yellow spring motives in "
+"the postmodern theme and black symbols in the smooth theme. The identical "
+"bonus tiles are matched in the postmodern theme and the bonus tiles with the "
+"same symbol color are matched in the smooth theme."
+msgstr ""
+"Есть восемь бонусных костей: четыре цветка и четыре сезона. Цветочная группа "
+"состоит из голубых зимних мотивов в postmodern теме и желтых символов в "
+"smooth теме. Сезонная группа состоит из желтых весенних мотивов в postmodern "
+"теме и чёрных символов в smooth теме. Идентичные бонусные кости совпадают в "
+"postmodern теме, а бонусные кости с одинаковым цветом символов совпадают в "
+"smooth теме."
+
+#. (itstool) path: page/p
+#: C/bonustiles.page:27
+msgid "Some of the matching bonus tiles in smooth theme are shown below:"
+msgstr "Некоторые из совпадающих бонусных костей в smooth теме показаны ниже:"
+
+#. (itstool) path: page/title
+#: C/develop.page:20
+msgid "Help develop"
+msgstr "Помощь в разработке"
+
+#. (itstool) path: page/p
+#: C/develop.page:21
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Games</app> разрабатываются и поддерживаются сообществом "
+"добровольцев. Вы можете принять в этом участие."
+
+#. (itstool) path: page/p
+#: C/develop.page:24
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Если вы хотите <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">помочь в разработке <app>GNOME Games</app></link>, можете связаться с "
+"разработчиками, воспользовавшись <link href=\"https://cbe005.chat.mibbit."
+"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, или через наш "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">список "
+"рассылки</link>."
+
+#. (itstool) path: page/title
+#: C/documentation.page:18
+msgid "Help write documentation"
+msgstr "Помощь в написании документации"
+
+#. (itstool) path: page/p
+#: C/documentation.page:20
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Документация <app>GNOME Games</app> поддерживается сообществом добровольцев. "
+"Вы можете принять в этом участие."
+
+#. (itstool) path: page/p
+#: C/documentation.page:23
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"https://mail.gnome."
+"org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Чтобы внести свой вклад в проект документации, свяжитесь с нами используя "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">irc</link>, или через наш <link href=\"https://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">список рассылки</link>."
+
+#. (itstool) path: page/p
+#: C/documentation.page:25
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Наша <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link>-страница содержит полезную информацию."
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
+#: C/pause.page:12 C/rules.page:9 C/scoring.page:10
+msgid "Chris Beiser"
+msgstr "Chris Beiser"
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:18 C/hints.page:23 C/map.page:16 C/pause.page:20
+#: C/scoring.page:14 C/translate.page:20
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: page/title
+#: C/gameplay.page:26
+msgid "Basic gameplay"
+msgstr "Основы игрового процесса"
+
+#. (itstool) path: page/p
+#: C/gameplay.page:28
+msgid ""
+"<app>Mahjongg</app> is played by matching two identical tiles per turn. A "
+"tile is eligible for matching if no part of another tile is lying directly "
+"on it, and it has a free long edge on either the left or the right. You win "
+"by removing all tiles, and you are scored by the amount of time it takes you "
+"to do so."
+msgstr ""
+"В <app>Маджонг</app> играют, сопоставляя две одинаковые кости за ход. Кость "
+"подходит для сопоставления, если никакая часть другой кости не лежит "
+"непосредственно на ней, и у нее есть свободный длинный край либо слева, либо "
+"справа. Вы выиграете, если удалите все кости, а также получите очки за "
+"количестве времени, которое вам потребуется для этого."
+
+#. (itstool) path: page/p
+#: C/gameplay.page:34
+msgid ""
+"There are many different <link xref=\"map\">tile layouts</link> to choose "
+"from."
+msgstr ""
+"Существует множество различных <link xref=\"map\">раскладов</link> на выбор."
+
+#. (itstool) path: page/p
+#: C/gameplay.page:37
+msgid "To match two tiles:"
+msgstr "Чтобы сопоставить две кости:"
+
+#. (itstool) path: item/p
+#: C/gameplay.page:41
+msgid ""
+"Click on the a tile you want to match. If it is an eligible tile, it will be "
+"highlighted."
+msgstr ""
+"Щёлкните на кость, которую вы хотите сопоставить. Если это подходящая кость, "
+"она будет выделена."
+
+#. (itstool) path: item/p
+#: C/gameplay.page:45
+msgid ""
+"Click on a matching tile. If it is a truly a matching tile, both tiles will "
+"vanish."
+msgstr ""
+"Щёлкните на соответствующую ей парную кость. Если это действительно "
+"совпадающая кость, то они обе исчезнут."
+
+#. (itstool) path: section/title
+#: C/gameplay.page:51 C/hints.page:47
+msgid "Video demonstration"
+msgstr "Видеодемонстрация"
+
+#. (itstool) path: media/p
+#: C/gameplay.page:54
+msgid "Video of gameplay"
+msgstr "Видео игрового процесса"
+
+#. (itstool) path: credit/name
+#: C/hints.page:19 C/moves.page:15 C/pause.page:16 C/rules.page:17
+#: C/strategy.page:14 C/translate.page:16
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/hints.page:31
+msgid "Hints"
+msgstr "Подсказки"
+
+#. (itstool) path: page/p
+#: C/hints.page:33
+msgid ""
+"<gui>Hint</gui> highlights two tiles that can be matched. If you have "
+"already selected one tile, it will show a match for that piece if one exists."
+msgstr ""
+"<gui>Подсказка</gui> выделяет две кости, которые можно сопоставить. Если вы "
+"уже выбрали кость, то будет показано совпадение для неё, если это возможно."
+
+#. (itstool) path: page/p
+#: C/hints.page:37
+msgid ""
+"<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
+"gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
+"key></keyseq>."
+msgstr ""
+"<gui>Подсказку</gui> можно получить, нажав кнопку <gui style=\"button\">�</"
+"gui> в заголовке, или воспользовавшись комбинацией <keyseq><key>Ctrl</"
+"key><key>H</key></keyseq>."
+
+#. (itstool) path: note/p
+#: C/hints.page:41
+msgid ""
+"<gui>Hint</gui> can make <app>Mahjongg</app> too easy, and should be used "
+"sparingly."
+msgstr ""
+"<gui>Подсказка</gui> может сделать игру <app>Маджонг</app> слишком простой, "
+"и её следует использовать с осторожностью."
+
+#. (itstool) path: note/p
+#: C/hints.page:43
+msgid "There is a 30-second penalty for each use of the \"hint\" option."
+msgstr "За каждое использование \"подсказки\" налагается 30-секундный штраф."
+
+#. (itstool) path: div/p
+#: C/hints.page:52
+msgid "You can use <gui>Hints</gui> to help you find identical tiles."
+msgstr ""
+"Вы можете использовать <gui>Подсказки</gui>, для помощи в поиске одинаковых "
+"костей."
+
+#. (itstool) path: div/p
+#: C/hints.page:57
+msgid "Press <keyseq><key>Ctrl</key><key>H</key></keyseq>."
+msgstr "Нажмите <keyseq><key>Ctrl</key><key>H</key></keyseq>."
+
+#. (itstool) path: div/p
+#: C/hints.page:62
+msgid "There is a 30 s penalty for each use of this option."
+msgstr "За каждое использование этой опции налагается 30-секундный штраф."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Mahjongg"
+msgstr "Маджонг"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Mahjongg"
+msgstr "Маджонг"
+
+#. (itstool) path: info/desc
+#: C/index.page:11
+msgid "GNOME Mahjongg help."
+msgstr "Справка по GNOME Маджонг."
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid "<_:media-1/> Mahjongg"
+msgstr "<_:media-1/> Маджонг"
+
+#. (itstool) path: page/p
+#: C/index.page:23
+msgid ""
+"<app>Mahjongg</app> is a simple pattern recognition game. You score points "
+"by matching identical tiles."
+msgstr ""
+"<app>Маджонг</app> – это простая игра на распознавание узоров. Вы набираете "
+"очки, сопоставляя одинаковые кости."
+
+#. (itstool) path: section/title
+#: C/index.page:28
+msgid "Playing Mahjongg"
+msgstr "Игра в маджонг"
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Useful tips"
+msgstr "Полезные советы"
+
+#. (itstool) path: section/title
+#: C/index.page:36
+msgid "Get involved"
+msgstr "Присоединяйтесь"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Эта работа находится под лицензией <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Правовая информация."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Лицензия"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Эта работа распространяется под лицензией CreativeCommons Attribution-Share "
+"Alike 3.0 Unported."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Вы свободны:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Делиться</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Копировать, распространять и передавать эту работу."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>Изменять</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Адаптировать эту работу."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "При следующих условиях:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Ссылка на источник</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Вы должны указать авторство работы в порядке, указанном автором или "
+"лицензиатом (но не таким образом, что они поддерживают вас или использование "
+"вами работы)."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Share Alike</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Если вы изменяете, трансформируете или берёте за основу данную работу, вы "
+"можете распространять полученное произведение только по такой же, подобной "
+"или совместимой лицензии."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Полный текст лицензии смотрите на <link href=\"http://creativecommons.org/"
+"licenses/by-sa/3.0/legalcode\">веб-сайт CreativeCommons</link>, или "
+"прочитайте полный текст <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+
+#. (itstool) path: credit/years
+#: C/map.page:13
+msgid "2012 2013"
+msgstr "2012 2013"
+
+#. (itstool) path: credit/years
+#: C/map.page:18 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/map.page:22
+msgid "Change tile layout"
+msgstr "Изменение расклада костей"
+
+#. (itstool) path: page/p
+#: C/map.page:24
+msgid "There are 9 different layouts. To select a different tile layout:"
+msgstr ""
+"Есть 9 различных вариантов расклада. Чтобы выбрать другой расклад, выполните:"
+
+#. (itstool) path: item/p
+#: C/map.page:27
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui style="
+"\"menuitem\">Параметры</gui>."
+
+#. (itstool) path: item/p
+#: C/map.page:29
+msgid "Select a <gui>Layout</gui> from the drop-down menu."
+msgstr "Выберите вариант <gui>Расклада</gui> из раскрывающегося списка."
+
+#. (itstool) path: page/p
+#: C/map.page:33
+msgid ""
+"Your new tile layout will take effect immediately unless you have already "
+"started a game and chose for the effect to take place after you are finished."
+msgstr ""
+"Ваш новый расклад вступит в силу немедленно, если только вы ещё не начали "
+"игру и не выбрали, чтобы это произошло после окончания игры."
+
+#. (itstool) path: media/p
+#: C/map.page:41
+msgid "easy image"
+msgstr "изображение расклада Простой"
+
+#. (itstool) path: media/p
+#: C/map.page:46
+msgid "the ziggurat layout image"
+msgstr "изображение расклада Зиккурат"
+
+#. (itstool) path: media/p
+#: C/map.page:51
+msgid "four bridges layout image"
+msgstr "изображение расклада Четыре моста"
+
+#. (itstool) path: media/p
+#: C/map.page:56
+msgid "overpass layout image"
+msgstr "изображение расклада Переход"
+
+#. (itstool) path: td/p
+#: C/map.page:61
+msgid "<em>Easy</em>"
+msgstr "<em>Простой</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:62
+msgid "<em>The Ziggurat</em>"
+msgstr "<em>Зиккурат</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:63
+msgid "<em>Four Bridges</em>"
+msgstr "<em>Четыре моста</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:64
+msgid "<em>Overpass</em>"
+msgstr "<em>Переход</em>"
+
+#. (itstool) path: media/p
+#: C/map.page:72
+msgid "cloud layout image"
+msgstr "изображение расклада Облако"
+
+#. (itstool) path: media/p
+#: C/map.page:77
+msgid "tic tac toe layout image"
+msgstr "изображение расклада Крестики-нолики"
+
+#. (itstool) path: media/p
+#: C/map.page:82
+msgid "red dragon layout image"
+msgstr "изображение расклада Красный дракон"
+
+#. (itstool) path: media/p
+#: C/map.page:87
+msgid "pyramid walls layout image"
+msgstr "изображение расклада Стены пирамиды"
+
+#. (itstool) path: td/p
+#: C/map.page:92
+msgid "<em>Cloud</em>"
+msgstr "<em>Облако</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:93
+msgid "<em>Tic-tac-toe</em>"
+msgstr "<em>Крестики-нолики</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:94
+msgid "<em>Red Dragon</em>"
+msgstr "<em>Красный дракон</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:95
+msgid "<em>Pyramid's Walls</em>"
+msgstr "<em>Стены пирамиды</em>"
+
+#. (itstool) path: media/p
+#: C/map.page:103
+msgid "confounding cross layout image"
+msgstr "изображение расклада Смешанный крест"
+
+#. (itstool) path: media/p
+#: C/map.page:108
+msgid "difficult layout image"
+msgstr "изображение расклада Сложный"
+
+#. (itstool) path: td/p
+#: C/map.page:113
+msgid "<em>Confounding Cross</em>"
+msgstr "<em>Смешанный крест</em>"
+
+#. (itstool) path: td/p
+#: C/map.page:114
+msgid "<em>Difficult</em>"
+msgstr "<em>Сложный</em>"
+
+#. (itstool) path: page/title
+#: C/moves.page:23
+msgid "Moves left"
+msgstr "Осталось ходов"
+
+#. (itstool) path: page/p
+#: C/moves.page:25
+msgid ""
+"The <gui>Moves Left</gui> counter is located on the header bar, next to the "
+"time counter. It displays the number of different moves that can be made. It "
+"can help you see how far you are from running out of moves, and whether "
+"you've seen all possible moves."
+msgstr ""
+"Счетчик <gui>Оставшихся ходов</gui> расположен в строке заголовка, рядом со "
+"счетчиком времени. Он отображает количество ходов, которые можно сделать. "
+"Это может помочь вам увидеть, насколько вы далеки от исчерпания ходов и "
+"видите ли вы все возможные ходы."
+
+#. (itstool) path: page/title
+#: C/pause.page:28
+msgid "Pausing your game"
+msgstr "Приостановка игры"
+
+#. (itstool) path: page/p
+#: C/pause.page:30
+msgid "You can pause your current game using one of the following methods:"
+msgstr "Вы можете приостановить текущую игру одним из следующих способов:"
+
+#. (itstool) path: item/p
+#: C/pause.page:34
+msgid "The <_:media-1/> button in the header bar."
+msgstr "Кнопкой <_:media-1/> в заголовке окна."
+
+#. (itstool) path: item/p
+#: C/pause.page:38
+msgid ""
+"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+msgstr ""
+"Кнопкой <key>Pause</key> на клавиатуре. Эта клавиша присутствует не на всех "
+"клавиатурах."
+
+#. (itstool) path: page/title
+#: C/rules.page:25
+msgid "Rules"
+msgstr "Правила"
+
+#. (itstool) path: item/p
+#: C/rules.page:27
+msgid "Tiles must be identical to be removed."
+msgstr "Для удаления кости должны быть идентичными."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid "Fully and partially covered tiles cannot be matched."
+msgstr "Полностью и частично покрытые кости не могут быть сопоставлены."
+
+#. (itstool) path: item/p
+#: C/rules.page:29
+msgid "Tiles must have a free long edge in order to be eligible for matching."
+msgstr ""
+"Кости должны иметь свободный длинный край, чтобы иметь право на "
+"сопоставление."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid "You can undo a move without penalty."
+msgstr "Вы можете отменить ход без штрафа."
+
+#. (itstool) path: item/p
+#: C/rules.page:32 C/strategy.page:41
+msgid ""
+"Using the <link xref=\"hints\">hint</link> option adds a 30-second penalty "
+"to your time."
+msgstr ""
+"Использование <link xref=\"hints\">подсказки</link> добавляет к вашему "
+"времени 30-секундный штраф."
+
+#. (itstool) path: item/p
+#: C/rules.page:34
+msgid ""
+"If the arrangement does not allow further tiles to be matched, you will be "
+"given the option to shuffle the tiles in order to keep playing."
+msgstr ""
+"Если расположение не позволяет сопоставлять кости, вам будет предоставлена ​​"
+"возможность перетасовать их для продолжения игры."
+
+#. (itstool) path: item/p
+#: C/rules.page:37 C/strategy.page:43
+msgid "Shuffling tiles adds a 60-second penalty to your time."
+msgstr "Перетасовка костей добавляет к вашему времени 60-секундный штраф."
+
+#. (itstool) path: page/title
+#: C/scoring.page:22
+msgid "Scoring"
+msgstr "Подсчёт очков"
+
+#. (itstool) path: page/p
+#: C/scoring.page:24
+msgid ""
+"In <app>Mahjongg</app>, you are scored by how quickly you can complete a "
+"board."
+msgstr ""
+"В <app>Маджонг</app> вы оцениваетесь по тому, как быстро можете завершить "
+"партию."
+
+#. (itstool) path: page/p
+#: C/scoring.page:27
+msgid "To view the highscore board:"
+msgstr "Для просмотра таблицы рекордов:"
+
+#. (itstool) path: item/p
+#: C/scoring.page:29
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Scores</gui>."
+msgstr ""
+"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui style="
+"\"menuitem\">Результаты</gui>."
+
+#. (itstool) path: note/p
+#: C/scoring.page:34
+msgid ""
+"The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
+"view the highscores for a particular map by selecting it from the drop-down "
+"menu."
+msgstr ""
+"Очки сохраняются для каждого <link xref=\"map\">расклада</link>. Вы можете "
+"просмотреть рекорды для конкретного расклада, выбрав его в раскрывающемся "
+"меню."
+
+#. (itstool) path: page/title
+#: C/strategy.page:21
+msgid "Strategy"
+msgstr "Стратегия"
+
+#. (itstool) path: page/p
+#: C/strategy.page:23
+msgid ""
+"Since each <link xref=\"map\">tile layout</link> requires a different "
+"approach, there is no one universal strategy. However, there are some "
+"strategy tips to keep in mind while you play:"
+msgstr ""
+"Поскольку каждый <link xref=\"map\">расклад</link> требует своего подхода, "
+"единой универсальной стратегии не существует. Тем не менее, есть несколько "
+"советов по стратегии, о которых следует помнить во время игры:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:28
+msgid ""
+"The general strategy is to keep removing matching tiles in such a way that "
+"each removed tile will expose further tiles. A good strategy would be to "
+"expose new tiles with every set of tiles you match and eliminate."
+msgstr ""
+"Общая стратегия состоит в том, чтобы продолжать удалять совпадающие кости "
+"таким образом, чтобы каждая удаленная кость открывала новые. Хорошей "
+"стратегией было бы открывать новые кости с каждым удалением совпадающей пары "
+"костей."
+
+#. (itstool) path: item/p
+#: C/strategy.page:32
+msgid ""
+"Choosing easily accessible tiles, such as those from the top levels, is not "
+"beneficial. This strategy leaves essential tiles under cover, increasing "
+"your chances of losing the game."
+msgstr ""
+"Выбор легкодоступных костей, например, с верхних уровней, не выгоден. Эта "
+"стратегия оставляет важные кости прикрытыми, увеличивая шансы на проигрыш в "
+"игре."
+
+#. (itstool) path: item/p
+#: C/strategy.page:35
+msgid ""
+"Since you are <link xref=\"scoring\">scored</link> by how quickly you finish "
+"the game, time is the most important factor in the game. It is therefore "
+"important to be fast."
+msgstr ""
+"Поскольку <link xref=\"scoring\">подсчёт очков</link> происходит по тому, "
+"как быстро вы закончите игру, время является наиболее важным фактором в "
+"игре. Поэтому важно быть быстрым."
+
+#. (itstool) path: page/title
+#: C/translate.page:28
+msgid "Help translate"
+msgstr "Помощь в переводе"
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"The GNOME Games user interface and documentation is being translated by a "
+"world-wide volunteer community: you are welcome to participate."
+msgstr ""
+"Пользовательский интерфейс и документация GNOME Games переводятся "
+"международным сообществом добровольцев: вы можете принять в этом участие."
+
+#. (itstool) path: page/p
+#: C/translate.page:33
+msgid ""
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Есть <link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">множество "
+"языков</link>, для которых по-прежнему необходимы переводы."
+
+#. (itstool) path: page/p
+#: C/translate.page:36
+msgid ""
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Чтобы начать перевод, вам необходимо <link href=\"https://l10n.gnome.org"
+"\">создать учетную запись</link> и присоединиться к <link href=\"https://"
+"l10n.gnome.org/teams/ \">команда переводчиков</link> для вашего языка. Это "
+"даст вам возможность загружать новые переводы."
+
+#. (itstool) path: page/p
+#: C/translate.page:41
+msgid ""
+"You can chat with GNOME translators using irc: join the #i18n channel on the "
+"irc.gnome.org server. People on the channel are located worldwide, so you "
+"may not get an immediate response as a result of timezone differences."
+msgstr ""
+"Вы можете общаться с переводчиками GNOME, используя irc: join the #i18n "
+"channel на сервере irc.gnome.org. Люди на канале находятся по всему миру, "
+"поэтому вы можете не получить немедленный ответ из-за разницы часовых поясов."
+
+#. (itstool) path: page/p
+#: C/translate.page:45
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Кроме того, вы можете связаться с командой интернационализации, используя их "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">список "
+"рассылки</link>."
