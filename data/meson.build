@@ -21,7 +21,6 @@ install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('maya.png', install_dir: join_paths (pkgdatadir, 'themes'))
 
 desktop_file = i18n.merge_file (
-  'desktop-file',
   input:       'org.gnome.Mahjongg.desktop.in',
   output:      'org.gnome.Mahjongg.desktop',
   install:     true,
@@ -41,7 +40,7 @@ if desktop_file_validate.found()
   )
 endif
 
-appdata_file = i18n.merge_file ('appdata-file',
+appdata_file = i18n.merge_file (
                  input: 'org.gnome.Mahjongg.appdata.xml.in',
                  output: 'org.gnome.Mahjongg.appdata.xml',
                  install: true,
