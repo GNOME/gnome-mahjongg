@@ -5,8 +5,13 @@ install_data ('icons' / 'hicolor' / 'scalable' / 'org.gnome.Mahjongg.svg',
 install_data ('icons' / 'hicolor' / 'symbolic' / 'org.gnome.Mahjongg-symbolic.svg',
               install_dir: hicolordir / 'symbolic' / 'apps')
 
+schemasdir = gio_dep.get_variable(
+  pkgconfig: 'schemasdir',
+  pkgconfig_define: ['datadir', get_option('datadir')],
+  default_value: join_paths(get_option('datadir'), 'glib-2.0/schemas'),
+)
 install_data ('org.gnome.Mahjongg.gschema.xml',
-  install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
+  install_dir: schemasdir
 )
 
 install_data ('mahjongg.map', install_dir: join_paths (pkgdatadir, 'maps'))
