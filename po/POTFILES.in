@@ -2,11 +2,13 @@
 # Please keep this file in alphabetical order.
 data/org.gnome.Mahjongg.appdata.xml.in
 data/org.gnome.Mahjongg.desktop.in
-data/help-overlay.ui
 data/org.gnome.Mahjongg.gschema.xml
 data/translatable_game_names.h
+data/help-overlay.ui
+data/ui/window.ui
 src/game.vala
 src/game-view.vala
 src/gnome-mahjongg.vala
 src/map.vala
 src/score-dialog.vala
+src/window.vala
