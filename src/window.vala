@@ -21,10 +21,11 @@ public class MahjonggWindow : Gtk.ApplicationWindow {
 
     public void set_subtitle (GameView game_view, string clock)
     {
+        string moves_left = _("Moves Left:");
         if (game_view.game.move_number != 1)
-            titlewidget.set_subtitle ("Moves Left: %2u   %s".printf (game_view.game.moves_left, clock));
+            titlewidget.set_subtitle (("%s %2u   %s").printf (moves_left, game_view.game.moves_left, clock));
         else
-            titlewidget.set_subtitle ("Moves Left: 0   %s".printf (clock));
+            titlewidget.set_subtitle (("%s 0   %s").printf (moves_left, clock));
     }
 
     public void pause ()

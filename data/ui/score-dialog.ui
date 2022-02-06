@@ -17,7 +17,7 @@
             <property name="spacing">6</property>
             <child>
               <object class="GtkLabel">
-                <property name="label">Layout: </property>
+                <property name="label" translatable="yes">Layout: </property>
               </object>
             </child>
             <child>

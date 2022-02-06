@@ -10,17 +10,17 @@
           <object class="AdwPreferencesGroup">
             <child>
               <object class="AdwComboRow" id="themes_row">
-                <property name="title">Theme</property>
+                <property name="title" translatable="yes">Theme</property>
               </object>
             </child>
             <child>
               <object class="AdwComboRow" id="layout_row">
-                <property name="title">Layout</property>
+                <property name="title" translatable="yes">Layout</property>
               </object>
             </child>
             <child>
               <object class="AdwActionRow">
-                <property name="title">Background color</property>
+                <property name="title" translatable="yes">Background color</property>
                 <child>
                   <object class="GtkColorButton" id="background_btn">
                     <property name="valign">center</property>
