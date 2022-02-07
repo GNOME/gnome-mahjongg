@@ -1,15 +1,15 @@
 # Swedish translation of help for GNOME Mahjongg.
-# Copyright © 2007-2020 gnome-mahjongg's COPYRIGHT HOLDER
+# Copyright © 2007-2022 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Daniel Nylander <po at danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2020.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"POT-Creation-Date: 2020-01-23 07:39+0000\n"
-"PO-Revision-Date: 2020-03-02 22:11+0100\n"
+"POT-Creation-Date: 2022-02-07 00:18+0000\n"
+"PO-Revision-Date: 2022-02-07 02:43+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -359,6 +359,12 @@ msgstr "Tryck <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 #: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Det är ett 30s straff för varje användning av det här alternativet."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link:trail"
+msgid "Mahjongg"
+msgstr "Mahjong"
 
 #. (itstool) path: info/title
 #: C/index.page:9
