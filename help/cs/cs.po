@@ -2,13 +2,13 @@
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the mahjongg help.
 #
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"POT-Creation-Date: 2020-01-23 07:39+0000\n"
-"PO-Revision-Date: 2020-03-08 22:27+0100\n"
+"POT-Creation-Date: 2022-02-07 00:18+0000\n"
+"PO-Revision-Date: 2022-03-01 14:08+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -100,8 +100,8 @@ msgid ""
 msgstr ""
 "Když už účet máte, přihlaste se a klikněte na <gui>New issue</gui>. Před "
 "nahlášením chyby si prosím přečtěte <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb"
-"</link> (odkaz je v angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/"
+"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb</"
+"link> (odkaz je v angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/"
 "gnome-mahjongg/issues\">podívejte</link> se prosím, jestli stejnou chybu "
 "nenahlásil už někdo jiný."
 
@@ -328,9 +328,9 @@ msgid ""
 "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
 "key></keyseq>."
 msgstr ""
-"K <gui>radě</gui> se můžete dostat zmáčknutím tlačítka <gui style=\"button\">"
-"�</gui> na hlavičkové liště nebo zmáčknutím kombinace kláves <keyseq><key>"
-"Ctrl</key><key>H</key></keyseq>."
+"K <gui>radě</gui> se můžete dostat zmáčknutím tlačítka <gui style=\"button"
+"\">�</gui> na hlavičkové liště nebo zmáčknutím kombinace kláves "
+"<keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/hints.page:41
@@ -360,6 +360,12 @@ msgstr "Zmáčkněte <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 #: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Za použití rady je časová penalizace 30 sekund."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link:trail"
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #. (itstool) path: info/title
 #: C/index.page:9
@@ -666,9 +672,9 @@ msgid ""
 "you've seen all possible moves."
 msgstr ""
 "Počítadlo <gui>Zbývajících tahů</gui> je umístěno na hlavičkové liště vedle "
-"časomíry. Zobrazuje počet různých tahů, které je možné vykonat. Pomůže vám to "
-"se zorientovat, kolik tahů vám zbývá, než se dostanete do situace, kdy nebude "
-"žádný tah možný."
+"časomíry. Zobrazuje počet různých tahů, které je možné vykonat. Pomůže vám "
+"to se zorientovat, kolik tahů vám zbývá, než se dostanete do situace, kdy "
+"nebude žádný tah možný."
 
 #. (itstool) path: page/title
 #: C/pause.page:28
