@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg-help\n"
-"POT-Creation-Date: 2020-03-05 13:11+0000\n"
+"POT-Creation-Date: 2022-02-07 00:18+0000\n"
 "PO-Revision-Date: 2020-03-05 14:13+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -351,6 +351,12 @@ msgstr "Naciśnij klawisze <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 #: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "Za każde użycie podpowiedzi naliczana jest kara 30 sekund."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link:trail"
+msgid "Mahjongg"
+msgstr "Madżong"
 
 #. (itstool) path: info/title
 #: C/index.page:9
