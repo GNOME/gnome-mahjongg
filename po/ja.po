@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2019-06-11 11:03+0000\n"
+"POT-Creation-Date: 2022-02-05 11:44+0000\n"
 "PO-Revision-Date: 2019-09-09 18:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -50,12 +50,12 @@ msgid ""
 "time penalty."
 msgstr ""
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:36
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
 msgid "The GNOME Project"
 msgstr "The GNOME Project"
 
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:597
-#: src/gnome-mahjongg.vala:782
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "GNOME 上海"
 
@@ -69,61 +69,6 @@ msgid "game;strategy;puzzle;board;"
 msgstr ""
 "game;strategy;puzzle;board;ゲーム;ストラテジー;パズル;ボード;logic;ロジック;"
 "論理;思考;Mahjongg;"
-
-#: data/help-overlay.ui:11
-msgctxt "shortcut window"
-msgid "General"
-msgstr "全般"
-
-#: data/help-overlay.ui:17
-msgctxt "shortcut window"
-msgid "Start a new game"
-msgstr "新しいゲームを開始する"
-
-#: data/help-overlay.ui:24
-msgctxt "shortcut window"
-msgid "Pause the game"
-msgstr "ゲームを一時停止する"
-
-#: data/help-overlay.ui:31
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "元に戻す"
-
-#: data/help-overlay.ui:38
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "やり直す"
-
-#: data/help-overlay.ui:45
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "フルスクリーン"
-
-#: data/help-overlay.ui:52
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "終了する"
-
-#: data/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Help"
-msgstr "ヘルプ"
-
-#: data/help-overlay.ui:65
-msgctxt "shortcut window"
-msgid "Show a hint"
-msgstr "ヒントを表示する"
-
-#: data/help-overlay.ui:72
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "ヘルプを表示する"
-
-#: data/help-overlay.ui:79
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "キーボードショートカットを表示する"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -192,150 +137,195 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "上級"
 
-#: src/game-view.vala:132
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr ""
+
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "新しいゲームを開始する"
+
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "ゲームを一時停止する"
+
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "元に戻す"
+
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "やり直す"
+
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "ヒントを表示する"
+
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "General"
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "全般"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr ""
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "キーボードショートカットを表示する"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "ヘルプを表示する"
+
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "フルスクリーン"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "終了する"
+
+#: data/ui/window.ui:53 src/score-dialog.vala:44
+msgid "New Game"
+msgstr "新しいゲーム"
+
+#: data/ui/window.ui:57
+#, fuzzy
+#| msgid "_Restart Game"
+msgid "Restart Game"
+msgstr "ゲームをやり直す(_R)"
+
+#: data/ui/window.ui:61
+#, fuzzy
+#| msgid "_Scores"
+msgid "Scores"
+msgstr "スコア(_S)"
+
+#: data/ui/window.ui:67
+msgid "Preferences"
+msgstr "設定"
+
+#: data/ui/window.ui:71
+#, fuzzy
+#| msgid "_Keyboard Shortcuts"
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット(_K)"
+
+#: data/ui/window.ui:75
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Help"
+msgid "Help"
+msgstr "ヘルプ"
+
+#: data/ui/window.ui:79
+#, fuzzy
+#| msgid "_About Mahjongg"
+msgid "About Mahjongg"
+msgstr "GNOME 上海について(_A)"
+
+#: src/game-view.vala:228
 msgid "Paused"
 msgstr "一時停止"
 
-#: src/gnome-mahjongg.vala:34
+#: src/gnome-mahjongg.vala:25
 msgid "Print release version and exit"
 msgstr "バージョンを表示して終了する"
 
-#: src/gnome-mahjongg.vala:90
-msgid "Moves Left:"
-msgstr "取れる牌の組:"
-
-#: src/gnome-mahjongg.vala:116
-msgid "Undo your last move"
-msgstr "直近の操作を元に戻す"
-
-#: src/gnome-mahjongg.vala:122
-msgid "Redo your last move"
-msgstr "直近の操作をやり直す"
-
-#: src/gnome-mahjongg.vala:128
-msgid "Receive a hint for your next move"
-msgstr "次の操作のヒントを得る"
-
-#: src/gnome-mahjongg.vala:133 src/gnome-mahjongg.vala:627
-msgid "Pause the game"
-msgstr "ゲームを一時停止"
-
-#: src/gnome-mahjongg.vala:143
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: src/gnome-mahjongg.vala:144
-msgid "_Restart Game"
-msgstr "ゲームをやり直す(_R)"
-
-#: src/gnome-mahjongg.vala:145
-msgid "_Scores"
-msgstr "スコア(_S)"
-
-#: src/gnome-mahjongg.vala:148
-msgid "_Preferences"
-msgstr "設定(_P)"
-
-#: src/gnome-mahjongg.vala:149
-msgid "_Keyboard Shortcuts"
-msgstr "キーボードショートカット(_K)"
-
-#: src/gnome-mahjongg.vala:150
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: src/gnome-mahjongg.vala:151
-msgid "_About Mahjongg"
-msgstr "GNOME 上海について(_A)"
-
-#: src/gnome-mahjongg.vala:282
+#: src/gnome-mahjongg.vala:155
 msgid "Do you want to start a new game with this map?"
 msgstr "このマップで新しいゲームを開始しますか?"
 
-#: src/gnome-mahjongg.vala:283
+#: src/gnome-mahjongg.vala:156
 msgid "If you continue playing the next game will use the new map."
 msgstr "プレイを続行すると、次のゲームでは新しいマップを使用します。"
 
-#: src/gnome-mahjongg.vala:284
+#: src/gnome-mahjongg.vala:157
 msgid "_Continue playing"
 msgstr "続行する(_C)"
 
-#: src/gnome-mahjongg.vala:285
+#: src/gnome-mahjongg.vala:158
 msgid "Use _new map"
 msgstr "新しいマップ(_N)"
 
-#: src/gnome-mahjongg.vala:353
+#: src/gnome-mahjongg.vala:209
 msgid "There are no more moves."
 msgstr "残念ながら、手詰まりです。"
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:210
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr ""
-"各パズルは少なくとも一つは答えがあります。牌を元に戻して答えを探すか、"
-"このゲームをやり直すか、新しいゲームを開始するか選択してください。"
+"各パズルは少なくとも一つは答えがあります。牌を元に戻して答えを探すか、この"
+"ゲームをやり直すか、新しいゲームを開始するか選択してください。"
 
-#: src/gnome-mahjongg.vala:356
+#: src/gnome-mahjongg.vala:212
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
-msgstr ""
-"牌を混ぜ直すこともできますが、解答に繋がる保証はありません。"
+msgstr "牌を混ぜ直すこともできますが、解答に繋がる保証はありません。"
 
-#: src/gnome-mahjongg.vala:357
+#: src/gnome-mahjongg.vala:213
 msgid "_Undo"
 msgstr "元に戻す(_U)"
 
-#: src/gnome-mahjongg.vala:358
+#: src/gnome-mahjongg.vala:214
 msgid "_Restart"
 msgstr "やり直す(_R)"
 
-#: src/gnome-mahjongg.vala:359
+#: src/gnome-mahjongg.vala:215
 msgid "_New game"
 msgstr "新しいゲーム(_N)"
 
-#: src/gnome-mahjongg.vala:360
+#: src/gnome-mahjongg.vala:216
 msgid "_Shuffle"
 msgstr "混ぜる(_S)"
 
-#: src/gnome-mahjongg.vala:412
-msgid "Preferences"
-msgstr "設定"
-
-#: src/gnome-mahjongg.vala:428
-msgid "_Theme:"
-msgstr "テーマ(_T):"
-
-#: src/gnome-mahjongg.vala:456
-msgid "_Layout:"
-msgstr "レイアウト(_L):"
-
-#: src/gnome-mahjongg.vala:482
-msgid "_Background color:"
-msgstr "背景色(_B):"
-
-#: src/gnome-mahjongg.vala:496
-msgid "_Close"
-msgstr "閉じる(_C)"
-
-#: src/gnome-mahjongg.vala:563
+#: src/gnome-mahjongg.vala:328
 msgid "Main game:"
 msgstr "メインゲーム:"
 
-#: src/gnome-mahjongg.vala:572
+#: src/gnome-mahjongg.vala:338
 msgid "Maps:"
 msgstr "マップ:"
 
-#: src/gnome-mahjongg.vala:580
+#: src/gnome-mahjongg.vala:346
 msgid "Tiles:"
 msgstr "牌:"
 
-#: src/gnome-mahjongg.vala:600
+#: src/gnome-mahjongg.vala:366
 msgid "A matching game played with Mahjongg tiles"
 msgstr "同じ麻雀牌を見つけていくゲームです"
 
-#: src/gnome-mahjongg.vala:606
+#: src/gnome-mahjongg.vala:372
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -350,33 +340,65 @@ msgstr ""
 "Yukihiro Nakai <Nakai@technologist.com>\n"
 "Yuusuke Tahara <tahara@gnome.gr.jp>"
 
-#: src/gnome-mahjongg.vala:622
-msgid "Unpause the game"
-msgstr "ゲームを再開"
-
-#: src/score-dialog.vala:28
+#: src/score-dialog.vala:43
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: src/score-dialog.vala:29
-msgid "New Game"
-msgstr "新しいゲーム"
-
-#: src/score-dialog.vala:32
+#: src/score-dialog.vala:47
 msgid "OK"
 msgstr "OK"
 
-#: src/score-dialog.vala:44
-msgid "Layout:"
-msgstr "レイアウト:"
-
-#: src/score-dialog.vala:69
+#: src/score-dialog.vala:53
 msgid "Date"
 msgstr "日付"
 
-#: src/score-dialog.vala:72
+#: src/score-dialog.vala:56
 msgid "Time"
 msgstr "経過時間"
+
+#: src/window.vala:33
+msgid "Unpause the game"
+msgstr "ゲームを再開"
+
+#: src/window.vala:39
+msgid "Pause the game"
+msgstr "ゲームを一時停止"
+
+#~ msgid "Moves Left:"
+#~ msgstr "取れる牌の組:"
+
+#~ msgid "Undo your last move"
+#~ msgstr "直近の操作を元に戻す"
+
+#~ msgid "Redo your last move"
+#~ msgstr "直近の操作をやり直す"
+
+#~ msgid "Receive a hint for your next move"
+#~ msgstr "次の操作のヒントを得る"
+
+#~ msgid "_New Game"
+#~ msgstr "新しいゲーム(_N)"
+
+#~ msgid "_Preferences"
+#~ msgstr "設定(_P)"
+
+#~ msgid "_Help"
+#~ msgstr "ヘルプ(_H)"
+
+#~ msgid "_Theme:"
+#~ msgstr "テーマ(_T):"
+
+#~ msgid "_Layout:"
+#~ msgstr "レイアウト(_L):"
+
+#~ msgid "_Background color:"
+#~ msgstr "背景色(_B):"
+
+#~ msgid "_Close"
+#~ msgstr "閉じる(_C)"
+
+#~ msgid "Layout:"
+#~ msgstr "レイアウト:"
 
 #~ msgid "true if the window is fullscren"
 #~ msgstr "ウィンドウがフルスクリーンの場合は TRUE"
