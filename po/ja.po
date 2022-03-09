@@ -1,5 +1,5 @@
 # gnome-games ja.po.
-# Copyright (C) 1998-2019 Free Software Foundation, Inc.
+# Copyright (C) 1998-2010, 2012-2013, 2019, 2022 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -9,14 +9,14 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
-# sicklylife <translation@sicklylife.jp>, 2019.
+# sicklylife <translation@sicklylife.jp>, 2019, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
 "POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2019-09-09 18:00+0900\n"
+"PO-Revision-Date: 2022-03-09 20:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -72,11 +72,11 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
-msgstr "ウィンドウの幅 (ピクセル単位) です。"
+msgstr "ウィンドウの幅 (ピクセル単位)"
 
 #: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
-msgstr "ウィンドウの高さ (ピクセル単位) です。"
+msgstr "ウィンドウの高さ (ピクセル単位)"
 
 #: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
@@ -141,7 +141,7 @@ msgstr "上級"
 #: data/help-overlay.ui:12
 msgctxt "shortcut window"
 msgid "Main functions"
-msgstr ""
+msgstr "主機能"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
 #: data/help-overlay.ui:19
@@ -175,18 +175,15 @@ msgstr "ヒントを表示する"
 
 #. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
 #: data/help-overlay.ui:59
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "General"
 msgctxt "shortcut window"
 msgid "Generic"
-msgstr "全般"
+msgstr "汎用"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
 #: data/help-overlay.ui:66
 msgctxt "shortcut window"
 msgid "Toggle main menu"
-msgstr ""
+msgstr "メインメニューの表示を切り替える"
 
 #. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
 #: data/help-overlay.ui:74
@@ -217,39 +214,28 @@ msgid "New Game"
 msgstr "新しいゲーム"
 
 #: data/ui/window.ui:57
-#, fuzzy
-#| msgid "_Restart Game"
 msgid "Restart Game"
-msgstr "ゲームをやり直す(_R)"
+msgstr "ゲームをやり直す"
 
 #: data/ui/window.ui:61
-#, fuzzy
-#| msgid "_Scores"
 msgid "Scores"
-msgstr "スコア(_S)"
+msgstr "スコア"
 
 #: data/ui/window.ui:67
 msgid "Preferences"
 msgstr "設定"
 
 #: data/ui/window.ui:71
-#, fuzzy
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
-msgstr "キーボードショートカット(_K)"
+msgstr "キーボードショートカット"
 
 #: data/ui/window.ui:75
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "ヘルプ"
 
 #: data/ui/window.ui:79
-#, fuzzy
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
-msgstr "GNOME 上海について(_A)"
+msgstr "GNOME 上海について"
 
 #: src/game-view.vala:228
 msgid "Paused"
