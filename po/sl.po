@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-07 12:52+0000\n"
-"PO-Revision-Date: 2022-02-07 16:57+0100\n"
+"POT-Creation-Date: 2022-03-17 10:59+0000\n"
+"PO-Revision-Date: 2022-03-17 12:42+0100\n"
 "Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -214,6 +214,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Konča program"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Postavitev"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Barva ozadja"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Postavitev: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nova igra"
@@ -341,16 +357,17 @@ msgstr "Datum"
 msgid "Time"
 msgstr "Čas"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Število preostalih premikov:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Nadaljuj z igro"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Premor igranja"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Število preostalih premikov:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Razveljavi zadnjo potezo"
@@ -370,20 +387,11 @@ msgstr "Premor igranja"
 #~ msgid "_Help"
 #~ msgstr "Pomo_č"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Postavitev:"
 
-#~ msgid "_Background color:"
-#~ msgstr "Barva _ozadja:"
-
 #~ msgid "_Close"
 #~ msgstr "_Zapri"
-
-#~ msgid "Layout:"
-#~ msgstr "Postavitev:"
 
 #~ msgid "org.gnome.Mahjongg"
 #~ msgstr "org.gnome.Mahjongg"
