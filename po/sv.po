@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-07 18:03+0000\n"
-"PO-Revision-Date: 2022-02-28 17:53+0100\n"
-"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 13:25+0100\n"
+"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -213,6 +213,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Layout"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Bakgrundsfärg"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Layout: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nytt spel"
@@ -348,16 +364,17 @@ msgstr "Datum"
 msgid "Time"
 msgstr "Tid"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Drag kvar:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Fortsätt spelet"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Gör paus i spelet"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Drag kvar:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Ångra ditt senaste drag"
@@ -377,20 +394,11 @@ msgstr "Gör paus i spelet"
 #~ msgid "_Help"
 #~ msgstr "_Hjälp"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Layout:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Bakgrundsfärg:"
-
 #~ msgid "_Close"
 #~ msgstr "_Stäng"
-
-#~ msgid "Layout:"
-#~ msgstr "Layout:"
 
 #~ msgid "org.gnome.Mahjongg"
 #~ msgstr "org.gnome.Mahjongg"
