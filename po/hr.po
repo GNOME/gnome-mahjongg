@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-02 13:12+0100\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 18:47+0100\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -207,6 +207,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Zatvori"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Raspored"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Boja pozadine"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Raspored: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nova igra"
@@ -332,16 +348,17 @@ msgstr "Datum"
 msgid "Time"
 msgstr "Vrijeme"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Preostalo poteza:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Nastavi igru"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Pauziraj igru"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Preostalo poteza:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Poništi posljednji potez"
@@ -361,20 +378,11 @@ msgstr "Pauziraj igru"
 #~ msgid "_Help"
 #~ msgstr "_Priručnik"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Raspored:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Boja pozadine:"
-
 #~ msgid "_Close"
 #~ msgstr "_Zatvori"
-
-#~ msgid "Layout:"
-#~ msgstr "Raspored:"
 
 #~ msgid "org.gnome.Mahjongg"
 #~ msgstr "org.gnome.Mahjongg"
