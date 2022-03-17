@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-23 19:02+0200\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 18:18+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -218,6 +218,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Lopeta"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Teema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Asettelu"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Taustaväri"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Asettelu: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Uusi peli"
@@ -359,16 +375,17 @@ msgstr "Päiväys"
 msgid "Time"
 msgstr "Aika"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Siirtoja jäljellä:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Jatka peliä"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Keskeytä peli"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Siirtoja jäljellä:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Kumoa edellinen siirto"
@@ -388,20 +405,11 @@ msgstr "Keskeytä peli"
 #~ msgid "_Help"
 #~ msgstr "O_hje"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Teema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Asettelu:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Taustaväri:"
-
 #~ msgid "_Close"
 #~ msgstr "_Sulje"
-
-#~ msgid "Layout:"
-#~ msgstr "Asettelu:"
 
 #~| msgid "gnome-mahjongg"
 #~ msgid "org.gnome.Mahjongg"
