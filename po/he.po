@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-16 22:09+0200\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 15:15+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <>\n"
 "Language: he\n"
@@ -210,17 +210,35 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "יציאה"
 
+#: data/ui/preferences.ui:13
+#| msgid "_Theme:"
+msgid "Theme"
+msgstr "ערכת נושא"
+
+#: data/ui/preferences.ui:18
+#| msgid "Layout:"
+msgid "Layout"
+msgstr "פריסה"
+
+#: data/ui/preferences.ui:23
+#| msgid "_Background color:"
+msgid "Background color"
+msgstr "צבע הרקע"
+
+#: data/ui/score-dialog.ui:20
+#| msgid "Layout:"
+msgid "Layout: "
+msgstr "פריסה:"
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "משחק חדש"
 
 #: data/ui/window.ui:57
-#| msgid "_Restart Game"
 msgid "Restart Game"
 msgstr "התחלת המשחק מחדש"
 
 #: data/ui/window.ui:61
-#| msgid "_Scores"
 msgid "Scores"
 msgstr "תוצאות"
 
@@ -229,18 +247,14 @@ msgid "Preferences"
 msgstr "העדפות"
 
 #: data/ui/window.ui:71
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "צירופי מקשים"
 
 #: data/ui/window.ui:75
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "עזרה"
 
 #: data/ui/window.ui:79
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
 msgstr "על אודות מא-ג׳ונג"
 
@@ -348,16 +362,17 @@ msgstr "תאריך"
 msgid "Time"
 msgstr "זמן"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "מהלכים שנותרו:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "המשך המשחק"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "השהיית המשחק"
-
-#~ msgid "Moves Left:"
-#~ msgstr "מהלכים שנותרו:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "ביטול המהלך האחרון שלך"
@@ -377,20 +392,11 @@ msgstr "השהיית המשחק"
 #~ msgid "_Help"
 #~ msgstr "ע_זרה"
 
-#~ msgid "_Theme:"
-#~ msgstr "_ערכת נושא:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_פריסה:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_צבע הרקע:"
-
 #~ msgid "_Close"
 #~ msgstr "_סגירה"
-
-#~ msgid "Layout:"
-#~ msgstr "פריסה:"
 
 #~ msgid "Mahjongg Preferences"
 #~ msgstr "העדפות מא-ג׳ונג"
