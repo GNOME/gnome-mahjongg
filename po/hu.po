@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-10 01:53+0100\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-18 01:21+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -215,17 +215,31 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Kilépés"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Téma"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Háttérszín"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Elrendezés: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Új játék"
 
 #: data/ui/window.ui:57
-#| msgid "_Restart Game"
 msgid "Restart Game"
 msgstr "Játék újraindítása"
 
 #: data/ui/window.ui:61
-#| msgid "_Scores"
 msgid "Scores"
 msgstr "Pontszámok"
 
@@ -234,18 +248,14 @@ msgid "Preferences"
 msgstr "Beállítások"
 
 #: data/ui/window.ui:71
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
 #: data/ui/window.ui:75
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "Súgó"
 
 #: data/ui/window.ui:79
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
 msgstr "A Mahjongg névjegye"
 
@@ -336,6 +346,7 @@ msgstr ""
 "Meskó Balázs <mesko dot balazs at fsf dot hu>\n"
 "Nagy Gergely <greg at gnome dot hu>\n"
 "Tímár András <timar at gnome dot hu>\n"
+"Úr Balázs <ur dot balazs at fsf dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
 #: src/score-dialog.vala:43
@@ -354,10 +365,14 @@ msgstr "Dátum"
 msgid "Time"
 msgstr "Idő"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Hátralévő lépések:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "A játék folytatása"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "A játék szüneteltetése"
