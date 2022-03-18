@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-23 13:46+0300\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-18 11:10+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -216,6 +216,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Çıkış"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Gövde"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Düzen"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Arka plan rengi"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Düzen: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Yeni Oyun"
@@ -344,16 +360,17 @@ msgstr "Tarih"
 msgid "Time"
 msgstr "Zaman"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Kalan Hareket:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Oyunu sürdür"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Oyunu duraklat"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Kalan Hareket:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Son hareketinizi geri alın"
@@ -373,20 +390,11 @@ msgstr "Oyunu duraklat"
 #~ msgid "_Help"
 #~ msgstr "_Yardım"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Gövde:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Düzen:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Arka plan rengi:"
-
 #~ msgid "_Close"
 #~ msgstr "_Kapat"
-
-#~ msgid "Layout:"
-#~ msgstr "Düzen:"
 
 #~ msgid "_Contents"
 #~ msgstr "İ_çindekiler"
