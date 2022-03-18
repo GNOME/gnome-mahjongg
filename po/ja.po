@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
 "POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-09 20:00+0900\n"
+"PO-Revision-Date: 2022-03-18 20:45+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -208,6 +208,22 @@ msgstr "フルスクリーン"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "終了する"
+
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "テーマ"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "レイアウト"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "背景色"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "レイアウト: "
 
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
