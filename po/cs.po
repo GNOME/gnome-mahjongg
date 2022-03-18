@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-09 20:26+0100\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-18 14:59+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -225,6 +225,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Ukončit"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Motiv"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Rozvržení"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Barva pozadí"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Rozvržení:"
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nová hra"
@@ -364,10 +380,14 @@ msgstr "Datum"
 msgid "Time"
 msgstr "Čas"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Zbývá tahů:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Pokračovat ve hře"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Pozastavit hru"
