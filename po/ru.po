@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-06 09:21+1000\n"
-"Last-Translator: Ser82-png <sw@atrus.ru>\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 14:19+0300\n"
+"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -222,6 +222,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выход"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Тема"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Расклад"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Расклад: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Новая игра"
@@ -347,16 +363,17 @@ msgstr "Дата"
 msgid "Time"
 msgstr "Время"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Осталось ходов:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Возобновить игру"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Приостановить игру"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Осталось ходов:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Отменить последний ход"
@@ -373,20 +390,11 @@ msgstr "Приостановить игру"
 #~ msgid "_Preferences"
 #~ msgstr "_Параметры"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Тема:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Расклад:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Цвет фона:"
-
 #~ msgid "_Close"
 #~ msgstr "_Закрыть"
-
-#~ msgid "Layout:"
-#~ msgstr "Расклад:"
 
 #~ msgid "gnome-mahjongg"
 #~ msgstr "gnome-mahjongg"
