@@ -10,8 +10,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-12 17:00+0100\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-20 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -202,6 +202,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Irten"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Gaia"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Diseinua"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Atzeko planoaren kolorea"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Diseinua: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Joko berria"
@@ -322,16 +338,17 @@ msgstr "Data"
 msgid "Time"
 msgstr "Ordua"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Zenbat mugimendu:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Jokoa jarraitzen du"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Jokoa pausarazten du"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Zenbat mugimendu:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Desegin zure azken mugimendua"
@@ -351,20 +368,11 @@ msgstr "Jokoa pausarazten du"
 #~ msgid "_Help"
 #~ msgstr "_Laguntza"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Gaia:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Diseinua:"
 
-#~ msgid "_Background color:"
-#~ msgstr "Atzeko pla_noaren kolorea:"
-
 #~ msgid "_Close"
 #~ msgstr "_Itxi"
-
-#~ msgid "Layout:"
-#~ msgstr "Diseinua:"
 
 #~ msgid "_Contents"
 #~ msgstr "_Edukia"
