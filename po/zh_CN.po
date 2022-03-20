@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-05 23:03+0800\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-20 09:33+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -208,17 +208,35 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "退出"
 
+#: data/ui/preferences.ui:13
+#| msgid "_Theme:"
+msgid "Theme"
+msgstr "主题"
+
+#: data/ui/preferences.ui:18
+#| msgid "Layout:"
+msgid "Layout"
+msgstr "布局"
+
+#: data/ui/preferences.ui:23
+#| msgid "_Background color:"
+msgid "Background color"
+msgstr "背景颜色"
+
+#: data/ui/score-dialog.ui:20
+#| msgid "Layout:"
+msgid "Layout: "
+msgstr "布局："
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "新游戏"
 
 #: data/ui/window.ui:57
-#| msgid "_Restart Game"
 msgid "Restart Game"
 msgstr "重启游戏"
 
 #: data/ui/window.ui:61
-#| msgid "_Scores"
 msgid "Scores"
 msgstr "得分"
 
@@ -227,18 +245,14 @@ msgid "Preferences"
 msgstr "首选项"
 
 #: data/ui/window.ui:71
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "键盘快捷键"
 
 #: data/ui/window.ui:75
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "帮助"
 
 #: data/ui/window.ui:79
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
 msgstr "关于麻将牌"
 
@@ -341,16 +355,17 @@ msgstr "日期"
 msgid "Time"
 msgstr "时间"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "剩下的着法:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "重回游戏"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "暂停游戏"
-
-#~ msgid "Moves Left:"
-#~ msgstr "剩下的着法:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "撤消最后一着"
@@ -370,20 +385,11 @@ msgstr "暂停游戏"
 #~ msgid "_Help"
 #~ msgstr "帮助(_H)"
 
-#~ msgid "_Theme:"
-#~ msgstr "主题(_T)："
-
 #~ msgid "_Layout:"
 #~ msgstr "布局(_L)："
 
-#~ msgid "_Background color:"
-#~ msgstr "背景颜色(_B)："
-
 #~ msgid "_Close"
 #~ msgstr "关闭(_C)"
-
-#~ msgid "Layout:"
-#~ msgstr "布局："
 
 #~ msgid "gnome-mahjongg"
 #~ msgstr "gnome-mahjongg"
