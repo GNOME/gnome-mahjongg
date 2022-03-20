@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-20 15:03+0200\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-20 18:31+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -217,17 +217,35 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Išeiti"
 
+#: data/ui/preferences.ui:13
+#| msgid "_Theme:"
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+#| msgid "Layout:"
+msgid "Layout"
+msgstr "Išdėstymas"
+
+#: data/ui/preferences.ui:23
+#| msgid "_Background color:"
+msgid "Background color"
+msgstr "Fono spalva"
+
+#: data/ui/score-dialog.ui:20
+#| msgid "Layout:"
+msgid "Layout: "
+msgstr "Išdėstymas"
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Naujas žaidimas"
 
 #: data/ui/window.ui:57
-#| msgid "_Restart Game"
 msgid "Restart Game"
 msgstr "Žaisti iš naujo"
 
 #: data/ui/window.ui:61
-#| msgid "_Scores"
 msgid "Scores"
 msgstr "Rezultatai"
 
@@ -236,18 +254,14 @@ msgid "Preferences"
 msgstr "Nuostatos"
 
 #: data/ui/window.ui:71
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Klaviatūros trumpiniai"
 
 #: data/ui/window.ui:75
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "Žinynas"
 
 #: data/ui/window.ui:79
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
 msgstr "Apie mahjongg"
 
@@ -354,16 +368,17 @@ msgstr "Data"
 msgid "Time"
 msgstr "Laikas"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Ėjimų liko: "
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Tęsti žaidimą"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Pristabdyti ėjimą"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Ėjimų liko: "
 
 #~ msgid "Undo your last move"
 #~ msgstr "Atšaukti paskutinį ėjimą"
@@ -383,20 +398,11 @@ msgstr "Pristabdyti ėjimą"
 #~ msgid "_Help"
 #~ msgstr "_Žinynas"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Išdėstymas:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Fono spalva:"
-
 #~ msgid "_Close"
 #~ msgstr "_Užverti"
-
-#~ msgid "Layout:"
-#~ msgstr "Išdėstymas:"
 
 #~| msgid "gnome-mahjongg"
 #~ msgid "org.gnome.Mahjongg"
