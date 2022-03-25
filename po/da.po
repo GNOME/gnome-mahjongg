@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-08 01:41+0100\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-03-17 16:26+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -216,6 +216,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Afslut"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Layout"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Baggrundsfarve"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Layout: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nyt spil"
@@ -350,16 +366,17 @@ msgstr "Dato"
 msgid "Time"
 msgstr "Tid"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Tilbageværende træk:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Ophæv pausen"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Sæt spillet på pause"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Tilbageværende træk:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Fortryd dit sidste træk"
@@ -379,17 +396,8 @@ msgstr "Sæt spillet på pause"
 #~ msgid "_Help"
 #~ msgstr "_Hjælp"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Layout:"
 
-#~ msgid "_Background color:"
-#~ msgstr "_Baggrundsfarve:"
-
 #~ msgid "_Close"
 #~ msgstr "_Luk"
-
-#~ msgid "Layout:"
-#~ msgstr "Layout:"
