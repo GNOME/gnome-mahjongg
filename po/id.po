@@ -2,7 +2,7 @@
 # Copyright (c) 2010 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 #
-# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 # Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022.
@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-08 10:16+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"PO-Revision-Date: 2022-04-01 11:25+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -213,6 +213,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Keluar"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Tema"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Tata Letak"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Warna latar belakang"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Tata Letak"
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Permainan Baru"
@@ -324,7 +340,7 @@ msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
-"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.\n"
+"Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
 "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022."
@@ -345,55 +361,14 @@ msgstr "Tanggal"
 msgid "Time"
 msgstr "Waktu"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Sisa Langkah:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Hentikan mengistirahatkan permainan"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Istirahatkan permainan"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Sisa Langkah:"
-
-#~ msgid "Undo your last move"
-#~ msgstr "Batalkan langkah terakhir Anda"
-
-#~ msgid "Redo your last move"
-#~ msgstr "Jadikan lagi langkah terakhir Anda"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Dapatkan petunjuk bagi langkah Anda selanjutnya"
-
-#~ msgid "_New Game"
-#~ msgstr "Mai_nkan Permainan Baru"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Preferensi"
-
-#~ msgid "_Help"
-#~ msgstr "_Bantuan"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
-#~ msgid "_Layout:"
-#~ msgstr "Tata _Letak:"
-
-#~ msgid "_Background color:"
-#~ msgstr "Warna latar _belakang:"
-
-#~ msgid "_Close"
-#~ msgstr "_Tutup"
-
-#~ msgid "Layout:"
-#~ msgstr "Tata Letak:"
-
-#~ msgid "org.gnome.Mahjongg"
-#~ msgstr "org.gnome.Mahjongg"
-
-#~ msgid "_Contents"
-#~ msgstr "_Isi"
-
-#~ msgid "_About"
-#~ msgstr "Tent_ang"
