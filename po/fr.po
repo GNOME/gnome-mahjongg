@@ -25,21 +25,22 @@
 # naybnet <naybnet@gmail.com>, 2014.
 # Charles Monzat <charles.monzat@free.fr>, 2018-2019.
 # Hugo Forest <dustoedev@gmail.com>, 2021.
+# Irénée THIRION <irenee.thirion@e.email>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-02-19 11:38+0100\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2022-04-01 04:28+0000\n"
+"PO-Revision-Date: 2022-05-16 09:02+0200\n"
+"Last-Translator: Irénée THIRION <irenee.thirion@e.email>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -233,6 +234,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitter"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Thème"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Disposition"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Disposition : "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Nouvelle partie"
@@ -354,7 +371,8 @@ msgstr ""
 "Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Didier Vidal <didier-devel@melix.net>\n"
 "Pierre Lemaire <pierre.lemaire@kamick.org>\n"
-"Julien Humbert <julroy67@gmail.com>"
+"Julien Humbert <julroy67@gmail.com>\n"
+"Irénée Thirion <irenee.thirion@outlook.fr>"
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -372,16 +390,17 @@ msgstr "Date"
 msgid "Time"
 msgstr "Durée"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Mouvements restants :"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Reprendre la partie"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
-msgstr "Suspend la partie"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Mouvements restants :"
+msgstr "Suspendre la partie"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Annuler le dernier déplacement"
