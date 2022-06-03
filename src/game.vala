@@ -213,6 +213,11 @@ public class Game : Object
         moved ();
         if (redraw)
             redraw_all_tiles ();
+
+        /* 60s penalty */
+        start_clock ();
+        clock_elapsed += 60.0;
+        tick ();
     }
 
     public void redraw_all_tiles ()
