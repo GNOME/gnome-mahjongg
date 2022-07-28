@@ -1,34 +1,32 @@
-# translation of gnome-games.po to Georgian
-# Georgian translation for gnome-games
-# Copyright (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
-# This file is distributed under the same license as the gnome-games package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#
-#
-# Alexander Didebulidze <didebuli@in.tum.de> ,2005 ,2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-02 00:23+0100\n"
-"PO-Revision-Date: 2006-04-10 12:30+0200\n"
-"Last-Translator: Alexander Didebulidze <didebuli@in.tum.de>\n"
-"Language-Team: Georgian <gnome@inet.ge>\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
+"PO-Revision-Date: 2022-07-28 21:27+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: \n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:1
+#: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
 msgstr ""
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:2
+#: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
 msgstr ""
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:3
+#: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
 "A solitaire version of the classic Eastern tile game. Tiles are stacked on "
 "the board at the start of the game. The goal is to remove all the tiles in "
@@ -38,38 +36,40 @@ msgid ""
 "look alike may actually be slightly different."
 msgstr ""
 
-#: ../data/gnome-mahjongg.appdata.xml.in.h:4
+#: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
 "GNOME Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
 
-#: ../data/gnome-mahjongg.desktop.in.h:1 ../src/gnome-mahjongg.vala:628
-#: ../src/gnome-mahjongg.vala:813
+#: data/org.gnome.Mahjongg.appdata.xml.in:41
+msgid "The GNOME Project"
+msgstr "პროექტი \"GNOME\""
+
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr ""
 
-#: ../data/gnome-mahjongg.desktop.in.h:2
-#, fuzzy
+#: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "a ის"
+msgstr ""
 
-#: ../data/gnome-mahjongg.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr ""
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:1
-#, fuzzy
+#: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
-msgstr "ის დუიმი პიქსელი."
+msgstr "ფანჯრის სიგანე, პიქსელებში"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:2
-#, fuzzy
+#: data/org.gnome.Mahjongg.gschema.xml:21
 msgid "Height of the window in pixels"
-msgstr "ის დუიმი პიქსელი."
+msgstr "ფანჯრის სიმაღლე, პიქსელებში"
 
-#: ../data/org.gnome.mahjongg.gschema.xml.h:3
+#: data/org.gnome.Mahjongg.gschema.xml:25
 msgid "true if the window is maximized"
 msgstr ""
 
@@ -78,252 +78,272 @@ msgstr ""
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_game_names.h:6
-#, fuzzy
+#: data/translatable_game_names.h:6
 msgctxt "mahjongg map name"
 msgid "Easy"
-msgstr "მარტივი"
+msgstr "ადვილი"
 
-#: ../data/translatable_game_names.h:7
+#: data/translatable_game_names.h:7
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr ""
 
-#: ../data/translatable_game_names.h:8
+#: data/translatable_game_names.h:8
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr ""
 
-#: ../data/translatable_game_names.h:9
-#, fuzzy
+#: data/translatable_game_names.h:9
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "ღრუბელი"
 
-#: ../data/translatable_game_names.h:10
+#: data/translatable_game_names.h:10
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr ""
 
-#: ../data/translatable_game_names.h:11
-#, fuzzy
+#: data/translatable_game_names.h:11
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
-msgstr "წითელი"
+msgstr ""
 
-#: ../data/translatable_game_names.h:12
+#: data/translatable_game_names.h:12
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr ""
 
-#: ../data/translatable_game_names.h:13
-#, fuzzy
+#: data/translatable_game_names.h:13
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
-msgstr "პირამიდული გრადიენტი"
+msgstr ""
 
-#: ../data/translatable_game_names.h:14
+#: data/translatable_game_names.h:14
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr ""
 
-#: ../data/translatable_game_names.h:15
+#: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr ""
 
-#: ../src/game-view.vala:132
-msgid "Paused"
-msgstr "დაპაუზებულია"
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr ""
 
-#: ../src/gnome-mahjongg.vala:34
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "დაიწყეთ ახალი თამაში"
+
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "თამაშის შეჩერება"
+
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "ბრძანების გაუქმება"
+
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "ბრძანების აღდგენა"
+
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "მინიშნების ჩვენება"
+
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "ზოგადი"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Toggle main menu"
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობების ჩვენება"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr ""
+
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "მთელს ეკრანზე"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "გამოსვლა"
+
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "გაფორმების თემა"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "განლაგება"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "ფონის ფერი"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "განლაგება: "
+
+#: data/ui/window.ui:53 src/score-dialog.vala:44
+msgid "New Game"
+msgstr "დაიწყეთ ახალი თამაში"
+
+#: data/ui/window.ui:57
+msgid "Restart Game"
+msgstr "თამაშის გადატვირთვა"
+
+#: data/ui/window.ui:61
+msgid "Scores"
+msgstr "ქულები"
+
+#: data/ui/window.ui:67
+msgid "Preferences"
+msgstr "გამართვა"
+
+#: data/ui/window.ui:71
+msgid "Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობები"
+
+#: data/ui/window.ui:75
+msgid "Help"
+msgstr "დახმარება"
+
+#: data/ui/window.ui:79
+msgid "About Mahjongg"
+msgstr ""
+
+#: src/game-view.vala:228
+msgid "Paused"
+msgstr "შეჩერებულია"
+
+#: src/gnome-mahjongg.vala:25
 msgid "Print release version and exit"
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:94
-#, fuzzy
-msgid "Moves Left:"
-msgstr "მარცხნივ:"
-
-#: ../src/gnome-mahjongg.vala:120
-#, fuzzy
-msgid "Undo your last move"
-msgstr "დაბრუნება"
-
-#: ../src/gnome-mahjongg.vala:126
-#, fuzzy
-msgid "Redo your last move"
-msgstr "დაბრუნება"
-
-#: ../src/gnome-mahjongg.vala:132
-#, fuzzy
-msgid "Receive a hint for your next move"
-msgstr "a"
-
-#: ../src/gnome-mahjongg.vala:137 ../src/gnome-mahjongg.vala:658
-#, fuzzy
-msgid "Pause the game"
-msgstr "პაუზა"
-
-#: ../src/gnome-mahjongg.vala:156
-#, fuzzy
-msgid "_Mahjongg"
-msgstr "პარამეტრები"
-
-#: ../src/gnome-mahjongg.vala:157 ../src/menu.ui.h:1
-msgid "_New Game"
-msgstr "_ახალი თამაში"
-
-#: ../src/gnome-mahjongg.vala:158 ../src/menu.ui.h:2
-#, fuzzy
-msgid "_Restart Game"
-msgstr "_გადატვირთვა"
-
-#: ../src/gnome-mahjongg.vala:159 ../src/menu.ui.h:3
-msgid "_Scores"
-msgstr ""
-
-#: ../src/gnome-mahjongg.vala:160 ../src/menu.ui.h:4
-#, fuzzy
-msgid "_Preferences"
-msgstr "პარამეტრები"
-
-#: ../src/gnome-mahjongg.vala:161 ../src/menu.ui.h:7
-#: ../src/score-dialog.vala:28
-msgid "_Quit"
-msgstr ""
-
-#: ../src/gnome-mahjongg.vala:163 ../src/menu.ui.h:5
-msgid "_Help"
-msgstr "_დახმარება"
-
-#: ../src/gnome-mahjongg.vala:164
-msgid "_Contents"
-msgstr "_შინაარსი"
-
-#: ../src/gnome-mahjongg.vala:165 ../src/menu.ui.h:6
-msgid "_About"
-msgstr ""
-
-#: ../src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:155
 msgid "Do you want to start a new game with this map?"
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:314
-#, fuzzy
+#: src/gnome-mahjongg.vala:156
 msgid "If you continue playing the next game will use the new map."
-msgstr "-სკენ."
+msgstr ""
 
-#: ../src/gnome-mahjongg.vala:315
-#, fuzzy
+#: src/gnome-mahjongg.vala:157
 msgid "_Continue playing"
-msgstr "კომპიუტერი"
+msgstr ""
 
-#: ../src/gnome-mahjongg.vala:316
+#: src/gnome-mahjongg.vala:158
 msgid "Use _new map"
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:384
+#: src/gnome-mahjongg.vala:209
 msgid "There are no more moves."
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:385
+#: src/gnome-mahjongg.vala:210
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:387
+#: src/gnome-mahjongg.vala:212
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:388
-#, fuzzy
+#: src/gnome-mahjongg.vala:213
 msgid "_Undo"
-msgstr "დაბრუნება გადატანა"
+msgstr "_დაბრუნება"
 
-#: ../src/gnome-mahjongg.vala:389
-#, fuzzy
+#: src/gnome-mahjongg.vala:214
 msgid "_Restart"
-msgstr "_გადატვირთვა"
+msgstr "გადატვირთვა"
 
-#: ../src/gnome-mahjongg.vala:390
-#, fuzzy
+#: src/gnome-mahjongg.vala:215
 msgid "_New game"
-msgstr "ახალი თამაში"
+msgstr "_ახალი თამაში"
 
-#: ../src/gnome-mahjongg.vala:391
-#, fuzzy
+#: src/gnome-mahjongg.vala:216
 msgid "_Shuffle"
-msgstr "ალალბედზე დაკვრა"
-
-#: ../src/gnome-mahjongg.vala:443
-msgid "Preferences"
-msgstr "პარამეტრები"
-
-#: ../src/gnome-mahjongg.vala:459
-#, fuzzy
-msgid "_Theme:"
-msgstr "_თემა:"
-
-#: ../src/gnome-mahjongg.vala:487
-msgid "_Layout:"
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:513
-msgid "_Background color:"
-msgstr "_ფონის ფერი:"
-
-#: ../src/gnome-mahjongg.vala:527
-msgid "_Close"
-msgstr ""
-
-#: ../src/gnome-mahjongg.vala:594
-#, fuzzy
+#: src/gnome-mahjongg.vala:328
 msgid "Main game:"
 msgstr "მთავარი თამაში:"
 
-#: ../src/gnome-mahjongg.vala:603
+#: src/gnome-mahjongg.vala:338
 msgid "Maps:"
-msgstr "რუქები:"
+msgstr "რუკები:"
 
-#: ../src/gnome-mahjongg.vala:611
+#: src/gnome-mahjongg.vala:346
 msgid "Tiles:"
+msgstr "ნაწილები:"
+
+#: src/gnome-mahjongg.vala:366
+msgid "A matching game played with Mahjongg tiles"
 msgstr ""
 
-#: ../src/gnome-mahjongg.vala:631
-#, fuzzy
-msgid "A matching game played with Mahjongg tiles"
-msgstr "A."
-
-#: ../src/gnome-mahjongg.vala:637
-#, fuzzy
+#: src/gnome-mahjongg.vala:372
 msgid "translator-credits"
 msgstr "თარგმანი-შესრულებულია"
 
-#: ../src/gnome-mahjongg.vala:653
-#, fuzzy
-msgid "Unpause the game"
-msgstr "პაუზა"
+#: src/score-dialog.vala:43
+msgid "_Quit"
+msgstr "_გასვლა"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "ახალი თამაში"
-
-#: ../src/score-dialog.vala:32
+#: src/score-dialog.vala:47
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
-#: ../src/score-dialog.vala:44
-msgid "Layout:"
-msgstr ""
-
-#: ../src/score-dialog.vala:69
+#: src/score-dialog.vala:53
 msgid "Date"
-msgstr ""
+msgstr "თარიღი"
 
-#: ../src/score-dialog.vala:72
+#: src/score-dialog.vala:56
 msgid "Time"
 msgstr "დრო"
+
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "დარჩენილი სვლები:"
+
+#: src/window.vala:34
+msgid "Unpause the game"
+msgstr "თამაშის გაგრძელება"
+
+#: src/window.vala:40
+msgid "Pause the game"
+msgstr "თამაშის შეჩერება"
