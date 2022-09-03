@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-01 17:53+0900\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
+"PO-Revision-Date: 2022-08-28 22:24+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -219,6 +219,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "끝내기"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "테마"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "배치"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "배경색"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "배치: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "새 게임"
@@ -346,16 +362,17 @@ msgstr "시각"
 msgid "Time"
 msgstr "시간"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "남은 움직임:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "게임을 계속 진행합니다"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "게임을 일시 중지합니다"
-
-#~ msgid "Moves Left:"
-#~ msgstr "남은 움직임:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "마지막 움직임을 취소합니다"
@@ -375,20 +392,11 @@ msgstr "게임을 일시 중지합니다"
 #~ msgid "_Help"
 #~ msgstr "도움말(_H)"
 
-#~ msgid "_Theme:"
-#~ msgstr "테마(_T):"
-
 #~ msgid "_Layout:"
 #~ msgstr "배치(_L):"
 
-#~ msgid "_Background color:"
-#~ msgstr "배경색(_B):"
-
 #~ msgid "_Close"
 #~ msgstr "닫기(_C)"
-
-#~ msgid "Layout:"
-#~ msgstr "배치:"
 
 #~ msgid "gnome-mahjongg"
 #~ msgstr "gnome-mahjongg"
