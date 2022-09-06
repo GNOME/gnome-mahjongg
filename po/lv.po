@@ -5,13 +5,13 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2018, 2019, 2021.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2018, 2019, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2020-10-09 14:52+0000\n"
-"PO-Revision-Date: 2021-10-25 21:28+0300\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
+"PO-Revision-Date: 2022-09-06 21:59+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
@@ -61,8 +61,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "GNOME projekts"
 
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:609
-#: src/gnome-mahjongg.vala:794
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -74,80 +74,6 @@ msgstr "Nojaukt kauliņu kaudzi, ņemot nost sakrītošus pārus"
 #: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "spēle;stratēģija;mīkla;galdiņš;"
-
-#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
-#: data/help-overlay.ui:12
-msgctxt "shortcut window"
-msgid "Main functions"
-msgstr "Galvenās funkcijas"
-
-#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
-#: data/help-overlay.ui:19
-msgctxt "shortcut window"
-msgid "Start a new game"
-msgstr "Sākt jaunu spēli"
-
-#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
-#: data/help-overlay.ui:27
-msgctxt "shortcut window"
-msgid "Pause the game"
-msgstr "Pauzēt spēli"
-
-#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
-#: data/help-overlay.ui:35
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "Atsaukt"
-
-#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
-#: data/help-overlay.ui:43
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "Atatsaukt"
-
-#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
-#: data/help-overlay.ui:51
-msgctxt "shortcut window"
-msgid "Show a hint"
-msgstr "Rādīt padomu"
-
-#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
-#: data/help-overlay.ui:59
-#| msgctxt "shortcut window"
-#| msgid "General"
-msgctxt "shortcut window"
-msgid "Generic"
-msgstr "Vispārīgi"
-
-#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
-#: data/help-overlay.ui:66
-msgctxt "shortcut window"
-msgid "Toggle main menu"
-msgstr "Pārslēgt galveno izvēlni"
-
-#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
-#: data/help-overlay.ui:74
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Rādīt tastatūras saīsnes"
-
-#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
-#: data/help-overlay.ui:82
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "Rādīt palīdzību"
-
-#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
-#: data/help-overlay.ui:90
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "Pilnekrāns"
-
-#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
-#: data/help-overlay.ui:98
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Iziet"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -216,83 +142,161 @@ msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Sarežģīts"
 
-#: src/game-view.vala:227
-msgid "Paused"
-msgstr "Apturēts"
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
+#: data/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Main functions"
+msgstr "Galvenās funkcijas"
 
-#: src/gnome-mahjongg.vala:35
-msgid "Print release version and exit"
-msgstr "Parādīt informāciju par laidienu un iziet"
+#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
+#: data/help-overlay.ui:19
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Sākt jaunu spēli"
 
-#: src/gnome-mahjongg.vala:95
-msgid "Moves Left:"
-msgstr "Atlikuši gājieni:"
-
-#: src/gnome-mahjongg.vala:122
-msgid "Undo your last move"
-msgstr "Atsaukt savu pēdējo gājienu"
-
-#: src/gnome-mahjongg.vala:128
-msgid "Redo your last move"
-msgstr "Atkārtot savu pēdējo gājienu"
-
-#: src/gnome-mahjongg.vala:134
-msgid "Receive a hint for your next move"
-msgstr "Saņem padomu par nākamo gājienu"
-
-#: src/gnome-mahjongg.vala:139 src/gnome-mahjongg.vala:639
+#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
+#: data/help-overlay.ui:27
+msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pauzēt spēli"
 
-#: src/gnome-mahjongg.vala:148
-msgid "_New Game"
-msgstr "Jau_na spēle"
+#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
+#: data/help-overlay.ui:35
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Atsaukt"
 
-#: src/gnome-mahjongg.vala:149
-msgid "_Restart Game"
-msgstr "Pā_rstartēt spēli"
+#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
+#: data/help-overlay.ui:43
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Atatsaukt"
 
-#: src/gnome-mahjongg.vala:150
-msgid "_Scores"
-msgstr "Re_zultāti"
+#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
+#: data/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Show a hint"
+msgstr "Rādīt padomu"
 
-#: src/gnome-mahjongg.vala:154
-msgid "_Preferences"
-msgstr "_Iestatījumi"
+#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
+#: data/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Vispārīgi"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
+#: data/help-overlay.ui:66
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Pārslēgt galveno izvēlni"
+
+#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
+#: data/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Rādīt tastatūras saīsnes"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
+#: data/help-overlay.ui:82
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Rādīt palīdzību"
+
+#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
+#: data/help-overlay.ui:90
+msgctxt "shortcut window"
+msgid "Fullscreen"
+msgstr "Pilnekrāns"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
+#: data/help-overlay.ui:98
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Iziet"
+
+#: data/ui/preferences.ui:13
+#| msgid "_Theme:"
+msgid "Theme"
+msgstr "Motīvs"
+
+#: data/ui/preferences.ui:18
+#| msgid "Layout:"
+msgid "Layout"
+msgstr "Izkārtojums"
+
+#: data/ui/preferences.ui:23
+#| msgid "_Background color:"
+msgid "Background color"
+msgstr "Fona krāsa"
+
+#: data/ui/score-dialog.ui:20
+#| msgid "Layout:"
+msgid "Layout: "
+msgstr "Izkārtojums: "
+
+#: data/ui/window.ui:53 src/score-dialog.vala:44
+msgid "New Game"
+msgstr "Jauna spēle"
+
+#: data/ui/window.ui:57
+#| msgid "_Restart Game"
+msgid "Restart Game"
+msgstr "Pārstartēt spēli"
+
+#: data/ui/window.ui:61
+#| msgid "_Scores"
+msgid "Scores"
+msgstr "Rezultāti"
+
+#: data/ui/window.ui:67
+msgid "Preferences"
+msgstr "Iestatījumi"
+
+#: data/ui/window.ui:71
+#| msgid "_Keyboard Shortcuts"
+msgid "Keyboard Shortcuts"
+msgstr "Tastatūras īsinājumtaustiņi"
+
+#: data/ui/window.ui:75
+#| msgctxt "shortcut window"
+#| msgid "Help"
+msgid "Help"
+msgstr "Palīdzība"
+
+#: data/ui/window.ui:79
+#| msgid "_About Mahjongg"
+msgid "About Mahjongg"
+msgstr "Par Mahjongg"
+
+#: src/game-view.vala:228
+msgid "Paused"
+msgstr "Apturēts"
+
+#: src/gnome-mahjongg.vala:25
+msgid "Print release version and exit"
+msgstr "Parādīt informāciju par laidienu un iziet"
 
 #: src/gnome-mahjongg.vala:155
-msgid "_Keyboard Shortcuts"
-msgstr "_Tastatūras īsinājumtaustiņi"
-
-#: src/gnome-mahjongg.vala:156
-msgid "_Help"
-msgstr "_Palīdzība"
-
-#: src/gnome-mahjongg.vala:157
-msgid "_About Mahjongg"
-msgstr "P_ar Mahjongg"
-
-#: src/gnome-mahjongg.vala:293
 msgid "Do you want to start a new game with this map?"
 msgstr "Vai vēlies sākt jaunu spēli ar šo karti?"
 
-#: src/gnome-mahjongg.vala:294
+#: src/gnome-mahjongg.vala:156
 msgid "If you continue playing the next game will use the new map."
 msgstr "Ja turpināsi spēlēt, nākama spēle izmantos jaunu karti."
 
-#: src/gnome-mahjongg.vala:295
+#: src/gnome-mahjongg.vala:157
 msgid "_Continue playing"
 msgstr "_Turpināt spēlēt"
 
-#: src/gnome-mahjongg.vala:296
+#: src/gnome-mahjongg.vala:158
 msgid "Use _new map"
 msgstr "Izmantot jau_nu karti"
 
-#: src/gnome-mahjongg.vala:360
+#: src/gnome-mahjongg.vala:209
 msgid "There are no more moves."
 msgstr "Vairs nav gājienu."
 
-#: src/gnome-mahjongg.vala:361
+#: src/gnome-mahjongg.vala:210
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -300,107 +304,106 @@ msgstr ""
 "Katrai mīklai ir vismaz viens atrisinājums. Tu vari atsaukt gājienus, atsākt "
 "pašreizējo spēli vai arī sākt jaunu spēli."
 
-#: src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:212
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr "Varat arī samaisīt esošo spēli, bet tas negarantē atrisinājumu."
 
-#: src/gnome-mahjongg.vala:364
+#: src/gnome-mahjongg.vala:213
 msgid "_Undo"
 msgstr "_Atsaukt"
 
-#: src/gnome-mahjongg.vala:365
+#: src/gnome-mahjongg.vala:214
 msgid "_Restart"
 msgstr "Pā_rstartēt"
 
-#: src/gnome-mahjongg.vala:366
+#: src/gnome-mahjongg.vala:215
 msgid "_New game"
 msgstr "Jau_na spēle"
 
-#: src/gnome-mahjongg.vala:367
+#: src/gnome-mahjongg.vala:216
 msgid "_Shuffle"
 msgstr "_Jaukt"
 
-#: src/gnome-mahjongg.vala:419
-msgid "Preferences"
-msgstr "Iestatījumi"
-
-#: src/gnome-mahjongg.vala:435
-msgid "_Theme:"
-msgstr "Mo_tīvs:"
-
-#: src/gnome-mahjongg.vala:463
-msgid "_Layout:"
-msgstr "_Izkārtojums:"
-
-#: src/gnome-mahjongg.vala:489
-msgid "_Background color:"
-msgstr "_Fona krāsa:"
-
-#: src/gnome-mahjongg.vala:503
-msgid "_Close"
-msgstr "_Aizvērt"
-
-#: src/gnome-mahjongg.vala:575
+#: src/gnome-mahjongg.vala:328
 msgid "Main game:"
 msgstr "Galvenā spēle:"
 
-#: src/gnome-mahjongg.vala:584
+#: src/gnome-mahjongg.vala:338
 msgid "Maps:"
 msgstr "Kartes:"
 
-#: src/gnome-mahjongg.vala:592
+#: src/gnome-mahjongg.vala:346
 msgid "Tiles:"
 msgstr "Kauliņi:"
 
-#: src/gnome-mahjongg.vala:612
+#: src/gnome-mahjongg.vala:366
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Pāru pasjanss, ko spēlē ar Mahjong kauliņiem"
 
-#: src/gnome-mahjongg.vala:618
+#: src/gnome-mahjongg.vala:372
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
 "Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: src/gnome-mahjongg.vala:634
-msgid "Unpause the game"
-msgstr "Turpināt spēli"
-
-#: src/score-dialog.vala:30
+#: src/score-dialog.vala:43
 msgid "_Quit"
 msgstr "_Iziet"
 
-#: src/score-dialog.vala:31
-msgid "New Game"
-msgstr "Jauna spēle"
-
-#: src/score-dialog.vala:34
+#: src/score-dialog.vala:47
 msgid "OK"
 msgstr "Labi"
 
-#: src/score-dialog.vala:46
-msgid "Layout:"
-msgstr "Izkārtojums:"
-
-#: src/score-dialog.vala:71
+#: src/score-dialog.vala:53
 msgid "Date"
 msgstr "Datums"
 
-#: src/score-dialog.vala:74
+#: src/score-dialog.vala:56
 msgid "Time"
 msgstr "Laiks"
+
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Atlikuši gājieni:"
+
+#: src/window.vala:34
+msgid "Unpause the game"
+msgstr "Turpināt spēli"
+
+#: src/window.vala:40
+msgid "Pause the game"
+msgstr "Pauzēt spēli"
+
+#~ msgid "Undo your last move"
+#~ msgstr "Atsaukt savu pēdējo gājienu"
+
+#~ msgid "Redo your last move"
+#~ msgstr "Atkārtot savu pēdējo gājienu"
+
+#~ msgid "Receive a hint for your next move"
+#~ msgstr "Saņem padomu par nākamo gājienu"
+
+#~ msgid "_New Game"
+#~ msgstr "Jau_na spēle"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Iestatījumi"
+
+#~ msgid "_Help"
+#~ msgstr "_Palīdzība"
+
+#~ msgid "_Layout:"
+#~ msgstr "_Izkārtojums:"
+
+#~ msgid "_Close"
+#~ msgstr "_Aizvērt"
 
 #~| msgid "gnome-mahjongg"
 #~ msgid "org.gnome.Mahjongg"
 #~ msgstr "org.gnome.Mahjongg"
-
-#~| msgid "_Help"
-#~ msgctxt "shortcut window"
-#~ msgid "Help"
-#~ msgstr "Palīdzība"
 
 #~ msgid "_Contents"
 #~ msgstr "_Saturs"
