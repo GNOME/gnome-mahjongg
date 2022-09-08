@@ -6,21 +6,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2020-06-05 07:17+0000\n"
-"PO-Revision-Date: 2021-09-10 12:07+0900\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
+"PO-Revision-Date: 2022-09-05 13:28+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmal.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "조성호 <shcho@gnome.org>, 2018, 2021."
+msgstr "조성호 <shcho@gnome.org>, 2018, 2021, 2022"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
@@ -340,6 +340,12 @@ msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq> 키를 누르십시오."
 #: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
 msgstr "이 옵션을 사용할 때마다 30초 벌칙 시간을 받습니다."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link:trail"
+msgid "Mahjongg"
+msgstr "마작"
 
 #. (itstool) path: info/title
 #: C/index.page:9
