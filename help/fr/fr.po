@@ -8,13 +8,13 @@
 # Guillaume Bernard <associations@guillaume-bernard.fr>, 2014.
 # Ceulain Bansimba <ceul1barth@hotmail.fr>, 2014.
 # jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
-# Charles Monzat <charles.monzat@free.fr>, 2016-2020.
+# Charles Monzat <charles.monzat@free.fr>, 2016-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg master\n"
-"POT-Creation-Date: 2020-03-16 18:23+0000\n"
-"PO-Revision-Date: 2020-03-31 20:29+0200\n"
+"POT-Creation-Date: 2022-02-07 00:18+0000\n"
+"PO-Revision-Date: 2022-04-10 22:31+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -53,7 +53,7 @@ msgstr "2011"
 #: C/gameplay.page:22 C/hints.page:27 C/index.page:18 C/moves.page:19
 #: C/pause.page:24 C/rules.page:21 C/scoring.page:18 C/translate.page:24
 msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Partage des Conditions Initiales à l’Identique 3.0"
+msgstr "Creative Commons Paternité - Partage dans les Mêmes Conditions 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -379,6 +379,14 @@ msgstr ""
 "Chaque utilisation de cette option implique une pénalité de 30 secondes."
 
 #. (itstool) path: info/title
+#: C/index.page:8
+#| msgctxt "link"
+#| msgid "Mahjongg"
+msgctxt "link:trail"
+msgid "Mahjongg"
+msgstr "Mahjongg"
+
+#. (itstool) path: info/title
 #: C/index.page:9
 msgctxt "link"
 msgid "Mahjongg"
@@ -428,8 +436,8 @@ msgstr "Comment s’impliquer"
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr ""
-"licence Creative Commons Paternité-Partage des Conditions Initiales à "
-"l’Identique 3.0 non transposé"
+"licence Creative Commons Attribution - Partage dans les Mêmes Conditions 3.0 "
+"non transposé"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
@@ -452,8 +460,8 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Cet ouvrage est distribué sous une licence Paternité-Partage des Conditions "
-"Initiales à l’Identique 3.0 non transposé (Creative Commons)."
+"Cet ouvrage est distribué sous une licence Attribution - Partage dans les "
+"Mêmes Conditions 3.0 non transposé (Creative Commons)."
 
 #. (itstool) path: page/p
 #: C/license.page:20
@@ -526,7 +534,7 @@ msgid ""
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Pour lire le texte complet de la licence, consultez le <link href=\"http://"
-"creativecommons.org/licenses/by-sa/3.0/legalcode\">site Web de "
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">site web de "
 "CreativeCommons</link>, ou lisez <link href=\"http://creativecommons.org/"
 "licenses/by-sa/3.0/\">le contrat complet de Commons</link>."
 
@@ -921,4 +929,3 @@ msgstr ""
 "Vous pouvez aussi contacter l’équipe d’internationalisation par leur <link "
 "href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">liste de "
 "diffusion</link>."
-
