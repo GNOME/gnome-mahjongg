@@ -1,6 +1,6 @@
 # Turkish translation of gnome-mahjongg.
 # Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
-# Copyright (C) 2019-2021 gnome-mahjongg'S COPYRIGHT HOLDER
+# Copyright (C) 2019-2022 gnome-mahjongg'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 #
 # Onur Kucuk, <okucuk@yahoo.com>, 2000.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
 "PO-Revision-Date: 2022-03-18 11:10+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -371,33 +371,3 @@ msgstr "Oyunu sürdür"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Oyunu duraklat"
-
-#~ msgid "Undo your last move"
-#~ msgstr "Son hareketinizi geri alın"
-
-#~ msgid "Redo your last move"
-#~ msgstr "Son hareketinizi yineleyin"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Sonraki hamleniz için bir ipucu alın"
-
-#~ msgid "_New Game"
-#~ msgstr "Yeni _Oyun"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Tercihler"
-
-#~ msgid "_Help"
-#~ msgstr "_Yardım"
-
-#~ msgid "_Layout:"
-#~ msgstr "_Düzen:"
-
-#~ msgid "_Close"
-#~ msgstr "_Kapat"
-
-#~ msgid "_Contents"
-#~ msgstr "İ_çindekiler"
-
-#~ msgid "_About"
-#~ msgstr "H_akkında"
