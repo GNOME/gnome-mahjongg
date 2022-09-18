@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-12 22:37+0500\n"
+"POT-Creation-Date: 2022-07-27 20:35+0000\n"
+"PO-Revision-Date: 2022-09-18 12:32+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
 msgid "GNOME Mahjongg"
@@ -209,6 +209,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Шығу"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Тема"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Жайма"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Фон түсі"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Жайма: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Жаңа ойын"
@@ -332,16 +348,17 @@ msgstr "Күні"
 msgid "Time"
 msgstr "Уақыт"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Қалған жылжытулар:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Ойынды аялдатудан босату"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Ойынды аялдату"
-
-#~ msgid "Moves Left:"
-#~ msgstr "Қалған жылжытулар:"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Соңғы әрекетті болдырмау"
@@ -361,20 +378,11 @@ msgstr "Ойынды аялдату"
 #~ msgid "_Help"
 #~ msgstr "_Көмек"
 
-#~ msgid "_Theme:"
-#~ msgstr "Т_ақырыбы:"
-
 #~ msgid "_Layout:"
 #~ msgstr "Жа_йма:"
 
-#~ msgid "_Background color:"
-#~ msgstr "Ф_он түсі:"
-
 #~ msgid "_Close"
 #~ msgstr "_Жабу"
-
-#~ msgid "Layout:"
-#~ msgstr "Жайма:"
 
 #~ msgid "_Contents"
 #~ msgstr "Құра_масы"
