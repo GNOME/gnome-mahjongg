@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
 "POT-Creation-Date: 2022-09-18 07:54+0000\n"
-"PO-Revision-Date: 2022-10-13 09:10+0200\n"
+"PO-Revision-Date: 2022-10-13 10:13+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -320,7 +320,7 @@ msgstr "_Разбъркване"
 
 #: src/gnome-mahjongg.vala:328
 msgid "Main game:"
-msgstr "Основна игра:"
+msgstr "Основната игра:"
 
 #: src/gnome-mahjongg.vala:338
 msgid "Maps:"
