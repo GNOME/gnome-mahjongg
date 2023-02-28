@@ -1,15 +1,15 @@
 # Swedish translation of help for GNOME Mahjongg.
-# Copyright © 2007-2022 gnome-mahjongg's COPYRIGHT HOLDER
+# Copyright © 2007-2023 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Daniel Nylander <po at danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2020, 2022.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2020, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"POT-Creation-Date: 2022-02-07 00:18+0000\n"
-"PO-Revision-Date: 2022-02-07 02:43+0100\n"
+"POT-Creation-Date: 2023-02-28 14:58+0000\n"
+"PO-Revision-Date: 2023-02-28 16:38+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -71,8 +71,8 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
-"Detta är ett felrapporteringssystem där användare och utvecklare kan lämna "
-"information om buggar, krascher och önska förbättringar."
+"Det är ett felrapporteringssystem där användare och utvecklare kan lämna "
+"information om fel, krascher och önska förbättringar."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:26
@@ -177,15 +177,14 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du komma i "
-"kontakt med utvecklarna genom <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller via vår "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">sändlista</"
+"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">hjälpa till att utveckla <app>GNOME Spel</app></link> kan du "
+"komma i kontakt med utvecklarna genom <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller "
+"via <link href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</"
 "link>."
 
 #. (itstool) path: page/title
@@ -207,22 +206,22 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, feel free to get in touch with "
 "us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"https://mail.gnome."
-"org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"gnome.org%2Fdocs\">irc</link>, or via <link href=\"https://discourse.gnome."
+"org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
-"Om du vill bidra till dokumentationsprojektet, är du välkommen att ta "
-"kontakt med oss via <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
-"%2F%2Firc.gnome.org%2Fdocs\">irc</link>, eller via vår <link href=\"https://"
-"mail.gnome.org/mailman/listinfo/gnome-doc-list\">sändlista</link>."
+"Om du vill bidra till dokumentationsprojektet är du välkommen att ta kontakt "
+"med oss via <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, eller via <link href=\"https://discourse."
+"gnome.org/tag/documentation\">GNOME Discourse</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link>sida innehåller användbar information."
+"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link>sida innehåller användbar information."
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
@@ -315,7 +314,7 @@ msgid ""
 "already selected one tile, it will show a match for that piece if one exists."
 msgstr ""
 "<gui>Tips</gui> markerar två brickor som kan matchas. Om du redan har valt "
-"en bricka, kommer det att visas en matchning för den om den existerar."
+"en bricka kommer det att visas en matchning för den om någon sådan finns."
 
 #. (itstool) path: page/p
 #: C/hints.page:37
@@ -341,14 +340,14 @@ msgstr ""
 #: C/hints.page:43
 msgid "There is a 30-second penalty for each use of the \"hint\" option."
 msgstr ""
-"Det är ett 30 sekunders straff för varje användning av alternativet \"tips\"."
+"Ett 30 sekunders tidstillägg görs för varje användning av alternativet "
+"”tips”."
 
 #. (itstool) path: div/p
 #: C/hints.page:52
 msgid "You can use <gui>Hints</gui> to help you find identical tiles."
 msgstr ""
-"Du kan använda <gui>Tips</gui> för att hjälpa dig att hitta identiska "
-"brickor."
+"Du kan använda <gui>Tips</gui> för att hjälpa dig hitta identiska brickor."
 
 #. (itstool) path: div/p
 #: C/hints.page:57
@@ -358,7 +357,9 @@ msgstr "Tryck <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 #. (itstool) path: div/p
 #: C/hints.page:62
 msgid "There is a 30 s penalty for each use of this option."
-msgstr "Det är ett 30s straff för varje användning av det här alternativet."
+msgstr ""
+"Ett 30 sekunders tidstillägg görs för varje användning av det här "
+"alternativet."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -540,8 +541,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Tryck på menyknappen i fönstrets övre högra hörn och välj <gui style="
-"\"menuitem\">Inställningar</gui>."
+"Tryck på menyknappen i fönstrets övre högra hörn och välj <gui "
+"style=\"menuitem\">Inställningar</gui>."
 
 #. (itstool) path: item/p
 #: C/map.page:29
@@ -771,8 +772,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Tryck på menyknappen i fönstrets övre högra hörn och välj <gui style="
-"\"menuitem\">Poänglista</gui>."
+"Tryck på menyknappen i fönstrets övre högra hörn och välj <gui "
+"style=\"menuitem\">Poänglista</gui>."
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
@@ -860,10 +861,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:36
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "För att börja översätta måste du <link href=\"https://l10n.gnome.org\">skapa "
 "ett konto</link> och gå med i <link href=\"https://l10n.gnome.org/teams/"
@@ -873,103 +874,21 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:41
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n channel on the "
-"irc.gnome.org server. People on the channel are located worldwide, so you "
-"may not get an immediate response as a result of timezone differences."
+"You can chat with GNOME translators <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/IRC\">using IRC</link> (on the <code>#gnome-i18n</code> "
+"channel). People on the channel are located worldwide, so you may not get an "
+"immediate response as a result of timezone differences."
 msgstr ""
-"Du kan chatta med GNOME-översättare genom att använda irc: gå in i kanalen "
-"#i18n på servern irc.gnome.org. Översättarna på kanalen finns över hela "
-"världen, så du kommer kanske inte få en omedelbar respons på grund av "
-"skillnader i tidszon."
+"Du kan chatta med GNOME-översättare genom <link href=\"https://wiki.gnome."
+"org/GettingInTouch/IRC\">genom IRC</link> (på kanalen <code>#gnome-i18n</"
+"code>). Personerna på kanalen finns över hela världen, så du kommer kanske "
+"inte få en omedelbar respons på grund av skillnader i tidszon."
 
 #. (itstool) path: page/p
 #: C/translate.page:45
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Alternativt kan du kontakta internationaliseringsgruppen genom att använda "
-"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
-"\">sändlista</link>."
-
-#~ msgid "Advanced"
-#~ msgstr "Avancerat"
-
-#~ msgid "Click <guiseq><gui>Mahjongg</gui><gui>Preferences</gui></guiseq>."
-#~ msgstr "Klicka <guiseq><gui>Mahjong</gui><gui>Inställningar</gui></guiseq>."
-
-#~ msgid "Click <gui>Close</gui>"
-#~ msgstr "Klicka <gui>Stäng</gui>"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/moves-left.png' "
-#~ "md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-#~ msgstr ""
-#~ "external ref='figures/moves-left.png' "
-#~ "md5='3a4cd6c414e1cedeb4234a9260d5d215'"
-
-#~ msgid "Mahjongg counters"
-#~ msgstr "Räknare för Mahjong"
-
-#~ msgid "Select <guiseq><gui>Mahjongg</gui><gui>Scores</gui></guiseq>"
-#~ msgstr "Välj <guiseq><gui>Mahjong</gui><gui>Poänglista</gui></guiseq>"
-
-#~ msgid "Keyboard shortcuts"
-#~ msgstr "Tangentbordsgenvägar"
-
-#~ msgid "Fullscreen"
-#~ msgstr "Helskärm"
-
-#~ msgid "<key>F11</key>"
-#~ msgstr "<key>F11</key>"
-
-#~ msgid "Help"
-#~ msgstr "Hjälp"
-
-#~ msgid "<key>F1</key>"
-#~ msgstr "<key>F1</key>"
-
-#~ msgid "Hint"
-#~ msgstr "Tips"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#~ msgid "New game"
-#~ msgstr "Nytt spel"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#~ msgid "Pause"
-#~ msgstr "Paus"
-
-#~ msgid "<key>Pause</key>"
-#~ msgstr "<key>Paus</key>"
-
-#~ msgid ""
-#~ "Use the header bar <gui>Pause</gui> button if your keyboard does not have "
-#~ "a <key>Pause</key> key."
-#~ msgstr ""
-#~ "Använd rubrikradens <gui>Paus</gui>-knapp om ditt tangentbord inte har en "
-#~ "<key>Paus</key>-tangent."
-
-#~ msgid "Quit"
-#~ msgstr "Avsluta"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
-#~ msgid "Redo"
-#~ msgstr "Gör om"
-
-#~ msgid "<keyseq><key>Shift</key><key>Ctrl</key><key>Z</key></keyseq>"
-#~ msgstr "<keyseq><key>Skift</key><key>Ctrl</key><key>Z</key></keyseq>"
-
-#~ msgid "Undo"
-#~ msgstr "Ångra"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>Z</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>Z</key></keyseq>"
+"Alternativt kan du kontakta internationaliseringsgruppen genom <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
