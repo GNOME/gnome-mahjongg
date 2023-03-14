@@ -1,27 +1,27 @@
 # Russian translation for gnome-mahjongg.
 # Copyright (C) 2022 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
-# Ser82-png <sw@atrus.ru>, 2022.
+# Ser82-png <asvmail.as@gmail.com>, 2022-2023
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2022-02-07 00:18+0000\n"
-"PO-Revision-Date: 2022-02-19 22:36+1000\n"
-"Last-Translator: Ser82-png <sw@atrus.ru>\n"
+"POT-Creation-Date: 2023-02-28 14:58+0000\n"
+"PO-Revision-Date: 2023-03-07 19:15+1000\n"
+"Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Ser82-png <sw@atrus.ru>, 2022"
+msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2023"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
@@ -96,10 +96,11 @@ msgid ""
 msgstr ""
 "Если у вас есть учетная запись, войдите в нее и нажмите <gui>New issue</"
 "gui>. Прежде чем сообщать об ошибке, ознакомьтесь с <link href=\"https://"
-"wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines"
-"\">руководством по написанию ошибок</link> и, пожалуйста, <link href="
-"\"https://gitlab .gnome.org/GNOME/gnome-mahjongg/issues\">просмотрите</link> "
-"список ошибок, чтобы убедиться, что о ней ещё никто не сообщил."
+"wiki.gnome.org/Community/GettingInTouch/"
+"BugReportingGuidelines\">руководством по написанию ошибок</link> и, "
+"пожалуйста, <link href=\"https://gitlab .gnome.org/GNOME/gnome-mahjongg/"
+"issues\">просмотрите</link> список ошибок, чтобы убедиться, что о ней ещё "
+"никто не сообщил."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -108,9 +109,9 @@ msgid ""
 "<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
 "<gui>Submit Issue</gui>."
 msgstr ""
-"Если вы запрашиваете новую функцию, выберите <gui>1. Функция</gui> в меню "
-"<gui>Ярлыки</gui>. Заполните разделы «Заголовок» и «Описание» и нажмите "
-"<gui>Отправить проблему</gui>."
+"Если вы запрашиваете новую функцию, выберите <gui>1. Feature</gui> в меню "
+"<gui>Labels</gui>. Заполните разделы «Title» и «Description» и нажмите "
+"<gui>Submit Issue</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:37
@@ -174,16 +175,15 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Если вы хотите <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">помочь в разработке <app>GNOME Games</app></link>, можете связаться с "
-"разработчиками, воспользовавшись <link href=\"https://cbe005.chat.mibbit."
-"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, или через наш "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">список "
-"рассылки</link>."
+"Если вы хотите <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">помочь в разработке <app>GNOME Games</app></link>, то можете "
+"связаться с разработчиками, воспользовавшись <link href=\"https://cbe005."
+"chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, "
+"или через <link href=\"https://discourse.gnome.org/tag/games\">GNOME "
+"Discourse</link>."
 
 #. (itstool) path: page/title
 #: C/documentation.page:18
@@ -204,22 +204,22 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, feel free to get in touch with "
 "us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"https://mail.gnome."
-"org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"gnome.org%2Fdocs\">irc</link>, or via <link href=\"https://discourse.gnome."
+"org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
-"Чтобы внести свой вклад в проект документации, свяжитесь с нами используя "
-"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">irc</link>, или через наш <link href=\"https://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">список рассылки</link>."
+"Чтобы внести свой вклад в проект документации, свяжитесь с нами, используя "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\" >irc</link> или через <link href=\"https://discourse.gnome.org/"
+"tag/documentation\">GNOME Discourse</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Наша <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link>-страница содержит полезную информацию."
+"Наша <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link>-страница содержит полезную информацию."
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
@@ -358,8 +358,6 @@ msgstr "За каждое использование этой опции нал�
 
 #. (itstool) path: info/title
 #: C/index.page:8
-#| msgctxt "link"
-#| msgid "Mahjongg"
 msgctxt "link:trail"
 msgid "Mahjongg"
 msgstr "Маджонг"
@@ -540,8 +538,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui style="
-"\"menuitem\">Параметры</gui>."
+"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui "
+"style=\"menuitem\">Параметры</gui>."
 
 #. (itstool) path: item/p
 #: C/map.page:29
@@ -773,8 +771,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui style="
-"\"menuitem\">Результаты</gui>."
+"Нажмите кнопку меню в правом верхнем углу окна и выберите <gui "
+"style=\"menuitem\">Результаты</gui>."
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
@@ -863,34 +861,34 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:36
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
-"Чтобы начать перевод, вам необходимо <link href=\"https://l10n.gnome.org"
-"\">создать учетную запись</link> и присоединиться к <link href=\"https://"
+"Чтобы начать перевод, вам необходимо <link href=\"https://l10n.gnome."
+"org\">создать учетную запись</link> и присоединиться к <link href=\"https://"
 "l10n.gnome.org/teams/ \">команда переводчиков</link> для вашего языка. Это "
 "даст вам возможность загружать новые переводы."
 
 #. (itstool) path: page/p
 #: C/translate.page:41
 msgid ""
-"You can chat with GNOME translators using irc: join the #i18n channel on the "
-"irc.gnome.org server. People on the channel are located worldwide, so you "
-"may not get an immediate response as a result of timezone differences."
+"You can chat with GNOME translators <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/IRC\">using IRC</link> (on the <code>#gnome-i18n</code> "
+"channel). People on the channel are located worldwide, so you may not get an "
+"immediate response as a result of timezone differences."
 msgstr ""
-"Вы можете общаться с переводчиками GNOME, используя irc: join the #i18n "
-"channel на сервере irc.gnome.org. Люди на канале находятся по всему миру, "
-"поэтому вы можете не получить немедленный ответ из-за разницы часовых поясов."
+"Вы можете общаться с переводчиками GNOME <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/IRC\">используя IRC</link> (на канале <code>#gnome-i18n</"
+"code>). Люди на канале находятся по всему миру, поэтому вы можете не "
+"получить немедленный ответ из-за разницы часовых поясов."
 
 #. (itstool) path: page/p
 #: C/translate.page:45
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Кроме того, вы можете связаться с командой интернационализации, используя их "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">список "
-"рассылки</link>."
+"Кроме того, вы можете связаться с командой интернационализации используя "
+"<link href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
