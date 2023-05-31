@@ -27,9 +27,8 @@
     </screenshot>
   </screenshots>
   <releases>
-    <!-- should be kept in versionning inverted order -->
+    <release version="3.40.0" date="2023-05-31" type="stable" urgency="medium"/>
     <release version="3.38.0" date="2020-09-18" type="stable" urgency="medium"/>
-  ​  <!-- release version="3.35.91" date="2020-02-15" type="development" urgency="low"/ -->
   </releases>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>

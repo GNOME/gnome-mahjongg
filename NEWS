@@ -1,3 +1,13 @@
+GNOME Mahjongg 3.40.0
+=====================
+
+* Port to GTK4 and libadwaita
+* Build fixes
+* Fix hints [#22]
+* Translate scores dialog [#13]
+* help-overlay.ui: Remove ctrl+f1 shortcut
+* Translation updates
+
 GNOME Mahjongg 3.38.0
 =====================
 
