@@ -18,13 +18,6 @@
 
   <maintainer>
     <foaf:Person>
-      <foaf:name>Alberto Ruiz</foaf:name>
-      <foaf:mbox rdf:resource="mailto:aruiz@gnome.org" />
-      <gnome:userid>aruiz</gnome:userid>
-    </foaf:Person>
-  </maintainer>
-  <maintainer>
-    <foaf:Person>
       <foaf:name>Arnaud Bonatti</foaf:name>
       <foaf:mbox rdf:resource="mailto:arnaud.bonatti@gmail.com" />
       <gnome:userid>arnaudb</gnome:userid>
