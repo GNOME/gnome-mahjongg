@@ -13,7 +13,6 @@
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-mahjongg/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/" />
-  <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
   <programming-language>Vala</programming-language>
 
   <maintainer>

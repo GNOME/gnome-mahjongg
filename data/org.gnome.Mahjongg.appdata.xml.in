@@ -4,7 +4,7 @@
   <id>org.gnome.Mahjongg</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
-  <name>GNOME Mahjongg</name>
+  <name>Mahjongg</name>
   <summary>Match tiles and clear the board</summary>
   <description>
     <p>
@@ -16,7 +16,7 @@
    may actually be slightly different.
   </p>
     <p>
-   GNOME Mahjongg features a variety of starting layouts, some easy and some
+   Mahjongg features a variety of starting layouts, some easy and some
    difficult. If you get stuck, you can ask for a hint, but this adds a large
    time penalty.
   </p>
@@ -37,7 +37,7 @@
   <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
-  <developer_name>The GNOME Project</developer_name>
+  <developer_name>Alberto Ruiz</developer_name>
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>

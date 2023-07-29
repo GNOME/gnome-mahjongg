@@ -1,4 +1,4 @@
-# GNOME Mahjongg
+# Mahjongg
 
 Mahjongg is a solitaire (one player) version of the classic Eastern tile
 game, Mahjongg. The objective is to select pairs of similar tiles.
