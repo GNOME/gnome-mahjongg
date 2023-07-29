@@ -5,13 +5,13 @@
 # Wanderlust <wanderlust@ukr.net>, 2009.
 # Mykola Tkach <Stuartlittle1970@gmail.com>, 2014.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015.
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-17 12:48+0200\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-07-29 18:16+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -24,8 +24,10 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "Магджонґ GNOME"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Магджонґ"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -49,24 +51,23 @@ msgstr ""
 "насправді є різними."
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
+#| msgid ""
+#| "GNOME Mahjongg features a variety of starting layouts, some easy and some "
+#| "difficult. If you get stuck, you can ask for a hint, but this adds a "
+#| "large time penalty."
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"У маджонґу GNOME використовуються різні початкові розташування плиток, деякі "
+"У маджонґу використовуються різні початкові розташування плиток, деякі "
 "розташування простіші, деякі складніші. Якщо ви не можете вирішити який хід "
 "зробити, можете скористатися підказкою, але у цьому випадку буде нараховано "
 "штрафний час."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Проєкт GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Магджонґ"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -217,22 +218,18 @@ msgid "Quit"
 msgstr "Вийти"
 
 #: data/ui/preferences.ui:13
-#| msgid "_Theme:"
 msgid "Theme"
 msgstr "Тема"
 
 #: data/ui/preferences.ui:18
-#| msgid "Layout:"
 msgid "Layout"
 msgstr "Розташування"
 
 #: data/ui/preferences.ui:23
-#| msgid "_Background color:"
 msgid "Background color"
 msgstr "Колір тла"
 
 #: data/ui/score-dialog.ui:20
-#| msgid "Layout:"
 msgid "Layout: "
 msgstr "Розташування:"
 
@@ -376,6 +373,12 @@ msgstr "Відновити гру"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Призупинити гру"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "Магджонґ GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Проєкт GNOME"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Повернути останній хід"
