@@ -18,25 +18,28 @@
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Tim Sabsch <tim@sabsch.com>, 2019, 2022.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2023.
+# Philipp Kiemle <philipp.kiemle@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-21 14:36+0100\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-07-30 14:08+0200\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:7 data/org.gnome.Mahjongg.desktop.in:3
+#: src/gnome-mahjongg.vala:363 src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -44,40 +47,32 @@ msgstr "Finden Sie übereinstimmende Kacheln und leeren Sie das Brett"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:10
 msgid ""
-"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
-"the board at the start of the game. The goal is to remove all the tiles in "
-"as little time as possible. Select two matching tiles and they will "
-"disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
+"A solitaire version of the classic Eastern tile game. Tiles are stacked on the "
+"board at the start of the game. The goal is to remove all the tiles in as "
+"little time as possible. Select two matching tiles and they will disappear from "
+"the board, but you can only select a tile if there is an empty space to its "
+"left or right at the same level. Be careful: tiles that look alike may actually "
+"be slightly different."
 msgstr ""
-"Eine Solospielvariante des klassischen Kachelspiels aus Asien. Die Kacheln "
-"sind zu Beginn des Spiels auf dem Brett in Stapeln ausgelegt. Ziel des "
-"Spiels ist es, in möglichst kurzer Zeit alle Kacheln zu entfernen. Sobald "
-"zwei gleiche Kacheln ausgewählt werden, verschwinden sie vom Spielfeld. Aber "
-"vorsicht, eine Kachel kann nur gewählt werden, wenn unmittelbar daneben ein "
-"freies Feld ist. Erschwerend kommt hinzu, dass einige Kacheln sich sehr "
-"ähnlich sehen."
+"Eine Solospielvariante des klassischen Kachelspiels aus Asien. Die Kacheln sind "
+"zu Beginn des Spiels auf dem Brett in Stapeln ausgelegt. Ziel des Spiels ist "
+"es, in möglichst kurzer Zeit alle Kacheln zu entfernen. Sobald zwei gleiche "
+"Kacheln ausgewählt werden, verschwinden sie vom Spielfeld. Aber Vorsicht, eine "
+"Kachel kann nur gewählt werden, wenn unmittelbar daneben ein freies Feld ist. "
+"Erschwerend kommt hinzu, dass einige Kacheln sich sehr ähnlich sehen."
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large "
-"time penalty."
+"Mahjongg features a variety of starting layouts, some easy and some difficult. "
+"If you get stuck, you can ask for a hint, but this adds a large time penalty."
 msgstr ""
-"Gnome Mahjongg bietet eine Vielzahl an verschiedenen Ausgangspositionen. "
-"Einige davon sehr leicht, andere eher schwierig. Kommen Sie einmal nicht "
-"weiter, können Sie sich helfen lassen. Dafür gibt es dann allerdings eine "
-"größere Zeitstrafe."
+"Mahjongg bietet eine Vielzahl an verschiedenen Ausgangspositionen. Einige davon "
+"sehr leicht, andere eher schwierig. Kommen Sie einmal nicht weiter, können Sie "
+"sich helfen lassen. Dafür gibt es dann allerdings eine größere Zeitstrafe."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Das GNOME-Projekt"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -88,7 +83,7 @@ msgstr ""
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in:6
 msgid "game;strategy;puzzle;board;"
-msgstr "Spiel;Strategie;Puzzle;Brettspiel;"
+msgstr "game;strategy;puzzle;board;Spiel;Strategie;Puzzle;Brettspiel;"
 
 #: data/org.gnome.Mahjongg.gschema.xml:17
 msgid "Width of the window in pixels"
@@ -235,7 +230,7 @@ msgstr "Thema"
 
 #: data/ui/preferences.ui:18
 msgid "Layout"
-msgstr "Layout"
+msgstr "Anordnung"
 
 #: data/ui/preferences.ui:23
 msgid "Background color"
@@ -243,7 +238,7 @@ msgstr "Hintergrundfarbe"
 
 #: data/ui/score-dialog.ui:20
 msgid "Layout: "
-msgstr "Layout: "
+msgstr "Anordnung: "
 
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
@@ -251,7 +246,7 @@ msgstr "Neues Spiel"
 
 #: data/ui/window.ui:57
 msgid "Restart Game"
-msgstr "Spiel neustarten"
+msgstr "Spiel neu starten"
 
 #: data/ui/window.ui:61
 msgid "Scores"
@@ -288,8 +283,7 @@ msgstr "Ein neues Spiel mit dieser Karte starten?"
 #: src/gnome-mahjongg.vala:156
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
-"Falls Sie dieses Spiel fortsetzen, verwendet das nächste Spiel die neue "
-"Karte."
+"Falls Sie dieses Spiel fortsetzen, verwendet das nächste Spiel die neue Karte."
 
 #: src/gnome-mahjongg.vala:157
 msgid "_Continue playing"
@@ -308,17 +302,16 @@ msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr ""
-"Jedes Rätsel hat mindestens eine Lösung. Sie können Ihre Züge zurücknehmen "
-"und durch Ausprobieren die Lösung zu finden (wofür Sie eine Zeitstrafe in "
-"Kauf nehmen müssen), dieses Spiel neu starten oder ein neues Spiel beginnen."
+"Jedes Rätsel hat mindestens eine Lösung. Sie können Ihre Züge zurücknehmen und "
+"durch Ausprobieren die Lösung finden (wofür Sie eine Zeitstrafe in Kauf nehmen "
+"müssen), dieses Spiel neu starten oder ein neues Spiel beginnen."
 
 #: src/gnome-mahjongg.vala:212
 msgid ""
-"You can also try to reshuffle the game, but this does not guarantee a "
-"solution."
+"You can also try to reshuffle the game, but this does not guarantee a solution."
 msgstr ""
-"Sie können versuchen das Spiel neu zu mischen – eine Garantie dafür, dass es "
-"sich dann leichter lösen lässt, gibt es nicht."
+"Sie können auch versuchen, das Spiel neu zu mischen – eine Garantie dafür, dass "
+"es sich dann leichter lösen lässt, gibt es nicht."
 
 #: src/gnome-mahjongg.vala:213
 msgid "_Undo"
@@ -346,7 +339,7 @@ msgstr "Karten:"
 
 #: src/gnome-mahjongg.vala:346
 msgid "Tiles:"
-msgstr "Kachel:"
+msgstr "Kacheln:"
 
 # Manchmal wird Gnome-Games benutzt, manchmal Gnome-Spiele
 #: src/gnome-mahjongg.vala:366
@@ -371,7 +364,9 @@ msgstr ""
 "Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
 "Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>\n"
-"Tim Sabsch <tim@sabsch.com>"
+"Tim Sabsch <tim@sabsch.com>\n"
+"Jürgen Benvenuti <gastornis@posteo.org>\n"
+"Philipp Kiemle <philipp.kiemle@gmail.com>"
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -399,7 +394,13 @@ msgstr "Weiterspielen"
 
 #: src/window.vala:40
 msgid "Pause the game"
-msgstr "Das Spiel anhalten"
+msgstr "Das Spiel pausieren"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME Mahjongg"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Das GNOME-Projekt"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Den letzten Zug rückgängig machen"
