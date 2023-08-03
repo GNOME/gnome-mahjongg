@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2023-02-28 14:58+0000\n"
-"PO-Revision-Date: 2023-03-07 19:15+1000\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-08-02 10:16+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -376,8 +376,8 @@ msgstr "Маджонг"
 
 #. (itstool) path: info/desc
 #: C/index.page:11
-msgid "GNOME Mahjongg help."
-msgstr "Справка по GNOME Маджонг."
+msgid "Mahjongg help."
+msgstr "Справка по Маджонг."
 
 #. (itstool) path: page/title
 #: C/index.page:22
