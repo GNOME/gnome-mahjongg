@@ -18,21 +18,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-17 14:19+0300\n"
-"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-07-29 20:21+1000\n"
+"Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "Маджонг GNOME"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Маджонг"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -57,22 +59,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"В маджонге GNOME используются различные расклады костей, некоторые расклады "
-"проще, некоторые сложнее. Если вы затрудняетесь сделать ход, то можете "
+"В маджонге используются различные расклады костей, некоторые расклады проще, "
+"некоторые сложнее. Если вы затрудняетесь сделать ход, то можете "
 "воспользоваться подсказкой, но в этом случае будет начислено штрафное время."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "The GNOME Project"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Маджонг"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Альберто Руис"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -264,7 +261,7 @@ msgstr "Справка"
 
 #: data/ui/window.ui:79
 msgid "About Mahjongg"
-msgstr "О приложении Маджонг"
+msgstr "О приложении"
 
 #: src/game-view.vala:228
 msgid "Paused"
@@ -345,7 +342,7 @@ msgstr "Игра на поиск одинаковых костей Маджон�
 msgid "translator-credits"
 msgstr ""
 "Stas Solovey <whats_up@tut.by>, 2015-2018\n"
-"Ser82-png <sw@atrus.ru>, 2022"
+"Ser82-png <asvmail.as@gmail.com>, 2022-2023"
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -374,6 +371,12 @@ msgstr "Возобновить игру"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Приостановить игру"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "Маджонг GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "The GNOME Project"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Отменить последний ход"
