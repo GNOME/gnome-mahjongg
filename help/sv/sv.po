@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"POT-Creation-Date: 2023-02-28 14:58+0000\n"
-"PO-Revision-Date: 2023-02-28 16:38+0100\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-07-29 15:10+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -381,8 +381,8 @@ msgstr "Mahjong"
 
 #. (itstool) path: info/desc
 #: C/index.page:11
-msgid "GNOME Mahjongg help."
-msgstr "Hjälp för GNOME Mahjong."
+msgid "Mahjongg help."
+msgstr "Hjälp för Mahjong."
 
 #. (itstool) path: page/title
 #: C/index.page:22
