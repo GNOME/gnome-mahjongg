@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg-help\n"
-"POT-Creation-Date: 2023-02-28 14:58+0000\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
 "PO-Revision-Date: 2020-03-05 14:13+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -372,8 +372,8 @@ msgstr "Madżong"
 
 #. (itstool) path: info/desc
 #: C/index.page:11
-msgid "GNOME Mahjongg help."
-msgstr "Pomoc gry Madżong GNOME."
+msgid "Mahjongg help."
+msgstr "Pomoc gry Madżong."
 
 #. (itstool) path: page/title
 #: C/index.page:22
