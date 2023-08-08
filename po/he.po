@@ -4,27 +4,29 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2020-2022.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2020-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-17 15:15+0200\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-08-08 17:50+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
-"Language-Team: Hebrew <>\n"
+"Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 40.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 42.0\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "מא־ג׳ונג מבית GNOME"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "מא-ג׳ונג"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -46,21 +48,16 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"מא־ג׳ונג מבית GNOME מציג מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. "
-"אם נתקעת, ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
+"מא־ג׳ונג מציג מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. אם נתקעת, "
+"ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "מיזם GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "מא-ג׳ונג"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -211,22 +208,18 @@ msgid "Quit"
 msgstr "יציאה"
 
 #: data/ui/preferences.ui:13
-#| msgid "_Theme:"
 msgid "Theme"
 msgstr "ערכת נושא"
 
 #: data/ui/preferences.ui:18
-#| msgid "Layout:"
 msgid "Layout"
 msgstr "פריסה"
 
 #: data/ui/preferences.ui:23
-#| msgid "_Background color:"
 msgid "Background color"
 msgstr "צבע הרקע"
 
 #: data/ui/score-dialog.ui:20
-#| msgid "Layout:"
 msgid "Layout: "
 msgstr "פריסה:"
 
@@ -373,6 +366,12 @@ msgstr "המשך המשחק"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "השהיית המשחק"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "מא־ג׳ונג מבית GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "מיזם GNOME"
 
 #~ msgid "Undo your last move"
 #~ msgstr "ביטול המהלך האחרון שלך"
