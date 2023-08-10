@@ -445,8 +445,9 @@ public class Game : Object
 
     private void start_clock ()
     {
-        if (clock == null)
-            clock = new Timer ();
+        if (clock != null)
+            return;
+        clock = new Timer ();
         timeout_cb ();
     }
 
