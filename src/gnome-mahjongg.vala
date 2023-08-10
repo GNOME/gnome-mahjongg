@@ -130,6 +130,9 @@ public class Mahjongg : Adw.Application
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
         }
+
+        /* Update clock/moves left label */
+        tick_cb ();
     }
 
     private void conf_value_changed_cb (Settings settings, string key)
@@ -458,9 +461,6 @@ public class Mahjongg : Adw.Application
         window.set_map_title (game_view);
 
         update_ui ();
-
-        /* Update clock label */
-        tick_cb ();
 
         /* Reset the pause button in case it was set to resume */
         window.unpause ();
