@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-17 18:18+0200\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-08-16 21:45+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -24,12 +24,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2010-09-13 15:09+0000\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "Gnomen Mahjong"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjong"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -53,22 +55,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Gnomen Mahjong omaa lukuisia eri aloitusasetteluja, joista osa on helppoja "
-"ja toiset haastavia. Jos jäät jumiin, voit pyytää vinkkiä, mutta siitä saa "
+"Mahjong omaa lukuisia eri aloitusasetteluja, joista osa on helppoja ja "
+"toiset haastavia. Jos jäät jumiin, voit pyytää vinkkiä, mutta siitä saa "
 "aikasakon."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Gnome-projekti"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjong"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -341,7 +338,7 @@ msgstr "Mahjong-laatoilla pelattava laattojen sovituspeli"
 #: src/gnome-mahjongg.vala:372
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2013-2022\n"
+"Jiri Grönroos, 2013-2023\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -386,6 +383,12 @@ msgstr "Jatka peliä"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Keskeytä peli"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "Gnomen Mahjong"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Gnome-projekti"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Kumoa edellinen siirto"
