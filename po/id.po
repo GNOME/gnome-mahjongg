@@ -5,14 +5,14 @@
 # Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-04-01 11:25+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-08-18 21:45+0700\n"
+"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -48,22 +50,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"GNOME Mahjongg memiliki tata letak awal yang bervariasi, beberapa mudah dan "
+"Mahjongg memiliki tata letak awal yang bervariasi, beberapa mudah dan "
 "beberapa sulit. Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk, "
 "tapi ini menambahkan penalti waktu yang besar."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Proyek GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -227,7 +224,7 @@ msgstr "Warna latar belakang"
 
 #: data/ui/score-dialog.ui:20
 msgid "Layout: "
-msgstr "Tata Letak"
+msgstr "Tata Letak: "
 
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
@@ -372,3 +369,9 @@ msgstr "Hentikan mengistirahatkan permainan"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Istirahatkan permainan"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME Mahjongg"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Proyek GNOME"
