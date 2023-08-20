@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-07-27 20:35+0000\n"
-"PO-Revision-Date: 2022-09-18 12:32+0600\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-08-20 18:57+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,11 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Маджонг"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Маджонг"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -44,22 +46,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"GNOME Маджонгы ішінде көптеген бастау жаймалары бар, олардың кейбіреулері "
-"оңай, кейбіреулері қиын болады. Тұрып қалсаңыз, тұспал сұрай аласыз, бірақ "
-"ол үлкен уақыт күтуін қосады."
+"Маджонг ішінде көптеген бастау жаймалары бар, олардың кейбіреулері оңай, "
+"кейбіреулері қиын болады. Тұрып қалсаңыз, тұспал сұрай аласыз, бірақ ол "
+"үлкен уақыт күтуін қосады."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME жобасы"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Маджонг"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -359,6 +356,12 @@ msgstr "Ойынды аялдатудан босату"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Ойынды аялдату"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME Маджонг"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME жобасы"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Соңғы әрекетті болдырмау"
