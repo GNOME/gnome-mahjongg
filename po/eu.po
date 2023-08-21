@@ -5,13 +5,13 @@
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2019, 2021, 2022.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2019, 2021, 2022, 2023.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-20 17:00+0100\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2026-08-21 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -21,8 +21,10 @@ msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -40,19 +42,14 @@ msgstr "Ekialdeko bakarkako jokoaren bertsioa. Fitxak mahaigainean pilatzen dira
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
-msgstr "GNOME Mahjongg hasierako diseinu desberdinak ditu, batzuk errazak eta besteak zailak. Larri zaudenean, eskatu argibide bat (honek ordea zigor gisa denbora handiagotzen du)."
+msgstr "Mahjongg jokoak hasierako diseinu desberdinak ditu, batzuk errazak eta besteak zailak. Larri zaudenean, eskatu argibide bat (honek ordea zigor gisa denbora handiagotzen du)."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME proiektua"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -349,6 +346,12 @@ msgstr "Jokoa jarraitzen du"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Jokoa pausarazten du"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME Mahjongg"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME proiektua"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Desegin zure azken mugimendua"
