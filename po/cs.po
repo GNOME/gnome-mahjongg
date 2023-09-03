@@ -22,21 +22,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-18 14:59+0100\n"
-"Last-Translator: Marek Černocký <marek@manet.cz>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-09-03 23:36+0200\n"
+"Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "Mahjongg GNOME"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -60,22 +62,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Mahjongg GNOME obsahuje různé varianty počátečního rohložení kamenů, některé "
+"Mahjongg obsahuje různé varianty počátečního rozložení kamenů, některé "
 "snadné, jiné obtížné. Když budete v koncích, můžete požádat o radu, ale k ní "
 "obdržíte také časovou penalizaci."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -391,3 +388,9 @@ msgstr "Pokračovat ve hře"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Pozastavit hru"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "Mahjongg GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Projekt GNOME"
