@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mahjongg help master\n"
-"POT-Creation-Date: 2023-02-28 15:51+0000\n"
-"PO-Revision-Date: 2023-03-03 13:14+0100\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-09-13 18:32+0200\n"
 "Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -108,11 +108,11 @@ msgid ""
 "issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf <gui>New "
-"issue</gui>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
-"\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines"
-"\">Richtlinien zum Melden von Fehlern</link> und <link href=\"https://gitlab."
-"gnome.org/GNOME/gnome-mahjongg/issues\">schauen Sie bitte nach</link>, ob "
-"der Fehler vielleicht schon gemeldet wurde."
+"issue</gui>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link "
+"href=\"https://wiki.gnome.org/Community/GettingInTouch/"
+"BugReportingGuidelines\">Richtlinien zum Melden von Fehlern</link> und <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\">schauen Sie "
+"bitte nach</link>, ob der Fehler vielleicht schon gemeldet wurde."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -192,15 +192,15 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link href="
-"\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
 "Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">bei "
 "der Entwicklung von <app>GNOME Games</app> helfen möchten</link>, können Sie "
-"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc"
-"%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über <link href="
-"\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link> Kontakt "
-"aufnehmen."
+"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link> "
+"Kontakt aufnehmen."
 
 #. (itstool) path: page/title
 #: C/documentation.page:18
@@ -225,18 +225,19 @@ msgid ""
 "org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
 "Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
-"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">IRC</link> oder über <link href=\"https://discourse.gnome.org/tag/"
-"documentation\">GNOME Discourse</link> mit uns Kontakt auf."
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">IRC</link> oder über <link href=\"https://discourse.gnome.org/"
+"tag/documentation\">GNOME Discourse</link> mit uns Kontakt auf."
 
 #. (itstool) path: page/p
 #: C/documentation.page:25
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Unser <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
+"Unser <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">Wiki</link> enthält eine Reihe nützlicher Informationen für "
+"Sie bereit."
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
@@ -399,8 +400,8 @@ msgstr "Mahjongg"
 
 #. (itstool) path: info/desc
 #: C/index.page:11
-msgid "GNOME Mahjongg help."
-msgstr "Hilfe zu GNOME Mahjongg."
+msgid "Mahjongg help."
+msgstr "Hilfe zu Mahjongg."
 
 #. (itstool) path: page/title
 #: C/index.page:22
@@ -899,10 +900,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:36
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"https://"
 "l10n.gnome.org\">ein Konto erstellen</link> und einem <link href=\"https://"
@@ -929,8 +930,9 @@ msgid ""
 "Alternatively, you can contact the Internationalization Team using <link "
 "href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Alternativ können Sie das Internationalisierungsteam über <link href="
-"\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link> kontaktieren."
+"Alternativ können Sie das Internationalisierungsteam über <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link> "
+"kontaktieren."
 
 #~ msgid "Advanced"
 #~ msgstr "Erweitert"
