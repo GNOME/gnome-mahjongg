@@ -4,14 +4,14 @@
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
 # Tong Hui <tonghuix@gmail.com>, 2014.
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018.
-# lumingzh <lumingzh@qq.com>, 2022.
+# lumingzh <lumingzh@qq.com>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-20 09:33+0800\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-10-05 20:44+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -19,11 +19,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"X-Generator: Gtranslator 41.0\n"
+"X-Generator: Gtranslator 45.2\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME 麻将牌"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "对对碰"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -44,21 +46,16 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"GNOME 麻将牌有好多种开局，有些容易，有些困难。如果困住了，您可以寻求提示，但"
-"会受到时间上的严重惩罚。"
+"麻将牌有好多种开局，有些容易，有些困难。如果困住了，您可以寻求提示，但会受到"
+"时间上的严重惩罚。"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME 项目"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "对对碰"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -209,22 +206,18 @@ msgid "Quit"
 msgstr "退出"
 
 #: data/ui/preferences.ui:13
-#| msgid "_Theme:"
 msgid "Theme"
 msgstr "主题"
 
 #: data/ui/preferences.ui:18
-#| msgid "Layout:"
 msgid "Layout"
 msgstr "布局"
 
 #: data/ui/preferences.ui:23
-#| msgid "_Background color:"
 msgid "Background color"
 msgstr "背景颜色"
 
 #: data/ui/score-dialog.ui:20
-#| msgid "Layout:"
 msgid "Layout: "
 msgstr "布局："
 
@@ -337,7 +330,8 @@ msgstr ""
 "Ping Z <zpsigma@gmail.com>, 2007\n"
 "Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
 "Tong Hui <tonghuix@gmail.com>, 2014\n"
-"Mingcong Bai <jeffbai@aosc.xyz>, 2018"
+"Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
+"lumingzh <lumingzh@qq.com>, 2023"
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -366,6 +360,12 @@ msgstr "重回游戏"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "暂停游戏"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME 麻将牌"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME 项目"
 
 #~ msgid "Undo your last move"
 #~ msgstr "撤消最后一着"
