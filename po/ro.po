@@ -12,9 +12,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-02-05 11:44+0000\n"
-"PO-Revision-Date: 2022-03-06 12:36+0100\n"
-"Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-10-21 16:43+0300\n"
+"Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
+"gmail [dot] com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -22,13 +23,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "Mahjongg GNOME"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -52,22 +55,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Mahjongg GNOME vine cu o varietate de aranjamente de început, unele simple "
-"iar altele complicate. Dacă v-ați blocat, puteți cere un indiciu, dar asta "
-"va adăuga o mare penalizare de timp."
+"Mahjongg vine cu o varietate de aranjamente de început, unele simple iar "
+"altele complicate. Dacă v-ați blocat, puteți cere un indiciu, dar asta va "
+"adăuga o mare penalizare de timp."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Proiectul GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -217,6 +215,22 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Ieșire"
 
+#: data/ui/preferences.ui:13
+msgid "Theme"
+msgstr "Temă"
+
+#: data/ui/preferences.ui:18
+msgid "Layout"
+msgstr "Aspect"
+
+#: data/ui/preferences.ui:23
+msgid "Background color"
+msgstr "Culoarea de fundal"
+
+#: data/ui/score-dialog.ui:20
+msgid "Layout: "
+msgstr "Aspect: "
+
 #: data/ui/window.ui:53 src/score-dialog.vala:44
 msgid "New Game"
 msgstr "Joc nou"
@@ -327,7 +341,7 @@ msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
-"2019-2020\n"
+"2019-2020, 2023\n"
 "Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2019, 2022\n"
 "\n"
 "Launchpad Contributions:\n"
@@ -362,16 +376,23 @@ msgstr "Dată"
 msgid "Time"
 msgstr "Timp"
 
-#: src/window.vala:33
+#: src/window.vala:24
+msgid "Moves Left:"
+msgstr "Mutări rămase:"
+
+#: src/window.vala:34
 msgid "Unpause the game"
 msgstr "Reluați jocul"
 
-#: src/window.vala:39
+#: src/window.vala:40
 msgid "Pause the game"
 msgstr "Întrerupe jocul"
 
-#~ msgid "Moves Left:"
-#~ msgstr "Mutări rămase:"
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "Mahjongg GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Proiectul GNOME"
 
 #~ msgid "Undo your last move"
 #~ msgstr "Anulați ultima mișcare"
@@ -391,20 +412,11 @@ msgstr "Întrerupe jocul"
 #~ msgid "_Help"
 #~ msgstr "_Ajutor"
 
-#~ msgid "_Theme:"
-#~ msgstr "_Temă:"
-
 #~ msgid "_Layout:"
 #~ msgstr "_Aspect:"
 
-#~ msgid "_Background color:"
-#~ msgstr "Culoarea de _fundal:"
-
 #~ msgid "_Close"
 #~ msgstr "În_chide"
-
-#~ msgid "Layout:"
-#~ msgstr "Aspect:"
 
 #~ msgid "org.gnome.Mahjongg"
 #~ msgstr "org.gnome.Mahjongg"
