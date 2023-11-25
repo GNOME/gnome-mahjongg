@@ -6,14 +6,14 @@
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2012-2013.
-# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014-2022.
+# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:39+0000\n"
-"PO-Revision-Date: 2022-03-18 02:31+0330\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2023-11-25 15:38+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,11 +22,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.1\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "ماهجونگ گنوم"
+#: data/org.gnome.Mahjongg.appdata.xml.in:7 data/org.gnome.Mahjongg.desktop.in:3
+#: src/gnome-mahjongg.vala:363 src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "ماهجونگ"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -49,22 +50,15 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large time "
-"penalty."
+"Mahjongg features a variety of starting layouts, some easy and some difficult. "
+"If you get stuck, you can ask for a hint, but this adds a large time penalty."
 msgstr ""
-"ماهجونگ گنوم چیدمان‌های مختلفی را فراهم می‌کند، تعدادی ساده و تعدادی سخت. اگر گیر "
-"کردید، می‌توانید درخواست راهنمایی کنید، اما این کار یک جریمهٔ بزرگ زمانی خواهد "
-"داشت."
+"ماهجونگ چیدمان‌های مختلفی دارد؛ برخی ساده و برخی دشوار. اگر گیر کردید می‌توانید "
+"درخواست راهنمایی کنید؛ ولی جریمهٔ زمانی بزرگی خواهد داشت."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "پروژهٔ گنوم"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "ماهجونگ"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "آلبرتو رویز"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -140,13 +134,13 @@ msgstr "صلیب متعجب کننده"
 #: data/translatable_game_names.h:15
 msgctxt "mahjongg map name"
 msgid "Difficult"
-msgstr "سخت"
+msgstr "دشوار"
 
 #. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
 #: data/help-overlay.ui:12
 msgctxt "shortcut window"
 msgid "Main functions"
-msgstr "توابع اصلی"
+msgstr "کارهای اصلی"
 
 #. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
 #: data/help-overlay.ui:19
@@ -366,6 +360,12 @@ msgstr "رفع مکث بازی"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "مکث بازی"
+
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "ماهجونگ گنوم"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "پروژهٔ گنوم"
 
 #~ msgid "Undo your last move"
 #~ msgstr "برگردان آخرین حرکتان"
