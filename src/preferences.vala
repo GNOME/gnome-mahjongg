@@ -14,12 +14,13 @@ public class PreferencesWindow : Adw.PreferencesWindow {
 
     public PreferencesWindow (Settings settings) {
         this.settings = settings;
-        themes_row.set_expression (new Gtk.PropertyExpression (typeof (ThemeItem), null, "name"));
+        themes_row.set_expression (new Gtk.PropertyExpression (typeof (ThemeItem), null, "display_name"));
+        layout_row.set_expression (new Gtk.PropertyExpression (typeof (LayoutItem), null, "display_name"));
     }
 
     public void populate_themes (List<string> themes)
     {
-        var model = new ListStore(typeof(ThemeItem));
+        var model = new ListStore (typeof (ThemeItem));
         foreach (var theme in themes)
         {
             model.append (new ThemeItem (theme));
@@ -44,17 +45,16 @@ public class PreferencesWindow : Adw.PreferencesWindow {
 
     public void populate_layouts (List<Map> layouts)
     {
-        var model = new Gtk.StringList(null);
+        var model = new ListStore (typeof (LayoutItem));
         foreach (var map in layouts)
         {
-            var display_name = dpgettext2 (null, "mahjongg map name", map.name);
-            model.append (display_name);
+            model.append (new LayoutItem (map.name));
         }
         layout_row.set_model (model);
 
         for (int i = 0; i < model.get_n_items(); i++)
         {
-            if (settings.get_string ("mapset") == model.get_string (i))
+            if (settings.get_string ("mapset") == ((LayoutItem)model.get_item (i)).name)
             {
                 layout_row.set_selected (i);
                 break;
@@ -62,8 +62,8 @@ public class PreferencesWindow : Adw.PreferencesWindow {
         }
 
         layout_row.notify["selected"].connect ( (s, p) => {
-            var layoutmodel = layout_row.model as Gtk.StringList;
-            var layout = layoutmodel.get_string (layout_row.selected);
+            var layoutmodel = layout_row.model as ListModel;
+            var layout = ((LayoutItem)layoutmodel.get_item (layout_row.selected)).name;
             settings.set_string ("mapset", layout);
         });
     }
@@ -79,13 +79,24 @@ public class PreferencesWindow : Adw.PreferencesWindow {
 }
 
 public class ThemeItem : Object {
-    public string name {get; set;}
     public string filename {get; set;}
+    public string display_name {get; set;}
 
     public ThemeItem (string filename)
     {
         var tokens = filename.split (".", -1);
-        this.name = tokens[0];
         this.filename = filename;
+        this.display_name = tokens[0];
+    }
+}
+
+public class LayoutItem : Object {
+    public string name {get; set;}
+    public string display_name {get; set;}
+
+    public LayoutItem (string name)
+    {
+        this.name = name;
+        this.display_name = dpgettext2 (null, "mahjongg map name", name);
     }
 }
