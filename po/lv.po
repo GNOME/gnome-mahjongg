@@ -4,14 +4,14 @@
 #
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
+# SPDX-FileCopyrightText: 2010, 2011, 2024 Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2018, 2019, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-07-27 20:35+0000\n"
-"PO-Revision-Date: 2022-09-06 21:59+0300\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2024-03-02 01:27+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -20,13 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -48,23 +50,22 @@ msgstr ""
 "brīva vieta. Uzmanies — līdzīgi kauliņi var būt atšķirīgi."
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
+#| msgid ""
+#| "GNOME Mahjongg features a variety of starting layouts, some easy and some "
+#| "difficult. If you get stuck, you can ask for a hint, but this adds a "
+#| "large time penalty."
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"GNOME Mahjongg piedāvā dažādus sākuma izkārtojumus — daži ir viegli, bet "
+"Mahjongg piedāvā dažādus sākuma izkārtojumus — daži ir viegli, bet "
 "citi ir grūti. Ja netiec uz priekšu, pajautā padomu, bet tas dod lielu laika "
 "sodu."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "GNOME projekts"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -215,22 +216,18 @@ msgid "Quit"
 msgstr "Iziet"
 
 #: data/ui/preferences.ui:13
-#| msgid "_Theme:"
 msgid "Theme"
 msgstr "Motīvs"
 
 #: data/ui/preferences.ui:18
-#| msgid "Layout:"
 msgid "Layout"
 msgstr "Izkārtojums"
 
 #: data/ui/preferences.ui:23
-#| msgid "_Background color:"
 msgid "Background color"
 msgstr "Fona krāsa"
 
 #: data/ui/score-dialog.ui:20
-#| msgid "Layout:"
 msgid "Layout: "
 msgstr "Izkārtojums: "
 
@@ -239,12 +236,10 @@ msgid "New Game"
 msgstr "Jauna spēle"
 
 #: data/ui/window.ui:57
-#| msgid "_Restart Game"
 msgid "Restart Game"
 msgstr "Pārstartēt spēli"
 
 #: data/ui/window.ui:61
-#| msgid "_Scores"
 msgid "Scores"
 msgstr "Rezultāti"
 
@@ -253,18 +248,14 @@ msgid "Preferences"
 msgstr "Iestatījumi"
 
 #: data/ui/window.ui:71
-#| msgid "_Keyboard Shortcuts"
 msgid "Keyboard Shortcuts"
 msgstr "Tastatūras īsinājumtaustiņi"
 
 #: data/ui/window.ui:75
-#| msgctxt "shortcut window"
-#| msgid "Help"
 msgid "Help"
 msgstr "Palīdzība"
 
 #: data/ui/window.ui:79
-#| msgid "_About Mahjongg"
 msgid "About Mahjongg"
 msgstr "Par Mahjongg"
 
@@ -377,6 +368,12 @@ msgstr "Turpināt spēli"
 msgid "Pause the game"
 msgstr "Pauzēt spēli"
 
+#~ msgid "GNOME Mahjongg"
+#~ msgstr "GNOME Mahjongg"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME projekts"
+
 #~ msgid "Undo your last move"
 #~ msgstr "Atsaukt savu pēdējo gājienu"
 
@@ -410,3 +407,4 @@ msgstr "Pauzēt spēli"
 
 #~ msgid "_About"
 #~ msgstr "P_ar"
+
