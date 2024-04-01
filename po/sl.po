@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2022-03-17 10:59+0000\n"
-"PO-Revision-Date: 2022-03-17 12:42+0100\n"
-"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
+"POT-Creation-Date: 2023-07-29 06:27+0000\n"
+"PO-Revision-Date: 2024-04-01 12:58+0200\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-msgid "GNOME Mahjongg"
-msgstr "GNOME Mahjongg"
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:539
+msgid "Mahjongg"
+msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:8
 msgid "Match tiles and clear the board"
@@ -49,22 +51,17 @@ msgstr ""
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:18
 msgid ""
-"GNOME Mahjongg features a variety of starting layouts, some easy and some "
+"Mahjongg features a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Igra GNOME Mahjongg omogoča izbor različnih postavitev ploščic. Nekatere "
-"postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
-"ki pa se kaznujejo s časovnim pribitkom."
+"Igra Mahjongg GNOME omogoča izbor različnih začetnih postavitev ploščic. "
+"Nekatere postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz "
+"namigov, ki pa se kaznujejo s časovnim pribitkom."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:41
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
-msgid "Mahjongg"
-msgstr "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:40
+msgid "Alberto Ruiz"
+msgstr "Alberto Ruiz"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -368,69 +365,3 @@ msgstr "Nadaljuj z igro"
 #: src/window.vala:40
 msgid "Pause the game"
 msgstr "Premor igranja"
-
-#~ msgid "Undo your last move"
-#~ msgstr "Razveljavi zadnjo potezo"
-
-#~ msgid "Redo your last move"
-#~ msgstr "Ponovno uveljavi zadnjo potezo"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Namig za naslednjo potezo"
-
-#~ msgid "_New Game"
-#~ msgstr "_Nova igra"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Možnosti"
-
-#~ msgid "_Help"
-#~ msgstr "Pomo_č"
-
-#~ msgid "_Layout:"
-#~ msgstr "_Postavitev:"
-
-#~ msgid "_Close"
-#~ msgstr "_Zapri"
-
-#~ msgid "org.gnome.Mahjongg"
-#~ msgstr "org.gnome.Mahjongg"
-
-#~ msgid "_Contents"
-#~ msgstr "_Vsebina"
-
-#~ msgid "_About"
-#~ msgstr "_O Programu"
-
-#~ msgid "Mahjongg Preferences"
-#~ msgstr "Možnosti Mahjongg"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "prav, če je okno razpeto čez celoten zaslon"
-
-#~ msgid "_New"
-#~ msgstr "_Nova"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Razveljavi potezo"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Obnovi potezo"
-
-#~ msgid "Hint"
-#~ msgstr "Namig"
-
-#~ msgid "_Pause"
-#~ msgstr "_Premor"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Spletna stran iger GNOME"
-
-#~ msgid "Res_ume"
-#~ msgstr "Na_daljuj"
-
-#~ msgid "Mahjongg - %s"
-#~ msgstr "Mahjongg - %s"
-
-#~ msgid "Size:"
-#~ msgstr "Velikost:"
