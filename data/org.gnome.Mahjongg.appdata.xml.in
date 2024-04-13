@@ -3,7 +3,7 @@
 <component type="desktop-application">
   <id>org.gnome.Mahjongg</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <project_license>GPL-2.0-or-later</project_license>
   <name>Mahjongg</name>
   <summary>Match tiles and clear the board</summary>
   <description>
