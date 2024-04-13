@@ -22,4 +22,11 @@
       <gnome:userid>arnaudb</gnome:userid>
     </foaf:Person>
   </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Mathias Bonn</foaf:name>
+      <foaf:mbox rdf:resource="mailto:mathiasb@gnome.org" />
+      <gnome:userid>mathiasb</gnome:userid>
+    </foaf:Person>
+  </maintainer>
 </Project>
