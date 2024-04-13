@@ -11,11 +11,11 @@ theory says that the Chinese philosopher, Confucius, made the game.
 
 ## Useful links
 
-- Homepage: <https://wiki.gnome.org/Apps/Mahjongg>
+- Homepage: <https://gitlab.gnome.org/GNOME/gnome-mahjongg>
 - User manual: <https://help.gnome.org/users/gnome-mahjongg/stable/>
 - Report issues: <https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/>
-- Donate: <https://www.gnome.org/friends/>
-- Translate: <https://wiki.gnome.org/TranslationProject>
+- Donate: <https://www.gnome.org/donate/>
+- Translate: <https://l10n.gnome.org/module/gnome-mahjongg/>
 
 ## Resources
 

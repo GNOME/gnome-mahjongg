@@ -14,30 +14,35 @@
    from the board, but you can only select a tile if there is an empty space to
    its left or right at the same level. Be careful: tiles that look alike
    may actually be slightly different.
-  </p>
+    </p>
     <p>
    Mahjongg features a variety of starting layouts, some easy and some
    difficult. If you get stuck, you can ask for a hint, but this adds a large
    time penalty.
-  </p>
+    </p>
   </description>
   <screenshots>
-    <screenshot height="524" width="972" type="default">
+    <screenshot type="default">
       <image>https://gitlab.gnome.org/GNOME/gnome-mahjongg/-/raw/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.40.0" date="2023-05-31" type="stable" urgency="medium"/>
-    <release version="3.38.0" date="2020-09-18" type="stable" urgency="medium"/>
+    <release version="3.40.0" date="2023-05-31" type="stable"/>
+    <release version="3.38.0" date="2020-09-18" type="stable"/>
   </releases>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
-  <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
+  <url type="homepage">https://gitlab.gnome.org/GNOME/gnome-mahjongg</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues</url>
-  <url type="donation">https://www.gnome.org/friends/</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
   <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
+  <url type="translate">https://l10n.gnome.org/module/gnome-mahjongg/</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/gnome-mahjongg</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
-  <developer_name>Alberto Ruiz</developer_name>
+  <developer_name>The Mahjongg Team</developer_name>
+  <developer id="org.gnome.mahjongg">
+    <name>The Mahjongg Team</name>
+  </developer>
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
