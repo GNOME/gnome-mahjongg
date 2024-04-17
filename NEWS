@@ -1,3 +1,13 @@
+GNOME Mahjongg 3.40.1
+=====================
+
+* Only create a single timer (prevent 100% CPU usage)
+* Store untranslated tile layout name in settings
+* Update 'moves left' on tile match and restart
+* Always show number of moves left
+* Update AppStream metadata
+* Translation updates
+
 GNOME Mahjongg 3.40.0
 =====================
 
