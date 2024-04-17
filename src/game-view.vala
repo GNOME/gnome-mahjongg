@@ -10,8 +10,6 @@
 
 public class GameView : Gtk.DrawingArea
 {
-    public Gdk.RGBA background_color;
-
     private int tile_pattern_width = 0;
     private int tile_pattern_height = 0;
 
@@ -160,14 +158,6 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    public void set_background (string? colour)
-    {
-        background_color = Gdk.RGBA ();
-        if (colour == null || !background_color.parse (colour))
-            background_color.red = background_color.green = background_color.blue = 0;
-        queue_draw ();
-    }
-
     private void draw_game (Cairo.Context cr, bool render_indexes = false)
     {
         if (theme == null)
@@ -306,8 +296,6 @@ public class GameView : Gtk.DrawingArea
         if (game == null)
             return;
 
-        Gdk.cairo_set_source_rgba (cr, background_color);
-        cr.paint ();
         draw_game (cr);
     }
 

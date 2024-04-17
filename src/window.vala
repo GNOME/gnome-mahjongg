@@ -1,5 +1,8 @@
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
-public class MahjonggWindow : Gtk.ApplicationWindow {
+public class MahjonggWindow : Adw.ApplicationWindow {
+
+    [GtkChild]
+    private unowned Adw.ToolbarView toolbar_view;
 
     [GtkChild]
     private unowned Adw.WindowTitle titlewidget;
@@ -10,7 +13,7 @@ public class MahjonggWindow : Gtk.ApplicationWindow {
     public MahjonggWindow (Gtk.Application application, GameView game_view)
     {
         Object(application: application);
-        this.set_child (game_view);
+        toolbar_view.set_content (game_view);
     }
 
     public void set_map_title (GameView game_view)

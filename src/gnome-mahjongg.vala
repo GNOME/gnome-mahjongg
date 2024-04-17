@@ -105,7 +105,7 @@ public class Mahjongg : Adw.Application
         game_view.grab_focus ();
 
         conf_value_changed_cb (settings, "tileset");
-        conf_value_changed_cb (settings, "bgcolour");
+        conf_value_changed_cb (settings, "background-color");
         tick_cb ();
     }
 
@@ -142,10 +142,6 @@ public class Mahjongg : Adw.Application
             var theme = settings.get_string ("tileset");
             game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
         }
-        else if (key == "bgcolour")
-        {
-            game_view.set_background (settings.get_string ("bgcolour"));
-        }
         else if (key == "mapset")
         {
             /* Prompt user if already made a move */
@@ -170,6 +166,13 @@ public class Mahjongg : Adw.Application
             }
             else
                 new_game ();
+        }
+        else if (key == "background-color")
+        {
+            var style_manager = Adw.StyleManager.get_default ();
+            var color_scheme = settings.get_enum ("background-color");
+
+            style_manager.set_color_scheme (color_scheme);
         }
     }
 
@@ -267,7 +270,7 @@ public class Mahjongg : Adw.Application
         var preferences = new PreferencesWindow (settings);
         preferences.populate_themes (load_themes ());
         preferences.populate_layouts (maps);
-        preferences.populate_background (game_view.background_color);
+        preferences.populate_backgrounds ();
         preferences.set_transient_for (window);
         preferences.show();
     }

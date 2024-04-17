@@ -1,16 +1,19 @@
 <schemalist>
+  <enum id="org.gnome.Mahjongg.BackgroundColor">
+    <value nick="system" value="0"/>
+    <value nick="light" value="1"/>
+    <value nick="dark" value="4"/>
+  </enum>
+
   <schema id="org.gnome.Mahjongg" path="/org/gnome/Mahjongg/" gettext-domain="gnome-mahjongg">
-    <key name="show-toolbar" type="b">
-      <default>true</default>
-    </key>
     <key name="tileset" type="s">
       <default>"postmodern.svg"</default>
     </key>
     <key name="mapset" type="s">
       <default>"Easy"</default>
     </key>
-    <key name="bgcolour" type="s">
-      <default>"#34385b"</default>
+    <key name="background-color" enum="org.gnome.Mahjongg.BackgroundColor">
+      <default>"system"</default>
     </key>
     <key name="window-width" type="i">
       <default>900</default>

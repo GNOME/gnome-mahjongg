@@ -8,7 +8,7 @@ public class PreferencesWindow : Adw.PreferencesWindow {
     private unowned Adw.ComboRow layout_row;
 
     [GtkChild]
-    private unowned Gtk.ColorButton background_btn;
+    private unowned Adw.ComboRow background_row;
 
     private Settings settings;
 
@@ -16,6 +16,7 @@ public class PreferencesWindow : Adw.PreferencesWindow {
         this.settings = settings;
         themes_row.set_expression (new Gtk.PropertyExpression (typeof (ThemeItem), null, "display_name"));
         layout_row.set_expression (new Gtk.PropertyExpression (typeof (LayoutItem), null, "display_name"));
+        background_row.set_expression (new Gtk.PropertyExpression (typeof (BackgroundItem), null, "display_name"));
     }
 
     public void populate_themes (List<string> themes)
@@ -68,12 +69,27 @@ public class PreferencesWindow : Adw.PreferencesWindow {
         });
     }
 
-    public void populate_background (Gdk.RGBA background_color)
+    public void populate_backgrounds ()
     {
-        background_btn.set_rgba (background_color);
-        background_btn.color_set.connect ( () => {
-            var colour = background_btn.get_rgba ();
-            settings.set_string ("bgcolour", colour.to_string ());
+        var model = new ListStore (typeof (BackgroundItem));
+        model.append (new BackgroundItem ("system", _("Follow system")));
+        model.append (new BackgroundItem ("light", _("Light")));
+        model.append (new BackgroundItem ("dark", _("Dark")));
+
+        background_row.set_model (model);
+
+        for (int i = 0; i < model.get_n_items(); i++)
+        {
+            if (settings.get_string ("background-color") == ((BackgroundItem)model.get_item (i)).name)
+            {
+                background_row.set_selected (i);
+                break;
+            }
+        }
+
+        background_row.notify["selected"].connect ( (s, p) => {
+            var background_item = background_row.model.get_item (background_row.selected);
+            settings.set_string ("background-color", ((BackgroundItem)background_item).name);
         });
     }
 }
@@ -98,5 +114,16 @@ public class LayoutItem : Object {
     {
         this.name = name;
         this.display_name = dpgettext2 (null, "mahjongg map name", name);
+    }
+}
+
+public class BackgroundItem : Object {
+    public string name {get; set;}
+    public string display_name {get; set;}
+
+    public BackgroundItem (string name, string display_name)
+    {
+        this.name = name;
+        this.display_name = display_name;
     }
 }
