@@ -79,7 +79,9 @@ public class GameView : Gtk.DrawingArea
             update_dimensions ();
 
             if (pixbuf != null) {
-                var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+                var scale = get_native ().get_surface ().get_scale_factor ();
+                var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width * scale, theme_height * scale);
+                theme_surface.set_device_scale (scale, scale);
                 var ctx = new Cairo.Context (theme_surface);
                 Gdk.cairo_set_source_pixbuf (ctx, pixbuf, 0, 0);
                 ctx.paint();
@@ -146,7 +148,9 @@ public class GameView : Gtk.DrawingArea
             theme_height += theme_height;
         }
 
-        var theme_surface = get_native ().get_surface ().create_similar_surface (Cairo.Content.COLOR_ALPHA, theme_width, theme_height);
+        var scale = get_native ().get_surface ().get_scale_factor ();
+        var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width * scale, theme_height * scale);
+        theme_surface.set_device_scale (scale, scale);
         var ctx = new Cairo.Context (theme_surface);
 
         try {
@@ -213,12 +217,12 @@ public class GameView : Gtk.DrawingArea
             cr.paint ();
 
             cr.select_font_face ("Sans", Cairo.FontSlant.NORMAL, Cairo.FontWeight.BOLD);
-            cr.set_font_size (get_allocated_width () * 0.125);
+            cr.set_font_size (get_width () * 0.125);
 
             var text = _("Paused");
             Cairo.TextExtents extents;
             cr.text_extents (text, out extents);
-            cr.move_to ((get_allocated_width () - extents.width) / 2.0, (get_allocated_height () + extents.height) / 2.0);
+            cr.move_to ((get_width () - extents.width) / 2.0, (get_height () + extents.height) / 2.0);
             cr.set_source_rgb (1, 1, 1);
             cr.show_text (text);
         }
@@ -229,8 +233,8 @@ public class GameView : Gtk.DrawingArea
         if (theme == null)
             return;
 
-        var width = get_allocated_width ();
-        var height = get_allocated_height ();
+        var width = get_width ();
+        var height = get_height ();
 
         /* Need enough space for the whole map and one unit border */
         var map_width = game.map.width + 2.0;

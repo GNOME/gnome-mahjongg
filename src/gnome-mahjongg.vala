@@ -43,7 +43,7 @@ public class Mahjongg : Adw.Application
 
     public Mahjongg ()
     {
-        Object (application_id: "org.gnome.Mahjongg", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.Mahjongg", flags: ApplicationFlags.DEFAULT_FLAGS);
 
         add_main_option_entries (option_entries);
     }
@@ -162,7 +162,7 @@ public class Mahjongg : Adw.Application
                         new_game ();
                     dialog.destroy ();
                 });
-                dialog.show ();
+                dialog.present ();
             }
             else
                 new_game ();
@@ -245,7 +245,7 @@ public class Mahjongg : Adw.Application
                 }
                 dialog.destroy ();
             });
-            dialog.show ();
+            dialog.present ();
         }
     }
 
@@ -262,7 +262,7 @@ public class Mahjongg : Adw.Application
             dialog.destroy ();
         });
 
-        dialog.show ();
+        dialog.present ();
     }
 
     private void preferences_cb ()
