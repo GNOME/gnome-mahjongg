@@ -554,5 +554,6 @@ public class Game : Object
             }
         }
         move_number++;
+        moved ();
     }
 }

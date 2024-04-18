@@ -146,22 +146,19 @@ public class Mahjongg : Adw.Application
             /* Prompt user if already made a move */
             if (game_view.game.started)
             {
-                var dialog = new Gtk.MessageDialog (window,
-                                                    Gtk.DialogFlags.MODAL,
-                                                    Gtk.MessageType.QUESTION,
-                                                    Gtk.ButtonsType.NONE,
-                                                    "%s", _("Do you want to start a new game with this map?"));
-                dialog.format_secondary_text (_("If you continue playing the next game will use the new map."));
-                dialog.add_buttons (_("_Continue playing"), Gtk.ResponseType.REJECT,
-                                    _("Use _new map"), Gtk.ResponseType.ACCEPT,
-                                    null);
-                dialog.set_default_response (Gtk.ResponseType.ACCEPT);
+                var dialog = new Adw.AlertDialog (
+                    _("Restart Game with New Map?"),
+                    _("If you continue playing, the next game will use the new map.")
+                );
+                dialog.add_responses ("continue", _("_Continue Playing"),
+                                      "restart", _("_Restart Game"));
+                dialog.set_default_response ("restart");
                 dialog.response.connect ( (resp_id) => {
-                    if (resp_id == Gtk.ResponseType.ACCEPT)
+                    if (resp_id == "restart")
                         new_game ();
                     dialog.destroy ();
                 });
-                dialog.present ();
+                dialog.present (window);
             }
             else
                 new_game ();
@@ -183,14 +180,6 @@ public class Mahjongg : Adw.Application
             pause_cb ();
     }
 
-    enum NoMovesDialogResponse
-    {
-        UNDO,
-        SHUFFLE,
-        RESTART,
-        NEW_GAME
-    }
-
     private void moved_cb ()
     {
         update_ui ();
@@ -208,43 +197,46 @@ public class Mahjongg : Adw.Application
         {
             bool allow_shuffle = game_view.game.number_of_movable_tiles () > 1;
 
-            var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,
-                                                Gtk.MessageType.INFO,
-                                                Gtk.ButtonsType.NONE,
-                                                "%s", _("There are no more moves."));
-            dialog.format_secondary_text ("%s%s%s".printf (_("Each puzzle has at least one solution.  You can undo your moves and try and find the solution, restart this game, or start a new one."),
-                                                           allow_shuffle ? " " : "",
-                                                           allow_shuffle ? _("You can also try to reshuffle the game, but this does not guarantee a solution.") : ""));
-            dialog.add_buttons (_("_Undo"), NoMovesDialogResponse.UNDO,
-                                _("_Restart"), NoMovesDialogResponse.RESTART,
-                                _("_New game"), NoMovesDialogResponse.NEW_GAME,
-                                allow_shuffle ? _("_Shuffle") : null, NoMovesDialogResponse.SHUFFLE);
+            var dialog = new Adw.AlertDialog (
+                _("No Moves Left"),
+                allow_shuffle ? _("You can undo your moves and try to find a solution, or reshuffle the remaining tiles.") :
+                                _("You can undo your moves and try to find a solution, or start a new game.")
+            );
+            dialog.add_response ("continue", _("_Continue"));
+
+            if (allow_shuffle)
+            {
+                dialog.add_response ("reshuffle", _("_Reshuffle"));
+            }
+            else
+            {
+                dialog.add_response ("new_game", _("_New Game"));
+            };
+            dialog.add_response ("quit", _("_Quit"));
+            dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
 
             dialog.response.connect ( (resp_id) => {
                 /* Shuffling may cause the dialog to appear again immediately,
                    so we destroy BEFORE doing anything with the result. */
                 switch (resp_id)
                 {
-                case NoMovesDialogResponse.UNDO:
-                    undo_cb ();
+                case "continue":
                     break;
-                case NoMovesDialogResponse.SHUFFLE:
+                case "reshuffle":
                     shuffle_cb ();
                     break;
-                case NoMovesDialogResponse.RESTART:
-                    restart_game ();
-                    break;
-                case NoMovesDialogResponse.NEW_GAME:
+                case "new_game":
                     new_game ();
                     break;
-                case Gtk.ResponseType.DELETE_EVENT:
+                case "quit":
+                    window.destroy ();
                     break;
                 default:
                     assert_not_reached ();
                 }
                 dialog.destroy ();
             });
-            dialog.present ();
+            dialog.present (window);
         }
     }
 
