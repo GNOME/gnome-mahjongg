@@ -53,7 +53,7 @@ public class GameView : Gtk.DrawingArea
         set {
             _theme = value;
 
-            Gdk.Pixbuf? pixbuf = null;
+            Gdk.Texture texture = null;
             theme_handle = null;
             tile_pattern = null;
 
@@ -67,9 +67,9 @@ public class GameView : Gtk.DrawingArea
                 theme_height = (int)height;
             } catch (Error e) {
                 try {
-                    pixbuf = new Gdk.Pixbuf.from_file (theme);
-                    theme_width  = pixbuf.get_width ();
-                    theme_height  = pixbuf.get_height ();
+                    texture = Gdk.Texture.from_filename (theme);
+                    theme_width = texture.get_width ();
+                    theme_height = texture.get_height ();
                 } catch (Error e) {
                     warning ("Could not load theme %s: %s", value, e.message);
                 }
@@ -78,13 +78,11 @@ public class GameView : Gtk.DrawingArea
             theme_aspect = ((double) theme_height / 2) / ((double) theme_width / 43);
             update_dimensions ();
 
-            if (pixbuf != null) {
-                var scale = get_native ().get_surface ().get_scale_factor ();
-                var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width * scale, theme_height * scale);
-                theme_surface.set_device_scale (scale, scale);
-                var ctx = new Cairo.Context (theme_surface);
-                Gdk.cairo_set_source_pixbuf (ctx, pixbuf, 0, 0);
-                ctx.paint();
+            if (texture != null) {
+                var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width, theme_height);
+                texture.download (theme_surface.get_data (),
+                                  theme_surface.get_stride ());
+                theme_surface.mark_dirty ();
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
             }
 
@@ -134,7 +132,6 @@ public class GameView : Gtk.DrawingArea
 
         var rendered_theme_width = (tile_width + tile_layer_offset_x) * 43;
 
-
         if (theme_width >= rendered_theme_width) {
             double width, height;
             theme_handle.get_intrinsic_size_in_pixels (out width, out height);
@@ -148,9 +145,7 @@ public class GameView : Gtk.DrawingArea
             theme_height += theme_height;
         }
 
-        var scale = get_native ().get_surface ().get_scale_factor ();
-        var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width * scale, theme_height * scale);
-        theme_surface.set_device_scale (scale, scale);
+        var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, theme_width, theme_height);
         var ctx = new Cairo.Context (theme_surface);
 
         try {
