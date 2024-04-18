@@ -63,7 +63,7 @@ public class Mahjongg : Adw.Application
         set_accels_for_action ("app.quit",      {        "<Primary>q",
                                                          "<Primary>w"       });
 
-        settings = new Settings ("org.gnome.Mahjongg");
+        settings = new Settings (get_application_id ());
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
@@ -328,32 +328,35 @@ public class Mahjongg : Adw.Application
 
     private void about_cb ()
     {
-        string[] authors =
+        string[] developers =
         {
-            _("Main game:"),
             "Francisco Bustamante",
             "Max Watson",
             "Heinz Hempe",
             "Michael Meeks",
             "Philippe Chavin",
             "Callum McKenzie",
-            "Robert Ancell",
-            "Günther Wagner",
-            "",
-            _("Maps:"),
             "Rexford Newbould",
             "Krzysztof Foltman",
+            "Robert Ancell",
+            "Michael Catanzaro",
+            "Mario Wenzel",
+            "Arnaud Bonatti",
+            "Jeremy Bicha",
+            "Alberto Ruiz",
+            "Günther Wagner",
+            "Mathias Bonn",
             null
         };
 
         string[] artists =
         {
-            _("Tiles:"),
             "Jonathan Buzzard",
             "Jim Evans",
             "Richard Hoelscher",
             "Gonzalo Odiard",
             "Max Watson",
+            "Jakub Steiner",
             null
         };
 
@@ -361,23 +364,25 @@ public class Mahjongg : Adw.Application
         {
             "Tiffany Antopolski",
             "Chris Beiser",
+            "Andre Klapper",
             null
         };
 
-        Gtk.show_about_dialog (window,
-                               "program-name", _("Mahjongg"),
-                               "version", VERSION,
-                               "comments",
-                               _("A matching game played with Mahjongg tiles"),
-                               "copyright", "Copyright © 1998–2008 Free Software Foundation, Inc.",
-                               "license-type", Gtk.License.GPL_2_0,
-                               "authors", authors,
-                               "artists", artists,
-                               "documenters", documenters,
-                               "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "org.gnome.Mahjongg",
-                               "website", "https://gitlab.gnome.org/GNOME/gnome-mahjongg",
-                               null);
+        var about_dialog = new Adw.AboutDialog () {
+            application_name = Environment.get_application_name (),
+            application_icon = get_application_id (),
+            developer_name = _("The Mahjongg Team"),
+            version = VERSION,
+            copyright = "Copyright © 1998–2008 Free Software Foundation, Inc.",
+            developers = developers,
+            artists = artists,
+            documenters = documenters,
+            license_type = Gtk.License.GPL_2_0,
+            translator_credits = _("translator-credits"),
+            website = "https://gitlab.gnome.org/GNOME/gnome-mahjongg",
+            issue_url = "https://gitlab.gnome.org/GNOME/gnome-mahjongg/-/issues/new",
+        };
+        about_dialog.present (window);
     }
 
     private void pause_cb ()
