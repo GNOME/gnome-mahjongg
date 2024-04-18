@@ -18,7 +18,6 @@ install_data ('mahjongg.map', install_dir: join_paths (pkgdatadir, 'maps'))
 install_data ('postmodern.svg', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('smooth.png', install_dir: join_paths (pkgdatadir, 'themes'))
 install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
-install_data ('maya.png', install_dir: join_paths (pkgdatadir, 'themes'))
 
 desktop_file = i18n.merge_file (
   input:       'org.gnome.Mahjongg.desktop.in',
