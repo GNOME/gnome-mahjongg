@@ -140,6 +140,13 @@ public class Mahjongg : Adw.Application
         {
             var theme = settings.get_string ("tileset");
             game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
+
+            if (game_view.theme == null)
+            {
+                /* Failed to load theme, fall back to default */
+                var default_theme = settings.get_default_value ("tileset").get_string();
+                game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", default_theme);
+            }
         }
         else if (key == "mapset")
         {

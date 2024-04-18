@@ -51,8 +51,6 @@ public class GameView : Gtk.DrawingArea
     {
         get { return _theme; }
         set {
-            _theme = value;
-
             Gdk.Texture texture = null;
             theme_handle = null;
             tile_pattern = null;
@@ -67,11 +65,12 @@ public class GameView : Gtk.DrawingArea
                 theme_height = (int)height;
             } catch (Error e) {
                 try {
-                    texture = Gdk.Texture.from_filename (theme);
+                    texture = Gdk.Texture.from_filename (value);
                     theme_width = texture.get_width ();
                     theme_height = texture.get_height ();
                 } catch (Error e) {
                     warning ("Could not load theme %s: %s", value, e.message);
+                    return;
                 }
             }
 
@@ -91,6 +90,7 @@ public class GameView : Gtk.DrawingArea
             }
 
             queue_draw ();
+            _theme = value;
         }
     }
 
