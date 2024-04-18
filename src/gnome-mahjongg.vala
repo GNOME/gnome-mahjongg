@@ -271,8 +271,7 @@ public class Mahjongg : Adw.Application
         preferences.populate_themes (load_themes ());
         preferences.populate_layouts (maps);
         preferences.populate_backgrounds ();
-        preferences.set_transient_for (window);
-        preferences.show();
+        preferences.present (window);
     }
 
     private List<string> load_themes ()

@@ -1,5 +1,5 @@
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/preferences.ui")]
-public class PreferencesWindow : Adw.PreferencesWindow {
+public class PreferencesWindow : Adw.PreferencesDialog {
 
     [GtkChild]
     private unowned Adw.ComboRow themes_row;

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="PreferencesWindow" parent="AdwPreferencesWindow">
-    <property name="default-height">-1</property>
-    <property name="default-width">-1</property>
-    <property name="search-enabled">false</property>
+  <template class="PreferencesWindow" parent="AdwPreferencesDialog">
+    <property name="content-width">360</property>
     <child>
       <object class="AdwPreferencesPage">
         <child>
