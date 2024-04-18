@@ -37,16 +37,16 @@
               </object>
             </child>
             <child type="end">
-              <object class="GtkButton">
-                <property name="icon-name">question-round-symbolic</property>
-                <property name="action-name">app.hint</property>
-                <property name="tooltip-text" translatable="yes">Show Hint</property>
-              </object>
-            </child>
-            <child type="end">
               <object class="GtkButton" id="pause_btn">
                 <property name="icon-name">media-playback-pause-symbolic</property>
                 <property name="action-name">app.pause</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkButton">
+                <property name="icon-name">dialog-information-symbolic</property>
+                <property name="action-name">app.hint</property>
+                <property name="tooltip-text" translatable="yes">Show Hint</property>
               </object>
             </child>
           </object>
