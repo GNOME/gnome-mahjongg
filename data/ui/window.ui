@@ -18,12 +18,14 @@
               <object class="GtkButton">
                 <property name="icon-name">edit-undo-symbolic</property>
                 <property name="action-name">app.undo</property>
+                <property name="tooltip-text" translatable="yes">Undo</property>
               </object>
             </child>
             <child type="start">
               <object class="GtkButton">
                 <property name="icon-name">edit-redo-symbolic</property>
                 <property name="action-name">app.redo</property>
+                <property name="tooltip-text" translatable="yes">Redo</property>
               </object>
             </child>
             <child type="end">
@@ -31,12 +33,14 @@
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>
                 <property name="primary">true</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
               </object>
             </child>
             <child type="end">
               <object class="GtkButton">
                 <property name="icon-name">question-round-symbolic</property>
                 <property name="action-name">app.hint</property>
+                <property name="tooltip-text" translatable="yes">Show Hint</property>
               </object>
             </child>
             <child type="end">

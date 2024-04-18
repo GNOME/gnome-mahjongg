@@ -31,12 +31,12 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     public void pause ()
     {
         pause_btn.icon_name = "media-playback-start-symbolic";
-        pause_btn.set_tooltip_text (_("Unpause the game"));
+        pause_btn.set_tooltip_text (_("Resume Game"));
     }
 
     public void unpause ()
     {
         pause_btn.icon_name = "media-playback-pause-symbolic";
-        pause_btn.set_tooltip_text (_("Pause the game"));
+        pause_btn.set_tooltip_text (_("Pause Game"));
     }
 }
