@@ -16,16 +16,14 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         toolbar_view.set_content (game_view);
     }
 
-    public void set_map_title (GameView game_view)
+    public void set_clock (string clock)
     {
-        var display_name = dpgettext2 (null, "mahjongg map name", game_view.game.map.name);
-        titlewidget.set_title (display_name);
+        titlewidget.set_title (clock);
     }
 
-    public void set_subtitle (GameView game_view, string clock)
+    public void set_moves_left (uint moves_left)
     {
-        string moves_left = _("Moves Left:");
-        titlewidget.set_subtitle (("%s %2u   %s").printf (moves_left, game_view.game.moves_left, clock));
+        titlewidget.set_subtitle (_("Moves Left: %2u").printf (moves_left));
     }
 
     public void pause ()

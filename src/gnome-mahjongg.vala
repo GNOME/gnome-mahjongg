@@ -115,6 +115,7 @@ public class Mahjongg : Adw.Application
         var hint_action = lookup_action ("hint") as SimpleAction;
         var undo_action = lookup_action ("undo") as SimpleAction;
         var redo_action = lookup_action ("redo") as SimpleAction;
+        var moves_left = game_view.game.moves_left;
 
         pause_action.set_enabled (game_view.game.started);
 
@@ -126,13 +127,12 @@ public class Mahjongg : Adw.Application
         }
         else
         {
-            hint_action.set_enabled (game_view.game.moves_left > 0);
+            hint_action.set_enabled (moves_left > 0);
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
         }
 
-        /* Update clock/moves left label */
-        tick_cb ();
+        window.set_moves_left (moves_left);
     }
 
     private void conf_value_changed_cb (Settings settings, string key)
@@ -464,9 +464,6 @@ public class Mahjongg : Adw.Application
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
 
-        /* Set window title */
-        window.set_map_title (game_view);
-
         update_ui ();
 
         /* Reset the pause button in case it was set to resume */
@@ -487,7 +484,7 @@ public class Mahjongg : Adw.Application
         else
             clock = "%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds);
 
-        window.set_subtitle (game_view, clock);
+        window.set_clock (clock);
     }
 
     private void help_cb ()
