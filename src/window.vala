@@ -28,6 +28,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
     public void pause ()
     {
+        titlewidget.set_subtitle (_("Paused"));
         pause_btn.icon_name = "media-playback-start-symbolic";
         pause_btn.set_tooltip_text (_("Resume Game"));
     }

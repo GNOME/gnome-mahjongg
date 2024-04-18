@@ -130,9 +130,8 @@ public class Mahjongg : Adw.Application
             hint_action.set_enabled (moves_left > 0);
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
+            window.set_moves_left (moves_left);
         }
-
-        window.set_moves_left (moves_left);
     }
 
     private void conf_value_changed_cb (Settings settings, string key)
@@ -398,6 +397,7 @@ public class Mahjongg : Adw.Application
         else
         {
             window.unpause ();
+            tick_cb ();
         }
 
         update_ui ();

@@ -209,23 +209,6 @@ public class GameView : Gtk.DrawingArea
             cr.rectangle (x, y, tile_pattern_width, tile_pattern_height);
             cr.fill ();
         }
-
-        /* Draw pause overlay */
-        if (game.paused)
-        {
-            cr.set_source_rgba (0, 0, 0, 0.75);
-            cr.paint ();
-
-            cr.select_font_face ("Sans", Cairo.FontSlant.NORMAL, Cairo.FontWeight.BOLD);
-            cr.set_font_size (get_width () * 0.125);
-
-            var text = _("Paused");
-            Cairo.TextExtents extents;
-            cr.text_extents (text, out extents);
-            cr.move_to ((get_width () - extents.width) / 2.0, (get_height () + extents.height) / 2.0);
-            cr.set_source_rgb (1, 1, 1);
-            cr.show_text (text);
-        }
     }
 
     private void update_dimensions ()
