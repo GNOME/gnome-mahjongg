@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="ScoreDialog" parent="GtkDialog">
-    <property name="use-header-bar">1</property>
-    <property name="deletable">false</property>
-    <child internal-child="content_area">
-      <object class="GtkBox">
-        <property name="margin-top">12</property>
-        <property name="margin-bottom">12</property>
-        <property name="margin-start">12</property>
-        <property name="margin-end">12</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">6</property>
-        <child>
-          <object class="GtkBox">
-            <property name="halign">center</property>
-            <property name="spacing">6</property>
-            <child>
-              <object class="GtkLabel">
-                <property name="label" translatable="yes">Layout: </property>
-              </object>
-            </child>
-            <child>
+  <template class="ScoreDialog" parent="AdwDialog">
+    <property name="content-width">360</property>
+    <property name="content-height">420</property>
+    <child>
+      <object class="AdwToolbarView" id="toolbar_view">
+        <property name="bottom-bar-style">raised</property>
+        <child type="top">
+          <object class="AdwHeaderBar" id="header_bar">
+            <property name="title-widget">
               <object class="GtkComboBox" id="layouts">
               </object>
-            </child>
+            </property>
           </object>
         </child>
-        <child>
-          <object class="GtkScrolledWindow">
-            <child>
-              <object class="GtkTreeView" id="scores">
-                <property name="vexpand">true</property>
+        <property name="content">
+          <object class="GtkTreeView" id="scores">
+            <property name="vexpand">true</property>
+          </object>
+        </property>
+        <child type="bottom">
+          <object class="GtkActionBar">
+            <child type="center">
+              <object class="GtkButton">
+                <property name="label">_New Game</property>
+                <property name="action-name">app.new-game</property>
+                <property name="can-shrink">True</property>
+                <property name="use-underline">True</property>
+                <style>
+                  <class name="pill"/>
+                  <class name="suggested-action"/>
+                </style>
               </object>
             </child>
-            <style>
-              <class name="frame"/>
-            </style>
+            <child type="end">
+              <object class="GtkButton">
+                <property name="label">_Quit</property>
+                <property name="action-name">app.quit</property>
+                <property name="can-shrink">True</property>
+                <property name="has-frame">False</property>
+                <property name="use-underline">True</property>
+                <property name="valign">center</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>
     </child>
+    <style>
+      <class name="view"/>
+    </style>
   </template>
 </interface>

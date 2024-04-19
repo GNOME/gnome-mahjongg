@@ -9,8 +9,14 @@
  */
 
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/score-dialog.ui")]
-public class ScoreDialog : Gtk.Dialog
+public class ScoreDialog : Adw.Dialog
 {
+    [GtkChild]
+    private unowned Adw.ToolbarView toolbar_view;
+
+    [GtkChild]
+    private unowned Adw.HeaderBar header_bar;
+
     [GtkChild]
     private unowned Gtk.ComboBox layouts;
 
@@ -25,7 +31,6 @@ public class ScoreDialog : Gtk.Dialog
 
     public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false, List<Map> maps)
     {
-        Object(use_header_bar: 1);
         this.maps = maps;
         this.history = history;
         history.entry_added.connect (entry_added_cb);
@@ -38,15 +43,6 @@ public class ScoreDialog : Gtk.Dialog
         layouts.pack_start (renderer, true);
         layouts.add_attribute (renderer, "text", 0);
 
-        if (show_quit)
-        {
-            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
-            add_button (_("New Game"), Gtk.ResponseType.OK);
-        }
-        else
-            add_button (_("OK"), Gtk.ResponseType.DELETE_EVENT);
-        set_size_request (200, 300);
-
         score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
 
         renderer = new Gtk.CellRendererText ();
@@ -58,6 +54,11 @@ public class ScoreDialog : Gtk.Dialog
 
         foreach (var entry in history.entries)
             entry_added_cb (entry);
+
+        set_can_close (!show_quit);
+        header_bar.set_show_start_title_buttons (!show_quit);
+        header_bar.set_show_end_title_buttons (!show_quit);
+        toolbar_view.set_reveal_bottom_bars (show_quit);
     }
 
     public void set_map (string name)

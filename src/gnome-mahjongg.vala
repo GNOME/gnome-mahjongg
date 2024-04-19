@@ -17,6 +17,8 @@ public class Mahjongg : Adw.Application
     private List<Map> maps = new List<Map> ();
 
     private MahjonggWindow window;
+    private ScoreDialog score_dialog;
+    private PreferencesWindow preferences_dialog;
 
     private GameView game_view;
 
@@ -249,27 +251,17 @@ public class Mahjongg : Adw.Application
 
     private void show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_quit, maps);
-        dialog.modal = true;
-        dialog.transient_for = window;
-        dialog.response.connect ((resp_id) => {
-            if (resp_id == Gtk.ResponseType.CLOSE)
-                window.destroy ();
-            else if (resp_id == Gtk.ResponseType.OK)
-                new_game ();
-            dialog.destroy ();
-        });
-
-        dialog.present ();
+        score_dialog = new ScoreDialog (history, selected_entry, show_quit, maps);
+        score_dialog.present (window);
     }
 
     private void preferences_cb ()
     {
-        var preferences = new PreferencesWindow (settings);
-        preferences.populate_themes (load_themes ());
-        preferences.populate_layouts (maps);
-        preferences.populate_backgrounds ();
-        preferences.present (window);
+        preferences_dialog = new PreferencesWindow (settings);
+        preferences_dialog.populate_themes (load_themes ());
+        preferences_dialog.populate_layouts (maps);
+        preferences_dialog.populate_backgrounds ();
+        preferences_dialog.present (window);
     }
 
     private List<string> load_themes ()
@@ -464,6 +456,12 @@ public class Mahjongg : Adw.Application
         game_view.game.tick.connect (tick_cb);
 
         update_ui ();
+
+        if (score_dialog != null)
+            score_dialog.force_close ();
+
+        if (preferences_dialog != null)
+            preferences_dialog.force_close ();
 
         /* Reset the pause button in case it was set to resume */
         window.unpause ();
