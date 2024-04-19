@@ -21,6 +21,10 @@
    time penalty.
     </p>
   </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#c5c7de</color>
+    <color type="primary" scheme_preference="dark">#22243b</color>
+  </branding>
   <screenshots>
     <screenshot type="default">
       <image>https://gitlab.gnome.org/GNOME/@project-name@/-/raw/master/data/screenshot.png</image>
