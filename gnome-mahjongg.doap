@@ -20,6 +20,12 @@
       <foaf:name>Mathias Bonn</foaf:name>
       <foaf:mbox rdf:resource="mailto:mathiasb@gnome.org" />
       <gnome:userid>mathiasb</gnome:userid>
+      <foaf:account>
+        <foaf:OnlineAccount>
+          <foaf:accountServiceHomepage rdf:resource="https://gitlab.gnome.org"/>
+          <foaf:accountName>mat</foaf:accountName>
+        </foaf:OnlineAccount>
+      </foaf:account>
     </foaf:Person>
   </maintainer>
 </Project>
