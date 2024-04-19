@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-04-17 12:44+0000\n"
-"PO-Revision-Date: 2024-04-17 21:39+0300\n"
+"POT-Creation-Date: 2024-04-19 03:09+0000\n"
+"PO-Revision-Date: 2024-04-19 17:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -24,8 +24,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:366
-#: src/gnome-mahjongg.vala:539
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:540
 msgid "Mahjongg"
 msgstr "Магджонґ"
 
@@ -61,8 +60,7 @@ msgstr ""
 "зробити, можете скористатися підказкою, але у цьому випадку буде нараховано "
 "штрафний час."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:42
-#| msgid "Mahjongg"
+#: data/org.gnome.Mahjongg.appdata.xml.in:43 src/gnome-mahjongg.vala:364
 msgid "The Mahjongg Team"
 msgstr "Команда «Магджонґ»"
 
@@ -75,15 +73,15 @@ msgstr "Розбирання купи плиток, прибираючи узг�
 msgid "game;strategy;puzzle;board;"
 msgstr "гра;стратегія;головоломка;настільна;"
 
-#: data/org.gnome.Mahjongg.gschema.xml:17
+#: data/org.gnome.Mahjongg.gschema.xml:20
 msgid "Width of the window in pixels"
 msgstr "Ширина вікна у точках"
 
-#: data/org.gnome.Mahjongg.gschema.xml:21
+#: data/org.gnome.Mahjongg.gschema.xml:24
 msgid "Height of the window in pixels"
 msgstr "Висота вікна у точках"
 
-#: data/org.gnome.Mahjongg.gschema.xml:25
+#: data/org.gnome.Mahjongg.gschema.xml:28
 msgid "true if the window is maximized"
 msgstr "вказано, якщо вікно має максимальний розмір"
 
@@ -214,127 +212,136 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Вийти"
 
-#: data/ui/preferences.ui:13
-msgid "Theme"
-msgstr "Тема"
-
-#: data/ui/preferences.ui:18
+#: data/ui/preferences.ui:11
 msgid "Layout"
 msgstr "Розташування"
 
-#: data/ui/preferences.ui:23
-msgid "Background color"
-msgstr "Колір тла"
+#: data/ui/preferences.ui:16
+msgid "Theme"
+msgstr "Тема"
 
-#: data/ui/score-dialog.ui:20
-msgid "Layout: "
-msgstr "Розташування:"
+#: data/ui/preferences.ui:21
+#| msgid "Background color"
+msgid "Background"
+msgstr "Тло"
 
-#: data/ui/window.ui:53 src/score-dialog.vala:44
+#: data/ui/window.ui:21
+#| msgctxt "shortcut window"
+#| msgid "Undo"
+msgid "Undo"
+msgstr "Скасувати"
+
+#: data/ui/window.ui:28
+#| msgctxt "shortcut window"
+#| msgid "Redo"
+msgid "Redo"
+msgstr "Повторити"
+
+#: data/ui/window.ui:36
+#| msgid "Main game:"
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: data/ui/window.ui:49
+#| msgctxt "shortcut window"
+#| msgid "Show a hint"
+msgid "Show Hint"
+msgstr "Показати підказку"
+
+#: data/ui/window.ui:63
 msgid "New Game"
 msgstr "Створити гру"
 
-#: data/ui/window.ui:57
+#: data/ui/window.ui:67
 msgid "Restart Game"
 msgstr "Перезапустити гру"
 
-#: data/ui/window.ui:61
+#: data/ui/window.ui:71
 msgid "Scores"
 msgstr "Результати"
 
-#: data/ui/window.ui:67
+#: data/ui/window.ui:77
 msgid "Preferences"
 msgstr "Параметри"
 
-#: data/ui/window.ui:71
+#: data/ui/window.ui:81
 msgid "Keyboard Shortcuts"
 msgstr "Клавіатурні скорочення"
 
-#: data/ui/window.ui:75
+#: data/ui/window.ui:85
 msgid "Help"
 msgstr "Довідка"
 
-#: data/ui/window.ui:79
+#: data/ui/window.ui:89
 msgid "About Mahjongg"
 msgstr "Про «Магджонґ»"
 
-#: src/game-view.vala:228
-msgid "Paused"
-msgstr "Призупинено"
-
-#: src/gnome-mahjongg.vala:25
+#: src/gnome-mahjongg.vala:27
 msgid "Print release version and exit"
 msgstr "Показати версію випуску та вийти"
 
-#: src/gnome-mahjongg.vala:158
-msgid "Do you want to start a new game with this map?"
-msgstr "Почати нову гру на цій карті?"
-
 #: src/gnome-mahjongg.vala:159
-msgid "If you continue playing the next game will use the new map."
+#| msgid "Restart Game"
+msgid "Restart Game with New Map?"
+msgstr "Перезапустити гру з новою картою?"
+
+#: src/gnome-mahjongg.vala:160
+#| msgid "If you continue playing the next game will use the new map."
+msgid "If you continue playing, the next game will use the new map."
 msgstr ""
 "Якщо ви продовжите грати, в наступній грі буде використовуватись нова карта."
 
-#: src/gnome-mahjongg.vala:160
-msgid "_Continue playing"
+#: src/gnome-mahjongg.vala:162
+#| msgid "_Continue playing"
+msgid "_Continue Playing"
 msgstr "_Грати далі"
 
-#: src/gnome-mahjongg.vala:161
-msgid "Use _new map"
-msgstr "Використати _нову карту"
+#: src/gnome-mahjongg.vala:163
+#| msgid "Restart Game"
+msgid "_Restart Game"
+msgstr "П_ерезапустити гру"
+
+#: src/gnome-mahjongg.vala:210
+#| msgid "Moves Left:"
+msgid "No Moves Left"
+msgstr "Ходів не лишилося"
+
+#: src/gnome-mahjongg.vala:211
+msgid ""
+"You can undo your moves and try to find a solution, or reshuffle the "
+"remaining tiles."
+msgstr ""
+"Ви можете скасувати ходи і спробувати знайти розв'язання або перемішати"
+" решту плиток."
 
 #: src/gnome-mahjongg.vala:212
-msgid "There are no more moves."
-msgstr "Більше немає варіантів ходів."
-
-#: src/gnome-mahjongg.vala:213
+#| msgid ""
+#| "Each puzzle has at least one solution.  You can undo your moves and try "
+#| "and find the solution, restart this game, or start a new one."
 msgid ""
-"Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution, restart this game, or start a new one."
+"You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
-"Кожна головоломка має принаймні один розв'язок. Ви можете повернути зроблені "
-"ходи й спробувати знайти розв'язок, перезавантажити цю гру, або почати нову."
+"Ви можете скасувати ходи і спробувати знайти розв'язання або почати нову гру."
 
-#: src/gnome-mahjongg.vala:215
-msgid ""
-"You can also try to reshuffle the game, but this does not guarantee a "
-"solution."
-msgstr ""
-"Ви також можете спробувати перемішати гру але це не гарантує розв'язку."
-
-#: src/gnome-mahjongg.vala:216
-msgid "_Undo"
-msgstr "По_вернути"
-
-#: src/gnome-mahjongg.vala:217
-msgid "_Restart"
-msgstr "_Перезапустити"
+#: src/gnome-mahjongg.vala:214
+#| msgid "_Continue playing"
+msgid "_Continue"
+msgstr "П_родовжити"
 
 #: src/gnome-mahjongg.vala:218
-msgid "_New game"
-msgstr "_Створити гру"
-
-#: src/gnome-mahjongg.vala:219
-msgid "_Shuffle"
+#| msgid "_Shuffle"
+msgid "_Reshuffle"
 msgstr "_Перемішати"
 
-#: src/gnome-mahjongg.vala:331
-msgid "Main game:"
-msgstr "Основна гра:"
+#: src/gnome-mahjongg.vala:222
+msgid "_New Game"
+msgstr "_Створити гру"
 
-#: src/gnome-mahjongg.vala:341
-msgid "Maps:"
-msgstr "Карти:"
+#: src/gnome-mahjongg.vala:224
+msgid "_Quit"
+msgstr "Ви_йти"
 
-#: src/gnome-mahjongg.vala:349
-msgid "Tiles:"
-msgstr "Плитки:"
-
-#: src/gnome-mahjongg.vala:369
-msgid "A matching game played with Mahjongg tiles"
-msgstr "Відповідна гра, зіграна з плитками Маджонґ"
-
-#: src/gnome-mahjongg.vala:375
+#: src/gnome-mahjongg.vala:371
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -343,33 +350,75 @@ msgstr ""
 "Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Mykola Tkach <Stuartlittle1970@gmail.com>"
 
-#: src/score-dialog.vala:43
-msgid "_Quit"
-msgstr "Ви_йти"
-
-#: src/score-dialog.vala:47
-msgid "OK"
-msgstr "Гаразд"
-
-#: src/score-dialog.vala:53
+#: src/score-dialog.vala:49
 msgid "Date"
 msgstr "Дата"
 
-#: src/score-dialog.vala:56
+#: src/score-dialog.vala:52
 msgid "Time"
 msgstr "Час"
 
-#: src/window.vala:24
-msgid "Moves Left:"
-msgstr "Лишилось ходів:"
+#: src/window.vala:26
+#, c-format
+#| msgid "Moves Left:"
+msgid "Moves Left: %2u"
+msgstr "Лишилося ходів: %2u"
 
 #: src/window.vala:31
-msgid "Unpause the game"
+msgid "Paused"
+msgstr "Призупинено"
+
+#: src/window.vala:33
+#| msgid "Restart Game"
+msgid "Resume Game"
 msgstr "Відновити гру"
 
-#: src/window.vala:37
-msgid "Pause the game"
+#: src/window.vala:39
+#| msgid "Pause the game"
+msgid "Pause Game"
 msgstr "Призупинити гру"
+
+#~ msgid "Layout: "
+#~ msgstr "Розташування:"
+
+#~ msgid "Do you want to start a new game with this map?"
+#~ msgstr "Почати нову гру на цій карті?"
+
+#~ msgid "Use _new map"
+#~ msgstr "Використати _нову карту"
+
+#~ msgid "There are no more moves."
+#~ msgstr "Більше немає варіантів ходів."
+
+#~ msgid ""
+#~ "You can also try to reshuffle the game, but this does not guarantee a "
+#~ "solution."
+#~ msgstr ""
+#~ "Ви також можете спробувати перемішати гру але це не гарантує розв'язку."
+
+#~ msgid "_Undo"
+#~ msgstr "По_вернути"
+
+#~ msgid "_Restart"
+#~ msgstr "_Перезапустити"
+
+#~ msgid "_New game"
+#~ msgstr "_Створити гру"
+
+#~ msgid "Maps:"
+#~ msgstr "Карти:"
+
+#~ msgid "Tiles:"
+#~ msgstr "Плитки:"
+
+#~ msgid "A matching game played with Mahjongg tiles"
+#~ msgstr "Відповідна гра, зіграна з плитками Маджонґ"
+
+#~ msgid "OK"
+#~ msgstr "Гаразд"
+
+#~ msgid "Unpause the game"
+#~ msgstr "Відновити гру"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
@@ -388,9 +437,6 @@ msgstr "Призупинити гру"
 
 #~ msgid "Receive a hint for your next move"
 #~ msgstr "Отримати підказку для наступного ходу"
-
-#~ msgid "_New Game"
-#~ msgstr "_Створити гру"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Параметри"
