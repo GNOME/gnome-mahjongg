@@ -1,5 +1,5 @@
 {
-    "app-id" : "org.gnome.Mahjongg",
+    "id" : "org.gnome.Mahjongg.Devel",
     "runtime" : "org.gnome.Platform",
     "sdk" : "org.gnome.Sdk",
     "runtime-version" : "master",
@@ -15,6 +15,9 @@
         {
             "name" : "gnome-mahjongg",
             "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dprofile=development"
+            ],
             "sources" : [
                 {
                     "type" : "git",

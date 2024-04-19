@@ -45,8 +45,11 @@ public class Mahjongg : Adw.Application
 
     public Mahjongg ()
     {
-        Object (application_id: "org.gnome.Mahjongg", flags: ApplicationFlags.DEFAULT_FLAGS);
-
+        Object (
+            application_id: APP_ID,
+            flags: ApplicationFlags.DEFAULT_FLAGS,
+            resource_base_path: "/org/gnome/Mahjongg"
+        );
         add_main_option_entries (option_entries);
     }
 
@@ -360,7 +363,7 @@ public class Mahjongg : Adw.Application
 
         var about_dialog = new Adw.AboutDialog () {
             application_name = Environment.get_application_name (),
-            application_icon = get_application_id (),
+            application_icon = APP_ID,
             developer_name = _("The Mahjongg Team"),
             version = VERSION,
             copyright = "Copyright © 1998–2008 Free Software Foundation, Inc.",
@@ -538,7 +541,7 @@ public class Mahjongg : Adw.Application
         Intl.textdomain (GETTEXT_PACKAGE);
 
         Environment.set_application_name (_("Mahjongg"));
-        Gtk.Window.set_default_icon_name ("org.gnome.Mahjongg");
+        Gtk.Window.set_default_icon_name (APP_ID);
 
         typeof(GameView).ensure();
         var app = new Mahjongg ();

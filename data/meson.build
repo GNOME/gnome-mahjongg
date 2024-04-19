@@ -1,81 +1,108 @@
-hicolordir = datadir / 'icons' / 'hicolor'
-
-install_data ('icons' / 'hicolor' / 'scalable' / 'org.gnome.Mahjongg.svg',
-              install_dir: hicolordir / 'scalable' / 'apps')
-install_data ('icons' / 'hicolor' / 'symbolic' / 'org.gnome.Mahjongg-symbolic.svg',
-              install_dir: hicolordir / 'symbolic' / 'apps')
-
-schemasdir = gio_dep.get_variable(
-  pkgconfig: 'schemasdir',
-  pkgconfig_define: ['datadir', get_option('datadir')],
-  default_value: join_paths(get_option('datadir'), 'glib-2.0/schemas'),
+# Icon files
+install_data(
+  'icons' / 'hicolor' / 'scalable' / '@0@.svg'.format(app_id),
+  install_dir: datadir / 'icons' / 'hicolor' / 'scalable' / 'apps'
 )
-install_data ('org.gnome.Mahjongg.gschema.xml',
-  install_dir: schemasdir
+install_data(
+  'icons' / 'hicolor' / 'symbolic' / '@0@-symbolic.svg'.format(base_id),
+  install_dir: datadir / 'icons' / 'hicolor' / 'symbolic' / 'apps',
+  rename: '@0@-symbolic.svg'.format(app_id)
 )
 
-install_data ('mahjongg.map', install_dir: join_paths (pkgdatadir, 'maps'))
-install_data ('postmodern.svg', install_dir: join_paths (pkgdatadir, 'themes'))
-install_data ('smooth.png', install_dir: join_paths (pkgdatadir, 'themes'))
-install_data ('edu_kang_xi.png', install_dir: join_paths (pkgdatadir, 'themes'))
+# GSchema file
+gschema_conf = configuration_data()
+gschema_conf.set('app-id', app_id)
+gschema_conf.set('gettext-package', meson.project_name())
 
-desktop_file = i18n.merge_file (
-  input:       'org.gnome.Mahjongg.desktop.in',
-  output:      'org.gnome.Mahjongg.desktop',
-  install:     true,
+configure_file(
+  input: '@0@.gschema.xml.in'.format(base_id),
+  output: '@0@.gschema.xml'.format(app_id),
+  install: true,
+  install_dir: datadir / 'glib-2.0' / 'schemas',
+  configuration: gschema_conf
+)
+
+# DBus service file
+service_conf = configuration_data()
+service_conf.set('app-id', app_id)
+service_conf.set('bindir', bindir)
+service_conf.set('exec-name', meson.project_name())
+
+configure_file(
+  input: '@0@.service.in'.format(base_id),
+  output: '@0@.service'.format(app_id),
+  install: true,
+  install_dir: datadir / 'dbus-1' / 'services',
+  configuration: service_conf
+)
+
+# Desktop file
+desktop_conf = configuration_data()
+desktop_conf.set('app-id', app_id)
+desktop_conf.set('exec-name', meson.project_name())
+
+desktop_file = i18n.merge_file(
+  input: configure_file(
+    input: '@0@.desktop.in.in'.format(base_id),
+    output: '@BASENAME@',
+    configuration: desktop_conf
+  ),
+  output: '@0@.desktop'.format(app_id),
+  install: true,
   install_dir: datadir / 'applications',
-  po_dir:      '../po',
-  type:        'desktop'
+  po_dir: podir,
+  type: 'desktop'
 )
 
 desktop_file_validate = find_program('desktop-file-validate', required: false)
 if desktop_file_validate.found()
   test(
-    'validate-desktop',
-    desktop_file_validate,
+    'validate-desktop', desktop_file_validate,
     args: [
       desktop_file.full_path()
     ]
   )
 endif
 
-appdata_file = i18n.merge_file (
-                 input: 'org.gnome.Mahjongg.appdata.xml.in',
-                 output: 'org.gnome.Mahjongg.appdata.xml',
-                 install: true,
-                 install_dir: join_paths (datadir, 'metainfo'),
-                 po_dir: '../po')
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
+# Appdata file
+appdata_conf = configuration_data()
+appdata_conf.set('app-id', app_id)
+appdata_conf.set('developer-id', app_id.to_lower())
+appdata_conf.set('project-name', meson.project_name())
+
+appdata_file = i18n.merge_file(
+  input: configure_file(
+    input: '@0@.appdata.xml.in.in'.format(base_id),
+    output: '@BASENAME@',
+    configuration: appdata_conf
+  ),
+  output: '@0@.appdata.xml'.format(app_id),
+  install: true,
+  install_dir: datadir / 'metainfo',
+  po_dir: podir
+)
+
+appstreamcli = find_program('appstreamcli', required: false)
+if appstreamcli.found()
   test(
-    'validate-appdata', appstream_util,
+    'validate-metainfo', appstreamcli,
     args: [
-      'validate-relax', '--nonet', appdata_file.full_path()
+      'validate', '--no-net', '--explain', appdata_file.full_path()
     ]
   )
 endif
 
-install_man ('gnome-mahjongg.6')
-
-resources = gnome.compile_resources ('resources', 'org.gnome.Mahjongg.gresource.xml',
-                                     source_dir: '.',
-                                     c_name: 'resources')
-
-gnome.post_install(
-  glib_compile_schemas: true,
-  gtk_update_icon_cache: true,
+# Resources
+resources = gnome.compile_resources(
+  'resources',
+  '@0@.gresource.xml'.format(base_id),
+  c_name: 'resources'
 )
 
-# Make D-Bus activatable
-service_conf = configuration_data()
-service_conf.set('bindir', bindir)
+install_data('mahjongg.map', install_dir: pkgdatadir / 'maps')
+install_data('postmodern.svg', install_dir: pkgdatadir / 'themes')
+install_data('smooth.png', install_dir: pkgdatadir / 'themes')
+install_data('edu_kang_xi.png', install_dir: pkgdatadir / 'themes')
 
-service = 'org.gnome.Mahjongg.service'
-
-configure_file (
-  input: service + '.in',
-  output: service,
-  install: true,
-  install_dir: join_paths (datadir, 'dbus-1', 'services'),
-  configuration: service_conf
-)
+# Man page
+install_man('@0@.6'.format(meson.project_name()))

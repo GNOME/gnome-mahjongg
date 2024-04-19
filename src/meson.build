@@ -1,7 +1,5 @@
-
-
-gnome_mahjongg = executable (
-  'gnome-mahjongg',
+gnome_mahjongg = executable(
+  meson.project_name(),
   resources + [
     'config.vapi',
     'game.vala',
@@ -21,10 +19,11 @@ gnome_mahjongg = executable (
   ],
   vala_args: [ '--pkg=posix' ],
   c_args: [
-    '-DVERSION="@0@"'.format (meson.project_version ()),
-    '-DGETTEXT_PACKAGE="gnome-mahjongg"',
-    '-DLOCALEDIR="@0@"'.format (localedir),
-    '-DDATA_DIRECTORY="@0@"'.format (pkgdatadir)
+    '-DAPP_ID="@0@"'.format(app_id),
+    '-DVERSION="@0@"'.format(meson.project_version()),
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    '-DLOCALEDIR="@0@"'.format(localedir),
+    '-DDATA_DIRECTORY="@0@"'.format(pkgdatadir)
   ],
   install: true
 )

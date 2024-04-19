@@ -14,6 +14,9 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     {
         Object(application: application);
         toolbar_view.set_content (game_view);
+
+        if (APP_ID.has_suffix (".Devel"))
+            add_css_class("devel");
     }
 
     public void set_clock (string clock)
