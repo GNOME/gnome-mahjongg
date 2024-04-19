@@ -21,6 +21,9 @@ public class ScoreDialog : Adw.Dialog
     private unowned Gtk.ComboBox layouts;
 
     [GtkChild]
+    private unowned Gtk.Stack stack;
+
+    [GtkChild]
     private unowned Gtk.TreeView scores;
 
     private History history;
@@ -59,6 +62,12 @@ public class ScoreDialog : Adw.Dialog
         header_bar.set_show_start_title_buttons (!show_quit);
         header_bar.set_show_end_title_buttons (!show_quit);
         toolbar_view.set_reveal_bottom_bars (show_quit);
+
+        if (history.entries.length() > 0)
+        {
+            stack.set_visible_child (scores);
+            layouts.set_visible (true);
+        }
     }
 
     public void set_map (string name)
