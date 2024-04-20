@@ -49,7 +49,7 @@ public class History : Object
             if (tokens.length != 3)
                 continue;
 
-            var date = parse_date (tokens[0]);
+            var date = new DateTime.from_iso8601 (tokens[0], null);
             if (date == null)
                 continue;
             var name = tokens[1];
@@ -77,29 +77,6 @@ public class History : Object
         catch (FileError e)
         {
             warning ("Failed to save history: %s", e.message);
-        }
-    }
-
-    private DateTime? parse_date (string date)
-    {
-        if (date.length < 19 || date[4] != '-' || date[7] != '-' || date[10] != 'T' || date[13] != ':' || date[16] != ':')
-            return null;
-
-        var year = int.parse (date.substring (0, 4));
-        var month = int.parse (date.substring (5, 2));
-        var day = int.parse (date.substring (8, 2));
-        var hour = int.parse (date.substring (11, 2));
-        var minute = int.parse (date.substring (14, 2));
-        var seconds = int.parse (date.substring (17, 2));
-        var timezone = date.substring (19);
-        try
-        {
-            var tz = new TimeZone.identifier (timezone);
-            return new DateTime (tz, year, month, day, hour, minute, seconds);
-        }
-        catch (Error e)
-        {
-            return null;
         }
     }
 }
