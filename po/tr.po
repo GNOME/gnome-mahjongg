@@ -15,20 +15,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2023-07-29 06:27+0000\n"
-"PO-Revision-Date: 2023-08-06 18:33+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
+"issues/\n"
+"POT-Creation-Date: 2024-04-17 12:44+0000\n"
+"PO-Revision-Date: 2024-04-18 00:05+0300\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:366
 #: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "Mahjongg"
@@ -62,9 +63,9 @@ msgstr ""
 "zordur. Eğer sıkışırsanız ipucu isteyebilirsiniz, ancak bu büyük bir zaman "
 "cezası ekler."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:40
-msgid "Alberto Ruiz"
-msgstr "Alberto Ruiz"
+#: data/org.gnome.Mahjongg.appdata.xml.in:42
+msgid "The Mahjongg Team"
+msgstr "Mahjongg Takımı"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -266,27 +267,27 @@ msgstr "Dondur"
 msgid "Print release version and exit"
 msgstr "Yayım sürümünü yazdır ve çık"
 
-#: src/gnome-mahjongg.vala:155
+#: src/gnome-mahjongg.vala:158
 msgid "Do you want to start a new game with this map?"
 msgstr "Bu harita ile yeni oyun başlatmak istiyor musunuz?"
 
-#: src/gnome-mahjongg.vala:156
+#: src/gnome-mahjongg.vala:159
 msgid "If you continue playing the next game will use the new map."
 msgstr "Eğer oynamayı sürdürürseniz sonraki oyun yeni harita kullanacak."
 
-#: src/gnome-mahjongg.vala:157
+#: src/gnome-mahjongg.vala:160
 msgid "_Continue playing"
 msgstr "_Oynamayı sürdür"
 
-#: src/gnome-mahjongg.vala:158
+#: src/gnome-mahjongg.vala:161
 msgid "Use _new map"
 msgstr "_Yeni harita kullan"
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:212
 msgid "There are no more moves."
 msgstr "Daha başka hareket kalmadı."
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:213
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -295,7 +296,7 @@ msgstr ""
 "çözümü bulmayı deneyebilir, oyunu yeniden başlatabilir veya yeni oyun "
 "başlatabilirsiniz."
 
-#: src/gnome-mahjongg.vala:212
+#: src/gnome-mahjongg.vala:215
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
@@ -303,39 +304,39 @@ msgstr ""
 "Oyunu yeniden karmayı da deneyebilirsiniz, ancak bu bir çözümü garanti "
 "etmemektedir."
 
-#: src/gnome-mahjongg.vala:213
+#: src/gnome-mahjongg.vala:216
 msgid "_Undo"
 msgstr "_Geri Al"
 
-#: src/gnome-mahjongg.vala:214
+#: src/gnome-mahjongg.vala:217
 msgid "_Restart"
 msgstr "Yeniden _Başla"
 
-#: src/gnome-mahjongg.vala:215
+#: src/gnome-mahjongg.vala:218
 msgid "_New game"
 msgstr "_Yeni oyun"
 
-#: src/gnome-mahjongg.vala:216
+#: src/gnome-mahjongg.vala:219
 msgid "_Shuffle"
 msgstr "_Karıştır"
 
-#: src/gnome-mahjongg.vala:328
+#: src/gnome-mahjongg.vala:331
 msgid "Main game:"
 msgstr "Ana oyun:"
 
-#: src/gnome-mahjongg.vala:338
+#: src/gnome-mahjongg.vala:341
 msgid "Maps:"
 msgstr "Haritalar:"
 
-#: src/gnome-mahjongg.vala:346
+#: src/gnome-mahjongg.vala:349
 msgid "Tiles:"
 msgstr "Karolar:"
 
-#: src/gnome-mahjongg.vala:366
+#: src/gnome-mahjongg.vala:369
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Mahjongg karoları ile oynanan eşleme oyunu"
 
-#: src/gnome-mahjongg.vala:372
+#: src/gnome-mahjongg.vala:375
 msgid "translator-credits"
 msgstr ""
 "Emin Tufan Çetin <etcetin@gmail.com>\n"
@@ -362,10 +363,13 @@ msgstr "Zaman"
 msgid "Moves Left:"
 msgstr "Kalan Hareket:"
 
-#: src/window.vala:34
+#: src/window.vala:31
 msgid "Unpause the game"
 msgstr "Oyunu sürdür"
 
-#: src/window.vala:40
+#: src/window.vala:37
 msgid "Pause the game"
 msgstr "Oyunu duraklat"
+
+#~ msgid "Alberto Ruiz"
+#~ msgstr "Alberto Ruiz"
