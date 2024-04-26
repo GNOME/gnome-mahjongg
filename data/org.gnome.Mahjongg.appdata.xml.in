@@ -31,10 +31,12 @@
     <release version="3.38.0" date="2020-09-18" type="stable" urgency="medium"/>
   </releases>
   <launchable type="desktop-id">org.gnome.Mahjongg.desktop</launchable>
-  <url type="homepage">https://wiki.gnome.org/Apps/Mahjongg</url>
+  <url type="homepage">https://gitlab.gnome.org/GNOME/gnome-mahjongg</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues</url>
   <url type="donation">https://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-mahjongg/stable/</url>
+  <url type="translate">https://l10n.gnome.org/module/gnome-mahjongg/</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/gnome-mahjongg</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <developer_name>Alberto Ruiz</developer_name>

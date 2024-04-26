@@ -9,7 +9,7 @@
   <name xml:lang="en">gnome-mahjongg</name>
   <shortdesc xml:lang="en">Disassemble a pile of tiles by removing matching pairs</shortdesc>
   <description xml:lang="en">Disassemble a pile of tiles by removing matching pairs</description>
-  <homepage rdf:resource="https://wiki.gnome.org/Apps/Mahjongg" />
+  <homepage rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-mahjongg/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/" />

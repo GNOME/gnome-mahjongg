@@ -374,7 +374,7 @@ public class Mahjongg : Adw.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "org.gnome.Mahjongg",
-                               "website", "https://wiki.gnome.org/Apps/Mahjongg",
+                               "website", "https://gitlab.gnome.org/GNOME/gnome-mahjongg",
                                null);
     }
 

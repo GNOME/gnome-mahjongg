@@ -38,8 +38,8 @@
   href="https://l10n.gnome.org/teams/">translation team</link> for your
   language. This will give you the ability to upload new translations.</p>
 
-  <p>You can chat with GNOME translators <link href="https://wiki.gnome.org/GettingInTouch/IRC">using IRC</link>
-  (on the <code>#gnome-i18n</code> channel). People on the channel are located worldwide, so you
+  <p>You can chat with GNOME translators <link href="https://handbook.gnome.org/get-in-touch/matrix.html">using Matrix</link>
+  (on the <code>#i18n:gnome.org</code> channel). People on the channel are located worldwide, so you
   may not get an immediate response as a result of timezone differences.</p>
 
   <p>Alternatively, you can contact the Internationalization Team using
