@@ -13,8 +13,6 @@ public class History : Object
     public string filename;
     public List<HistoryEntry> entries;
 
-    public signal void entry_added (HistoryEntry entry);
-
     public History (string filename)
     {
         this.filename = filename;
@@ -24,7 +22,6 @@ public class History : Object
     public void add (HistoryEntry entry)
     {
         entries.append (entry);
-        entry_added (entry);
     }
 
     public void load ()

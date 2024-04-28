@@ -9,7 +9,7 @@
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
             <property name="title-widget">
-              <object class="GtkComboBox" id="layouts">
+              <object class="GtkMenuButton" id="layout_button">
                 <property name="visible">False</property>
               </object>
             </property>
