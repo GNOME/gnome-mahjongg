@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <menu id="menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">New Game</attribute>
+        <attribute name="action">app.new-game</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Restart Game</attribute>
+        <attribute name="action">app.restart-game</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Scores</attribute>
+        <attribute name="action">app.scores</attribute>
+      </item>
+    </section>
+    <section>
+      <submenu id="layout_menu">
+        <attribute name="label" translatable="yes">_Layout</attribute>
+      </submenu>
+      <submenu>
+        <attribute name="label" translatable="yes">_Background</attribute>
+        <section>
+          <item>
+            <attribute name="label" translatable="yes">Follow System</attribute>
+            <attribute name="action">app.background-color</attribute>
+            <attribute name="target">system</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes">Light</attribute>
+            <attribute name="action">app.background-color</attribute>
+            <attribute name="target">light</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes">Dark</attribute>
+            <attribute name="action">app.background-color</attribute>
+            <attribute name="target">dark</attribute>
+          </item>
+        </section>
+      </submenu>
+      <submenu id="theme_menu">
+        <attribute name="label" translatable="yes">_Theme</attribute>
+      </submenu>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Help</attribute>
+        <attribute name="action">app.help</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">About Mahjongg</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

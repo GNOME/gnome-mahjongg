@@ -18,7 +18,6 @@ public class Mahjongg : Adw.Application
 
     private MahjonggWindow window;
     private ScoreDialog score_dialog;
-    private PreferencesWindow preferences_dialog;
 
     private GameView game_view;
 
@@ -30,17 +29,19 @@ public class Mahjongg : Adw.Application
 
     private const GLib.ActionEntry[] action_entries =
     {
-        { "new-game",      new_game_cb     },
-        { "undo",          undo_cb         },
-        { "redo",          redo_cb         },
-        { "hint",          hint_cb         },
-        { "pause",         pause_cb        },
-        { "restart-game",  restart_game_cb },
-        { "scores",        scores_cb       },
-        { "preferences",   preferences_cb  },
-        { "help",          help_cb         },
-        { "about",         about_cb        },
-        { "quit",          quit_cb         }
+        { "new-game",         new_game_cb                                },
+        { "undo",             undo_cb                                    },
+        { "redo",             redo_cb                                    },
+        { "hint",             hint_cb                                    },
+        { "pause",            pause_cb                                   },
+        { "restart-game",     restart_game_cb                            },
+        { "scores",           scores_cb                                  },
+        { "layout",           null, "s", "''", layout_cb                 },
+        { "background-color", null, "s", "''", background_color_cb       },
+        { "theme",            null, "s", "''", theme_cb                  },
+        { "help",             help_cb                                    },
+        { "about",            about_cb                                   },
+        { "quit",             quit_cb                                    }
     };
 
     public Mahjongg ()
@@ -79,7 +80,19 @@ public class Mahjongg : Adw.Application
         view_click_controller.pressed.connect (on_click);
         game_view.add_controller (view_click_controller);
 
-        window = new MahjonggWindow (this, game_view);
+        window = new MahjonggWindow (this, game_view, maps, load_themes ());
+
+        var layout = settings.get_string ("mapset");
+        var layout_action = (SimpleAction) lookup_action ("layout");
+        layout_action.set_state (new Variant.@string (layout));
+
+        var background_color = settings.get_string ("background-color");
+        var background_color_action = (SimpleAction) lookup_action ("background-color");
+        background_color_action.set_state (new Variant.@string (background_color));
+
+        var theme = settings.get_string ("tileset");
+        var theme_action = (SimpleAction) lookup_action ("theme");
+        theme_action.set_state (new Variant.@string (theme));
 
         settings.bind("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
         settings.bind("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
@@ -105,12 +118,11 @@ public class Mahjongg : Adw.Application
 
         settings.changed.connect (conf_value_changed_cb);
 
-        new_game ();
-
-        game_view.grab_focus ();
-
-        conf_value_changed_cb.begin (settings, "tileset");
         conf_value_changed_cb.begin (settings, "background-color");
+        conf_value_changed_cb.begin (settings, "tileset");
+
+        new_game ();
+        game_view.grab_focus ();
         tick_cb ();
     }
 
@@ -155,23 +167,7 @@ public class Mahjongg : Adw.Application
         }
         else if (key == "mapset")
         {
-            /* Prompt user if already made a move */
-            if (game_view.game.started)
-            {
-                var dialog = new Adw.AlertDialog (
-                    _("Restart Game with New Map?"),
-                    _("If you continue playing, the next game will use the new map.")
-                );
-                dialog.add_responses ("continue", _("_Continue Playing"),
-                                      "restart", _("_Restart Game"));
-                dialog.set_default_response ("restart");
-
-                var resp_id = yield dialog.choose (window, null);
-                if (resp_id == "restart")
-                    new_game ();
-            }
-            else
-                new_game ();
+            new_game ();
         }
         else if (key == "background-color")
         {
@@ -251,15 +247,6 @@ public class Mahjongg : Adw.Application
         score_dialog.present (window);
     }
 
-    private void preferences_cb ()
-    {
-        preferences_dialog = new PreferencesWindow (settings);
-        preferences_dialog.populate_themes (load_themes ());
-        preferences_dialog.populate_layouts (maps);
-        preferences_dialog.populate_backgrounds ();
-        preferences_dialog.present (window);
-    }
-
     private List<string> load_themes ()
     {
         List<string> themes = null;
@@ -286,6 +273,30 @@ public class Mahjongg : Adw.Application
         }
 
         return themes;
+    }
+
+    private void layout_cb (SimpleAction action, Variant variant)
+    {
+        var layout = variant.get_string ();
+        action.set_state (variant);
+        if (settings.get_string ("mapset") != layout)
+            settings.set_string ("mapset", layout);
+    }
+
+    private void background_color_cb (SimpleAction action, Variant variant)
+    {
+        var background_color = variant.get_string ();
+        action.set_state (variant);
+        if (settings.get_string ("background-color") != background_color)
+            settings.set_string ("background-color", background_color);
+    }
+
+    private void theme_cb (SimpleAction action, Variant variant)
+    {
+        var theme = variant.get_string ();
+        action.set_state (variant);
+        if (settings.get_string ("tileset") != theme)
+            settings.set_string ("tileset", theme);
     }
 
     private void hint_cb ()
@@ -455,9 +466,6 @@ public class Mahjongg : Adw.Application
 
         if (score_dialog != null)
             score_dialog.force_close ();
-
-        if (preferences_dialog != null)
-            preferences_dialog.force_close ();
 
         /* Reset the pause button in case it was set to resume */
         window.unpause ();

@@ -5,7 +5,7 @@ data/org.gnome.Mahjongg.desktop.in
 data/org.gnome.Mahjongg.gschema.xml
 data/translatable_game_names.h
 data/help-overlay.ui
-data/ui/preferences.ui
+data/ui/menu.ui
 data/ui/score-dialog.ui
 data/ui/window.ui
 src/game.vala

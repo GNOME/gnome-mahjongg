@@ -9,7 +9,6 @@ gnome_mahjongg = executable(
     'map.vala',
     'score-dialog.vala',
     'window.vala',
-    'preferences.vala',
   ],
   dependencies: [
     glib_dep,

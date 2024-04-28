@@ -8,7 +8,7 @@
         <child type="top">
           <object class="AdwHeaderBar">
             <property name="title-widget">
-              <object class="AdwWindowTitle" id="titlewidget">
+              <object class="AdwWindowTitle" id="title_widget">
                 <style>
                   <class name="numeric"/>
                 </style>
@@ -29,15 +29,14 @@
               </object>
             </child>
             <child type="end">
-              <object class="GtkMenuButton">
+              <object class="GtkMenuButton" id="menu_button">
                 <property name="icon-name">open-menu-symbolic</property>
-                <property name="menu-model">menu</property>
                 <property name="primary">true</property>
                 <property name="tooltip-text" translatable="yes">Main Menu</property>
               </object>
             </child>
             <child type="end">
-              <object class="GtkButton" id="pause_btn">
+              <object class="GtkButton" id="pause_button">
                 <property name="icon-name">media-playback-pause-symbolic</property>
                 <property name="action-name">app.pause</property>
               </object>
@@ -57,38 +56,4 @@
       <class name="main"/>
     </style>
   </template>
-  <menu id="menu">
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">New Game</attribute>
-        <attribute name="action">app.new-game</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Restart Game</attribute>
-        <attribute name="action">app.restart-game</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Scores</attribute>
-        <attribute name="action">app.scores</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Preferences</attribute>
-        <attribute name="action">app.preferences</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
-        <attribute name="action">win.show-help-overlay</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Help</attribute>
-        <attribute name="action">app.help</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">About Mahjongg</attribute>
-        <attribute name="action">app.about</attribute>
-      </item>
-    </section>
-  </menu>
 </interface>
