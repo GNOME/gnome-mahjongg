@@ -109,8 +109,8 @@ public class Mahjongg : Adw.Application
 
         game_view.grab_focus ();
 
-        conf_value_changed_cb (settings, "tileset");
-        conf_value_changed_cb (settings, "background-color");
+        conf_value_changed_cb.begin (settings, "tileset");
+        conf_value_changed_cb.begin (settings, "background-color");
         tick_cb ();
     }
 
@@ -139,7 +139,7 @@ public class Mahjongg : Adw.Application
         }
     }
 
-    private void conf_value_changed_cb (Settings settings, string key)
+    private async void conf_value_changed_cb (Settings settings, string key)
     {
         if (key == "tileset")
         {
@@ -165,12 +165,10 @@ public class Mahjongg : Adw.Application
                 dialog.add_responses ("continue", _("_Continue Playing"),
                                       "restart", _("_Restart Game"));
                 dialog.set_default_response ("restart");
-                dialog.response.connect ( (resp_id) => {
-                    if (resp_id == "restart")
-                        new_game ();
-                    dialog.destroy ();
-                });
-                dialog.present (window);
+
+                var resp_id = yield dialog.choose (window, null);
+                if (resp_id == "restart")
+                    new_game ();
             }
             else
                 new_game ();
@@ -192,7 +190,7 @@ public class Mahjongg : Adw.Application
             pause_cb ();
     }
 
-    private void moved_cb ()
+    private async void moved_cb ()
     {
         update_ui ();
 
@@ -227,28 +225,23 @@ public class Mahjongg : Adw.Application
             dialog.add_response ("quit", _("_Quit"));
             dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
 
-            dialog.response.connect ( (resp_id) => {
-                /* Shuffling may cause the dialog to appear again immediately,
-                   so we destroy BEFORE doing anything with the result. */
-                switch (resp_id)
-                {
-                case "continue":
-                    break;
-                case "reshuffle":
-                    shuffle_cb ();
-                    break;
-                case "new_game":
-                    new_game ();
-                    break;
-                case "quit":
-                    window.destroy ();
-                    break;
-                default:
-                    assert_not_reached ();
-                }
-                dialog.destroy ();
-            });
-            dialog.present (window);
+            var resp_id = yield dialog.choose (window, null);
+            switch (resp_id)
+            {
+            case "continue":
+                break;
+            case "reshuffle":
+                shuffle_cb ();
+                break;
+            case "new_game":
+                new_game ();
+                break;
+            case "quit":
+                window.destroy ();
+                break;
+            default:
+                assert_not_reached ();
+            }
         }
     }
 
