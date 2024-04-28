@@ -30,9 +30,26 @@
             </child>
             <child>
               <object class="GtkStackPage">
+                <property name="name">scores</property>
                 <property name="child">
-                  <object class="GtkTreeView" id="scores">
-                    <property name="vexpand">true</property>
+                  <object class="GtkScrolledWindow">
+                    <child>
+                      <object class="GtkColumnView" id="score_view">
+                        <property name="reorderable">False</property>
+                        <property name="tab-behavior">item</property>
+                        <child>
+                          <object class="GtkColumnViewColumn" id="date_column">
+                            <property name="title" translatable="yes">Date</property>
+                            <property name="expand">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkColumnViewColumn" id="time_column">
+                            <property name="title" translatable="yes">Time</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
                   </object>
                 </property>
               </object>
