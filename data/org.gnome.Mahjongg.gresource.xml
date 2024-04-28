@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/Mahjongg/gtk">
-    <file preprocess="xml-stripblanks" compressed="true">help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">help-overlay.ui</file>
   </gresource>
   <gresource prefix="/org/gnome/Mahjongg">
-    <file>ui/window.ui</file>
-    <file>ui/preferences.ui</file>
-    <file>ui/score-dialog.ui</file>
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file preprocess="xml-stripblanks">ui/score-dialog.ui</file>
     <file>style.css</file>
     <file>style-dark.css</file>
   </gresource>
