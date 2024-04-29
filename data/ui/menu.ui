@@ -18,6 +18,38 @@
     <section>
       <submenu id="layout_menu">
         <attribute name="label" translatable="yes">_Layout</attribute>
+        <section>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Easy</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">The Ziggurat</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Four Bridges</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Cloud</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Tic-Tac-Toe</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Red Dragon</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Overpass</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Pyramid's Walls</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Confounding Cross</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Difficult</attribute>
+          </item>
+        </section>
       </submenu>
       <submenu>
         <attribute name="label" translatable="yes">_Background</attribute>
@@ -41,6 +73,17 @@
       </submenu>
       <submenu id="theme_menu">
         <attribute name="label" translatable="yes">_Theme</attribute>
+        <section>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg theme name">Postmodern</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg theme name">Smooth</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="mahjongg theme name">Educational</attribute>
+          </item>
+        </section>
       </submenu>
     </section>
     <section>

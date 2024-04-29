@@ -3,8 +3,7 @@
 data/org.gnome.Mahjongg.appdata.xml.in.in
 data/org.gnome.Mahjongg.desktop.in.in
 data/org.gnome.Mahjongg.gschema.xml.in
-data/translatable_game_names.h
-data/help-overlay.ui
+data/ui/help-overlay.ui
 data/ui/menu.ui
 data/ui/score-dialog.ui
 data/ui/window.ui
