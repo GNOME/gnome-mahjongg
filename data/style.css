@@ -5,3 +5,9 @@ window.main {
 columnview {
     background: transparent;
 }
+
+columnview header button,
+listview row cell {
+    padding-left: 12px;
+    padding-right: 12px;
+}
