@@ -1,11 +1,7 @@
 project(
   'gnome-mahjongg', ['vala', 'c'],
   version: '47.alpha',
-  meson_version: '>= 0.59.0',
-  default_options: [
-    'warning_level=2',
-    'buildtype=debugoptimized',
-  ]
+  meson_version: '>= 0.59.0'
 )
 
 gnome = import('gnome')
