@@ -17,9 +17,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2023-07-29 06:27+0000\n"
-"PO-Revision-Date: 2023-07-29 20:21+1000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
+"POT-Creation-Date: 2024-04-19 03:18+0000\n"
+"PO-Revision-Date: 2024-04-19 19:50+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -31,8 +31,7 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
-#: src/gnome-mahjongg.vala:539
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:540
 msgid "Mahjongg"
 msgstr "Маджонг"
 
@@ -67,9 +66,9 @@ msgstr ""
 "некоторые сложнее. Если вы затрудняетесь сделать ход, то можете "
 "воспользоваться подсказкой, но в этом случае будет начислено штрафное время."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:40
-msgid "Alberto Ruiz"
-msgstr "Альберто Руис"
+#: data/org.gnome.Mahjongg.appdata.xml.in:43 src/gnome-mahjongg.vala:364
+msgid "The Mahjongg Team"
+msgstr "Команда «Маджонг»"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -80,15 +79,15 @@ msgstr "Разберите большую кучу костей, убирая с
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;игра;стратегия;головоломка;настольная;"
 
-#: data/org.gnome.Mahjongg.gschema.xml:17
+#: data/org.gnome.Mahjongg.gschema.xml:20
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: data/org.gnome.Mahjongg.gschema.xml:21
+#: data/org.gnome.Mahjongg.gschema.xml:24
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: data/org.gnome.Mahjongg.gschema.xml:25
+#: data/org.gnome.Mahjongg.gschema.xml:28
 msgid "true if the window is maximized"
 msgstr "если выбрано, то окно имеет максимальный размер"
 
@@ -219,158 +218,193 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выход"
 
-#: data/ui/preferences.ui:13
-msgid "Theme"
-msgstr "Тема"
-
-#: data/ui/preferences.ui:18
+#: data/ui/preferences.ui:11
 msgid "Layout"
 msgstr "Расклад"
 
-#: data/ui/preferences.ui:23
-msgid "Background color"
-msgstr "Цвет фона"
+#: data/ui/preferences.ui:16
+msgid "Theme"
+msgstr "Тема"
 
-#: data/ui/score-dialog.ui:20
-msgid "Layout: "
-msgstr "Расклад: "
+#: data/ui/preferences.ui:21
+msgid "Background"
+msgstr "Фон"
 
-#: data/ui/window.ui:53 src/score-dialog.vala:44
+#: data/ui/window.ui:21
+msgid "Undo"
+msgstr "Отменить"
+
+#: data/ui/window.ui:28
+msgid "Redo"
+msgstr "Вернуть"
+
+#: data/ui/window.ui:36
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: data/ui/window.ui:49
+msgid "Show Hint"
+msgstr "Показать подсказку"
+
+#: data/ui/window.ui:63
 msgid "New Game"
 msgstr "Новая игра"
 
-#: data/ui/window.ui:57
+#: data/ui/window.ui:67
 msgid "Restart Game"
 msgstr "Начать игру заново"
 
-#: data/ui/window.ui:61
+#: data/ui/window.ui:71
 msgid "Scores"
 msgstr "Результаты"
 
-#: data/ui/window.ui:67
+#: data/ui/window.ui:77
 msgid "Preferences"
 msgstr "Параметры"
 
-#: data/ui/window.ui:71
+#: data/ui/window.ui:81
 msgid "Keyboard Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: data/ui/window.ui:75
+#: data/ui/window.ui:85
 msgid "Help"
 msgstr "Справка"
 
-#: data/ui/window.ui:79
+#: data/ui/window.ui:89
 msgid "About Mahjongg"
 msgstr "О приложении"
 
-#: src/game-view.vala:228
-msgid "Paused"
-msgstr "Пауза"
-
-#: src/gnome-mahjongg.vala:25
+#: src/gnome-mahjongg.vala:27
 msgid "Print release version and exit"
 msgstr "Показать номер версии и выйти"
 
-#: src/gnome-mahjongg.vala:155
-msgid "Do you want to start a new game with this map?"
-msgstr "Хотите начать новую игру с этой картой?"
+#: src/gnome-mahjongg.vala:159
+msgid "Restart Game with New Map?"
+msgstr "Перезапустить игру с новым раскладом?"
 
-#: src/gnome-mahjongg.vala:156
-msgid "If you continue playing the next game will use the new map."
-msgstr "Если вы продолжите играть, то следующая игра будет иметь новую карту."
+#: src/gnome-mahjongg.vala:160
+msgid "If you continue playing, the next game will use the new map."
+msgstr ""
+"Если вы продолжите играть, то следующая игра будет иметь новый расклад."
 
-#: src/gnome-mahjongg.vala:157
-msgid "_Continue playing"
+#: src/gnome-mahjongg.vala:162
+msgid "_Continue Playing"
 msgstr "_Продолжить игру"
 
-#: src/gnome-mahjongg.vala:158
-msgid "Use _new map"
-msgstr "В_ыбрать карту"
-
-#: src/gnome-mahjongg.vala:209
-msgid "There are no more moves."
-msgstr "Больше нет вариантов ходов."
+#: src/gnome-mahjongg.vala:163
+msgid "_Restart Game"
+msgstr "Начать игру _заново"
 
 #: src/gnome-mahjongg.vala:210
+msgid "No Moves Left"
+msgstr "Ходов не осталось"
+
+#: src/gnome-mahjongg.vala:211
 msgid ""
-"Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution, restart this game, or start a new one."
+"You can undo your moves and try to find a solution, or reshuffle the "
+"remaining tiles."
 msgstr ""
-"Каждая головоломка имеет по крайней мере одно решение. Вы можете отменить "
-"сделанные ходы и попытаться найти решение, перезапустить эту игру или начать "
-"новую."
+"Вы можете отменить сделанные ходы и попытаться найти решение или перемешать "
+"оставшиеся кости."
 
 #: src/gnome-mahjongg.vala:212
 msgid ""
-"You can also try to reshuffle the game, but this does not guarantee a "
-"solution."
-msgstr "Вы можете перемешать кости, но это не гарантирует решения головоломки."
-
-#: src/gnome-mahjongg.vala:213
-msgid "_Undo"
-msgstr "_Отменить"
+"You can undo your moves and try to find a solution, or start a new game."
+msgstr ""
+"Вы можете отменить сделанные ходы и попытаться найти решение или начать "
+"новую игру."
 
 #: src/gnome-mahjongg.vala:214
-msgid "_Restart"
-msgstr "Начать _заново"
+msgid "_Continue"
+msgstr "_Продолжить"
 
-#: src/gnome-mahjongg.vala:215
-msgid "_New game"
-msgstr "_Новая игра"
-
-#: src/gnome-mahjongg.vala:216
-msgid "_Shuffle"
+#: src/gnome-mahjongg.vala:218
+msgid "_Reshuffle"
 msgstr "_Перемешать"
 
-#: src/gnome-mahjongg.vala:328
-msgid "Main game:"
-msgstr "Основная игра:"
+#: src/gnome-mahjongg.vala:222
+msgid "_New Game"
+msgstr "_Новая игра"
 
-#: src/gnome-mahjongg.vala:338
-msgid "Maps:"
-msgstr "Карты:"
-
-#: src/gnome-mahjongg.vala:346
-msgid "Tiles:"
-msgstr "Кости:"
-
-#: src/gnome-mahjongg.vala:366
-msgid "A matching game played with Mahjongg tiles"
-msgstr "Игра на поиск одинаковых костей Маджонг"
-
-#: src/gnome-mahjongg.vala:372
-msgid "translator-credits"
-msgstr ""
-"Stas Solovey <whats_up@tut.by>, 2015-2018\n"
-"Ser82-png <asvmail.as@gmail.com>, 2022-2023"
-
-#: src/score-dialog.vala:43
+#: src/gnome-mahjongg.vala:224
 msgid "_Quit"
 msgstr "_Завершить"
 
-#: src/score-dialog.vala:47
-msgid "OK"
-msgstr "OK"
+#: src/gnome-mahjongg.vala:371
+msgid "translator-credits"
+msgstr ""
+"Stas Solovey <whats_up@tut.by>, 2015-2018\n"
+"Ser82-png <asvmail.as@gmail.com>, 2022-2024"
 
-#: src/score-dialog.vala:53
+#: src/score-dialog.vala:49
 msgid "Date"
 msgstr "Дата"
 
-#: src/score-dialog.vala:56
+#: src/score-dialog.vala:52
 msgid "Time"
 msgstr "Время"
 
-#: src/window.vala:24
-msgid "Moves Left:"
-msgstr "Осталось ходов:"
+#: src/window.vala:26
+#, c-format
+msgid "Moves Left: %2u"
+msgstr "Осталось ходов: %2u"
 
-#: src/window.vala:34
-msgid "Unpause the game"
-msgstr "Возобновить игру"
+#: src/window.vala:31
+msgid "Paused"
+msgstr "Пауза"
 
-#: src/window.vala:40
-msgid "Pause the game"
+#: src/window.vala:33
+msgid "Resume Game"
+msgstr "Продолжить игру"
+
+#: src/window.vala:39
+msgid "Pause Game"
 msgstr "Приостановить игру"
+
+#~ msgid "Layout: "
+#~ msgstr "Расклад: "
+
+#~ msgid "Do you want to start a new game with this map?"
+#~ msgstr "Хотите начать новую игру с этой картой?"
+
+#~ msgid "Use _new map"
+#~ msgstr "В_ыбрать карту"
+
+#~ msgid "There are no more moves."
+#~ msgstr "Больше нет вариантов ходов."
+
+#~ msgid ""
+#~ "You can also try to reshuffle the game, but this does not guarantee a "
+#~ "solution."
+#~ msgstr ""
+#~ "Вы можете перемешать кости, но это не гарантирует решения головоломки."
+
+#~ msgid "_Undo"
+#~ msgstr "_Отменить"
+
+#~ msgid "_Restart"
+#~ msgstr "Начать _заново"
+
+#~ msgid "_New game"
+#~ msgstr "_Новая игра"
+
+#~ msgid "Maps:"
+#~ msgstr "Карты:"
+
+#~ msgid "Tiles:"
+#~ msgstr "Кости:"
+
+#~ msgid "A matching game played with Mahjongg tiles"
+#~ msgstr "Игра на поиск одинаковых костей Маджонг"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Unpause the game"
+#~ msgstr "Возобновить игру"
+
+#~ msgid "Alberto Ruiz"
+#~ msgstr "Альберто Руис"
 
 #~ msgid "GNOME Mahjongg"
 #~ msgstr "Маджонг GNOME"
@@ -386,9 +420,6 @@ msgstr "Приостановить игру"
 
 #~ msgid "Receive a hint for your next move"
 #~ msgstr "Получить подсказку для следующего хода"
-
-#~ msgid "_New Game"
-#~ msgstr "_Новая игра"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Параметры"
