@@ -6,6 +6,7 @@
     <child>
       <object class="AdwToolbarView" id="toolbar_view">
         <property name="bottom-bar-style">raised</property>
+        <property name="reveal-bottom-bars">False</property>
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
             <property name="title-widget">
@@ -38,14 +39,20 @@
                         <property name="reorderable">False</property>
                         <property name="tab-behavior">item</property>
                         <child>
-                          <object class="GtkColumnViewColumn" id="date_column">
-                            <property name="title" translatable="yes">Date</property>
+                          <object class="GtkColumnViewColumn" id="player_column">
+                            <property name="title" translatable="yes">Player</property>
                             <property name="expand">True</property>
                           </object>
                         </child>
                         <child>
                           <object class="GtkColumnViewColumn" id="time_column">
                             <property name="title" translatable="yes">Time</property>
+                            <property name="expand">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkColumnViewColumn" id="date_column">
+                            <property name="title" translatable="yes">Date</property>
                           </object>
                         </child>
                       </object>
@@ -59,7 +66,7 @@
         <child type="bottom">
           <object class="GtkActionBar">
             <child type="center">
-              <object class="GtkButton">
+              <object class="GtkButton" id="new_game_button">
                 <property name="label">_New Game</property>
                 <property name="action-name">app.new-game</property>
                 <property name="can-shrink">True</property>

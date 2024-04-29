@@ -42,8 +42,8 @@ public class History : Object
 
         foreach (var line in contents.split ("\n"))
         {
-            var tokens = line.split (" ");
-            if (tokens.length != 3)
+            var tokens = line.split (" ", 4);
+            if (tokens.length < 3)
                 continue;
 
             var date = new DateTime.from_iso8601 (tokens[0], null);
@@ -51,8 +51,13 @@ public class History : Object
                 continue;
             var name = tokens[1];
             var duration = int.parse (tokens[2]);
+            string player;
+            if (tokens.length >= 4)
+                player = tokens[3];
+            else
+                player = Environment.get_real_name ();
 
-            add (new HistoryEntry (date, name, duration));
+            add (new HistoryEntry (date, name, duration, player));
         }
     }
 
@@ -62,7 +67,7 @@ public class History : Object
 
         foreach (var entry in entries)
         {
-            var line = "%s %s %u\n".printf (entry.date.to_string (), entry.name, entry.duration);
+            var line = "%s %s %u %s\n".printf (entry.date.to_string (), entry.name, entry.duration, entry.player);
             contents += line;
         }
 
@@ -83,11 +88,13 @@ public class HistoryEntry : Object
     public DateTime date;
     public string name;
     public uint duration;
+    public string player;
 
-    public HistoryEntry (DateTime date, string name, uint duration)
+    public HistoryEntry (DateTime date, string name, uint duration, string player)
     {
         this.date = date;
         this.name = name;
         this.duration = duration;
+        this.player = player;
     }
 }

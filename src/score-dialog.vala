@@ -27,13 +27,20 @@ public class ScoreDialog : Adw.Dialog
     private unowned Gtk.ColumnView score_view;
 
     [GtkChild]
-    private unowned Gtk.ColumnViewColumn date_column;
+    private unowned Gtk.ColumnViewColumn player_column;
 
     [GtkChild]
     private unowned Gtk.ColumnViewColumn time_column;
 
+    [GtkChild]
+    private unowned Gtk.ColumnViewColumn date_column;
+
+    [GtkChild]
+    private unowned Gtk.Button new_game_button;
+
     private History history;
     private HistoryEntry? selected_entry = null;
+    private Gtk.ListItem? selected_item = null;
     private ListStore score_model;
     private unowned List<Map> maps;
 
@@ -42,16 +49,11 @@ public class ScoreDialog : Adw.Dialog
         { "layout", null, "s", "''", set_map_cb }
     };
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false, List<Map> maps)
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, List<Map> maps)
     {
         this.maps = maps;
         this.history = history;
         this.selected_entry = selected_entry;
-
-        set_can_close (!show_quit);
-        header_bar.set_show_start_title_buttons (!show_quit);
-        header_bar.set_show_end_title_buttons (!show_quit);
-        toolbar_view.set_reveal_bottom_bars (show_quit);
 
         set_up_score_view ();
         set_up_layout_menu ();
@@ -64,11 +66,21 @@ public class ScoreDialog : Adw.Dialog
 
         if (selected_entry != null)
         {
+            set_can_close (false);
+            header_bar.set_show_start_title_buttons (false);
+            header_bar.set_show_end_title_buttons (false);
+            toolbar_view.set_reveal_bottom_bars (true);
+
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
             score_view.add_controller (controller);
             focus_widget = score_view;
         }
+
+        closed.connect (() => {
+            if (selected_entry != null)
+                history.save();
+        });
     }
 
     public void set_map (string name)
@@ -130,14 +142,19 @@ public class ScoreDialog : Adw.Dialog
     private void set_up_score_view ()
     {
         var factory = new Gtk.SignalListItemFactory ();
-        factory.setup.connect (item_date_setup_cb);
-        factory.bind.connect (item_date_bind_cb);
-        date_column.factory = factory;
+        factory.setup.connect (item_player_setup_cb);
+        factory.bind.connect (item_player_bind_cb);
+        player_column.factory = factory;
 
         factory = new Gtk.SignalListItemFactory ();
         factory.setup.connect (item_time_setup_cb);
         factory.bind.connect (item_time_bind_cb);
         time_column.factory = factory;
+
+        factory = new Gtk.SignalListItemFactory ();
+        factory.setup.connect (item_date_setup_cb);
+        factory.bind.connect (item_date_bind_cb);
+        date_column.factory = factory;
 
         score_model = new ListStore (typeof (HistoryEntry));
         score_view.model = new Gtk.NoSelection (score_model);
@@ -176,44 +193,88 @@ public class ScoreDialog : Adw.Dialog
         return a.date.compare (b.date);
     }
 
-    private void item_date_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
+    private void item_player_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
     {
-        var label = new Gtk.Inscription(null);
-        ((Gtk.ListItem) list_item).child = label;
+        var stack = new Gtk.Stack ();
+        stack.add_named (new Gtk.Inscription (null), "label");
+
+        var entry = new Gtk.Entry ();
+        entry.has_frame = false;
+        entry.max_width_chars = 8;
+        entry.notify["text"].connect (() => {
+            var history_entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+            if (entry.text.length <= 0)
+                history_entry.player = Environment.get_real_name ();
+            else
+                history_entry.player = entry.text;
+        });
+        entry.activate.connect (() => {
+            new_game_button.activate();
+        });
+
+        stack.add_named (entry, "entry");
+        ((Gtk.ListItem) list_item).child = stack;
     }
 
     private void item_time_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
     {
-        var label = new Gtk.Label(null);
-        label.use_markup = true;
-        label.xalign = 0;
+        var label = new Gtk.Inscription (null);
+        label.add_css_class ("numeric");
         ((Gtk.ListItem) list_item).child = label;
     }
 
-    private void item_date_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
+    private void item_date_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
     {
-        var inscription = ((Gtk.ListItem) list_item).child as Gtk.Inscription;
+        var label = new Gtk.Label (null);
+        label.xalign = 0;
+        label.add_css_class ("numeric");
+        ((Gtk.ListItem) list_item).child = label;
+    }
+
+    private void item_player_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
+    {
+        var stack = ((Gtk.ListItem) list_item).child as Gtk.Stack;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
-        var date_label = entry.date.format ("%x");
         if (entry == selected_entry)
-            date_label = "<b>%s</b>".printf (date_label);
-
-        inscription.markup = date_label;
+        {
+            stack.set_visible_child_name ("entry");
+            var text_entry = (Gtk.Entry) stack.visible_child;
+            text_entry.text = entry.player;
+            text_entry.add_css_class ("heading");
+            selected_item = (Gtk.ListItem) list_item;
+        }
+        else
+        {
+            stack.set_visible_child_name ("label");
+            ((Gtk.Inscription) stack.visible_child).text = entry.player;
+        }
     }
 
     private void item_time_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
     {
-        var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
+        var label = ((Gtk.ListItem) list_item).child as Gtk.Inscription;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
         var time_label = "%us".printf (entry.duration);
         if (entry.duration >= 60)
             time_label = "%um %us".printf (entry.duration / 60, entry.duration % 60);
         if (entry == selected_entry)
-            time_label = "<b>%s</b>".printf (time_label);
+            label.add_css_class ("heading");
 
-        label.label = time_label;
+        label.text = time_label;
+    }
+
+    private void item_date_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
+    {
+        var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
+        var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+
+        var date_label = entry.date.format ("%x");
+        if (entry == selected_entry)
+            label.add_css_class ("heading");
+
+        label.label = date_label;
     }
 
     private void score_view_focus_cb ()
@@ -225,7 +286,9 @@ public class ScoreDialog : Adw.Dialog
             return;
 
         Idle.add (() => {
-            score_view.scroll_to (position, null, Gtk.ListScrollFlags.FOCUS, null);
+            var text_entry = ((Gtk.Stack) selected_item.child).visible_child;
+            text_entry.grab_focus ();
+            score_view.scroll_to (position, null, Gtk.ListScrollFlags.NONE, null);
             return false;
         });
     }
