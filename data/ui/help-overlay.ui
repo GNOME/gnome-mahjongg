@@ -1,52 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <!-- interface-requires gtk+ 3.17 -->
   <object class="GtkShortcutsWindow" id="help_overlay">
-    <property name="modal">1</property>
     <child>
       <object class="GtkShortcutsSection">
-        <property name="visible">1</property>
         <child>
           <object class="GtkShortcutsGroup">
             <!-- Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"... -->
             <property name="title" translatable="yes" context="shortcut window">Main functions</property>
-            <property name="visible">1</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <property name="action-name">app.new-game</property>
                 <!-- Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one -->
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;P Pause</property>
+                <property name="action-name">app.pause</property>
                 <!-- Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Pause the game</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;Z</property>
+                <property name="action-name">app.undo</property>
                 <!-- Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Undo</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Shift&gt;&lt;Ctrl&gt;Z</property>
+                <property name="action-name">app.redo</property>
                 <!-- Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game -->
                 <property name="title" translatable="yes" context="shortcut window">Redo</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Ctrl&gt;H</property>
+                <property name="action-name">app.hint</property>
                 <!-- Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles -->
                 <property name="title" translatable="yes" context="shortcut window">Show a hint</property>
               </object>
@@ -57,10 +48,8 @@
           <object class="GtkShortcutsGroup">
             <!-- Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"... -->
             <property name="title" translatable="yes" context="shortcut window">Generic</property>
-            <property name="visible">1</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">F10</property>
                 <!-- Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu -->
                 <property name="title" translatable="yes" context="shortcut window">Toggle main menu</property>
@@ -68,31 +57,20 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property name="action-name">win.show-help-overlay</property>
                 <!-- Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts -->
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
-                <property name="accelerator">F1</property>
+                <property name="action-name">app.help</property>
                 <!-- Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help -->
                 <property name="title" translatable="yes" context="shortcut window">Show Help</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">0</property> <!-- TODO implement? or not -->
-                <property name="accelerator">F11</property>
-                <!-- Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen -->
-                <property name="title" translatable="yes" context="shortcut window">Fullscreen</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;Q</property>
                 <!-- Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application -->
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
