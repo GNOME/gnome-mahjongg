@@ -8,17 +8,18 @@
   <summary>Match tiles and clear the board</summary>
   <description>
     <p>
-   A solitaire version of the classic Eastern tile game. Tiles are stacked on
-   the board at the start of the game. The goal is to remove all the tiles in
-   as little time as possible. Select two matching tiles and they will disappear
-   from the board, but you can only select a tile if there is an empty space to
-   its left or right at the same level. Be careful: tiles that look alike
-   may actually be slightly different.
+      Single-player tile-matching game, commonly known as Mahjong solitaire.
+      Tiles are stacked on the board at the start of the game. The goal is to
+      remove all the tiles in as little time as possible.
+      Select two matching tiles and they will disappear from the board, but
+      you can only select a tile if there is an empty space to its left or
+      right at the same level. Be careful: tiles that look alike may actually
+      be slightly different.
     </p>
     <p>
-   Mahjongg features a variety of starting layouts, some easy and some
-   difficult. If you get stuck, you can ask for a hint, but this adds a large
-   time penalty.
+      You can choose from a variety of starting layouts, some easy and some
+      difficult. If you get stuck, you can ask for a hint, but this adds a
+      large time penalty.
     </p>
   </description>
   <branding>

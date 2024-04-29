@@ -7,8 +7,8 @@
          xmlns="http://usefulinc.com/ns/doap#">
 
   <name xml:lang="en">gnome-mahjongg</name>
-  <shortdesc xml:lang="en">Disassemble a pile of tiles by removing matching pairs</shortdesc>
-  <description xml:lang="en">Disassemble a pile of tiles by removing matching pairs</description>
+  <shortdesc xml:lang="en">Match tiles and clear the board</shortdesc>
+  <description xml:lang="en">Match tiles and clear the board</description>
   <homepage rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-mahjongg/" />
