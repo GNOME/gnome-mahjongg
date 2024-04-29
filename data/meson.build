@@ -99,10 +99,10 @@ resources = gnome.compile_resources(
   c_name: 'resources'
 )
 
-install_data('mahjongg.map', install_dir: pkgdatadir / 'maps')
-install_data('postmodern.svg', install_dir: pkgdatadir / 'themes')
-install_data('smooth.png', install_dir: pkgdatadir / 'themes')
-install_data('edu_kang_xi.png', install_dir: pkgdatadir / 'themes')
+install_data('maps' / 'mahjongg.map', install_dir: pkgdatadir / 'maps')
+install_data('themes' / 'postmodern.svg', install_dir: pkgdatadir / 'themes')
+install_data('themes' / 'smooth.png', install_dir: pkgdatadir / 'themes')
+install_data('themes' / 'edu_kang_xi.png', install_dir: pkgdatadir / 'themes')
 
 # Man page
 install_man('@0@.6'.format(meson.project_name()))
