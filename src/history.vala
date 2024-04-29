@@ -81,6 +81,12 @@ public class History : Object
             warning ("Failed to save history: %s", e.message);
         }
     }
+
+    public void clear ()
+    {
+        entries = new List<HistoryEntry> ();
+        save ();
+    }
 }
 
 public class HistoryEntry : Object

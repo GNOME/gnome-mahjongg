@@ -21,7 +21,7 @@ public class ScoreDialog : Adw.Dialog
     private unowned Gtk.MenuButton layout_button;
 
     [GtkChild]
-    private unowned Gtk.Stack stack;
+    private unowned Gtk.Stack content_stack;
 
     [GtkChild]
     private unowned Gtk.ColumnView score_view;
@@ -34,6 +34,12 @@ public class ScoreDialog : Adw.Dialog
 
     [GtkChild]
     private unowned Gtk.ColumnViewColumn date_column;
+
+    [GtkChild]
+    private unowned Gtk.Stack bottom_stack;
+
+    [GtkChild]
+    private unowned Gtk.Button clear_scores_button;
 
     [GtkChild]
     private unowned Gtk.Button new_game_button;
@@ -60,8 +66,9 @@ public class ScoreDialog : Adw.Dialog
 
         if (history.entries.length() > 0)
         {
-            stack.set_visible_child_name ("scores");
+            content_stack.set_visible_child_name ("scores");
             layout_button.set_visible (true);
+            toolbar_view.set_reveal_bottom_bars (true);
         }
 
         if (selected_entry != null)
@@ -69,13 +76,15 @@ public class ScoreDialog : Adw.Dialog
             set_can_close (false);
             header_bar.set_show_start_title_buttons (false);
             header_bar.set_show_end_title_buttons (false);
-            toolbar_view.set_reveal_bottom_bars (true);
+            bottom_stack.set_visible_child_name ("new-game");
 
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
             score_view.add_controller (controller);
             focus_widget = score_view;
         }
+
+        clear_scores_button.clicked.connect (clear_scores_cb);
 
         closed.connect (() => {
             if (selected_entry != null)
@@ -291,5 +300,38 @@ public class ScoreDialog : Adw.Dialog
             score_view.scroll_to (position, null, Gtk.ListScrollFlags.NONE, null);
             return false;
         });
+    }
+
+    private async void clear_scores_cb ()
+    {
+        var dialog = new Adw.AlertDialog (
+            _("Clear All Scores?"),
+            _("This will clear every score for every layout.")
+        );
+        dialog.add_response ("cancel", _("_Cancel"));
+        dialog.add_response ("clear", _("Clear All"));
+        dialog.set_default_response ("cancel");
+        dialog.set_response_appearance ("clear", Adw.ResponseAppearance.DESTRUCTIVE);
+
+        var resp_id = yield dialog.choose (this, null);
+        switch (resp_id)
+        {
+        case "cancel":
+            break;
+        case "clear":
+            toolbar_view.set_reveal_bottom_bars (false);
+            content_stack.set_visible_child_name ("no-scores");
+            layout_button.set_visible (false);
+            layout_button.set_menu_model (null);
+            score_model.remove_all ();
+
+            selected_entry = null;
+            selected_item = null;
+
+            history.clear ();
+            break;
+        default:
+            assert_not_reached ();
+        }
     }
 }
