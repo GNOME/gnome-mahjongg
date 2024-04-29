@@ -45,30 +45,30 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         if (APP_ID.has_suffix (".Devel"))
             add_css_class("devel");
 
-        menu_button.set_menu_model (menu_model);
-        toolbar_view.set_content (game_view);
+        menu_button.menu_model = menu_model;
+        toolbar_view.content = game_view;
     }
 
-    public void set_clock (string clock)
+    public void update_clock (string clock)
     {
-        title_widget.set_title (clock);
+        title_widget.title = clock;
     }
 
-    public void set_moves_left (uint moves_left)
+    public void update_moves_left (uint moves_left)
     {
-        title_widget.set_subtitle (_("Moves Left: %2u").printf (moves_left));
+        title_widget.subtitle = _("Moves Left: %2u").printf (moves_left);
     }
 
     public void pause ()
     {
-        title_widget.set_subtitle (_("Paused"));
+        title_widget.subtitle = _("Paused");
         pause_button.icon_name = "media-playback-start-symbolic";
-        pause_button.set_tooltip_text (_("Resume Game"));
+        pause_button.tooltip_text = _("Resume Game");
     }
 
     public void unpause ()
     {
         pause_button.icon_name = "media-playback-pause-symbolic";
-        pause_button.set_tooltip_text (_("Pause Game"));
+        pause_button.tooltip_text = _("Pause Game");
     }
 }

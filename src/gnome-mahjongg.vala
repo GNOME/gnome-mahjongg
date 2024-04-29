@@ -27,7 +27,7 @@ public class Mahjongg : Adw.Application
         { null }
     };
 
-    private const GLib.ActionEntry[] action_entries =
+    private const ActionEntry[] action_entries =
     {
         { "new-game",         new_game_cb                                },
         { "undo",             undo_cb                                    },
@@ -99,7 +99,7 @@ public class Mahjongg : Adw.Application
         settings.bind("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
     }
 
-    protected override int handle_local_options (GLib.VariantDict options)
+    protected override int handle_local_options (VariantDict options)
     {
         if (options.contains ("version"))
         {
@@ -146,7 +146,7 @@ public class Mahjongg : Adw.Application
             hint_action.set_enabled (moves_left > 0);
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
-            window.set_moves_left (moves_left);
+            window.update_moves_left (moves_left);
         }
     }
 
@@ -160,7 +160,7 @@ public class Mahjongg : Adw.Application
             if (game_view.theme == null)
             {
                 /* Failed to load theme, fall back to default */
-                var default_theme = settings.get_default_value ("tileset").get_string();
+                var default_theme = settings.get_default_value ("tileset").get_string ();
                 game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", default_theme);
             }
         }
@@ -486,7 +486,7 @@ public class Mahjongg : Adw.Application
         else
             clock = "%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds);
 
-        window.set_clock (clock);
+        window.update_clock (clock);
     }
 
     private void help_cb ()

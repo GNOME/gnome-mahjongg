@@ -66,8 +66,8 @@ public class GameView : Gtk.DrawingArea
             } catch (Error e) {
                 try {
                     texture = Gdk.Texture.from_filename (value);
-                    theme_width = texture.get_width ();
-                    theme_height = texture.get_height ();
+                    theme_width = texture.width;
+                    theme_height = texture.height;
                 } catch (Error e) {
                     warning ("Could not load theme %s: %s", value, e.message);
                     return;
@@ -107,13 +107,13 @@ public class GameView : Gtk.DrawingArea
 
         /* Resize the rsvg theme lazily after 300ms of the last resize event */
         if (theme_timer_id != 0) {
-            GLib.Source.remove(theme_timer_id);
+            Source.remove (theme_timer_id);
             theme_timer_id = 0;
         }
 
         if (theme_handle != null) {
             theme_resize_timer = 2;
-            theme_timer_id = GLib.Timeout.add(100, () => {
+            theme_timer_id = Timeout.add (100, () => {
                 if (theme_resize_timer == 0) {
                     resize_theme ();
                     theme_timer_id = 0;

@@ -66,17 +66,17 @@ public class ScoreDialog : Adw.Dialog
 
         if (history.entries.length() > 0)
         {
-            content_stack.set_visible_child_name ("scores");
-            layout_button.set_visible (true);
-            toolbar_view.set_reveal_bottom_bars (true);
+            content_stack.visible_child_name = "scores";
+            layout_button.visible = true;
+            toolbar_view.reveal_bottom_bars = true;
         }
 
         if (selected_entry != null)
         {
             set_can_close (false);
-            header_bar.set_show_start_title_buttons (false);
-            header_bar.set_show_end_title_buttons (false);
-            bottom_stack.set_visible_child_name ("new-game");
+            header_bar.show_start_title_buttons = false;
+            header_bar.show_end_title_buttons = false;
+            bottom_stack.visible_child_name = "new-game";
 
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
@@ -94,7 +94,7 @@ public class ScoreDialog : Adw.Dialog
 
     public void set_map (string name)
     {
-        layout_button.set_label (get_map_display_name (name));
+        layout_button.label = get_map_display_name (name);
         score_model.remove_all ();
 
         var entries = history.entries.copy ();
@@ -116,7 +116,7 @@ public class ScoreDialog : Adw.Dialog
         insert_action_group ("scores", action_group);
 
         var menu = new Menu ();
-        layout_button.set_menu_model (menu);
+        layout_button.menu_model = menu;
 
         string[] entries = {};
         foreach (var entry in history.entries)
@@ -207,9 +207,10 @@ public class ScoreDialog : Adw.Dialog
         var stack = new Gtk.Stack ();
         stack.add_named (new Gtk.Inscription (null), "label");
 
-        var entry = new Gtk.Entry ();
-        entry.has_frame = false;
-        entry.max_width_chars = 5;
+        var entry = new Gtk.Entry () {
+            has_frame = false,
+            max_width_chars = 5
+        };
         entry.notify["text"].connect (() => {
             var history_entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
             if (entry.text.length <= 0)
@@ -234,8 +235,9 @@ public class ScoreDialog : Adw.Dialog
 
     private void item_date_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
     {
-        var label = new Gtk.Label (null);
-        label.xalign = 0;
+        var label = new Gtk.Label (null) {
+            xalign = 0
+        };
         label.add_css_class ("numeric");
         ((Gtk.ListItem) list_item).child = label;
     }
@@ -247,7 +249,7 @@ public class ScoreDialog : Adw.Dialog
 
         if (entry == selected_entry)
         {
-            stack.set_visible_child_name ("entry");
+            stack.visible_child_name = "entry";
             var text_entry = (Gtk.Entry) stack.visible_child;
             text_entry.text = entry.player;
             text_entry.add_css_class ("heading");
@@ -255,7 +257,7 @@ public class ScoreDialog : Adw.Dialog
         }
         else
         {
-            stack.set_visible_child_name ("label");
+            stack.visible_child_name = "label";
             ((Gtk.Inscription) stack.visible_child).text = entry.player;
         }
     }
@@ -307,10 +309,11 @@ public class ScoreDialog : Adw.Dialog
         var dialog = new Adw.AlertDialog (
             _("Clear All Scores?"),
             _("This will clear every score for every layout.")
-        );
+        ) {
+            default_response = "cancel"
+        };
         dialog.add_response ("cancel", _("_Cancel"));
         dialog.add_response ("clear", _("Clear All"));
-        dialog.set_default_response ("cancel");
         dialog.set_response_appearance ("clear", Adw.ResponseAppearance.DESTRUCTIVE);
 
         var resp_id = yield dialog.choose (this, null);
@@ -319,10 +322,10 @@ public class ScoreDialog : Adw.Dialog
         case "cancel":
             break;
         case "clear":
-            toolbar_view.set_reveal_bottom_bars (false);
-            content_stack.set_visible_child_name ("no-scores");
-            layout_button.set_visible (false);
-            layout_button.set_menu_model (null);
+            toolbar_view.reveal_bottom_bars = false;
+            content_stack.visible_child_name = "no-scores";
+            layout_button.visible = false;
+            layout_button.menu_model = null;
             score_model.remove_all ();
 
             selected_entry = null;
