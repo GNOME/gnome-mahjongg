@@ -209,7 +209,7 @@ public class ScoreDialog : Adw.Dialog
 
         var entry = new Gtk.Entry ();
         entry.has_frame = false;
-        entry.max_width_chars = 8;
+        entry.max_width_chars = 5;
         entry.notify["text"].connect (() => {
             var history_entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
             if (entry.text.length <= 0)
