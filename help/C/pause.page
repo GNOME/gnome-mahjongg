@@ -31,8 +31,7 @@
 
   <list>
     <item>
-      <p>The <media its:translate="no" mime="image/svg+xml" type="image" src="figures/keyboard-key-pause.svg">
-      pause key symbol</media> button in the header bar.</p>
+      <p>The <gui style="button">⏸︎</gui> button in the header bar.</p>
     </item>
     <item>
       <p>The <key>Pause</key> key on your keyboard. Not all keyboards have

@@ -34,7 +34,7 @@
   already selected one tile, it will show a match for that piece if one
   exists.</p>
 
-  <p><gui>Hint</gui> can be accessed by pressing the <gui style="button">�</gui>
+  <p><gui>Hint</gui> can be accessed by pressing the <gui style="button">💡</gui>
   button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</key></keyseq>.</p>
 
   <note>
