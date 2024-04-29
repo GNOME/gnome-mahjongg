@@ -123,7 +123,6 @@ public class Mahjongg : Adw.Application
 
         new_game ();
         game_view.grab_focus ();
-        tick_cb ();
     }
 
     private void update_ui ()
@@ -463,6 +462,7 @@ public class Mahjongg : Adw.Application
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
 
+        tick_cb ();
         update_ui ();
 
         if (score_dialog != null)
