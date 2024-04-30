@@ -1,13 +1,23 @@
-window.main {
+/* Theme backgrounds */
+window.postmodern {
     background: #e8e9f2;
 }
 
+window.smooth {
+    background: #efedd9;
+}
+
+window.educational {
+    background: #f7eded;
+}
+
+/* Scores */
 columnview {
     background: transparent;
 }
 
 columnview header button,
-listview row cell {
+columnview row cell {
     padding-left: 12px;
     padding-right: 12px;
 }

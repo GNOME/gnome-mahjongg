@@ -154,7 +154,13 @@ public class Mahjongg : Adw.Application
     {
         if (key == "tileset")
         {
+            string previous_theme_name = null;
+
+            if (game_view.theme != null)
+                previous_theme_name = Path.get_basename (game_view.theme).split (".", -1)[0];
+
             var theme = settings.get_string ("tileset");
+            var theme_name = theme.split (".", -1)[0];
             game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
 
             if (game_view.theme == null)
@@ -163,6 +169,11 @@ public class Mahjongg : Adw.Application
                 var default_theme = settings.get_default_value ("tileset").get_string ();
                 game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", default_theme);
             }
+
+            if (previous_theme_name != null)
+                window.remove_css_class (previous_theme_name);
+
+            window.add_css_class (theme_name);
         }
         else if (key == "mapset")
         {

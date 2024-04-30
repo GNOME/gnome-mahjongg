@@ -1,3 +1,12 @@
-window.main {
+/* Theme backgrounds */
+window.postmodern {
     background: #22243b;
+}
+
+window.smooth {
+    background: #2f2c14;
+}
+
+window.educational {
+    background: #3f1c1c;
 }

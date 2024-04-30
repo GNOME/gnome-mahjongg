@@ -52,8 +52,5 @@
         </child>
       </object>
     </child>
-    <style>
-      <class name="main"/>
-    </style>
   </template>
 </interface>
