@@ -42,6 +42,7 @@ public class GameView : Gtk.DrawingArea
             _game.redraw_tile.connect (redraw_tile_cb);
             _game.paused_changed.connect (paused_changed_cb);
             update_dimensions ();
+            resize_theme ();
             queue_draw ();
         }
     }
@@ -85,10 +86,7 @@ public class GameView : Gtk.DrawingArea
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
             }
 
-            if (theme_handle != null) {
-                resize_theme ();
-            }
-
+            resize_theme ();
             queue_draw ();
             _theme = value;
         }
@@ -102,7 +100,8 @@ public class GameView : Gtk.DrawingArea
         set_draw_func (draw_func);
     }
 
-    public override void size_allocate (int width, int height, int baseline) {
+    public override void size_allocate (int width, int height, int baseline)
+    {
         update_dimensions ();
 
         /* Resize the rsvg theme lazily after 300ms of the last resize event */
@@ -126,7 +125,8 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private void resize_theme () {
+    private void resize_theme ()
+    {
         if (theme_handle == null)
             return;
 
