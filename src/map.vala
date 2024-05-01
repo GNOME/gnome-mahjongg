@@ -210,7 +210,7 @@ public class Map : Object
         slots.append (new Slot (28, 7, 0));
     }
 
-    public uint width
+    public int width
     {
         get
         {
@@ -226,7 +226,7 @@ public class Map : Object
         }
     }
 
-    public uint height
+    public int height
     {
         get
         {

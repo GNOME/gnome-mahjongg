@@ -184,8 +184,8 @@ public class GameView : Gtk.DrawingArea
                 var tile_number = game.paused ? -1 : tile.number;
 
                 /* Select image for this tile, or blank image if paused */
-                double texture_x = (double)get_image_offset (tile_number) * tile_pattern_width;
-                double texture_y = 0;
+                int texture_x = get_image_offset (tile_number) * tile_pattern_width;
+                int texture_y = 0;
 
                 if (!game.paused) {
                     if ((tile == game.selected_tile) ||
@@ -215,24 +215,24 @@ public class GameView : Gtk.DrawingArea
         var height = get_height ();
 
         /* Need enough space for the whole map and one unit border */
-        var map_width = game.map.width + 2.0;
-        var map_height = (game.map.height + 2.0) * theme_aspect;
+        var map_width = game.map.width + 2;
+        var map_height = (int) ((game.map.height + 2) * theme_aspect);
 
         /* Scale the map to fit */
-        var unit_width = double.min (width / map_width, height / map_height);
-        var unit_height = unit_width * theme_aspect;
+        var unit_width = int.min (width / map_width, height / map_height);
+        var unit_height = (int) (unit_width * theme_aspect);
 
         /* The size of one tile is two units wide, and the correct aspect ratio */
-        tile_width = (int) (unit_width * 2);
-        tile_height = (int) (unit_height * 2);
+        tile_width = unit_width * 2;
+        tile_height = unit_height * 2;
 
         /* Offset the tiles when on a higher layer (themes must use these hard-coded ratios) */
         tile_layer_offset_x = tile_width / 7;
         tile_layer_offset_y = tile_height / 10;
 
         /* Center the map */
-        x_offset = (int) (width - game.map.width * unit_width) / 2;
-        y_offset = (int) (height - game.map.height * unit_height) / 2;
+        x_offset = (width - game.map.width * unit_width) / 2;
+        y_offset = (height - game.map.height * unit_height) / 2;
     }
 
     private void get_tile_position (Tile tile, out int x, out int y)
