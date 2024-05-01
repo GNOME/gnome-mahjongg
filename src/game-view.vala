@@ -294,7 +294,7 @@ public class GameView : Gtk.DrawingArea
             return;
 
         /* Get the tile under the square */
-        var tile = find_tile (event_x, event_y);
+        var tile = find_tile ((int) event_x, (int) event_y);
 
         /* If not a valid tile then ignore the event */
         if (tile == null || !game.tile_can_move (tile))
@@ -325,7 +325,7 @@ public class GameView : Gtk.DrawingArea
         queue_draw();
     }
 
-    private Tile? find_tile (double x, double y)
+    private Tile? find_tile (int x, int y)
     {
         /* Render a 1x1 image where the cursor is using a different color for each tile */
         var surface = new Cairo.ImageSurface (Cairo.Format.RGB24, 1, 1);
