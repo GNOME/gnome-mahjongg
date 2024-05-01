@@ -10,219 +10,264 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
-"issues/\n"
-"POT-Creation-Date: 2024-04-19 03:09+0000\n"
-"PO-Revision-Date: 2024-04-27 18:58+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
+"POT-Creation-Date: 2024-04-30 21:19+0000\n"
+"PO-Revision-Date: 2024-05-01 11:15+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
-"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups."
-"com>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:540
+#: data/org.gnome.Mahjongg.appdata.xml.in.in:7
+#: data/org.gnome.Mahjongg.desktop.in.in:3 src/gnome-mahjongg.vala:556
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:8
+#: data/org.gnome.Mahjongg.appdata.xml.in.in:8
+#: data/org.gnome.Mahjongg.desktop.in.in:4
 msgid "Match tiles and clear the board"
 msgstr "Poišči pare ploščic in počisti igralno ploščo."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:10
+#: data/org.gnome.Mahjongg.appdata.xml.in.in:10
 msgid ""
-"A solitaire version of the classic Eastern tile game. Tiles are stacked on "
-"the board at the start of the game. The goal is to remove all the tiles in "
-"as little time as possible. Select two matching tiles and they will "
-"disappear from the board, but you can only select a tile if there is an "
+"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
+"are stacked on the board at the start of the game. The goal is to remove all "
+"the tiles in as little time as possible. Select two matching tiles and they "
+"will disappear from the board, but you can only select a tile if there is an "
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
-"Igra Mahjongg je znana vzhodnjaška igra. Ploščice so na začetku igre "
-"postavljene na plošči. Cilj igre je čim hitreje poiskati in počistiti pare. "
-"Z izborom dveh enakih ploščic se ti izbrišeta, izbrati pa jih je mogoče le, "
-"če sta obe na isti globinski ravni in na levi ali na desni nista v stiku z "
-"drugo ploščico. Opozorilo: nekatere ploščice so si sila podobne ..."
+"To je znana igra ujemanja ploščic za enega samega igralca, znana tudi ko "
+"Mahjongg solitaire. Ploščice so na začetku igre postavljene na plošči. Cilj "
+"igre je čim hitreje poiskati in počistiti pare. Z izborom dveh enakih "
+"ploščic se ti izbrišeta, izbrati pa jih je mogoče le, če sta obe na isti "
+"globinski ravni in na levi ali na desni nista v stiku z drugo ploščico. "
+"Opozorilo: nekatere ploščice so si sila podobne ..."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:18
+#: data/org.gnome.Mahjongg.appdata.xml.in.in:19
 msgid ""
-"Mahjongg features a variety of starting layouts, some easy and some "
+"You can choose from a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
-"Igra Mahjongg GNOME omogoča izbor različnih začetnih postavitev ploščic. "
-"Nekatere postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz "
-"namigov, ki pa se kaznujejo s časovnim pribitkom."
+"Izberete lahko med različnimi začetnimi postavitvami ploščic. Nekatere "
+"postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
+"ki pa se kaznujejo s časovnim pribitkom."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:43 src/gnome-mahjongg.vala:364
+#: data/org.gnome.Mahjongg.appdata.xml.in.in:48 src/gnome-mahjongg.vala:382
 msgid "The Mahjongg Team"
 msgstr "Ekipa Mahjongg"
 
-#: data/org.gnome.Mahjongg.desktop.in:4
-msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "Razstavi skladovnico ploščic z odstranjevanjem parov"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:6
 msgid "game;strategy;puzzle;board;"
 msgstr "igra;strateška;sestavljanka;tabla;plošča;kitajska;mahjong;"
 
-#: data/org.gnome.Mahjongg.gschema.xml:20
+#: data/org.gnome.Mahjongg.gschema.xml.in:20
 msgid "Width of the window in pixels"
 msgstr "Širina okna v točkah"
 
-#: data/org.gnome.Mahjongg.gschema.xml:24
+#: data/org.gnome.Mahjongg.gschema.xml.in:24
 msgid "Height of the window in pixels"
 msgstr "Višina okna v točkah"
 
-#: data/org.gnome.Mahjongg.gschema.xml:28
+#: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "true if the window is maximized"
 msgstr "PRAV, če je okno razpeto"
 
-#.
-#. * Translatable strings file generated by get_titles.pl.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_game_names.h:6
-msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "Običajna"
-
-#: data/translatable_game_names.h:7
-msgctxt "mahjongg map name"
-msgid "The Ziggurat"
-msgstr "Ziggurat"
-
-#: data/translatable_game_names.h:8
-msgctxt "mahjongg map name"
-msgid "Four Bridges"
-msgstr "Štirje mostovi"
-
-#: data/translatable_game_names.h:9
-msgctxt "mahjongg map name"
-msgid "Cloud"
-msgstr "Oblak"
-
-#: data/translatable_game_names.h:10
-msgctxt "mahjongg map name"
-msgid "Tic-Tac-Toe"
-msgstr "Križci in krožci"
-
-#: data/translatable_game_names.h:11
-msgctxt "mahjongg map name"
-msgid "Red Dragon"
-msgstr "Rdeči zmaj"
-
-#: data/translatable_game_names.h:12
-msgctxt "mahjongg map name"
-msgid "Overpass"
-msgstr "Prehod"
-
-#: data/translatable_game_names.h:13
-msgctxt "mahjongg map name"
-msgid "Pyramid's Walls"
-msgstr "Piramide"
-
-#: data/translatable_game_names.h:14
-msgctxt "mahjongg map name"
-msgid "Confounding Cross"
-msgstr "Poševni križ"
-
-#: data/translatable_game_names.h:15
-msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "Zahtevna uganka"
-
-#. Translators: title of a section in the Keyboard Shortcuts window; contains "Start a new game", "Pause the game", "Undo"...
-#: data/help-overlay.ui:12
+#: data/ui/help-overlay.ui:8
 msgctxt "shortcut window"
-msgid "Main functions"
-msgstr "Osnovne možnosti"
+msgid "Playing"
+msgstr "Igranje"
 
-#. Translators: Ctrl-N shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; discard current game and start a new one
-#: data/help-overlay.ui:19
+#: data/ui/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "Start a new game"
-msgstr "Začne novo igro"
+msgid "New Game"
+msgstr "Nova igra"
 
-#. Translators: Ctrl-P (or Pause) shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; pause the current game
-#: data/help-overlay.ui:27
+#: data/ui/help-overlay.ui:18
 msgctxt "shortcut window"
-msgid "Pause the game"
-msgstr "Naredi premor igranja"
+msgid "Pause Game"
+msgstr "Premor v igri"
 
-#. Translators: Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; undo last move (if any) in the current game
-#: data/help-overlay.ui:35
+#: data/ui/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Razveljavi potezo"
 
-#. Translators: Shift-Ctrl-Z shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; redo last undone move (if any) in the current game
-#: data/help-overlay.ui:43
+#: data/ui/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "Ponovno uveljavi potezo"
 
-#. Translators: Ctrl-H shortcut description in the Keyboard Shortcuts dialog, section "Main functions"; highlight two matching tiles
-#: data/help-overlay.ui:51
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
-msgid "Show a hint"
-msgstr "Pokaže namig"
+msgid "Show Hint"
+msgstr "Pokaži namig"
 
-#. Translators: title of a section in the Keyboard Shortcuts window; contains "Show Keyboard Shortcuts", "Show Help", "Quit"...
-#: data/help-overlay.ui:59
+#: data/ui/help-overlay.ui:43
 msgctxt "shortcut window"
-msgid "Generic"
-msgstr "Izvorno"
+msgid "General"
+msgstr "Splošno"
 
-#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section Generic; show the main ("hamburger") menu
-#: data/help-overlay.ui:66
+#: data/ui/help-overlay.ui:47
 msgctxt "shortcut window"
-msgid "Toggle main menu"
-msgstr "Preklopi glavni meni"
+msgid "Show Main Menu"
+msgstr "Pokaži glavni meni"
 
-#. Translators: Alt-? shortcut description in the Keyboard Shortcuts dialog, section "Generic"; show a window describing keyboard shortcuts
-#: data/help-overlay.ui:74
+#: data/ui/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Pokaže tipkovne bližnjice"
 
-#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic"; open the application help
-#: data/help-overlay.ui:82
+#: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Pokaže pomoč"
 
-#. Translators: action of an unimplemented shortcut that would appear in the Keyboard Shortcuts dialog, section "Generic"; makes the window (un)fullscreen
-#: data/help-overlay.ui:90
-msgctxt "shortcut window"
-msgid "Fullscreen"
-msgstr "Omogoči celozaslonski način"
-
-#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic"; close the window and quit application
-#: data/help-overlay.ui:98
+#: data/ui/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Konča program"
 
-#: data/ui/preferences.ui:11
-msgid "Layout"
-msgstr "Postavitev"
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:230
+msgid "_New Game"
+msgstr "_Nova igra"
 
-#: data/ui/preferences.ui:16
-msgid "Theme"
-msgstr "Tema"
+#: data/ui/menu.ui:10
+msgid "_Restart Game"
+msgstr "Za_čni igro znova"
 
-#: data/ui/preferences.ui:21
-msgid "Background"
-msgstr "Ozadje"
+#: data/ui/menu.ui:14
+msgid "_Scores"
+msgstr "_Rezultati"
+
+#: data/ui/menu.ui:20
+msgid "_Layout"
+msgstr "_Postavitev"
+
+#: data/ui/menu.ui:23
+msgctxt "mahjongg map name"
+msgid "Easy"
+msgstr "Običajna"
+
+#: data/ui/menu.ui:26
+msgctxt "mahjongg map name"
+msgid "The Ziggurat"
+msgstr "Ziggurat"
+
+#: data/ui/menu.ui:29
+msgctxt "mahjongg map name"
+msgid "Four Bridges"
+msgstr "Štirje mostovi"
+
+#: data/ui/menu.ui:32
+msgctxt "mahjongg map name"
+msgid "Cloud"
+msgstr "Oblak"
+
+#: data/ui/menu.ui:35
+msgctxt "mahjongg map name"
+msgid "Tic-Tac-Toe"
+msgstr "Križci in krožci"
+
+#: data/ui/menu.ui:38
+msgctxt "mahjongg map name"
+msgid "Red Dragon"
+msgstr "Rdeči zmaj"
+
+#: data/ui/menu.ui:41
+msgctxt "mahjongg map name"
+msgid "Overpass"
+msgstr "Prehod"
+
+#: data/ui/menu.ui:44
+msgctxt "mahjongg map name"
+msgid "Pyramid's Walls"
+msgstr "Piramide"
+
+#: data/ui/menu.ui:47
+msgctxt "mahjongg map name"
+msgid "Confounding Cross"
+msgstr "Poševni križ"
+
+#: data/ui/menu.ui:50
+msgctxt "mahjongg map name"
+msgid "Difficult"
+msgstr "Zahtevna uganka"
+
+#: data/ui/menu.ui:55
+msgid "_Background"
+msgstr "_Ozadje"
+
+#: data/ui/menu.ui:58
+msgid "Follow System"
+msgstr "Sledi sistemu"
+
+#: data/ui/menu.ui:63
+msgid "Light"
+msgstr "Svetlo"
+
+#: data/ui/menu.ui:68
+msgid "Dark"
+msgstr "Temno"
+
+#: data/ui/menu.ui:75
+msgid "_Theme"
+msgstr "_Tema"
+
+#: data/ui/menu.ui:78
+msgctxt "mahjongg theme name"
+msgid "Postmodern"
+msgstr "Postmoderna"
+
+#: data/ui/menu.ui:81
+msgctxt "mahjongg theme name"
+msgid "Smooth"
+msgstr "Umirjena"
+
+#: data/ui/menu.ui:84
+msgctxt "mahjongg theme name"
+msgid "Educational"
+msgstr "Izobraževalna"
+
+#: data/ui/menu.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "_Tipkovne bližnjice‫"
+
+#: data/ui/menu.ui:95
+msgid "_Help"
+msgstr "Po_moč"
+
+#: data/ui/menu.ui:99
+msgid "_About Mahjongg"
+msgstr "_O programu Mahjongg"
+
+#: data/ui/score-dialog.ui:26
+msgid "No Scores"
+msgstr "Brez rezultatov"
+
+#: data/ui/score-dialog.ui:27
+msgid "Finish a game to see scores"
+msgstr "Končajte igro in si oglejte rezultate"
+
+#: data/ui/score-dialog.ui:44
+msgid "Player"
+msgstr "Igralec"
+
+#: data/ui/score-dialog.ui:50
+msgid "Time"
+msgstr "Čas"
+
+#: data/ui/score-dialog.ui:56
+msgid "Date"
+msgstr "Datum"
 
 #: data/ui/window.ui:21
 msgid "Undo"
@@ -232,98 +277,50 @@ msgstr "Razveljavi"
 msgid "Redo"
 msgstr "Ponovi"
 
-#: data/ui/window.ui:36
+#: data/ui/window.ui:35
 msgid "Main Menu"
 msgstr "Glavni meni"
 
-#: data/ui/window.ui:49
+#: data/ui/window.ui:48
 msgid "Show Hint"
 msgstr "Pokaži namig"
 
-#: data/ui/window.ui:63
-msgid "New Game"
-msgstr "Nova igra"
-
-#: data/ui/window.ui:67
-msgid "Restart Game"
-msgstr "Začni igro znova"
-
-#: data/ui/window.ui:71
-msgid "Scores"
-msgstr "Rezultati"
-
-#: data/ui/window.ui:77
-msgid "Preferences"
-msgstr "Možnosti"
-
-#: data/ui/window.ui:81
-msgid "Keyboard Shortcuts"
-msgstr "Tipkovne bližnjice‫"
-
-#: data/ui/window.ui:85
-msgid "Help"
-msgstr "Pomoč"
-
-#: data/ui/window.ui:89
-msgid "About Mahjongg"
-msgstr "O igri"
-
-#: src/gnome-mahjongg.vala:27
+#: src/gnome-mahjongg.vala:26
 msgid "Print release version and exit"
 msgstr "Izpiši različico programa in končaj"
 
-#: src/gnome-mahjongg.vala:159
-msgid "Restart Game with New Map?"
-msgstr "Ali želite znova zagnati igro z novim zemljevidom?"
-
-#: src/gnome-mahjongg.vala:160
-msgid "If you continue playing, the next game will use the new map."
-msgstr "Če boste nadaljevali z igro, bo v novi igri uporabljen nov zemljevid."
-
-#: src/gnome-mahjongg.vala:162
-msgid "_Continue Playing"
-msgstr "_Nadaljuj igro"
-
-#: src/gnome-mahjongg.vala:163
-msgid "_Restart Game"
-msgstr "Za_čni igro znova"
-
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:218
 msgid "No Moves Left"
 msgstr "Ni preostalih premikov"
 
-#: src/gnome-mahjongg.vala:211
+#: src/gnome-mahjongg.vala:219
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr ""
-"Poteze lahko razveljavite in poskusite najti rešitev ali premešati "
-"preostale ploščice."
+"Poteze lahko razveljavite in poskusite najti rešitev ali premešati preostale "
+"ploščice."
 
-#: src/gnome-mahjongg.vala:212
+#: src/gnome-mahjongg.vala:220
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
-"Razveljavite lahko svoje premike in poiščete ustrezno rešitev ali pa "
-"začnete z novo igro."
+"Razveljavite lahko svoje premike in poiščete ustrezno rešitev ali pa začnete "
+"z novo igro."
 
-#: src/gnome-mahjongg.vala:214
+#: src/gnome-mahjongg.vala:222
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
-#: src/gnome-mahjongg.vala:218
+#: src/gnome-mahjongg.vala:226
 msgid "_Reshuffle"
 msgstr "_Premešaj"
 
-#: src/gnome-mahjongg.vala:222
-msgid "_New Game"
-msgstr "_Nova igra"
-
-#: src/gnome-mahjongg.vala:224
+#: src/gnome-mahjongg.vala:232
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: src/gnome-mahjongg.vala:371
+#: src/gnome-mahjongg.vala:389
 msgid "translator-credits"
 msgstr ""
 "Matej Urbančič <mateju@src.gnome.org>\n"
@@ -331,27 +328,35 @@ msgstr ""
 "Matej Erman\n"
 "Tadej Janež"
 
-#: src/score-dialog.vala:49
-msgid "Date"
-msgstr "Datum"
+#: src/score-dialog.vala:310
+msgid "Clear All Scores?"
+msgstr "Ali želite počistiti vse rezultate?"
 
-#: src/score-dialog.vala:52
-msgid "Time"
-msgstr "Čas"
+#: src/score-dialog.vala:311
+msgid "This will clear every score for every layout."
+msgstr "S tem počistite vsak rezultat za vsako postavitev."
 
-#: src/window.vala:26
+#: src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "Pre_kliči"
+
+#: src/score-dialog.vala:316
+msgid "Clear All"
+msgstr "Počisti vse"
+
+#: src/window.vala:59
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Število preostalih premikov: %2u"
 
-#: src/window.vala:31
+#: src/window.vala:64
 msgid "Paused"
 msgstr "Premor"
 
-#: src/window.vala:33
+#: src/window.vala:66
 msgid "Resume Game"
 msgstr "Nadaljuj igro"
 
-#: src/window.vala:39
+#: src/window.vala:72
 msgid "Pause Game"
 msgstr "Premor v igri"
