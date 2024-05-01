@@ -339,7 +339,7 @@ public class Game : Object
             var s = t.slot;
 
             /* Can't move if blocked by a tile above */
-            if (s.layer == slot.layer + 1 &&
+            if (s.layer > slot.layer &&
                 (s.x >= slot.x - 1 && s.x <= slot.x + 1) &&
                 (s.y >= slot.y - 1 && s.y <= slot.y + 1))
                 return false;
