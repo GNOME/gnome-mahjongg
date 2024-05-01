@@ -191,24 +191,27 @@
   </map>
   <map name="Overpass" scorename="overpass">
     <layer z="0">
-      <row y="0" left="3" right="8"/>
-      <row y="1" left="3" right="8"/>
+      <row y="0" left="4" right="7"/>
+      <row y="1" left="4" right="7"/>
       <row y="2" left="0" right="1"/>
-      <row y="2" left="3" right="8"/>
+      <row y="2" left="4" right="7"/>
       <row y="2" left="10" right="11"/>
       <tile x="0" y="3"/>
+      <row y="3" left="4" right="7"/>
       <tile x="11" y="3"/>
       <tile x="0" y="4"/>
+      <row y="4" left="4" right="7"/>
       <tile x="11" y="4"/>
       <tile x="0" y="5"/>
+      <row y="5" left="4" right="7"/>
       <tile x="11" y="5"/>
       <tile x="0" y="6"/>
-      <row y="6" left="3" right="8"/>
+      <row y="6" left="4" right="7"/>
       <tile x="11" y="6"/>
       <row y="7" left="0" right="1"/>
-      <row y="7" left="3" right="8"/>
+      <row y="7" left="4" right="7"/>
       <row y="7" left="10" right="11"/>
-      <row y="8" left="3" right="8"/>
+      <row y="8" left="4" right="7"/>
     </layer>
     <layer z="1">
       <tile x="0" y="2"/>
