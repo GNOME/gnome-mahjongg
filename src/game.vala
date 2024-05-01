@@ -10,7 +10,7 @@
 
 public class Tile : Object
 {
-    public int number;
+    public int number = -1;
     public Slot slot;
     public bool visible = true;
     public int move_number;
@@ -165,7 +165,6 @@ public class Game : Object
         foreach (var slot in map.slots)
         {
             var tile = new Tile (slot);
-            tile.number = 0;
             tiles.insert_sorted (tile, compare_tiles);
         }
 
@@ -253,9 +252,9 @@ public class Game : Object
                 return true;
 
             /* Undo this move */
-            match.tile0.number = 0;
+            match.tile0.number = -1;
             match.tile0.visible = true;
-            match.tile1.number = 0;
+            match.tile1.number = -1;
             match.tile1.visible = true;
         }
 
@@ -373,9 +372,6 @@ public class Game : Object
     {
         List<Match> matches = null;
 
-        if (tile != null && !tile_can_move (tile))
-            return matches;
-
         if (tile == null)
         {
             foreach (var t in tiles)
@@ -397,15 +393,24 @@ public class Game : Object
                 }
             }
         }
-        else
+        else if (tile_can_move (tile))
         {
+            bool found_match = false;
             foreach (var t in tiles)
             {
-                if (t == tile || !tile_can_move (t))
+                if (t == tile)
                     continue;
 
-                if (t.matches (tile))
-                    matches.append (new Match (t, tile));
+                /* Only need a single match for uninitialized tiles */
+                if (t.number == -1 && found_match)
+                    continue;
+
+                /* Checking match before checking if the tile can move is faster */
+                if (!t.matches (tile) || !tile_can_move (t))
+                    continue;
+
+                matches.append (new Match (t, tile));
+                found_match = true;
             }
         }
 

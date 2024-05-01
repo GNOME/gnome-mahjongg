@@ -131,7 +131,6 @@ public class Mahjongg : Adw.Application
         var hint_action = lookup_action ("hint") as SimpleAction;
         var undo_action = lookup_action ("undo") as SimpleAction;
         var redo_action = lookup_action ("redo") as SimpleAction;
-        var moves_left = game_view.game.moves_left;
 
         pause_action.set_enabled (game_view.game.started);
 
@@ -143,6 +142,8 @@ public class Mahjongg : Adw.Application
         }
         else
         {
+            var moves_left = game_view.game.moves_left;
+
             hint_action.set_enabled (moves_left > 0);
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
