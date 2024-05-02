@@ -327,21 +327,22 @@ public class GameView : Gtk.DrawingArea
 
     private Tile? find_tile (int x, int y)
     {
-        /* Render a 1x1 image where the cursor is using a different color for each tile */
-        var surface = new Cairo.ImageSurface (Cairo.Format.RGB24, 1, 1);
-        var cr = new Cairo.Context (surface);
-        cr.set_source_rgba (255, 255, 255, 255);
-        cr.paint ();
-        cr.translate (-x, -y);
-        draw_game (cr, true);
+        Tile topmost_tile = null;
+        var previous_layer = -1;
 
-        /* The color value is the tile under the cursor */
-        unowned uchar[] data = surface.get_data ();
-        var number = data[0];
         foreach (var tile in game.tiles)
-            if (tile.number == number)
-                return tile;
+        {
+            if (!tile.visible)
+                continue;
 
-        return null;
+            int tile_x, tile_y;
+            get_tile_position (tile, out tile_x, out tile_y);
+
+            if (tile.slot.layer > previous_layer
+                    && tile_x <= x <= (tile_x + tile_width + tile_layer_offset_x)
+                    && tile_y <= y <= (tile_y + tile_height + tile_layer_offset_y))
+                topmost_tile = tile;
+        }
+        return topmost_tile;
     }
 }
