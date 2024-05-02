@@ -157,7 +157,7 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private void draw_game (Cairo.Context cr, bool render_indexes = false)
+    private void draw_game (Cairo.Context cr)
     {
         if (theme == null)
             return;
@@ -174,33 +174,29 @@ public class GameView : Gtk.DrawingArea
             int x, y;
             get_tile_position (tile, out x, out y);
 
-            if (render_indexes)
-                cr.set_source_rgb (tile.number / 255.0, tile.number / 255.0, tile.number / 255.0);
-            else
-            {
-                double width_scale = (double)theme_width / ((double)tile_pattern_width * 43.0);
-                double height_scale = (double)theme_height / ((double)tile_pattern_height * 2);
+            double width_scale = (double)theme_width / ((double)tile_pattern_width * 43.0);
+            double height_scale = (double)theme_height / ((double)tile_pattern_height * 2);
 
-                var tile_number = game.paused ? -1 : tile.number;
+            var tile_number = game.paused ? -1 : tile.number;
 
-                /* Select image for this tile, or blank image if paused */
-                int texture_x = get_image_offset (tile_number) * tile_pattern_width;
-                int texture_y = 0;
+            /* Select image for this tile, or blank image if paused */
+            int texture_x = get_image_offset (tile_number) * tile_pattern_width;
+            int texture_y = 0;
 
-                if (!game.paused) {
-                    if ((tile == game.selected_tile) ||
-                        (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1])))
-                        texture_y = tile_pattern_height;
-                }
-
-                var matrix = Cairo.Matrix.identity ();
-
-                matrix.scale(width_scale, height_scale);
-                matrix.translate (texture_x - x, texture_y - y);
-
-                tile_pattern.set_matrix (matrix);
-                cr.set_source (tile_pattern);
+            if (!game.paused) {
+                if ((tile == game.selected_tile) ||
+                    (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1])))
+                    texture_y = tile_pattern_height;
             }
+
+            var matrix = Cairo.Matrix.identity ();
+
+            matrix.scale(width_scale, height_scale);
+            matrix.translate (texture_x - x, texture_y - y);
+
+            tile_pattern.set_matrix (matrix);
+            cr.set_source (tile_pattern);
+
             cr.rectangle (x, y, tile_pattern_width, tile_pattern_height);
             cr.fill ();
         }
