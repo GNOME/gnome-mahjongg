@@ -70,7 +70,8 @@ public class Mahjongg : Adw.Application {
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
         history.load ();
 
-        game_view = new GameView ();
+        var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
+        game_view = new GameView (using_cairo);
         view_click_controller = new Gtk.GestureClick ();
         view_click_controller.pressed.connect (on_click);
         game_view.add_controller (view_click_controller);
