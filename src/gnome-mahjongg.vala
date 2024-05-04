@@ -281,7 +281,11 @@ public class Mahjongg : Adw.Application
 
             if (s.has_suffix (".xpm") || s.has_suffix (".svg") || s.has_suffix (".gif") ||
                 s.has_suffix (".png") || s.has_suffix (".jpg") || s.has_suffix (".xbm"))
-                themes.append (s);
+                /* List default theme first */
+                if (s == settings.get_default_value ("tileset").get_string ())
+                    themes.insert (s, 0);
+                else
+                    themes.append (s);
         }
 
         return themes;
