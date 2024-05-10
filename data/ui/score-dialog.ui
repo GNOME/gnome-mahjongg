@@ -5,7 +5,6 @@
     <property name="content-height">420</property>
     <child>
       <object class="AdwToolbarView" id="toolbar_view">
-        <property name="bottom-bar-style">raised</property>
         <property name="reveal-bottom-bars">False</property>
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
