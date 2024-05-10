@@ -68,7 +68,7 @@
             <child>
               <object class="GtkStackPage">
                 <property name="child">
-                  <object class="GtkActionBar">
+                  <object class="GtkCenterBox">
                     <child type="center">
                       <object class="GtkButton" id="clear_scores_button">
                         <property name="label">Clear Scores…</property>
@@ -79,6 +79,9 @@
                         </style>
                       </object>
                     </child>
+                    <style>
+                      <class name="toolbar"/>
+                    </style>
                   </object>
                 </property>
               </object>
@@ -87,7 +90,7 @@
               <object class="GtkStackPage">
                 <property name="name">new-game</property>
                 <property name="child">
-                  <object class="GtkActionBar">
+                  <object class="GtkCenterBox">
                     <child type="center">
                       <object class="GtkButton" id="new_game_button">
                         <property name="label">_New Game</property>
@@ -110,6 +113,9 @@
                         <property name="valign">center</property>
                       </object>
                     </child>
+                    <style>
+                      <class name="toolbar"/>
+                    </style>
                   </object>
                 </property>
               </object>
