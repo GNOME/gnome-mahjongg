@@ -8,38 +8,31 @@
  * license.
  */
 
-public class Tile : Object
-{
+public class Tile : Object {
     public int number = -1;
     public Slot slot;
     public bool visible = true;
     public int move_number;
 
-    public new int set
-    {
+    public new int set {
         get { return number / 4; }
     }
 
-    public Tile (Slot slot)
-    {
+    public Tile (Slot slot) {
         this.slot = slot;
     }
 
-    public bool matches (Tile tile)
-    {
+    public bool matches (Tile tile) {
         return tile.set == set;
     }
 }
 
-private static int compare_tiles (Tile a, Tile b)
-{
+private static int compare_tiles (Tile a, Tile b) {
     return compare_slots (a.slot, b.slot);
 }
 
-private static bool switch_tiles (Tile a, Tile b)
-{
-    if (a.visible && b.visible)
-    {
+private static bool switch_tiles (Tile a, Tile b) {
+    if (a.visible && b.visible) {
         Slot h = a.slot;
         a.slot = b.slot;
         b.slot = h;
@@ -48,20 +41,17 @@ private static bool switch_tiles (Tile a, Tile b)
     return false;
 }
 
-public class Match : Object
-{
+public class Match : Object {
     public Tile tile0;
     public Tile tile1;
 
-    public Match (Tile tile0, Tile tile1)
-    {
+    public Match (Tile tile0, Tile tile1) {
         this.tile0 = tile0;
         this.tile1 = tile1;
     }
 }
 
-public class Game : Object
-{
+public class Game : Object {
     public Map map;
     public List<Tile> tiles = null;
     public Tile? hint_tiles[2];
@@ -82,15 +72,12 @@ public class Game : Object
     public signal void paused_changed ();
     public signal void tick ();
 
-    public bool started
-    {
+    public bool started {
         get { return clock != null; }
     }
 
-    public double elapsed
-    {
-        get
-        {
+    public double elapsed {
+        get {
             if (clock == null)
                 return 0.0;
             return clock_elapsed + clock.elapsed ();
@@ -98,13 +85,10 @@ public class Game : Object
     }
 
     private bool _paused = false;
-    public bool paused
-    {
-        set
-        {
+    public bool paused {
+        set {
             _paused = value;
-            if (clock != null)
-            {
+            if (clock != null) {
                 if (value)
                     stop_clock ();
                 else
@@ -116,11 +100,9 @@ public class Game : Object
     }
 
     private Tile? _selected_tile = null;
-    public Tile? selected_tile
-    {
+    public Tile? selected_tile {
         get { return _selected_tile; }
-        set
-        {
+        set {
             if (_selected_tile != null)
                 redraw_tile (_selected_tile);
             _selected_tile = value;
@@ -129,10 +111,8 @@ public class Game : Object
         }
     }
 
-    public int visible_tiles
-    {
-        get
-        {
+    public int visible_tiles {
+        get {
             var n = 0;
             foreach (var tile in tiles)
                 if (tile.visible)
@@ -141,29 +121,24 @@ public class Game : Object
         }
     }
 
-    public uint moves_left
-    {
+    public uint moves_left {
         get { return find_matches ().length (); }
     }
 
-    public bool complete
-    {
+    public bool complete {
         get { return visible_tiles == 0; }
     }
 
-    public bool can_move
-    {
+    public bool can_move {
         get { return moves_left != 0; }
     }
 
-    public Game (Map map)
-    {
+    public Game (Map map) {
         this.map = map;
         move_number = 1;
 
         /* Create the tiles in the locations required in the map */
-        foreach (var slot in map.slots)
-        {
+        foreach (var slot in map.slots) {
             var tile = new Tile (slot);
             tiles.insert_sorted (tile, compare_tiles);
         }
@@ -174,9 +149,8 @@ public class Game : Object
         var n_pairs = (int) tiles.length () / 2;
         var numbers = new int[n_pairs];
         for (var i = 0; i < n_pairs; i++)
-            numbers[i] = i*2;
-        for (var i = 0; i < n_pairs; i++)
-        {
+            numbers[i] = i * 2;
+        for (var i = 0; i < n_pairs; i++) {
             var n = Random.int_range (i, n_pairs);
             var t = numbers[i];
             numbers[i] = numbers[n];
@@ -188,15 +162,12 @@ public class Game : Object
         reset ();
     }
 
-    public void shuffle_remaining (bool redraw = true)
-    {
+    public void shuffle_remaining (bool redraw = true) {
         // Fisher Yates Shuffle
         var n = tiles.length ();
-        do
-        {
-            for (var i = n-1; i > 0; i--)
-            {
-                int j = Random.int_range (0, (int) i+1);
+        do {
+            for (var i = n - 1; i > 0; i--) {
+                int j = Random.int_range (0, (int) i + 1);
                 // switch internal positions
                 switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
             }
@@ -219,15 +190,13 @@ public class Game : Object
         tick ();
     }
 
-    public void redraw_all_tiles ()
-    {
+    public void redraw_all_tiles () {
         foreach (var tile in tiles)
             if (tile.visible)
                 redraw_tile (tile);
     }
 
-    private bool shuffle (int[] numbers, int depth = 0)
-    {
+    private bool shuffle (int[] numbers, int depth = 0) {
         /* All shuffled */
         if (depth == tiles.length () / 2)
             return true;
@@ -240,8 +209,7 @@ public class Game : Object
             return false;
 
         var n = Random.int_range (0, (int) n_matches);
-        for (var i = 0; i < n_matches; i++)
-        {
+        for (var i = 0; i < n_matches; i++) {
             var match = matches.nth_data ((n + i) % n_matches);
             match.tile0.number = numbers[depth];
             match.tile0.visible = false;
@@ -261,30 +229,26 @@ public class Game : Object
         return false;
     }
 
-    public void reset ()
-    {
+    public void reset () {
         reset_clock ();
         move_number = 1;
         selected_tile = null;
         set_hint (null, null);
-        foreach (var tile in tiles)
-        {
+        foreach (var tile in tiles) {
             tile.visible = true;
             tile.move_number = 0;
         }
         redraw_all_tiles ();
     }
 
-    public void set_hint (Tile? tile0, Tile? tile1)
-    {
+    public void set_hint (Tile? tile0, Tile? tile1) {
         if (hint_tiles[0] != null)
             redraw_tile (hint_tiles[0]);
         if (hint_tiles[1] != null)
             redraw_tile (hint_tiles[1]);
 
         /* Stop hints */
-        if (tile0 == null && tile1 == null)
-        {
+        if (tile0 == null && tile1 == null) {
             hint_blink_counter = 0;
             hint_timeout_cb ();
             return;
@@ -304,10 +268,8 @@ public class Game : Object
         tick ();
     }
 
-    private bool hint_timeout_cb ()
-    {
-        if (hint_blink_counter == 0)
-        {
+    private bool hint_timeout_cb () {
+        if (hint_blink_counter == 0) {
             if (hint_timout != 0)
                 Source.remove (hint_timout);
             hint_timout = 0;
@@ -323,16 +285,14 @@ public class Game : Object
         return true;
     }
 
-    public bool tile_can_move (Tile tile)
-    {
+    public bool tile_can_move (Tile tile) {
         if (!tile.visible)
             return false;
 
         var blocked_left = false;
         var blocked_right = false;
         var slot = tile.slot;
-        foreach (var t in tiles)
-        {
+        foreach (var t in tiles) {
             if (t == tile || !t.visible)
                 continue;
 
@@ -345,8 +305,7 @@ public class Game : Object
                 return false;
 
             /* Can't move if blocked both on the left and the right */
-            if (s.layer == slot.layer && (s.y >= slot.y - 1 && s.y <= slot.y + 1))
-            {
+            if (s.layer == slot.layer && (s.y >= slot.y - 1 && s.y <= slot.y + 1)) {
                 if (s.x == slot.x - 2)
                     blocked_left = true;
                 if (s.x == slot.x + 2)
@@ -359,8 +318,7 @@ public class Game : Object
         return true;
     }
 
-    public int number_of_movable_tiles ()
-    {
+    public int number_of_movable_tiles () {
         int count = 0;
         foreach (var tile in tiles)
             if (tile_can_move (tile))
@@ -368,21 +326,15 @@ public class Game : Object
         return count;
     }
 
-    public List<Match> find_matches (Tile? tile = null)
-    {
+    public List<Match> find_matches (Tile? tile = null) {
         List<Match> matches = null;
 
-        if (tile == null)
-        {
-            foreach (var t in tiles)
-            {
-                foreach (var match in find_matches (t))
-                {
+        if (tile == null) {
+            foreach (var t in tiles) {
+                foreach (var match in find_matches (t)) {
                     bool already_matched = false;
-                    foreach (var existing_match in matches)
-                    {
-                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0)
-                        {
+                    foreach (var existing_match in matches) {
+                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0) {
                             already_matched = true;
                             break;
                         }
@@ -393,11 +345,9 @@ public class Game : Object
                 }
             }
         }
-        else if (tile_can_move (tile))
-        {
+        else if (tile_can_move (tile)) {
             bool found_match = false;
-            foreach (var t in tiles)
-            {
+            foreach (var t in tiles) {
                 if (t == tile)
                     continue;
 
@@ -417,8 +367,7 @@ public class Game : Object
         return matches;
     }
 
-    public bool remove_pair (Tile tile0, Tile tile1)
-    {
+    public bool remove_pair (Tile tile0, Tile tile1) {
         if (!tile0.visible || !tile1.visible)
             return false;
 
@@ -453,16 +402,14 @@ public class Game : Object
         return true;
     }
 
-    private void start_clock ()
-    {
+    private void start_clock () {
         if (clock != null)
             return;
         clock = new Timer ();
         timeout_cb ();
     }
 
-    private void stop_clock ()
-    {
+    private void stop_clock () {
         if (clock == null)
             return;
         if (clock_timeout != 0)
@@ -472,8 +419,7 @@ public class Game : Object
         tick ();
     }
 
-    private void continue_clock ()
-    {
+    private void continue_clock () {
         if (clock == null)
             clock = new Timer ();
         else
@@ -481,8 +427,7 @@ public class Game : Object
         timeout_cb ();
     }
 
-    private void reset_clock ()
-    {
+    private void reset_clock () {
         stop_clock ();
         clock = null;
         clock_elapsed = 0.0;
@@ -490,10 +435,8 @@ public class Game : Object
         tick ();
     }
 
-    private bool timeout_cb ()
-    {
-        if (clock != null)
-        {
+    private bool timeout_cb () {
+        if (clock != null) {
             /* Notify on the next tick */
             var elapsed = clock.elapsed ();
             var next = (int) (elapsed + 1.0);
@@ -506,13 +449,11 @@ public class Game : Object
         return false;
     }
 
-    public bool can_undo
-    {
+    public bool can_undo {
         get { return move_number > 1; }
     }
 
-    public void undo ()
-    {
+    public void undo () {
         if (!can_undo)
             return;
 
@@ -521,20 +462,16 @@ public class Game : Object
 
         /* Re-show tiles that were removed */
         move_number--;
-        foreach (var tile in tiles)
-        {
-            if (tile.move_number == move_number)
-            {
+        foreach (var tile in tiles) {
+            if (tile.move_number == move_number) {
                 tile.visible = true;
                 redraw_tile (tile);
             }
         }
     }
 
-    public bool can_redo
-    {
-        get
-        {
+    public bool can_redo {
+        get {
             foreach (var tile in tiles)
                 if (tile.move_number >= move_number)
                     return true;
@@ -542,18 +479,15 @@ public class Game : Object
         }
     }
 
-    public void redo ()
-    {
+    public void redo () {
         if (!can_redo)
             return;
 
         selected_tile = null;
         set_hint (null, null);
 
-        foreach (var tile in tiles)
-        {
-            if (tile.move_number == move_number)
-            {
+        foreach (var tile in tiles) {
+            if (tile.move_number == move_number) {
                 tile.visible = false;
                 redraw_tile (tile);
             }

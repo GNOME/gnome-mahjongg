@@ -8,40 +8,33 @@
  * license.
  */
 
-public class History : Object
-{
+public class History : Object {
     public string filename;
     public List<HistoryEntry> entries;
 
-    public History (string filename)
-    {
+    public History (string filename) {
         this.filename = filename;
         entries = new List<HistoryEntry> ();
     }
 
-    public void add (HistoryEntry entry)
-    {
+    public void add (HistoryEntry entry) {
         entries.append (entry);
     }
 
-    public void load ()
-    {
+    public void load () {
         entries = new List<HistoryEntry> ();
 
         var contents = "";
-        try
-        {
+        try {
             FileUtils.get_contents (filename, out contents);
         }
-        catch (FileError e)
-        {
+        catch (FileError e) {
             if (!(e is FileError.NOENT))
                 warning ("Failed to load history: %s", e.message);
             return;
         }
 
-        foreach (var line in contents.split ("\n"))
-        {
+        foreach (var line in contents.split ("\n")) {
             var tokens = line.split (" ", 4);
             if (tokens.length < 3)
                 continue;
@@ -61,43 +54,36 @@ public class History : Object
         }
     }
 
-    public void save ()
-    {
+    public void save () {
         var contents = "";
 
-        foreach (var entry in entries)
-        {
+        foreach (var entry in entries) {
             var line = "%s %s %u %s\n".printf (entry.date.to_string (), entry.name, entry.duration, entry.player);
             contents += line;
         }
 
-        try
-        {
+        try {
             DirUtils.create_with_parents (Path.get_dirname (filename), 0775);
             FileUtils.set_contents (filename, contents);
         }
-        catch (FileError e)
-        {
+        catch (FileError e) {
             warning ("Failed to save history: %s", e.message);
         }
     }
 
-    public void clear ()
-    {
+    public void clear () {
         entries = new List<HistoryEntry> ();
         save ();
     }
 }
 
-public class HistoryEntry : Object
-{
+public class HistoryEntry : Object {
     public DateTime date;
     public string name;
     public uint duration;
     public string player;
 
-    public HistoryEntry (DateTime date, string name, uint duration, string player)
-    {
+    public HistoryEntry (DateTime date, string name, uint duration, string player) {
         this.date = date;
         this.name = name;
         this.duration = duration;

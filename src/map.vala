@@ -8,22 +8,19 @@
  * license.
  */
 
-public class Slot : Object
-{
+public class Slot : Object {
     public int x;
     public int y;
     public int layer;
 
-    public Slot (int x, int y, int layer)
-    {
+    public Slot (int x, int y, int layer) {
         this.x = x;
         this.y = y;
         this.layer = layer;
     }
 }
 
-private static int compare_slots (Slot a, Slot b)
-{
+private static int compare_slots (Slot a, Slot b) {
     /* Sort lowest to highest */
     var dl = a.layer - b.layer;
     if (dl != 0)
@@ -40,14 +37,12 @@ private static int compare_slots (Slot a, Slot b)
     return 0;
 }
 
-public class Map : Object
-{
+public class Map : Object {
     public string? name = null;
     public string? score_name = null;
     public List<Slot> slots = null;
 
-    public Map.test ()
-    {
+    public Map.test () {
         name = "Test";
         score_name = "test";
         slots.append (new Slot (0, 0, 0));
@@ -60,8 +55,7 @@ public class Map : Object
         slots.append (new Slot (4, 2, 0));
     }
 
-    public Map.builtin ()
-    {
+    public Map.builtin () {
         name = "Easy";
         score_name = "easy";
         slots.append (new Slot (13, 7, 4));
@@ -210,13 +204,10 @@ public class Map : Object
         slots.append (new Slot (28, 7, 0));
     }
 
-    public int width
-    {
-        get
-        {
+    public int width {
+        get {
             var w = 0;
-            foreach (var slot in slots)
-            {
+            foreach (var slot in slots) {
                 if (slot.x > w)
                     w = slot.x;
             }
@@ -226,13 +217,10 @@ public class Map : Object
         }
     }
 
-    public int height
-    {
-        get
-        {
+    public int height {
+        get {
             var h = 0;
-            foreach (var slot in slots)
-            {
+            foreach (var slot in slots) {
                 if (slot.y > h)
                     h = slot.y;
             }
@@ -243,14 +231,12 @@ public class Map : Object
     }
 }
 
-public class MapLoader : Object
-{
+public class MapLoader : Object {
     public List<Map> maps = null;
     private Map map;
     private int layer_z = 0;
 
-    public void load (string filename) throws Error
-    {
+    public void load (string filename) throws Error {
         string data;
         size_t length;
         FileUtils.get_contents (filename, out data, out length);
@@ -262,19 +248,16 @@ public class MapLoader : Object
         parser.passthrough = null;
         parser.error = null;
         var parse_context = new MarkupParseContext (parser, 0, this, null);
-        try
-        {
+        try {
             parse_context.parse (data, (ssize_t) length);
         }
-        catch (MarkupError e)
-        {
+        catch (MarkupError e) {
         }
     }
 
-    private string? get_attribute (string[] attribute_names, string[] attribute_values, string name, string? default = null)
-    {
-        for (var i = 0; attribute_names[i] != null; i++)
-        {
+    private string? get_attribute (string[] attribute_names, string[] attribute_values, string name,
+                                   string? default = null) {
+        for (var i = 0; attribute_names[i] != null; i++) {
             if (attribute_names[i].down () == name)
                 return attribute_values[i];
         }
@@ -282,8 +265,8 @@ public class MapLoader : Object
         return default;
     }
 
-    private double get_attribute_d (string[] attribute_names, string[] attribute_values, string name, double default = 0.0)
-    {
+    private double get_attribute_d (string[] attribute_names, string[] attribute_values, string name,
+                                    double default = 0.0) {
         var a = get_attribute (attribute_names, attribute_values, name);
         if (a == null)
             return default;
@@ -291,11 +274,10 @@ public class MapLoader : Object
             return double.parse (a);
     }
 
-    private void start_element_cb (MarkupParseContext context, string element_name, string[] attribute_names, string[] attribute_values) throws MarkupError
-    {
+    private void start_element_cb (MarkupParseContext context, string element_name, string[] attribute_names,
+                                   string[] attribute_values) throws MarkupError {
         /* Identify the tag. */
-        switch (element_name.down ())
-        {
+        switch (element_name.down ()) {
         case "mahjongg":
             break;
 
@@ -347,10 +329,8 @@ public class MapLoader : Object
         }
     }
 
-    private void end_element_cb (MarkupParseContext context, string element_name) throws MarkupError
-    {
-        switch (element_name.down ())
-        {
+    private void end_element_cb (MarkupParseContext context, string element_name) throws MarkupError {
+        switch (element_name.down ()) {
         case "map":
             var n_slots = map.slots.length ();
             if (map.name != null && map.score_name != null && n_slots <= 144 && n_slots % 2 == 0)

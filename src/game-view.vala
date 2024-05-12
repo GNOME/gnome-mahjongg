@@ -8,36 +8,33 @@
  * license.
  */
 
-public class GameView : Gtk.DrawingArea
-{
+public class GameView : Gtk.DrawingArea {
     private int tile_pattern_width = 0;
     private int tile_pattern_height = 0;
 
 
-    private int    x_offset;
-    private int    y_offset;
-    private int    tile_width;
-    private int    tile_height;
-    private int    tile_layer_offset_x;
-    private int    tile_layer_offset_y;
+    private int x_offset;
+    private int y_offset;
+    private int tile_width;
+    private int tile_height;
+    private int tile_layer_offset_x;
+    private int tile_layer_offset_y;
 
-    private int    theme_width;
-    private int    theme_height;
+    private int theme_width;
+    private int theme_height;
     private double theme_aspect;
     private Rsvg.Handle? theme_handle = null;
     private Cairo.Pattern? tile_pattern = null;
 
-    private uint   theme_resize_timer;
-    private uint   theme_timer_id;
+    private uint theme_resize_timer;
+    private uint theme_timer_id;
 
     private Gtk.GestureClick click_controller;     // for keeping in memory
 
     private Game? _game;
-    public Game? game
-    {
+    public Game? game {
         get { return _game; }
-        set
-        {
+        set {
             _game = value;
             _game.redraw_tile.connect (redraw_tile_cb);
             _game.paused_changed.connect (paused_changed_cb);
@@ -48,8 +45,7 @@ public class GameView : Gtk.DrawingArea
     }
 
     private string? _theme = null;
-    public string? theme
-    {
+    public string? theme {
         get { return _theme; }
         set {
             Gdk.Texture texture = null;
@@ -92,16 +88,14 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    construct
-    {
+    construct {
         can_focus = true;
         theme_timer_id = 0;
         init_mouse ();
         set_draw_func (draw_func);
     }
 
-    public override void size_allocate (int width, int height, int baseline)
-    {
+    public override void size_allocate (int width, int height, int baseline) {
         update_dimensions ();
 
         /* Resize the rsvg theme lazily after 300ms of the last resize event */
@@ -125,8 +119,7 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private void resize_theme ()
-    {
+    private void resize_theme () {
         if (theme_handle == null)
             return;
 
@@ -149,16 +142,15 @@ public class GameView : Gtk.DrawingArea
         var ctx = new Cairo.Context (theme_surface);
 
         try {
-            theme_handle.render_document(ctx, {0,0,theme_width,theme_height});
+            theme_handle.render_document (ctx, {0, 0, theme_width, theme_height});
             tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
-            queue_draw();
+            queue_draw ();
         } catch (Error e) {
             warning ("Could not upscale theme");
         }
     }
 
-    private void draw_game (Cairo.Context cr)
-    {
+    private void draw_game (Cairo.Context cr) {
         if (theme == null)
             return;
 
@@ -166,8 +158,7 @@ public class GameView : Gtk.DrawingArea
         tile_pattern_width = tile_width + tile_layer_offset_x;
         tile_pattern_height = tile_height + tile_layer_offset_y;
 
-        foreach (var tile in game.tiles)
-        {
+        foreach (var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 
@@ -191,7 +182,7 @@ public class GameView : Gtk.DrawingArea
 
             var matrix = Cairo.Matrix.identity ();
 
-            matrix.scale(width_scale, height_scale);
+            matrix.scale (width_scale, height_scale);
             matrix.translate (texture_x - x, texture_y - y);
 
             tile_pattern.set_matrix (matrix);
@@ -202,8 +193,7 @@ public class GameView : Gtk.DrawingArea
         }
     }
 
-    private void update_dimensions ()
-    {
+    private void update_dimensions () {
         if (theme == null)
             return;
 
@@ -231,14 +221,12 @@ public class GameView : Gtk.DrawingArea
         y_offset = (height - game.map.height * unit_height) / 2;
     }
 
-    private void get_tile_position (Tile tile, out int x, out int y)
-    {
+    private void get_tile_position (Tile tile, out int x, out int y) {
         x = x_offset + tile.slot.x * tile_width / 2 + tile.slot.layer * tile_layer_offset_x;
         y = y_offset + tile.slot.y * tile_height / 2 - tile.slot.layer * tile_layer_offset_y;
     }
 
-    private int get_image_offset (int number)
-    {
+    private int get_image_offset (int number) {
         var set = number / 4;
 
         /* Invalid numbers use the blank tile */
@@ -258,34 +246,29 @@ public class GameView : Gtk.DrawingArea
         return set;
     }
 
-    private void redraw_tile_cb (Tile tile)
-    {
+    private void redraw_tile_cb (Tile tile) {
         update_dimensions ();
         queue_draw ();
     }
 
-    private void paused_changed_cb ()
-    {
+    private void paused_changed_cb () {
         queue_draw ();
     }
 
-    public void draw_func (Gtk.DrawingArea area, Cairo.Context cr, int width, int height)
-    {
+    public void draw_func (Gtk.DrawingArea area, Cairo.Context cr, int width, int height) {
         if (game == null)
             return;
 
         draw_game (cr);
     }
 
-    private inline void init_mouse ()
-    {
+    private inline void init_mouse () {
         click_controller = new Gtk.GestureClick ();    // only reacts to Gdk.BUTTON_PRIMARY
         this.add_controller (click_controller);
         click_controller.pressed.connect (on_click);
     }
 
-    private inline void on_click (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
-    {
+    private inline void on_click (Gtk.GestureClick _controller, int n_press, double event_x, double event_y) {
         if (game == null || game.paused)
             return;
 
@@ -297,37 +280,29 @@ public class GameView : Gtk.DrawingArea
             return;
 
         /* Select first tile */
-        if (game.selected_tile == null)
-        {
+        if (game.selected_tile == null) {
             game.selected_tile = tile;
         }
-
         /* Unselect tile by clicking on it again */
-        else if (tile == game.selected_tile)
-        {
+        else if (tile == game.selected_tile) {
             game.selected_tile = null;
         }
-
         /* Attempt to match second tile to the selected one */
-        else if (game.selected_tile.matches (tile))
-        {
+        else if (game.selected_tile.matches (tile)) {
             game.remove_pair (game.selected_tile, tile);
         }
-        else
-        {
+        else {
             game.selected_tile = tile;
         }
 
-        queue_draw();
+        queue_draw ();
     }
 
-    private Tile? find_tile (int x, int y)
-    {
+    private Tile? find_tile (int x, int y) {
         Tile topmost_tile = null;
         var previous_layer = -1;
 
-        foreach (var tile in game.tiles)
-        {
+        foreach (var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 

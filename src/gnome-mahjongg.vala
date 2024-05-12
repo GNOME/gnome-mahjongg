@@ -8,8 +8,7 @@
  * license.
  */
 
-public class Mahjongg : Adw.Application
-{
+public class Mahjongg : Adw.Application {
     private Settings settings;
 
     private History history;
@@ -21,53 +20,47 @@ public class Mahjongg : Adw.Application
 
     private GameView game_view;
 
-    private const OptionEntry[] option_entries =
-    {
+    private const OptionEntry[] OPTION_ENTRIES = {
         { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
         { null }
     };
 
-    private const ActionEntry[] action_entries =
-    {
-        { "new-game",         new_game_cb                                },
-        { "undo",             undo_cb                                    },
-        { "redo",             redo_cb                                    },
-        { "hint",             hint_cb                                    },
-        { "pause",            pause_cb                                   },
-        { "restart-game",     restart_game_cb                            },
-        { "scores",           scores_cb                                  },
-        { "layout",           null, "s", "''", layout_cb                 },
-        { "background-color", null, "s", "''", background_color_cb       },
-        { "theme",            null, "s", "''", theme_cb                  },
-        { "help",             help_cb                                    },
-        { "about",            about_cb                                   },
-        { "quit",             quit_cb                                    }
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { "new-game", new_game_cb },
+        { "undo", undo_cb },
+        { "redo", redo_cb },
+        { "hint", hint_cb },
+        { "pause", pause_cb },
+        { "restart-game", restart_game_cb },
+        { "scores", scores_cb },
+        { "layout", null, "s", "''", layout_cb },
+        { "background-color", null, "s", "''", background_color_cb },
+        { "theme", null, "s", "''", theme_cb },
+        { "help", help_cb },
+        { "about", about_cb },
+        { "quit", quit_cb }
     };
 
-    public Mahjongg ()
-    {
+    public Mahjongg () {
         Object (
             application_id: APP_ID,
             flags: ApplicationFlags.DEFAULT_FLAGS,
             resource_base_path: "/org/gnome/Mahjongg"
         );
-        add_main_option_entries (option_entries);
+        add_main_option_entries (OPTION_ENTRIES);
     }
 
-    protected override void startup ()
-    {
+    protected override void startup () {
         base.startup ();
 
-        add_action_entries (action_entries, this);
-        set_accels_for_action ("app.new-game",  {        "<Primary>n"       });
-        set_accels_for_action ("app.pause",     {        "<Primary>p",
-                                                                  "Pause"   });
-        set_accels_for_action ("app.hint",      {        "<Primary>h"       });
-        set_accels_for_action ("app.undo",      {        "<Primary>z"       });
-        set_accels_for_action ("app.redo",      { "<Shift><Primary>z"       });
-        set_accels_for_action ("app.help",      {                 "F1"      });
-        set_accels_for_action ("app.quit",      {        "<Primary>q",
-                                                         "<Primary>w"       });
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.new-game", { "<Primary>n" });
+        set_accels_for_action ("app.pause", { "<Primary>p", "Pause" });
+        set_accels_for_action ("app.hint", { "<Primary>h" });
+        set_accels_for_action ("app.undo", { "<Primary>z" });
+        set_accels_for_action ("app.redo", { "<Shift><Primary>z" });
+        set_accels_for_action ("app.help", { "F1" });
+        set_accels_for_action ("app.quit", { "<Primary>q", "<Primary>w" });
 
         settings = new Settings (get_application_id ());
         load_maps ();
@@ -94,15 +87,13 @@ public class Mahjongg : Adw.Application
         var theme_action = (SimpleAction) lookup_action ("theme");
         theme_action.set_state (new Variant.@string (theme));
 
-        settings.bind("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
-        settings.bind("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
-        settings.bind("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
     }
 
-    protected override int handle_local_options (VariantDict options)
-    {
-        if (options.contains ("version"))
-        {
+    protected override int handle_local_options (VariantDict options) {
+        if (options.contains ("version")) {
             /* NOTE: Is not translated so can be easily parsed */
             stderr.printf ("%1$s %2$s\n", "gnome-mahjongg", VERSION);
             return Posix.EXIT_SUCCESS;
@@ -112,8 +103,7 @@ public class Mahjongg : Adw.Application
         return -1;
     }
 
-    public override void activate ()
-    {
+    public override void activate () {
         window.present ();
 
         settings.changed.connect (conf_value_changed_cb);
@@ -125,8 +115,7 @@ public class Mahjongg : Adw.Application
         game_view.grab_focus ();
     }
 
-    private void update_ui ()
-    {
+    private void update_ui () {
         var pause_action = lookup_action ("pause") as SimpleAction;
         var hint_action = lookup_action ("hint") as SimpleAction;
         var undo_action = lookup_action ("undo") as SimpleAction;
@@ -134,14 +123,12 @@ public class Mahjongg : Adw.Application
 
         pause_action.set_enabled (game_view.game.started);
 
-        if (game_view.game.paused)
-        {
+        if (game_view.game.paused) {
             hint_action.set_enabled (false);
             undo_action.set_enabled (false);
             redo_action.set_enabled (false);
         }
-        else
-        {
+        else {
             var moves_left = game_view.game.moves_left;
 
             hint_action.set_enabled (moves_left > 0);
@@ -151,10 +138,8 @@ public class Mahjongg : Adw.Application
         }
     }
 
-    private async void conf_value_changed_cb (Settings settings, string key)
-    {
-        if (key == "tileset")
-        {
+    private async void conf_value_changed_cb (Settings settings, string key) {
+        if (key == "tileset") {
             string previous_theme_name = null;
 
             if (game_view.theme != null)
@@ -164,8 +149,7 @@ public class Mahjongg : Adw.Application
             var theme_name = theme.split (".", -1)[0];
             game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
 
-            if (game_view.theme == null)
-            {
+            if (game_view.theme == null) {
                 /* Failed to load theme, fall back to default */
                 var default_theme = settings.get_default_value ("tileset").get_string ();
                 game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", default_theme);
@@ -176,12 +160,10 @@ public class Mahjongg : Adw.Application
 
             window.add_css_class (theme_name);
         }
-        else if (key == "mapset")
-        {
+        else if (key == "mapset") {
             new_game ();
         }
-        else if (key == "background-color")
-        {
+        else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();
             var color_scheme = settings.get_enum ("background-color");
 
@@ -190,19 +172,16 @@ public class Mahjongg : Adw.Application
     }
 
     private Gtk.GestureClick view_click_controller;    // for keeping in memory
-    private inline void on_click (Gtk.GestureClick _view_click_controller, int n_press, double event_x, double event_y)
-    {
+    private inline void on_click (Gtk.GestureClick _controller, int n_press, double event_x, double event_y) {
         /* Cancel pause on click */
         if (game_view.game.paused)
             pause_cb ();
     }
 
-    private async void moved_cb ()
-    {
+    private async void moved_cb () {
         update_ui ();
 
-        if (game_view.game.complete)
-        {
+        if (game_view.game.complete) {
             var date = new DateTime.now_local ();
             var duration = (uint) (game_view.game.elapsed + 0.5);
             var player = Environment.get_real_name ();
@@ -211,31 +190,28 @@ public class Mahjongg : Adw.Application
             history.save ();
             show_scores (entry);
         }
-        else if (!game_view.game.can_move)
-        {
+        else if (!game_view.game.can_move) {
             bool allow_shuffle = game_view.game.number_of_movable_tiles () > 1;
 
             var dialog = new Adw.AlertDialog (
                 _("No Moves Left"),
-                allow_shuffle ? _("You can undo your moves and try to find a solution, or reshuffle the remaining tiles.") :
-                                _("You can undo your moves and try to find a solution, or start a new game.")
+                allow_shuffle ?
+                    _("You can undo your moves and try to find a solution, or reshuffle the remaining tiles.") :
+                    _("You can undo your moves and try to find a solution, or start a new game.")
             );
             dialog.add_response ("continue", _("_Continue"));
 
-            if (allow_shuffle)
-            {
+            if (allow_shuffle) {
                 dialog.add_response ("reshuffle", _("_Reshuffle"));
             }
-            else
-            {
+            else {
                 dialog.add_response ("new_game", _("_New Game"));
             };
             dialog.add_response ("quit", _("_Quit"));
             dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
 
             var resp_id = yield dialog.choose (window, null);
-            switch (resp_id)
-            {
+            switch (resp_id) {
             case "continue":
                 break;
             case "reshuffle":
@@ -253,28 +229,23 @@ public class Mahjongg : Adw.Application
         }
     }
 
-    private void show_scores (HistoryEntry? selected_entry = null)
-    {
+    private void show_scores (HistoryEntry? selected_entry = null) {
         score_dialog = new ScoreDialog (history, selected_entry, maps);
         score_dialog.present (window);
     }
 
-    private List<string> load_themes ()
-    {
+    private List<string> load_themes () {
         List<string> themes = null;
 
         Dir dir;
-        try
-        {
+        try {
             dir = Dir.open (Path.build_filename (DATA_DIRECTORY, "themes"));
         }
-        catch (FileError e)
-        {
+        catch (FileError e) {
             return themes;
         }
 
-        while (true)
-        {
+        while (true) {
             var s = dir.read_name ();
             if (s == null)
                 break;
@@ -291,37 +262,32 @@ public class Mahjongg : Adw.Application
         return themes;
     }
 
-    private void layout_cb (SimpleAction action, Variant variant)
-    {
+    private void layout_cb (SimpleAction action, Variant variant) {
         var layout = variant.get_string ();
         action.set_state (variant);
         if (settings.get_string ("mapset") != layout)
             settings.set_string ("mapset", layout);
     }
 
-    private void background_color_cb (SimpleAction action, Variant variant)
-    {
+    private void background_color_cb (SimpleAction action, Variant variant) {
         var background_color = variant.get_string ();
         action.set_state (variant);
         if (settings.get_string ("background-color") != background_color)
             settings.set_string ("background-color", background_color);
     }
 
-    private void theme_cb (SimpleAction action, Variant variant)
-    {
+    private void theme_cb (SimpleAction action, Variant variant) {
         var theme = variant.get_string ();
         action.set_state (variant);
         if (settings.get_string ("tileset") != theme)
             settings.set_string ("tileset", theme);
     }
 
-    private void hint_cb ()
-    {
+    private void hint_cb () {
         var matches = game_view.game.find_matches (game_view.game.selected_tile);
 
         /* No match, find any random match as if nothing was selected */
-        if (matches.length () == 0)
-        {
+        if (matches.length () == 0) {
             if (game_view.game.selected_tile == null)
                 return;
             matches = game_view.game.find_matches ();
@@ -334,15 +300,12 @@ public class Mahjongg : Adw.Application
         update_ui ();
     }
 
-    private void shuffle_cb ()
-    {
+    private void shuffle_cb () {
         game_view.game.shuffle_remaining ();
     }
 
-    private void about_cb ()
-    {
-        string[] developers =
-        {
+    private void about_cb () {
+        string[] developers = {
             "Francisco Bustamante",
             "Max Watson",
             "Heinz Hempe",
@@ -362,8 +325,7 @@ public class Mahjongg : Adw.Application
             null
         };
 
-        string[] artists =
-        {
+        string[] artists = {
             "Jonathan Buzzard",
             "Jim Evans",
             "Richard Hoelscher",
@@ -373,8 +335,7 @@ public class Mahjongg : Adw.Application
             null
         };
 
-        string[] documenters =
-        {
+        string[] documenters = {
             "Tiffany Antopolski",
             "Chris Beiser",
             "Andre Klapper",
@@ -398,18 +359,15 @@ public class Mahjongg : Adw.Application
         about_dialog.present (window);
     }
 
-    private void pause_cb ()
-    {
+    private void pause_cb () {
         game_view.game.paused = !game_view.game.paused;
         game_view.game.set_hint (null, null);
         game_view.game.selected_tile = null;
 
-        if (game_view.game.paused)
-        {
+        if (game_view.game.paused) {
             window.pause ();
         }
-        else
-        {
+        else {
             window.unpause ();
             tick_cb ();
         }
@@ -417,28 +375,23 @@ public class Mahjongg : Adw.Application
         update_ui ();
     }
 
-    private void scores_cb ()
-    {
+    private void scores_cb () {
         show_scores ();
     }
 
-    private void new_game_cb ()
-    {
+    private void new_game_cb () {
         new_game ();
     }
 
-    private void restart_game_cb ()
-    {
+    private void restart_game_cb () {
         restart_game ();
     }
 
-    private void quit_cb ()
-    {
+    private void quit_cb () {
         window.destroy ();
     }
 
-    private void redo_cb ()
-    {
+    private void redo_cb () {
         if (game_view.game.paused)
             return;
 
@@ -446,27 +399,22 @@ public class Mahjongg : Adw.Application
         update_ui ();
     }
 
-    private void undo_cb ()
-    {
+    private void undo_cb () {
         game_view.game.undo ();
         update_ui ();
     }
 
-    private void restart_game ()
-    {
+    private void restart_game () {
         game_view.game.reset ();
         if (game_view.game.paused)
             pause_cb ();
         update_ui ();
     }
 
-    private void new_game ()
-    {
+    private void new_game () {
         Map? map = null;
-        foreach (var m in maps)
-        {
-            if (m.name == settings.get_string ("mapset"))
-            {
+        foreach (var m in maps) {
+            if (m.name == settings.get_string ("mapset")) {
                 map = m;
                 break;
             }
@@ -488,8 +436,7 @@ public class Mahjongg : Adw.Application
         window.unpause ();
     }
 
-    private void tick_cb ()
-    {
+    private void tick_cb () {
         string clock;
         var elapsed = 0;
         if (game_view.game != null)
@@ -505,29 +452,25 @@ public class Mahjongg : Adw.Application
         window.update_clock (clock);
     }
 
-    private void help_cb ()
-    {
+    private void help_cb () {
         Gtk.show_uri (window, "help:gnome-mahjongg", Gdk.CURRENT_TIME);
     }
 
-    private void load_maps ()
-    {
+    private void load_maps () {
         maps = null;
 
         /* Add the builtin map */
         maps.append (new Map.builtin ());
 
         Dir dir;
-        try
-        {
+        try {
             dir = Dir.open (Path.build_filename (DATA_DIRECTORY, "maps"));
         }
-        catch (FileError e)
-        {
+        catch (FileError e) {
             return;
         }
-        while (true)
-        {
+
+        while (true) {
             var filename = dir.read_name ();
             if (filename == null)
                 break;
@@ -537,12 +480,10 @@ public class Mahjongg : Adw.Application
 
             var loader = new MapLoader ();
             var path = Path.build_filename (DATA_DIRECTORY, "maps", filename);
-            try
-            {
+            try {
                 loader.load (path);
             }
-            catch (Error e)
-            {
+            catch (Error e) {
                 warning ("Could not load map %s: %s\n", path, e.message);
                 continue;
             }
@@ -551,8 +492,7 @@ public class Mahjongg : Adw.Application
         }
     }
 
-    public static int main (string[] args)
-    {
+    public static int main (string[] args) {
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -561,7 +501,7 @@ public class Mahjongg : Adw.Application
         Environment.set_application_name (_("Mahjongg"));
         Gtk.Window.set_default_icon_name (APP_ID);
 
-        typeof(GameView).ensure();
+        typeof (GameView).ensure ();
         var app = new Mahjongg ();
         var result = app.run (args);
 

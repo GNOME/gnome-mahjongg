@@ -9,8 +9,7 @@
  */
 
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/score-dialog.ui")]
-public class ScoreDialog : Adw.Dialog
-{
+public class ScoreDialog : Adw.Dialog {
     [GtkChild]
     private unowned Adw.ToolbarView toolbar_view;
 
@@ -50,13 +49,11 @@ public class ScoreDialog : Adw.Dialog
     private ListStore score_model;
     private unowned List<Map> maps;
 
-    private const ActionEntry[] action_entries =
-    {
+    private const ActionEntry[] ACTION_ENTRIES = {
         { "layout", null, "s", "''", set_map_cb }
     };
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, List<Map> maps)
-    {
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, List<Map> maps) {
         this.maps = maps;
         this.history = history;
         this.selected_entry = selected_entry;
@@ -64,15 +61,13 @@ public class ScoreDialog : Adw.Dialog
         set_up_score_view ();
         set_up_layout_menu ();
 
-        if (history.entries.length() > 0)
-        {
+        if (history.entries.length () > 0) {
             content_stack.visible_child_name = "scores";
             layout_button.visible = true;
             toolbar_view.reveal_bottom_bars = true;
         }
 
-        if (selected_entry != null)
-        {
+        if (selected_entry != null) {
             set_can_close (false);
             header_bar.show_start_title_buttons = false;
             header_bar.show_end_title_buttons = false;
@@ -88,20 +83,18 @@ public class ScoreDialog : Adw.Dialog
 
         closed.connect (() => {
             if (selected_entry != null)
-                history.save();
+                history.save ();
         });
     }
 
-    public void set_map (string name)
-    {
+    public void set_map (string name) {
         layout_button.label = get_map_display_name (name);
         score_model.remove_all ();
 
         var entries = history.entries.copy ();
         entries.sort (compare_entries);
 
-        foreach (var entry in entries)
-        {
+        foreach (var entry in entries) {
             if (entry.name != name)
                 continue;
 
@@ -109,18 +102,16 @@ public class ScoreDialog : Adw.Dialog
         }
     }
 
-    private void set_up_layout_menu ()
-    {
+    private void set_up_layout_menu () {
         var action_group = new SimpleActionGroup ();
-        action_group.add_action_entries (action_entries, this);
+        action_group.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("scores", action_group);
 
         var menu = new Menu ();
         layout_button.menu_model = menu;
 
         string[] entries = {};
-        foreach (var entry in history.entries)
-        {
+        foreach (var entry in history.entries) {
             if (entry.name in entries)
                 continue;
 
@@ -133,8 +124,7 @@ public class ScoreDialog : Adw.Dialog
         };
 
         var visible_entry = selected_entry;
-        if (visible_entry == null)
-        {
+        if (visible_entry == null) {
             unowned var entry = history.entries.first ();
 
             if (entry == null)
@@ -148,8 +138,7 @@ public class ScoreDialog : Adw.Dialog
         set_map (visible_entry.name);
     }
 
-    private void set_up_score_view ()
-    {
+    private void set_up_score_view () {
         var factory = new Gtk.SignalListItemFactory ();
         factory.setup.connect (item_player_setup_cb);
         factory.bind.connect (item_player_bind_cb);
@@ -169,14 +158,11 @@ public class ScoreDialog : Adw.Dialog
         score_view.model = new Gtk.NoSelection (score_model);
     }
 
-    private string get_map_display_name (string name)
-    {
+    private string get_map_display_name (string name) {
         unowned var map = maps.first ();
         var display_name = name;
-        do
-        {
-            if (map.data.score_name == name)
-            {
+        do {
+            if (map.data.score_name == name) {
                 display_name = dpgettext2 (null, "mahjongg map name", map.data.name);
                 break;
             }
@@ -185,15 +171,13 @@ public class ScoreDialog : Adw.Dialog
         return display_name;
     }
 
-    private void set_map_cb (SimpleAction action, Variant variant)
-    {
-        var name = variant.get_string();
+    private void set_map_cb (SimpleAction action, Variant variant) {
+        var name = variant.get_string ();
         action.set_state (variant);
         set_map (name);
     }
 
-    private static int compare_entries (HistoryEntry a, HistoryEntry b)
-    {
+    private static int compare_entries (HistoryEntry a, HistoryEntry b) {
         var d = strcmp (a.name, b.name);
         if (d != 0)
             return d;
@@ -202,8 +186,7 @@ public class ScoreDialog : Adw.Dialog
         return a.date.compare (b.date);
     }
 
-    private void item_player_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_player_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var stack = new Gtk.Stack ();
         stack.add_named (new Gtk.Inscription (null), "label");
 
@@ -219,22 +202,20 @@ public class ScoreDialog : Adw.Dialog
                 history_entry.player = entry.text;
         });
         entry.activate.connect (() => {
-            new_game_button.activate();
+            new_game_button.activate ();
         });
 
         stack.add_named (entry, "entry");
         ((Gtk.ListItem) list_item).child = stack;
     }
 
-    private void item_time_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_time_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var label = new Gtk.Inscription (null);
         label.add_css_class ("numeric");
         ((Gtk.ListItem) list_item).child = label;
     }
 
-    private void item_date_setup_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_date_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var label = new Gtk.Label (null) {
             xalign = 0
         };
@@ -242,28 +223,24 @@ public class ScoreDialog : Adw.Dialog
         ((Gtk.ListItem) list_item).child = label;
     }
 
-    private void item_player_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_player_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var stack = ((Gtk.ListItem) list_item).child as Gtk.Stack;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
-        if (entry == selected_entry)
-        {
+        if (entry == selected_entry) {
             stack.visible_child_name = "entry";
             var text_entry = (Gtk.Entry) stack.visible_child;
             text_entry.text = entry.player;
             text_entry.add_css_class ("heading");
             selected_item = (Gtk.ListItem) list_item;
         }
-        else
-        {
+        else {
             stack.visible_child_name = "label";
             ((Gtk.Inscription) stack.visible_child).text = entry.player;
         }
     }
 
-    private void item_time_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_time_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var label = ((Gtk.ListItem) list_item).child as Gtk.Inscription;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
@@ -276,8 +253,7 @@ public class ScoreDialog : Adw.Dialog
         label.text = time_label;
     }
 
-    private void item_date_bind_cb(Gtk.SignalListItemFactory factory, Object list_item)
-    {
+    private void item_date_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
@@ -288,8 +264,7 @@ public class ScoreDialog : Adw.Dialog
         label.label = date_label;
     }
 
-    private void score_view_focus_cb ()
-    {
+    private void score_view_focus_cb () {
         uint position;
         var found_item = score_model.find (selected_entry, out position);
 
@@ -304,8 +279,7 @@ public class ScoreDialog : Adw.Dialog
         });
     }
 
-    private async void clear_scores_cb ()
-    {
+    private async void clear_scores_cb () {
         var dialog = new Adw.AlertDialog (
             _("Clear All Scores?"),
             _("This will clear every score for every layout.")
@@ -317,8 +291,7 @@ public class ScoreDialog : Adw.Dialog
         dialog.set_response_appearance ("clear", Adw.ResponseAppearance.DESTRUCTIVE);
 
         var resp_id = yield dialog.choose (this, null);
-        switch (resp_id)
-        {
+        switch (resp_id) {
         case "cancel":
             break;
         case "clear":
