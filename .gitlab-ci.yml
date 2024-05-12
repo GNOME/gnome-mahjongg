@@ -3,11 +3,11 @@ include:
     file: 'flatpak/flatpak_ci_initiative.yml'
 
 variables:
-    APP_ID: "org.gnome.Mahjongg.Devel"
-    BUNDLE: "org.gnome.Mahjongg.Devel.flatpak"
-    RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
-    MANIFEST_PATH: "build-aux/flatpak/org.gnome.Mahjongg.Devel.json"
-    FLATPAK_MODULE: "gnome-mahjongg"
+    APP_ID: 'org.gnome.Mahjongg.Devel'
+    BUNDLE: 'org.gnome.Mahjongg.Devel.flatpak'
+    RUNTIME_REPO: 'https://nightly.gnome.org/gnome-nightly.flatpakrepo'
+    MANIFEST_PATH: 'build-aux/flatpak/org.gnome.Mahjongg.Devel.json'
+    FLATPAK_MODULE: 'gnome-mahjongg'
 
 stages:
   - lint
@@ -20,12 +20,20 @@ lint:
   script:
     - io.elementary.vala-lint src
 
-flatpak:
-    extends: '.flatpak'
+flatpak@x86_64:
+    extends: '.flatpak@x86_64'
     stage: build
 
-nightly:
+flatpak@aarch64:
+    extends: '.flatpak@aarch64'
+    stage: build
+
+nightly@x86_64:
     extends: '.publish_nightly'
     stage: deploy
-    needs:
-      - 'flatpak'
+    needs: ['flatpak@x86_64']
+
+nightly@aarch64:
+    extends: '.publish_nightly'
+    stage: deploy
+    needs: ['flatpak@aarch64']
