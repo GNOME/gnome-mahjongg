@@ -44,7 +44,6 @@
   <url type="translate">https://l10n.gnome.org/module/@project-name@/</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/@project-name@</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
-  <project_group>GNOME</project_group>
   <developer_name>The Mahjongg Team</developer_name>
   <developer id="@developer-id@">
     <name>The Mahjongg Team</name>
