@@ -1,15 +1,15 @@
 # Hungarian translation for gnome-mahjongg.
-# Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mahjongg help.
 #
 # László Ádám Kohajda <kla.kohi at gmail dot com>, 2012.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2013, 2014, 2015, 2016, 2017.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2018, 2021, 2022, 2023.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2018, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2023-09-19 19:06+0000\n"
-"PO-Revision-Date: 2023-09-19 21:09+0200\n"
+"POT-Creation-Date: 2024-04-29 21:03+0000\n"
+"PO-Revision-Date: 2024-05-19 11:03+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -25,225 +25,29 @@ msgid "translator-credits"
 msgstr ""
 "Kelemen Gábor <kelemeng at gnome dot hu>, 2014.\n"
 "Kohajda László Ádám <kla.kohi at gmail dot com>, 2012.\n"
-"Úr Balázs <ur.balazs at fsf dot hu>, 2021, 2023."
+"Úr Balázs <ur.balazs at fsf dot hu>, 2021, 2023, 2024."
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:10 C/develop.page:11 C/documentation.page:9
-#: C/gameplay.page:14 C/hints.page:15 C/map.page:11 C/rules.page:13
-#: C/strategy.page:9 C/translate.page:11
-msgid "Tiffany Antopolski"
-msgstr "Tiffany Antopolski"
-
-#. (itstool) path: credit/years
-#: C/bug-filing.page:12 C/develop.page:13 C/documentation.page:11
-#: C/translate.page:13
-msgid "2011"
-msgstr "2011"
-
-#. (itstool) path: license/p
-#: C/bug-filing.page:15 C/develop.page:16 C/documentation.page:14
-#: C/gameplay.page:22 C/hints.page:27 C/index.page:18 C/moves.page:19
-#: C/pause.page:24 C/rules.page:21 C/scoring.page:18 C/translate.page:24
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
-
-#. (itstool) path: page/title
-#: C/bug-filing.page:19
-msgid "Report a Problem"
-msgstr "Hiba jelentése"
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:20
-msgid ""
-"<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
-"to participate. If you notice a problem you can file a <em>bug report</em>. "
-"To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
-"mahjongg/issues/\"/>."
-msgstr ""
-"A <app>Mahjonggot</app> egy önkéntes közösség készíti. Közreműködését "
-"szívesen fogadjuk. Ha hibát észlelt, beküldhet egy <em>hibajelentést</em>. "
-"Ehhez keresse fel a <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
-"mahjongg/issues/\"/> oldalt."
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:23
-msgid ""
-"This is a bug tracking system where users and developers can file details "
-"about bugs, crashes and request enhancements."
-msgstr ""
-"Ez egy hibakövető rendszer, ahová a felhasználók és fejlesztők beküldhetik a "
-"hibákkal, összeomlásokkal kapcsolatos adatokat, és továbbfejlesztéseket "
-"kérhetnek."
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:26
-msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>Sign in / Register</gui> link to "
-"create one."
-msgstr ""
-"A részvételhez létre kell hoznia egy fiókot, amely lehetővé teszi a "
-"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást. "
-"Azért is regisztrálnia kell, hogy frissítéseket kapjon e-mailben a hiba "
-"állapotáról. Ha még nincs fiókja, akkor a <gui>Sign in / Register</gui> "
-"hivatkozásra kattintva létrehozhat egyet."
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:29
-msgid ""
-"Once you have an account, log in, and click on <gui>New issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
-"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
-"issues\">browse</link> for the bug to see if it already exists."
-msgstr ""
-"Ha létrehozta fiókját, jelentkezzen be, kattintson a <gui>New issue</gui> "
-"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://wiki."
-"gnome.org/Community/GettingInTouch/BugReportingGuidelines\">hibajelentés-"
-"írási irányelveket</link>, és <link href=\"https://gitlab.gnome.org/GNOME/"
-"gnome-mahjongg/issues\">ellenőrizze</link>, hogy nincs-e már a hiba "
-"bejelentve."
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:33
-msgid ""
-"If you are requesting a new feature, choose <gui>1. Feature</gui> in the "
-"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
-"<gui>Submit Issue</gui>."
-msgstr ""
-"Ha új szolgáltatást kér, válassza az <gui>1. Feature</gui> lehetőséget a "
-"<gui>Labels</gui> menüben. Töltse ki a Title és a Description szakaszokat, "
-"és kattintson a <gui>Submit Issue</gui> gombra."
-
-#. (itstool) path: page/p
-#: C/bug-filing.page:37
-msgid ""
-"Your report will be given an ID number, and its status will be updated as it "
-"is being dealt with."
-msgstr ""
-"A hibajelentés kapni fog egy azonosítószámot, az állapota pedig a "
-"feldolgozása során folyamatosan frissülni fog."
-
-#. (itstool) path: credit/name
-#: C/bonustiles.page:11
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: page/title
-#. (itstool) path: figure/title
-#: C/bonustiles.page:18 C/bonustiles.page:30
-msgid "Bonus tiles"
-msgstr "Bónusz kövek"
-
-#. (itstool) path: page/p
-#: C/bonustiles.page:20
-msgid ""
-"There are eight bonus tiles: four flowers and four seasons. The flower group "
-"consists of blue winter motives in the postmodern theme and yellow symbols "
-"in the smooth theme. The season group consists of yellow spring motives in "
-"the postmodern theme and black symbols in the smooth theme. The identical "
-"bonus tiles are matched in the postmodern theme and the bonus tiles with the "
-"same symbol color are matched in the smooth theme."
-msgstr ""
-"Nyolc bónusz kő van: négy virág és négy évszak. A virág csoport kék téli "
-"motívumokat tartalmaz a posztmodern témában, és sárga szimbólumokat a sima "
-"témában. Az évszak csoport sárga tavaszi motívumokat tartalmaz a posztmodern "
-"témában, és fekete szimbólumokat a sima témában. A posztmodern témában az "
-"azonos bónuszkövek, míg a sima témában az azonos szimbólumszínű bónuszkövek "
-"kerülnek párosításra."
-
-#. (itstool) path: page/p
-#: C/bonustiles.page:27
-msgid "Some of the matching bonus tiles in smooth theme are shown below:"
-msgstr "Néhány azonosnak tekintett bónuszkő a sima témából:"
-
-#. (itstool) path: page/title
-#: C/develop.page:20
-msgid "Help develop"
-msgstr "Segítsen a fejlesztésben"
-
-#. (itstool) path: page/p
-#: C/develop.page:21
-msgid ""
-"The <app>GNOME Games</app> are developed and maintained by a volunteer "
-"community. You are welcome to participate."
-msgstr ""
-"A <app>GNOME játékokat</app> egy önkéntes közösség fejleszti és tartja "
-"karban. Közreműködését szívesen fogadjuk!"
-
-#. (itstool) path: page/p
-#: C/develop.page:24
-msgid ""
-"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers at <link href=\"https://matrix.to/#/#gnome-games:"
-"gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-help/"
-"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
-"games\">#gnome-games</link> on irc.libera.chat, or via <link href=\"https://"
-"discourse.gnome.org/tag/games\">GNOME Discourse</link>."
-msgstr ""
-"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contribute\">közreműködni a <app>GNOME Játékok</app></link> fejlesztésében, "
-"akkor a fejlesztőkkel a kapcsolatot a <link href=\"https://matrix.to/#/"
-"#gnome-games:gnome.org\">#gnome-games:gnome.org</link> szobában <link "
-"xref=\"help:gnome-help/help-matrix\">Matrixon</link> vagy a <link "
-"href=\"https://web.libera.chat/#gnome-games\">#gnome-games</link> csatornán "
-"az irc.libera.chat oldalon, illetve a <link href=\"https://discourse.gnome."
-"org/tag/games\">GNOME Discourse</link> fórumon veheti fel."
-
-#. (itstool) path: page/title
-#: C/documentation.page:18
-msgid "Help write documentation"
-msgstr "Segítsen dokumentációt írni"
-
-#. (itstool) path: page/p
-#: C/documentation.page:20
-msgid ""
-"The <app>GNOME Games</app> documentation is maintained by a volunteer "
-"community. You are welcome to participate."
-msgstr ""
-"A <app>GNOME játékok</app> dokumentációját egy önkéntes közösség tartja "
-"karban. Közreműködését szívesen fogadjuk!"
-
-#. (itstool) path: page/p
-#: C/documentation.page:23
-msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with "
-"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
-"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
-"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on irc."
-"libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
-"documentation\">GNOME Discourse</link>."
-msgstr ""
-"A dokumentációs projektben való közreműködéshez vegye fel velünk nyugodtan a "
-"kapcsolatot a <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome."
-"org</link> szobában <link xref=\"help:gnome-help/help-matrix\">Matrixon</"
-"link> vagy a <link href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</"
-"link> csatornán az irc.libera.chat oldalon, illetve a <link href=\"https://"
-"discourse.gnome.org/tag/documentation\">GNOME Discourse</link> fórumon."
-
-#. (itstool) path: page/p
-#: C/documentation.page:29
-msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
-"Contributing\">wiki</link> page contains useful information."
-msgstr ""
-"A projekt <link href=\"https://wiki.gnome.org/DocumentationProject/"
-"Contributing\">wiki</link> oldala tartalmazza a legfontosabb információkat."
-
-#. (itstool) path: credit/name
-#: C/gameplay.page:10 C/hints.page:11 C/index.page:14 C/moves.page:11
+#: C/gameplay.page:10 C/hints.page:11 C/index.page:13 C/moves.page:11
 #: C/pause.page:12 C/rules.page:9 C/scoring.page:10
 msgid "Chris Beiser"
 msgstr "Chris Beiser"
 
 #. (itstool) path: credit/name
-#: C/gameplay.page:18 C/hints.page:23 C/map.page:16 C/pause.page:20
-#: C/scoring.page:14 C/translate.page:20
+#: C/gameplay.page:14 C/hints.page:15 C/rules.page:13 C/strategy.page:9
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/name
+#: C/gameplay.page:18 C/hints.page:23 C/pause.page:20 C/scoring.page:14
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: license/p
+#: C/gameplay.page:22 C/hints.page:27 C/index.page:17 C/moves.page:19
+#: C/pause.page:24 C/rules.page:21 C/scoring.page:18
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
 #: C/gameplay.page:26
@@ -266,19 +70,19 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/gameplay.page:34
-msgid ""
-"There are many different <link xref=\"map\">tile layouts</link> to choose "
-"from."
-msgstr ""
-"Különböző <link xref=\"map\">kőelrendezések</link> közül lehet választani."
+#| msgid ""
+#| "There are many different <link xref=\"map\">tile layouts</link> to choose "
+#| "from."
+msgid "There are many different tile layouts to choose from."
+msgstr "Több különböző kőelrendezés közül lehet választani."
 
 #. (itstool) path: page/p
-#: C/gameplay.page:37
+#: C/gameplay.page:36
 msgid "To match two tiles:"
 msgstr "Két kő párosítása:"
 
 #. (itstool) path: item/p
-#: C/gameplay.page:41
+#: C/gameplay.page:40
 msgid ""
 "Click on the a tile you want to match. If it is an eligible tile, it will be "
 "highlighted."
@@ -287,7 +91,7 @@ msgstr ""
 "a műveletre, akkor ki lesz emelve."
 
 #. (itstool) path: item/p
-#: C/gameplay.page:45
+#: C/gameplay.page:44
 msgid ""
 "Click on a matching tile. If it is a truly a matching tile, both tiles will "
 "vanish."
@@ -296,18 +100,18 @@ msgstr ""
 "eltűnik."
 
 #. (itstool) path: section/title
-#: C/gameplay.page:51 C/hints.page:47
+#: C/gameplay.page:50 C/hints.page:47
 msgid "Video demonstration"
 msgstr "Videóbemutató"
 
 #. (itstool) path: media/p
-#: C/gameplay.page:54
+#: C/gameplay.page:53
 msgid "Video of gameplay"
 msgstr "Videó a játékmenetről"
 
 #. (itstool) path: credit/name
 #: C/hints.page:19 C/moves.page:15 C/pause.page:16 C/rules.page:17
-#: C/strategy.page:14 C/translate.page:16
+#: C/strategy.page:14
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -327,12 +131,16 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/hints.page:37
+#| msgid ""
+#| "<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
+#| "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
+#| "key></keyseq>."
 msgid ""
-"<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
+"<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">💡</"
 "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
 "key></keyseq>."
 msgstr ""
-"A <gui>Javaslat</gui> a fejlécsávon lévő <gui style=\"button\">�</gui> gomb "
+"A <gui>Javaslat</gui> a fejlécsávon lévő <gui style=\"button\">💡</gui> gomb "
 "vagy a <keyseq><key>Ctrl</key><key>H</key></keyseq> billentyűkombináció "
 "megnyomásával érhető el."
 
@@ -387,18 +195,13 @@ msgctxt "text"
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#. (itstool) path: info/desc
-#: C/index.page:11
-msgid "Mahjongg help."
-msgstr "Mahjongg súgó."
-
 #. (itstool) path: page/title
-#: C/index.page:22
+#: C/index.page:21
 msgid "<_:media-1/> Mahjongg"
 msgstr "<_:media-1/> Mahjongg"
 
 #. (itstool) path: page/p
-#: C/index.page:23
+#: C/index.page:22
 msgid ""
 "<app>Mahjongg</app> is a simple pattern recognition game. You score points "
 "by matching identical tiles."
@@ -407,19 +210,14 @@ msgstr ""
 "párosításával gyűjthet pontokat."
 
 #. (itstool) path: section/title
-#: C/index.page:28
+#: C/index.page:27
 msgid "Playing Mahjongg"
 msgstr "Játsszon a Mahjonggal"
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Useful tips"
 msgstr "Hasznos tippek"
-
-#. (itstool) path: section/title
-#: C/index.page:36
-msgid "Get involved"
-msgstr "Közreműködés"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -522,149 +320,6 @@ msgstr ""
 "teljes <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
 "összefoglalót</link>."
 
-#. (itstool) path: credit/years
-#: C/map.page:13
-msgid "2012 2013"
-msgstr "2012 2013"
-
-#. (itstool) path: credit/years
-#: C/map.page:18 C/strategy.page:11
-msgid "2012"
-msgstr "2012"
-
-#. (itstool) path: page/title
-#: C/map.page:22
-msgid "Change tile layout"
-msgstr "Kőelrendezés módosítása"
-
-#. (itstool) path: page/p
-#: C/map.page:24
-msgid "There are 9 different layouts. To select a different tile layout:"
-msgstr "Kilenc különböző elrendezés található. Másik kőelrendezés választása:"
-
-#. (itstool) path: item/p
-#: C/map.page:27
-msgid ""
-"Press the menu button in the top-right corner of the window and select <gui "
-"style=\"menuitem\">Preferences</gui>."
-msgstr ""
-"Nyomja meg az ablak jobb felső sarkában lévő menügombot, és válassza a <gui "
-"style=\"menuitem\">Beállítások</gui> menüpontot."
-
-#. (itstool) path: item/p
-#: C/map.page:29
-msgid "Select a <gui>Layout</gui> from the drop-down menu."
-msgstr "Válasszon <gui>Elrendezést</gui> a legördülő menüből."
-
-#. (itstool) path: page/p
-#: C/map.page:33
-msgid ""
-"Your new tile layout will take effect immediately unless you have already "
-"started a game and chose for the effect to take place after you are finished."
-msgstr ""
-"A kőelrendezés változásai azonnal életbe lépnek, kivéve ha már elindított "
-"egy játékot, és a befejezés utáni életbe lépést választja."
-
-#. (itstool) path: media/p
-#: C/map.page:41
-msgid "easy image"
-msgstr "egyszerű kép"
-
-#. (itstool) path: media/p
-#: C/map.page:46
-msgid "the ziggurat layout image"
-msgstr "a Zikkurat elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:51
-msgid "four bridges layout image"
-msgstr "négy híd elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:56
-msgid "overpass layout image"
-msgstr "felüljáró elrendezés"
-
-#. (itstool) path: td/p
-#: C/map.page:61
-msgid "<em>Easy</em>"
-msgstr "<em>Könnyű</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:62
-msgid "<em>The Ziggurat</em>"
-msgstr "<em>Zikkurat</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:63
-msgid "<em>Four Bridges</em>"
-msgstr "<em>Négy híd</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:64
-msgid "<em>Overpass</em>"
-msgstr "<em>Felüljáró</em>"
-
-#. (itstool) path: media/p
-#: C/map.page:72
-msgid "cloud layout image"
-msgstr "felhő elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:77
-msgid "tic tac toe layout image"
-msgstr "tic tac toe elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:82
-msgid "red dragon layout image"
-msgstr "vörös sárkány elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:87
-msgid "pyramid walls layout image"
-msgstr "piramisfal elrendezés"
-
-#. (itstool) path: td/p
-#: C/map.page:92
-msgid "<em>Cloud</em>"
-msgstr "<em>Felhő</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:93
-msgid "<em>Tic-tac-toe</em>"
-msgstr "<em>Tic-Tac-Toe</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:94
-msgid "<em>Red Dragon</em>"
-msgstr "<em>Vörös sárkány</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:95
-msgid "<em>Pyramid's Walls</em>"
-msgstr "<em>Piramisfal</em>"
-
-#. (itstool) path: media/p
-#: C/map.page:103
-msgid "confounding cross layout image"
-msgstr "zavarba ejtő kereszt elrendezés"
-
-#. (itstool) path: media/p
-#: C/map.page:108
-msgid "difficult layout image"
-msgstr "nehéz elrendezés"
-
-#. (itstool) path: td/p
-#: C/map.page:113
-msgid "<em>Confounding Cross</em>"
-msgstr "<em>Zavarba ejtő kereszt</em>"
-
-#. (itstool) path: td/p
-#: C/map.page:114
-msgid "<em>Difficult</em>"
-msgstr "<em>Nehéz</em>"
-
 #. (itstool) path: page/title
 #: C/moves.page:23
 msgid "Moves left"
@@ -696,11 +351,12 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/pause.page:34
-msgid "The <_:media-1/> button in the header bar."
-msgstr "A <_:media-1/> gomb a fejlécsávon."
+#| msgid "The <_:media-1/> button in the header bar."
+msgid "The <gui style=\"button\">⏸︎</gui> button in the header bar."
+msgstr "A <gui style=\"button\">⏸︎</gui> gomb a fejlécsávon."
 
 #. (itstool) path: item/p
-#: C/pause.page:38
+#: C/pause.page:37
 msgid ""
 "The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
 msgstr ""
@@ -787,14 +443,21 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
+#| msgid ""
+#| "The scores are stored on a per <link xref=\"map\">map</link> basis. You "
+#| "can view the highscores for a particular map by selecting it from the "
+#| "drop-down menu."
 msgid ""
-"The scores are stored on a per <link xref=\"map\">map</link> basis. You can "
-"view the highscores for a particular map by selecting it from the drop-down "
-"menu."
+"The scores are stored on a per map basis. You can view the highscores for a "
+"particular map by selecting it from the drop-down menu."
 msgstr ""
-"A pontszámok <link xref=\"map\">térképenként</link> vannak tárolva. "
-"Eredményei megtekinthetőek egy adott térképre vonatkozóan a lenyíló menü "
-"segítségével."
+"A pontszámok térképenként vannak tárolva. Eredményei megtekinthetőek egy"
+" adott térképre vonatkozóan a lenyíló menü segítségével."
+
+#. (itstool) path: credit/years
+#: C/strategy.page:11
+msgid "2012"
+msgstr "2012"
 
 #. (itstool) path: page/title
 #: C/strategy.page:21
@@ -803,14 +466,18 @@ msgstr "Stratégia"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
+#| msgid ""
+#| "Since each <link xref=\"map\">tile layout</link> requires a different "
+#| "approach, there is no one universal strategy. However, there are some "
+#| "strategy tips to keep in mind while you play:"
 msgid ""
-"Since each <link xref=\"map\">tile layout</link> requires a different "
-"approach, there is no one universal strategy. However, there are some "
-"strategy tips to keep in mind while you play:"
+"Since each tile layout requires a different approach, there is no one "
+"universal strategy. However, there are some strategy tips to keep in mind "
+"while you play:"
 msgstr ""
-"Mivel minden egyes <link xref=\"map\">kőelrendezés</link> különböző "
-"megközelítést igényel, ezért nincsen univerzális stratégia. Azonban van "
-"néhány stratégiai javaslat, amelyet nem árt fejben tartani játék közben:"
+"Mivel minden egyes kőelrendezés különböző megközelítést igényel, ezért"
+" nincsen univerzális stratégia. Azonban van néhány stratégiai javaslat,"
+" amelyet nem árt fejben tartani játék közben:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:28
@@ -844,61 +511,3 @@ msgstr ""
 "Mivel a <link xref=\"scoring\">pontozás</link> azon múlik, hogy milyen "
 "gyorsan végez a játékkal, ezért az idő a legfontosabb tényező. Ennek "
 "következtében fontos, hogy gyors legyen."
-
-#. (itstool) path: page/title
-#: C/translate.page:28
-msgid "Help translate"
-msgstr "Segítsen a fordításban"
-
-#. (itstool) path: page/p
-#: C/translate.page:30
-msgid ""
-"The GNOME Games user interface and documentation is being translated by a "
-"world-wide volunteer community: you are welcome to participate."
-msgstr ""
-"A GNOME játékok felhasználói felületét és súgóját egy világszintű önkéntes "
-"közösség fordítja: közreműködését szívesen fogadjuk!"
-
-#. (itstool) path: page/p
-#: C/translate.page:33
-msgid ""
-"There are <link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">many "
-"languages</link> for which translations are still needed."
-msgstr ""
-"<link href=\"https://l10n.gnome.org/module/gnome-mahjongg/\">Számos nyelv "
-"van</link>, amelyhez még szükség van fordításokra."
-
-#. (itstool) path: page/p
-#: C/translate.page:36
-msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome."
-"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
-"org/teams/\">translation team</link> for your language. This will give you "
-"the ability to upload new translations."
-msgstr ""
-"A fordítás elkezdéséhez <link href=\"https://l10n.gnome.org\">létre kell "
-"hoznia egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link "
-"href=\"https://l10n.gnome.org/teams/\">fordítócsapathoz</link>. Ez lehetővé "
-"teszi Önnek az új fordítások feltöltését."
-
-#. (itstool) path: page/p
-#: C/translate.page:41
-msgid ""
-"You can chat with GNOME translators <link href=\"https://wiki.gnome.org/"
-"GettingInTouch/IRC\">using IRC</link> (on the <code>#gnome-i18n</code> "
-"channel). People on the channel are located worldwide, so you may not get an "
-"immediate response as a result of timezone differences."
-msgstr ""
-"A GNOME fordítókkal <link href=\"https://wiki.gnome.org/GettingInTouch/"
-"IRC\">IRC használatával</link> (a <code>#gnome-i18n</code> csatornán) "
-"cseveghet. A csatornán a világ minden részéről vannak emberek, így "
-"előfordulhat, hogy az időzóna-eltérések miatt nem kap azonnal választ."
-
-#. (itstool) path: page/p
-#: C/translate.page:45
-msgid ""
-"Alternatively, you can contact the Internationalization Team using <link "
-"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
-msgstr ""
-"Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot a <link "
-"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link> fórumon."
