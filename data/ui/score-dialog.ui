@@ -105,11 +105,15 @@
                     </child>
                     <child type="end">
                       <object class="GtkButton">
-                        <property name="label">_Quit</property>
+                        <property name="child">
+                          <object class="AdwButtonContent">
+                            <property name="icon-name">application-exit-symbolic</property>
+                            <property name="label" translatable="yes">_Quit</property>
+                            <property name="can-shrink">True</property>
+                            <property name="use-underline">True</property>
+                          </object>
+                        </property>
                         <property name="action-name">app.quit</property>
-                        <property name="can-shrink">True</property>
-                        <property name="has-frame">False</property>
-                        <property name="use-underline">True</property>
                         <property name="valign">center</property>
                       </object>
                     </child>
