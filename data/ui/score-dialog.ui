@@ -2,7 +2,7 @@
 <interface>
   <template class="ScoreDialog" parent="AdwDialog">
     <property name="content-width">360</property>
-    <property name="content-height">420</property>
+    <property name="content-height">500</property>
     <child>
       <object class="AdwToolbarView" id="toolbar_view">
         <property name="reveal-bottom-bars">False</property>
@@ -38,6 +38,11 @@
                       <object class="GtkColumnView" id="score_view">
                         <property name="reorderable">False</property>
                         <property name="tab-behavior">item</property>
+                        <child>
+                          <object class="GtkColumnViewColumn" id="rank_column">
+                            <property name="title">#</property>
+                          </object>
+                        </child>
                         <child>
                           <object class="GtkColumnViewColumn" id="player_column">
                             <property name="title" translatable="yes">Player</property>
