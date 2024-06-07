@@ -47,12 +47,14 @@
                           <object class="GtkColumnViewColumn" id="player_column">
                             <property name="title" translatable="yes">Player</property>
                             <property name="expand">True</property>
+                            <property name="fixed-width">0</property>
                           </object>
                         </child>
                         <child>
                           <object class="GtkColumnViewColumn" id="time_column">
                             <property name="title" translatable="yes">Time</property>
                             <property name="expand">True</property>
+                            <property name="fixed-width">0</property>
                           </object>
                         </child>
                         <child>

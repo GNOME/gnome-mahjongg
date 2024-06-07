@@ -206,7 +206,7 @@ public class ScoreDialog : Adw.Dialog {
 
     private void item_player_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
         var stack = new Gtk.Stack ();
-        stack.add_named (new Gtk.Inscription (null) { min_chars = 5 }, "label");
+        stack.add_named (new Gtk.Inscription (null), "label");
 
         var entry = new Gtk.Entry () {
             has_frame = false,
@@ -228,10 +228,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void item_time_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = new Gtk.Label (null) {
-            width_chars = 7,
-            xalign = 0
-        };
+        var label = new Gtk.Inscription (null);
         label.add_css_class ("numeric");
         ((Gtk.ListItem) list_item).child = label;
     }
@@ -271,7 +268,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void item_time_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
+        var label = ((Gtk.ListItem) list_item).child as Gtk.Inscription;
         var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
 
         var time_label = "%us".printf (entry.duration);
@@ -280,7 +277,7 @@ public class ScoreDialog : Adw.Dialog {
         if (entry == selected_entry)
             label.add_css_class ("heading");
 
-        label.label = time_label;
+        label.text = time_label;
     }
 
     private void item_date_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
