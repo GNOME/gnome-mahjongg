@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-04-29 19:18+0000\n"
-"PO-Revision-Date: 2024-05-28 11:47+0300\n"
+"POT-Creation-Date: 2024-05-28 08:48+0000\n"
+"PO-Revision-Date: 2024-06-08 21:25+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -22,55 +22,15 @@ msgstr ""
 "X-Generator: Gtranslator 46.1\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:7
-#: data/org.gnome.Mahjongg.desktop.in.in:3 src/gnome-mahjongg.vala:545
+#: data/org.gnome.Mahjongg.desktop.in.in:3
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:501
 msgid "Mahjongg"
 msgstr "מא-ג׳ונג"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:8
 #: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
 msgid "Match tiles and clear the board"
 msgstr "התאמת אריחים וריקון הלוח"
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:10
-#, fuzzy
-#| msgid ""
-#| "A solitaire version of the classic Eastern tile game. Tiles are stacked "
-#| "on the board at the start of the game. The goal is to remove all the "
-#| "tiles in as little time as possible. Select two matching tiles and they "
-#| "will disappear from the board, but you can only select a tile if there is "
-#| "an empty space to its left or right at the same level. Be careful: tiles "
-#| "that look alike may actually be slightly different."
-msgid ""
-"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
-"are stacked on the board at the start of the game. The goal is to remove all "
-"the tiles in as little time as possible. Select two matching tiles and they "
-"will disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
-msgstr ""
-"גרסה יחידנית של המשחק המזרחי הקלסי. האריחים מסודרים על הלוח בתחילת המשחק. "
-"מטרת המשחק היא להסיר את כל האריחים תוך כמה שפחות צעדים. ניתן לבחור בשני "
-"אריחים והם ייעלמו מהלוח, אך ניתן לבחור באריח רק אם יש מקום פנוי מימינו או "
-"משמאלו. אזהרה: אריחים דומים עשויים בפועל להיות שונים במקצת."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:19
-#, fuzzy
-#| msgid ""
-#| "Mahjongg features a variety of starting layouts, some easy and some "
-#| "difficult. If you get stuck, you can ask for a hint, but this adds a "
-#| "large time penalty."
-msgid ""
-"You can choose from a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large "
-"time penalty."
-msgstr ""
-"מא־ג׳ונג מציג מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. אם נתקעת, "
-"ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:48 src/gnome-mahjongg.vala:371
-msgid "The Mahjongg Team"
-msgstr "צוות מא-ג׳ונג"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:6
@@ -89,6 +49,34 @@ msgstr "Height of the window in pixels"
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+msgid ""
+"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
+"are stacked on the board at the start of the game. The goal is to remove all "
+"the tiles in as little time as possible. Select two matching tiles and they "
+"will disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"גרסה יחידנית של משחק התאמת אריחים, משחק מזרחי קלסי הידוע בשם מא-ג׳ונג. "
+"האריחים מסודרים על הלוח בתחילת המשחק. מטרת המשחק היא להסיר את כל האריחים תוך "
+"כמה שפחות צעדים. ניתן לבחור בשני אריחים והם ייעלמו מהלוח, אך ניתן לבחור "
+"באריח רק אם יש מקום פנוי מימינו או משמאלו. אזהרה: אריחים דומים עשויים בפועל "
+"להיות שונים במקצת."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+msgid ""
+"You can choose from a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"ניתן לבחור מבין מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. אם נתקעת, "
+"ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+msgid "The Mahjongg Team"
+msgstr "צוות מא-ג׳ונג"
+
 #: data/ui/help-overlay.ui:8
 msgctxt "shortcut window"
 msgid "Playing"
@@ -99,8 +87,8 @@ msgctxt "shortcut window"
 msgid "New Game"
 msgstr "משחק חדש"
 
-#: data/ui/help-overlay.ui:18
 # msgctxt "shortcut window"
+#: data/ui/help-overlay.ui:18
 msgctxt "shortcut window"
 msgid "Pause Game"
 msgstr "השהיית המשחק"
@@ -115,20 +103,20 @@ msgctxt "shortcut window"
 msgid "Redo"
 msgstr "ביצוע חוזר"
 
-#: data/ui/help-overlay.ui:36
 # msgctxt "shortcut window"
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Show Hint"
 msgstr "הצגת רמז"
 
-#: data/ui/help-overlay.ui:43
 # msgctxt "shortcut window"
+#: data/ui/help-overlay.ui:43
 msgctxt "shortcut window"
 msgid "General"
 msgstr "כללי"
 
-#: data/ui/help-overlay.ui:47
 # msgctxt "shortcut window"
+#: data/ui/help-overlay.ui:47
 msgctxt "shortcut window"
 msgid "Show Main Menu"
 msgstr "הצגת תפריט ראשי"
@@ -148,7 +136,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "יציאה"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:219
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:208
 msgid "_New Game"
 msgstr "_משחק חדש"
 
@@ -261,33 +249,37 @@ msgstr "ע_זרה"
 msgid "_About Mahjongg"
 msgstr "_על אודות מא-ג׳ונג"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:25
 msgid "No Scores"
 msgstr "אין תוצאות"
 
-#: data/ui/score-dialog.ui:27
+#: data/ui/score-dialog.ui:26
 msgid "Finish a game to see scores"
 msgstr "יש לסיים משחק על מנת לצפות בתוצאות"
 
-#: data/ui/score-dialog.ui:44
+#: data/ui/score-dialog.ui:43
 msgid "Player"
 msgstr "שחקן"
 
-#: data/ui/score-dialog.ui:50
+#: data/ui/score-dialog.ui:49
 msgid "Time"
 msgstr "זמן"
 
-#: data/ui/score-dialog.ui:56
+#: data/ui/score-dialog.ui:55
 msgid "Date"
 msgstr "תאריך"
 
-#: data/ui/window.ui:21
+#: data/ui/score-dialog.ui:111 src/gnome-mahjongg.vala:210
+msgid "_Quit"
+msgstr "י_ציאה"
+
 # msgctxt "shortcut window"
+#: data/ui/window.ui:21
 msgid "Undo"
 msgstr "ביטול"
 
-#: data/ui/window.ui:28
 # msgctxt "shortcut window"
+#: data/ui/window.ui:28
 msgid "Redo"
 msgstr "ביצוע חוזר"
 
@@ -295,20 +287,20 @@ msgstr "ביצוע חוזר"
 msgid "Main Menu"
 msgstr "תפריט ראשי"
 
-#: data/ui/window.ui:48
 # msgctxt "shortcut window"
+#: data/ui/window.ui:48
 msgid "Show Hint"
 msgstr "הצגת רמז"
 
-#: src/gnome-mahjongg.vala:26
+#: src/gnome-mahjongg.vala:24
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: src/gnome-mahjongg.vala:207
+#: src/gnome-mahjongg.vala:197
 msgid "No Moves Left"
 msgstr "לא נותרו מהלכים"
 
-#: src/gnome-mahjongg.vala:208
+#: src/gnome-mahjongg.vala:199
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -316,24 +308,20 @@ msgstr ""
 "באפשרותך לבטל את המהלכים שלך ולנסות למצוא את הפתרון, או לערבב מחדש את "
 "האריחים הנותרים."
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:200
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "ניתן לבטל את המהלכים שלך ולנסות למצוא את הפתרון, או להתחיל משחק חדש."
 
-#: src/gnome-mahjongg.vala:211
+#: src/gnome-mahjongg.vala:202
 msgid "_Continue"
 msgstr "ה_משך"
 
-#: src/gnome-mahjongg.vala:215
+#: src/gnome-mahjongg.vala:205
 msgid "_Reshuffle"
 msgstr "ער_בוב"
 
-#: src/gnome-mahjongg.vala:221
-msgid "_Quit"
-msgstr "י_ציאה"
-
-#: src/gnome-mahjongg.vala:378
+#: src/gnome-mahjongg.vala:355
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -347,36 +335,36 @@ msgstr ""
 "\n"
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:284
 msgid "Clear All Scores?"
 msgstr "ניקוי כל התוצאות?"
 
-#: src/score-dialog.vala:309
+#: src/score-dialog.vala:285
 msgid "This will clear every score for every layout."
 msgstr "זה ינקה כל תוצאה בכל פריסה."
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:289
 msgid "_Cancel"
 msgstr "_ביטול"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:290
 msgid "Clear All"
 msgstr "ניקוי הכול"
 
-#: src/window.vala:59
+#: src/window.vala:54
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "מהלכים שנותרו: %2u"
 
-#: src/window.vala:64
+#: src/window.vala:58
 msgid "Paused"
 msgstr "הושהה"
 
-#: src/window.vala:66
+#: src/window.vala:60
 msgid "Resume Game"
 msgstr "חידוש המשחק"
 
-#: src/window.vala:72
+#: src/window.vala:65
 msgid "Pause Game"
 msgstr "השהיית המשחק"
 
