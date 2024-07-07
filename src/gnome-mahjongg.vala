@@ -198,7 +198,9 @@ public class Mahjongg : Adw.Application {
                 allow_shuffle ?
                     _("You can undo your moves and try to find a solution, or reshuffle the remaining tiles.") :
                     _("You can undo your moves and try to find a solution, or start a new game.")
-            );
+            ) {
+                default_response = "continue"
+            };
             dialog.add_response ("continue", _("_Continue"));
 
             if (allow_shuffle) {
@@ -212,8 +214,6 @@ public class Mahjongg : Adw.Application {
 
             var resp_id = yield dialog.choose (window, null);
             switch (resp_id) {
-            case "continue":
-                break;
             case "reshuffle":
                 shuffle_cb ();
                 break;
@@ -224,7 +224,7 @@ public class Mahjongg : Adw.Application {
                 window.destroy ();
                 break;
             default:
-                assert_not_reached ();
+                break;
             }
         }
     }

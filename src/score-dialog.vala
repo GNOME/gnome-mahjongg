@@ -319,8 +319,6 @@ public class ScoreDialog : Adw.Dialog {
 
         var resp_id = yield dialog.choose (this, null);
         switch (resp_id) {
-        case "cancel":
-            break;
         case "clear":
             toolbar_view.reveal_bottom_bars = false;
             content_stack.visible_child_name = "no-scores";
@@ -334,7 +332,7 @@ public class ScoreDialog : Adw.Dialog {
             history.clear ();
             break;
         default:
-            assert_not_reached ();
+            break;
         }
     }
 }
