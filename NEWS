@@ -1,3 +1,22 @@
+47.alpha (Unreleased)
+=====================
+
+* Optimize game initialization
+* Replace preferences dialog with submenus
+* Adapt to changes in GNOME HIG
+* Port to newer GTK 4/libadwaita widgets
+* Add missing tooltips and mnemonics
+* Add player names to scores
+* Add button to clear all scores
+* Use separate background colors for different themes
+* Prevent unclickable tiles in 'Overpass' layout
+* Avoid stretching tiles at certain window sizes
+* Fix wrong tile being selected when clicking tile edges
+* Remove redundant help pages
+* Remove 'maya' tileset
+* Update AppStream metadata
+* Translation updates
+
 GNOME Mahjongg 3.40.1
 =====================
 
@@ -17,6 +36,25 @@ GNOME Mahjongg 3.40.0
 * Translate scores dialog [#13]
 * help-overlay.ui: Remove ctrl+f1 shortcut
 * Translation updates
+
+GNOME Mahjongg 3.38.3
+=====================
+
+Enable (by default) regeneration of schema and icons.
+Also, hide two unimplemented shortcuts from the help.
+
+GNOME Mahjongg 3.38.2
+=====================
+
+Fixed a regression.
+
+Translation updated:
+  Hebrew: Yosef Or Boczko
+
+GNOME Mahjongg 3.38.1
+=====================
+
+Fast fix for hints.
 
 GNOME Mahjongg 3.38.0
 =====================
