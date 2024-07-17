@@ -31,6 +31,13 @@
       <image>https://gitlab.gnome.org/GNOME/@project-name@/-/raw/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <recommends>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
   <releases>
     <release version="3.40.1" date="2024-04-17" type="stable"/>
     <release version="3.40.0" date="2023-05-31" type="stable"/>
