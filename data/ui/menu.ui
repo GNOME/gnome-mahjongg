@@ -20,7 +20,7 @@
         <attribute name="label" translatable="yes">_Layout</attribute>
         <section>
           <item>
-            <attribute name="label" translatable="yes" context="mahjongg map name">Easy</attribute>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Turtle</attribute>
           </item>
           <item>
             <attribute name="label" translatable="yes" context="mahjongg map name">The Ziggurat</attribute>

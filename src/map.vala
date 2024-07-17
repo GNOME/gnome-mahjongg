@@ -56,7 +56,7 @@ public class Map : Object {
     }
 
     public Map.builtin () {
-        name = "Easy";
+        name = "Turtle";
         score_name = "easy";
         slots.append (new Slot (13, 7, 4));
         slots.append (new Slot (12, 8, 3));

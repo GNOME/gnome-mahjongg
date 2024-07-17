@@ -419,8 +419,11 @@ public class Mahjongg : Adw.Application {
                 break;
             }
         }
-        if (map == null)
+        if (map == null) {
             map = maps.nth_data (0);
+            var layout_action = (SimpleAction) lookup_action ("layout");
+            layout_action.set_state (new Variant.@string (map.name));
+        }
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
