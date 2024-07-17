@@ -346,13 +346,8 @@ public class Game : Object {
             }
         }
         else if (tile_can_move (tile)) {
-            bool found_match = false;
             foreach (var t in tiles) {
                 if (t == tile)
-                    continue;
-
-                /* Only need a single match for uninitialized tiles */
-                if (t.number == -1 && found_match)
                     continue;
 
                 /* Checking match before checking if the tile can move is faster */
@@ -360,7 +355,10 @@ public class Game : Object {
                     continue;
 
                 matches.append (new Match (t, tile));
-                found_match = true;
+
+                /* Only need a single match for uninitialized tiles */
+                if (t.number == -1)
+                    break;
             }
         }
 
