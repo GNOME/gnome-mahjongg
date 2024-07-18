@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-04-30 21:19+0000\n"
-"PO-Revision-Date: 2024-05-01 11:15+0200\n"
+"POT-Creation-Date: 2024-07-17 21:39+0000\n"
+"PO-Revision-Date: 2024-07-18 13:14+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -24,45 +24,15 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:7
-#: data/org.gnome.Mahjongg.desktop.in.in:3 src/gnome-mahjongg.vala:556
+#: data/org.gnome.Mahjongg.desktop.in.in:3
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:8
 #: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
 msgid "Match tiles and clear the board"
 msgstr "Poišči pare ploščic in počisti igralno ploščo."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:10
-msgid ""
-"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
-"are stacked on the board at the start of the game. The goal is to remove all "
-"the tiles in as little time as possible. Select two matching tiles and they "
-"will disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
-msgstr ""
-"To je znana igra ujemanja ploščic za enega samega igralca, znana tudi ko "
-"Mahjongg solitaire. Ploščice so na začetku igre postavljene na plošči. Cilj "
-"igre je čim hitreje poiskati in počistiti pare. Z izborom dveh enakih "
-"ploščic se ti izbrišeta, izbrati pa jih je mogoče le, če sta obe na isti "
-"globinski ravni in na levi ali na desni nista v stiku z drugo ploščico. "
-"Opozorilo: nekatere ploščice so si sila podobne ..."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:19
-msgid ""
-"You can choose from a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large "
-"time penalty."
-msgstr ""
-"Izberete lahko med različnimi začetnimi postavitvami ploščic. Nekatere "
-"postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
-"ki pa se kaznujejo s časovnim pribitkom."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:48 src/gnome-mahjongg.vala:382
-msgid "The Mahjongg Team"
-msgstr "Ekipa Mahjongg"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:6
@@ -80,6 +50,36 @@ msgstr "Višina okna v točkah"
 #: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "true if the window is maximized"
 msgstr "PRAV, če je okno razpeto"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+msgid ""
+"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
+"are stacked on the board at the start of the game. The goal is to remove all "
+"the tiles in as little time as possible. Select two matching tiles and they "
+"will disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"To je znana igra ujemanja ploščic za enega samega igralca, znana tudi ko "
+"Mahjongg solitaire. Ploščice so na začetku igre postavljene na plošči. Cilj "
+"igre je čim hitreje poiskati in počistiti pare. Z izborom dveh enakih "
+"ploščic se ti izbrišeta, izbrati pa jih je mogoče le, če sta obe na isti "
+"globinski ravni in na levi ali na desni nista v stiku z drugo ploščico. "
+"Opozorilo: nekatere ploščice so si sila podobne ..."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+msgid ""
+"You can choose from a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"Izberete lahko med različnimi začetnimi postavitvami ploščic. Nekatere "
+"postavitve so enostavne, druge zelo zahtevne. Igra omogoča prikaz namigov, "
+"ki pa se kaznujejo s časovnim pribitkom."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+msgid "The Mahjongg Team"
+msgstr "Ekipa Mahjongg"
 
 #: data/ui/help-overlay.ui:8
 msgctxt "shortcut window"
@@ -136,7 +136,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Konča program"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:230
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
 msgid "_New Game"
 msgstr "_Nova igra"
 
@@ -154,13 +154,13 @@ msgstr "_Postavitev"
 
 #: data/ui/menu.ui:23
 msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "Običajna"
+msgid "Turtle"
+msgstr "Želva"
 
 #: data/ui/menu.ui:26
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
-msgstr "Ziggurat"
+msgstr "Zigurat"
 
 #: data/ui/menu.ui:29
 msgctxt "mahjongg map name"
@@ -249,25 +249,29 @@ msgstr "Po_moč"
 msgid "_About Mahjongg"
 msgstr "_O programu Mahjongg"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:25
 msgid "No Scores"
 msgstr "Brez rezultatov"
 
-#: data/ui/score-dialog.ui:27
+#: data/ui/score-dialog.ui:26
 msgid "Finish a game to see scores"
 msgstr "Končajte igro in si oglejte rezultate"
 
-#: data/ui/score-dialog.ui:44
+#: data/ui/score-dialog.ui:48
 msgid "Player"
 msgstr "Igralec"
 
-#: data/ui/score-dialog.ui:50
+#: data/ui/score-dialog.ui:55
 msgid "Time"
 msgstr "Čas"
 
-#: data/ui/score-dialog.ui:56
+#: data/ui/score-dialog.ui:62
 msgid "Date"
 msgstr "Datum"
+
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+msgid "_Quit"
+msgstr "_Končaj"
 
 #: data/ui/window.ui:21
 msgid "Undo"
@@ -285,15 +289,15 @@ msgstr "Glavni meni"
 msgid "Show Hint"
 msgstr "Pokaži namig"
 
-#: src/gnome-mahjongg.vala:26
+#: src/gnome-mahjongg.vala:24
 msgid "Print release version and exit"
 msgstr "Izpiši različico programa in končaj"
 
-#: src/gnome-mahjongg.vala:218
+#: src/gnome-mahjongg.vala:197
 msgid "No Moves Left"
 msgstr "Ni preostalih premikov"
 
-#: src/gnome-mahjongg.vala:219
+#: src/gnome-mahjongg.vala:199
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -301,26 +305,22 @@ msgstr ""
 "Poteze lahko razveljavite in poskusite najti rešitev ali premešati preostale "
 "ploščice."
 
-#: src/gnome-mahjongg.vala:220
+#: src/gnome-mahjongg.vala:200
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Razveljavite lahko svoje premike in poiščete ustrezno rešitev ali pa začnete "
 "z novo igro."
 
-#: src/gnome-mahjongg.vala:222
+#: src/gnome-mahjongg.vala:204
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
-#: src/gnome-mahjongg.vala:226
+#: src/gnome-mahjongg.vala:207
 msgid "_Reshuffle"
 msgstr "_Premešaj"
 
-#: src/gnome-mahjongg.vala:232
-msgid "_Quit"
-msgstr "_Končaj"
-
-#: src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:355
 msgid "translator-credits"
 msgstr ""
 "Matej Urbančič <mateju@src.gnome.org>\n"
@@ -328,35 +328,35 @@ msgstr ""
 "Matej Erman\n"
 "Tadej Janež"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:311
 msgid "Clear All Scores?"
 msgstr "Ali želite počistiti vse rezultate?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:312
 msgid "This will clear every score for every layout."
 msgstr "S tem počistite vsak rezultat za vsako postavitev."
 
-#: src/score-dialog.vala:315
+#: src/score-dialog.vala:316
 msgid "_Cancel"
 msgstr "Pre_kliči"
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:317
 msgid "Clear All"
 msgstr "Počisti vse"
 
-#: src/window.vala:59
+#: src/window.vala:54
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Število preostalih premikov: %2u"
 
-#: src/window.vala:64
+#: src/window.vala:58
 msgid "Paused"
 msgstr "Premor"
 
-#: src/window.vala:66
+#: src/window.vala:60
 msgid "Resume Game"
 msgstr "Nadaljuj igro"
 
-#: src/window.vala:72
+#: src/window.vala:65
 msgid "Pause Game"
 msgstr "Premor v igri"
