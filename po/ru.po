@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-04-30 21:19+0000\n"
-"PO-Revision-Date: 2024-05-03 20:40+1000\n"
+"POT-Creation-Date: 2024-07-17 21:39+0000\n"
+"PO-Revision-Date: 2024-07-18 19:22+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -30,48 +30,15 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:7
-#: data/org.gnome.Mahjongg.desktop.in.in:3 src/gnome-mahjongg.vala:556
+#: data/org.gnome.Mahjongg.desktop.in.in:3
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
 msgid "Mahjongg"
 msgstr "Маджонг"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:8
 #: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
 msgid "Match tiles and clear the board"
 msgstr "Очистите доску от костей, выбирая одинаковые"
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:10
-msgid ""
-"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
-"are stacked on the board at the start of the game. The goal is to remove all "
-"the tiles in as little time as possible. Select two matching tiles and they "
-"will disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
-msgstr ""
-"Однопользовательская игра на подбор одинаковых костей, широко известная как "
-"пасьянс Маджонг. В начале игры кости расположены поверх друг друга на "
-"игровом столе. Цель игры — убрать все кости, затратив на это как можно "
-"меньше времени. Чтобы убрать кости, найдите и выделите две одинаковые, и они "
-"исчезнут с игрового стола. Можно выбирать только те кости, которые "
-"расположены на одном и том же уровне и у которых свободна левая или правая "
-"грань. Будьте внимательны: некоторые кости немного похожи друг на друга, но "
-"на самом деле являются разными."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:19
-msgid ""
-"You can choose from a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large "
-"time penalty."
-msgstr ""
-"Вы можете выбрать один из множества предустановленных раскладов костей, "
-"некоторые расклады проще, некоторые сложнее. Если вы затрудняетесь сделать "
-"ход, то можете воспользоваться подсказкой, но в этом случае будет начислено "
-"штрафное время."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:48 src/gnome-mahjongg.vala:382
-msgid "The Mahjongg Team"
-msgstr "Команда «Маджонг»"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:6
@@ -89,6 +56,39 @@ msgstr "Высота окна в пикселах"
 #: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "true if the window is maximized"
 msgstr "если выбрано, то окно имеет максимальный размер"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+msgid ""
+"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
+"are stacked on the board at the start of the game. The goal is to remove all "
+"the tiles in as little time as possible. Select two matching tiles and they "
+"will disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"Однопользовательская игра на подбор одинаковых костей, широко известная как "
+"пасьянс Маджонг. В начале игры кости расположены поверх друг друга на "
+"игровом столе. Цель игры — убрать все кости, затратив на это как можно "
+"меньше времени. Чтобы убрать кости, найдите и выделите две одинаковые, и они "
+"исчезнут с игрового стола. Можно выбирать только те кости, которые "
+"расположены на одном и том же уровне и у которых свободна левая или правая "
+"грань. Будьте внимательны: некоторые кости немного похожи друг на друга, но "
+"на самом деле являются разными."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+msgid ""
+"You can choose from a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"Вы можете выбрать один из множества предустановленных раскладов костей, "
+"некоторые расклады проще, некоторые сложнее. Если вы затрудняетесь сделать "
+"ход, то можете воспользоваться подсказкой, но в этом случае будет начислено "
+"штрафное время."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+msgid "The Mahjongg Team"
+msgstr "Команда «Маджонг»"
 
 #: data/ui/help-overlay.ui:8
 msgctxt "shortcut window"
@@ -145,7 +145,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выход"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:230
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
 msgid "_New Game"
 msgstr "_Новая игра"
 
@@ -163,8 +163,8 @@ msgstr "_Расклад"
 
 #: data/ui/menu.ui:23
 msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "Простой"
+msgid "Turtle"
+msgstr "Черепаха"
 
 #: data/ui/menu.ui:26
 msgctxt "mahjongg map name"
@@ -258,25 +258,29 @@ msgstr "_Справка"
 msgid "_About Mahjongg"
 msgstr "_О приложении"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:25
 msgid "No Scores"
 msgstr "Нет результатов"
 
-#: data/ui/score-dialog.ui:27
+#: data/ui/score-dialog.ui:26
 msgid "Finish a game to see scores"
 msgstr "Завершите игру, чтобы увидеть результаты"
 
-#: data/ui/score-dialog.ui:44
+#: data/ui/score-dialog.ui:48
 msgid "Player"
 msgstr "Игрок"
 
-#: data/ui/score-dialog.ui:50
+#: data/ui/score-dialog.ui:55
 msgid "Time"
 msgstr "Время"
 
-#: data/ui/score-dialog.ui:56
+#: data/ui/score-dialog.ui:62
 msgid "Date"
 msgstr "Дата"
+
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+msgid "_Quit"
+msgstr "_Завершить"
 
 #: data/ui/window.ui:21
 msgid "Undo"
@@ -294,15 +298,15 @@ msgstr "Главное меню"
 msgid "Show Hint"
 msgstr "Показать подсказку"
 
-#: src/gnome-mahjongg.vala:26
+#: src/gnome-mahjongg.vala:24
 msgid "Print release version and exit"
 msgstr "Показать номер версии и выйти"
 
-#: src/gnome-mahjongg.vala:218
+#: src/gnome-mahjongg.vala:197
 msgid "No Moves Left"
 msgstr "Ходов не осталось"
 
-#: src/gnome-mahjongg.vala:219
+#: src/gnome-mahjongg.vala:199
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -310,63 +314,63 @@ msgstr ""
 "Вы можете отменить сделанные ходы и попытаться найти решение или перемешать "
 "оставшиеся кости."
 
-#: src/gnome-mahjongg.vala:220
+#: src/gnome-mahjongg.vala:200
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Вы можете отменить сделанные ходы и попытаться найти решение или начать "
 "новую игру."
 
-#: src/gnome-mahjongg.vala:222
+#: src/gnome-mahjongg.vala:204
 msgid "_Continue"
 msgstr "_Продолжить"
 
-#: src/gnome-mahjongg.vala:226
+#: src/gnome-mahjongg.vala:207
 msgid "_Reshuffle"
 msgstr "_Перемешать"
 
-#: src/gnome-mahjongg.vala:232
-msgid "_Quit"
-msgstr "_Завершить"
-
-#: src/gnome-mahjongg.vala:389
+#: src/gnome-mahjongg.vala:355
 msgid "translator-credits"
 msgstr ""
 "Stas Solovey <whats_up@tut.by>, 2015-2018\n"
 "Ser82-png <asvmail.as@gmail.com>, 2022-2024"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:311
 msgid "Clear All Scores?"
 msgstr "Удалить все результаты?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:312
 msgid "This will clear every score for every layout."
 msgstr "Это позволит обнулить все результаты для каждого расклада."
 
-#: src/score-dialog.vala:315
+#: src/score-dialog.vala:316
 msgid "_Cancel"
 msgstr "_Отменить"
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:317
 msgid "Clear All"
 msgstr "Очистить все"
 
-#: src/window.vala:59
+#: src/window.vala:54
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Осталось ходов: %2u"
 
-#: src/window.vala:64
+#: src/window.vala:58
 msgid "Paused"
 msgstr "Пауза"
 
-#: src/window.vala:66
+#: src/window.vala:60
 msgid "Resume Game"
 msgstr "Продолжить игру"
 
-#: src/window.vala:72
+#: src/window.vala:65
 msgid "Pause Game"
 msgstr "Приостановить игру"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Easy"
+#~ msgstr "Простой"
 
 #~ msgid "Disassemble a pile of tiles by removing matching pairs"
 #~ msgstr "Разберите большую кучу костей, убирая совпадающие пары"
