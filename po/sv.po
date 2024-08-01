@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-05-21 16:48+0000\n"
-"PO-Revision-Date: 2024-05-24 20:13+0200\n"
+"POT-Creation-Date: 2024-07-17 21:39+0000\n"
+"PO-Revision-Date: 2024-07-18 02:36+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:501
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
 msgid "Mahjongg"
 msgstr "Mahjong"
 
@@ -134,7 +134,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
 msgid "_New Game"
 msgstr "_Nytt spel"
 
@@ -152,8 +152,8 @@ msgstr "_Layout"
 
 #: data/ui/menu.ui:23
 msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "Lätt"
+msgid "Turtle"
+msgstr "Sköldpadda"
 
 #: data/ui/menu.ui:26
 msgctxt "mahjongg map name"
@@ -255,19 +255,19 @@ msgstr "Inga poäng"
 msgid "Finish a game to see scores"
 msgstr "Slutför ett spel för att se poäng"
 
-#: data/ui/score-dialog.ui:43
+#: data/ui/score-dialog.ui:48
 msgid "Player"
 msgstr "Spelare"
 
-#: data/ui/score-dialog.ui:49
+#: data/ui/score-dialog.ui:55
 msgid "Time"
 msgstr "Tid"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:62
 msgid "Date"
 msgstr "Datum"
 
-#: data/ui/score-dialog.ui:111 src/gnome-mahjongg.vala:210
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
 msgid "_Quit"
 msgstr "A_vsluta"
 
@@ -310,11 +310,11 @@ msgstr ""
 "Du kan ångra dina drag och försöka igen för att hitta lösningen, eller "
 "starta ett nytt spel."
 
-#: src/gnome-mahjongg.vala:202
+#: src/gnome-mahjongg.vala:204
 msgid "_Continue"
 msgstr "_Fortsätt"
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:207
 msgid "_Reshuffle"
 msgstr "_Blanda"
 
@@ -331,19 +331,19 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: src/score-dialog.vala:284
+#: src/score-dialog.vala:311
 msgid "Clear All Scores?"
 msgstr "Rensa alla poäng?"
 
-#: src/score-dialog.vala:285
+#: src/score-dialog.vala:312
 msgid "This will clear every score for every layout."
 msgstr "Detta kommer rensa alla poäng för alla layouter."
 
-#: src/score-dialog.vala:289
+#: src/score-dialog.vala:316
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: src/score-dialog.vala:290
+#: src/score-dialog.vala:317
 msgid "Clear All"
 msgstr "Rensa alla"
 
@@ -363,6 +363,10 @@ msgstr "Fortsätt spel"
 #: src/window.vala:65
 msgid "Pause Game"
 msgstr "Gör paus i spelet"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Easy"
+#~ msgstr "Lätt"
 
 #~ msgid "Disassemble a pile of tiles by removing matching pairs"
 #~ msgstr "Plocka isär en hög med brickor genom att ta bort matchande par"
