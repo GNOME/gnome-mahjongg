@@ -39,9 +39,20 @@
     <control>touch</control>
   </recommends>
   <releases>
-    <release version="3.40.1" date="2024-04-17" type="stable"/>
-    <release version="3.40.0" date="2023-05-31" type="stable"/>
-    <release version="3.38.0" date="2020-09-18" type="stable"/>
+    <release version="47~rc" date="2024-08-13" type="development">
+      <description>
+        <p>This release contains several improvements, including:</p>
+        <ul>
+          <li>Changes to the UI to follow the latest GNOME Human Interface Guidelines</li>
+          <li>Player names for scores, and the ability to clear all previous scores</li>
+          <li>Faster game startup times</li>
+          <li>A fix for unclickable tiles in the 'Overpass' layout</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.40.1" date="2024-04-17"/>
+    <release version="3.40.0" date="2023-05-31"/>
+    <release version="3.38.0" date="2020-09-18"/>
   </releases>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <url type="homepage">https://gitlab.gnome.org/GNOME/@project-name@</url>
