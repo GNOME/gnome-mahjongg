@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-07-17 21:39+0000\n"
-"PO-Revision-Date: 2024-07-18 19:22+1000\n"
+"POT-Creation-Date: 2024-08-17 15:16+0000\n"
+"PO-Revision-Date: 2024-08-18 09:26+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -86,7 +86,16 @@ msgstr ""
 "ход, то можете воспользоваться подсказкой, но в этом случае будет начислено "
 "штрафное время."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "Маджонг в светлом стиле"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "Маджонг в тёмном стиле"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
 msgid "The Mahjongg Team"
 msgstr "Команда «Маджонг»"
 
