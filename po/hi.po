@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-07-17 21:39+0000\n"
-"PO-Revision-Date: 2024-07-19 10:08+0530\n"
+"POT-Creation-Date: 2024-08-17 15:16+0000\n"
+"PO-Revision-Date: 2024-08-18 11:39+0530\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
 "Language: hi\n"
@@ -74,7 +74,16 @@ msgstr ""
 "महाजोंग में विभिन्न प्रकार के शुरुआती अभिन्यास शामिल हैं, कुछ आसान और कुछ कठिन। यदि आप फंस "
 "जाते हैं, तो आप संकेत मांग सकते हैं, लेकिन इससे बड़ा समय जुर्माना जुड़ता है।"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "हल्के रंग की शैली में माहजोंग"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "गहरे रंग की शैली में माहजोंग"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
 msgid "The Mahjongg Team"
 msgstr "माहजोंग टीम"
 
