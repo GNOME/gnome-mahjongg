@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-07-17 21:39+0000\n"
-"PO-Revision-Date: 2024-07-18 02:36+0200\n"
+"POT-Creation-Date: 2024-08-17 15:16+0000\n"
+"PO-Revision-Date: 2024-08-17 17:42+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -75,7 +75,16 @@ msgstr ""
 "Du kan välja från ett antal startlayouter, några enkla och några svåra. Om "
 "du fastnar kan du be om ett tips, men detta ger ett stort tidstillägg."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "Mahjong i ljus stil"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "Mahjong i mörk stil"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
 msgid "The Mahjongg Team"
 msgstr "Mahjong-gruppen"
 
