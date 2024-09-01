@@ -10,14 +10,14 @@
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
 # Emin Tufan Çetin <etcetin@gmail.com>, 2017-2023.
-# Sabri Ünal <libreajans@gmail.com>, 2023, 2024.
+# Sabri Ünal <yakushabb@gmail.com>, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-07-17 22:03+0000\n"
-"PO-Revision-Date: 2024-05-10 22:36+0300\n"
+"POT-Creation-Date: 2024-08-21 17:21+0000\n"
+"PO-Revision-Date: 2024-08-25 15:38+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -81,7 +81,16 @@ msgstr ""
 "yapabilirsiniz. Eğer sıkışırsanız ipucu isteyebilirsiniz, ancak bu büyük bir "
 "zaman cezası ekler."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:54 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "Mahjongg açık tema ile"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "Mahjongg koyu tema ile"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
 msgid "The Mahjongg Team"
 msgstr "Mahjongg Takımı"
 
@@ -363,49 +372,3 @@ msgstr "Oyunu Sürdür"
 #: src/window.vala:65
 msgid "Pause Game"
 msgstr "Oyunu Duraklat"
-
-#~ msgctxt "mahjongg map name"
-#~ msgid "Easy"
-#~ msgstr "Kolay"
-
-#~ msgid "Disassemble a pile of tiles by removing matching pairs"
-#~ msgstr "Eşleşen karo çiftlerini çıkartarak karo yığınını ayıklayın"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Main functions"
-#~ msgstr "Ana işlevler"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Start a new game"
-#~ msgstr "Yeni oyun başlat"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause the game"
-#~ msgstr "Oyunu duraklat"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show a hint"
-#~ msgstr "İpucu göster"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Toggle main menu"
-#~ msgstr "Ana menüyü aç/kapat"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Fullscreen"
-#~ msgstr "Tam ekran"
-
-#~ msgid "Restart Game"
-#~ msgstr "Oyunu Yeniden Başlat"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "Restart Game with New Map?"
-#~ msgstr "Oyun Yeni Harita ile Yeniden Başlatılsın Mı?"
-
-#~ msgid "If you continue playing, the next game will use the new map."
-#~ msgstr "Eğer oynamayı sürdürürseniz sonraki oyun yeni harita kullanacak."
-
-#~ msgid "_Continue Playing"
-#~ msgstr "Oynamayı _Sürdür"
