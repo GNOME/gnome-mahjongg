@@ -2,17 +2,18 @@
 # Copyright (c) 2010 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 #
-# Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022, 2024.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022, 2023.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017-2019, 2021-2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mahjongg master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2023-07-29 06:27+0000\n"
-"PO-Revision-Date: 2023-08-18 21:45+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"Project-Id-Version: gnome-mahjongg gnome-3-40\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/"
+"issues/\n"
+"POT-Creation-Date: 2024-08-21 17:20+0000\n"
+"PO-Revision-Date: 2024-09-08 17:45+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +21,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:366
 #: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "Mahjongg"
@@ -58,9 +59,9 @@ msgstr ""
 "beberapa sulit. Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk, "
 "tapi ini menambahkan penalti waktu yang besar."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:40
-msgid "Alberto Ruiz"
-msgstr "Alberto Ruiz"
+#: data/org.gnome.Mahjongg.appdata.xml.in:43
+msgid "The Mahjongg Team"
+msgstr "Tim Mahjongg"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -262,29 +263,29 @@ msgstr "Jeda"
 msgid "Print release version and exit"
 msgstr "Cetak versi rilis dan keluar"
 
-#: src/gnome-mahjongg.vala:155
+#: src/gnome-mahjongg.vala:158
 msgid "Do you want to start a new game with this map?"
 msgstr "Apakah anda ingin memulai permainan baru dengan peta ini?"
 
-#: src/gnome-mahjongg.vala:156
+#: src/gnome-mahjongg.vala:159
 msgid "If you continue playing the next game will use the new map."
 msgstr ""
 "Jika anda melanjutkan bermain, permainan berikutnya akan menggunakan map "
 "yang berbeda."
 
-#: src/gnome-mahjongg.vala:157
+#: src/gnome-mahjongg.vala:160
 msgid "_Continue playing"
 msgstr "_Lanjutkan bermain"
 
-#: src/gnome-mahjongg.vala:158
+#: src/gnome-mahjongg.vala:161
 msgid "Use _new map"
 msgstr "Gu_nakan peta baru"
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:212
 msgid "There are no more moves."
 msgstr "Tidak ada jalan lagi."
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:213
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
@@ -293,54 +294,54 @@ msgstr ""
 "langkah Anda dan mencoba mencari solusi, memulai ulang permainan ini, atau "
 "memulai yang baru."
 
-#: src/gnome-mahjongg.vala:212
+#: src/gnome-mahjongg.vala:215
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr ""
 "Anda juga dapat mencoba mengacak ulang, tapi ini tak menjamin suatu solusi."
 
-#: src/gnome-mahjongg.vala:213
+#: src/gnome-mahjongg.vala:216
 msgid "_Undo"
 msgstr "_Batalkan"
 
-#: src/gnome-mahjongg.vala:214
+#: src/gnome-mahjongg.vala:217
 msgid "_Restart"
 msgstr "_Ulangi"
 
-#: src/gnome-mahjongg.vala:215
+#: src/gnome-mahjongg.vala:218
 msgid "_New game"
 msgstr "Permaina_n Baru"
 
-#: src/gnome-mahjongg.vala:216
+#: src/gnome-mahjongg.vala:219
 msgid "_Shuffle"
 msgstr "_Acak"
 
-#: src/gnome-mahjongg.vala:328
+#: src/gnome-mahjongg.vala:331
 msgid "Main game:"
 msgstr "Permainan utama:"
 
-#: src/gnome-mahjongg.vala:338
+#: src/gnome-mahjongg.vala:341
 msgid "Maps:"
 msgstr "Peta:"
 
-#: src/gnome-mahjongg.vala:346
+#: src/gnome-mahjongg.vala:349
 msgid "Tiles:"
 msgstr "Papan:"
 
-#: src/gnome-mahjongg.vala:366
+#: src/gnome-mahjongg.vala:369
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Permainan mencocokkan dengan kartu Mahjongg"
 
-#: src/gnome-mahjongg.vala:372
+#: src/gnome-mahjongg.vala:375
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
-"Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022.\n"
+"Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2022, 2024.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
-"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2018, 2019, 2021, 2022."
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017-2019, 2021-2023."
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -362,16 +363,10 @@ msgstr "Waktu"
 msgid "Moves Left:"
 msgstr "Sisa Langkah:"
 
-#: src/window.vala:34
+#: src/window.vala:31
 msgid "Unpause the game"
 msgstr "Hentikan mengistirahatkan permainan"
 
-#: src/window.vala:40
+#: src/window.vala:37
 msgid "Pause the game"
 msgstr "Istirahatkan permainan"
-
-#~ msgid "GNOME Mahjongg"
-#~ msgstr "GNOME Mahjongg"
-
-#~ msgid "The GNOME Project"
-#~ msgstr "Proyek GNOME"
