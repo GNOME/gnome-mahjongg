@@ -131,6 +131,9 @@
                 </property>
               </object>
             </child>
+            <style>
+              <class name="toolbar"/>
+            </style>
           </object>
         </child>
       </object>
