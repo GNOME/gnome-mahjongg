@@ -48,7 +48,7 @@
     <control>touch</control>
   </recommends>
   <releases>
-    <release version="47~rc" date="2024-08-13" type="development">
+    <release version="47.0" date="2024-09-14">
       <description>
         <p>This release contains several improvements, including:</p>
         <ul>
