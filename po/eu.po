@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-mahjongg master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues\n"
-"POT-Creation-Date: 2023-07-29 06:27+0000\n"
-"PO-Revision-Date: 2026-08-21 17:00+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
+"POT-Creation-Date: 2024-09-08 10:48+0000\n"
+"PO-Revision-Date: 2024-09-14 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -21,7 +21,7 @@ msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.Mahjongg.appdata.xml.in:7
-#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:363
+#: data/org.gnome.Mahjongg.desktop.in:3 src/gnome-mahjongg.vala:366
 #: src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "Mahjongg"
@@ -47,9 +47,9 @@ msgid ""
 "time penalty."
 msgstr "Mahjongg jokoak hasierako diseinu desberdinak ditu, batzuk errazak eta besteak zailak. Larri zaudenean, eskatu argibide bat (honek ordea zigor gisa denbora handiagotzen du)."
 
-#: data/org.gnome.Mahjongg.appdata.xml.in:40
-msgid "Alberto Ruiz"
-msgstr "Alberto Ruiz"
+#: data/org.gnome.Mahjongg.appdata.xml.in:43
+msgid "The Mahjongg Team"
+msgstr "Mahjongg taldea"
 
 #: data/org.gnome.Mahjongg.desktop.in:4
 msgid "Disassemble a pile of tiles by removing matching pairs"
@@ -251,73 +251,73 @@ msgstr "Pausatuta"
 msgid "Print release version and exit"
 msgstr "Erakutsi bertsioaren informazioa eta irten"
 
-#: src/gnome-mahjongg.vala:155
+#: src/gnome-mahjongg.vala:158
 msgid "Do you want to start a new game with this map?"
 msgstr "Mapa honekin joko berria hastea nahi duzu?"
 
-#: src/gnome-mahjongg.vala:156
+#: src/gnome-mahjongg.vala:159
 msgid "If you continue playing the next game will use the new map."
 msgstr "Jokatzen jarraitzen baduzu, hurrengo jokoak mapa berria erabiliko du."
 
-#: src/gnome-mahjongg.vala:157
+#: src/gnome-mahjongg.vala:160
 msgid "_Continue playing"
 msgstr "_Jarraitu jokatzen"
 
-#: src/gnome-mahjongg.vala:158
+#: src/gnome-mahjongg.vala:161
 msgid "Use _new map"
 msgstr "Erabili _mapa berria"
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:212
 msgid "There are no more moves."
 msgstr "Ezin da mugimendu gehiago egin."
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:213
 msgid ""
 "Each puzzle has at least one solution.  You can undo your moves and try and "
 "find the solution, restart this game, or start a new one."
 msgstr "Puzzle bakoitzak gutxienez ebazpen bat dauka. Zure mugimenduak desegin ditzakezu eta irtenbidea aurkitzen saiatu, joko hau berrabiarazi edo hasi berri bat."
 
-#: src/gnome-mahjongg.vala:212
+#: src/gnome-mahjongg.vala:215
 msgid ""
 "You can also try to reshuffle the game, but this does not guarantee a "
 "solution."
 msgstr "Jokoa ausaz nahas dezakezu, baina horrek ez dizu ebazpen bat ziurtatzen."
 
-#: src/gnome-mahjongg.vala:213
+#: src/gnome-mahjongg.vala:216
 msgid "_Undo"
 msgstr "_Desegin"
 
-#: src/gnome-mahjongg.vala:214
+#: src/gnome-mahjongg.vala:217
 msgid "_Restart"
 msgstr "_Berrabiarazi"
 
-#: src/gnome-mahjongg.vala:215
+#: src/gnome-mahjongg.vala:218
 msgid "_New game"
 msgstr "Joko _berria"
 
-#: src/gnome-mahjongg.vala:216
+#: src/gnome-mahjongg.vala:219
 msgid "_Shuffle"
 msgstr "_Nahasi"
 
-#: src/gnome-mahjongg.vala:328
+#: src/gnome-mahjongg.vala:331
 msgid "Main game:"
 msgstr "Joko nagusia:"
 
-#: src/gnome-mahjongg.vala:338
+#: src/gnome-mahjongg.vala:341
 msgid "Maps:"
 msgstr "Mapak:"
 
-#: src/gnome-mahjongg.vala:346
+#: src/gnome-mahjongg.vala:349
 msgid "Tiles:"
 msgstr "Fitxak:"
 
-#: src/gnome-mahjongg.vala:366
+#: src/gnome-mahjongg.vala:369
 msgid "A matching game played with Mahjongg tiles"
 msgstr "Mahjongg fitxak bat etorrarazteko jokoa"
 
-#: src/gnome-mahjongg.vala:372
+#: src/gnome-mahjongg.vala:375
 msgid "translator-credits"
-msgstr "Asier Sarasua Garmendia <asier.sarasua@gmail.com>"
+msgstr "Asier Sarasua Garmendia <asiersarasua@ni.eus>"
 
 #: src/score-dialog.vala:43
 msgid "_Quit"
@@ -339,13 +339,16 @@ msgstr "Ordua"
 msgid "Moves Left:"
 msgstr "Zenbat mugimendu:"
 
-#: src/window.vala:34
+#: src/window.vala:31
 msgid "Unpause the game"
 msgstr "Jokoa jarraitzen du"
 
-#: src/window.vala:40
+#: src/window.vala:37
 msgid "Pause the game"
 msgstr "Jokoa pausarazten du"
+
+#~ msgid "Alberto Ruiz"
+#~ msgstr "Alberto Ruiz"
 
 #~ msgid "GNOME Mahjongg"
 #~ msgstr "GNOME Mahjongg"
