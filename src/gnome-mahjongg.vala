@@ -87,9 +87,16 @@ public class Mahjongg : Adw.Application {
         var theme_action = (SimpleAction) lookup_action ("theme");
         theme_action.set_state (new Variant.@string (theme));
 
+        settings.changed.connect (conf_value_changed_cb);
+
+        conf_value_changed_cb.begin (settings, "background-color");
+        conf_value_changed_cb.begin (settings, "tileset");
+
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
+
+        new_game ();
     }
 
     protected override int handle_local_options (VariantDict options) {
@@ -105,14 +112,6 @@ public class Mahjongg : Adw.Application {
 
     public override void activate () {
         window.present ();
-
-        settings.changed.connect (conf_value_changed_cb);
-
-        conf_value_changed_cb.begin (settings, "background-color");
-        conf_value_changed_cb.begin (settings, "tileset");
-
-        new_game ();
-        game_view.grab_focus ();
     }
 
     private void update_ui () {

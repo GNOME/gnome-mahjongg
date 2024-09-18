@@ -89,7 +89,6 @@ public class GameView : Gtk.DrawingArea {
     }
 
     construct {
-        can_focus = true;
         theme_timer_id = 0;
         init_mouse ();
         set_draw_func (draw_func);
