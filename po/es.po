@@ -6,63 +6,33 @@
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2022-2024.
+# Sergio Gil <yo@sgil.es>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-04-29 19:18+0000\n"
-"PO-Revision-Date: 2024-05-15 16:46+0200\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2024-09-14 11:20+0000\n"
+"PO-Revision-Date: 2024-10-15 19:27+0200\n"
+"Last-Translator: Sergio Gil <yo@sgil.es>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.3\n"
+"X-Generator: Gtranslator 46.0\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:7
-#: data/org.gnome.Mahjongg.desktop.in.in:3 src/gnome-mahjongg.vala:545
+#: data/org.gnome.Mahjongg.desktop.in.in:3
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:8
 #: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
 msgid "Match tiles and clear the board"
 msgstr "Emparejar fichas iguales y limpiar el tablero"
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:10
-msgid ""
-"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
-"are stacked on the board at the start of the game. The goal is to remove all "
-"the tiles in as little time as possible. Select two matching tiles and they "
-"will disappear from the board, but you can only select a tile if there is an "
-"empty space to its left or right at the same level. Be careful: tiles that "
-"look alike may actually be slightly different."
-msgstr ""
-"Juego de combinación de fichas para un jugador, comúnmente conocido como "
-"solitario Mahjong. Las fichas se apilan en el tablero al comienzo del juego. "
-"El objetivo es eliminar todas las fichas en el menor tiempo posible. "
-"Seleccione dos fichas iguales y desaparecerán del tablero, pero solo puede "
-"seleccionar una ficha si hay un espacio vacío a su izquierda o derecha en el "
-"mismo nivel. Tenga cuidado: los mosaicos que parecen iguales pueden en "
-"realidad ser ligeramente diferentes."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:19
-msgid ""
-"You can choose from a variety of starting layouts, some easy and some "
-"difficult. If you get stuck, you can ask for a hint, but this adds a large "
-"time penalty."
-msgstr ""
-"Puede elegir entre una variedad de diseños iniciales, algunos fáciles y "
-"otros difíciles. Si se queda atascado, puede pedir una pista, pero esto "
-"añade una gran penalización de tiempo."
-
-#: data/org.gnome.Mahjongg.appdata.xml.in.in:48 src/gnome-mahjongg.vala:371
-msgid "The Mahjongg Team"
-msgstr "El equipo de Mahjong"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:6
@@ -80,6 +50,46 @@ msgstr "Altura de la ventana en píxeles"
 #: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+msgid ""
+"Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
+"are stacked on the board at the start of the game. The goal is to remove all "
+"the tiles in as little time as possible. Select two matching tiles and they "
+"will disappear from the board, but you can only select a tile if there is an "
+"empty space to its left or right at the same level. Be careful: tiles that "
+"look alike may actually be slightly different."
+msgstr ""
+"Juego de combinación de fichas para un jugador, comúnmente conocido como "
+"solitario Mahjong. Las fichas se apilan en el tablero al comienzo del juego. "
+"El objetivo es eliminar todas las fichas en el menor tiempo posible. "
+"Seleccione dos fichas iguales y desaparecerán del tablero, pero solo puede "
+"seleccionar una ficha si hay un espacio vacío a su izquierda o derecha en el "
+"mismo nivel. Tenga cuidado: los mosaicos que parecen iguales pueden en "
+"realidad ser ligeramente diferentes."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+msgid ""
+"You can choose from a variety of starting layouts, some easy and some "
+"difficult. If you get stuck, you can ask for a hint, but this adds a large "
+"time penalty."
+msgstr ""
+"Puede elegir entre una variedad de diseños iniciales, algunos fáciles y "
+"otros difíciles. Si se queda atascado, puede pedir una pista, pero esto "
+"añade una gran penalización de tiempo."
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "Mahjongg en tema claro"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "Mahjongg en tema oscuro"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
+msgid "The Mahjongg Team"
+msgstr "El equipo de Mahjong"
 
 #: data/ui/help-overlay.ui:8
 msgctxt "shortcut window"
@@ -136,7 +146,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:219
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
 msgid "_New Game"
 msgstr "Juego _nuevo"
 
@@ -154,8 +164,8 @@ msgstr "_Diseño"
 
 #: data/ui/menu.ui:23
 msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "Fácil"
+msgid "Turtle"
+msgstr "Tortuga"
 
 #: data/ui/menu.ui:26
 msgctxt "mahjongg map name"
@@ -249,25 +259,29 @@ msgstr "Ay_uda"
 msgid "_About Mahjongg"
 msgstr "_Acerca de Mahjongg"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:25
 msgid "No Scores"
 msgstr "Sin puntuación"
 
-#: data/ui/score-dialog.ui:27
+#: data/ui/score-dialog.ui:26
 msgid "Finish a game to see scores"
 msgstr "Termina una partida para ver los resultados"
 
-#: data/ui/score-dialog.ui:44
+#: data/ui/score-dialog.ui:48
 msgid "Player"
 msgstr "Jugador"
 
-#: data/ui/score-dialog.ui:50
+#: data/ui/score-dialog.ui:55
 msgid "Time"
 msgstr "Tiempo"
 
-#: data/ui/score-dialog.ui:56
+#: data/ui/score-dialog.ui:62
 msgid "Date"
 msgstr "Fecha"
+
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+msgid "_Quit"
+msgstr "_Salir"
 
 #: data/ui/window.ui:21
 msgid "Undo"
@@ -285,15 +299,15 @@ msgstr "Menú principal"
 msgid "Show Hint"
 msgstr "Mostrar una pista"
 
-#: src/gnome-mahjongg.vala:26
+#: src/gnome-mahjongg.vala:24
 msgid "Print release version and exit"
 msgstr "Mostrar el número de versión y salir"
 
-#: src/gnome-mahjongg.vala:207
+#: src/gnome-mahjongg.vala:197
 msgid "No Moves Left"
 msgstr "Sin movimientos restantes"
 
-#: src/gnome-mahjongg.vala:208
+#: src/gnome-mahjongg.vala:199
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -301,26 +315,22 @@ msgstr ""
 "Puede deshacer sus movimientos e intentar encontrar una solución o "
 "reorganizar las fichas restantes."
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:200
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Puede deshacer sus movimientos e intentar encontrar la solución o empezar un "
 "juego nuevo."
 
-#: src/gnome-mahjongg.vala:211
+#: src/gnome-mahjongg.vala:204
 msgid "_Continue"
 msgstr "_Continuar"
 
-#: src/gnome-mahjongg.vala:215
+#: src/gnome-mahjongg.vala:207
 msgid "_Reshuffle"
 msgstr "_Revolver"
 
-#: src/gnome-mahjongg.vala:221
-msgid "_Quit"
-msgstr "_Salir"
-
-#: src/gnome-mahjongg.vala:378
+#: src/gnome-mahjongg.vala:355
 msgid "translator-credits"
 msgstr ""
 "Rodrigo Lledó <rodhos-hp@ubuntu.com>, 2024\n"
@@ -330,38 +340,42 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:311
 msgid "Clear All Scores?"
 msgstr "¿Borrar todas las puntuaciones?"
 
-#: src/score-dialog.vala:309
+#: src/score-dialog.vala:312
 msgid "This will clear every score for every layout."
 msgstr "Esto borrará todas las puntuaciones de cada diseño."
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:316
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:317
 msgid "Clear All"
 msgstr "Borrar todo"
 
-#: src/window.vala:59
+#: src/window.vala:54
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Movimientos restantes: %2u"
 
-#: src/window.vala:64
+#: src/window.vala:58
 msgid "Paused"
 msgstr "Detenido"
 
-#: src/window.vala:66
+#: src/window.vala:60
 msgid "Resume Game"
 msgstr "Reanudar partida"
 
-#: src/window.vala:72
+#: src/window.vala:65
 msgid "Pause Game"
 msgstr "Pausar partida"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Easy"
+#~ msgstr "Fácil"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
