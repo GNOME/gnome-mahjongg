@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-05-28 08:48+0000\n"
-"PO-Revision-Date: 2024-06-08 21:25+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2024-09-14 11:20+0000\n"
+"PO-Revision-Date: 2024-11-07 22:18+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 46.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:501
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
 msgid "Mahjongg"
 msgstr "מא-ג׳ונג"
 
@@ -73,7 +73,16 @@ msgstr ""
 "ניתן לבחור מבין מגוון של פריסות התחלה, חלקן פשוטות וחלקן מסובכות. אם נתקעת, "
 "ניתן לבקש רמז, אך פעולה זו תוסיף לך זמן ענישה."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:47 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+msgid "Mahjongg in Light Style"
+msgstr "מא-ג׳ונג בסגנון בהיר"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+msgid "Mahjongg in Dark Style"
+msgstr "מא-ג׳ונג בסגנון כהה"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
 msgid "The Mahjongg Team"
 msgstr "צוות מא-ג׳ונג"
 
@@ -136,7 +145,7 @@ msgctxt "shortcut window"
 msgid "Quit"
 msgstr "יציאה"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
 msgid "_New Game"
 msgstr "_משחק חדש"
 
@@ -154,8 +163,8 @@ msgstr "_פריסה"
 
 #: data/ui/menu.ui:23
 msgctxt "mahjongg map name"
-msgid "Easy"
-msgstr "קל"
+msgid "Turtle"
+msgstr "צב"
 
 #: data/ui/menu.ui:26
 msgctxt "mahjongg map name"
@@ -257,19 +266,19 @@ msgstr "אין תוצאות"
 msgid "Finish a game to see scores"
 msgstr "יש לסיים משחק על מנת לצפות בתוצאות"
 
-#: data/ui/score-dialog.ui:43
+#: data/ui/score-dialog.ui:48
 msgid "Player"
 msgstr "שחקן"
 
-#: data/ui/score-dialog.ui:49
+#: data/ui/score-dialog.ui:55
 msgid "Time"
 msgstr "זמן"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:62
 msgid "Date"
 msgstr "תאריך"
 
-#: data/ui/score-dialog.ui:111 src/gnome-mahjongg.vala:210
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
 msgid "_Quit"
 msgstr "י_ציאה"
 
@@ -313,11 +322,11 @@ msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "ניתן לבטל את המהלכים שלך ולנסות למצוא את הפתרון, או להתחיל משחק חדש."
 
-#: src/gnome-mahjongg.vala:202
+#: src/gnome-mahjongg.vala:204
 msgid "_Continue"
 msgstr "ה_משך"
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:207
 msgid "_Reshuffle"
 msgstr "ער_בוב"
 
@@ -335,19 +344,19 @@ msgstr ""
 "\n"
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
-#: src/score-dialog.vala:284
+#: src/score-dialog.vala:311
 msgid "Clear All Scores?"
 msgstr "ניקוי כל התוצאות?"
 
-#: src/score-dialog.vala:285
+#: src/score-dialog.vala:312
 msgid "This will clear every score for every layout."
 msgstr "זה ינקה כל תוצאה בכל פריסה."
 
-#: src/score-dialog.vala:289
+#: src/score-dialog.vala:316
 msgid "_Cancel"
 msgstr "_ביטול"
 
-#: src/score-dialog.vala:290
+#: src/score-dialog.vala:317
 msgid "Clear All"
 msgstr "ניקוי הכול"
 
@@ -367,6 +376,10 @@ msgstr "חידוש המשחק"
 #: src/window.vala:65
 msgid "Pause Game"
 msgstr "השהיית המשחק"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Easy"
+#~ msgstr "קל"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
