@@ -75,11 +75,6 @@
   <developer id="@developer-id@">
     <name>The Mahjongg Team</name>
   </developer>
-  <kudos>
-    <kudo>HiDpiIcon</kudo>
-    <kudo>ModernToolkit</kudo>
-    <kudo>UserDocs</kudo>
-  </kudos>
   <translation type="gettext">@project-name@</translation>
   <content_rating type="oars-1.1" />
 </component>
