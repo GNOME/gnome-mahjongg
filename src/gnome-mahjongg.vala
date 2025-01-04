@@ -455,7 +455,17 @@ public class Mahjongg : Adw.Application {
     }
 
     private void help_cb () {
-        Gtk.show_uri (window, "help:gnome-mahjongg", Gdk.CURRENT_TIME);
+        var display = Gdk.Display.get_default ();
+        var context = display.get_app_launch_context ();
+
+        GLib.AppInfo.launch_default_for_uri_async.begin ("help:gnome-mahjongg", context, null, (obj, res) => {
+            try {
+                GLib.AppInfo.launch_default_for_uri_async.end (res);
+            } catch (Error error) {
+                warning ("Could not open help: %s", error.message);
+            }
+        });
+
     }
 
     private void load_maps () {
