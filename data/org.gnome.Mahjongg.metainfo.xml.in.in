@@ -43,10 +43,10 @@
   <requires>
     <display_length compare="ge">360</display_length>
   </requires>
-  <recommends>
+  <supports>
     <control>pointing</control>
     <control>touch</control>
-  </recommends>
+  </supports>
   <releases>
     <release version="47.0" date="2024-09-14">
       <description>
