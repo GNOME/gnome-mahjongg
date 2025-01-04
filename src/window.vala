@@ -19,6 +19,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         var menu_builder = new Gtk.Builder.from_resource ("/org/gnome/Mahjongg/ui/menu.ui");
         var menu_model = menu_builder.get_object ("menu") as MenuModel;
         var layout_menu = menu_builder.get_object ("layout_menu") as Menu;
+        var layout_rotate_menu = menu_builder.get_object ("layout_rotate_menu") as Menu;
         var theme_menu = menu_builder.get_object ("theme_menu") as Menu;
 
         layout_menu.remove_all ();
@@ -30,6 +31,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
             menu_item.set_action_and_target_value ("app.layout", new Variant.string (map.name));
             layout_menu.append_item (menu_item);
         }
+        layout_menu.append_section (null, layout_rotate_menu);
 
         foreach (var theme in themes) {
             var theme_name = theme[0:1].up () + theme[1:].split (".", -1)[0];

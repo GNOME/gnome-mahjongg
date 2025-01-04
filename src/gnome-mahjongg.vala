@@ -34,6 +34,7 @@ public class Mahjongg : Adw.Application {
         { "restart-game", restart_game_cb },
         { "scores", scores_cb },
         { "layout", null, "s", "''", layout_cb },
+        { "layout-rotate", null, null, "false", layout_rotate_cb },
         { "background-color", null, "s", "''", background_color_cb },
         { "theme", null, "s", "''", theme_cb },
         { "help", help_cb },
@@ -78,6 +79,10 @@ public class Mahjongg : Adw.Application {
         var layout = settings.get_string ("mapset");
         var layout_action = (SimpleAction) lookup_action ("layout");
         layout_action.set_state (new Variant.@string (layout));
+
+        var layout_rotate = settings.get_boolean ("map-rotate");
+        var layout_rotate_action = (SimpleAction) lookup_action ("layout-rotate");
+        layout_rotate_action.set_state (new Variant.@boolean (layout_rotate));
 
         var background_color = settings.get_string ("background-color");
         var background_color_action = (SimpleAction) lookup_action ("background-color");
@@ -160,7 +165,7 @@ public class Mahjongg : Adw.Application {
             window.add_css_class (theme_name);
         }
         else if (key == "mapset") {
-            new_game ();
+            load_new_game ();
         }
         else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();
@@ -266,6 +271,12 @@ public class Mahjongg : Adw.Application {
         action.set_state (variant);
         if (settings.get_string ("mapset") != layout)
             settings.set_string ("mapset", layout);
+    }
+
+    private void layout_rotate_cb (SimpleAction action, Variant variant) {
+        var rotate = !settings.get_boolean ("map-rotate");
+        action.set_state (new Variant.boolean (rotate));
+        settings.set_boolean ("map-rotate", rotate);
     }
 
     private void background_color_cb (SimpleAction action, Variant variant) {
@@ -404,19 +415,34 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         update_ui ();
     }
 
-    private void new_game () {
-        Map? map = null;
+    private Map find_map () {
         foreach (var m in maps) {
             if (m.name == settings.get_string ("mapset")) {
-                map = m;
-                break;
+                return m;
             }
         }
-        if (map == null) {
-            map = maps.nth_data (0);
+        // Map wasn't found. Return the default (first) map.
+        Map map = maps.nth_data (0);
+        var layout_action = (SimpleAction) lookup_action ("layout");
+        layout_cb (layout_action, new Variant.@string (map.name));
+        return map;
+    }
+
+    private void new_game () {
+        var map_rotate = settings.get_boolean ("map-rotate");
+        if (map_rotate) {
+            Map map = find_map ();
+            var map_index = maps.index (map);
+            map_index = (map_index + 1) % (int) maps.length ();
+            map = maps.nth_data (map_index);
             var layout_action = (SimpleAction) lookup_action ("layout");
-            layout_action.set_state (new Variant.@string (map.name));
+            layout_cb (layout_action, new Variant.@string (map.name));
         }
+        load_new_game ();
+    }
+
+    private void load_new_game () {
+        Map map = find_map ();
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);

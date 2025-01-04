@@ -50,6 +50,12 @@
             <attribute name="label" translatable="yes" context="mahjongg map name">Difficult</attribute>
           </item>
         </section>
+        <section id="layout_rotate_menu">
+          <item>
+            <attribute name="label" translatable="yes">_Rotate Layout</attribute>
+            <attribute name="action">app.layout-rotate</attribute>
+          </item>
+        </section>
       </submenu>
       <submenu>
         <attribute name="label" translatable="yes">_Background</attribute>
