@@ -34,7 +34,7 @@ public class Mahjongg : Adw.Application {
         { "restart-game", restart_game_cb },
         { "scores", scores_cb },
         { "layout", null, "s", "''", layout_cb },
-        { "layout-rotate", null, null, "false", layout_rotate_cb },
+        { "layout-rotation", null, "s", "''", layout_rotation_cb },
         { "background-color", null, "s", "''", background_color_cb },
         { "theme", null, "s", "''", theme_cb },
         { "help", help_cb },
@@ -80,9 +80,9 @@ public class Mahjongg : Adw.Application {
         var layout_action = (SimpleAction) lookup_action ("layout");
         layout_action.set_state (new Variant.@string (layout));
 
-        var layout_rotate = settings.get_boolean ("map-rotate");
-        var layout_rotate_action = (SimpleAction) lookup_action ("layout-rotate");
-        layout_rotate_action.set_state (new Variant.@boolean (layout_rotate));
+        var layout_rotation = settings.get_string ("map-rotation");
+        var layout_rotation_action = (SimpleAction) lookup_action ("layout-rotation");
+        layout_rotation_action.set_state (new Variant.@string (layout_rotation));
 
         var background_color = settings.get_string ("background-color");
         var background_color_action = (SimpleAction) lookup_action ("background-color");
@@ -273,10 +273,11 @@ public class Mahjongg : Adw.Application {
             settings.set_string ("mapset", layout);
     }
 
-    private void layout_rotate_cb (SimpleAction action, Variant variant) {
-        var rotate = !settings.get_boolean ("map-rotate");
-        action.set_state (new Variant.boolean (rotate));
-        settings.set_boolean ("map-rotate", rotate);
+    private void layout_rotation_cb (SimpleAction action, Variant variant) {
+        var layout_rotation = variant.get_string ();
+        action.set_state (variant);
+        if (settings.get_string ("map-rotation") != layout_rotation)
+            settings.set_string ("map-rotation", layout_rotation);
     }
 
     private void background_color_cb (SimpleAction action, Variant variant) {
@@ -429,8 +430,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void new_game () {
-        var map_rotate = settings.get_boolean ("map-rotate");
-        if (map_rotate) {
+        if ("sequential" == settings.get_string ("map-rotation")) {
             Map map = find_map ();
             var map_index = maps.index (map);
             map_index = (map_index + 1) % (int) maps.length ();

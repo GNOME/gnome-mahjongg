@@ -12,8 +12,8 @@
     <key name="mapset" type="s">
       <default>"Easy"</default>
     </key>
-    <key name="map-rotate" type="b">
-      <default>false</default>
+    <key name="map-rotation" type="s">
+      <default>"single"</default>
     </key>
     <key name="background-color" enum="@app-id@.BackgroundColor">
       <default>"system"</default>
