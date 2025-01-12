@@ -52,7 +52,7 @@
         </section>
       </submenu>
       <submenu>
-        <attribute name="label" translatable="yes">_Layout Rotation</attribute>
+        <attribute name="label" translatable="yes">Layout Ro_tation</attribute>
         <section>
           <item>
             <attribute name="label" translatable="yes">No Rotation</attribute>
