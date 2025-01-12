@@ -427,7 +427,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private Map get_next_map (bool rotate_map) {
-        Map map = find_map ();
+        var map = find_map ();
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
@@ -453,7 +453,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
      * map according to the ``map-rotation`` setting.
      */
     private void new_game (bool rotate_map = true) {
-        Map map = get_next_map (rotate_map);
+        var map = get_next_map (rotate_map);
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
