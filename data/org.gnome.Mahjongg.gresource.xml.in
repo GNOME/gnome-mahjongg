@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/org/gnome/Mahjongg/gtk">
+  <gresource prefix="@base-id-slashed@/gtk">
     <file alias="help-overlay.ui" preprocess="xml-stripblanks">ui/help-overlay.ui</file>
   </gresource>
-  <gresource prefix="/org/gnome/Mahjongg">
+  <gresource prefix="@base-id-slashed@">
+    <file alias="metainfo.xml" preprocess="xml-stripblanks">@app-id@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">ui/menu.ui</file>
     <file preprocess="xml-stripblanks">ui/score-dialog.ui</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>

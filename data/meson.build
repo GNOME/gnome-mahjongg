@@ -93,10 +93,18 @@ if appstreamcli.found()
 endif
 
 # Resources
+resources_conf = configuration_data()
+resources_conf.set('app-id', app_id)
+resources_conf.set('base-id-slashed', '/' + base_id.replace('.', '/'))
 resources = gnome.compile_resources(
   'resources',
-  '@0@.gresource.xml'.format(base_id),
-  c_name: 'resources'
+  configure_file(
+    input: '@0@.gresource.xml.in'.format(base_id),
+    output: '@BASENAME@',
+    configuration: resources_conf,
+  ),
+  source_dir : meson.current_source_dir(),
+  dependencies: metainfo_file,
 )
 
 install_data('maps' / 'mahjongg.map', install_dir: pkgdatadir / 'maps')
