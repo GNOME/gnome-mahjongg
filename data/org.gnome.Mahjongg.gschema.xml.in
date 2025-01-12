@@ -4,6 +4,10 @@
     <value nick="light" value="1"/>
     <value nick="dark" value="4"/>
   </enum>
+  <enum id="@app-id@.MapRotation">
+    <value nick="single" value="0"/>
+    <value nick="sequential" value="1"/>
+  </enum>
 
   <schema id="@app-id@" path="/org/gnome/Mahjongg/" gettext-domain="@gettext-package@">
     <key name="tileset" type="s">
@@ -12,7 +16,7 @@
     <key name="mapset" type="s">
       <default>"Easy"</default>
     </key>
-    <key name="map-rotation" type="s">
+    <key name="map-rotation" enum="@app-id@.MapRotation">
       <default>"single"</default>
     </key>
     <key name="background-color" enum="@app-id@.BackgroundColor">
