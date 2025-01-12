@@ -341,19 +341,13 @@ public class Mahjongg : Adw.Application {
             null
         };
 
-        var about_dialog = new Adw.AboutDialog () {
-            application_name = Environment.get_application_name (),
-            application_icon = APP_ID,
-            developer_name = _("The Mahjongg Team"),
-            version = VERSION,
-            copyright = "Copyright © 1998–2008 Free Software Foundation, Inc.",
+        var about_dialog = new Adw.AboutDialog.from_appdata ("/org/gnome/Mahjongg/metainfo.xml", VERSION) {
+            copyright = """Copyright © 1998–2025 Mahjongg Contributors
+Copyright © 1998–2008 Free Software Foundation, Inc.""",
             developers = developers,
             artists = artists,
             documenters = documenters,
-            license_type = Gtk.License.GPL_2_0,
             translator_credits = _("translator-credits"),
-            website = "https://gitlab.gnome.org/GNOME/gnome-mahjongg",
-            issue_url = "https://gitlab.gnome.org/GNOME/gnome-mahjongg/-/issues/new",
         };
         about_dialog.present (window);
     }
