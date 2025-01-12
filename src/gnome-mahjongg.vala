@@ -269,7 +269,7 @@ public class Mahjongg : Adw.Application {
         if (settings.get_string ("mapset") != layout) {
             settings.set_string ("mapset", layout);
             // Load a new game iff the layout was manually changed.
-            new_game(false);
+            new_game (false);
         }
     }
 
@@ -426,7 +426,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         return maps.nth_data (0);
     }
 
-    private Map get_next_map(bool rotate_map) {
+    private Map get_next_map (bool rotate_map) {
         Map map = find_map ();
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
@@ -453,7 +453,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
      * map according to the ``map-rotation`` setting.
      */
     private void new_game (bool rotate_map = true) {
-        Map map = get_next_map(rotate_map);
+        Map map = get_next_map (rotate_map);
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
