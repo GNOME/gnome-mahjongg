@@ -164,9 +164,6 @@ public class Mahjongg : Adw.Application {
 
             window.add_css_class (theme_name);
         }
-        else if (key == "mapset") {
-            load_new_game ();
-        }
         else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();
             var color_scheme = settings.get_enum ("background-color");
@@ -269,8 +266,11 @@ public class Mahjongg : Adw.Application {
     private void layout_cb (SimpleAction action, Variant variant) {
         var layout = variant.get_string ();
         action.set_state (variant);
-        if (settings.get_string ("mapset") != layout)
+        if (settings.get_string ("mapset") != layout) {
             settings.set_string ("mapset", layout);
+            // Load a new game iff the layout was manually changed.
+            new_game(false);
+        }
     }
 
     private void layout_rotation_cb (SimpleAction action, Variant variant) {
@@ -423,26 +423,37 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             }
         }
         // Map wasn't found. Return the default (first) map.
-        Map map = maps.nth_data (0);
-        var layout_action = (SimpleAction) lookup_action ("layout");
-        layout_cb (layout_action, new Variant.@string (map.name));
+        return maps.nth_data (0);
+    }
+
+    private Map get_next_map(bool rotate_map) {
+        Map map = find_map ();
+        if (rotate_map) {
+            switch (settings.get_string ("map-rotation")) {
+            case "sequential":
+                var map_index = maps.index (map);
+                map_index = (map_index + 1) % (int) maps.length ();
+                map = maps.nth_data (map_index);
+                break;
+            }
+        }
+
+        if (settings.get_string ("mapset") != map.name) {
+            var layout_action = (SimpleAction) lookup_action ("layout");
+            layout_action.set_state (new Variant.@string (map.name));
+            settings.set_string ("mapset", map.name);
+        }
         return map;
     }
 
-    private void new_game () {
-        if ("sequential" == settings.get_string ("map-rotation")) {
-            Map map = find_map ();
-            var map_index = maps.index (map);
-            map_index = (map_index + 1) % (int) maps.length ();
-            map = maps.nth_data (map_index);
-            var layout_action = (SimpleAction) lookup_action ("layout");
-            layout_cb (layout_action, new Variant.@string (map.name));
-        }
-        load_new_game ();
-    }
-
-    private void load_new_game () {
-        Map map = find_map ();
+    /**
+     * Starts a new game.
+     *
+     * @param rotate_map If starting a new game should automatically rotate the
+     * map according to the ``map-rotation`` setting.
+     */
+    private void new_game (bool rotate_map = true) {
+        Map map = get_next_map(rotate_map);
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
