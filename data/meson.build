@@ -12,6 +12,7 @@ install_data(
 # GSchema file
 gschema_conf = configuration_data()
 gschema_conf.set('app-id', app_id)
+gschema_conf.set('base-id-slashed', '/' + base_id.replace('.', '/'))
 gschema_conf.set('gettext-package', meson.project_name())
 
 configure_file(
