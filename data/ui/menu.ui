@@ -91,16 +91,22 @@
             <attribute name="target">dark</attribute>
           </item>
         </section>
-        <section id="theme_menu">
+        <section>
           <attribute name="label" translatable="yes">Theme</attribute>
           <item>
             <attribute name="label" translatable="yes" context="mahjongg theme name">Postmodern</attribute>
+            <attribute name="action">app.theme</attribute>
+            <attribute name="target">postmodern</attribute>
           </item>
           <item>
             <attribute name="label" translatable="yes" context="mahjongg theme name">Smooth</attribute>
+            <attribute name="action">app.theme</attribute>
+            <attribute name="target">smooth</attribute>
           </item>
           <item>
             <attribute name="label" translatable="yes" context="mahjongg theme name">Educational</attribute>
+            <attribute name="action">app.theme</attribute>
+            <attribute name="target">educational</attribute>
           </item>
         </section>
       </submenu>

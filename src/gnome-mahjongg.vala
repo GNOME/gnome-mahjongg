@@ -75,7 +75,7 @@ public class Mahjongg : Adw.Application {
         view_click_controller.pressed.connect (on_click);
         game_view.add_controller (view_click_controller);
 
-        window = new MahjonggWindow (this, game_view, maps, load_themes ());
+        window = new MahjonggWindow (this, game_view, maps);
 
         var layout = settings.get_string ("mapset");
         var layout_action = (SimpleAction) lookup_action ("layout");
@@ -90,6 +90,10 @@ public class Mahjongg : Adw.Application {
         background_color_action.set_state (new Variant.@string (background_color));
 
         var theme = settings.get_string ("tileset");
+        if (theme == "postmodern.svg" || theme == "smooth.png" || theme == "educational.png")
+            // Migrate old theme names
+            settings.set_string ("tileset", theme.split (".")[0]);
+
         var theme_action = (SimpleAction) lookup_action ("theme");
         theme_action.set_state (new Variant.@string (theme));
 
@@ -145,25 +149,25 @@ public class Mahjongg : Adw.Application {
 
     private async void conf_value_changed_cb (Settings settings, string key) {
         if (key == "tileset") {
-            string previous_theme_name = null;
+            string previous_theme = null;
 
             if (game_view.theme != null)
-                previous_theme_name = Path.get_basename (game_view.theme).split (".", -1)[0];
+                previous_theme = Path.get_basename (game_view.theme);
 
             var theme = settings.get_string ("tileset");
-            var theme_name = theme.split (".", -1)[0];
-            game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", theme);
+            var theme_path = "/org/gnome/Mahjongg/themes/";
+            game_view.theme = theme_path + theme;
 
             if (game_view.theme == null) {
                 /* Failed to load theme, fall back to default */
-                var default_theme = settings.get_default_value ("tileset").get_string ();
-                game_view.theme = Path.build_filename (DATA_DIRECTORY, "themes", default_theme);
+                theme = settings.get_default_value ("tileset").get_string ();
+                game_view.theme = theme_path + theme;
             }
 
-            if (previous_theme_name != null)
-                window.remove_css_class (previous_theme_name);
+            if (previous_theme != null)
+                window.remove_css_class (previous_theme);
 
-            window.add_css_class (theme_name);
+            window.add_css_class (theme);
         }
         else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();
@@ -234,34 +238,6 @@ public class Mahjongg : Adw.Application {
     private void show_scores (HistoryEntry? selected_entry = null) {
         score_dialog = new ScoreDialog (history, selected_entry, maps);
         score_dialog.present (window);
-    }
-
-    private List<string> load_themes () {
-        List<string> themes = null;
-
-        Dir dir;
-        try {
-            dir = Dir.open (Path.build_filename (DATA_DIRECTORY, "themes"));
-        }
-        catch (FileError e) {
-            return themes;
-        }
-
-        while (true) {
-            var s = dir.read_name ();
-            if (s == null)
-                break;
-
-            if (s.has_suffix (".xpm") || s.has_suffix (".svg") || s.has_suffix (".gif") ||
-                s.has_suffix (".png") || s.has_suffix (".jpg") || s.has_suffix (".xbm"))
-                /* List default theme first */
-                if (s == settings.get_default_value ("tileset").get_string ())
-                    themes.insert (s, 0);
-                else
-                    themes.append (s);
-        }
-
-        return themes;
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {

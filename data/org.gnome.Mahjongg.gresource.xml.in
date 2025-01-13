@@ -3,6 +3,11 @@
   <gresource prefix="@base-id-slashed@/gtk">
     <file alias="help-overlay.ui" preprocess="xml-stripblanks">ui/help-overlay.ui</file>
   </gresource>
+  <gresource prefix="@base-id-slashed@/themes">
+    <file alias="postmodern">themes/postmodern.svg</file>
+    <file alias="smooth">themes/smooth.png</file>
+    <file alias="educational">themes/educational.png</file>
+  </gresource>
   <gresource prefix="@base-id-slashed@">
     <file alias="metainfo.xml" preprocess="xml-stripblanks">@app-id@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">ui/menu.ui</file>

@@ -109,9 +109,6 @@ resources = gnome.compile_resources(
 )
 
 install_data('maps' / 'mahjongg.map', install_dir: pkgdatadir / 'maps')
-install_data('themes' / 'postmodern.svg', install_dir: pkgdatadir / 'themes')
-install_data('themes' / 'smooth.png', install_dir: pkgdatadir / 'themes')
-install_data('themes' / 'educational.png', install_dir: pkgdatadir / 'themes')
 
 # Man page
 install_man('@0@.6'.format(meson.project_name()))

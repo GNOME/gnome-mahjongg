@@ -48,12 +48,20 @@ public class GameView : Gtk.DrawingArea {
     public string? theme {
         get { return _theme; }
         set {
+            Bytes bytes = null;
             Gdk.Texture texture = null;
             theme_handle = null;
             tile_pattern = null;
 
             try {
-                theme_handle = new Rsvg.Handle.from_file (value);
+                bytes = resources_lookup_data (value, ResourceLookupFlags.NONE);
+            } catch (Error e) {
+                warning ("Theme %s does not exist", value);
+                return;
+            }
+
+            try {
+                theme_handle = new Rsvg.Handle.from_data (bytes.get_data ());
 
                 double width, height;
                 theme_handle.get_intrinsic_size_in_pixels (out width, out height);
@@ -62,7 +70,7 @@ public class GameView : Gtk.DrawingArea {
                 theme_height = (int)height;
             } catch (Error e) {
                 try {
-                    texture = Gdk.Texture.from_filename (value);
+                    texture = Gdk.Texture.from_bytes (bytes);
                     theme_width = texture.width;
                     theme_height = texture.height;
                 } catch (Error e) {

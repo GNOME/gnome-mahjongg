@@ -12,7 +12,7 @@
 
   <schema id="@app-id@" path="@base-id-slashed@/" gettext-domain="@gettext-package@">
     <key name="tileset" type="s">
-      <default>"postmodern.svg"</default>
+      <default>"postmodern"</default>
     </key>
     <key name="mapset" type="s">
       <default>"Easy"</default>
