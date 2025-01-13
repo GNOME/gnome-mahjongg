@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-01-12 20:18+0000\n"
-"PO-Revision-Date: 2025-01-12 23:20+0200\n"
+"POT-Creation-Date: 2025-01-13 02:34+0000\n"
+"PO-Revision-Date: 2025-01-13 12:34+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:544
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:548
 msgid "Mahjongg"
 msgstr "Магджонґ"
 
@@ -38,15 +38,15 @@ msgstr "Знайдіть однакові плитки і очистіть до�
 msgid "game;strategy;puzzle;board;"
 msgstr "гра;стратегія;головоломка;настільна;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:27
+#: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "Width of the window in pixels"
 msgstr "Ширина вікна у точках"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:31
+#: data/org.gnome.Mahjongg.gschema.xml.in:32
 msgid "Height of the window in pixels"
 msgstr "Висота вікна у точках"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:35
+#: data/org.gnome.Mahjongg.gschema.xml.in:36
 msgid "true if the window is maximized"
 msgstr "вказано, якщо вікно має максимальний розмір"
 
@@ -103,51 +103,57 @@ msgid "New Game"
 msgstr "Розпочати нову гру"
 
 #: data/ui/help-overlay.ui:18
+#| msgid "Restart Game"
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "Перезапустити гру"
+
+#: data/ui/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Pause Game"
 msgstr "Призупинити гру"
 
-#: data/ui/help-overlay.ui:24
+#: data/ui/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "Скасувати"
 
-#: data/ui/help-overlay.ui:30
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "Повторити"
 
-#: data/ui/help-overlay.ui:36
+#: data/ui/help-overlay.ui:42
 msgctxt "shortcut window"
 msgid "Show Hint"
 msgstr "Показати підказку"
 
-#: data/ui/help-overlay.ui:43
+#: data/ui/help-overlay.ui:49
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Загальне"
 
-#: data/ui/help-overlay.ui:47
+#: data/ui/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Show Main Menu"
 msgstr "Показати головне меню"
 
-#: data/ui/help-overlay.ui:53
+#: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Показати клавіатурні скорочення"
 
-#: data/ui/help-overlay.ui:59
+#: data/ui/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Показати довідку"
 
-#: data/ui/help-overlay.ui:65
+#: data/ui/help-overlay.ui:71
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Вийти"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:211
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:212
 msgid "_New Game"
 msgstr "_Створити гру"
 
@@ -218,63 +224,76 @@ msgid "Layout Ro_tation"
 msgstr "О_бертання компонування"
 
 #: data/ui/menu.ui:58
+#| msgid "No Rotation"
+msgctxt "layout rotation"
 msgid "No Rotation"
 msgstr "Без обертання"
 
 #: data/ui/menu.ui:63
+#| msgid "Sequential"
+msgctxt "layout rotation"
 msgid "Sequential"
 msgstr "Послідовно"
 
-#: data/ui/menu.ui:70
+#: data/ui/menu.ui:68
+msgctxt "layout rotation"
+msgid "Random"
+msgstr "Випадково"
+
+#: data/ui/menu.ui:75
 msgid "_Appearance"
 msgstr "В_игляд"
 
-#: data/ui/menu.ui:72
-#| msgid "_Background"
+#: data/ui/menu.ui:77
 msgid "Background"
 msgstr "Тло"
 
-#: data/ui/menu.ui:74
-msgid "Follow System"
-msgstr "Використовувати системний"
-
 #: data/ui/menu.ui:79
+#| msgid "Follow System"
+msgctxt "background color"
+msgid "Follow System"
+msgstr "Використовувати системне"
+
+#: data/ui/menu.ui:84
+#| msgid "Light"
+msgctxt "background color"
 msgid "Light"
 msgstr "Світла"
 
-#: data/ui/menu.ui:84
+#: data/ui/menu.ui:89
+#| msgid "Dark"
+msgctxt "background color"
 msgid "Dark"
 msgstr "Темна"
 
-#: data/ui/menu.ui:90
-#| msgid "_Theme"
+#: data/ui/menu.ui:95
 msgid "Theme"
 msgstr "Тема"
 
-#: data/ui/menu.ui:92
+#: data/ui/menu.ui:97
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr "Постмодерн"
 
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:100
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "Згладжена"
 
-#: data/ui/menu.ui:98
+#: data/ui/menu.ui:103
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "Освітня"
 
-#: data/ui/menu.ui:105
+#: data/ui/menu.ui:110
 msgid "_Keyboard Shortcuts"
 msgstr "_Клавіатурні скорочення"
 
-#: data/ui/menu.ui:109
+#: data/ui/menu.ui:114
 msgid "_Help"
 msgstr "_Довідка"
 
-#: data/ui/menu.ui:113
+#: data/ui/menu.ui:118
 msgid "_About Mahjongg"
 msgstr "_Про «Магджонґ»"
 
@@ -298,7 +317,7 @@ msgstr "Час"
 msgid "Date"
 msgstr "Дата"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:213
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:214
 msgid "_Quit"
 msgstr "Ви_йти"
 
@@ -322,11 +341,11 @@ msgstr "Показати підказку"
 msgid "Print release version and exit"
 msgstr "Показати версію випуску та вийти"
 
-#: src/gnome-mahjongg.vala:198
+#: src/gnome-mahjongg.vala:199
 msgid "No Moves Left"
 msgstr "Ходів не лишилося"
 
-#: src/gnome-mahjongg.vala:200
+#: src/gnome-mahjongg.vala:201
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -334,21 +353,21 @@ msgstr ""
 "Ви можете скасувати ходи і спробувати знайти розв'язання або перемішати "
 "решту плиток."
 
-#: src/gnome-mahjongg.vala:201
+#: src/gnome-mahjongg.vala:202
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Ви можете скасувати ходи і спробувати знайти розв'язання або почати нову гру."
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:206
 msgid "_Continue"
 msgstr "П_родовжити"
 
-#: src/gnome-mahjongg.vala:208
+#: src/gnome-mahjongg.vala:209
 msgid "_Reshuffle"
 msgstr "_Перемішати"
 
-#: src/gnome-mahjongg.vala:362
+#: src/gnome-mahjongg.vala:363
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -424,9 +443,6 @@ msgstr "Призупинити гру"
 
 #~ msgid "Layout"
 #~ msgstr "Розташування"
-
-#~ msgid "Restart Game"
-#~ msgstr "Перезапустити гру"
 
 #~ msgid "Preferences"
 #~ msgstr "Параметри"
