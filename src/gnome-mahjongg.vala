@@ -436,7 +436,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
                 map = maps.nth_data (map_index);
                 break;
             case "random":
-                var map_index = Random.int_range(0, (int) maps.length ());
+                var map_index = Random.int_range (0, (int) maps.length ());
                 map = maps.nth_data (map_index);
                 break;
             }
