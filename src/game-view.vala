@@ -39,6 +39,7 @@ public class GameView : Gtk.Widget {
             _game.paused_changed.connect (paused_changed_cb);
             update_dimensions ();
             resize_theme ();
+            queue_draw ();
         }
     }
 
