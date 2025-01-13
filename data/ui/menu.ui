@@ -55,14 +55,19 @@
         <attribute name="label" translatable="yes">Layout Ro_tation</attribute>
         <section>
           <item>
-            <attribute name="label" translatable="yes">No Rotation</attribute>
+            <attribute name="label" translatable="yes" context="layout rotation">No Rotation</attribute>
             <attribute name="action">app.layout-rotation</attribute>
             <attribute name="target">single</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes">Sequential</attribute>
+            <attribute name="label" translatable="yes" context="layout rotation">Sequential</attribute>
             <attribute name="action">app.layout-rotation</attribute>
             <attribute name="target">sequential</attribute>
+          </item>
+          <item>
+            <attribute name="label" translatable="yes" context="layout rotation">Random</attribute>
+            <attribute name="action">app.layout-rotation</attribute>
+            <attribute name="target">random</attribute>
           </item>
         </section>
       </submenu>
@@ -71,17 +76,17 @@
         <section>
           <attribute name="label" translatable="yes">Background</attribute>
           <item>
-            <attribute name="label" translatable="yes">Follow System</attribute>
+            <attribute name="label" translatable="yes" context="background color">Follow System</attribute>
             <attribute name="action">app.background-color</attribute>
             <attribute name="target">system</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes">Light</attribute>
+            <attribute name="label" translatable="yes" context="background color">Light</attribute>
             <attribute name="action">app.background-color</attribute>
             <attribute name="target">light</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes">Dark</attribute>
+            <attribute name="label" translatable="yes" context="background color">Dark</attribute>
             <attribute name="action">app.background-color</attribute>
             <attribute name="target">dark</attribute>
           </item>

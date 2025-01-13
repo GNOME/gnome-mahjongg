@@ -432,8 +432,11 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
-                var map_index = maps.index (map);
-                map_index = (map_index + 1) % (int) maps.length ();
+                var map_index = (maps.index (map) + 1) % (int) maps.length ();
+                map = maps.nth_data (map_index);
+                break;
+            case "random":
+                var map_index = Random.int_range(0, (int) maps.length ());
                 map = maps.nth_data (map_index);
                 break;
             }
