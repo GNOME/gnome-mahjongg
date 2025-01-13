@@ -10,7 +10,7 @@
     <value nick="random" value="2"/>
   </enum>
 
-  <schema id="@app-id@" path="/org/gnome/Mahjongg/" gettext-domain="@gettext-package@">
+  <schema id="@app-id@" path="@base-id-slashed@/" gettext-domain="@gettext-package@">
     <key name="tileset" type="s">
       <default>"postmodern.svg"</default>
     </key>
