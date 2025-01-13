@@ -252,48 +252,48 @@
   </map>
   <map name="Pyramid's Walls" scorename="pyramid">
     <layer z="0">
-      <row y="1" left="0" right="11"/>
-      <row y="7" left="0" right="11"/>
-      <column x="0" top="2" bottom="6"/>
-      <column x="11" top="2" bottom="6"/>
-      <row y="4" left="2.5" right="8.5"/>
+      <row y="0" left="0" right="11"/>
+      <row y="6" left="0" right="11"/>
+      <column x="0" top="1" bottom="5"/>
+      <column x="11" top="1" bottom="5"/>
+      <row y="3" left="2.5" right="8.5"/>
     </layer>
     <layer z="1">
-      <row y="1" left="1" right="10"/>
-      <row y="7" left="1" right="10"/>
-      <column x="0" top="2.5" bottom="5.5"/>
-      <column x="11" top="2.5" bottom="5.5"/>
-      <row y="4" left="3" right="8"/>
+      <row y="0" left="1" right="10"/>
+      <row y="6" left="1" right="10"/>
+      <column x="0" top="1.5" bottom="4.5"/>
+      <column x="11" top="1.5" bottom="4.5"/>
+      <row y="3" left="3" right="8"/>
     </layer>
     <layer z="2">
-      <row y="1" left="2" right="9"/>
-      <row y="7" left="2" right="9"/>
-      <column x="0" top="3" bottom="5"/>
-      <column x="11" top="3" bottom="5"/>
-      <row y="4" left="3.5" right="7.5"/>
+      <row y="0" left="2" right="9"/>
+      <row y="6" left="2" right="9"/>
+      <column x="0" top="2" bottom="4"/>
+      <column x="11" top="2" bottom="4"/>
+      <row y="3" left="3.5" right="7.5"/>
     </layer>
     <layer z="3">
-      <row y="1" left="3" right="8"/>
-      <row y="7" left="3" right="8"/>
-      <column x="0" top="3.5" bottom="4.5"/>
-      <column x="11" top="3.5" bottom="4.5"/>
-      <row y="4" left="4" right="7"/>
+      <row y="0" left="3" right="8"/>
+      <row y="6" left="3" right="8"/>
+      <column x="0" top="2.5" bottom="3.5"/>
+      <column x="11" top="2.5" bottom="3.5"/>
+      <row y="3" left="4" right="7"/>
     </layer>
     <layer z="4">
-      <row y="1" left="4" right="7"/>
-      <row y="7" left="4" right="7"/>
-      <tile x="0" y="4"/>
-      <tile x="11" y="4"/>
-      <row y="4" left="4.5" right="6.5"/>
+      <row y="0" left="4" right="7"/>
+      <row y="6" left="4" right="7"/>
+      <tile x="0" y="3"/>
+      <tile x="11" y="3"/>
+      <row y="3" left="4.5" right="6.5"/>
     </layer>
     <layer z="5">
-      <row y="1" left="5" right="6"/>
-      <row y="7" left="5" right="6"/>
-      <row y="4" left="5" right="6"/>
+      <row y="0" left="5" right="6"/>
+      <row y="6" left="5" right="6"/>
+      <row y="3" left="5" right="6"/>
     </layer>
-    <tile z="6" x="5.5" y="1"/>
-    <tile z="6" x="5.5" y="7"/>
-    <tile z="6" x="5.5" y="4"/>
+    <tile z="6" x="5.5" y="0"/>
+    <tile z="6" x="5.5" y="6"/>
+    <tile z="6" x="5.5" y="3"/>
   </map>
   <map name="Confounding Cross" scorename="confounding">
     <layer z="0">
