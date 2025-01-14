@@ -7,14 +7,14 @@
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
 # Tong Hui <tonghuix@gmail.com>, 2014.
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018.
-# lumingzh <lumingzh@qq.com>, 2022-2024.
+# lumingzh <lumingzh@qq.com>, 2022-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-08-17 15:16+0000\n"
-"PO-Revision-Date: 2024-09-26 13:02+0800\n"
+"POT-Creation-Date: 2025-01-13 02:34+0000\n"
+"PO-Revision-Date: 2025-01-14 13:36+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -22,10 +22,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 46.1\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:548
 msgid "Mahjongg"
 msgstr "对对碰"
 
@@ -39,15 +39,15 @@ msgstr "匹配麻将牌清空版面"
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;游戏;策略;智力游戏;谜题;解谜;牌桌;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:20
+#: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "Width of the window in pixels"
 msgstr "窗口的宽度（像素）"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:24
+#: data/org.gnome.Mahjongg.gschema.xml.in:32
 msgid "Height of the window in pixels"
 msgstr "窗口的高度（像素）"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:28
+#: data/org.gnome.Mahjongg.gschema.xml.in:36
 msgid "true if the window is maximized"
 msgstr "如果窗口最大化则为 true"
 
@@ -83,7 +83,7 @@ msgstr "亮色样式的麻将"
 msgid "Mahjongg in Dark Style"
 msgstr "暗色样式的麻将"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:73
 msgid "The Mahjongg Team"
 msgstr "对对碰团队"
 
@@ -99,50 +99,55 @@ msgstr "新建游戏"
 
 #: data/ui/help-overlay.ui:18
 msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "重启游戏"
+
+#: data/ui/help-overlay.ui:24
+msgctxt "shortcut window"
 msgid "Pause Game"
 msgstr "暂停游戏"
 
-#: data/ui/help-overlay.ui:24
+#: data/ui/help-overlay.ui:30
 msgctxt "shortcut window"
 msgid "Undo"
 msgstr "撤消"
 
-#: data/ui/help-overlay.ui:30
+#: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Redo"
 msgstr "重做"
 
-#: data/ui/help-overlay.ui:36
+#: data/ui/help-overlay.ui:42
 msgctxt "shortcut window"
 msgid "Show Hint"
 msgstr "显示提示"
 
-#: data/ui/help-overlay.ui:43
+#: data/ui/help-overlay.ui:49
 msgctxt "shortcut window"
 msgid "General"
 msgstr "常规"
 
-#: data/ui/help-overlay.ui:47
+#: data/ui/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Show Main Menu"
 msgstr "显示主菜单"
 
-#: data/ui/help-overlay.ui:53
+#: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "显示键盘快捷键"
 
-#: data/ui/help-overlay.ui:59
+#: data/ui/help-overlay.ui:65
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "显示帮助"
 
-#: data/ui/help-overlay.ui:65
+#: data/ui/help-overlay.ui:71
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "退出"
 
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:212
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
@@ -209,49 +214,75 @@ msgid "Difficult"
 msgstr "困难"
 
 #: data/ui/menu.ui:55
-msgid "_Background"
-msgstr "背景(_B)"
+msgid "Layout Ro_tation"
+msgstr "布局旋转(_T)"
 
 #: data/ui/menu.ui:58
+msgctxt "layout rotation"
+msgid "No Rotation"
+msgstr "无旋转"
+
+#: data/ui/menu.ui:63
+msgctxt "layout rotation"
+msgid "Sequential"
+msgstr "顺序"
+
+#: data/ui/menu.ui:68
+msgctxt "layout rotation"
+msgid "Random"
+msgstr "随机"
+
+#: data/ui/menu.ui:75
+msgid "_Appearance"
+msgstr "外观(_A)"
+
+#: data/ui/menu.ui:77
+msgid "Background"
+msgstr "背景"
+
+#: data/ui/menu.ui:79
+msgctxt "background color"
 msgid "Follow System"
 msgstr "跟随系统"
 
-#: data/ui/menu.ui:63
+#: data/ui/menu.ui:84
+msgctxt "background color"
 msgid "Light"
 msgstr "亮色"
 
-#: data/ui/menu.ui:68
+#: data/ui/menu.ui:89
+msgctxt "background color"
 msgid "Dark"
 msgstr "暗色"
 
-#: data/ui/menu.ui:75
-msgid "_Theme"
-msgstr "主题(_T)"
+#: data/ui/menu.ui:95
+msgid "Theme"
+msgstr "主题"
 
-#: data/ui/menu.ui:78
+#: data/ui/menu.ui:97
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr "后现代"
 
-#: data/ui/menu.ui:81
+#: data/ui/menu.ui:100
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "平滑"
 
-#: data/ui/menu.ui:84
+#: data/ui/menu.ui:103
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "教育"
 
-#: data/ui/menu.ui:91
+#: data/ui/menu.ui:110
 msgid "_Keyboard Shortcuts"
 msgstr "键盘快捷键(_K)"
 
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:114
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: data/ui/menu.ui:99
+#: data/ui/menu.ui:118
 msgid "_About Mahjongg"
 msgstr "关于对对碰(_A)"
 
@@ -275,7 +306,7 @@ msgstr "时间"
 msgid "Date"
 msgstr "日期"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:214
 msgid "_Quit"
 msgstr "退出(_Q)"
 
@@ -299,30 +330,30 @@ msgstr "显示提示"
 msgid "Print release version and exit"
 msgstr "显示发布版本并退出"
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:199
 msgid "No Moves Left"
 msgstr "无剩余操作"
 
-#: src/gnome-mahjongg.vala:199
+#: src/gnome-mahjongg.vala:201
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr "您可以撤消操作并尝试寻找解法，或者对剩余分块重新洗牌。"
 
-#: src/gnome-mahjongg.vala:200
+#: src/gnome-mahjongg.vala:202
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "您可以撤消操作并尝试寻找解法，或者开始新游戏。"
 
-#: src/gnome-mahjongg.vala:204
+#: src/gnome-mahjongg.vala:206
 msgid "_Continue"
 msgstr "继续(_C)"
 
-#: src/gnome-mahjongg.vala:207
+#: src/gnome-mahjongg.vala:209
 msgid "_Reshuffle"
 msgstr "洗牌(_R)"
 
-#: src/gnome-mahjongg.vala:355
+#: src/gnome-mahjongg.vala:363
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
@@ -332,7 +363,7 @@ msgstr ""
 "YunQiang Su <wzssyqa@gmail.com>, 2011, 2012\n"
 "Tong Hui <tonghuix@gmail.com>, 2014\n"
 "Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
-"lumingzh <lumingzh@qq.com>, 2023-2024"
+"lumingzh <lumingzh@qq.com>, 2023-2025"
 
 #: src/score-dialog.vala:311
 msgid "Clear All Scores?"
