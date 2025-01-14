@@ -48,10 +48,12 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         title_widget.subtitle = _("Paused");
         pause_button.icon_name = "media-playback-start-symbolic";
         pause_button.tooltip_text = _("Resume Game");
+        toolbar_view.content.add_css_class ("dim-label");
     }
 
     public void unpause () {
         pause_button.icon_name = "media-playback-pause-symbolic";
         pause_button.tooltip_text = _("Pause Game");
+        toolbar_view.content.remove_css_class ("dim-label");
     }
 }
