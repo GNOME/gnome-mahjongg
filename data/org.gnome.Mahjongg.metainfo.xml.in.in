@@ -49,7 +49,7 @@
     <control>touch</control>
   </supports>
   <releases>
-    <release version="48.alpha" type="development"/>
+    <release version="48.alpha" date="2025-01-14" type="development"/>
     <release version="47.0" date="2024-09-14">
       <description>
         <p>This release contains several improvements, including:</p>
