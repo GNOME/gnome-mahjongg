@@ -150,11 +150,6 @@ public class Mahjongg : Adw.Application {
 
     private async void conf_value_changed_cb (Settings settings, string key) {
         if (key == "tileset") {
-            string previous_theme = null;
-
-            if (game_view.theme != null)
-                previous_theme = Path.get_basename (game_view.theme);
-
             var theme = settings.get_string ("tileset");
             var theme_path = "/org/gnome/Mahjongg/themes/";
             game_view.theme = theme_path + theme;
@@ -165,10 +160,7 @@ public class Mahjongg : Adw.Application {
                 game_view.theme = theme_path + theme;
             }
 
-            if (previous_theme != null)
-                window.remove_css_class (previous_theme);
-
-            window.add_css_class (theme);
+            window.update_theme (theme);
         }
         else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();

@@ -1,5 +1,6 @@
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
 public class MahjonggWindow : Adw.ApplicationWindow {
+    private string theme;
 
     [GtkChild]
     private unowned Adw.ToolbarView toolbar_view;
@@ -42,6 +43,14 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
     public void update_moves_left (uint moves_left) {
         title_widget.subtitle = _("Moves Left: %2u").printf (moves_left);
+    }
+
+    public void update_theme (string theme) {
+        if (this.theme != null)
+            remove_css_class (this.theme);
+
+        add_css_class (theme);
+        this.theme = theme;
     }
 
     public void pause () {
