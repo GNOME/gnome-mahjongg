@@ -72,9 +72,6 @@ public class Mahjongg : Adw.Application {
 
         var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
         game_view = new GameView (using_cairo);
-        view_click_controller = new Gtk.GestureClick ();
-        view_click_controller.pressed.connect (on_click);
-        game_view.add_controller (view_click_controller);
 
         window = new MahjonggWindow (this, game_view, maps);
 
@@ -170,11 +167,13 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private Gtk.GestureClick view_click_controller;    // for keeping in memory
-    private inline void on_click (Gtk.GestureClick _controller, int n_press, double event_x, double event_y) {
+    private bool clicked_cb () {
         /* Cancel pause on click */
-        if (game_view.game.paused)
+        if (game_view.game.paused) {
             pause_cb ();
+            return true;
+        }
+        return false;
     }
 
     private async void moved_cb () {
@@ -429,6 +428,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         var map = get_next_map (rotate_map);
 
         game_view.game = new Game (map);
+        game_view.game.clicked.connect (clicked_cb);
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
 

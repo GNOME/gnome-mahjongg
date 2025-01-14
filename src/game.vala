@@ -67,6 +67,7 @@ public class Game : Object {
     private Timer? clock;
     private uint clock_timeout;
 
+    public signal bool clicked ();
     public signal void redraw_tile (Tile tile);
     public signal void moved ();
     public signal void paused_changed ();

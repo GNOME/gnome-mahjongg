@@ -281,7 +281,12 @@ public class GameView : Gtk.Widget {
     }
 
     private void click_cb (Gtk.GestureClick _controller, int n_press, double event_x, double event_y) {
-        if (game == null || game.paused)
+        if (game == null)
+            return;
+
+        var click_blocked = game.clicked () || game.paused;
+
+        if (click_blocked)
             return;
 
         /* Get the tile under the square */
