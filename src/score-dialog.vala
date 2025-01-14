@@ -17,6 +17,9 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Adw.HeaderBar header_bar;
 
     [GtkChild]
+    private unowned Gtk.Button clear_scores_button;
+
+    [GtkChild]
     private unowned Gtk.MenuButton layout_button;
 
     [GtkChild]
@@ -36,12 +39,6 @@ public class ScoreDialog : Adw.Dialog {
 
     [GtkChild]
     private unowned Gtk.ColumnViewColumn date_column;
-
-    [GtkChild]
-    private unowned Gtk.Stack bottom_stack;
-
-    [GtkChild]
-    private unowned Gtk.Button clear_scores_button;
 
     [GtkChild]
     private unowned Gtk.Button new_game_button;
@@ -66,15 +63,16 @@ public class ScoreDialog : Adw.Dialog {
 
         if (history.entries.length () > 0) {
             content_stack.visible_child_name = "scores";
+            clear_scores_button.visible = true;
             layout_button.visible = true;
-            toolbar_view.reveal_bottom_bars = true;
         }
 
         if (selected_entry != null) {
             set_can_close (false);
             header_bar.show_start_title_buttons = false;
             header_bar.show_end_title_buttons = false;
-            bottom_stack.visible_child_name = "new-game";
+            clear_scores_button.visible = false;
+            toolbar_view.reveal_bottom_bars = true;
 
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
@@ -322,6 +320,7 @@ public class ScoreDialog : Adw.Dialog {
         case "clear":
             toolbar_view.reveal_bottom_bars = false;
             content_stack.visible_child_name = "no-scores";
+            clear_scores_button.visible = false;
             layout_button.visible = false;
             layout_button.menu_model = null;
             score_model.remove_all ();
