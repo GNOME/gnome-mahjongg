@@ -12,7 +12,7 @@ window.educational {
 }
 
 /* Game view */
-.game-container {
+stack.game {
     transition: opacity 250ms ease-out;
 }
 

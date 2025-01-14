@@ -15,6 +15,8 @@ public class Mahjongg : Adw.Application {
     private Settings settings;
     private MahjonggWindow window;
     private GameView game_view;
+    private GameView primary_game_view;
+    private GameView secondary_game_view;
 
     private const OptionEntry[] OPTION_ENTRIES = {
         { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
@@ -67,10 +69,13 @@ public class Mahjongg : Adw.Application {
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
         history.load ();
 
-        var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
-        game_view = new GameView (using_cairo);
+        window = new MahjonggWindow (this, maps);
 
-        window = new MahjonggWindow (this, game_view, maps);
+        var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
+        primary_game_view = new GameView (using_cairo);
+        secondary_game_view = new GameView (using_cairo);
+        window.add_game_view (primary_game_view);
+        window.add_game_view (secondary_game_view);
 
         var layout = settings.get_string ("mapset");
         unowned var layout_action = lookup_action ("layout") as SimpleAction;
@@ -122,19 +127,17 @@ public class Mahjongg : Adw.Application {
         base.shutdown ();
     }
 
-    private void update_theme () {
+    private void update_theme (GameView? previous_game_view = null) {
         var color_scheme = settings.get_enum ("background-color");
         var theme = settings.get_string ("tileset");
         var style_manager = Adw.StyleManager.get_default ();
-        var theme_path = "/org/gnome/Mahjongg/themes/";
 
         style_manager.set_color_scheme (color_scheme);
 
-        game_view.theme = theme_path + theme;
-        if (game_view.theme == null) {
-            /* Failed to load theme, fall back to default */
-            theme = settings.get_default_value ("tileset").get_string ();
-            game_view.theme = theme_path + theme;
+        if (game_view != null) {
+            var path = "/org/gnome/Mahjongg/themes/";
+            var fallback_theme = settings.get_default_value ("tileset").get_string ();
+            game_view.set_theme (path + theme, previous_game_view, path + fallback_theme);
         }
         window.theme = theme;
     }
@@ -420,6 +423,28 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         return map;
     }
 
+    private void new_game_view (bool rotate_map = false) {
+        var transition_type = Gtk.StackTransitionType.NONE;
+        var previous_game_view = game_view;
+
+        if (rotate_map) {
+            if (settings.get_string ("map-rotation") != "single")
+                transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
+            else
+                transition_type = Gtk.StackTransitionType.CROSSFADE;
+        }
+
+        game_view = (game_view == primary_game_view) ? secondary_game_view : primary_game_view;
+        update_theme (previous_game_view);
+
+        if (previous_game_view != null) {
+            previous_game_view.game = null;
+            previous_game_view.set_theme (null);
+        }
+
+        window.set_game_view (game_view, transition_type);
+    }
+
     /**
      * Starts a new game.
      *
@@ -427,9 +452,9 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
      * map according to the ``map-rotation`` setting.
      */
     private void new_game (bool rotate_map = true) {
-        unowned var map = get_next_map (rotate_map);
+        new_game_view (rotate_map);
 
-        game_view.game = new Game (map);
+        game_view.game = new Game (get_next_map (rotate_map));
         game_view.game.attempt_move.connect (attempt_move_cb);
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);

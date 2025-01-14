@@ -12,6 +12,9 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.Button pause_button;
 
+    [GtkChild]
+    private unowned Gtk.Stack stack;
+
     public string clock {
         set {
             title_widget.title = value;
@@ -27,6 +30,8 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     private string? _theme;
     public string? theme {
         set {
+            if (_theme == value)
+                return;
             if (_theme != null)
                 remove_css_class (_theme);
             if (value != null)
@@ -35,7 +40,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         }
     }
 
-    public MahjonggWindow (Gtk.Application application, GameView game_view, List<Map> maps) {
+    public MahjonggWindow (Gtk.Application application, List<Map> maps) {
         Object (application: application);
 
         var menu_builder = new Gtk.Builder.from_resource ("/org/gnome/Mahjongg/ui/menu.ui");
@@ -55,9 +60,16 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         if (APP_ID.has_suffix (".Devel"))
             add_css_class ("devel");
 
-        game_view.add_css_class ("game-container");
         menu_button.menu_model = menu_model;
-        toolbar_view.content = game_view;
+    }
+
+    public void add_game_view (GameView game_view) {
+        stack.add_child (game_view);
+    }
+
+    public void set_game_view (GameView game_view, Gtk.StackTransitionType transition_type) {
+        stack.transition_type = transition_type;
+        stack.visible_child = game_view;
     }
 
     public void pause () {

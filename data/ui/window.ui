@@ -50,6 +50,14 @@
             </child>
           </object>
         </child>
+        <property name="content">
+          <object class="GtkStack" id="stack">
+            <property name="transition-duration">250</property>
+            <style>
+              <class name="game"/>
+            </style>
+          </object>
+        </property>
       </object>
     </child>
   </template>
