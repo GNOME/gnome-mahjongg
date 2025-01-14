@@ -157,12 +157,17 @@ public class GameView : Gtk.Widget {
         /* Get size to load the next tile texture at */
         var new_theme_width = 0;
         var new_theme_height = 0;
+        var decreased_size = false;
 
-        if (!using_cairo && rendered_theme_width < initial_theme_width / 2) {
-            new_theme_width = initial_theme_width / 2;
-            new_theme_height = initial_theme_height / 2;
+        for (var i = 8; i >= 2; i = i - 2) {
+            if (rendered_theme_width < initial_theme_width / i) {
+                new_theme_width = initial_theme_width / i;
+                new_theme_height = initial_theme_height / i;
+                decreased_size = true;
+                break;
+            }
         }
-        else {
+        if (!decreased_size) {
             while (new_theme_width < rendered_theme_width) {
                 new_theme_width += initial_theme_width;
                 new_theme_height += initial_theme_height;
