@@ -89,7 +89,7 @@ public class GameView : Gtk.Widget {
         Gsk.RenderNode theme_texture_node = null;
 
         /* Scale the tile texture */
-        if (!using_cairo) {
+        if (theme_texture != null) {
             var theme_texture_snapshot = new Gtk.Snapshot ();
             theme_texture.snapshot (theme_texture_snapshot, rendered_theme_width, rendered_theme_height);
 
@@ -187,21 +187,21 @@ public class GameView : Gtk.Widget {
         try {
             var pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
             var bytes = new Bytes.take (pixbuf.get_pixels_with_length ());
-
-            theme_texture = new Gdk.MemoryTexture (
-                pixbuf.get_width (),
-                pixbuf.get_height (),
+            var texture = new Gdk.MemoryTexture (
+                new_theme_width,
+                new_theme_height,
                 Gdk.MemoryFormat.R8G8B8A8,
                 bytes,
-                pixbuf.get_rowstride ()
+                pixbuf.rowstride
             );
 
             if (using_cairo) {
                 var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, new_theme_width, new_theme_height);
-                theme_texture.download (theme_surface.get_data (), theme_surface.get_stride ());
+                texture.download (theme_surface.get_data (), theme_surface.get_stride ());
                 theme_surface.mark_dirty ();
-
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
+            } else {
+                theme_texture = texture;
             }
             queue_draw ();
         } catch (Error e) {
