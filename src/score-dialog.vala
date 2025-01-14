@@ -53,6 +53,23 @@ public class ScoreDialog : Adw.Dialog {
         { "layout", null, "s", "''", set_map_cb }
     };
 
+    private string score_map {
+        set {
+            layout_button.label = get_map_display_name (value);
+            score_model.remove_all ();
+
+            var entries = history.entries.copy ();
+            entries.sort (compare_entries);
+
+            foreach (var entry in entries) {
+                if (entry.name != value)
+                    continue;
+
+                score_model.append (entry);
+            }
+        }
+    }
+
     public ScoreDialog (History history, HistoryEntry? selected_entry = null, List<Map> maps) {
         this.maps = maps;
         this.history = history;
@@ -88,21 +105,6 @@ public class ScoreDialog : Adw.Dialog {
         });
     }
 
-    public void set_map (string name) {
-        layout_button.label = get_map_display_name (name);
-        score_model.remove_all ();
-
-        var entries = history.entries.copy ();
-        entries.sort (compare_entries);
-
-        foreach (var entry in entries) {
-            if (entry.name != name)
-                continue;
-
-            score_model.append (entry);
-        }
-    }
-
     private void set_up_layout_menu () {
         var action_group = new SimpleActionGroup ();
         action_group.add_action_entries (ACTION_ENTRIES, this);
@@ -136,7 +138,7 @@ public class ScoreDialog : Adw.Dialog {
 
         var action = (SimpleAction) action_group.lookup_action ("layout");
         action.set_state (new Variant.string (visible_entry.name));
-        set_map (visible_entry.name);
+        score_map = visible_entry.name;
     }
 
     private void set_up_score_view () {
@@ -180,7 +182,7 @@ public class ScoreDialog : Adw.Dialog {
     private void set_map_cb (SimpleAction action, Variant variant) {
         var name = variant.get_string ();
         action.set_state (variant);
-        set_map (name);
+        score_map = name;
     }
 
     private static int compare_entries (HistoryEntry a, HistoryEntry b) {

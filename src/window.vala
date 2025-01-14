@@ -1,6 +1,5 @@
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
 public class MahjonggWindow : Adw.ApplicationWindow {
-    private string theme;
 
     [GtkChild]
     private unowned Adw.ToolbarView toolbar_view;
@@ -13,6 +12,29 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
     [GtkChild]
     private unowned Gtk.Button pause_button;
+
+    public string clock {
+        set {
+            title_widget.title = value;
+        }
+    }
+
+    public uint moves_left {
+        set {
+            title_widget.subtitle = _("Moves Left: %2u").printf (value);
+        }
+    }
+
+    private string? _theme;
+    public string theme {
+        set {
+            if (_theme != null)
+                remove_css_class (_theme);
+
+            add_css_class (value);
+            _theme = value;
+        }
+    }
 
     public MahjonggWindow (Gtk.Application application, GameView game_view, List<Map> maps) {
         Object (application: application);
@@ -35,22 +57,6 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
         menu_button.menu_model = menu_model;
         toolbar_view.content = game_view;
-    }
-
-    public void update_clock (string clock) {
-        title_widget.title = clock;
-    }
-
-    public void update_moves_left (uint moves_left) {
-        title_widget.subtitle = _("Moves Left: %2u").printf (moves_left);
-    }
-
-    public void update_theme (string theme) {
-        if (this.theme != null)
-            remove_css_class (this.theme);
-
-        add_css_class (theme);
-        this.theme = theme;
     }
 
     public void pause () {

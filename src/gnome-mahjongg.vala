@@ -144,7 +144,7 @@ public class Mahjongg : Adw.Application {
             hint_action.set_enabled (moves_left > 0);
             undo_action.set_enabled (game_view.game.can_undo);
             redo_action.set_enabled (game_view.game.can_redo);
-            window.update_moves_left (moves_left);
+            window.moves_left = moves_left;
         }
     }
 
@@ -160,7 +160,7 @@ public class Mahjongg : Adw.Application {
                 game_view.theme = theme_path + theme;
             }
 
-            window.update_theme (theme);
+            window.theme = theme;
         }
         else if (key == "background-color") {
             var style_manager = Adw.StyleManager.get_default ();
@@ -455,7 +455,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         else
             clock = "%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds);
 
-        window.update_clock (clock);
+        window.clock = clock;
     }
 
     private void help_cb () {
