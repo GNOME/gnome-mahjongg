@@ -246,7 +246,6 @@ public class GameView : Gtk.DrawingArea {
     }
 
     private void redraw_tile_cb (Tile tile) {
-        update_dimensions ();
         queue_draw ();
     }
 
