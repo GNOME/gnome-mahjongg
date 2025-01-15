@@ -204,8 +204,12 @@ public class Map {
         slots.append (new Slot (28, 7, 0));
     }
 
+    private int _width;
     public int width {
         get {
+            if (_width > 0)
+                return _width;
+
             var w = 0;
             foreach (unowned var slot in slots) {
                 if (slot.x > w)
@@ -213,12 +217,17 @@ public class Map {
             }
 
             /* Width is x location of right most tile and the width of that tile (2 units) */
-            return w + 2;
+            _width = w + 2;
+            return _width;
         }
     }
 
+    private int _height;
     public int height {
         get {
+            if (_height > 0)
+                return _height;
+
             var h = 0;
             foreach (unowned var slot in slots) {
                 if (slot.y > h)
@@ -226,7 +235,8 @@ public class Map {
             }
 
             /* Height is x location of bottom most tile and the height of that tile (2 units) */
-            return h + 2;
+            _height = h + 2;
+            return _height;
         }
     }
 }
