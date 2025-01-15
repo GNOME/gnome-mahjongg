@@ -98,11 +98,7 @@ public class ScoreDialog : Adw.Dialog {
         }
 
         clear_scores_button.clicked.connect (clear_scores_cb);
-
-        closed.connect (() => {
-            if (selected_entry != null)
-                history.save ();
-        });
+        closed.connect (closed_cb);
     }
 
     private void set_up_layout_menu () {
@@ -204,27 +200,36 @@ public class ScoreDialog : Adw.Dialog {
         ((Gtk.ListItem) list_item).child = label;
     }
 
-    private void item_player_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
+    private static void connect_entry_input (Gtk.Entry entry_input, Gtk.ListItem list_item) {
+        /* Static method to avoid issues with circular references
+           https://gitlab.gnome.org/GNOME/vala/-/issues/957 */
+
+        entry_input.notify["text"].connect (() => {
+            var history_entry = list_item.item as HistoryEntry;
+            if (entry_input.text.length <= 0)
+                history_entry.player = Environment.get_real_name ();
+            else
+                history_entry.player = entry_input.text;
+        });
+    }
+
+    private void item_player_setup_cb (Gtk.SignalListItemFactory factory, Object object) {
         var stack = new Gtk.Stack ();
         stack.add_named (new Gtk.Inscription (null), "label");
 
-        var entry = new Gtk.Entry () {
+        var list_item = object as Gtk.ListItem;
+        var entry_input = new Gtk.Entry () {
             has_frame = false,
             max_width_chars = 5
         };
-        entry.notify["text"].connect (() => {
-            var history_entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
-            if (entry.text.length <= 0)
-                history_entry.player = Environment.get_real_name ();
-            else
-                history_entry.player = entry.text;
-        });
-        entry.activate.connect (() => {
+
+        connect_entry_input (entry_input, list_item);
+        entry_input.activate.connect (() => {
             new_game_button.activate ();
         });
 
-        stack.add_named (entry, "entry");
-        ((Gtk.ListItem) list_item).child = stack;
+        stack.add_named (entry_input, "entry");
+        list_item.child = stack;
     }
 
     private void item_time_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
@@ -335,5 +340,10 @@ public class ScoreDialog : Adw.Dialog {
         default:
             break;
         }
+    }
+
+    private void closed_cb () {
+        if (selected_entry != null)
+            history.save ();
     }
 }

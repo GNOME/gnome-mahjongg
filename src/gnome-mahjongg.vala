@@ -16,8 +16,6 @@ public class Mahjongg : Adw.Application {
     private List<Map> maps = new List<Map> ();
 
     private MahjonggWindow window;
-    private ScoreDialog score_dialog;
-
     private GameView game_view;
 
     private const OptionEntry[] OPTION_ENTRIES = {
@@ -228,8 +226,7 @@ public class Mahjongg : Adw.Application {
     }
 
     private void show_scores (HistoryEntry? selected_entry = null) {
-        score_dialog = new ScoreDialog (history, selected_entry, maps);
-        score_dialog.present (window);
+        new ScoreDialog (history, selected_entry, maps).present (window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {
@@ -434,11 +431,6 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
         tick_cb ();
         update_ui ();
-
-        if (score_dialog != null)
-            score_dialog.force_close ();
-
-        /* Reset the pause button in case it was set to resume */
         window.unpause ();
     }
 
