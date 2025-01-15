@@ -1,6 +1,5 @@
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
 public class MahjonggWindow : Adw.ApplicationWindow {
-
     [GtkChild]
     private unowned Adw.ToolbarView toolbar_view;
 
@@ -26,12 +25,12 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     }
 
     private string? _theme;
-    public string theme {
+    public string? theme {
         set {
             if (_theme != null)
                 remove_css_class (_theme);
-
-            add_css_class (value);
+            if (value != null)
+                add_css_class (value);
             _theme = value;
         }
     }

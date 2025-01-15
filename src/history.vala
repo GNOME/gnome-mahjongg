@@ -14,7 +14,6 @@ public class History : Object {
 
     public History (string filename) {
         this.filename = filename;
-        entries = new List<HistoryEntry> ();
     }
 
     public void add (HistoryEntry entry) {
@@ -22,8 +21,6 @@ public class History : Object {
     }
 
     public void load () {
-        entries = new List<HistoryEntry> ();
-
         var contents = "";
         try {
             FileUtils.get_contents (filename, out contents);
@@ -72,7 +69,7 @@ public class History : Object {
     }
 
     public void clear () {
-        entries = new List<HistoryEntry> ();
+        entries = null;
         save ();
     }
 }

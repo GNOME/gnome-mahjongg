@@ -9,12 +9,10 @@
  */
 
 public class Mahjongg : Adw.Application {
-    private Settings settings;
-
     private History history;
+    private List<Map> maps;
 
-    private List<Map> maps = new List<Map> ();
-
+    private Settings settings;
     private MahjonggWindow window;
     private GameView game_view;
 

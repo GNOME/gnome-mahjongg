@@ -44,8 +44,8 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Gtk.Button new_game_button;
 
     private History history;
-    private HistoryEntry? selected_entry = null;
-    private Gtk.ListItem? selected_item = null;
+    private HistoryEntry? selected_entry;
+    private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private unowned List<Map> maps;
 

@@ -38,9 +38,9 @@ private static int compare_slots (Slot a, Slot b) {
 }
 
 public class Map : Object {
-    public string? name = null;
-    public string? score_name = null;
-    public List<Slot> slots = null;
+    public string? name;
+    public string? score_name;
+    public List<Slot> slots;
 
     public Map.test () {
         name = "Test";
@@ -242,9 +242,9 @@ public class Map : Object {
 }
 
 public class MapLoader : Object {
-    public List<Map> maps = null;
-    private Map map;
-    private int layer_z = 0;
+    public List<Map> maps;
+    private Map? map;
+    private int layer_z;
 
     public void load (string filename) throws Error {
         string data;

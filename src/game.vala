@@ -53,14 +53,14 @@ public class Match : Object {
 
 public class Game : Object {
     public Map map;
-    public List<Tile> tiles = null;
+    public List<Tile> tiles;
     public Tile? hint_tiles[2];
 
     public int move_number;
 
     /* Hint animation */
-    private uint hint_timout = 0;
-    public uint hint_blink_counter = 0;
+    private uint hint_timout;
+    public uint hint_blink_counter;
 
     /* Game timer */
     private double clock_elapsed;
@@ -85,7 +85,7 @@ public class Game : Object {
         }
     }
 
-    private bool _paused = false;
+    private bool _paused;
     public bool paused {
         set {
             _paused = value;
@@ -100,7 +100,7 @@ public class Game : Object {
         get { return _paused; }
     }
 
-    private Tile? _selected_tile = null;
+    private Tile? _selected_tile;
     public Tile? selected_tile {
         get { return _selected_tile; }
         set {

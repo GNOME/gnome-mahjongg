@@ -20,8 +20,8 @@ public class GameView : Gtk.Widget {
     private int tile_pattern_width;
     private int tile_pattern_height;
 
-    private Gdk.Texture theme_texture = null;
-    private Cairo.Pattern? tile_pattern = null;
+    private Gdk.Texture? theme_texture;
+    private Cairo.Pattern? tile_pattern;
     private double theme_aspect;
     private int initial_theme_width;
     private int initial_theme_height;
@@ -43,7 +43,7 @@ public class GameView : Gtk.Widget {
         }
     }
 
-    private string? _theme = null;
+    private string? _theme;
     public string? theme {
         get { return _theme; }
         set {
@@ -86,7 +86,7 @@ public class GameView : Gtk.Widget {
         if (theme_texture == null && tile_pattern == null)
             return;
 
-        Gsk.RenderNode theme_texture_node = null;
+        Gsk.RenderNode? theme_texture_node = null;
 
         /* Scale the tile texture */
         if (theme_texture != null) {
@@ -315,7 +315,7 @@ public class GameView : Gtk.Widget {
     }
 
     private Tile? find_tile (int x, int y) {
-        Tile topmost_tile = null;
+        Tile? topmost_tile = null;
         var previous_layer = -1;
 
         foreach (var tile in game.tiles) {
