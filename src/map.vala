@@ -8,7 +8,7 @@
  * license.
  */
 
-public class Slot : Object {
+public class Slot {
     public int x;
     public int y;
     public int layer;
@@ -37,7 +37,7 @@ private static int compare_slots (Slot a, Slot b) {
     return 0;
 }
 
-public class Map : Object {
+public class Map {
     public string? name = null;
     public string? score_name = null;
     public List<Slot> slots = null;
@@ -231,7 +231,7 @@ public class Map : Object {
     }
 }
 
-public class MapLoader : Object {
+public class MapLoader {
     public List<Map> maps = null;
     private Map map;
     private int layer_z = 0;

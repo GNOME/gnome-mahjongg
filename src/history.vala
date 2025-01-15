@@ -8,7 +8,7 @@
  * license.
  */
 
-public class History : Object {
+public class History {
     public string filename;
     public List<HistoryEntry> entries;
 
