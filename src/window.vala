@@ -63,5 +63,8 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     public void unpause () {
         pause_button.icon_name = "media-playback-pause-symbolic";
         pause_button.tooltip_text = _("Pause Game");
+
+        if (visible_dialog != null)
+            visible_dialog.force_close ();
     }
 }
