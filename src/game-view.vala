@@ -272,7 +272,6 @@ public class GameView : Gtk.Widget {
     }
 
     private void redraw_tile_cb (Tile tile) {
-        update_dimensions ();
         queue_draw ();
     }
 
