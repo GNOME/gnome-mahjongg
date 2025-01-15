@@ -167,13 +167,13 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private bool clicked_cb () {
+    private bool attempt_move_cb () {
         /* Cancel pause on click */
         if (game_view.game.paused) {
             pause_cb ();
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     private async void moved_cb () {
@@ -428,7 +428,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         var map = get_next_map (rotate_map);
 
         game_view.game = new Game (map);
-        game_view.game.clicked.connect (clicked_cb);
+        game_view.game.attempt_move.connect (attempt_move_cb);
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
 
