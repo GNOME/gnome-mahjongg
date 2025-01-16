@@ -96,7 +96,7 @@ public class GameView : Gtk.Widget {
             theme_texture_node = theme_texture_snapshot.free_to_node ();
         }
 
-        foreach (var tile in game.tiles) {
+        foreach (unowned var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 
@@ -318,7 +318,7 @@ public class GameView : Gtk.Widget {
         Tile? topmost_tile = null;
         var previous_layer = -1;
 
-        foreach (var tile in game.tiles) {
+        foreach (unowned var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 

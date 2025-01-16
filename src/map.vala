@@ -211,7 +211,7 @@ public class Map {
                 return _width;
 
             var w = 0;
-            foreach (var slot in slots) {
+            foreach (unowned var slot in slots) {
                 if (slot.x > w)
                     w = slot.x;
             }
@@ -229,7 +229,7 @@ public class Map {
                 return _height;
 
             var h = 0;
-            foreach (var slot in slots) {
+            foreach (unowned var slot in slots) {
                 if (slot.y > h)
                     h = slot.y;
             }
