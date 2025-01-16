@@ -9,8 +9,6 @@
  */
 
 public class GameView : Gtk.Widget {
-    private bool using_cairo;
-
     private int x_offset;
     private int y_offset;
     private int tile_width;
@@ -20,8 +18,11 @@ public class GameView : Gtk.Widget {
     private int tile_pattern_width;
     private int tile_pattern_height;
 
+    private Gdk.Pixbuf? pixbuf;
     private Gdk.Texture? theme_texture;
     private Cairo.Pattern? tile_pattern;
+    private bool using_cairo;
+    private bool using_vector;
     private double theme_aspect;
     private int initial_theme_width;
     private int initial_theme_height;
@@ -47,7 +48,6 @@ public class GameView : Gtk.Widget {
     public string? theme {
         get { return _theme; }
         set {
-            Gdk.Pixbuf? pixbuf = null;
             try {
                 pixbuf = new Gdk.Pixbuf.from_resource (value);
             } catch (Error e) {
@@ -55,6 +55,7 @@ public class GameView : Gtk.Widget {
                 return;
             }
 
+            using_vector = (value.has_suffix ("postmodern"));
             initial_theme_width = pixbuf.width;
             initial_theme_height = pixbuf.height;
             loaded_theme_width = 0;
@@ -158,6 +159,7 @@ public class GameView : Gtk.Widget {
         var new_theme_width = 0;
         var new_theme_height = 0;
         var decreased_size = false;
+        var use_original_size = false;
 
         for (var i = 8; i >= 2; i = i - 2) {
             if (rendered_theme_width < initial_theme_width / i) {
@@ -169,12 +171,20 @@ public class GameView : Gtk.Widget {
         }
         if (!decreased_size) {
             while (new_theme_width < rendered_theme_width) {
+                if (!using_vector && new_theme_width > initial_theme_width) {
+                    new_theme_width = initial_theme_width;
+                    new_theme_height = initial_theme_height;
+                    use_original_size = true;
+                    break;
+                }
                 new_theme_width += initial_theme_width;
                 new_theme_height += initial_theme_height;
             }
         }
-        new_theme_width *= scale_factor;
-        new_theme_height *= scale_factor;
+        if (!use_original_size) {
+            new_theme_width *= scale_factor;
+            new_theme_height *= scale_factor;
+        }
 
         if (new_theme_width == loaded_theme_width)
             /* Texture size did not change, nothing to do */
@@ -185,7 +195,13 @@ public class GameView : Gtk.Widget {
         loaded_theme_height = new_theme_height;
 
         try {
-            var pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
+            var pixbuf = this.pixbuf;
+            if (!use_original_size) {
+                if (new_theme_width > initial_theme_width)
+                    pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
+                else
+                    pixbuf = pixbuf.scale_simple (new_theme_width, new_theme_height, Gdk.InterpType.TILES);
+            }
             var bytes = new Bytes.take (pixbuf.get_pixels_with_length ());
             var texture = new Gdk.MemoryTexture (
                 new_theme_width,
