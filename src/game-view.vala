@@ -304,7 +304,7 @@ public class GameView : Gtk.Widget {
             game.selected_tile = null;
         }
         /* Attempt to match second tile to the selected one */
-        else if (game.selected_tile.matches (tile)) {
+        else if (tiles_match (game.selected_tile, tile)) {
             game.remove_pair (game.selected_tile, tile);
         }
         else {

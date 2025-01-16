@@ -10,21 +10,18 @@
 
 public class Tile {
     public int number = -1;
+    public int pair = -1;
     public Slot slot;
     public bool visible = true;
     public int move_number;
 
-    public new int set {
-        get { return number / 4; }
-    }
-
     public Tile (Slot slot) {
         this.slot = slot;
     }
+}
 
-    public bool matches (Tile tile) {
-        return tile.set == set;
-    }
+public static bool tiles_match (Tile a, Tile b) {
+    return a.pair == b.pair;
 }
 
 private static int compare_tiles (Tile a, Tile b) {
@@ -212,19 +209,24 @@ public class Game {
         var n = Random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
             var match = matches.nth_data ((n + i) % n_matches);
-            match.tile0.number = numbers[depth];
-            match.tile0.visible = false;
-            match.tile1.number = numbers[depth] + 1;
-            match.tile1.visible = false;
+            var tile0 = match.tile0;
+            var tile1 = match.tile1;
+
+            tile0.number = numbers[depth];
+            tile0.pair = tile0.number / 4;
+            tile0.visible = false;
+            tile1.number = numbers[depth] + 1;
+            tile1.pair = tile1.number / 4;
+            tile1.visible = false;
 
             if (shuffle (numbers, depth + 1))
                 return true;
 
             /* Undo this move */
-            match.tile0.number = -1;
-            match.tile0.visible = true;
-            match.tile1.number = -1;
-            match.tile1.visible = true;
+            tile0.number = tile0.pair = -1;
+            tile0.visible = true;
+            tile1.number = tile1.pair = -1;
+            tile1.visible = true;
         }
 
         return false;
@@ -352,7 +354,7 @@ public class Game {
                     continue;
 
                 /* Checking match before checking if the tile can move is faster */
-                if (!t.matches (tile) || !tile_can_move (t))
+                if (!tiles_match (t, tile) || !tile_can_move (t))
                     continue;
 
                 matches.append (new Match (t, tile));
@@ -370,7 +372,7 @@ public class Game {
         if (!tile0.visible || !tile1.visible)
             return false;
 
-        if (tile0.set != tile1.set)
+        if (!tiles_match (tile0, tile1))
             return false;
 
         selected_tile = null;
