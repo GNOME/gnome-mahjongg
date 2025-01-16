@@ -20,6 +20,11 @@ public class Tile {
     }
 }
 
+public struct Match {
+    public Tile tile0;
+    public Tile tile1;
+}
+
 public static bool tiles_match (Tile a, Tile b) {
     return a.pair == b.pair;
 }
@@ -36,16 +41,6 @@ private static bool switch_tiles (Tile a, Tile b) {
         return true;
     }
     return false;
-}
-
-public class Match {
-    public Tile tile0;
-    public Tile tile1;
-
-    public Match (Tile tile0, Tile tile1) {
-        this.tile0 = tile0;
-        this.tile1 = tile1;
-    }
 }
 
 public class Game {
@@ -329,8 +324,8 @@ public class Game {
         return count;
     }
 
-    public List<Match> find_matches (Tile? tile = null) {
-        List<Match> matches = null;
+    public List<Match?> find_matches (Tile? tile = null) {
+        List<Match?> matches = null;
 
         if (tile == null) {
             foreach (unowned var t in tiles) {
@@ -357,7 +352,7 @@ public class Game {
                 if (!tiles_match (t, tile) || !tile_can_move (t))
                     continue;
 
-                matches.append (new Match (t, tile));
+                matches.append (Match () { tile0 = t, tile1 = tile });
 
                 /* Only need a single match for uninitialized tiles */
                 if (t.number == -1)
