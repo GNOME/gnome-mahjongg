@@ -207,7 +207,7 @@ public class Map {
     public int width {
         get {
             var w = 0;
-            foreach (var slot in slots) {
+            foreach (unowned var slot in slots) {
                 if (slot.x > w)
                     w = slot.x;
             }
@@ -220,7 +220,7 @@ public class Map {
     public int height {
         get {
             var h = 0;
-            foreach (var slot in slots) {
+            foreach (unowned var slot in slots) {
                 if (slot.y > h)
                     h = slot.y;
             }

@@ -93,7 +93,7 @@ public class ScoreDialog : Adw.Dialog {
         var entries = history.entries.copy ();
         entries.sort (compare_entries);
 
-        foreach (var entry in entries) {
+        foreach (unowned var entry in entries) {
             if (entry.name != name)
                 continue;
 
@@ -110,7 +110,7 @@ public class ScoreDialog : Adw.Dialog {
         layout_button.menu_model = menu;
 
         string[] entries = {};
-        foreach (var entry in history.entries) {
+        foreach (unowned var entry in history.entries) {
             if (entry.name in entries)
                 continue;
 

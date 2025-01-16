@@ -403,7 +403,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
     private void new_game () {
         Map? map = null;
-        foreach (var m in maps) {
+        foreach (unowned var m in maps) {
             if (m.name == settings.get_string ("mapset")) {
                 map = m;
                 break;
@@ -485,7 +485,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
                 warning ("Could not load map %s: %s\n", path, e.message);
                 continue;
             }
-            foreach (var map in loader.maps)
+            foreach (unowned var map in loader.maps)
                 maps.append (map);
         }
     }

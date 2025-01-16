@@ -34,7 +34,7 @@ public class History {
             return;
         }
 
-        foreach (var line in contents.split ("\n")) {
+        foreach (unowned var line in contents.split ("\n")) {
             var tokens = line.split (" ", 4);
             if (tokens.length < 3)
                 continue;
@@ -57,7 +57,7 @@ public class History {
     public void save () {
         var contents = "";
 
-        foreach (var entry in entries) {
+        foreach (unowned var entry in entries) {
             var line = "%s %s %u %s\n".printf (entry.date.to_string (), entry.name, entry.duration, entry.player);
             contents += line;
         }

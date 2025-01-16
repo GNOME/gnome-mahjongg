@@ -114,7 +114,7 @@ public class Game {
     public int visible_tiles {
         get {
             var n = 0;
-            foreach (var tile in tiles)
+            foreach (unowned var tile in tiles)
                 if (tile.visible)
                     n++;
             return n;
@@ -138,7 +138,7 @@ public class Game {
         move_number = 1;
 
         /* Create the tiles in the locations required in the map */
-        foreach (var slot in map.slots) {
+        foreach (unowned var slot in map.slots) {
             var tile = new Tile (slot);
             tiles.insert_sorted (tile, compare_tiles);
         }
@@ -175,7 +175,7 @@ public class Game {
             tiles.sort (compare_tiles);
             // reset moves and move numbers
             move_number = 1;
-            foreach (var tile in tiles)
+            foreach (unowned var tile in tiles)
                 tile.move_number = 0;
             find_matches ();
         } while (!can_move && visible_tiles > 1);
@@ -191,7 +191,7 @@ public class Game {
     }
 
     public void redraw_all_tiles () {
-        foreach (var tile in tiles)
+        foreach (unowned var tile in tiles)
             if (tile.visible)
                 redraw_tile (tile);
     }
@@ -234,7 +234,7 @@ public class Game {
         move_number = 1;
         selected_tile = null;
         set_hint (null, null);
-        foreach (var tile in tiles) {
+        foreach (unowned var tile in tiles) {
             tile.visible = true;
             tile.move_number = 0;
         }
@@ -292,7 +292,7 @@ public class Game {
         var blocked_left = false;
         var blocked_right = false;
         var slot = tile.slot;
-        foreach (var t in tiles) {
+        foreach (unowned var t in tiles) {
             if (t == tile || !t.visible)
                 continue;
 
@@ -320,7 +320,7 @@ public class Game {
 
     public int number_of_movable_tiles () {
         int count = 0;
-        foreach (var tile in tiles)
+        foreach (unowned var tile in tiles)
             if (tile_can_move (tile))
                 count++;
         return count;
@@ -330,10 +330,10 @@ public class Game {
         List<Match> matches = null;
 
         if (tile == null) {
-            foreach (var t in tiles) {
-                foreach (var match in find_matches (t)) {
+            foreach (unowned var t in tiles) {
+                foreach (unowned var match in find_matches (t)) {
                     bool already_matched = false;
-                    foreach (var existing_match in matches) {
+                    foreach (unowned var existing_match in matches) {
                         if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0) {
                             already_matched = true;
                             break;
@@ -346,7 +346,7 @@ public class Game {
             }
         }
         else if (tile_can_move (tile)) {
-            foreach (var t in tiles) {
+            foreach (unowned var t in tiles) {
                 if (t == tile)
                     continue;
 
@@ -376,7 +376,7 @@ public class Game {
         set_hint (null, null);
 
         /* You lose your re-do queue when you make a move */
-        foreach (var tile in tiles)
+        foreach (unowned var tile in tiles)
             if (tile.move_number >= move_number)
                 tile.move_number = 0;
 
@@ -460,7 +460,7 @@ public class Game {
 
         /* Re-show tiles that were removed */
         move_number--;
-        foreach (var tile in tiles) {
+        foreach (unowned var tile in tiles) {
             if (tile.move_number == move_number) {
                 tile.visible = true;
                 redraw_tile (tile);
@@ -470,7 +470,7 @@ public class Game {
 
     public bool can_redo {
         get {
-            foreach (var tile in tiles)
+            foreach (unowned var tile in tiles)
                 if (tile.move_number >= move_number)
                     return true;
             return false;
@@ -484,7 +484,7 @@ public class Game {
         selected_tile = null;
         set_hint (null, null);
 
-        foreach (var tile in tiles) {
+        foreach (unowned var tile in tiles) {
             if (tile.move_number == move_number) {
                 tile.visible = false;
                 redraw_tile (tile);

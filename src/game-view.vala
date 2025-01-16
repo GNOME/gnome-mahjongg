@@ -157,7 +157,7 @@ public class GameView : Gtk.DrawingArea {
         tile_pattern_width = tile_width + tile_layer_offset_x;
         tile_pattern_height = tile_height + tile_layer_offset_y;
 
-        foreach (var tile in game.tiles) {
+        foreach (unowned var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 
@@ -301,7 +301,7 @@ public class GameView : Gtk.DrawingArea {
         Tile topmost_tile = null;
         var previous_layer = -1;
 
-        foreach (var tile in game.tiles) {
+        foreach (unowned var tile in game.tiles) {
             if (!tile.visible)
                 continue;
 
