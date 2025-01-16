@@ -54,6 +54,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         if (APP_ID.has_suffix (".Devel"))
             add_css_class ("devel");
 
+        game_view.add_css_class ("game-container");
         menu_button.menu_model = menu_model;
         toolbar_view.content = game_view;
     }

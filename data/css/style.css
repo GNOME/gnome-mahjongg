@@ -11,6 +11,11 @@ window.educational {
     background: #edf5f3;
 }
 
+/* Game view */
+.game-container {
+    transition: opacity 250ms ease-out;
+}
+
 /* Scores */
 columnview {
     background: transparent;
