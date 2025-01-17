@@ -73,15 +73,15 @@ public class Mahjongg : Adw.Application {
         window = new MahjonggWindow (this, game_view, maps);
 
         var layout = settings.get_string ("mapset");
-        var layout_action = (SimpleAction) lookup_action ("layout");
+        unowned var layout_action = lookup_action ("layout") as SimpleAction;
         layout_action.set_state (new Variant.@string (layout));
 
         var layout_rotation = settings.get_string ("map-rotation");
-        var layout_rotation_action = (SimpleAction) lookup_action ("layout-rotation");
+        unowned var layout_rotation_action = lookup_action ("layout-rotation") as SimpleAction;
         layout_rotation_action.set_state (new Variant.@string (layout_rotation));
 
         var background_color = settings.get_string ("background-color");
-        var background_color_action = (SimpleAction) lookup_action ("background-color");
+        unowned var background_color_action = lookup_action ("background-color") as SimpleAction;
         background_color_action.set_state (new Variant.@string (background_color));
 
         var theme = settings.get_string ("tileset");
@@ -89,7 +89,7 @@ public class Mahjongg : Adw.Application {
             // Migrate old theme names
             settings.set_string ("tileset", theme.split (".")[0]);
 
-        var theme_action = (SimpleAction) lookup_action ("theme");
+        unowned var theme_action = lookup_action ("theme") as SimpleAction;
         theme_action.set_state (new Variant.@string (theme));
 
         settings.changed.connect (conf_value_changed_cb);
@@ -125,10 +125,10 @@ public class Mahjongg : Adw.Application {
     }
 
     private void update_ui () {
-        var pause_action = lookup_action ("pause") as SimpleAction;
-        var hint_action = lookup_action ("hint") as SimpleAction;
-        var undo_action = lookup_action ("undo") as SimpleAction;
-        var redo_action = lookup_action ("redo") as SimpleAction;
+        unowned var pause_action = lookup_action ("pause") as SimpleAction;
+        unowned var hint_action = lookup_action ("hint") as SimpleAction;
+        unowned var undo_action = lookup_action ("undo") as SimpleAction;
+        unowned var redo_action = lookup_action ("redo") as SimpleAction;
 
         pause_action.set_enabled (game_view.game.started);
 
@@ -162,7 +162,7 @@ public class Mahjongg : Adw.Application {
             window.theme = theme;
         }
         else if (key == "background-color") {
-            var style_manager = Adw.StyleManager.get_default ();
+            unowned var style_manager = Adw.StyleManager.get_default ();
             var color_scheme = settings.get_enum ("background-color");
 
             style_manager.set_color_scheme (color_scheme);
@@ -398,7 +398,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         update_ui ();
     }
 
-    private Map find_map () {
+    private unowned Map find_map () {
         foreach (unowned var m in maps) {
             if (m.name == settings.get_string ("mapset")) {
                 return m;
@@ -408,8 +408,8 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         return maps.nth_data (0);
     }
 
-    private Map get_next_map (bool rotate_map) {
-        var map = find_map ();
+    private unowned Map get_next_map (bool rotate_map) {
+        unowned var map = find_map ();
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
@@ -424,7 +424,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         }
 
         if (settings.get_string ("mapset") != map.name) {
-            var layout_action = (SimpleAction) lookup_action ("layout");
+            unowned var layout_action = lookup_action ("layout") as SimpleAction;
             layout_action.set_state (new Variant.@string (map.name));
             settings.set_string ("mapset", map.name);
         }
@@ -438,7 +438,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
      * map according to the ``map-rotation`` setting.
      */
     private void new_game (bool rotate_map = true) {
-        var map = get_next_map (rotate_map);
+        unowned var map = get_next_map (rotate_map);
 
         game_view.game = new Game (map);
         game_view.game.attempt_move.connect (attempt_move_cb);
@@ -467,7 +467,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void help_cb () {
-        var display = Gdk.Display.get_default ();
+        unowned var display = Gdk.Display.get_default ();
         var context = display.get_app_launch_context ();
 
         GLib.AppInfo.launch_default_for_uri_async.begin ("help:gnome-mahjongg", context, null, (obj, res) => {

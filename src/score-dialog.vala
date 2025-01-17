@@ -122,7 +122,7 @@ public class ScoreDialog : Adw.Dialog {
             entries += entry.name;
         };
 
-        var visible_entry = selected_entry;
+        unowned var visible_entry = selected_entry;
         if (visible_entry == null) {
             unowned var entry = history.entries.first ();
 
@@ -132,7 +132,7 @@ public class ScoreDialog : Adw.Dialog {
             visible_entry = entry.data;
         }
 
-        var action = (SimpleAction) action_group.lookup_action ("layout");
+        unowned var action = action_group.lookup_action ("layout") as SimpleAction;
         action.set_state (new Variant.string (visible_entry.name));
         score_map = visible_entry.name;
     }
@@ -205,7 +205,7 @@ public class ScoreDialog : Adw.Dialog {
            https://gitlab.gnome.org/GNOME/vala/-/issues/957 */
 
         entry_input.notify["text"].connect (() => {
-            var history_entry = list_item.item as HistoryEntry;
+            unowned var history_entry = list_item.item as HistoryEntry;
             if (entry_input.text.length <= 0)
                 history_entry.player = Environment.get_real_name ();
             else
@@ -217,7 +217,7 @@ public class ScoreDialog : Adw.Dialog {
         var stack = new Gtk.Stack ();
         stack.add_named (new Gtk.Inscription (null), "label");
 
-        var list_item = object as Gtk.ListItem;
+        unowned var list_item = object as Gtk.ListItem;
         var entry_input = new Gtk.Entry () {
             has_frame = false,
             max_width_chars = 5
@@ -238,43 +238,48 @@ public class ScoreDialog : Adw.Dialog {
         ((Gtk.ListItem) list_item).child = label;
     }
 
-    private void item_date_setup_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = new Gtk.Label (null) {
-            xalign = 0
-        };
+    private void item_date_setup_cb (Gtk.SignalListItemFactory factory, Object object) {
+        unowned var list_item = object as Gtk.ListItem;
+        var label = new Gtk.Label (null) { xalign = 0 };
+
         label.add_css_class ("numeric");
-        ((Gtk.ListItem) list_item).child = label;
+        list_item.child = label;
     }
 
-    private void item_rank_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
-        var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+    private void item_rank_bind_cb (Gtk.SignalListItemFactory factory, Object object) {
+        unowned var list_item = object as Gtk.ListItem;
+        unowned var label = list_item.child as Gtk.Label;
+        unowned var entry = list_item.item as HistoryEntry;
+
         uint position;
         score_model.find (entry, out position);
 
         label.label = (position + 1).to_string ();
     }
 
-    private void item_player_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var stack = ((Gtk.ListItem) list_item).child as Gtk.Stack;
-        var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+    private void item_player_bind_cb (Gtk.SignalListItemFactory factory, Object object) {
+        unowned var list_item = object as Gtk.ListItem;
+        unowned var stack = list_item.child as Gtk.Stack;
+        unowned var entry = list_item.item as HistoryEntry;
 
         if (entry == selected_entry) {
             stack.visible_child_name = "entry";
-            var text_entry = (Gtk.Entry) stack.visible_child;
+            unowned var text_entry = stack.visible_child as Gtk.Entry;
             text_entry.text = entry.player;
             text_entry.add_css_class ("heading");
-            selected_item = (Gtk.ListItem) list_item;
+            selected_item = list_item;
         }
         else {
             stack.visible_child_name = "label";
-            ((Gtk.Inscription) stack.visible_child).text = entry.player;
+            unowned var inscription = stack.visible_child as Gtk.Inscription;
+            inscription.text = entry.player;
         }
     }
 
-    private void item_time_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = ((Gtk.ListItem) list_item).child as Gtk.Inscription;
-        var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+    private void item_time_bind_cb (Gtk.SignalListItemFactory factory, Object object) {
+        unowned var list_item = object as Gtk.ListItem;
+        unowned var label = list_item.child as Gtk.Inscription;
+        unowned var entry = list_item.item as HistoryEntry;
 
         var time_label = "%us".printf (entry.duration);
         if (entry.duration >= 60)
@@ -285,9 +290,10 @@ public class ScoreDialog : Adw.Dialog {
         label.text = time_label;
     }
 
-    private void item_date_bind_cb (Gtk.SignalListItemFactory factory, Object list_item) {
-        var label = ((Gtk.ListItem) list_item).child as Gtk.Label;
-        var entry = ((Gtk.ListItem) list_item).item as HistoryEntry;
+    private void item_date_bind_cb (Gtk.SignalListItemFactory factory, Object object) {
+        unowned var list_item = object as Gtk.ListItem;
+        unowned var label = list_item.child as Gtk.Label;
+        unowned var entry = list_item.item as HistoryEntry;
 
         var date_label = entry.date.format ("%x");
         if (entry == selected_entry)
@@ -304,7 +310,8 @@ public class ScoreDialog : Adw.Dialog {
             return;
 
         Idle.add (() => {
-            var text_entry = ((Gtk.Stack) selected_item.child).visible_child;
+            unowned var stack = selected_item.child as Gtk.Stack;
+            unowned var text_entry = stack.visible_child;
             text_entry.grab_focus ();
             score_view.scroll_to (position, null, Gtk.ListScrollFlags.NONE, null);
             return false;
