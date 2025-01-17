@@ -202,18 +202,18 @@ public class GameView : Gtk.Widget {
                 else
                     pixbuf = pixbuf.scale_simple (new_theme_width, new_theme_height, Gdk.InterpType.TILES);
             }
-            var bytes = new Bytes.take (pixbuf.get_pixels_with_length ());
+            var rowstride = new_theme_width * 4;
             var texture = new Gdk.MemoryTexture (
                 new_theme_width,
                 new_theme_height,
                 Gdk.MemoryFormat.R8G8B8A8,
-                bytes,
-                pixbuf.rowstride
+                pixbuf.read_pixel_bytes (),
+                rowstride
             );
 
             if (using_cairo) {
                 var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, new_theme_width, new_theme_height);
-                texture.download (theme_surface.get_data (), theme_surface.get_stride ());
+                texture.download (theme_surface.get_data (), rowstride);
                 theme_surface.mark_dirty ();
                 tile_pattern = new Cairo.Pattern.for_surface (theme_surface);
             } else {
@@ -331,7 +331,7 @@ public class GameView : Gtk.Widget {
     }
 
     private Tile? find_tile (int x, int y) {
-        Tile? topmost_tile = null;
+        unowned Tile? topmost_tile = null;
         var previous_layer = -1;
 
         foreach (unowned var tile in game.tiles) {

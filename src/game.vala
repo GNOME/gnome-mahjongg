@@ -132,8 +132,7 @@ public class Game {
 
         /* Create the tiles in the locations required in the map */
         foreach (unowned var slot in map.slots) {
-            var tile = new Tile (slot);
-            tiles.insert_sorted (tile, compare_tiles);
+            tiles.insert_sorted (new Tile (slot), compare_tiles);
         }
 
         /* Come up with a random solution by picking random pairs and assigning them
@@ -159,10 +158,13 @@ public class Game {
         // Fisher Yates Shuffle
         var n = tiles.length ();
         do {
-            for (var i = n - 1; i > 0; i--) {
-                int j = Random.int_range (0, (int) i + 1);
+            tiles.reverse ();
+            var i = n - 1;
+            foreach (unowned var tile in tiles) {
+                var j = Random.int_range (0, (int) i + 1);
                 // switch internal positions
-                switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
+                switch_tiles (tiles.nth_data (j), tile);
+                i--;
             }
             // resort for drawing order
             tiles.sort (compare_tiles);
@@ -203,15 +205,16 @@ public class Game {
 
         var n = Random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
-            var match = matches.nth_data ((n + i) % n_matches);
-            var tile0 = match.tile0;
-            var tile1 = match.tile1;
+            var number = numbers[depth];
+            unowned var match = matches.nth_data ((n + i) % n_matches);
+            unowned var tile0 = match.tile0;
+            unowned var tile1 = match.tile1;
 
-            tile0.number = numbers[depth];
-            tile0.pair = tile0.number / 4;
+            tile0.number = number;
+            tile0.pair = number / 4;
             tile0.visible = false;
-            tile1.number = numbers[depth] + 1;
-            tile1.pair = tile1.number / 4;
+            tile1.number = number + 1;
+            tile1.pair = number / 4;
             tile1.visible = false;
 
             if (shuffle (numbers, depth + 1))
@@ -290,29 +293,37 @@ public class Game {
         var blocked_left = false;
         var blocked_right = false;
         var slot = tile.slot;
+
         foreach (unowned var t in tiles) {
             if (t == tile || !t.visible)
                 continue;
 
-            var s = t.slot;
+            var x = slot.x;
+            var y = slot.y;
+            var layer = slot.layer;
 
-            /* Can't move if blocked by a tile above */
-            if (s.layer > slot.layer &&
-                (s.x >= slot.x - 1 && s.x <= slot.x + 1) &&
-                (s.y >= slot.y - 1 && s.y <= slot.y + 1))
-                return false;
+            var s = t.slot;
+            var s_x = s.x;
+            var s_y = s.y;
+            var s_layer = s.layer;
 
             /* Can't move if blocked both on the left and the right */
-            if (s.layer == slot.layer && (s.y >= slot.y - 1 && s.y <= slot.y + 1)) {
-                if (s.x == slot.x - 2)
-                    blocked_left = true;
-                if (s.x == slot.x + 2)
-                    blocked_right = true;
-                if (blocked_left && blocked_right)
-                    return false;
+            if (s_layer == layer) {
+                if (s_y >= y - 1 && s_y <= y + 1) {
+                    if (s_x == x - 2)
+                        blocked_left = true;
+                    if (s_x == x + 2)
+                        blocked_right = true;
+                    if (blocked_left && blocked_right)
+                        return false;
+                }
+            /* Can't move if blocked by a tile above */
+            } else if (s_layer > layer &&
+                (s_x >= x - 1 && s_x <= x + 1) &&
+                (s_y >= y - 1 && s_y <= y + 1)) {
+                return false;
             }
         }
-
         return true;
     }
 
@@ -329,18 +340,24 @@ public class Game {
 
         if (tile == null) {
             foreach (unowned var t in tiles) {
-                foreach (unowned var match in find_matches (t)) {
-                    bool already_matched = false;
+                var submatches = find_matches (t);
+
+                foreach (unowned var match in submatches) {
                     foreach (unowned var existing_match in matches) {
-                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0) {
-                            already_matched = true;
+                        unowned var match0_tile0 = existing_match.tile0;
+                        unowned var match0_tile1 = existing_match.tile1;
+                        unowned var match1_tile0 = match.tile0;
+                        unowned var match1_tile1 = match.tile1;
+
+                        if (match0_tile0 == match1_tile0 && match0_tile1 == match1_tile1) {
+                            submatches.remove (match);
                             break;
                         }
                     }
-
-                    if (!already_matched)
-                        matches.append (match);
                 }
+
+                if (submatches.length () > 0)
+                    matches.concat ((owned) submatches);
             }
         }
         else if (tile_can_move (tile)) {
@@ -352,7 +369,7 @@ public class Game {
                 if (!tiles_match (t, tile) || !tile_can_move (t))
                     continue;
 
-                matches.append (Match () { tile0 = t, tile1 = tile });
+                matches.prepend (Match () { tile0 = t, tile1 = tile });
 
                 /* Only need a single match for uninitialized tiles */
                 if (t.number == -1)
