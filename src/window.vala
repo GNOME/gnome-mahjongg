@@ -43,7 +43,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     public MahjonggWindow (Gtk.Application application, List<Map> maps) {
         Object (application: application);
 
-        var menu_builder = new Gtk.Builder.from_resource ("/org/gnome/Mahjongg/ui/menu.ui");
+        var menu_builder = new Gtk.Builder.from_resource (application.resource_base_path + "/ui/menu.ui");
         unowned var menu_model = menu_builder.get_object ("menu") as MenuModel;
         unowned var layout_menu = menu_builder.get_object ("layout_menu") as Menu;
 

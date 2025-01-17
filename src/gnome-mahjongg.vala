@@ -135,7 +135,7 @@ public class Mahjongg : Adw.Application {
         style_manager.set_color_scheme (color_scheme);
 
         if (game_view != null) {
-            var path = "/org/gnome/Mahjongg/themes/";
+            var path = resource_base_path + "/themes/";
             var fallback_theme = settings.get_default_value ("tileset").get_string ();
             game_view.set_theme (path + theme, previous_game_view, path + fallback_theme);
         }
@@ -299,7 +299,7 @@ public class Mahjongg : Adw.Application {
     }
 
     private void about_cb () {
-        var about_dialog = new Adw.AboutDialog.from_appdata ("/org/gnome/Mahjongg/metainfo.xml", VERSION) {
+        var about_dialog = new Adw.AboutDialog.from_appdata (resource_base_path + "/metainfo.xml", VERSION) {
             copyright = """Copyright © 1998–2025 Mahjongg Contributors
 Copyright © 1998–2008 Free Software Foundation, Inc.""",
             developers = {
