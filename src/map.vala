@@ -344,7 +344,7 @@ public class MapLoader {
         case "map":
             var n_slots = map.slots.length ();
             if (map.name != null && map.score_name != null && n_slots <= 144 && n_slots % 2 == 0)
-                maps.prepend (map);
+                maps.append (map);
             else
                 warning ("Invalid map");
             map = null;
