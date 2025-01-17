@@ -298,49 +298,40 @@ public class Mahjongg : Adw.Application {
     }
 
     private void about_cb () {
-        string[] developers = {
-            "Francisco Bustamante",
-            "Max Watson",
-            "Heinz Hempe",
-            "Michael Meeks",
-            "Philippe Chavin",
-            "Callum McKenzie",
-            "Rexford Newbould",
-            "Krzysztof Foltman",
-            "Robert Ancell",
-            "Michael Catanzaro",
-            "Mario Wenzel",
-            "Arnaud Bonatti",
-            "Jeremy Bicha",
-            "Alberto Ruiz",
-            "Günther Wagner",
-            "Mathias Bonn",
-            null
-        };
-
-        string[] artists = {
-            "Jonathan Buzzard",
-            "Jim Evans",
-            "Richard Hoelscher",
-            "Gonzalo Odiard",
-            "Max Watson",
-            "Jakub Steiner",
-            null
-        };
-
-        string[] documenters = {
-            "Tiffany Antopolski",
-            "Chris Beiser",
-            "Andre Klapper",
-            null
-        };
-
         var about_dialog = new Adw.AboutDialog.from_appdata ("/org/gnome/Mahjongg/metainfo.xml", VERSION) {
             copyright = """Copyright © 1998–2025 Mahjongg Contributors
 Copyright © 1998–2008 Free Software Foundation, Inc.""",
-            developers = developers,
-            artists = artists,
-            documenters = documenters,
+            developers = {
+                "Francisco Bustamante",
+                "Max Watson",
+                "Heinz Hempe",
+                "Michael Meeks",
+                "Philippe Chavin",
+                "Callum McKenzie",
+                "Rexford Newbould",
+                "Krzysztof Foltman",
+                "Robert Ancell",
+                "Michael Catanzaro",
+                "Mario Wenzel",
+                "Arnaud Bonatti",
+                "Jeremy Bicha",
+                "Alberto Ruiz",
+                "Günther Wagner",
+                "Mathias Bonn"
+            },
+            artists = {
+                "Jonathan Buzzard",
+                "Jim Evans",
+                "Richard Hoelscher",
+                "Gonzalo Odiard",
+                "Max Watson",
+                "Jakub Steiner"
+            },
+            documenters = {
+                "Tiffany Antopolski",
+                "Chris Beiser",
+                "Andre Klapper"
+            },
             translator_credits = _("translator-credits"),
         };
         about_dialog.present (window);
