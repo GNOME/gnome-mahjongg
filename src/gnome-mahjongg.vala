@@ -60,7 +60,8 @@ public class Mahjongg : Adw.Application {
         set_accels_for_action ("app.help", { "F1" });
         set_accels_for_action ("app.quit", { "<Primary>q", "<Primary>w" });
 
-        settings = new Settings (get_application_id ());
+        settings = new Settings (application_id);
+        settings.delay ();
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
@@ -116,6 +117,11 @@ public class Mahjongg : Adw.Application {
 
     public override void activate () {
         window.present ();
+    }
+
+    public override void shutdown () {
+        settings.apply ();
+        base.shutdown ();
     }
 
     private void update_ui () {
@@ -230,9 +236,12 @@ public class Mahjongg : Adw.Application {
     private void layout_cb (SimpleAction action, Variant variant) {
         var layout = variant.get_string ();
         action.set_state (variant);
+
         if (settings.get_string ("mapset") != layout) {
             settings.set_string ("mapset", layout);
-            // Load a new game iff the layout was manually changed.
+            settings.apply ();
+
+            // Load a new game if the layout was manually changed.
             new_game (false);
         }
     }
@@ -240,22 +249,31 @@ public class Mahjongg : Adw.Application {
     private void layout_rotation_cb (SimpleAction action, Variant variant) {
         var layout_rotation = variant.get_string ();
         action.set_state (variant);
-        if (settings.get_string ("map-rotation") != layout_rotation)
+
+        if (settings.get_string ("map-rotation") != layout_rotation) {
             settings.set_string ("map-rotation", layout_rotation);
+            settings.apply ();
+        }
     }
 
     private void background_color_cb (SimpleAction action, Variant variant) {
         var background_color = variant.get_string ();
         action.set_state (variant);
-        if (settings.get_string ("background-color") != background_color)
+
+        if (settings.get_string ("background-color") != background_color) {
             settings.set_string ("background-color", background_color);
+            settings.apply ();
+        }
     }
 
     private void theme_cb (SimpleAction action, Variant variant) {
         var theme = variant.get_string ();
         action.set_state (variant);
-        if (settings.get_string ("tileset") != theme)
+
+        if (settings.get_string ("tileset") != theme) {
             settings.set_string ("tileset", theme);
+            settings.apply ();
+        }
     }
 
     private void hint_cb () {
