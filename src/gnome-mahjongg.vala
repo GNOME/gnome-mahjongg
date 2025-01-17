@@ -92,16 +92,14 @@ public class Mahjongg : Adw.Application {
         unowned var theme_action = lookup_action ("theme") as SimpleAction;
         theme_action.set_state (new Variant.@string (theme));
 
-        settings.changed.connect (conf_value_changed_cb);
-
-        conf_value_changed_cb.begin (settings, "background-color");
-        conf_value_changed_cb.begin (settings, "tileset");
-
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
 
+        update_theme ();
         new_game ();
+
+        settings.changed.connect (conf_value_changed_cb);
     }
 
     protected override int handle_local_options (VariantDict options) {
@@ -122,6 +120,23 @@ public class Mahjongg : Adw.Application {
     public override void shutdown () {
         settings.apply ();
         base.shutdown ();
+    }
+
+    private void update_theme () {
+        var color_scheme = settings.get_enum ("background-color");
+        var theme = settings.get_string ("tileset");
+        var style_manager = Adw.StyleManager.get_default ();
+        var theme_path = "/org/gnome/Mahjongg/themes/";
+
+        style_manager.set_color_scheme (color_scheme);
+
+        game_view.theme = theme_path + theme;
+        if (game_view.theme == null) {
+            /* Failed to load theme, fall back to default */
+            theme = settings.get_default_value ("tileset").get_string ();
+            game_view.theme = theme_path + theme;
+        }
+        window.theme = theme;
     }
 
     private void update_ui () {
@@ -148,25 +163,8 @@ public class Mahjongg : Adw.Application {
     }
 
     private async void conf_value_changed_cb (Settings settings, string key) {
-        if (key == "tileset") {
-            var theme = settings.get_string ("tileset");
-            var theme_path = "/org/gnome/Mahjongg/themes/";
-            game_view.theme = theme_path + theme;
-
-            if (game_view.theme == null) {
-                /* Failed to load theme, fall back to default */
-                theme = settings.get_default_value ("tileset").get_string ();
-                game_view.theme = theme_path + theme;
-            }
-
-            window.theme = theme;
-        }
-        else if (key == "background-color") {
-            unowned var style_manager = Adw.StyleManager.get_default ();
-            var color_scheme = settings.get_enum ("background-color");
-
-            style_manager.set_color_scheme (color_scheme);
-        }
+        if (key == "tileset" || key == "background-color")
+            update_theme ();
     }
 
     private bool attempt_move_cb () {
