@@ -28,6 +28,7 @@ window.compact sheet toolbarview > .top-bar {
 /* Game view */
 stack.game {
     margin-top: -11px;
+    min-height: 11px;
     transition: opacity 250ms ease-out;
 }
 
