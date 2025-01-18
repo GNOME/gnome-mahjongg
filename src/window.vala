@@ -15,6 +15,19 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     [GtkChild]
     private unowned Gtk.Stack stack;
 
+    private bool _compact;
+    public bool compact {
+        get { return _compact; }
+        set {
+            _compact = value;
+            if (!value) {
+                remove_css_class ("compact");
+                return;
+            }
+            add_css_class ("compact");
+        }
+    }
+
     public string clock {
         set {
             title_widget.title = value;

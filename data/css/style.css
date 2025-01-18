@@ -11,8 +11,23 @@ window.educational {
     background: #edf5f3;
 }
 
+/* Compact mode */
+window toolbarview > .top-bar {
+    transition: margin 85ms ease-in-out;
+}
+
+window.compact toolbarview > .top-bar {
+    margin-top: -5px;
+}
+
+window.compact sheet toolbarview > .top-bar {
+    margin-top: initial;
+    margin-bottom: initial;
+}
+
 /* Game view */
 stack.game {
+    margin-top: -11px;
     transition: opacity 250ms ease-out;
 }
 

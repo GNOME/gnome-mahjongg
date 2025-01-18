@@ -4,6 +4,12 @@
     <property name="width-request">360</property>
     <property name="height-request">294</property>
     <child>
+      <object class="AdwBreakpoint">
+        <condition>max-height: 380px</condition>
+        <setter object="MahjonggWindow" property="compact">True</setter>
+      </object>
+    </child>
+    <child>
       <object class="AdwToolbarView" id="toolbar_view">
         <child type="top">
           <object class="AdwHeaderBar">

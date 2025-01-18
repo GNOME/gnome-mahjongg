@@ -205,37 +205,48 @@ public class Map {
     }
 
     private int _width;
+    public int h_overhang;
     public int width {
         get {
             if (_width > 0)
                 return _width;
 
-            var w = 0;
+            var x = 0;
+            var layer = 0;
             foreach (unowned var slot in slots) {
-                if (slot.x > w)
-                    w = slot.x;
+                if (slot.x > x) {
+                    x = slot.x;
+                    layer = slot.layer;
+                }
             }
 
             /* Width is x location of right most tile and the width of that tile (2 units) */
-            _width = w + 2;
+            h_overhang = layer;
+            _width = x + 2;
             return _width;
         }
     }
 
     private int _height;
+    public int v_overhang;
     public int height {
         get {
             if (_height > 0)
                 return _height;
 
-            var h = 0;
+            var y = 0;
+            var layer = 0;
             foreach (unowned var slot in slots) {
-                if (slot.y > h)
-                    h = slot.y;
+                if (slot.y > y)
+                    y = slot.y;
+
+                else if (slot.y == 0 && slot.layer > layer)
+                    layer = slot.layer;
             }
 
             /* Height is x location of bottom most tile and the height of that tile (2 units) */
-            _height = h + 2;
+            v_overhang = layer;
+            _height = y + 2;
             return _height;
         }
     }

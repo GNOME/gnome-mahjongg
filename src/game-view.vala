@@ -257,12 +257,14 @@ public class GameView : Gtk.Widget {
         var width = get_width ();
         var height = get_height ();
 
-        /* Need enough space for the whole map and one unit border */
-        var map_width = game.map.width + 2;
-        var map_height = (int) ((game.map.height + 2) * theme_aspect);
+        /* Shrink border width at smaller window size (mobile screens) */
+        var h_border = (float) width / 220;
+        var v_border = (float) height / 560;
+        var map_width = game.map.width + (game.map.h_overhang / 4) + h_border;
+        var map_height = (game.map.height + (game.map.v_overhang / 4) + v_border) * theme_aspect;
 
         /* Scale the map to fit */
-        var unit_width = int.min (width / map_width, height / map_height);
+        var unit_width = (int) double.min (width / map_width, height / map_height);
         var unit_height = (int) (unit_width * theme_aspect);
 
         /* The size of one tile is two units wide, and the correct aspect ratio */
@@ -274,8 +276,8 @@ public class GameView : Gtk.Widget {
         tile_layer_offset_y = tile_height / 10;
 
         /* Center the map */
-        x_offset = (width - game.map.width * unit_width) / 2;
-        y_offset = (height - game.map.height * unit_height) / 2;
+        x_offset = (int) (width - ((game.map.width + (game.map.h_overhang / 4)) * unit_width)) / 2;
+        y_offset = (int) (height - ((game.map.height * unit_height) - ((game.map.v_overhang * unit_height) / 8))) / 2;
 
         /* The images are bigger than the tile as they contain the isometric extension in the z-axis */
         tile_pattern_width = tile_width + tile_layer_offset_x;
