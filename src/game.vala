@@ -345,24 +345,18 @@ public class Game {
 
         if (tile == null) {
             foreach (unowned var t in tiles) {
-                var submatches = find_matches (t);
+                foreach (unowned var match in find_matches (t)) {
+                    var already_matched = false;
 
-                foreach (unowned var match in submatches) {
                     foreach (unowned var existing_match in matches) {
-                        unowned var match0_tile0 = existing_match.tile0;
-                        unowned var match0_tile1 = existing_match.tile1;
-                        unowned var match1_tile0 = match.tile0;
-                        unowned var match1_tile1 = match.tile1;
-
-                        if (match0_tile0 == match1_tile0 && match0_tile1 == match1_tile1) {
-                            submatches.remove (match);
+                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0) {
+                            already_matched = true;
                             break;
                         }
                     }
+                    if (!already_matched)
+                        matches.prepend (match);
                 }
-
-                if (submatches.length () > 0)
-                    matches.concat ((owned) submatches);
             }
         }
         else if (tile_can_move (tile)) {
