@@ -56,17 +56,12 @@ public class GameView : Gtk.Widget {
         click_controller.pressed.connect (click_cb);
     }
 
-    public override void size_allocate (int width, int height, int baseline) {
+    public override void snapshot (Gtk.Snapshot snapshot) {
         if (game == null)
             return;
 
         update_dimensions ();
         resize_theme ();
-    }
-
-    public override void snapshot (Gtk.Snapshot snapshot) {
-        if (game == null)
-            return;
 
         if (texture == null && cairo_pattern == null)
             return;
