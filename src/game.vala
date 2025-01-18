@@ -142,7 +142,7 @@ public class Game {
 
         /* Come up with a random solution by picking random pairs and assigning them
          * with a random value.  If end up with an invalid solution, then choose the
-         * next avaiable pair */
+         * next available pair */
         var n_pairs = (int) tiles.length () / 2;
         var numbers = new int[n_pairs];
         for (var i = 0; i < n_pairs; i++)
@@ -297,7 +297,7 @@ public class Game {
 
         var blocked_left = false;
         var blocked_right = false;
-        var slot = tile.slot;
+        unowned var slot = tile.slot;
 
         foreach (unowned var t in tiles) {
             if (t == tile || !t.visible)
@@ -307,7 +307,7 @@ public class Game {
             var y = slot.y;
             var layer = slot.layer;
 
-            var s = t.slot;
+            unowned var s = t.slot;
             var s_x = s.x;
             var s_y = s.y;
             var s_layer = s.layer;
