@@ -27,4 +27,15 @@
    moves that can be made. It can help you see how far you are from running out
    of moves, and whether you've seen all possible moves.</p>
 
+  <p>You can undo or redo a move using one of the following methods:</p>
+
+  <list>
+    <item>
+      <p>The <gui style="button">Undo</gui> and <gui style="button">Redo</gui> buttons in the header bar.</p>
+    </item>
+    <item>
+      <p><keyseq><key>Ctrl</key><key>Z</key></keyseq> and <keyseq><key>Ctrl</key><key>Shift</key><key>Z</key></keyseq>
+      on your keyboard.</p>
+    </item>
+  </list>
 </page>
