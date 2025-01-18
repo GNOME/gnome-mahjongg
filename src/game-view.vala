@@ -207,8 +207,9 @@ public class GameView : Gtk.Widget {
             }
         }
         if (!use_original_size) {
-            new_theme_width *= scale_factor;
-            new_theme_height *= scale_factor;
+            var scale = get_native ().get_surface ().get_scale ();
+            new_theme_width = (int) (new_theme_width * scale);
+            new_theme_height = (int) (new_theme_height * scale);
         }
 
         if (new_theme_width == loaded_theme_width)
