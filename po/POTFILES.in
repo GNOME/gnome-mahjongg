@@ -3,7 +3,6 @@
 data/org.gnome.Mahjongg.desktop.in.in
 data/org.gnome.Mahjongg.gschema.xml.in
 data/org.gnome.Mahjongg.metainfo.xml.in.in
-data/ui/help-overlay.ui
 data/ui/menu.ui
 data/ui/score-dialog.ui
 data/ui/window.ui
