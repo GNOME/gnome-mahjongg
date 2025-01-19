@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-09-14 11:20+0000\n"
-"PO-Revision-Date: 2024-11-07 22:18+0200\n"
+"POT-Creation-Date: 2025-01-19 11:38+0000\n"
+"PO-Revision-Date: 2025-01-19 14:03+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "מא-ג׳ונג"
 
@@ -37,17 +37,17 @@ msgstr "התאמת אריחים וריקון הלוח"
 msgid "game;strategy;puzzle;board;"
 msgstr "משחק;אסטרטגיה;פאזל;פזל;תצרף;לוח;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:20
-msgid "Width of the window in pixels"
-msgstr "Width of the window in pixels"
-
-#: data/org.gnome.Mahjongg.gschema.xml.in:24
-msgid "Height of the window in pixels"
-msgstr "Height of the window in pixels"
-
 #: data/org.gnome.Mahjongg.gschema.xml.in:28
+msgid "Width of the window in pixels"
+msgstr "רוחב החלון בפיקסלים"
+
+#: data/org.gnome.Mahjongg.gschema.xml.in:32
+msgid "Height of the window in pixels"
+msgstr "גובה החלון בפיקסלים"
+
+#: data/org.gnome.Mahjongg.gschema.xml.in:36
 msgid "true if the window is maximized"
-msgstr "true if the window is maximized"
+msgstr "true/חיובי אם החלון מוגדל"
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid ""
@@ -82,70 +82,11 @@ msgstr "מא-ג׳ונג בסגנון בהיר"
 msgid "Mahjongg in Dark Style"
 msgstr "מא-ג׳ונג בסגנון כהה"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74
 msgid "The Mahjongg Team"
 msgstr "צוות מא-ג׳ונג"
 
-#: data/ui/help-overlay.ui:8
-msgctxt "shortcut window"
-msgid "Playing"
-msgstr "במשחק"
-
-#: data/ui/help-overlay.ui:12
-msgctxt "shortcut window"
-msgid "New Game"
-msgstr "משחק חדש"
-
-# msgctxt "shortcut window"
-#: data/ui/help-overlay.ui:18
-msgctxt "shortcut window"
-msgid "Pause Game"
-msgstr "השהיית המשחק"
-
-#: data/ui/help-overlay.ui:24
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "ביטול"
-
-#: data/ui/help-overlay.ui:30
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "ביצוע חוזר"
-
-# msgctxt "shortcut window"
-#: data/ui/help-overlay.ui:36
-msgctxt "shortcut window"
-msgid "Show Hint"
-msgstr "הצגת רמז"
-
-# msgctxt "shortcut window"
-#: data/ui/help-overlay.ui:43
-msgctxt "shortcut window"
-msgid "General"
-msgstr "כללי"
-
-# msgctxt "shortcut window"
-#: data/ui/help-overlay.ui:47
-msgctxt "shortcut window"
-msgid "Show Main Menu"
-msgstr "הצגת תפריט ראשי"
-
-#: data/ui/help-overlay.ui:53
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "הצגת צירופי מקשים"
-
-#: data/ui/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "הצגת עזרה"
-
-#: data/ui/help-overlay.ui:65
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "יציאה"
-
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
+#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:211
 msgid "_New Game"
 msgstr "_משחק חדש"
 
@@ -212,104 +153,126 @@ msgid "Difficult"
 msgstr "קשה"
 
 #: data/ui/menu.ui:55
-msgid "_Background"
-msgstr "_רקע"
+msgid "Layout Ro_tation"
+msgstr "ה_חלפת פריסה"
 
 #: data/ui/menu.ui:58
-msgid "Follow System"
-msgstr "על פי המערכת"
+msgctxt "layout rotation"
+msgid "No Rotation"
+msgstr "ללא החלפה"
 
 #: data/ui/menu.ui:63
+msgctxt "layout rotation"
+msgid "Sequential"
+msgstr "רציף"
+
+#: data/ui/menu.ui:68
+msgctxt "layout rotation"
+msgid "Random"
+msgstr "אקראי"
+
+#: data/ui/menu.ui:75
+msgid "_Appearance"
+msgstr "מ_ראה"
+
+#: data/ui/menu.ui:77
+msgid "Background"
+msgstr "רקע"
+
+#: data/ui/menu.ui:79
+msgctxt "background color"
+msgid "Follow System"
+msgstr "כמו המערכת"
+
+#: data/ui/menu.ui:84
+msgctxt "background color"
 msgid "Light"
 msgstr "בהיר"
 
-#: data/ui/menu.ui:68
+#: data/ui/menu.ui:89
+msgctxt "background color"
 msgid "Dark"
 msgstr "כהה"
 
-#: data/ui/menu.ui:75
-msgid "_Theme"
-msgstr "_ערכת נושא"
+#: data/ui/menu.ui:95
+msgid "Theme"
+msgstr "ערכת עיצוב"
 
-#: data/ui/menu.ui:78
+#: data/ui/menu.ui:97
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr "פוסט מודרני"
 
-#: data/ui/menu.ui:81
+#: data/ui/menu.ui:102
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "חלק"
 
-#: data/ui/menu.ui:84
+#: data/ui/menu.ui:107
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "חינוכי"
 
-#: data/ui/menu.ui:91
-msgid "_Keyboard Shortcuts"
-msgstr "_צירופי מקשים"
-
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:116
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: data/ui/menu.ui:99
+#: data/ui/menu.ui:120
 msgid "_About Mahjongg"
-msgstr "_על אודות מא-ג׳ונג"
+msgstr "_על מא-ג׳ונג"
 
-#: data/ui/score-dialog.ui:25
+#: data/ui/score-dialog.ui:32
 msgid "No Scores"
 msgstr "אין תוצאות"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:33
 msgid "Finish a game to see scores"
 msgstr "יש לסיים משחק על מנת לצפות בתוצאות"
 
-#: data/ui/score-dialog.ui:48
+#: data/ui/score-dialog.ui:55
 msgid "Player"
 msgstr "שחקן"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:62
 msgid "Time"
 msgstr "זמן"
 
-#: data/ui/score-dialog.ui:62
+#: data/ui/score-dialog.ui:69
 msgid "Date"
 msgstr "תאריך"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+#: data/ui/score-dialog.ui:102 src/gnome-mahjongg.vala:213
 msgid "_Quit"
 msgstr "י_ציאה"
 
 # msgctxt "shortcut window"
-#: data/ui/window.ui:21
+#: data/ui/window.ui:27
 msgid "Undo"
 msgstr "ביטול"
 
 # msgctxt "shortcut window"
-#: data/ui/window.ui:28
+#: data/ui/window.ui:34
 msgid "Redo"
 msgstr "ביצוע חוזר"
 
-#: data/ui/window.ui:35
+#: data/ui/window.ui:41
 msgid "Main Menu"
 msgstr "תפריט ראשי"
 
 # msgctxt "shortcut window"
-#: data/ui/window.ui:48
+#: data/ui/window.ui:54
 msgid "Show Hint"
 msgstr "הצגת רמז"
 
-#: src/gnome-mahjongg.vala:24
+#: src/gnome-mahjongg.vala:22
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:198
 msgid "No Moves Left"
 msgstr "לא נותרו מהלכים"
 
-#: src/gnome-mahjongg.vala:199
+#: src/gnome-mahjongg.vala:200
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -317,20 +280,20 @@ msgstr ""
 "באפשרותך לבטל את המהלכים שלך ולנסות למצוא את הפתרון, או לערבב מחדש את "
 "האריחים הנותרים."
 
-#: src/gnome-mahjongg.vala:200
+#: src/gnome-mahjongg.vala:201
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "ניתן לבטל את המהלכים שלך ולנסות למצוא את הפתרון, או להתחיל משחק חדש."
 
-#: src/gnome-mahjongg.vala:204
+#: src/gnome-mahjongg.vala:205
 msgid "_Continue"
 msgstr "ה_משך"
 
-#: src/gnome-mahjongg.vala:207
+#: src/gnome-mahjongg.vala:208
 msgid "_Reshuffle"
 msgstr "ער_בוב"
 
-#: src/gnome-mahjongg.vala:355
+#: src/gnome-mahjongg.vala:336
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -344,38 +307,89 @@ msgstr ""
 "\n"
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "ניקוי כל התוצאות?"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "זה ינקה כל תוצאה בכל פריסה."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_ביטול"
 
-#: src/score-dialog.vala:317
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "ניקוי הכול"
 
-#: src/window.vala:54
+#: src/window.vala:39
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "מהלכים שנותרו: %2u"
 
-#: src/window.vala:58
+#: src/window.vala:89
 msgid "Paused"
 msgstr "הושהה"
 
-#: src/window.vala:60
+#: src/window.vala:91
 msgid "Resume Game"
 msgstr "חידוש המשחק"
 
-#: src/window.vala:65
+#: src/window.vala:97
 msgid "Pause Game"
 msgstr "השהיית המשחק"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Playing"
+#~ msgstr "במשחק"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New Game"
+#~ msgstr "משחק חדש"
+
+# msgctxt "shortcut window"
+#~ msgctxt "shortcut window"
+#~ msgid "Pause Game"
+#~ msgstr "השהיית המשחק"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Undo"
+#~ msgstr "ביטול"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Redo"
+#~ msgstr "ביצוע חוזר"
+
+# msgctxt "shortcut window"
+#~ msgctxt "shortcut window"
+#~ msgid "Show Hint"
+#~ msgstr "הצגת רמז"
+
+# msgctxt "shortcut window"
+#~ msgctxt "shortcut window"
+#~ msgid "General"
+#~ msgstr "כללי"
+
+# msgctxt "shortcut window"
+#~ msgctxt "shortcut window"
+#~ msgid "Show Main Menu"
+#~ msgstr "הצגת תפריט ראשי"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Keyboard Shortcuts"
+#~ msgstr "הצגת צירופי מקשים"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Help"
+#~ msgstr "הצגת עזרה"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Quit"
+#~ msgstr "יציאה"
+
+#~ msgid "_Keyboard Shortcuts"
+#~ msgstr "_צירופי מקשים"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
