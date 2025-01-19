@@ -2,14 +2,14 @@
 # Copyright (C) 2020 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg gnome-3-36\n"
-"POT-Creation-Date: 2024-04-29 21:03+0000\n"
-"PO-Revision-Date: 2024-04-30 16:45+0300\n"
+"POT-Creation-Date: 2025-01-19 11:37+0000\n"
+"PO-Revision-Date: 2025-01-19 21:40+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,9 +67,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/gameplay.page:34
-#| msgid ""
-#| "There are many different <link xref=\"map\">tile layouts</link> to choose "
-#| "from."
 msgid "There are many different tile layouts to choose from."
 msgstr "Існує багато різних компонувань плиток на вибір."
 
@@ -129,19 +126,14 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/hints.page:37
-#| msgid ""
-#| "<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
-#| "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
-#| "key></keyseq>."
 msgid ""
 "<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">💡</"
 "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
 "key></keyseq>."
 msgstr ""
 "Щоб скористатися можливістю <gui>Підказка</gui>, натисніть кнопку <gui "
-"style=\"button\">💡</gui> на панелі заголовка або натисніть комбінацію"
-" клавіш "
-"<keyseq><key>Ctrl</key><key>H</key></keyseq>."
+"style=\"button\">💡</gui> на панелі заголовка або натисніть комбінацію "
+"клавіш <keyseq><key>Ctrl</key><key>H</key></keyseq>."
 
 #. (itstool) path: note/p
 #: C/hints.page:41
@@ -338,6 +330,32 @@ msgstr ""
 "оцінити критичну кількість можливих ходів та визначити, чи всі варіанти "
 "ходів ви враховуєте при виборі наступного ходу."
 
+#. (itstool) path: page/p
+#: C/moves.page:30
+#| msgid "You can pause your current game using one of the following methods:"
+msgid "You can undo or redo a move using one of the following methods:"
+msgstr ""
+"Ви можете скасувати або повторити хід за допомогою одного з таких способів:"
+
+#. (itstool) path: item/p
+#: C/moves.page:34
+#| msgid "The <gui style=\"button\">⏸︎</gui> button in the header bar."
+msgid ""
+"The <gui style=\"button\">Undo</gui> and <gui style=\"button\">Redo</gui> "
+"buttons in the header bar."
+msgstr ""
+"Натискати кнопки <gui style=\"button\">Скасувати</gui> і <gui"
+" style=\"button\">Повторити</gui> на панелі заголовка."
+
+#. (itstool) path: item/p
+#: C/moves.page:37
+msgid ""
+"<keyseq><key>Ctrl</key><key>Z</key></keyseq> and <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> on your keyboard."
+msgstr ""
+"Натискати <keyseq><key>Ctrl</key><key>Z</key></keyseq> і <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> на клавіатурі."
+
 #. (itstool) path: page/title
 #: C/pause.page:28
 msgid "Pausing your game"
@@ -351,16 +369,20 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/pause.page:34
-#| msgid "The <_:media-1/> button in the header bar."
 msgid "The <gui style=\"button\">⏸︎</gui> button in the header bar."
 msgstr "Кнопки <gui style=\"button\">⏸︎</gui> на панелі заголовка."
 
 #. (itstool) path: item/p
 #: C/pause.page:37
+#| msgid ""
+#| "The <key>Pause</key> key on your keyboard. Not all keyboards have this "
+#| "key."
 msgid ""
-"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+"<keyseq><key>Ctrl</key><key>P</key></keyseq> or the <key>Pause</key> key on "
+"your keyboard. Not all keyboards have this key."
 msgstr ""
-"Клавіші <key>Pause</key> на клавіатурі. Ця клавіша є не на усіх клавіатурах."
+"Клавіші <keyseq><key>Ctrl</key><key>P</key></keyseq> або <key>Pause</key> на"
+" клавіатурі. Ця клавіша є не на усіх клавіатурах."
 
 #. (itstool) path: page/title
 #: C/rules.page:25
@@ -442,17 +464,12 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
-#| msgid ""
-#| "The scores are stored on a per <link xref=\"map\">map</link> basis. You "
-#| "can view the highscores for a particular map by selecting it from the "
-#| "drop-down menu."
 msgid ""
 "The scores are stored on a per map basis. You can view the highscores for a "
 "particular map by selecting it from the drop-down menu."
 msgstr ""
-"Результати зберігаються окремо для різних компонувань. Переглянути найкращі"
-" результати можна вибравши компонування зі "
-"спадного меню."
+"Результати зберігаються окремо для різних компонувань. Переглянути найкращі "
+"результати можна вибравши компонування зі спадного меню."
 
 #. (itstool) path: credit/years
 #: C/strategy.page:11
@@ -466,18 +483,14 @@ msgstr "Стратегія"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
-#| msgid ""
-#| "Since each <link xref=\"map\">tile layout</link> requires a different "
-#| "approach, there is no one universal strategy. However, there are some "
-#| "strategy tips to keep in mind while you play:"
 msgid ""
 "Since each tile layout requires a different approach, there is no one "
 "universal strategy. However, there are some strategy tips to keep in mind "
 "while you play:"
 msgstr ""
-"Оскільки для розбирання різних компонувань плиток потрібні різні підходи,"
-" універсальної стратегії у грі не існує. Втім, існує "
-"декілька порад, які слід враховувати під час гри:"
+"Оскільки для розбирання різних компонувань плиток потрібні різні підходи, "
+"універсальної стратегії у грі не існує. Втім, існує декілька порад, які слід "
+"враховувати під час гри:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:28
