@@ -69,7 +69,6 @@ public class MahjonggWindow : Adw.ApplicationWindow {
             layout_menu.append_item (menu_item);
         }
 
-        remove_css_class ("background");
         if (APP_ID.has_suffix (".Devel"))
             add_css_class ("devel");
 
