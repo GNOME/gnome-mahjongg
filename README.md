@@ -1,3 +1,8 @@
+<!--
+  SPDX-FileCopyrightText: 2019-2025 Mahjongg Contributors
+  SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
 # Mahjongg
 
 Single-player tile-matching game, commonly known as Mahjong solitaire.

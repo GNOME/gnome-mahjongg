@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019-2025 Mahjongg Contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 include:
   - project: 'gnome/citemplates'
     file: 'flatpak/flatpak_ci_initiative.yml'
@@ -19,7 +22,15 @@ stages:
   - build
   - deploy
 
-lint:
+reuse-lint:
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: [""]
+  stage: lint
+  script:
+    - reuse lint
+
+vala-lint:
   image: valalang/lint:latest
   stage: lint
   script:

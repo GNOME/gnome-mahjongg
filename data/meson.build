@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2018-2025 Mahjongg Contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 # Icon files
 install_data(
   'icons' / 'hicolor' / 'scalable' / '@0@.svg'.format(app_id),

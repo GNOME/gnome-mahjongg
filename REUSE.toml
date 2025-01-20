@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2025 Mahjongg Contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+version = 1
+SPDX-PackageName = "Mahjongg"
+SPDX-PackageSupplier = "The Mahjongg Team"
+SPDX-PackageDownloadLocation = "https://gitlab.gnome.org/GNOME/gnome-mahjongg"
+
+[[annotations]]
+path = ["NEWS"]
+SPDX-FileCopyrightText = "Mahjongg Contributors"
+SPDX-License-Identifier = "GPL-2.0-or-later"
+
+[[annotations]]
+path = ["help/C/**"]
+SPDX-FileCopyrightText = "GNOME Documentation Team, Mahjongg Contributors"
+SPDX-License-Identifier = "CC-BY-SA-3.0"
+
+[[annotations]]
+path = ["help/**/**.po", "help/LINGUAS", "po/**/*"]
+SPDX-FileCopyrightText = "GNOME Translation Teams, Mahjongg Contributors"
+SPDX-License-Identifier = "GPL-2.0-or-later"

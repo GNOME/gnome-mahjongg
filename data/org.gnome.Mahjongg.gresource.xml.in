@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2019-2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
 <gresources>
   <gresource prefix="@base-id-slashed@/themes">
     <file alias="postmodern" compressed="true">themes/postmodern.svg</file>

@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2011-2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
 <schemalist>
   <enum id="@app-id@.BackgroundColor">
     <value nick="system" value="0"/>

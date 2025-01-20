@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2022-2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
 <interface>
   <template class="MahjonggWindow" parent="AdwApplicationWindow">
     <property name="width-request">360</property>

@@ -1,3 +1,6 @@
+<!-- SPDX-FileCopyrightText: 2004-2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+
 <!-- Coordinates are for the top left corner of the tile.
      All axes count from 0.
      x/width is horizontally across the screen.

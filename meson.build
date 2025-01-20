@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2018-2025 Mahjongg Contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 project(
   'gnome-mahjongg', ['vala', 'c'],
   version: '48.alpha',
