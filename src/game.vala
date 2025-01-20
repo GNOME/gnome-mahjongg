@@ -289,28 +289,43 @@ public class Game {
         if (!tile.visible)
             return false;
 
+        unowned var slot = tile.slot;
+        var x = slot.x;
+        var y_above = slot.y - 1;
+        var y_bottom_half = slot.y + 1;
+        var layer = slot.layer;
         var blocked_left = false;
         var blocked_right = false;
-        var slot = tile.slot;
+
         foreach (unowned var t in tiles) {
             if (t == tile || !t.visible)
                 continue;
 
-            var s = t.slot;
+            unowned var s = t.slot;
+            var s_y = s.y;
 
-            /* Can't move if blocked by a tile above */
-            if (s.layer > slot.layer &&
-                (s.x >= slot.x - 1 && s.x <= slot.x + 1) &&
-                (s.y >= slot.y - 1 && s.y <= slot.y + 1))
-                return false;
+            if (s_y < y_above || s_y > y_bottom_half)
+                continue;
+
+            var s_layer = s.layer;
 
             /* Can't move if blocked both on the left and the right */
-            if (s.layer == slot.layer && (s.y >= slot.y - 1 && s.y <= slot.y + 1)) {
-                if (s.x == slot.x - 2)
+            if (s_layer == layer) {
+                var s_x = s.x;
+
+                if (s_x == x - 2)
                     blocked_left = true;
-                if (s.x == slot.x + 2)
+                if (s_x == x + 2)
                     blocked_right = true;
+
                 if (blocked_left && blocked_right)
+                    return false;
+
+            /* Can't move if blocked by a tile above */
+            } else if (s_layer > layer) {
+                var s_x = s.x;
+
+                if (s_x >= x - 1 && s_x <= x + 1)
                     return false;
             }
         }
