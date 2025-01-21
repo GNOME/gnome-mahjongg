@@ -2,7 +2,7 @@
 public class MahjonggWindow : Adw.ApplicationWindow {
 
     [GtkChild]
-    private unowned Adw.ToolbarView toolbar_view;
+    public unowned Adw.ToolbarView toolbar_view;
 
     [GtkChild]
     private unowned Adw.WindowTitle title_widget;

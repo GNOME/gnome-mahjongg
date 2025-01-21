@@ -1,12 +1,12 @@
 /* Theme backgrounds */
-window.postmodern {
+window toolbarview.postmodern {
     background: #272a44;
 }
 
-window.smooth {
+window toolbarview.smooth {
     background: #32301e;
 }
 
-window.educational {
+window toolbarview.educational {
     background: #1c3730;
 }

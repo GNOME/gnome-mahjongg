@@ -153,9 +153,9 @@ public class Mahjongg : Adw.Application {
             }
 
             if (previous_theme_name != null)
-                window.remove_css_class (previous_theme_name);
+                window.toolbar_view.remove_css_class (previous_theme_name);
 
-            window.add_css_class (theme_name);
+            window.toolbar_view.add_css_class (theme_name);
         }
         else if (key == "mapset") {
             new_game ();
