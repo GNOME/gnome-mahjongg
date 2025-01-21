@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-01-19 12:04+0000\n"
-"PO-Revision-Date: 2025-01-21 04:48+0100\n"
+"POT-Creation-Date: 2025-01-21 03:50+0000\n"
+"PO-Revision-Date: 2025-01-21 04:54+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -142,8 +142,6 @@ msgid "Difficult"
 msgstr "სირთულე"
 
 #: data/ui/menu.ui:55
-#, fuzzy
-#| msgid "_Layout Rotation"
 msgid "Layout Ro_tation"
 msgstr "გან_ლაგების შებრუნება"
 
@@ -304,15 +302,15 @@ msgstr "ყველას გასუფთავება"
 msgid "Moves Left: %2u"
 msgstr "დარჩენილი სვლები: %2u"
 
-#: src/window.vala:89
+#: src/window.vala:88
 msgid "Paused"
 msgstr "შეჩერებულია"
 
-#: src/window.vala:91
+#: src/window.vala:90
 msgid "Resume Game"
 msgstr "თამაშის გაგრძელება"
 
-#: src/window.vala:97
+#: src/window.vala:96
 msgid "Pause Game"
 msgstr "თამაშის შეჩერება"
 
