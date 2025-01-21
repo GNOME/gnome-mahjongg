@@ -46,9 +46,9 @@ public class MahjonggWindow : Adw.ApplicationWindow {
             if (_theme == value)
                 return;
             if (_theme != null)
-                remove_css_class (_theme);
+                toolbar_view.remove_css_class (_theme);
             if (value != null)
-                add_css_class (value);
+                toolbar_view.add_css_class (value);
             _theme = value;
         }
     }
