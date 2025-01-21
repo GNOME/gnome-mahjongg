@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-01-12 19:45+0000\n"
-"PO-Revision-Date: 2025-01-12 21:08+0100\n"
+"POT-Creation-Date: 2025-01-19 12:04+0000\n"
+"PO-Revision-Date: 2025-01-21 04:48+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:544
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:539
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -33,15 +33,15 @@ msgstr ""
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:27
+#: data/org.gnome.Mahjongg.gschema.xml.in:28
 msgid "Width of the window in pixels"
 msgstr "ფანჯრის სიგანე, პიქსელებში"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:31
+#: data/org.gnome.Mahjongg.gschema.xml.in:32
 msgid "Height of the window in pixels"
 msgstr "ფანჯრის სიმაღლე, პიქსელებში"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:35
+#: data/org.gnome.Mahjongg.gschema.xml.in:36
 msgid "true if the window is maximized"
 msgstr "ჭეშმარიტია, თუ ფანჯარა მთელ ეკრანზეა"
 
@@ -71,64 +71,9 @@ msgstr ""
 msgid "Mahjongg in Dark Style"
 msgstr ""
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:73
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74
 msgid "The Mahjongg Team"
 msgstr ""
-
-#: data/ui/help-overlay.ui:8
-msgctxt "shortcut window"
-msgid "Playing"
-msgstr "თამაშობთ"
-
-#: data/ui/help-overlay.ui:12
-msgctxt "shortcut window"
-msgid "New Game"
-msgstr "ახალი თამაში"
-
-#: data/ui/help-overlay.ui:18
-msgctxt "shortcut window"
-msgid "Pause Game"
-msgstr "თამაშის შეჩერება"
-
-#: data/ui/help-overlay.ui:24
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "დაბრუნება"
-
-#: data/ui/help-overlay.ui:30
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "გამეორება"
-
-#: data/ui/help-overlay.ui:36
-msgctxt "shortcut window"
-msgid "Show Hint"
-msgstr "მინიშნების ჩვენება"
-
-#: data/ui/help-overlay.ui:43
-msgctxt "shortcut window"
-msgid "General"
-msgstr "ზოგადი"
-
-#: data/ui/help-overlay.ui:47
-msgctxt "shortcut window"
-msgid "Show Main Menu"
-msgstr "მთავარი მენიუს ჩვენება"
-
-#: data/ui/help-overlay.ui:53
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "კლავიატურის მალსახმობების ჩვენება"
-
-#: data/ui/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "დახმარების ჩვენება"
-
-#: data/ui/help-overlay.ui:65
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "გასვლა"
 
 #: data/ui/menu.ui:6 src/gnome-mahjongg.vala:211
 msgid "_New Game"
@@ -197,109 +142,117 @@ msgid "Difficult"
 msgstr "სირთულე"
 
 #: data/ui/menu.ui:55
-msgid "_Layout Rotation"
+#, fuzzy
+#| msgid "_Layout Rotation"
+msgid "Layout Ro_tation"
 msgstr "გან_ლაგების შებრუნება"
 
 #: data/ui/menu.ui:58
+msgctxt "layout rotation"
 msgid "No Rotation"
 msgstr "შეტრიალების გარეშე"
 
 #: data/ui/menu.ui:63
+msgctxt "layout rotation"
 msgid "Sequential"
 msgstr "თანმიმდევრული"
 
-#: data/ui/menu.ui:70
+#: data/ui/menu.ui:68
+msgctxt "layout rotation"
+msgid "Random"
+msgstr "შემთხვევითი"
+
+#: data/ui/menu.ui:75
 msgid "_Appearance"
 msgstr "_გარეგნობა"
 
-#: data/ui/menu.ui:72
+#: data/ui/menu.ui:77
 msgid "Background"
 msgstr "ფონი"
 
-#: data/ui/menu.ui:74
+#: data/ui/menu.ui:79
+msgctxt "background color"
 msgid "Follow System"
 msgstr "სისტემის მიყოლა"
 
-#: data/ui/menu.ui:79
-msgid "Light"
-msgstr "მსუბუქი"
-
 #: data/ui/menu.ui:84
+msgctxt "background color"
+msgid "Light"
+msgstr "ღია"
+
+#: data/ui/menu.ui:89
+msgctxt "background color"
 msgid "Dark"
 msgstr "მუქი"
 
-#: data/ui/menu.ui:90
+#: data/ui/menu.ui:95
 msgid "Theme"
 msgstr "თემა"
 
-#: data/ui/menu.ui:92
+#: data/ui/menu.ui:97
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr ""
 
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:102
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "გლუვი"
 
-#: data/ui/menu.ui:98
+#: data/ui/menu.ui:107
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "საგანმანათლებლო"
 
-#: data/ui/menu.ui:105
-msgid "_Keyboard Shortcuts"
-msgstr "_კლავიატურის მალსახმობები"
-
-#: data/ui/menu.ui:109
+#: data/ui/menu.ui:116
 msgid "_Help"
 msgstr "_დახმარება"
 
-#: data/ui/menu.ui:113
+#: data/ui/menu.ui:120
 msgid "_About Mahjongg"
 msgstr "Mahjongg-ის შეს_ახებ"
 
-#: data/ui/score-dialog.ui:25
+#: data/ui/score-dialog.ui:32
 msgid "No Scores"
 msgstr "ქულების გარეშე"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:33
 msgid "Finish a game to see scores"
 msgstr ""
 
-#: data/ui/score-dialog.ui:48
+#: data/ui/score-dialog.ui:55
 msgid "Player"
 msgstr "დამკვრელი"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:62
 msgid "Time"
 msgstr "დრო"
 
-#: data/ui/score-dialog.ui:62
+#: data/ui/score-dialog.ui:69
 msgid "Date"
 msgstr "თარიღი"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:213
+#: data/ui/score-dialog.ui:102 src/gnome-mahjongg.vala:213
 msgid "_Quit"
 msgstr "_გასვლა"
 
-#: data/ui/window.ui:21
+#: data/ui/window.ui:27
 msgid "Undo"
 msgstr "დაბრუნება"
 
-#: data/ui/window.ui:28
+#: data/ui/window.ui:34
 msgid "Redo"
 msgstr "გამეორება"
 
-#: data/ui/window.ui:35
+#: data/ui/window.ui:41
 msgid "Main Menu"
 msgstr "მთავარი მენიუ"
 
-#: data/ui/window.ui:48
+#: data/ui/window.ui:54
 msgid "Show Hint"
 msgstr "მინიშნების ჩვენება"
 
-#: src/gnome-mahjongg.vala:24
+#: src/gnome-mahjongg.vala:22
 msgid "Print release version and exit"
 msgstr "ვერსიის ჩვენება და გასვლა"
 
@@ -326,42 +279,89 @@ msgstr "_გაგრძელება"
 msgid "_Reshuffle"
 msgstr ""
 
-#: src/gnome-mahjongg.vala:362
+#: src/gnome-mahjongg.vala:336
 msgid "translator-credits"
 msgstr "ვიღაც, ვინც თარგმნა"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr ""
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr ""
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_გაუქმება"
 
-#: src/score-dialog.vala:317
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "ყველას გასუფთავება"
 
-#: src/window.vala:54
+#: src/window.vala:39
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "დარჩენილი სვლები: %2u"
 
-#: src/window.vala:58
+#: src/window.vala:89
 msgid "Paused"
 msgstr "შეჩერებულია"
 
-#: src/window.vala:60
+#: src/window.vala:91
 msgid "Resume Game"
 msgstr "თამაშის გაგრძელება"
 
-#: src/window.vala:65
+#: src/window.vala:97
 msgid "Pause Game"
 msgstr "თამაშის შეჩერება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Playing"
+#~ msgstr "თამაშობთ"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New Game"
+#~ msgstr "ახალი თამაში"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Pause Game"
+#~ msgstr "თამაშის შეჩერება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Undo"
+#~ msgstr "დაბრუნება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Redo"
+#~ msgstr "გამეორება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Hint"
+#~ msgstr "მინიშნების ჩვენება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "General"
+#~ msgstr "ზოგადი"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Main Menu"
+#~ msgstr "მთავარი მენიუს ჩვენება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Keyboard Shortcuts"
+#~ msgstr "კლავიატურის მალსახმობების ჩვენება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Help"
+#~ msgstr "დახმარების ჩვენება"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Quit"
+#~ msgstr "გასვლა"
+
+#~ msgid "_Keyboard Shortcuts"
+#~ msgstr "_კლავიატურის მალსახმობები"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
