@@ -163,13 +163,10 @@ public class Game {
         // Fisher Yates Shuffle
         var n = tiles.length ();
         do {
-            tiles.reverse ();
-            var i = n - 1;
-            foreach (unowned var tile in tiles) {
+            for (var i = n - 1; i > 0; i--) {
                 var j = Random.int_range (0, (int) i + 1);
                 // switch internal positions
-                switch_tiles (tiles.nth_data (j), tile);
-                i--;
+                switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
             }
             // resort for drawing order
             tiles.sort (compare_tiles);
