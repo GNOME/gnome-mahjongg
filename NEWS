@@ -1,3 +1,19 @@
+48.alpha
+========
+
+ * Add sequential and random layout rotation modes (K Davis)
+ * Add animation when starting a new game and pausing a game
+ * Add Ctrl-R keyboard shortcut for restarting game
+ * Improve rendering on high resolution displays
+ * Render tiles using the GPU instead of CPU (port to Gtk.Snapshot)
+ * Smaller spacing around the board on mobile screens
+ * Various optimizations for game initialization and drawing
+ * Tweak background colors
+ * Fix a memory leak in the Scores dialog
+ * Stop using deprecated APIs
+ * Add SPDX license identifiers to all files
+ * Translation updates
+
 47.0
 ====
 
