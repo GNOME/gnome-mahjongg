@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2024-04-29 21:03+0000\n"
-"PO-Revision-Date: 2024-05-03 20:48+1000\n"
+"POT-Creation-Date: 2025-01-19 11:37+0000\n"
+"PO-Revision-Date: 2025-01-20 22:21+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2024"
+msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2025"
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:10 C/hints.page:11 C/index.page:13 C/moves.page:11
@@ -328,6 +328,30 @@ msgstr ""
 "Это может помочь вам увидеть, насколько вы далеки от исчерпания ходов и "
 "видите ли вы все возможные ходы."
 
+#. (itstool) path: page/p
+#: C/moves.page:30
+msgid "You can undo or redo a move using one of the following methods:"
+msgstr "Вы можете отменить или повторить ход одним из следующих способов:"
+
+#. (itstool) path: item/p
+#: C/moves.page:34
+msgid ""
+"The <gui style=\"button\">Undo</gui> and <gui style=\"button\">Redo</gui> "
+"buttons in the header bar."
+msgstr ""
+"Кнопками <gui style=\"button\">Отменить</gui> и <gui "
+"style=\"button\">Вернуть</gui> в заголовке окна."
+
+#. (itstool) path: item/p
+#: C/moves.page:37
+msgid ""
+"<keyseq><key>Ctrl</key><key>Z</key></keyseq> and <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> on your keyboard."
+msgstr ""
+"С помощью клавиатуры, используя комбинации клавиш <keyseq><key>Ctrl</"
+"key><key>Z</key></keyseq> и <keyseq><key>Ctrl</key><key>Shift</key><key>Z</"
+"key></keyseq>."
+
 #. (itstool) path: page/title
 #: C/pause.page:28
 msgid "Pausing your game"
@@ -346,10 +370,11 @@ msgstr "Кнопкой <gui style=\"button\">⏸︎</gui> в заголовке 
 #. (itstool) path: item/p
 #: C/pause.page:37
 msgid ""
-"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+"<keyseq><key>Ctrl</key><key>P</key></keyseq> or the <key>Pause</key> key on "
+"your keyboard. Not all keyboards have this key."
 msgstr ""
-"Кнопкой <key>Pause</key> на клавиатуре. Эта клавиша присутствует не на всех "
-"клавиатурах."
+"С помощью клавиатуры, используя клавиши <keyseq><key>Ctrl</key><key>P</key></"
+"keyseq> или <key>Pause</key> (не на всех клавиатурах есть эта клавиша)."
 
 #. (itstool) path: page/title
 #: C/rules.page:25
