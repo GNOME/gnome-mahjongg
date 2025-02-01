@@ -112,6 +112,11 @@ public class Mahjongg : Adw.Application {
         window.present ();
     }
 
+    public override void shutdown () {
+        game_view.game.destroy_timers ();
+        base.shutdown ();
+    }
+
     private void update_ui () {
         var pause_action = lookup_action ("pause") as SimpleAction;
         var hint_action = lookup_action ("hint") as SimpleAction;
@@ -414,6 +419,9 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             var layout_action = (SimpleAction) lookup_action ("layout");
             layout_action.set_state (new Variant.@string (map.name));
         }
+
+        if (game_view.game != null)
+            game_view.game.destroy_timers ();
 
         game_view.game = new Game (map);
         game_view.game.moved.connect (moved_cb);
