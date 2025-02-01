@@ -325,7 +325,7 @@ public class GameView : Gtk.Widget {
         var tile = find_tile ((int) event_x, (int) event_y);
 
         /* If not a valid tile then ignore the event */
-        if (tile == null || !game.tile_can_move (tile))
+        if (tile == null || !game.tile_is_selectable (tile))
             return;
 
         /* Select first tile */

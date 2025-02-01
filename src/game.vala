@@ -103,26 +103,35 @@ public class Game {
         }
     }
 
-    public int visible_tiles {
-        get {
-            var n = 0;
-            foreach (unowned var tile in tiles)
-                if (tile.visible)
-                    n++;
-            return n;
-        }
-    }
-
     public uint moves_left {
         get { return find_matches ().length (); }
     }
 
     public bool complete {
-        get { return visible_tiles == 0; }
+        get {
+            foreach (unowned var tile in tiles)
+                if (tile.visible)
+                    return false;
+            return true;
+        }
     }
 
     public bool can_move {
         get { return moves_left != 0; }
+    }
+
+    public bool can_shuffle {
+        get {
+            var num_selectable_tiles = 0;
+            foreach (unowned var tile in tiles) {
+                if (tile_is_selectable (tile)) {
+                    num_selectable_tiles++;
+                    if (num_selectable_tiles == 2)
+                        return true;
+                }
+            }
+            return false;
+        }
     }
 
     public Game (Map map) {
@@ -153,7 +162,10 @@ public class Game {
         reset ();
     }
 
-    public void shuffle_remaining (bool redraw = true) {
+    public void shuffle_remaining () {
+        if (!can_shuffle)
+            return;
+
         // Fisher Yates Shuffle
         var n = tiles.length ();
         do {
@@ -169,11 +181,10 @@ public class Game {
             foreach (unowned var tile in tiles)
                 tile.move_number = 0;
             find_matches ();
-        } while (!can_move && visible_tiles > 1);
-        // only continue shuffling when there is a possible pairing
+        } while (!can_move);
+
         moved ();
-        if (redraw)
-            redraw_all_tiles ();
+        redraw_all_tiles ();
 
         /* 60s penalty */
         start_clock ();
@@ -282,7 +293,7 @@ public class Game {
         return true;
     }
 
-    public bool tile_can_move (Tile tile) {
+    public bool tile_is_selectable (Tile tile) {
         if (!tile.visible)
             return false;
 
@@ -329,14 +340,6 @@ public class Game {
         return true;
     }
 
-    public int number_of_movable_tiles () {
-        int count = 0;
-        foreach (unowned var tile in tiles)
-            if (tile_can_move (tile))
-                count++;
-        return count;
-    }
-
     public List<Match> find_matches (Tile? tile = null) {
         List<Match> matches = null;
 
@@ -356,13 +359,13 @@ public class Game {
                 }
             }
         }
-        else if (tile_can_move (tile)) {
+        else if (tile_is_selectable (tile)) {
             foreach (unowned var t in tiles) {
                 if (t == tile)
                     continue;
 
                 /* Checking match before checking if the tile can move is faster */
-                if (!tiles_match (t, tile) || !tile_can_move (t))
+                if (!tiles_match (t, tile) || !tile_is_selectable (t))
                     continue;
 
                 matches.prepend (new Match (t, tile));

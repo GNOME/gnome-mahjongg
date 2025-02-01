@@ -186,11 +186,10 @@ public class Mahjongg : Adw.Application {
             show_scores (entry);
         }
         else if (!game_view.game.can_move) {
-            bool allow_shuffle = game_view.game.number_of_movable_tiles () > 1;
-
+            var can_shuffle = game_view.game.can_shuffle;
             var dialog = new Adw.AlertDialog (
                 _("No Moves Left"),
-                allow_shuffle ?
+                can_shuffle ?
                     _("You can undo your moves and try to find a solution, or reshuffle the remaining tiles.") :
                     _("You can undo your moves and try to find a solution, or start a new game.")
             ) {
@@ -198,7 +197,7 @@ public class Mahjongg : Adw.Application {
             };
             dialog.add_response ("continue", _("_Continue"));
 
-            if (allow_shuffle) {
+            if (can_shuffle) {
                 dialog.add_response ("reshuffle", _("_Reshuffle"));
             }
             else {
