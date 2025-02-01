@@ -117,6 +117,7 @@ public class Mahjongg : Adw.Application {
     }
 
     public override void shutdown () {
+        game_view.game.destroy_timers ();
         settings.apply ();
         base.shutdown ();
     }
@@ -414,6 +415,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         update_theme (previous_game_view);
 
         if (previous_game_view != null) {
+            previous_game_view.game.destroy_timers ();
             previous_game_view.game = null;
             previous_game_view.set_theme (null);
         }

@@ -164,6 +164,11 @@ public class Game {
         reset ();
     }
 
+    public void destroy_timers () {
+        remove_hint_timeout ();
+        stop_clock ();
+    }
+
     public void shuffle_remaining () {
         if (!can_shuffle)
             return;
@@ -277,17 +282,14 @@ public class Game {
             redraw_tile (hint_tiles[1]);
 
         /* Stop hints */
-        if (tile0 == null && tile1 == null) {
-            hint_blink_counter = 0;
-            hint_timeout_cb ();
+        remove_hint_timeout ();
+
+        if (tile0 == null && tile1 == null)
             return;
-        }
 
         hint_tiles[0] = tile0;
         hint_tiles[1] = tile1;
         hint_blink_counter = 6;
-        if (hint_timout != 0)
-            Source.remove (hint_timout);
         hint_timout = Timeout.add (250, hint_timeout_cb);
         hint_timeout_cb ();
 
@@ -297,11 +299,16 @@ public class Game {
         tick ();
     }
 
+    private void remove_hint_timeout () {
+        if (hint_timout != 0)
+            Source.remove (hint_timout);
+        hint_timout = 0;
+        hint_blink_counter = 0;
+    }
+
     private bool hint_timeout_cb () {
         if (hint_blink_counter == 0) {
-            if (hint_timout != 0)
-                Source.remove (hint_timout);
-            hint_timout = 0;
+            remove_hint_timeout ();
             return false;
         }
         hint_blink_counter--;
@@ -439,7 +446,7 @@ public class Game {
         if (clock != null)
             return;
         clock = new Timer ();
-        timeout_cb ();
+        clock_timeout_cb ();
     }
 
     private void stop_clock () {
@@ -457,7 +464,7 @@ public class Game {
             clock = new Timer ();
         else
             clock.continue ();
-        timeout_cb ();
+        clock_timeout_cb ();
     }
 
     private void reset_clock () {
@@ -468,18 +475,19 @@ public class Game {
         tick ();
     }
 
-    private bool timeout_cb () {
-        if (clock != null) {
-            /* Notify on the next tick */
-            var elapsed = clock.elapsed ();
-            var next = (int) (elapsed + 1.0);
-            var wait = next - elapsed;
-            clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
+    private void clock_timeout_cb () {
+        if (clock == null)
+            return;
 
-            tick ();
+        var wait = 0;
+        while (wait <= 0) {
+            var elapsed = clock.elapsed ();
+            var next = (int) (elapsed + 1);
+            wait = (int) ((next - elapsed) * 1000);
         }
 
-        return false;
+        clock_timeout = Timeout.add_once (wait, clock_timeout_cb);
+        tick ();
     }
 
     public bool can_undo {
