@@ -271,19 +271,7 @@ public class Mahjongg : Adw.Application {
     }
 
     private void hint_cb () {
-        var matches = game_view.game.find_matches (game_view.game.selected_tile);
-
-        /* No match, find any random match as if nothing was selected */
-        if (matches.length () == 0) {
-            if (game_view.game.selected_tile == null)
-                return;
-            matches = game_view.game.find_matches ();
-        }
-
-        var n = Random.int_range (0, (int) matches.length ());
-        var match = matches.nth_data (n);
-        game_view.game.set_hint (match.tile0, match.tile1);
-
+        game_view.game.show_hint ();
         update_ui ();
     }
 
@@ -333,16 +321,11 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
     private void pause_cb () {
         game_view.game.paused = !game_view.game.paused;
-        game_view.game.set_hint (null, null);
-        game_view.game.selected_tile = null;
 
-        if (game_view.game.paused) {
+        if (game_view.game.paused)
             window.pause ();
-        }
-        else {
+        else
             window.unpause ();
-            tick_cb ();
-        }
 
         update_ui ();
     }

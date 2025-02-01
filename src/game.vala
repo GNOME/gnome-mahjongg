@@ -47,7 +47,7 @@ public class Game {
     public List<Tile> tiles;
     public Tile? hint_tiles[2];
 
-    public int move_number;
+    private int move_number;
 
     /* Hint animation */
     private uint hint_timout;
@@ -86,6 +86,8 @@ public class Game {
                 else
                     continue_clock ();
             }
+            selected_tile = null;
+            reset_hint ();
             paused_changed ();
         }
         get { return _paused; }
@@ -192,7 +194,7 @@ public class Game {
         tick ();
     }
 
-    public void redraw_all_tiles () {
+    private void redraw_all_tiles () {
         foreach (unowned var tile in tiles)
             if (tile.visible)
                 redraw_tile (tile);
@@ -241,7 +243,7 @@ public class Game {
         reset_clock ();
         move_number = 1;
         selected_tile = null;
-        set_hint (null, null);
+        reset_hint ();
         foreach (unowned var tile in tiles) {
             tile.visible = true;
             tile.move_number = 0;
@@ -249,7 +251,26 @@ public class Game {
         redraw_all_tiles ();
     }
 
-    public void set_hint (Tile? tile0, Tile? tile1) {
+    public void show_hint () {
+        var matches = find_matches (selected_tile);
+
+        /* No match, find any random match as if nothing was selected */
+        if (matches.length () == 0) {
+            if (selected_tile == null)
+                return;
+            matches = find_matches ();
+        }
+
+        var n = Random.int_range (0, (int) matches.length ());
+        var match = matches.nth_data (n);
+        set_hint (match.tile0, match.tile1);
+    }
+
+    private void reset_hint () {
+        set_hint (null, null);
+    }
+
+    private void set_hint (Tile? tile0, Tile? tile1) {
         if (hint_tiles[0] != null)
             redraw_tile (hint_tiles[0]);
         if (hint_tiles[1] != null)
@@ -340,7 +361,7 @@ public class Game {
         return true;
     }
 
-    public List<Match> find_matches (Tile? tile = null) {
+    private List<Match> find_matches (Tile? tile = null) {
         List<Match> matches = null;
 
         if (tile == null) {
@@ -387,7 +408,7 @@ public class Game {
             return false;
 
         selected_tile = null;
-        set_hint (null, null);
+        reset_hint ();
 
         /* You lose your re-do queue when you make a move */
         foreach (unowned var tile in tiles)
@@ -470,7 +491,7 @@ public class Game {
             return;
 
         selected_tile = null;
-        set_hint (null, null);
+        reset_hint ();
 
         /* Re-show tiles that were removed */
         move_number--;
@@ -496,7 +517,7 @@ public class Game {
             return;
 
         selected_tile = null;
-        set_hint (null, null);
+        reset_hint ();
 
         foreach (unowned var tile in tiles) {
             if (tile.move_number == move_number) {
