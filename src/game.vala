@@ -45,13 +45,13 @@ public class Match {
 public class Game {
     public Map map;
     public List<Tile> tiles;
-    public Tile? hint_tiles[2];
 
+    private Tile? hint_tiles[2];
     private int move_number;
 
     /* Hint animation */
     private uint hint_timout;
-    public uint hint_blink_counter;
+    private uint hint_blink_counter;
 
     /* Game timer */
     private double clock_elapsed;
@@ -319,6 +319,16 @@ public class Game {
             redraw_tile (hint_tiles[1]);
 
         return true;
+    }
+
+    public bool tile_is_highlighted (Tile tile) {
+        if (tile == selected_tile)
+            return true;
+
+        if (hint_blink_counter % 2 == 0)
+            return false;
+
+        return tile == hint_tiles[0] || tile == hint_tiles[1];
     }
 
     public bool tile_is_selectable (Tile tile) {

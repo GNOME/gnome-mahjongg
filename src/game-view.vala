@@ -77,13 +77,7 @@ public class GameView : Gtk.Widget {
             /* Select image for this tile, or blank image if paused */
             var tile_number = game.paused ? -1 : tile.number;
             var texture_x = get_image_offset (tile_number) * tile_pattern_width;
-            var texture_y = 0;
-
-            if (!game.paused) {
-                if ((tile == game.selected_tile) ||
-                    (game.hint_blink_counter % 2 == 1 && (tile == game.hint_tiles[0] || tile == game.hint_tiles[1])))
-                    texture_y = tile_pattern_height;
-            }
+            var texture_y = game.tile_is_highlighted (tile) ? tile_pattern_height : 0;
 
             /* Draw the tile */
             int tile_x, tile_y;
