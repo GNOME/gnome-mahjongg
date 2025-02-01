@@ -162,6 +162,38 @@ public class GameView : Gtk.Widget {
         resize_theme ();
     }
 
+    private void get_theme_size (out int width, out int height) {
+        width = 0;
+        height = 0;
+
+        /* Try to scale down theme */
+        for (var i = 8; i >= 2; i = i - 2) {
+            if (rendered_theme_width < initial_theme_width / i) {
+                width = initial_theme_width / i;
+                height = initial_theme_height / i;
+                break;
+            }
+        }
+
+        /* No need to scale down, try to scale up instead */
+        if (width == 0) {
+            while (width < rendered_theme_width) {
+                if (!using_vector && width > initial_theme_width) {
+                    width = initial_theme_width;
+                    height = initial_theme_height;
+                    break;
+                }
+                width += initial_theme_width;
+                height += initial_theme_height;
+            }
+        }
+
+        /* Finally. apply system scale factor for HiDPI support */
+        var scale = get_native ().get_surface ().get_scale ();
+        width = (int) (width * scale);
+        height = (int) (height * scale);
+    }
+
     private void resize_theme () {
         if (game == null || theme == null)
             return;
@@ -170,39 +202,11 @@ public class GameView : Gtk.Widget {
             return;
 
         /* Get size to load the next tile texture at */
-        var new_theme_width = 0;
-        var new_theme_height = 0;
-        var decreased_size = false;
-        var use_original_size = false;
+        int new_theme_width, new_theme_height;
+        get_theme_size (out new_theme_width, out new_theme_height);
 
-        for (var i = 8; i >= 2; i = i - 2) {
-            if (rendered_theme_width < initial_theme_width / i) {
-                new_theme_width = initial_theme_width / i;
-                new_theme_height = initial_theme_height / i;
-                decreased_size = true;
-                break;
-            }
-        }
-        if (!decreased_size) {
-            while (new_theme_width < rendered_theme_width) {
-                if (!using_vector && new_theme_width > initial_theme_width) {
-                    new_theme_width = initial_theme_width;
-                    new_theme_height = initial_theme_height;
-                    use_original_size = true;
-                    break;
-                }
-                new_theme_width += initial_theme_width;
-                new_theme_height += initial_theme_height;
-            }
-        }
-        if (!use_original_size) {
-            var scale = get_native ().get_surface ().get_scale ();
-            new_theme_width = (int) (new_theme_width * scale);
-            new_theme_height = (int) (new_theme_height * scale);
-        }
-
+        /* If texture size didn't change, avoid unnecessary work */
         if (new_theme_width == loaded_theme_width)
-            /* Texture size did not change, nothing to do */
             return;
 
         /* Load texture at new size */
@@ -210,13 +214,14 @@ public class GameView : Gtk.Widget {
         this.loaded_theme_height = new_theme_height;
 
         try {
-            var pixbuf = this.pixbuf;
-            if (!use_original_size) {
-                if (new_theme_width > initial_theme_width)
-                    pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
-                else
-                    pixbuf = pixbuf.scale_simple (new_theme_width, new_theme_height, Gdk.InterpType.TILES);
-            }
+            Gdk.Pixbuf pixbuf;
+            if (new_theme_width > initial_theme_width)
+                pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
+            else if (new_theme_width < initial_theme_width)
+                pixbuf = this.pixbuf.scale_simple (new_theme_width, new_theme_height, Gdk.InterpType.TILES);
+            else
+                pixbuf = this.pixbuf;
+
             var rowstride = new_theme_width * 4;
             var new_texture = new Gdk.MemoryTexture (
                 new_theme_width,
