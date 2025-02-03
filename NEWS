@@ -1,3 +1,14 @@
+47.1
+====
+
+* Various optimizations for game initialization
+* Tweak background colors
+* Don't create new game when activating existing instance
+* Stop leaking game instances
+* Fix a memory leak in the Scores dialog
+* Stop using deprecated APIs
+* Translation updates
+
 47.0
 ====
 
