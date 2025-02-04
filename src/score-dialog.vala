@@ -185,9 +185,9 @@ public class ScoreDialog : Adw.Dialog {
 
             label.label = (position + 1).to_string ();
         });
-        sorter.append (new Gtk.CustomSorter (rank_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (date_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (player_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
 
         rank_column.sorter = sorter;
         rank_column.factory = factory;
@@ -246,9 +246,9 @@ public class ScoreDialog : Adw.Dialog {
                 inscription.text = entry.player;
             }
         });
-        sorter.append (new Gtk.CustomSorter (player_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (rank_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (date_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
 
         player_column.sorter = sorter;
         player_column.factory = factory;
@@ -304,9 +304,9 @@ public class ScoreDialog : Adw.Dialog {
 
             label.label = date_label;
         });
-        sorter.append (new Gtk.CustomSorter (date_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (rank_sorter_cb));
-        sorter.append (new Gtk.CustomSorter (player_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
+        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
 
         date_column.sorter = sorter;
         date_column.factory = factory;
