@@ -52,6 +52,16 @@
   </supports>
   <releases>
     <release version="48.beta" date="2025-02-03" type="development"/>
+    <release version="47.1" date="2025-02-04">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>New background color for Educational theme</li>
+          <li>Faster game initialization</li>
+          <li>Fixes for a few memory leaks</li>
+        </ul>
+      </description>
+    </release>
     <release version="47.0" date="2024-09-14">
       <description>
         <p>This release contains several improvements, including:</p>
