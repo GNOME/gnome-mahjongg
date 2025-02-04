@@ -180,7 +180,7 @@ public class Mahjongg : Adw.Application {
 
         if (game_view.game.complete) {
             var date = new DateTime.now_local ();
-            var duration = (uint) (game_view.game.elapsed + 0.5);
+            var duration = (uint) game_view.game.elapsed;
             var player = Environment.get_real_name ();
             var entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
             history.add (entry);
@@ -445,9 +445,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
     private void tick_cb () {
         string clock;
-        var elapsed = 0;
-        if (game_view.game != null)
-            elapsed = (int) (game_view.game.elapsed + 0.5);
+        var elapsed = (int) game_view.game.elapsed;
         var hours = elapsed / 3600;
         var minutes = (elapsed - hours * 3600) / 60;
         var seconds = elapsed - hours * 3600 - minutes * 60;
