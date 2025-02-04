@@ -1,3 +1,10 @@
+48.beta.1
+=========
+
+* Fix compilation on some systems (cast sort callbacks to CompareDataFunc)
+* Select new theme name after theme name migration
+* Stop rounding 'time elapsed' value
+
 48.beta
 =======
 
