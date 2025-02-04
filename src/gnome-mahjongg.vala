@@ -84,10 +84,11 @@ public class Mahjongg : Adw.Application {
         background_color_action.set_state (new Variant.@string (background_color));
 
         var theme = settings.get_string ("tileset");
-        if (theme == "postmodern.svg" || theme == "smooth.png" || theme == "educational.png")
+        if (theme == "postmodern.svg" || theme == "smooth.png" || theme == "educational.png") {
             // Migrate old theme names
-            settings.set_string ("tileset", theme.split (".")[0]);
-
+            theme = theme.split (".")[0];
+            settings.set_string ("tileset", theme);
+        }
         unowned var theme_action = lookup_action ("theme") as SimpleAction;
         theme_action.set_state (new Variant.@string (theme));
 
