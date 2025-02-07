@@ -14,5 +14,9 @@
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file alias="style.css">css/style.css</file>
     <file alias="style-dark.css">css/style-dark.css</file>
+    <file compressed="true">icons/scalable/actions/edit-redo-symbolic.svg</file>
+    <file compressed="true">icons/scalable/actions/edit-redo-symbolic-rtl.svg</file>
+    <file compressed="true">icons/scalable/actions/edit-undo-symbolic.svg</file>
+    <file compressed="true">icons/scalable/actions/edit-undo-symbolic-rtl.svg</file>
   </gresource>
 </gresources>
