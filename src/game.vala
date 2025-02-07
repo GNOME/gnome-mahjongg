@@ -431,8 +431,8 @@ public class Game {
 
                 matches.prepend (new Match (t, tile));
 
-                /* Only need a single match for uninitialized tiles */
-                if (t.number == -1)
+                /* Optimization: Stop after enough matches */
+                if (t.number == -1 && matches.length () >= 8)
                     break;
             }
         }
