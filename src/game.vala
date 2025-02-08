@@ -509,7 +509,6 @@ public class Game {
             Source.remove (clock_timeout);
         clock_timeout = 0;
         clock.stop ();
-        tick ();
     }
 
     private void continue_clock () {
