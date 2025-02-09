@@ -49,6 +49,14 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="47.2" date="2025-02-09">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>Fixed a regression making games needlessly difficult to solve</li>
+        </ul>
+      </description>
+    </release>
     <release version="47.1" date="2025-02-04">
       <description>
         <p>This release contains the following improvements:</p>
