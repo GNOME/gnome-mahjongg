@@ -5,9 +5,12 @@
 public class Tile {
     public int number = -1;
     public int pair = -1;
-    public Slot slot;
     public bool visible = true;
     public int move_number;
+    public Slot slot;
+    public Tile? left;
+    public Tile? right;
+    public List<Tile> above;
 
     public Tile (Slot slot) {
         this.slot = slot;
@@ -23,13 +26,16 @@ private static int compare_tiles (Tile a, Tile b) {
 }
 
 private static bool switch_tiles (Tile a, Tile b) {
-    if (a.visible && b.visible) {
-        Slot h = a.slot;
-        a.slot = b.slot;
-        b.slot = h;
-        return true;
-    }
-    return false;
+    if (!a.visible || !b.visible)
+        return false;
+
+    var number = a.number;
+    var pair = a.pair;
+    a.number = b.number;
+    b.number = number;
+    a.pair = b.pair;
+    b.pair = pair;
+    return true;
 }
 
 public class Match {
@@ -104,7 +110,7 @@ public class Game {
     }
 
     public uint moves_left {
-        get { return find_matches ().length (); }
+        get { return find_matches ().length; }
     }
 
     public bool complete {
@@ -152,9 +158,7 @@ public class Game {
         move_number = 1;
 
         /* Create the tiles in the locations required in the map */
-        foreach (unowned var slot in map.slots) {
-            tiles.insert_sorted (new Tile (slot), compare_tiles);
-        }
+        create_tiles ();
 
         /* Come up with a random solution by picking random pairs and assigning them
          * with a random value.  If end up with an invalid solution, then choose the
@@ -194,45 +198,13 @@ public class Game {
         if (!tile.visible)
             return false;
 
-        unowned var slot = tile.slot;
-        var x = slot.x;
-        var y_above = slot.y - 1;
-        var y_bottom_half = slot.y + 1;
-        var layer = slot.layer;
-        var blocked_left = false;
-        var blocked_right = false;
+        if ((tile.left != null && tile.left.visible)
+                && (tile.right != null && tile.right.visible))
+            return false;
 
-        foreach (unowned var t in tiles) {
-            if (t == tile || !t.visible)
-                continue;
-
-            unowned var s = t.slot;
-            var s_y = s.y;
-
-            if (s_y < y_above || s_y > y_bottom_half)
-                continue;
-
-            var s_layer = s.layer;
-
-            /* Can't move if blocked both on the left and the right */
-            if (s_layer == layer) {
-                var s_x = s.x;
-
-                if (s_x == x - 2)
-                    blocked_left = true;
-                if (s_x == x + 2)
-                    blocked_right = true;
-
-                if (blocked_left && blocked_right)
-                    return false;
-
-            /* Can't move if blocked by a tile above */
-            } else if (s_layer > layer) {
-                var s_x = s.x;
-
-                if (s_x >= x - 1 && s_x <= x + 1)
-                    return false;
-            }
+        foreach (unowned var t in tile.above) {
+            if (t.visible)
+                return false;
         }
         return true;
     }
@@ -275,21 +247,18 @@ public class Game {
         if (!can_shuffle)
             return;
 
-        // Fisher Yates Shuffle
+        /* Reset moves and move numbers */
+        move_number = 1;
+        foreach (unowned var tile in tiles)
+            tile.move_number = 0;
+
+        /* Fisher Yates Shuffle */
         var n = tiles.length ();
         do {
             for (var i = n - 1; i > 0; i--) {
                 var j = Random.int_range (0, (int) i + 1);
-                // switch internal positions
                 switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
             }
-            // resort for drawing order
-            tiles.sort (compare_tiles);
-            // reset moves and move numbers
-            move_number = 1;
-            foreach (unowned var tile in tiles)
-                tile.move_number = 0;
-            find_matches ();
         } while (!can_move);
 
         moved ();
@@ -336,17 +305,14 @@ public class Game {
     }
 
     public void show_hint () {
-        var matches = find_matches (selected_tile);
+        var matches = find_matches_for_tile (selected_tile);
 
         /* No match, find any random match as if nothing was selected */
-        if (matches.length () == 0) {
-            if (selected_tile == null)
-                return;
+        if (matches.length == 0)
             matches = find_matches ();
-        }
 
-        var n = Random.int_range (0, (int) matches.length ());
-        var match = matches.nth_data (n);
+        var n = Random.int_range (0, (int) matches.length);
+        unowned var match = matches[n];
         set_hint (match.tile0, match.tile1);
     }
 
@@ -362,13 +328,56 @@ public class Game {
         redraw_all_tiles ();
     }
 
+    private void create_tiles () {
+        foreach (unowned var slot in map.slots)
+            tiles.insert_sorted (new Tile (slot), compare_tiles);
+
+        foreach (unowned var tile in tiles) {
+            unowned var slot = tile.slot;
+            var x = slot.x;
+            var y_above = slot.y - 1;
+            var y_bottom_half = slot.y + 1;
+            var layer = slot.layer;
+
+            foreach (unowned var t in tiles) {
+                if (t == tile)
+                    continue;
+
+                unowned var s = t.slot;
+                var s_y = s.y;
+
+                if (s_y < y_above || s_y > y_bottom_half)
+                    continue;
+
+                var s_layer = s.layer;
+
+                /* Can't move if blocked both on the left and the right */
+                if (s_layer == layer) {
+                    var s_x = s.x;
+
+                    if (s_x == x - 2)
+                        tile.left = t;
+                    if (s_x == x + 2)
+                        tile.right = t;
+
+                /* Can't move if blocked by a tile above */
+                } else if (s_layer > layer) {
+                    var s_x = s.x;
+
+                    if (s_x >= x - 1 && s_x <= x + 1)
+                        tile.above.prepend (t);
+                }
+            }
+        }
+    }
+
     private bool shuffle (int[] numbers, int depth = 0) {
         /* All shuffled */
         if (depth == tiles.length () / 2)
             return true;
 
         var matches = find_matches ();
-        var n_matches = matches.length ();
+        var n_matches = matches.length;
 
         /* No matches on this branch, rewind */
         if (n_matches == 0)
@@ -377,7 +386,7 @@ public class Game {
         var n = Random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
             var number = numbers[depth];
-            unowned var match = matches.nth_data ((n + i) % n_matches);
+            unowned var match = matches[(n + i) % n_matches];
             unowned var tile0 = match.tile0;
             unowned var tile1 = match.tile1;
 
@@ -401,40 +410,31 @@ public class Game {
         return false;
     }
 
-    private List<Match> find_matches (Tile? tile = null) {
-        List<Match> matches = null;
+    private Match[] find_matches () {
+        Match[] matches = null;
+        Tile[] ignored_tiles = null;
 
-        if (tile == null) {
-            foreach (unowned var t in tiles) {
-                foreach (unowned var match in find_matches (t)) {
-                    var already_matched = false;
-
-                    foreach (unowned var existing_match in matches) {
-                        if (existing_match.tile0 == match.tile1 && existing_match.tile1 == match.tile0) {
-                            already_matched = true;
-                            break;
-                        }
-                    }
-                    if (!already_matched)
-                        matches.prepend (match);
-                }
-            }
+        foreach (unowned var t in tiles) {
+            var submatches = find_matches_for_tile (t, ignored_tiles);
+            foreach (unowned var match in submatches)
+                matches += match;
+            if (submatches.length > 0)
+                ignored_tiles += t;
         }
-        else if (tile_is_selectable (tile)) {
-            foreach (unowned var t in tiles) {
-                if (t == tile)
-                    continue;
+        return matches;
+    }
 
-                /* Checking match before checking if the tile can move is faster */
-                if (!tiles_match (t, tile) || !tile_is_selectable (t))
-                    continue;
+    private Match[] find_matches_for_tile (Tile? tile, Tile[]? ignored_tiles = null) {
+        Match[] matches = null;
 
-                matches.prepend (new Match (t, tile));
+        if (tile == null || !tile_is_selectable (tile))
+            return matches;
 
-                /* Optimization: Stop after enough matches */
-                if (t.number == -1 && matches.length () >= 8)
-                    break;
-            }
+        foreach (unowned var t in tiles) {
+            if (t == tile)
+                continue;
+            if (tiles_match (t, tile) && tile_is_selectable (t) && !(t in ignored_tiles))
+                matches += new Match (t, tile);
         }
         return matches;
     }
