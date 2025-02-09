@@ -197,7 +197,8 @@ public class Mahjongg : Adw.Application {
             ) {
                 default_response = "continue"
             };
-            dialog.add_response ("continue", _("_Continue"));
+            dialog.add_response ("quit", _("_Quit"));
+            dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
 
             if (can_shuffle) {
                 dialog.add_response ("reshuffle", _("_Reshuffle"));
@@ -205,8 +206,7 @@ public class Mahjongg : Adw.Application {
             else {
                 dialog.add_response ("new_game", _("_New Game"));
             };
-            dialog.add_response ("quit", _("_Quit"));
-            dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
+            dialog.add_response ("continue", _("_Continue"));
 
             var resp_id = yield dialog.choose (window, null);
             switch (resp_id) {
