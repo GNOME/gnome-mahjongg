@@ -377,10 +377,6 @@ public class Game {
                     continue;
 
                 matches.append (new Match (t, tile));
-
-                /* Optimization: Stop after enough matches */
-                if (t.number == -1 && matches.length () >= 8)
-                    break;
             }
         }
 
