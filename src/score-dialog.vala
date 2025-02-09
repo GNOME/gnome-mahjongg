@@ -14,7 +14,13 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Gtk.Button clear_scores_button;
 
     [GtkChild]
+    private unowned Gtk.Stack header_stack;
+
+    [GtkChild]
     private unowned Gtk.MenuButton layout_button;
+
+    [GtkChild]
+    private unowned Adw.WindowTitle title_widget;
 
     [GtkChild]
     private unowned Gtk.Stack content_stack;
@@ -86,10 +92,15 @@ public class ScoreDialog : Adw.Dialog {
             clear_scores_button.visible = false;
             toolbar_view.reveal_bottom_bars = true;
 
+            header_stack.visible_child_name = "title";
+            title_widget.subtitle = _("Layout: %s").printf (get_map_display_name (selected_entry.name));
+
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
             score_view.add_controller (controller);
             focus_widget = score_view;
+        } else {
+            header_stack.visible_child_name = "layout";
         }
 
         clear_scores_button.clicked.connect (clear_scores_cb);

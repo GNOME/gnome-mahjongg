@@ -11,8 +11,28 @@
         <child type="top">
           <object class="AdwHeaderBar" id="header_bar">
             <property name="title-widget">
-              <object class="GtkMenuButton" id="layout_button">
-                <property name="visible">False</property>
+              <object class="GtkStack" id="header_stack">
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name">layout</property>
+                    <property name="child">
+                      <object class="GtkMenuButton" id="layout_button">
+                        <property name="halign">center</property>
+                        <property name="visible">False</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name">title</property>
+                    <property name="child">
+                      <object class="AdwWindowTitle" id="title_widget">
+                        <property name="title" translatable="yes">Game Completed 🎉</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
               </object>
             </property>
             <child type="start">
