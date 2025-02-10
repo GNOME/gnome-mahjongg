@@ -8,8 +8,8 @@ public class Tile {
     public bool visible = true;
     public int move_number;
     public Slot slot;
-    public Tile? left;
-    public Tile? right;
+    public List<Tile> left;
+    public List<Tile> right;
     public List<Tile> above;
 
     public Tile (Slot slot) {
@@ -198,14 +198,28 @@ public class Game {
         if (!tile.visible)
             return false;
 
-        if ((tile.left != null && tile.left.visible)
-                && (tile.right != null && tile.right.visible))
+        var left_blocked = false;
+        var right_blocked = false;
+
+        foreach (unowned var t in tile.left)
+            if (t.visible) {
+                left_blocked = true;
+                break;
+            }
+
+        foreach (unowned var t in tile.right)
+            if (t.visible) {
+                right_blocked = true;
+                break;
+            }
+
+        if (left_blocked && right_blocked)
             return false;
 
-        foreach (unowned var t in tile.above) {
+        foreach (unowned var t in tile.above)
             if (t.visible)
                 return false;
-        }
+
         return true;
     }
 
@@ -356,9 +370,9 @@ public class Game {
                     var s_x = s.x;
 
                     if (s_x == x - 2)
-                        tile.left = t;
+                        tile.left.prepend (t);
                     if (s_x == x + 2)
-                        tile.right = t;
+                        tile.right.prepend (t);
 
                 /* Can't move if blocked by a tile above */
                 } else if (s_layer > layer) {
