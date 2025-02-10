@@ -318,6 +318,11 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             },
             translator_credits = _("translator-credits"),
         };
+        about_dialog.add_credit_section (_("Layouts by"), {
+            "Rexford Newbould",
+            "Krzysztof Foltman",
+            "Sapphire Becker"
+        });
         about_dialog.present (window);
     }
 
