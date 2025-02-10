@@ -12,21 +12,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-09 14:00+0000\n"
-"PO-Revision-Date: 2025-02-09 16:17+0100\n"
+"POT-Creation-Date: 2025-02-10 04:29+0000\n"
+"PO-Revision-Date: 2025-02-10 08:50+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:516
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:521
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -309,6 +309,10 @@ msgstr ""
 "Matej Erman\n"
 "Tadej Janež\n"
 "Martin Srebotnjak"
+
+#: src/gnome-mahjongg.vala:321
+msgid "Layouts by"
+msgstr "Postavitve"
 
 #: src/score-dialog.vala:96
 #, c-format
