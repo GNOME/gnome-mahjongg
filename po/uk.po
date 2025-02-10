@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-09 14:00+0000\n"
-"PO-Revision-Date: 2025-02-09 20:08+0200\n"
+"POT-Creation-Date: 2025-02-10 04:29+0000\n"
+"PO-Revision-Date: 2025-02-10 21:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:516
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:521
 msgid "Mahjongg"
 msgstr "Магджонґ"
 
@@ -310,9 +310,13 @@ msgstr ""
 "Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Mykola Tkach <Stuartlittle1970@gmail.com>"
 
+#: src/gnome-mahjongg.vala:321
+#| msgid "Layout"
+msgid "Layouts by"
+msgstr "Компонування"
+
 #: src/score-dialog.vala:96
 #, c-format
-#| msgid "Layout: "
 msgid "Layout: %s"
 msgstr "Компонування: %s"
 
@@ -432,9 +436,6 @@ msgstr "Призупинити гру"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "На увесь екран"
-
-#~ msgid "Layout"
-#~ msgstr "Розташування"
 
 #~ msgid "Preferences"
 #~ msgstr "Параметри"
