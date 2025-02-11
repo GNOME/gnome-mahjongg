@@ -97,7 +97,7 @@ public class Mahjongg : Adw.Application {
         settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
 
         update_theme ();
-        new_game ();
+        new_game (false);
 
         settings.changed.connect (conf_value_changed_cb);
     }
