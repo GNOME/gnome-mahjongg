@@ -8,6 +8,6 @@ Exec=@exec-name@
 Icon=@app-id@
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;Game;BoardGame;
+Categories=GNOME;GTK;Game;BoardGame;LogicGame;
 StartupNotify=true
 DBusActivatable=true
