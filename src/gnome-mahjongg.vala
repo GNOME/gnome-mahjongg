@@ -91,13 +91,14 @@ public class Mahjongg : Adw.Application {
         }
         unowned var theme_action = lookup_action ("theme") as SimpleAction;
         theme_action.set_state (new Variant.@string (theme));
+        update_theme ();
 
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
 
-        update_theme ();
-        new_game (false);
+        var rotate_map = (layout_rotation == "random");
+        new_game (rotate_map);
 
         settings.changed.connect (conf_value_changed_cb);
     }
