@@ -338,27 +338,6 @@ public class Game {
         redraw_all_tiles ();
     }
 
-    private void generate_game () {
-        var n_pairs = (int) tiles.length () / 2;
-        var tile_numbers = new int[n_pairs];
-
-        /* Create tile numbers */
-        for (var i = 0; i < n_pairs; i++)
-            tile_numbers[i] = i * 2;
-
-        /* Shuffle tile numbers */
-        for (var i = 0; i < n_pairs; i++) {
-            var n = Random.int_range (i, n_pairs);
-            var tile_number = tile_numbers[i];
-            tile_numbers[i] = tile_numbers[n];
-            tile_numbers[n] = tile_number;
-        }
-
-        /* Choose tile pairs until we have a solvable board */
-        choose_tile_pairs (tile_numbers);
-        move_number = 1;
-    }
-
     private void create_tiles () {
         foreach (unowned var slot in map.slots)
             tiles.insert_sorted (new Tile (slot), compare_tiles);
@@ -400,6 +379,27 @@ public class Game {
                 }
             }
         }
+    }
+
+    private void generate_game () {
+        var n_pairs = (int) tiles.length () / 2;
+        var tile_numbers = new int[n_pairs];
+
+        /* Create tile numbers */
+        for (var i = 0; i < n_pairs; i++)
+            tile_numbers[i] = i * 2;
+
+        /* Shuffle tile numbers */
+        for (var i = 0; i < n_pairs; i++) {
+            var n = Random.int_range (i, n_pairs);
+            var tile_number = tile_numbers[i];
+            tile_numbers[i] = tile_numbers[n];
+            tile_numbers[n] = tile_number;
+        }
+
+        /* Choose tile pairs until we have a solvable board */
+        choose_tile_pairs (tile_numbers);
+        move_number = 1;
     }
 
     private bool choose_tile_pairs (int[] tile_numbers, int depth = 0) {
