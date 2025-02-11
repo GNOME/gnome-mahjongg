@@ -155,27 +155,23 @@ public class Game {
 
     public Game (Map map) {
         this.map = map;
-        move_number = 1;
 
-        /* Create the tiles in the locations required in the map */
+        /* Create blank tiles in the locations required in the map */
         create_tiles ();
 
-        /* Come up with a random solution by picking random pairs and assigning them
-         * with a random value.  If end up with an invalid solution, then choose the
-         * next available pair */
-        var n_pairs = (int) tiles.length () / 2;
-        var numbers = new int[n_pairs];
-        for (var i = 0; i < n_pairs; i++)
-            numbers[i] = i * 2;
-        for (var i = 0; i < n_pairs; i++) {
-            var n = Random.int_range (i, n_pairs);
-            var t = numbers[i];
-            numbers[i] = numbers[n];
-            numbers[n] = t;
-        }
-        shuffle (numbers);
+        /* Start with a board consisting of visible blank tiles. Walk through all
+         * tiles, choosing and removing tile pairs until we have a solvable board.
+         *
+         * Check all possible tile matches for visible/remaining tiles. Choose a
+         * random match, hide/remove both tiles, and repeat the process. If we
+         * reach an unsolvable state, undo the previous move and try the next match.
+         *
+         * Once we have a path to victory, assign random tile faces to all pairs.
+         */
+        generate_game ();
 
-        /* Make everything visible again */
+        /* The algorithm has "finished" the game. Make all tiles visible again for
+         * the player. */
         reset ();
     }
 
@@ -342,7 +338,28 @@ public class Game {
         redraw_all_tiles ();
     }
 
-    private void create_tiles () {
+    private void generate_game () {
+        var n_pairs = (int) tiles.length () / 2;
+        var tile_numbers = new int[n_pairs];
+
+        /* Create tile numbers */
+        for (var i = 0; i < n_pairs; i++)
+            tile_numbers[i] = i * 2;
+
+        /* Shuffle tile numbers */
+        for (var i = 0; i < n_pairs; i++) {
+            var n = Random.int_range (i, n_pairs);
+            var tile_number = tile_numbers[i];
+            tile_numbers[i] = tile_numbers[n];
+            tile_numbers[n] = tile_number;
+        }
+
+        /* Choose tile pairs until we have a solvable board */
+        choose_tile_pairs (tile_numbers);
+        move_number = 1;
+    }
+
+    private void create_tiles (Map map) {
         foreach (unowned var slot in map.slots)
             tiles.insert_sorted (new Tile (slot), compare_tiles);
 
@@ -385,8 +402,8 @@ public class Game {
         }
     }
 
-    private bool shuffle (int[] numbers, int depth = 0) {
-        /* All shuffled */
+    private bool choose_tile_pairs (int[] tile_numbers, int depth = 0) {
+        /* All tile pairs chosen */
         if (depth == tiles.length () / 2)
             return true;
 
@@ -399,41 +416,43 @@ public class Game {
 
         var n = Random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
-            var number = numbers[depth];
+            var number = tile_numbers[depth];
             unowned var match = matches[(n + i) % n_matches];
             unowned var tile0 = match.tile0;
             unowned var tile1 = match.tile1;
 
-            tile0.number = number;
-            tile0.pair = number / 4;
             tile0.visible = false;
-            tile1.number = number + 1;
-            tile1.pair = number / 4;
             tile1.visible = false;
 
-            if (shuffle (numbers, depth + 1))
+            if (choose_tile_pairs (tile_numbers, depth + 1)) {
+                /* Assign tile face for pair */
+                tile0.number = number;
+                tile1.number = number + 1;
+                tile0.pair = tile1.pair = number / 4;
                 return true;
+            }
 
-            /* Undo this move */
-            tile0.number = tile0.pair = -1;
+            /* Unsolvable state, undo move and try the next match */
             tile0.visible = true;
-            tile1.number = tile1.pair = -1;
             tile1.visible = true;
         }
-
         return false;
     }
 
     private Match[] find_matches () {
         Match[] matches = null;
-        Tile[] ignored_tiles = null;
+        Tile[] processed_tiles = null;
 
         foreach (unowned var t in tiles) {
-            var submatches = find_matches_for_tile (t, ignored_tiles);
+            var submatches = find_matches_for_tile (t, processed_tiles);
+
             foreach (unowned var match in submatches)
                 matches += match;
+
+            /* Remember processed tiles, to later avoid creating duplicate matches
+             * with swapped tile positions */
             if (submatches.length > 0)
-                ignored_tiles += t;
+                processed_tiles += t;
         }
         return matches;
     }
