@@ -359,7 +359,7 @@ public class Game {
         move_number = 1;
     }
 
-    private void create_tiles (Map map) {
+    private void create_tiles () {
         foreach (unowned var slot in map.slots)
             tiles.insert_sorted (new Tile (slot), compare_tiles);
 
