@@ -9,31 +9,31 @@
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2023.
-# Sabri Ünal <yakushabb@gmail.com>, 2023, 2024.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2025.
+# Sabri Ünal <yakushabb@gmail.com>, 2023-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2024-08-21 17:21+0000\n"
-"PO-Revision-Date: 2024-08-25 15:38+0300\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"POT-Creation-Date: 2025-02-11 13:52+0000\n"
+"PO-Revision-Date: 2025-02-14 08:00+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.3\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:504
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:4
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Karoları eşleştir ve panoyu temizle"
 
@@ -43,19 +43,19 @@ msgid "game;strategy;puzzle;board;"
 msgstr ""
 "game;strategy;puzzle;board;oyun;strateji;izlem;bulmaca;bilmece;yapboz;tahta;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:20
+#: data/org.gnome.Mahjongg.gschema.xml.in:31
 msgid "Width of the window in pixels"
 msgstr "Pencerenin piksel olarak genişliği"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:24
+#: data/org.gnome.Mahjongg.gschema.xml.in:35
 msgid "Height of the window in pixels"
 msgstr "Pencerenin piksel olarak yüksekliği"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:28
+#: data/org.gnome.Mahjongg.gschema.xml.in:39
 msgid "true if the window is maximized"
 msgstr "eğer pencere büyütüldüyse doğru"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:12
 msgid ""
 "Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
 "are stacked on the board at the start of the game. The goal is to remove all "
@@ -71,7 +71,7 @@ msgstr ""
 "alan varsa karo seçebilirsiniz. Dikkatli olun: birbirine benzeyen karolar "
 "azıcık başka olabilir."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:21
 msgid ""
 "You can choose from a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -81,236 +81,207 @@ msgstr ""
 "yapabilirsiniz. Eğer sıkışırsanız ipucu isteyebilirsiniz, ancak bu büyük bir "
 "zaman cezası ekler."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:34
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:42
 msgid "Mahjongg in Light Style"
 msgstr "Mahjongg açık tema ile"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg koyu tema ile"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:74 src/gnome-mahjongg.vala:348
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
 msgid "The Mahjongg Team"
 msgstr "Mahjongg Takımı"
 
-#: data/ui/help-overlay.ui:8
-msgctxt "shortcut window"
-msgid "Playing"
-msgstr "Oynama"
-
-#: data/ui/help-overlay.ui:12
-msgctxt "shortcut window"
-msgid "New Game"
-msgstr "Yeni Oyun"
-
-#: data/ui/help-overlay.ui:18
-msgctxt "shortcut window"
-msgid "Pause Game"
-msgstr "Oyunu Duraklat"
-
-#: data/ui/help-overlay.ui:24
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "Geri al"
-
-#: data/ui/help-overlay.ui:30
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "Yinele"
-
-#: data/ui/help-overlay.ui:36
-msgctxt "shortcut window"
-msgid "Show Hint"
-msgstr "İpucu Göster"
-
-#: data/ui/help-overlay.ui:43
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Genel"
-
-#: data/ui/help-overlay.ui:47
-msgctxt "shortcut window"
-msgid "Show Main Menu"
-msgstr "Ana Menüyü Göster"
-
-#: data/ui/help-overlay.ui:53
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Klavye Kısayollarını göster"
-
-#: data/ui/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "Yardımı göster"
-
-#: data/ui/help-overlay.ui:65
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Çıkış"
-
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:210
+#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
 msgid "_New Game"
 msgstr "_Yeni Oyun"
 
-#: data/ui/menu.ui:10
+#: data/ui/menu.ui:12
 msgid "_Restart Game"
 msgstr "Oyunu _Yeniden Başlat"
 
-#: data/ui/menu.ui:14
+#: data/ui/menu.ui:16
 msgid "_Scores"
 msgstr "_Puanlar"
 
-#: data/ui/menu.ui:20
+#: data/ui/menu.ui:22
 msgid "_Layout"
 msgstr "_Düzen"
 
-#: data/ui/menu.ui:23
+#: data/ui/menu.ui:25
 msgctxt "mahjongg map name"
 msgid "Turtle"
 msgstr "Kaplumbağa"
 
-#: data/ui/menu.ui:26
+#: data/ui/menu.ui:28
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Ziggurat"
 
-#: data/ui/menu.ui:29
+#: data/ui/menu.ui:31
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Dört Köprü"
 
-#: data/ui/menu.ui:32
+#: data/ui/menu.ui:34
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Bulut"
 
-#: data/ui/menu.ui:35
+#: data/ui/menu.ui:37
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Üç Taş"
 
-#: data/ui/menu.ui:38
+#: data/ui/menu.ui:40
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Kırmızı Ejderha"
 
-#: data/ui/menu.ui:41
+#: data/ui/menu.ui:43
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "Üst Geçit"
 
-#: data/ui/menu.ui:44
+#: data/ui/menu.ui:46
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Piramidin Duvarları"
 
-#: data/ui/menu.ui:47
+#: data/ui/menu.ui:49
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Çelişik Çapraz"
 
-#: data/ui/menu.ui:50
+#: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Zor"
 
-#: data/ui/menu.ui:55
-msgid "_Background"
-msgstr "_Arka Alan"
+#: data/ui/menu.ui:57
+msgid "Layout Ro_tation"
+msgstr "Düzen _Döndürme"
 
-#: data/ui/menu.ui:58
+#: data/ui/menu.ui:60
+msgctxt "layout rotation"
+msgid "No Rotation"
+msgstr "Döndürme Yok"
+
+#: data/ui/menu.ui:65
+msgctxt "layout rotation"
+msgid "Sequential"
+msgstr "Ardışık"
+
+#: data/ui/menu.ui:70
+msgctxt "layout rotation"
+msgid "Random"
+msgstr "Rastgele"
+
+#: data/ui/menu.ui:77
+msgid "_Appearance"
+msgstr "_Görünüm"
+
+#: data/ui/menu.ui:79
+msgid "Background"
+msgstr "Arka Plan"
+
+#: data/ui/menu.ui:81
+msgctxt "background color"
 msgid "Follow System"
 msgstr "Sistemi İzle"
 
-#: data/ui/menu.ui:63
+#: data/ui/menu.ui:86
+msgctxt "background color"
 msgid "Light"
 msgstr "Açık"
 
-#: data/ui/menu.ui:68
+#: data/ui/menu.ui:91
+msgctxt "background color"
 msgid "Dark"
 msgstr "Koyu"
 
-#: data/ui/menu.ui:75
-msgid "_Theme"
-msgstr "_Tema"
+#: data/ui/menu.ui:97
+msgid "Theme"
+msgstr "Tema"
 
-#: data/ui/menu.ui:78
+#: data/ui/menu.ui:99
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr "Postmodern"
 
-#: data/ui/menu.ui:81
+#: data/ui/menu.ui:104
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "Pürüzsüz"
 
-#: data/ui/menu.ui:84
+#: data/ui/menu.ui:109
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "Eğitim"
 
-#: data/ui/menu.ui:91
-msgid "_Keyboard Shortcuts"
-msgstr "_Klavye Kısayolları"
-
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:118
 msgid "_Help"
 msgstr "_Yardım"
 
-#: data/ui/menu.ui:99
+#: data/ui/menu.ui:122
 msgid "_About Mahjongg"
 msgstr "Mahjongg _Hakkında"
 
-#: data/ui/score-dialog.ui:25
+#: data/ui/score-dialog.ui:31
+msgid "Game Completed 🎉"
+msgstr "Oyun Tamamlandı 🎉"
+
+#: data/ui/score-dialog.ui:54
 msgid "No Scores"
 msgstr "Puan Yok"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:55
 msgid "Finish a game to see scores"
 msgstr "Skorları görmek için bir oyunu bitir"
 
-#: data/ui/score-dialog.ui:48
+#: data/ui/score-dialog.ui:77
 msgid "Player"
 msgstr "Oyuncu"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:84
 msgid "Time"
 msgstr "Zaman"
 
-#: data/ui/score-dialog.ui:62
+#: data/ui/score-dialog.ui:91
 msgid "Date"
 msgstr "Tarih"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:212
+#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
 msgid "_Quit"
 msgstr "_Çıkış"
 
-#: data/ui/window.ui:21
+#: data/ui/window.ui:29
 msgid "Undo"
 msgstr "Geri Al"
 
-#: data/ui/window.ui:28
+#: data/ui/window.ui:36
 msgid "Redo"
 msgstr "Yinele"
 
-#: data/ui/window.ui:35
+#: data/ui/window.ui:43
 msgid "Main Menu"
 msgstr "Ana Menü"
 
-#: data/ui/window.ui:48
+#: data/ui/window.ui:56
 msgid "Show Hint"
 msgstr "İpucu Göster"
 
-#: src/gnome-mahjongg.vala:24
+#: src/gnome-mahjongg.vala:16
 msgid "Print release version and exit"
 msgstr "Yayım sürümünü yazdır ve çık"
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:194
 msgid "No Moves Left"
 msgstr "Hareket Kalmadı"
 
-#: src/gnome-mahjongg.vala:199
+#: src/gnome-mahjongg.vala:196
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -318,57 +289,113 @@ msgstr ""
 "Hareketlerinizi geri alıp çözüm bulmayı deneyebilir ya da kalan karoları "
 "yeniden karıştırabilirsiniz."
 
-#: src/gnome-mahjongg.vala:200
+#: src/gnome-mahjongg.vala:197
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Hareketlerinizi geri alıp çözüm bulmayı deneyebilir ya da yeni oyun "
 "başlatabilirsiniz."
 
-#: src/gnome-mahjongg.vala:204
-msgid "_Continue"
-msgstr "_Sürdür"
-
-#: src/gnome-mahjongg.vala:207
+#: src/gnome-mahjongg.vala:205
 msgid "_Reshuffle"
 msgstr "Yeniden _Karıştır"
 
-#: src/gnome-mahjongg.vala:355
+#: src/gnome-mahjongg.vala:210
+msgid "_Continue"
+msgstr "_Sürdür"
+
+#: src/gnome-mahjongg.vala:318
 msgid "translator-credits"
 msgstr ""
 "Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Muhammet Kara <muhammetk@gmail.com>\n"
 "Barış Çiçek <baris@teamforce.name.tr>"
 
-#: src/score-dialog.vala:311
+#: src/gnome-mahjongg.vala:320
+msgid "Layouts by"
+msgstr "Düzenler"
+
+#: src/score-dialog.vala:96
+#, c-format
+msgid "Layout: %s"
+msgstr "Düzen: %s"
+
+#: src/score-dialog.vala:363
 msgid "Clear All Scores?"
 msgstr "Tüm Puanlar Temizlensin Mi?"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:364
 msgid "This will clear every score for every layout."
 msgstr "Bu, tüm düzenlerdeki puanları temizleyecek."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:368
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: src/score-dialog.vala:317
+#: src/score-dialog.vala:369
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#: src/window.vala:54
+#: src/window.vala:42
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Kalan Hareket: %2u"
 
-#: src/window.vala:58
+#: src/window.vala:91
 msgid "Paused"
 msgstr "Dondur"
 
-#: src/window.vala:60
+#: src/window.vala:93
 msgid "Resume Game"
 msgstr "Oyunu Sürdür"
 
-#: src/window.vala:65
+#: src/window.vala:99
 msgid "Pause Game"
 msgstr "Oyunu Duraklat"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Playing"
+#~ msgstr "Oynama"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New Game"
+#~ msgstr "Yeni Oyun"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Pause Game"
+#~ msgstr "Oyunu Duraklat"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Undo"
+#~ msgstr "Geri al"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Redo"
+#~ msgstr "Yinele"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Hint"
+#~ msgstr "İpucu Göster"
+
+#~ msgctxt "shortcut window"
+#~ msgid "General"
+#~ msgstr "Genel"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Main Menu"
+#~ msgstr "Ana Menüyü Göster"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Keyboard Shortcuts"
+#~ msgstr "Klavye Kısayollarını göster"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Help"
+#~ msgstr "Yardımı göster"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Quit"
+#~ msgstr "Çıkış"
+
+#~ msgid "_Keyboard Shortcuts"
+#~ msgstr "_Klavye Kısayolları"
