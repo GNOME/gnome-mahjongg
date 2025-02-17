@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-01-13 02:34+0000\n"
-"PO-Revision-Date: 2025-01-16 22:13+1000\n"
+"POT-Creation-Date: 2025-02-12 22:27+0000\n"
+"PO-Revision-Date: 2025-02-15 12:30+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -31,12 +31,12 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:7 src/gnome-mahjongg.vala:548
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
 msgid "Mahjongg"
 msgstr "Маджонг"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:4
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:8
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Очистите доску от костей, выбирая одинаковые"
 
@@ -45,19 +45,19 @@ msgstr "Очистите доску от костей, выбирая одина
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;игра;стратегия;головоломка;настольная;"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:28
+#: data/org.gnome.Mahjongg.gschema.xml.in:31
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:32
+#: data/org.gnome.Mahjongg.gschema.xml.in:35
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: data/org.gnome.Mahjongg.gschema.xml.in:36
+#: data/org.gnome.Mahjongg.gschema.xml.in:39
 msgid "true if the window is maximized"
 msgstr "если выбрано, то окно имеет максимальный размер"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:12
 msgid ""
 "Single-player tile-matching game, commonly known as Mahjong solitaire. Tiles "
 "are stacked on the board at the start of the game. The goal is to remove all "
@@ -75,7 +75,7 @@ msgstr ""
 "грань. Будьте внимательны: некоторые кости немного похожи друг на друга, но "
 "на самом деле являются разными."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:19
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:21
 msgid ""
 "You can choose from a variety of starting layouts, some easy and some "
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
@@ -86,267 +86,207 @@ msgstr ""
 "ход, то можете воспользоваться подсказкой, но в этом случае будет начислено "
 "штрафное время."
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:32
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:40
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:34
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:42
 msgid "Mahjongg in Light Style"
 msgstr "Маджонг в светлом стиле"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:36
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
 msgstr "Маджонг в тёмном стиле"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:73
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
 msgid "The Mahjongg Team"
 msgstr "Команда «Маджонг»"
 
-#: data/ui/help-overlay.ui:8
-msgctxt "shortcut window"
-msgid "Playing"
-msgstr "Игра"
-
-#: data/ui/help-overlay.ui:12
-msgctxt "shortcut window"
-msgid "New Game"
-msgstr "Новая игра"
-
-#: data/ui/help-overlay.ui:18
-msgctxt "shortcut window"
-msgid "Restart Game"
-msgstr "Начать игру заново"
-
-#: data/ui/help-overlay.ui:24
-msgctxt "shortcut window"
-msgid "Pause Game"
-msgstr "Приостановить игру"
-
-#: data/ui/help-overlay.ui:30
-msgctxt "shortcut window"
-msgid "Undo"
-msgstr "Отменить"
-
-#: data/ui/help-overlay.ui:36
-msgctxt "shortcut window"
-msgid "Redo"
-msgstr "Вернуть"
-
-#: data/ui/help-overlay.ui:42
-msgctxt "shortcut window"
-msgid "Show Hint"
-msgstr "Показать подсказку"
-
-#: data/ui/help-overlay.ui:49
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Общее"
-
-#: data/ui/help-overlay.ui:53
-msgctxt "shortcut window"
-msgid "Show Main Menu"
-msgstr "Показать главное меню"
-
-#: data/ui/help-overlay.ui:59
-msgctxt "shortcut window"
-msgid "Show Keyboard Shortcuts"
-msgstr "Показать комбинации клавиш"
-
-#: data/ui/help-overlay.ui:65
-msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "Показать справку"
-
-#: data/ui/help-overlay.ui:71
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Выход"
-
-#: data/ui/menu.ui:6 src/gnome-mahjongg.vala:212
+#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: data/ui/menu.ui:10
+#: data/ui/menu.ui:12
 msgid "_Restart Game"
 msgstr "Начать игру _заново"
 
-#: data/ui/menu.ui:14
+#: data/ui/menu.ui:16
 msgid "_Scores"
 msgstr "Ре_зультаты"
 
-#: data/ui/menu.ui:20
+#: data/ui/menu.ui:22
 msgid "_Layout"
 msgstr "_Расклад"
 
-#: data/ui/menu.ui:23
+#: data/ui/menu.ui:25
 msgctxt "mahjongg map name"
 msgid "Turtle"
 msgstr "Черепаха"
 
-#: data/ui/menu.ui:26
+#: data/ui/menu.ui:28
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
 msgstr "Зиккурат"
 
-#: data/ui/menu.ui:29
+#: data/ui/menu.ui:31
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
 msgstr "Четыре моста"
 
-#: data/ui/menu.ui:32
+#: data/ui/menu.ui:34
 msgctxt "mahjongg map name"
 msgid "Cloud"
 msgstr "Облако"
 
-#: data/ui/menu.ui:35
+#: data/ui/menu.ui:37
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
 msgstr "Крестики-нолики"
 
-#: data/ui/menu.ui:38
+#: data/ui/menu.ui:40
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
 msgstr "Красный дракон"
 
-#: data/ui/menu.ui:41
+#: data/ui/menu.ui:43
 msgctxt "mahjongg map name"
 msgid "Overpass"
 msgstr "Переход"
 
-#: data/ui/menu.ui:44
+#: data/ui/menu.ui:46
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
 msgstr "Стены пирамиды"
 
-#: data/ui/menu.ui:47
+#: data/ui/menu.ui:49
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
 msgstr "Смешанный крест"
 
-#: data/ui/menu.ui:50
+#: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
 msgid "Difficult"
 msgstr "Сложный"
 
-#: data/ui/menu.ui:55
+#: data/ui/menu.ui:57
 msgid "Layout Ro_tation"
 msgstr "Смена раск_лада"
 
-#: data/ui/menu.ui:58
+#: data/ui/menu.ui:60
 msgctxt "layout rotation"
 msgid "No Rotation"
 msgstr "Без смены"
 
-#: data/ui/menu.ui:63
+#: data/ui/menu.ui:65
 msgctxt "layout rotation"
 msgid "Sequential"
 msgstr "Последовательная"
 
-#: data/ui/menu.ui:68
+#: data/ui/menu.ui:70
 msgctxt "layout rotation"
 msgid "Random"
 msgstr "Случайный выбор"
 
-#: data/ui/menu.ui:75
+#: data/ui/menu.ui:77
 msgid "_Appearance"
 msgstr "_Внешний вид"
 
-#: data/ui/menu.ui:77
+#: data/ui/menu.ui:79
 msgid "Background"
 msgstr "Фон"
 
-#: data/ui/menu.ui:79
+#: data/ui/menu.ui:81
 msgctxt "background color"
 msgid "Follow System"
 msgstr "Системный"
 
-#: data/ui/menu.ui:84
+#: data/ui/menu.ui:86
 msgctxt "background color"
 msgid "Light"
 msgstr "Светлый"
 
-#: data/ui/menu.ui:89
+#: data/ui/menu.ui:91
 msgctxt "background color"
 msgid "Dark"
 msgstr "Тёмный"
 
-#: data/ui/menu.ui:95
+#: data/ui/menu.ui:97
 msgid "Theme"
 msgstr "Тема"
 
-#: data/ui/menu.ui:97
+#: data/ui/menu.ui:99
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
 msgstr "Постмодерн"
 
-#: data/ui/menu.ui:100
+#: data/ui/menu.ui:104
 msgctxt "mahjongg theme name"
 msgid "Smooth"
 msgstr "Сглаженная"
 
-#: data/ui/menu.ui:103
+#: data/ui/menu.ui:109
 msgctxt "mahjongg theme name"
 msgid "Educational"
 msgstr "Образовательная"
 
-#: data/ui/menu.ui:110
-msgid "_Keyboard Shortcuts"
-msgstr "_Комбинации клавиши"
-
-#: data/ui/menu.ui:114
+#: data/ui/menu.ui:118
 msgid "_Help"
 msgstr "_Справка"
 
-#: data/ui/menu.ui:118
+#: data/ui/menu.ui:122
 msgid "_About Mahjongg"
 msgstr "_О приложении"
 
-#: data/ui/score-dialog.ui:25
+#: data/ui/score-dialog.ui:31
+msgid "Game Completed 🎉"
+msgstr "Игра завершена 🎉"
+
+#: data/ui/score-dialog.ui:54
 msgid "No Scores"
 msgstr "Нет результатов"
 
-#: data/ui/score-dialog.ui:26
+#: data/ui/score-dialog.ui:55
 msgid "Finish a game to see scores"
 msgstr "Завершите игру, чтобы увидеть результаты"
 
-#: data/ui/score-dialog.ui:48
+#: data/ui/score-dialog.ui:77
 msgid "Player"
 msgstr "Игрок"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:84
 msgid "Time"
 msgstr "Время"
 
-#: data/ui/score-dialog.ui:62
+#: data/ui/score-dialog.ui:91
 msgid "Date"
 msgstr "Дата"
 
-#: data/ui/score-dialog.ui:118 src/gnome-mahjongg.vala:214
+#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
 msgid "_Quit"
 msgstr "_Завершить"
 
-#: data/ui/window.ui:21
+#: data/ui/window.ui:29
 msgid "Undo"
 msgstr "Отменить"
 
-#: data/ui/window.ui:28
+#: data/ui/window.ui:36
 msgid "Redo"
 msgstr "Вернуть"
 
-#: data/ui/window.ui:35
+#: data/ui/window.ui:43
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: data/ui/window.ui:48
+#: data/ui/window.ui:56
 msgid "Show Hint"
 msgstr "Показать подсказку"
 
-#: src/gnome-mahjongg.vala:24
+#: src/gnome-mahjongg.vala:16
 msgid "Print release version and exit"
 msgstr "Показать номер версии и выйти"
 
-#: src/gnome-mahjongg.vala:199
+#: src/gnome-mahjongg.vala:194
 msgid "No Moves Left"
 msgstr "Ходов не осталось"
 
-#: src/gnome-mahjongg.vala:201
+#: src/gnome-mahjongg.vala:196
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -354,59 +294,119 @@ msgstr ""
 "Вы можете отменить сделанные ходы и попытаться найти решение или перемешать "
 "оставшиеся кости."
 
-#: src/gnome-mahjongg.vala:202
+#: src/gnome-mahjongg.vala:197
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Вы можете отменить сделанные ходы и попытаться найти решение или начать "
 "новую игру."
 
-#: src/gnome-mahjongg.vala:206
-msgid "_Continue"
-msgstr "_Продолжить"
-
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:205
 msgid "_Reshuffle"
 msgstr "_Перемешать"
 
-#: src/gnome-mahjongg.vala:363
+#: src/gnome-mahjongg.vala:210
+msgid "_Continue"
+msgstr "_Продолжить"
+
+#: src/gnome-mahjongg.vala:318
 msgid "translator-credits"
 msgstr ""
 "Stas Solovey <whats_up@tut.by>, 2015-2018\n"
 "Ser82-png <asvmail.as@gmail.com>, 2022-2025"
 
-#: src/score-dialog.vala:311
+#: src/gnome-mahjongg.vala:320
+msgid "Layouts by"
+msgstr "Расклады"
+
+#: src/score-dialog.vala:96
+#, c-format
+msgid "Layout: %s"
+msgstr "Расклад: %s"
+
+#: src/score-dialog.vala:363
 msgid "Clear All Scores?"
 msgstr "Удалить все результаты?"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:364
 msgid "This will clear every score for every layout."
 msgstr "Это позволит обнулить все результаты для каждого расклада."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:368
 msgid "_Cancel"
 msgstr "_Отменить"
 
-#: src/score-dialog.vala:317
+#: src/score-dialog.vala:369
 msgid "Clear All"
 msgstr "Очистить все"
 
-#: src/window.vala:54
+#: src/window.vala:42
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Осталось ходов: %2u"
 
-#: src/window.vala:58
+#: src/window.vala:91
 msgid "Paused"
 msgstr "Пауза"
 
-#: src/window.vala:60
+#: src/window.vala:93
 msgid "Resume Game"
 msgstr "Продолжить игру"
 
-#: src/window.vala:65
+#: src/window.vala:99
 msgid "Pause Game"
 msgstr "Приостановить игру"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Playing"
+#~ msgstr "Игра"
+
+#~ msgctxt "shortcut window"
+#~ msgid "New Game"
+#~ msgstr "Новая игра"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Restart Game"
+#~ msgstr "Начать игру заново"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Pause Game"
+#~ msgstr "Приостановить игру"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Undo"
+#~ msgstr "Отменить"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Redo"
+#~ msgstr "Вернуть"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Hint"
+#~ msgstr "Показать подсказку"
+
+#~ msgctxt "shortcut window"
+#~ msgid "General"
+#~ msgstr "Общее"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Main Menu"
+#~ msgstr "Показать главное меню"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Keyboard Shortcuts"
+#~ msgstr "Показать комбинации клавиш"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Help"
+#~ msgstr "Показать справку"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Quit"
+#~ msgstr "Выход"
+
+#~ msgid "_Keyboard Shortcuts"
+#~ msgstr "_Комбинации клавиши"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
@@ -454,9 +454,6 @@ msgstr "Приостановить игру"
 
 #~ msgid "_Continue Playing"
 #~ msgstr "_Продолжить игру"
-
-#~ msgid "Layout: "
-#~ msgstr "Расклад: "
 
 #~ msgid "Do you want to start a new game with this map?"
 #~ msgstr "Хотите начать новую игру с этой картой?"
