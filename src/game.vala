@@ -58,6 +58,8 @@ public class Game {
     private uint hint_timeout;
     private uint hint_blink_counter;
 
+    private uint autoplay_end_game_timeout;
+
     private double clock_elapsed;
     private Timer? clock;
     private uint clock_timeout;
@@ -153,6 +155,15 @@ public class Game {
         }
     }
 
+    public bool all_tiles_unblocked {
+        get {
+            foreach (unowned var tile in tiles)
+                if (tile.visible && !tile_is_selectable (tile))
+                    return false;
+            return true;
+        }
+    }
+
     public Game (Map map) {
         this.map = map;
 
@@ -177,6 +188,7 @@ public class Game {
 
     public void destroy_timers () {
         remove_hint_timeout ();
+        remove_autoplay_end_game_timeout ();
         stop_clock ();
     }
 
@@ -525,6 +537,31 @@ public class Game {
         if (hint_tiles[1] != null)
             redraw_tile (hint_tiles[1]);
 
+        return true;
+    }
+
+    public void autoplay_end_game () {
+        if (!all_tiles_unblocked)
+            return;
+
+        autoplay_end_game_timeout = Timeout.add (500, autoplay_end_game_timeout_cb);
+        autoplay_end_game_timeout_cb ();
+    }
+
+    private void remove_autoplay_end_game_timeout () {
+        if (autoplay_end_game_timeout != 0)
+            Source.remove (autoplay_end_game_timeout);
+        autoplay_end_game_timeout = 0;
+    }
+
+    private bool autoplay_end_game_timeout_cb () {
+        if (moves_left == 0) {
+            remove_autoplay_end_game_timeout ();
+            return false;
+        }
+
+        var m = find_matches ()[0];
+        remove_pair (m.tile0, m.tile1);
         return true;
     }
 

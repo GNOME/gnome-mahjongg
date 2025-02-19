@@ -323,6 +323,10 @@ public class GameView : Gtk.Widget {
         /* Get the tile under the square */
         var tile = find_tile ((int) event_x, (int) event_y);
 
+        if (n_press == 2 && tile == null && game.all_tiles_unblocked) {
+            game.autoplay_end_game ();
+        }
+
         /* If not a valid tile then ignore the event */
         if (tile == null || !game.tile_is_selectable (tile))
             return;
