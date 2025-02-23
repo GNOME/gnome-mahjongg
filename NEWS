@@ -1,9 +1,25 @@
+47.2
+====
+
+* Fixed a regression making games needlessly difficult to solve
+
 48.beta.1
 =========
 
 * Fix compilation on some systems (cast sort callbacks to CompareDataFunc)
 * Select new theme name after theme name migration
 * Stop rounding 'time elapsed' value
+
+47.1
+====
+
+* Various optimizations for game initialization
+* Tweak background colors
+* Don't create new game when activating existing instance
+* Stop leaking game instances
+* Fix a memory leak in the Scores dialog
+* Stop using deprecated APIs
+* Translation updates
 
 48.beta
 =======
@@ -27,17 +43,6 @@
 * Fix a memory leak in the Scores dialog
 * Stop using deprecated APIs
 * Add SPDX license identifiers to all files
-* Translation updates
-
-47.1
-====
-
-* Various optimizations for game initialization
-* Tweak background colors
-* Don't create new game when activating existing instance
-* Stop leaking game instances
-* Fix a memory leak in the Scores dialog
-* Stop using deprecated APIs
 * Translation updates
 
 47.0
