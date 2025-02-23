@@ -1,3 +1,14 @@
+48.rc
+=====
+
+* On double-click, auto-play the end of the game if all tiles are unblocked (K Davis)
+* Only rotate layout on startup when random rotation is enabled
+* Avoid unnecessary loops for faster tile matching
+* Swap placement of Quit and Continue buttons
+* Add window title for completed game
+* Bundle icons not included with GTK
+* Translation updates
+
 47.2
 ====
 
