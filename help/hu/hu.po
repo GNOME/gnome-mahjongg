@@ -1,15 +1,15 @@
 # Hungarian translation for gnome-mahjongg.
-# Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024 Free Software Foundation, Inc.
+# Copyright (C) 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2021, 2022, 2023, 2024, 2025 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mahjongg help.
 #
 # László Ádám Kohajda <kla.kohi at gmail dot com>, 2012.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2013, 2014, 2015, 2016, 2017.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2018, 2021, 2022, 2023, 2024.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2018, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2024-04-29 21:03+0000\n"
-"PO-Revision-Date: 2024-05-19 11:03+0200\n"
+"POT-Creation-Date: 2025-02-12 22:27+0000\n"
+"PO-Revision-Date: 2025-03-05 21:20+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -25,7 +25,7 @@ msgid "translator-credits"
 msgstr ""
 "Kelemen Gábor <kelemeng at gnome dot hu>, 2014.\n"
 "Kohajda László Ádám <kla.kohi at gmail dot com>, 2012.\n"
-"Úr Balázs <ur.balazs at fsf dot hu>, 2021, 2023, 2024."
+"Úr Balázs <ur.balazs at fsf dot hu>, 2021, 2023, 2024, 2025."
 
 #. (itstool) path: credit/name
 #: C/gameplay.page:10 C/hints.page:11 C/index.page:13 C/moves.page:11
@@ -70,9 +70,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/gameplay.page:34
-#| msgid ""
-#| "There are many different <link xref=\"map\">tile layouts</link> to choose "
-#| "from."
 msgid "There are many different tile layouts to choose from."
 msgstr "Több különböző kőelrendezés közül lehet választani."
 
@@ -131,10 +128,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/hints.page:37
-#| msgid ""
-#| "<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">�</"
-#| "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
-#| "key></keyseq>."
 msgid ""
 "<gui>Hint</gui> can be accessed by pressing the <gui style=\"button\">💡</"
 "gui> button in the header bar, or pressing <keyseq><key>Ctrl</key><key>H</"
@@ -338,6 +331,33 @@ msgstr ""
 "láthatja, hogy mikor fognak elfogyni, illetve észrevette-e az összes "
 "lehetséges lépést."
 
+#. (itstool) path: page/p
+#: C/moves.page:30
+#| msgid "You can pause your current game using one of the following methods:"
+msgid "You can undo or redo a move using one of the following methods:"
+msgstr ""
+"Visszavonhat vagy újra végrehajthat egy lépést a következő módszerek"
+" bármelyikének használatával:"
+
+#. (itstool) path: item/p
+#: C/moves.page:34
+#| msgid "The <gui style=\"button\">⏸︎</gui> button in the header bar."
+msgid ""
+"The <gui style=\"button\">Undo</gui> and <gui style=\"button\">Redo</gui> "
+"buttons in the header bar."
+msgstr ""
+"A fejlécsávon lévő <gui style=\"button\">Visszavonás</gui> és <gui"
+" style=\"button\">Újra</gui> gombok."
+
+#. (itstool) path: item/p
+#: C/moves.page:37
+msgid ""
+"<keyseq><key>Ctrl</key><key>Z</key></keyseq> and <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> on your keyboard."
+msgstr ""
+"A <keyseq><key>Ctrl</key><key>Z</key></keyseq> és <keyseq><key>Ctrl</key><key"
+">Shift</key><key>Z</key></keyseq> billentyűkombináció."
+
 #. (itstool) path: page/title
 #: C/pause.page:28
 msgid "Pausing your game"
@@ -351,17 +371,21 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/pause.page:34
-#| msgid "The <_:media-1/> button in the header bar."
 msgid "The <gui style=\"button\">⏸︎</gui> button in the header bar."
-msgstr "A <gui style=\"button\">⏸︎</gui> gomb a fejlécsávon."
+msgstr "A fejlécsávon lévő <gui style=\"button\">⏸︎</gui> gomb."
 
 #. (itstool) path: item/p
 #: C/pause.page:37
+#| msgid ""
+#| "The <key>Pause</key> key on your keyboard. Not all keyboards have this "
+#| "key."
 msgid ""
-"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+"<keyseq><key>Ctrl</key><key>P</key></keyseq> or the <key>Pause</key> key on "
+"your keyboard. Not all keyboards have this key."
 msgstr ""
-"A <key>Pause</key> gomb a billentyűzetén. Nem mindegyik billentyűzet "
-"tartalmazza."
+"A <keyseq><key>Ctrl</key><key>P</key></keyseq> billentyűkombináció vagy a <"
+"key>Pause</key> billentyű a billentyűzeten. Nem mindegyik billentyűzet"
+" rendelkezik ilyen billentyűvel."
 
 #. (itstool) path: page/title
 #: C/rules.page:25
@@ -443,16 +467,12 @@ msgstr ""
 
 #. (itstool) path: note/p
 #: C/scoring.page:34
-#| msgid ""
-#| "The scores are stored on a per <link xref=\"map\">map</link> basis. You "
-#| "can view the highscores for a particular map by selecting it from the "
-#| "drop-down menu."
 msgid ""
 "The scores are stored on a per map basis. You can view the highscores for a "
 "particular map by selecting it from the drop-down menu."
 msgstr ""
-"A pontszámok térképenként vannak tárolva. Eredményei megtekinthetőek egy"
-" adott térképre vonatkozóan a lenyíló menü segítségével."
+"A pontszámok térképenként vannak tárolva. Eredményei megtekinthetőek egy "
+"adott térképre vonatkozóan a lenyíló menü segítségével."
 
 #. (itstool) path: credit/years
 #: C/strategy.page:11
@@ -466,18 +486,14 @@ msgstr "Stratégia"
 
 #. (itstool) path: page/p
 #: C/strategy.page:23
-#| msgid ""
-#| "Since each <link xref=\"map\">tile layout</link> requires a different "
-#| "approach, there is no one universal strategy. However, there are some "
-#| "strategy tips to keep in mind while you play:"
 msgid ""
 "Since each tile layout requires a different approach, there is no one "
 "universal strategy. However, there are some strategy tips to keep in mind "
 "while you play:"
 msgstr ""
-"Mivel minden egyes kőelrendezés különböző megközelítést igényel, ezért"
-" nincsen univerzális stratégia. Azonban van néhány stratégiai javaslat,"
-" amelyet nem árt fejben tartani játék közben:"
+"Mivel minden egyes kőelrendezés különböző megközelítést igényel, ezért "
+"nincsen univerzális stratégia. Azonban van néhány stratégiai javaslat, "
+"amelyet nem árt fejben tartani játék közben:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:28
@@ -511,3 +527,4 @@ msgstr ""
 "Mivel a <link xref=\"scoring\">pontozás</link> azon múlik, hogy milyen "
 "gyorsan végez a játékkal, ezért az idő a legfontosabb tényező. Ennek "
 "következtében fontos, hogy gyors legyen."
+
