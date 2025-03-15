@@ -51,7 +51,23 @@
     <control>touch</control>
   </supports>
   <releases>
-    <release version="48.rc" date="2025-02-23" type="development"/>
+    <release version="48.0" date="2025-03-16">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>New sequential and random layout rotation modes</li>
+          <li>On double-click, auto-play the end of the game if all tiles are unblocked</li>
+          <li>Tile rendering uses the GPU instead of CPU</li>
+          <li>Sharper tile textures on high resolution displays</li>
+          <li>Smaller spacing around the board on mobile screens</li>
+          <li>Ctrl-R keyboard shortcut for restarting game</li>
+          <li>Column sorting in the Scores dialog</li>
+          <li>Animations when starting a new game and pausing a game</li>
+          <li>Performance optimizations for tile matching</li>
+          <li>Small visual changes in the Scores/Game Finished dialog</li>
+        </ul>
+      </description>
+    </release>
     <release version="47.2" date="2025-02-09">
       <description>
         <p>This release contains the following improvements:</p>
