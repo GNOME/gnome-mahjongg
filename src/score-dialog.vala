@@ -82,6 +82,7 @@ public class ScoreDialog : Adw.Dialog {
         if (history.entries.length () > 0) {
             content_stack.visible_child_name = "scores";
             clear_scores_button.visible = true;
+            header_stack.visible = true;
             layout_button.visible = true;
         }
 

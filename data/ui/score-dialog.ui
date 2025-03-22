@@ -12,6 +12,7 @@
           <object class="AdwHeaderBar" id="header_bar">
             <property name="title-widget">
               <object class="GtkStack" id="header_stack">
+                <property name="visible">False</property>
                 <child>
                   <object class="GtkStackPage">
                     <property name="name">layout</property>
