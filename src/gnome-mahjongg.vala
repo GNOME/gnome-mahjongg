@@ -183,10 +183,10 @@ public class Mahjongg : Adw.Application {
             var date = new DateTime.now_local ();
             var duration = (uint) game_view.game.elapsed;
             var player = Environment.get_real_name ();
-            var entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
-            history.add (entry);
+            var completed_entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
+            history.add (completed_entry);
             history.save ();
-            show_scores (entry);
+            show_scores (completed_entry);
         }
         else if (!game_view.game.can_move) {
             var can_shuffle = game_view.game.can_shuffle;
@@ -226,8 +226,8 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private void show_scores (HistoryEntry? selected_entry = null) {
-        new ScoreDialog (history, selected_entry, maps).present (window);
+    private void show_scores (HistoryEntry? completed_entry = null) {
+        new ScoreDialog (history, completed_entry, maps).present (window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {

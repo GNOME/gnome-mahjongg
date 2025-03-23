@@ -44,7 +44,7 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Gtk.Button new_game_button;
 
     private History history;
-    private HistoryEntry? selected_entry;
+    private HistoryEntry? completed_entry;
     private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private unowned List<Map> maps;
@@ -71,10 +71,10 @@ public class ScoreDialog : Adw.Dialog {
         }
     }
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, List<Map> maps) {
+    public ScoreDialog (History history, HistoryEntry? completed_entry = null, List<Map> maps) {
         this.maps = maps;
         this.history = history;
-        this.selected_entry = selected_entry;
+        this.completed_entry = completed_entry;
 
         set_up_score_view ();
         set_up_layout_menu ();
@@ -85,7 +85,7 @@ public class ScoreDialog : Adw.Dialog {
             header_stack.visible = true;
         }
 
-        if (selected_entry != null) {
+        if (completed_entry != null) {
             set_can_close (false);
             header_bar.show_start_title_buttons = false;
             header_bar.show_end_title_buttons = false;
@@ -93,7 +93,7 @@ public class ScoreDialog : Adw.Dialog {
             toolbar_view.reveal_bottom_bars = true;
 
             header_stack.visible_child_name = "title";
-            title_widget.subtitle = _("Layout: %s").printf (get_map_display_name (selected_entry.name));
+            title_widget.subtitle = _("Layout: %s").printf (get_map_display_name (completed_entry.name));
 
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
@@ -126,7 +126,7 @@ public class ScoreDialog : Adw.Dialog {
             entries += entry.name;
         };
 
-        unowned var visible_entry = selected_entry;
+        unowned var visible_entry = completed_entry;
         if (visible_entry == null) {
             unowned var entry = history.entries.first ();
 
@@ -242,7 +242,7 @@ public class ScoreDialog : Adw.Dialog {
             unowned var stack = list_item.child as Gtk.Stack;
             unowned var entry = list_item.item as HistoryEntry;
 
-            if (entry == selected_entry) {
+            if (entry == completed_entry) {
                 stack.visible_child_name = "entry";
                 unowned var text_entry = stack.visible_child as Gtk.Entry;
                 text_entry.text = entry.player;
@@ -281,7 +281,7 @@ public class ScoreDialog : Adw.Dialog {
             var time_label = "%us".printf (entry.duration);
             if (entry.duration >= 60)
                 time_label = "%um %us".printf (entry.duration / 60, entry.duration % 60);
-            if (entry == selected_entry)
+            if (entry == completed_entry)
                 label.add_css_class ("heading");
 
             label.text = time_label;
@@ -308,7 +308,7 @@ public class ScoreDialog : Adw.Dialog {
             unowned var entry = list_item.item as HistoryEntry;
 
             var date_label = entry.date.format ("%x");
-            if (entry == selected_entry)
+            if (entry == completed_entry)
                 label.add_css_class ("heading");
 
             label.label = date_label;
@@ -342,7 +342,7 @@ public class ScoreDialog : Adw.Dialog {
 
     private void score_view_focus_cb () {
         uint position;
-        var found_item = score_model.find (selected_entry, out position);
+        var found_item = score_model.find (completed_entry, out position);
 
         if (!found_item)
             return;
@@ -377,7 +377,7 @@ public class ScoreDialog : Adw.Dialog {
             layout_button.menu_model = null;
             score_model.remove_all ();
 
-            selected_entry = null;
+            completed_entry = null;
             selected_item = null;
 
             history.clear ();
@@ -388,7 +388,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void closed_cb () {
-        if (selected_entry != null)
+        if (completed_entry != null)
             history.save ();
     }
 }
