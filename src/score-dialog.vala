@@ -83,7 +83,6 @@ public class ScoreDialog : Adw.Dialog {
             content_stack.visible_child_name = "scores";
             clear_scores_button.visible = true;
             header_stack.visible = true;
-            layout_button.visible = true;
         }
 
         if (selected_entry != null) {
@@ -100,8 +99,6 @@ public class ScoreDialog : Adw.Dialog {
             controller.enter.connect (score_view_focus_cb);
             score_view.add_controller (controller);
             focus_widget = score_view;
-        } else {
-            header_stack.visible_child_name = "layout";
         }
 
         clear_scores_button.clicked.connect (clear_scores_cb);
@@ -376,7 +373,7 @@ public class ScoreDialog : Adw.Dialog {
             toolbar_view.reveal_bottom_bars = false;
             content_stack.visible_child_name = "no-scores";
             clear_scores_button.visible = false;
-            layout_button.visible = false;
+            header_stack.visible = false;
             layout_button.menu_model = null;
             score_model.remove_all ();
 

@@ -19,7 +19,6 @@
                     <property name="child">
                       <object class="GtkMenuButton" id="layout_button">
                         <property name="halign">center</property>
-                        <property name="visible">False</property>
                       </object>
                     </property>
                   </object>
