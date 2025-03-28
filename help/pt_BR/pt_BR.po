@@ -2,14 +2,14 @@
 # Copyright (C) 2020 gnome-mahjongg's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Henrique Roberto Gattermann Mittelstaedt <henrique.roberto97@gmail.com>, 2020, 2024.
+# Álvaro Burns <>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
-"POT-Creation-Date: 2024-11-07 20:19+0000\n"
-"PO-Revision-Date: 2024-12-11 06:42-0300\n"
-"Last-Translator: Henrique Roberto Gattermann Mittelstaedt <henrique."
-"roberto97@gmail.com>\n"
+"POT-Creation-Date: 2025-03-15 23:16+0000\n"
+"PO-Revision-Date: 2025-03-20 18:21-0300\n"
+"Last-Translator: Álvaro Burns <>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -335,6 +335,30 @@ msgstr ""
 "diferentes que podem ser feitos. Ele pode te ajudar a ver quão longe você "
 "está de ficar sem movimentos, e se você já viu todos os movimentos possíveis."
 
+#. (itstool) path: page/p
+#: C/moves.page:30
+msgid "You can undo or redo a move using one of the following methods:"
+msgstr ""
+"Você pode desfazer ou refazer um movimento usando um dos seguintes métodos:"
+
+#. (itstool) path: item/p
+#: C/moves.page:34
+msgid ""
+"The <gui style=\"button\">Undo</gui> and <gui style=\"button\">Redo</gui> "
+"buttons in the header bar."
+msgstr ""
+"Os botões <gui style=\"button\">Desfazer</gui> e <gui "
+"style=\"button\">Refazer</gui> na barra superior."
+
+#. (itstool) path: item/p
+#: C/moves.page:37
+msgid ""
+"<keyseq><key>Ctrl</key><key>Z</key></keyseq> and <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> on your keyboard."
+msgstr ""
+"<keyseq><key>Ctrl</key><key>Z</key></keyseq> e <keyseq><key>Ctrl</"
+"key><key>Shift</key><key>Z</key></keyseq> no seu teclado."
+
 #. (itstool) path: page/title
 #: C/pause.page:28
 msgid "Pausing your game"
@@ -353,10 +377,11 @@ msgstr "O botão <gui style=\"button\">⏸︎</gui> na barra superior."
 #. (itstool) path: item/p
 #: C/pause.page:37
 msgid ""
-"The <key>Pause</key> key on your keyboard. Not all keyboards have this key."
+"<keyseq><key>Ctrl</key><key>P</key></keyseq> or the <key>Pause</key> key on "
+"your keyboard. Not all keyboards have this key."
 msgstr ""
-"A tecla <key>Pause</key> no seu teclado. Nem todos os teclados possuem essa "
-"tecla."
+"<keyseq><key>Ctrl</key><key>P</key></keyseq> ou a tecla <key>Pause</key> no "
+"seu teclado. Nem todos os teclados possuem essa tecla."
 
 #. (itstool) path: page/title
 #: C/rules.page:25
