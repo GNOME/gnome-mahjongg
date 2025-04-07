@@ -45,20 +45,20 @@
 
   <section id="hints-video">
     <title>Video demonstration</title>
-    <media its:translate="no" type="video" width="500" mime="application/ogg" src="figures/hints-video.ogv">
+    <media its:translate="no" type="video" width="650" mime="video/webm" src="figures/hints-video.webm">
     <tt:tt its:translate="yes" xmlns:tt="http://www.w3.org/ns/ttml">
      <tt:body>
-      <tt:div begin="1s" end="5s">
+      <tt:div begin="1s" end="6s">
        <tt:p>
          You can use <gui>Hints</gui> to help you find identical tiles.
        </tt:p>
       </tt:div>
-      <tt:div begin="5s" end="10s">
+      <tt:div begin="6s" end="12s">
        <tt:p>
          Press <keyseq><key>Ctrl</key><key>H</key></keyseq>.
        </tt:p>
       </tt:div>
-      <tt:div begin="10s" end="14s">
+      <tt:div begin="12s" end="18s">
        <tt:p>
          There is a 30 s penalty for each use of this option.
        </tt:p>

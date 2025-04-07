@@ -49,8 +49,8 @@
   <section id="usage-video">
   <title>Video demonstration</title>
 
-  <media its:translate="no" type="video" mime="application/ogg"
-  src="figures/mahjongg-video.ogv"><p its:translate="yes">Video of gameplay</p></media>
+  <media its:translate="no" type="video" width="650" mime="video/webm"
+  src="figures/mahjongg-video.webm"><p its:translate="yes">Video of gameplay</p></media>
 
   </section>
 </page>
