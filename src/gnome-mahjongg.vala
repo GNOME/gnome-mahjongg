@@ -200,13 +200,11 @@ public class Mahjongg : Adw.Application {
             };
             dialog.add_response ("quit", _("_Quit"));
             dialog.set_response_appearance ("quit", Adw.ResponseAppearance.DESTRUCTIVE);
+            dialog.add_response ("new_game", _("_New Game"));
 
-            if (can_shuffle) {
+            if (can_shuffle)
                 dialog.add_response ("reshuffle", _("_Reshuffle"));
-            }
-            else {
-                dialog.add_response ("new_game", _("_New Game"));
-            };
+
             dialog.add_response ("continue", _("_Continue"));
 
             var resp_id = yield dialog.choose (window, null);
