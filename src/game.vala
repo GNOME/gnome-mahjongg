@@ -4,7 +4,6 @@
 
 public class Tile {
     public int number = -1;
-    public int pair = -1;
     public bool visible = true;
     public int move_number;
     public Slot slot;
@@ -18,24 +17,13 @@ public class Tile {
 }
 
 public static bool tiles_match (Tile a, Tile b) {
-    return a.pair == b.pair;
+    var tile_face_a = a.number / 4;
+    var tile_face_b = b.number / 4;
+    return tile_face_a == tile_face_b;
 }
 
 private static int compare_tiles (Tile a, Tile b) {
     return compare_slots (a.slot, b.slot);
-}
-
-private static bool switch_tiles (Tile a, Tile b) {
-    if (!a.visible || !b.visible)
-        return false;
-
-    var number = a.number;
-    var pair = a.pair;
-    a.number = b.number;
-    b.number = number;
-    a.pair = b.pair;
-    b.pair = pair;
-    return true;
 }
 
 public class Match {
@@ -269,19 +257,50 @@ public class Game {
         if (!can_shuffle)
             return;
 
-        /* Reset moves and move numbers */
+        int[] removed_tile_faces = null;
+        int[] pair_numbers = null;
+        Tile[] tiles_to_shuffle = null;
+
+        /* Retrieve tile pair numbers of remaining tiles, and blank the tiles */
         move_number = 1;
-        foreach (unowned var tile in tiles)
+
+        foreach (unowned var tile in tiles) {
             tile.move_number = 0;
 
-        /* Fisher Yates Shuffle */
-        var n = tiles.length ();
-        do {
-            for (var i = n - 1; i > 0; i--) {
-                var j = Random.int_range (0, (int) i + 1);
-                switch_tiles (tiles.nth_data (j), tiles.nth_data (i));
+            if (tile.visible) {
+                tiles_to_shuffle += tile;
+                continue;
             }
-        } while (!can_move);
+
+            var tile_face = tile.number / 4;
+            if (!(tile_face in removed_tile_faces))
+                removed_tile_faces += tile_face;
+        }
+
+        foreach (unowned var tile in tiles_to_shuffle) {
+            var tile_face = tile.number / 4;
+            var pair_number = tile.number - (tile.number % 2);
+            tile.number = -1;
+
+            /* A tile pair with the current face was previously removed. Since two
+             * tile pairs share the same face, there is a possibility that a tile
+             * from each pair were matched, leaving two "incomplete" pairs behind.
+             * Ensure that the two remaining tiles use a single pair number.
+             */
+            if (tile_face in removed_tile_faces)
+                pair_number = tile_face * 4;
+
+            if (!(pair_number in pair_numbers))
+                pair_numbers += pair_number;
+        }
+
+        /* Choose tile pairs from remaining tiles until we have a solvable board */
+        pair_numbers = shuffle_pair_numbers (pair_numbers);
+        choose_tile_pairs (pair_numbers);
+
+        /* Make remaining tiles visible again */
+        foreach (unowned var tile in tiles_to_shuffle)
+            tile.visible = true;
 
         moved ();
         redraw_all_tiles ();
@@ -395,28 +414,32 @@ public class Game {
 
     private void generate_game () {
         var n_pairs = (int) tiles.length () / 2;
-        var tile_numbers = new int[n_pairs];
+        var pair_numbers = new int[n_pairs];
 
-        /* Create tile numbers */
+        /* Create tile pair numbers */
         for (var i = 0; i < n_pairs; i++)
-            tile_numbers[i] = i * 2;
-
-        /* Shuffle tile numbers */
-        for (var i = 0; i < n_pairs; i++) {
-            var n = Random.int_range (i, n_pairs);
-            var tile_number = tile_numbers[i];
-            tile_numbers[i] = tile_numbers[n];
-            tile_numbers[n] = tile_number;
-        }
+            pair_numbers[i] = i * 2;
 
         /* Choose tile pairs until we have a solvable board */
-        choose_tile_pairs (tile_numbers);
+        pair_numbers = shuffle_pair_numbers (pair_numbers);
+        choose_tile_pairs (pair_numbers);
         move_number = 1;
     }
 
-    private bool choose_tile_pairs (int[] tile_numbers, int depth = 0) {
+    private unowned int[] shuffle_pair_numbers (int[] pair_numbers) {
+        /* Fisher-Yates Shuffle */
+        for (var i = 0; i < pair_numbers.length; i++) {
+            var n = Random.int_range (i, pair_numbers.length);
+            var tile_number = pair_numbers[i];
+            pair_numbers[i] = pair_numbers[n];
+            pair_numbers[n] = tile_number;
+        }
+        return pair_numbers;
+    }
+
+    private bool choose_tile_pairs (int[] pair_numbers, int depth = 0) {
         /* All tile pairs chosen */
-        if (depth == tiles.length () / 2)
+        if (depth == pair_numbers.length)
             return true;
 
         var matches = find_matches ();
@@ -428,7 +451,7 @@ public class Game {
 
         var n = Random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
-            var number = tile_numbers[depth];
+            var number = pair_numbers[depth];
             unowned var match = matches[(n + i) % n_matches];
             unowned var tile0 = match.tile0;
             unowned var tile1 = match.tile1;
@@ -436,11 +459,10 @@ public class Game {
             tile0.visible = false;
             tile1.visible = false;
 
-            if (choose_tile_pairs (tile_numbers, depth + 1)) {
+            if (choose_tile_pairs (pair_numbers, depth + 1)) {
                 /* Assign tile face for pair */
                 tile0.number = number;
                 tile1.number = number + 1;
-                tile0.pair = tile1.pair = number / 4;
                 return true;
             }
 
