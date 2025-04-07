@@ -58,6 +58,9 @@ public class Mahjongg : Adw.Application {
 
         settings = new Settings (application_id);
         settings.delay ();
+    }
+
+    private void create_window () {
         load_maps ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
@@ -115,11 +118,16 @@ public class Mahjongg : Adw.Application {
     }
 
     public override void activate () {
+        if (window == null)
+            create_window ();
+
         window.present ();
     }
 
     public override void shutdown () {
-        game_view.game.destroy_timers ();
+        if (game_view != null)
+            game_view.game.destroy_timers ();
+
         settings.apply ();
         base.shutdown ();
     }
