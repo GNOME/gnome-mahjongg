@@ -40,6 +40,8 @@ public class Game {
     public Map map;
     public List<Tile> tiles;
 
+    private Rand random;
+    private int32 seed;
     private int move_number;
 
     private Tile? hint_tiles[2];
@@ -152,8 +154,9 @@ public class Game {
         }
     }
 
-    public Game (Map map) {
+    public Game (Map map, int32 seed) {
         this.map = map;
+        this.seed = seed;
 
         /* Create blank tiles in the locations required in the map */
         create_tiles ();
@@ -168,10 +171,6 @@ public class Game {
          * Once we have a path to victory, assign random tile faces to all pairs.
          */
         generate_game ();
-
-        /* The algorithm has "finished" the game. Make all tiles visible again for
-         * the player. */
-        reset ();
     }
 
     public void destroy_timers () {
@@ -357,16 +356,12 @@ public class Game {
         set_hint (match.tile0, match.tile1);
     }
 
-    public void reset () {
-        reset_clock ();
-        move_number = 1;
-        selected_tile = null;
-        reset_hint ();
+    public void restart () {
         foreach (unowned var tile in tiles) {
+            tile.number = -1;
             tile.visible = true;
-            tile.move_number = 0;
         }
-        redraw_all_tiles ();
+        generate_game ();
     }
 
     private void create_tiles () {
@@ -416,20 +411,34 @@ public class Game {
         var n_pairs = (int) tiles.length () / 2;
         var pair_numbers = new int[n_pairs];
 
+        /* Reset game */
+        reset_clock ();
+        move_number = 1;
+        selected_tile = null;
+        reset_hint ();
+
         /* Create tile pair numbers */
         for (var i = 0; i < n_pairs; i++)
             pair_numbers[i] = i * 2;
 
         /* Choose tile pairs until we have a solvable board */
+        random = new Rand.with_seed (seed);
         pair_numbers = shuffle_pair_numbers (pair_numbers);
         choose_tile_pairs (pair_numbers);
-        move_number = 1;
+
+        /* The algorithm has "finished" the game. Make all tiles visible again for
+         * the player. */
+        foreach (unowned var tile in tiles) {
+            tile.visible = true;
+            tile.move_number = 0;
+        }
+        redraw_all_tiles ();
     }
 
     private unowned int[] shuffle_pair_numbers (int[] pair_numbers) {
         /* Fisher-Yates Shuffle */
         for (var i = 0; i < pair_numbers.length; i++) {
-            var n = Random.int_range (i, pair_numbers.length);
+            var n = random.int_range (i, pair_numbers.length);
             var tile_number = pair_numbers[i];
             pair_numbers[i] = pair_numbers[n];
             pair_numbers[n] = tile_number;
@@ -449,7 +458,7 @@ public class Game {
         if (n_matches == 0)
             return false;
 
-        var n = Random.int_range (0, (int) n_matches);
+        var n = random.int_range (0, (int) n_matches);
         for (var i = 0; i < n_matches; i++) {
             var number = pair_numbers[depth];
             unowned var match = matches[(n + i) % n_matches];

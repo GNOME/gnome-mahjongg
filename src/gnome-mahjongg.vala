@@ -372,7 +372,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void restart_game () {
-        game_view.game.reset ();
+        game_view.game.restart ();
         if (game_view.game.paused)
             pause_cb ();
         update_ui ();
@@ -443,7 +443,8 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     private void new_game (bool rotate_map = true) {
         new_game_view (rotate_map);
 
-        game_view.game = new Game (get_next_map (rotate_map));
+        var seed = Random.int_range (0, int32.MAX);
+        game_view.game = new Game (get_next_map (rotate_map), seed);
         game_view.game.attempt_move.connect (attempt_move_cb);
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
