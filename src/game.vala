@@ -545,6 +545,9 @@ public class Game {
         hint_timeout = Timeout.add (250, hint_timeout_cb);
         hint_timeout_cb ();
 
+        if (inspecting)
+            return;
+
         /* 30s penalty */
         start_clock ();
         clock_elapsed += 30.0;
