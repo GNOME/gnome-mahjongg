@@ -198,7 +198,7 @@ public class Mahjongg : Adw.Application {
             history.add (completed_entry);
             history.save ();
             game_view.game.inspecting = true;
-            show_scores (completed_entry);
+            show_scores (completed_entry.name, completed_entry);
         }
         else if (!game_view.game.can_move) {
             var can_shuffle = game_view.game.can_shuffle;
@@ -236,8 +236,8 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private void show_scores (HistoryEntry? completed_entry = null) {
-        new ScoreDialog (history, completed_entry, maps).present (window);
+    private void show_scores (string selected_layout = "", HistoryEntry? completed_entry = null) {
+        new ScoreDialog (history, maps, selected_layout, completed_entry).present (window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {
@@ -347,7 +347,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void scores_cb () {
-        show_scores ();
+        show_scores (game_view.game.map.score_name);
     }
 
     private void new_game_cb () {

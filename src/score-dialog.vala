@@ -45,6 +45,7 @@ public class ScoreDialog : Adw.Dialog {
     private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private unowned List<Map> maps;
+    private string[] layout_names;
 
     private const ActionEntry[] ACTION_ENTRIES = {
         { "layout", null, "s", "''", set_map_cb }
@@ -64,23 +65,25 @@ public class ScoreDialog : Adw.Dialog {
                 if (entry.name == value)
                     score_model.append (entry);
             }
-            score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
+
+            if (score_model.n_items > 0) {
+                content_stack.visible_child_name = "scores";
+                score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
+                return;
+            }
+            content_stack.visible_child_name = "no-scores";
         }
     }
 
-    public ScoreDialog (History history, HistoryEntry? completed_entry = null, List<Map> maps) {
+    public ScoreDialog (History history, List<Map> maps, string selected_layout = "",
+                        HistoryEntry? completed_entry = null) {
         this.maps = maps;
         this.history = history;
         this.completed_entry = completed_entry;
 
         set_up_score_view ();
-        set_up_layout_menu ();
-
-        if (history.entries.length () > 0) {
-            content_stack.visible_child_name = "scores";
-            clear_scores_button.visible = true;
-            header_stack.visible = true;
-        }
+        set_up_layout_menu (selected_layout);
+        clear_scores_button.sensitive = history.entries.length () > 0;
 
         if (completed_entry != null) {
             clear_scores_button.visible = false;
@@ -99,7 +102,19 @@ public class ScoreDialog : Adw.Dialog {
         closed.connect (closed_cb);
     }
 
-    private void set_up_layout_menu () {
+    private void add_layout (Menu menu, string layout_name) {
+        if (layout_name in layout_names)
+            return;
+
+        var display_name = get_map_display_name (layout_name);
+        var menu_item = new MenuItem (display_name, null);
+        menu_item.set_action_and_target_value ("scores.layout", new Variant.string (layout_name));
+
+        menu.append_item (menu_item);
+        layout_names += layout_name;
+    }
+
+    private void set_up_layout_menu (string selected_layout) {
         var action_group = new SimpleActionGroup ();
         action_group.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("scores", action_group);
@@ -107,32 +122,20 @@ public class ScoreDialog : Adw.Dialog {
         var menu = new Menu ();
         layout_button.menu_model = menu;
 
-        string[] entries = {};
-        foreach (unowned var entry in history.entries) {
-            if (entry.name in entries)
-                continue;
+        foreach (unowned var map in maps)
+            add_layout (menu, map.score_name);
 
-            var display_name = get_map_display_name (entry.name);
-            var menu_item = new MenuItem (display_name, null);
-            menu_item.set_action_and_target_value ("scores.layout", new Variant.string (entry.name));
+        foreach (unowned var entry in history.entries)
+            add_layout (menu, entry.name);
 
-            menu.append_item (menu_item);
-            entries += entry.name;
-        };
-
-        unowned var visible_entry = completed_entry;
-        if (visible_entry == null) {
-            unowned var entry = history.entries.first ();
-
-            if (entry == null)
-                return;
-
-            visible_entry = entry.data;
-        }
+        if (completed_entry != null)
+            selected_layout = completed_entry.name;
+        else if (selected_layout == "")
+            selected_layout = maps.first ().data.score_name;
 
         unowned var action = action_group.lookup_action ("layout") as SimpleAction;
-        action.set_state (new Variant.string (visible_entry.name));
-        score_map = visible_entry.name;
+        action.set_state (new Variant.string (selected_layout));
+        score_map = selected_layout;
     }
 
     private void set_up_score_view () {
@@ -366,9 +369,7 @@ public class ScoreDialog : Adw.Dialog {
         case "clear":
             toolbar_view.reveal_bottom_bars = false;
             content_stack.visible_child_name = "no-scores";
-            clear_scores_button.visible = false;
-            header_stack.visible = false;
-            layout_button.menu_model = null;
+            clear_scores_button.sensitive = false;
             score_model.remove_all ();
 
             completed_entry = null;
