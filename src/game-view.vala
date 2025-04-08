@@ -315,7 +315,7 @@ public class GameView : Gtk.Widget {
         if (game == null)
             return;
 
-        var click_blocked = !game.attempt_move () || game.paused;
+        var click_blocked = game.inspecting || !game.attempt_move () || game.paused;
 
         if (click_blocked)
             return;

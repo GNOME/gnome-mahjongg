@@ -9,7 +9,7 @@
       <object class="AdwToolbarView" id="toolbar_view">
         <property name="reveal-bottom-bars">False</property>
         <child type="top">
-          <object class="AdwHeaderBar" id="header_bar">
+          <object class="AdwHeaderBar">
             <property name="title-widget">
               <object class="GtkStack" id="header_stack">
                 <property name="visible">False</property>

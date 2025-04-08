@@ -39,6 +39,7 @@ public class Match {
 public class Game {
     public Map map;
     public List<Tile> tiles;
+    public bool inspecting;
 
     private Rand random;
     private int32 seed;
@@ -415,6 +416,7 @@ public class Game {
         reset_clock ();
         move_number = 1;
         selected_tile = null;
+        inspecting = false;
         reset_hint ();
 
         /* Create tile pair numbers */

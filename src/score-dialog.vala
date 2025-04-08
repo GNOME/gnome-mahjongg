@@ -8,9 +8,6 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Adw.ToolbarView toolbar_view;
 
     [GtkChild]
-    private unowned Adw.HeaderBar header_bar;
-
-    [GtkChild]
     private unowned Gtk.Button clear_scores_button;
 
     [GtkChild]
@@ -86,9 +83,6 @@ public class ScoreDialog : Adw.Dialog {
         }
 
         if (completed_entry != null) {
-            set_can_close (false);
-            header_bar.show_start_title_buttons = false;
-            header_bar.show_end_title_buttons = false;
             clear_scores_button.visible = false;
             toolbar_view.reveal_bottom_bars = true;
 

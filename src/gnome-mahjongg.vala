@@ -153,7 +153,7 @@ public class Mahjongg : Adw.Application {
         unowned var undo_action = lookup_action ("undo") as SimpleAction;
         unowned var redo_action = lookup_action ("redo") as SimpleAction;
 
-        pause_action.set_enabled (game_view.game.started);
+        pause_action.set_enabled (game_view.game.started && !game_view.game.inspecting);
 
         if (game_view.game.paused) {
             hint_action.set_enabled (false);
@@ -187,6 +187,9 @@ public class Mahjongg : Adw.Application {
     private async void moved_cb () {
         update_ui ();
 
+        if (game_view.game.inspecting)
+            return;
+
         if (game_view.game.complete) {
             var date = new DateTime.now_local ();
             var duration = (uint) game_view.game.elapsed;
@@ -194,6 +197,7 @@ public class Mahjongg : Adw.Application {
             var completed_entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
             history.add (completed_entry);
             history.save ();
+            game_view.game.inspecting = true;
             show_scores (completed_entry);
         }
         else if (!game_view.game.can_move) {
