@@ -46,6 +46,8 @@ public class Game {
     private int move_number;
 
     private Tile? hint_tiles[2];
+    private Match[] hint_matches;
+    private int hint_match_index;
     private uint hint_timeout;
     private uint hint_blink_counter;
 
@@ -96,9 +98,13 @@ public class Game {
         set {
             if (_selected_tile != null)
                 redraw_tile (_selected_tile);
+
             _selected_tile = value;
             if (value != null)
                 redraw_tile (value);
+
+            /* Hint matches can change depending on the selected tile. Reset them. */
+            hint_matches = null;
         }
     }
 
@@ -346,14 +352,27 @@ public class Game {
     }
 
     public void show_hint () {
-        var matches = find_matches_for_tile (selected_tile);
+        if (hint_matches.length == 0) {
+            hint_matches = find_matches_for_tile (selected_tile);
 
-        /* No match, find any random match as if nothing was selected */
-        if (matches.length == 0)
-            matches = find_matches ();
+            /* No match, find any random match as if nothing was selected */
+            if (hint_matches.length == 0)
+                hint_matches = find_matches ();
 
-        var n = Random.int_range (0, (int) matches.length);
-        unowned var match = matches[n];
+            /* No remaining tiles, no hint to show */
+            if (hint_matches.length == 0)
+                return;
+
+            hint_match_index = random.int_range (0, (int) hint_matches.length);
+        }
+
+        /* Cycle through hint matches */
+        hint_match_index++;
+
+        if (hint_match_index >= hint_matches.length)
+            hint_match_index = 0;
+
+        unowned var match = hint_matches[hint_match_index];
         set_hint (match.tile0, match.tile1);
     }
 
@@ -536,8 +555,10 @@ public class Game {
         /* Stop hints */
         remove_hint_timeout ();
 
-        if (tile0 == null && tile1 == null)
+        if (tile0 == null && tile1 == null) {
+            hint_matches = null;
             return;
+        }
 
         hint_tiles[0] = tile0;
         hint_tiles[1] = tile1;
