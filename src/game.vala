@@ -5,21 +5,65 @@
 public class Tile {
     public int number = -1;
     public bool visible = true;
+    public bool highlighted = false;
     public int move_number;
     public Slot slot;
-    public List<Tile> left;
-    public List<Tile> right;
-    public List<Tile> above;
+
+    private Tile[] left;
+    private Tile[] right;
+    private Tile[] above;
+
+    public bool selectable {
+        get {
+            if (!visible)
+                return false;
+
+            var left_blocked = false;
+            foreach (unowned var tile in left)
+                if (tile.visible) {
+                    left_blocked = true;
+                    break;
+                }
+
+            var right_blocked = false;
+            foreach (unowned var tile in right)
+                if (tile.visible) {
+                    right_blocked = true;
+                    break;
+                }
+
+            if (left_blocked && right_blocked)
+                return false;
+
+            foreach (unowned var tile in above)
+                if (tile.visible)
+                    return false;
+
+            return true;
+        }
+    }
 
     public Tile (Slot slot) {
         this.slot = slot;
     }
-}
 
-public static bool tiles_match (Tile a, Tile b) {
-    var tile_face_a = a.number / 4;
-    var tile_face_b = b.number / 4;
-    return tile_face_a == tile_face_b;
+    public void add_tile_left (Tile tile) {
+        left += tile;
+    }
+
+    public void add_tile_right (Tile tile) {
+        right += tile;
+    }
+
+    public void add_tile_above (Tile tile) {
+        above += tile;
+    }
+
+    public bool matches (Tile tile) {
+        var tile_face_a = number / 4;
+        var tile_face_b = tile.number / 4;
+        return tile_face_a == tile_face_b;
+    }
 }
 
 private static int compare_tiles (Tile a, Tile b) {
@@ -96,12 +140,16 @@ public class Game {
     public Tile? selected_tile {
         get { return _selected_tile; }
         set {
-            if (_selected_tile != null)
+            if (_selected_tile != null) {
+                _selected_tile.highlighted = false;
                 redraw_tile (_selected_tile);
+            }
 
             _selected_tile = value;
-            if (value != null)
-                redraw_tile (value);
+            if (_selected_tile != null) {
+                _selected_tile.highlighted = true;
+                redraw_tile (_selected_tile);
+            }
 
             /* Hint matches can change depending on the selected tile. Reset them. */
             hint_matches = null;
@@ -129,7 +177,7 @@ public class Game {
         get {
             var num_selectable_tiles = 0;
             foreach (unowned var tile in tiles) {
-                if (tile_is_selectable (tile)) {
+                if (tile.selectable) {
                     num_selectable_tiles++;
                     if (num_selectable_tiles == 2)
                         return true;
@@ -155,7 +203,7 @@ public class Game {
     public bool all_tiles_unblocked {
         get {
             foreach (unowned var tile in tiles)
-                if (tile.visible && !tile_is_selectable (tile))
+                if (tile.visible && !tile.selectable)
                     return false;
             return true;
         }
@@ -186,50 +234,11 @@ public class Game {
         stop_clock ();
     }
 
-    public bool tile_is_highlighted (Tile tile) {
-        if (tile == selected_tile)
-            return true;
-
-        if (hint_blink_counter % 2 == 0)
-            return false;
-
-        return tile == hint_tiles[0] || tile == hint_tiles[1];
-    }
-
-    public bool tile_is_selectable (Tile tile) {
-        if (!tile.visible)
-            return false;
-
-        var left_blocked = false;
-        var right_blocked = false;
-
-        foreach (unowned var t in tile.left)
-            if (t.visible) {
-                left_blocked = true;
-                break;
-            }
-
-        foreach (unowned var t in tile.right)
-            if (t.visible) {
-                right_blocked = true;
-                break;
-            }
-
-        if (left_blocked && right_blocked)
-            return false;
-
-        foreach (unowned var t in tile.above)
-            if (t.visible)
-                return false;
-
-        return true;
-    }
-
     public bool remove_pair (Tile tile0, Tile tile1) {
         if (!tile0.visible || !tile1.visible)
             return false;
 
-        if (!tiles_match (tile0, tile1))
+        if (!tile0.matches (tile1))
             return false;
 
         selected_tile = null;
@@ -412,16 +421,16 @@ public class Game {
                     var s_x = s.x;
 
                     if (s_x == x - 2)
-                        tile.left.prepend (t);
+                        tile.add_tile_left (t);
                     if (s_x == x + 2)
-                        tile.right.prepend (t);
+                        tile.add_tile_right (t);
 
                 /* Can't move if blocked by a tile above */
                 } else if (s_layer > layer) {
                     var s_x = s.x;
 
                     if (s_x >= x - 1 && s_x <= x + 1)
-                        tile.above.prepend (t);
+                        tile.add_tile_above (t);
                 }
             }
         }
@@ -524,13 +533,13 @@ public class Game {
     private Match[] find_matches_for_tile (Tile? tile, Tile[]? ignored_tiles = null) {
         Match[] matches = null;
 
-        if (tile == null || !tile_is_selectable (tile))
+        if (tile == null || !tile.selectable)
             return matches;
 
         foreach (unowned var t in tiles) {
             if (t == tile)
                 continue;
-            if (tiles_match (t, tile) && tile_is_selectable (t) && !(t in ignored_tiles))
+            if (t.matches (tile) && t.selectable && !(t in ignored_tiles))
                 matches += new Match (t, tile);
         }
         return matches;
@@ -542,16 +551,19 @@ public class Game {
                 redraw_tile (tile);
     }
 
+    private void redraw_hint_tile (Tile? tile) {
+        if (tile == null)
+            return;
+
+        tile.highlighted = hint_blink_counter % 2 != 0 || tile == selected_tile;
+        redraw_tile (tile);
+    }
+
     private void reset_hint () {
         set_hint (null, null);
     }
 
     private void set_hint (Tile? tile0, Tile? tile1) {
-        if (hint_tiles[0] != null)
-            redraw_tile (hint_tiles[0]);
-        if (hint_tiles[1] != null)
-            redraw_tile (hint_tiles[1]);
-
         /* Stop hints */
         remove_hint_timeout ();
 
@@ -580,6 +592,9 @@ public class Game {
             Source.remove (hint_timeout);
         hint_timeout = 0;
         hint_blink_counter = 0;
+
+        redraw_hint_tile (hint_tiles[0]);
+        redraw_hint_tile (hint_tiles[1]);
     }
 
     private bool hint_timeout_cb () {
@@ -588,12 +603,8 @@ public class Game {
             return false;
         }
         hint_blink_counter--;
-
-        if (hint_tiles[0] != null)
-            redraw_tile (hint_tiles[0]);
-        if (hint_tiles[1] != null)
-            redraw_tile (hint_tiles[1]);
-
+        redraw_hint_tile (hint_tiles[0]);
+        redraw_hint_tile (hint_tiles[1]);
         return true;
     }
 

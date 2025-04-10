@@ -77,7 +77,7 @@ public class GameView : Gtk.Widget {
             /* Select image for this tile, or blank image if paused */
             var tile_number = game.paused ? -1 : tile.number;
             var texture_x = get_image_offset (tile_number) * tile_pattern_width;
-            var texture_y = game.tile_is_highlighted (tile) ? tile_pattern_height : 0;
+            var texture_y = tile.highlighted ? tile_pattern_height : 0;
 
             /* Draw the tile */
             int tile_x, tile_y;
@@ -328,7 +328,7 @@ public class GameView : Gtk.Widget {
         }
 
         /* If not a valid tile then ignore the event */
-        if (tile == null || !game.tile_is_selectable (tile))
+        if (tile == null || !tile.selectable)
             return;
 
         /* Select first tile */
@@ -340,7 +340,7 @@ public class GameView : Gtk.Widget {
             game.selected_tile = null;
         }
         /* Attempt to match second tile to the selected one */
-        else if (tiles_match (game.selected_tile, tile)) {
+        else if (tile.matches (game.selected_tile)) {
             game.remove_pair (game.selected_tile, tile);
         }
         else {
