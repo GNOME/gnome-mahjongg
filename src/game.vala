@@ -476,12 +476,12 @@ public class Game {
         return pair_numbers;
     }
 
-    private bool choose_tile_pairs (int[] pair_numbers, int depth = 0) {
+    private bool choose_tile_pairs (int[] pair_numbers, int depth = 0, bool check_selectable = true) {
         /* All tile pairs chosen */
         if (depth == pair_numbers.length)
             return true;
 
-        var matches = find_matches ();
+        var matches = find_matches (check_selectable);
         var n_matches = matches.length;
 
         /* No matches on this branch, rewind */
@@ -498,11 +498,18 @@ public class Game {
             tile0.visible = false;
             tile1.visible = false;
 
-            if (choose_tile_pairs (pair_numbers, depth + 1)) {
+            if (choose_tile_pairs (pair_numbers, depth + 1, check_selectable)) {
                 /* Assign tile face for pair */
                 tile0.number = number;
                 tile1.number = number + 1;
                 return true;
+            }
+
+            if (check_selectable && depth == 0 && i == n_matches - 1) {
+                /* Unsolvable tile arrangement, possibly a handful of tiles in a
+                 * tall stack remaining. Ensure we still assign faces to all tiles. */
+                check_selectable = false;
+                i--;
             }
 
             /* Unsolvable state, undo move and try the next match */
@@ -512,12 +519,12 @@ public class Game {
         return false;
     }
 
-    private Match[] find_matches () {
+    private Match[] find_matches (bool check_selectable = true) {
         Match[] matches = null;
         Tile[] processed_tiles = null;
 
         foreach (unowned var t in tiles) {
-            var submatches = find_matches_for_tile (t, processed_tiles);
+            var submatches = find_matches_for_tile (t, processed_tiles, check_selectable);
 
             foreach (unowned var match in submatches)
                 matches += match;
@@ -530,16 +537,20 @@ public class Game {
         return matches;
     }
 
-    private Match[] find_matches_for_tile (Tile? tile, Tile[]? ignored_tiles = null) {
+    private Match[] find_matches_for_tile (Tile? tile, Tile[]? ignored_tiles = null,
+                                           bool check_selectable = true) {
         Match[] matches = null;
 
-        if (tile == null || !tile.selectable)
+        if (tile == null || !tile.visible)
+            return matches;
+
+        if (check_selectable && !tile.selectable)
             return matches;
 
         foreach (unowned var t in tiles) {
-            if (t == tile)
+            if (t == tile || !t.visible)
                 continue;
-            if (t.matches (tile) && t.selectable && !(t in ignored_tiles))
+            if (t.matches (tile) && (!check_selectable || t.selectable) && !(t in ignored_tiles))
                 matches += new Match (t, tile);
         }
         return matches;
