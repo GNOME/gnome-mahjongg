@@ -51,6 +51,22 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="48.1" date="2025-04-12">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>Remember initial layout when restarting game after reshuffling</li>
+          <li>Ensure boards remain solvable when possible after reshuffling remaining tiles</li>
+          <li>Always show New Game button when no moves are left</li>
+          <li>Cycle through hints instead of always picking random ones</li>
+          <li>Allow inspecting game after finishing it</li>
+          <li>Show scores for current layout when opening Scores dialog</li>
+          <li>Fix Score dialog title being visible when it should not be</li>
+          <li>Replace GNOME tile with White Dragon tile in Postmodern theme</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.0" date="2025-03-16">
       <description>
         <p>This release contains the following improvements:</p>

@@ -1,3 +1,16 @@
+48.1
+====
+
+* Remember initial layout when restarting game after reshuffling
+* Ensure boards remain solvable when possible after reshuffling remaining tiles
+* Always show New Game button when no moves are left
+* Cycle through hints instead of always picking random ones
+* Allow inspecting game after finishing it
+* Show scores for current layout when opening Scores dialog
+* Fix Score dialog title being visible when it should not be
+* Replace GNOME tile with White Dragon tile in Postmodern theme
+* Translation updates
+
 48.0
 ====
 
