@@ -4,6 +4,7 @@
 
 public class Mahjongg : Adw.Application {
     private History history;
+    private GameSave game_save;
     private List<Map> maps;
 
     private Settings settings;
@@ -101,7 +102,15 @@ public class Mahjongg : Adw.Application {
         settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
 
         var rotate_map = (layout_rotation == "random");
-        new_game (rotate_map);
+
+        var save_path = Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "gamesave");
+        game_save = new GameSave (save_path);
+
+        if (game_save.exists ()) {
+            restore_game (rotate_map);
+        } else {
+            new_game (rotate_map);
+        }
 
         settings.changed.connect (conf_value_changed_cb);
     }
@@ -127,6 +136,9 @@ public class Mahjongg : Adw.Application {
     public override void shutdown () {
         if (game_view != null)
             game_view.game.destroy_timers ();
+
+        if (game_view.game.started && game_view.game.can_move && !game_view.game.inspecting)
+            game_save.write (game_view.game);
 
         settings.apply ();
         base.shutdown ();
@@ -197,6 +209,7 @@ public class Mahjongg : Adw.Application {
             var completed_entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
             history.add (completed_entry);
             history.save ();
+            game_save.delete ();
             game_view.game.inspecting = true;
             show_scores (completed_entry.name, completed_entry);
         }
@@ -228,6 +241,7 @@ public class Mahjongg : Adw.Application {
                 new_game ();
                 break;
             case "quit":
+                game_save.delete ();
                 window.destroy ();
                 break;
             default:
@@ -377,23 +391,28 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
     private void restart_game () {
         game_view.game.restart ();
+        game_save.delete ();
         if (game_view.game.paused)
             pause_cb ();
         update_ui ();
     }
 
-    private unowned Map find_map () {
+    private unowned Map? find_map_by_name (string name) {
         foreach (unowned var m in maps) {
-            if (m.name == settings.get_string ("mapset")) {
+            if (m.name == name) {
                 return m;
             }
         }
-        // Map wasn't found. Return the default (first) map.
-        return maps.nth_data (0);
+        return null;
     }
 
     private unowned Map get_next_map (bool rotate_map) {
-        unowned var map = find_map ();
+        unowned var map = find_map_by_name (settings.get_string ("mapset"));
+
+        // Map wasn't found. Get the default (first) map.
+        if (map == null)
+            map = maps.nth_data (0);
+
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
@@ -445,17 +464,60 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
      * map according to the ``map-rotation`` setting.
      */
     private void new_game (bool rotate_map = true) {
+        game_save.delete ();
+        start_game (rotate_map, get_next_map (rotate_map));
+    }
+
+    private void restore_game (bool rotate_map = true) {
+        try {
+            game_save.load ();
+        }
+        catch (Error e) {
+            warning ("Could not load game save %s: %s\n", game_save.filename, e.message);
+            start_game (rotate_map, get_next_map (rotate_map));
+            return;
+        }
+
+        Map map = find_map_by_name (game_save.map_name);
+
+        if (map == null) {
+            warning ("Map '%s' not found in available maps.\n", game_save.map_name);
+            start_game (rotate_map, get_next_map (rotate_map));
+            return;
+        }
+
+        var match_tiles_counter = 0;
+        foreach (unowned var slot in map.slots) {
+            foreach (unowned var tile in game_save.tiles) {
+                if (slot.equals (tile.slot)) {
+                    match_tiles_counter++;
+                    break;
+                }
+            }
+        }
+
+        bool use_game_save = (map.slots.length () == match_tiles_counter);
+
+        start_game (rotate_map, map, use_game_save);
+    }
+
+    private void start_game (bool rotate_map, Map map, bool use_game_save = false) {
         new_game_view (rotate_map);
 
-        var seed = Random.int_range (0, int32.MAX);
-        game_view.game = new Game (get_next_map (rotate_map), seed);
+        if (use_game_save) {
+            game_view.game = new Game (map, game_save);
+            window.pause ();
+        } else {
+            game_view.game = new Game (map);
+            window.unpause ();
+        }
+
         game_view.game.attempt_move.connect (attempt_move_cb);
         game_view.game.moved.connect (moved_cb);
         game_view.game.tick.connect (tick_cb);
 
         tick_cb ();
         update_ui ();
-        window.unpause ();
     }
 
     private void tick_cb () {

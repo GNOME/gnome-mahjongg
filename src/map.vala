@@ -12,6 +12,10 @@ public class Slot {
         this.y = y;
         this.layer = layer;
     }
+
+    public bool equals (Slot b) {
+        return this.x == b.x && this.y == b.y && this.layer == b.layer;
+    }
 }
 
 private static int compare_slots (Slot a, Slot b) {

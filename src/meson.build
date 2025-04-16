@@ -9,6 +9,7 @@ gnome_mahjongg = executable(
     'game-view.vala',
     'gnome-mahjongg.vala',
     'history.vala',
+    'game-save.vala',
     'map.vala',
     'score-dialog.vala',
     'window.vala',

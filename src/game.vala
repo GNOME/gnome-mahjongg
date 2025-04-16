@@ -86,7 +86,6 @@ public class Game {
     public bool inspecting;
 
     private Rand random;
-    private int32 seed;
     private int move_number;
 
     private Tile? hint_tiles[2];
@@ -106,6 +105,8 @@ public class Game {
     public signal void moved ();
     public signal void paused_changed ();
     public signal void tick ();
+
+    public int32 seed { get; set; }
 
     public bool started {
         get { return clock != null; }
@@ -154,6 +155,10 @@ public class Game {
             /* Hint matches can change depending on the selected tile. Reset them. */
             hint_matches = null;
         }
+    }
+
+    public int current_move_number {
+        get { return move_number; }
     }
 
     public uint moves_left {
@@ -209,12 +214,18 @@ public class Game {
         }
     }
 
-    public Game (Map map, int32 seed) {
+    public Game (Map map, GameSave? save = null) {
         this.map = map;
-        this.seed = seed;
 
         /* Create blank tiles in the locations required in the map */
         create_tiles ();
+
+        if (save != null) {
+            restore_game (save);
+            return;
+        }
+
+        this.seed = Random.int_range (0, int32.MAX);
 
         /* Start with a board consisting of visible blank tiles. Walk through all
          * tiles, choosing and removing tile pairs until we have a solvable board.
@@ -463,6 +474,26 @@ public class Game {
             tile.move_number = 0;
         }
         redraw_all_tiles ();
+    }
+
+    private void restore_game (GameSave save) {
+        move_number = save.move_number;
+        clock_elapsed = save.elapsed_time;
+        seed = save.seed;
+
+        foreach (unowned var tile in tiles) {
+            foreach (unowned var t in save.tiles) {
+                if (tile.slot.equals (t.slot)) {
+                    tile.number = t.number;
+                    tile.move_number = t.move_number;
+                    tile.visible = t.visible;
+                }
+            }
+        }
+
+        redraw_all_tiles ();
+        clock = new Timer ();
+        paused = true;
     }
 
     private unowned int[] shuffle_pair_numbers (int[] pair_numbers) {
