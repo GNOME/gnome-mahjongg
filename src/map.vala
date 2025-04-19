@@ -18,188 +18,158 @@ public class Slot {
     }
 }
 
-private static int compare_slots (Slot a, Slot b) {
-    /* Sort lowest to highest */
-    var dl = a.layer - b.layer;
-    if (dl != 0)
-        return dl;
-
-    /* Sort diagonally, top left to bottom right */
-    var dx = a.x - b.x;
-    var dy = a.y - b.y;
-    if (dx > dy)
-        return -1;
-    if (dx < dy)
-        return 1;
-
-    return 0;
-}
-
 public class Map {
     public string? name;
     public string? score_name;
     public List<Slot> slots;
 
-    public Map.test () {
-        name = "Test";
-        score_name = "test";
-        slots.prepend (new Slot (0, 0, 0));
-        slots.prepend (new Slot (2, 0, 0));
-        slots.prepend (new Slot (2, 0, 1));
-        slots.prepend (new Slot (4, 0, 0));
-        slots.prepend (new Slot (0, 2, 0));
-        slots.prepend (new Slot (2, 2, 0));
-        slots.prepend (new Slot (2, 2, 1));
-        slots.prepend (new Slot (4, 2, 0));
-    }
-
     public Map.builtin () {
         name = "Turtle";
         score_name = "easy";
-        slots.prepend (new Slot (13, 7, 4));
-        slots.prepend (new Slot (12, 8, 3));
-        slots.prepend (new Slot (14, 8, 3));
-        slots.prepend (new Slot (12, 6, 3));
-        slots.prepend (new Slot (14, 6, 3));
-        slots.prepend (new Slot (10, 10, 2));
-        slots.prepend (new Slot (12, 10, 2));
-        slots.prepend (new Slot (14, 10, 2));
-        slots.prepend (new Slot (16, 10, 2));
-        slots.prepend (new Slot (10, 8, 2));
-        slots.prepend (new Slot (12, 8, 2));
-        slots.prepend (new Slot (14, 8, 2));
-        slots.prepend (new Slot (16, 8, 2));
-        slots.prepend (new Slot (10, 6, 2));
-        slots.prepend (new Slot (12, 6, 2));
-        slots.prepend (new Slot (14, 6, 2));
-        slots.prepend (new Slot (16, 6, 2));
-        slots.prepend (new Slot (10, 4, 2));
-        slots.prepend (new Slot (12, 4, 2));
-        slots.prepend (new Slot (14, 4, 2));
-        slots.prepend (new Slot (16, 4, 2));
-        slots.prepend (new Slot (8, 12, 1));
-        slots.prepend (new Slot (10, 12, 1));
-        slots.prepend (new Slot (12, 12, 1));
-        slots.prepend (new Slot (14, 12, 1));
-        slots.prepend (new Slot (16, 12, 1));
-        slots.prepend (new Slot (18, 12, 1));
-        slots.prepend (new Slot (8, 10, 1));
-        slots.prepend (new Slot (10, 10, 1));
-        slots.prepend (new Slot (12, 10, 1));
-        slots.prepend (new Slot (14, 10, 1));
-        slots.prepend (new Slot (16, 10, 1));
-        slots.prepend (new Slot (18, 10, 1));
-        slots.prepend (new Slot (8, 8, 1));
-        slots.prepend (new Slot (10, 8, 1));
-        slots.prepend (new Slot (12, 8, 1));
-        slots.prepend (new Slot (14, 8, 1));
-        slots.prepend (new Slot (16, 8, 1));
-        slots.prepend (new Slot (18, 8, 1));
-        slots.prepend (new Slot (8, 6, 1));
-        slots.prepend (new Slot (10, 6, 1));
-        slots.prepend (new Slot (12, 6, 1));
-        slots.prepend (new Slot (14, 6, 1));
-        slots.prepend (new Slot (16, 6, 1));
-        slots.prepend (new Slot (18, 6, 1));
-        slots.prepend (new Slot (8, 4, 1));
-        slots.prepend (new Slot (10, 4, 1));
-        slots.prepend (new Slot (12, 4, 1));
-        slots.prepend (new Slot (14, 4, 1));
-        slots.prepend (new Slot (16, 4, 1));
-        slots.prepend (new Slot (18, 4, 1));
-        slots.prepend (new Slot (8, 2, 1));
-        slots.prepend (new Slot (10, 2, 1));
-        slots.prepend (new Slot (12, 2, 1));
-        slots.prepend (new Slot (14, 2, 1));
-        slots.prepend (new Slot (16, 2, 1));
-        slots.prepend (new Slot (18, 2, 1));
-        slots.prepend (new Slot (2, 14, 0));
-        slots.prepend (new Slot (4, 14, 0));
-        slots.prepend (new Slot (6, 14, 0));
-        slots.prepend (new Slot (8, 14, 0));
-        slots.prepend (new Slot (10, 14, 0));
-        slots.prepend (new Slot (12, 14, 0));
-        slots.prepend (new Slot (14, 14, 0));
-        slots.prepend (new Slot (16, 14, 0));
-        slots.prepend (new Slot (18, 14, 0));
-        slots.prepend (new Slot (20, 14, 0));
-        slots.prepend (new Slot (22, 14, 0));
-        slots.prepend (new Slot (24, 14, 0));
-        slots.prepend (new Slot (6, 12, 0));
-        slots.prepend (new Slot (8, 12, 0));
-        slots.prepend (new Slot (10, 12, 0));
-        slots.prepend (new Slot (12, 12, 0));
-        slots.prepend (new Slot (14, 12, 0));
-        slots.prepend (new Slot (16, 12, 0));
-        slots.prepend (new Slot (18, 12, 0));
-        slots.prepend (new Slot (20, 12, 0));
-        slots.prepend (new Slot (4, 10, 0));
-        slots.prepend (new Slot (6, 10, 0));
-        slots.prepend (new Slot (8, 10, 0));
-        slots.prepend (new Slot (10, 10, 0));
-        slots.prepend (new Slot (12, 10, 0));
-        slots.prepend (new Slot (14, 10, 0));
-        slots.prepend (new Slot (16, 10, 0));
-        slots.prepend (new Slot (18, 10, 0));
-        slots.prepend (new Slot (20, 10, 0));
-        slots.prepend (new Slot (22, 10, 0));
-        slots.prepend (new Slot (0, 7, 0));
-        slots.prepend (new Slot (2, 8, 0));
-        slots.prepend (new Slot (4, 8, 0));
-        slots.prepend (new Slot (6, 8, 0));
-        slots.prepend (new Slot (8, 8, 0));
-        slots.prepend (new Slot (10, 8, 0));
-        slots.prepend (new Slot (12, 8, 0));
-        slots.prepend (new Slot (14, 8, 0));
-        slots.prepend (new Slot (16, 8, 0));
-        slots.prepend (new Slot (18, 8, 0));
-        slots.prepend (new Slot (20, 8, 0));
-        slots.prepend (new Slot (22, 8, 0));
-        slots.prepend (new Slot (24, 8, 0));
-        slots.prepend (new Slot (2, 6, 0));
-        slots.prepend (new Slot (4, 6, 0));
-        slots.prepend (new Slot (6, 6, 0));
-        slots.prepend (new Slot (8, 6, 0));
-        slots.prepend (new Slot (10, 6, 0));
-        slots.prepend (new Slot (12, 6, 0));
-        slots.prepend (new Slot (14, 6, 0));
-        slots.prepend (new Slot (16, 6, 0));
-        slots.prepend (new Slot (18, 6, 0));
-        slots.prepend (new Slot (20, 6, 0));
-        slots.prepend (new Slot (22, 6, 0));
-        slots.prepend (new Slot (24, 6, 0));
-        slots.prepend (new Slot (4, 4, 0));
-        slots.prepend (new Slot (6, 4, 0));
-        slots.prepend (new Slot (8, 4, 0));
-        slots.prepend (new Slot (10, 4, 0));
-        slots.prepend (new Slot (12, 4, 0));
-        slots.prepend (new Slot (14, 4, 0));
-        slots.prepend (new Slot (16, 4, 0));
-        slots.prepend (new Slot (18, 4, 0));
-        slots.prepend (new Slot (20, 4, 0));
-        slots.prepend (new Slot (22, 4, 0));
-        slots.prepend (new Slot (6, 2, 0));
-        slots.prepend (new Slot (8, 2, 0));
-        slots.prepend (new Slot (10, 2, 0));
-        slots.prepend (new Slot (12, 2, 0));
-        slots.prepend (new Slot (14, 2, 0));
-        slots.prepend (new Slot (16, 2, 0));
-        slots.prepend (new Slot (18, 2, 0));
-        slots.prepend (new Slot (20, 2, 0));
-        slots.prepend (new Slot (2, 0, 0));
-        slots.prepend (new Slot (4, 0, 0));
-        slots.prepend (new Slot (6, 0, 0));
-        slots.prepend (new Slot (8, 0, 0));
-        slots.prepend (new Slot (10, 0, 0));
-        slots.prepend (new Slot (12, 0, 0));
-        slots.prepend (new Slot (14, 0, 0));
-        slots.prepend (new Slot (16, 0, 0));
-        slots.prepend (new Slot (18, 0, 0));
-        slots.prepend (new Slot (20, 0, 0));
-        slots.prepend (new Slot (22, 0, 0));
-        slots.prepend (new Slot (24, 0, 0));
-        slots.prepend (new Slot (26, 7, 0));
-        slots.prepend (new Slot (28, 7, 0));
+        add_slot (new Slot (13, 7, 4));
+        add_slot (new Slot (12, 8, 3));
+        add_slot (new Slot (14, 8, 3));
+        add_slot (new Slot (12, 6, 3));
+        add_slot (new Slot (14, 6, 3));
+        add_slot (new Slot (10, 10, 2));
+        add_slot (new Slot (12, 10, 2));
+        add_slot (new Slot (14, 10, 2));
+        add_slot (new Slot (16, 10, 2));
+        add_slot (new Slot (10, 8, 2));
+        add_slot (new Slot (12, 8, 2));
+        add_slot (new Slot (14, 8, 2));
+        add_slot (new Slot (16, 8, 2));
+        add_slot (new Slot (10, 6, 2));
+        add_slot (new Slot (12, 6, 2));
+        add_slot (new Slot (14, 6, 2));
+        add_slot (new Slot (16, 6, 2));
+        add_slot (new Slot (10, 4, 2));
+        add_slot (new Slot (12, 4, 2));
+        add_slot (new Slot (14, 4, 2));
+        add_slot (new Slot (16, 4, 2));
+        add_slot (new Slot (8, 12, 1));
+        add_slot (new Slot (10, 12, 1));
+        add_slot (new Slot (12, 12, 1));
+        add_slot (new Slot (14, 12, 1));
+        add_slot (new Slot (16, 12, 1));
+        add_slot (new Slot (18, 12, 1));
+        add_slot (new Slot (8, 10, 1));
+        add_slot (new Slot (10, 10, 1));
+        add_slot (new Slot (12, 10, 1));
+        add_slot (new Slot (14, 10, 1));
+        add_slot (new Slot (16, 10, 1));
+        add_slot (new Slot (18, 10, 1));
+        add_slot (new Slot (8, 8, 1));
+        add_slot (new Slot (10, 8, 1));
+        add_slot (new Slot (12, 8, 1));
+        add_slot (new Slot (14, 8, 1));
+        add_slot (new Slot (16, 8, 1));
+        add_slot (new Slot (18, 8, 1));
+        add_slot (new Slot (8, 6, 1));
+        add_slot (new Slot (10, 6, 1));
+        add_slot (new Slot (12, 6, 1));
+        add_slot (new Slot (14, 6, 1));
+        add_slot (new Slot (16, 6, 1));
+        add_slot (new Slot (18, 6, 1));
+        add_slot (new Slot (8, 4, 1));
+        add_slot (new Slot (10, 4, 1));
+        add_slot (new Slot (12, 4, 1));
+        add_slot (new Slot (14, 4, 1));
+        add_slot (new Slot (16, 4, 1));
+        add_slot (new Slot (18, 4, 1));
+        add_slot (new Slot (8, 2, 1));
+        add_slot (new Slot (10, 2, 1));
+        add_slot (new Slot (12, 2, 1));
+        add_slot (new Slot (14, 2, 1));
+        add_slot (new Slot (16, 2, 1));
+        add_slot (new Slot (18, 2, 1));
+        add_slot (new Slot (2, 14, 0));
+        add_slot (new Slot (4, 14, 0));
+        add_slot (new Slot (6, 14, 0));
+        add_slot (new Slot (8, 14, 0));
+        add_slot (new Slot (10, 14, 0));
+        add_slot (new Slot (12, 14, 0));
+        add_slot (new Slot (14, 14, 0));
+        add_slot (new Slot (16, 14, 0));
+        add_slot (new Slot (18, 14, 0));
+        add_slot (new Slot (20, 14, 0));
+        add_slot (new Slot (22, 14, 0));
+        add_slot (new Slot (24, 14, 0));
+        add_slot (new Slot (6, 12, 0));
+        add_slot (new Slot (8, 12, 0));
+        add_slot (new Slot (10, 12, 0));
+        add_slot (new Slot (12, 12, 0));
+        add_slot (new Slot (14, 12, 0));
+        add_slot (new Slot (16, 12, 0));
+        add_slot (new Slot (18, 12, 0));
+        add_slot (new Slot (20, 12, 0));
+        add_slot (new Slot (4, 10, 0));
+        add_slot (new Slot (6, 10, 0));
+        add_slot (new Slot (8, 10, 0));
+        add_slot (new Slot (10, 10, 0));
+        add_slot (new Slot (12, 10, 0));
+        add_slot (new Slot (14, 10, 0));
+        add_slot (new Slot (16, 10, 0));
+        add_slot (new Slot (18, 10, 0));
+        add_slot (new Slot (20, 10, 0));
+        add_slot (new Slot (22, 10, 0));
+        add_slot (new Slot (0, 7, 0));
+        add_slot (new Slot (2, 8, 0));
+        add_slot (new Slot (4, 8, 0));
+        add_slot (new Slot (6, 8, 0));
+        add_slot (new Slot (8, 8, 0));
+        add_slot (new Slot (10, 8, 0));
+        add_slot (new Slot (12, 8, 0));
+        add_slot (new Slot (14, 8, 0));
+        add_slot (new Slot (16, 8, 0));
+        add_slot (new Slot (18, 8, 0));
+        add_slot (new Slot (20, 8, 0));
+        add_slot (new Slot (22, 8, 0));
+        add_slot (new Slot (24, 8, 0));
+        add_slot (new Slot (2, 6, 0));
+        add_slot (new Slot (4, 6, 0));
+        add_slot (new Slot (6, 6, 0));
+        add_slot (new Slot (8, 6, 0));
+        add_slot (new Slot (10, 6, 0));
+        add_slot (new Slot (12, 6, 0));
+        add_slot (new Slot (14, 6, 0));
+        add_slot (new Slot (16, 6, 0));
+        add_slot (new Slot (18, 6, 0));
+        add_slot (new Slot (20, 6, 0));
+        add_slot (new Slot (22, 6, 0));
+        add_slot (new Slot (24, 6, 0));
+        add_slot (new Slot (4, 4, 0));
+        add_slot (new Slot (6, 4, 0));
+        add_slot (new Slot (8, 4, 0));
+        add_slot (new Slot (10, 4, 0));
+        add_slot (new Slot (12, 4, 0));
+        add_slot (new Slot (14, 4, 0));
+        add_slot (new Slot (16, 4, 0));
+        add_slot (new Slot (18, 4, 0));
+        add_slot (new Slot (20, 4, 0));
+        add_slot (new Slot (22, 4, 0));
+        add_slot (new Slot (6, 2, 0));
+        add_slot (new Slot (8, 2, 0));
+        add_slot (new Slot (10, 2, 0));
+        add_slot (new Slot (12, 2, 0));
+        add_slot (new Slot (14, 2, 0));
+        add_slot (new Slot (16, 2, 0));
+        add_slot (new Slot (18, 2, 0));
+        add_slot (new Slot (20, 2, 0));
+        add_slot (new Slot (2, 0, 0));
+        add_slot (new Slot (4, 0, 0));
+        add_slot (new Slot (6, 0, 0));
+        add_slot (new Slot (8, 0, 0));
+        add_slot (new Slot (10, 0, 0));
+        add_slot (new Slot (12, 0, 0));
+        add_slot (new Slot (14, 0, 0));
+        add_slot (new Slot (16, 0, 0));
+        add_slot (new Slot (18, 0, 0));
+        add_slot (new Slot (20, 0, 0));
+        add_slot (new Slot (22, 0, 0));
+        add_slot (new Slot (24, 0, 0));
+        add_slot (new Slot (26, 7, 0));
+        add_slot (new Slot (28, 7, 0));
     }
 
     private int _width;
@@ -212,7 +182,7 @@ public class Map {
             var x = 0;
             var layer = 0;
             foreach (unowned var slot in slots) {
-                if (slot.x > x) {
+                if (slot.x >= x && slot.layer >= layer) {
                     x = slot.x;
                     layer = slot.layer;
                 }
@@ -248,6 +218,24 @@ public class Map {
             return _height;
         }
     }
+
+    public void add_slot (Slot slot) {
+        slots.insert_sorted (slot, compare_slots);
+    }
+
+    private static int compare_slots (Slot a, Slot b) {
+        /* Sort lowest to highest */
+        var dl = a.layer - b.layer;
+        if (dl != 0)
+            return dl;
+
+        /* Sort diagonally, top left to bottom right */
+        var dx = a.x - b.x;
+        var dy = a.y - b.y;
+        if (dx > dy)
+            return -1;
+        return 1;
+    }
 }
 
 public class MapLoader {
@@ -255,7 +243,39 @@ public class MapLoader {
     private Map? map;
     private int layer_z;
 
-    public void load (string filename) throws Error {
+    public void load_builtin () {
+        maps.append (new Map.builtin ());
+    }
+
+    public void load_folder (string folder_path) {
+        Dir dir;
+        try {
+            dir = Dir.open (folder_path);
+        }
+        catch (FileError e) {
+            return;
+        }
+
+        while (true) {
+            var filename = dir.read_name ();
+            if (filename == null)
+                break;
+
+            if (!filename.has_suffix (".map"))
+                continue;
+
+            var path = Path.build_filename (folder_path, filename);
+            try {
+                load_file (path);
+            }
+            catch (Error e) {
+                warning ("Could not load map %s: %s\n", path, e.message);
+                continue;
+            }
+        }
+    }
+
+    private void load_file (string filename) throws Error {
         string data;
         size_t length;
         FileUtils.get_contents (filename, out data, out length);
@@ -316,7 +336,7 @@ public class MapLoader {
             var y = (int) (get_attribute_d (attribute_names, attribute_values, "y") * 2);
             var z = (int) get_attribute_d (attribute_names, attribute_values, "z", layer_z);
             for (; x1 <= x2; x1 += 2)
-                map.slots.prepend (new Slot (x1, y, z));
+                map.add_slot (new Slot (x1, y, z));
             break;
 
         case "column":
@@ -325,7 +345,7 @@ public class MapLoader {
             var y2 = (int) (get_attribute_d (attribute_names, attribute_values, "bottom") * 2);
             var z = (int) get_attribute_d (attribute_names, attribute_values, "z", layer_z);
             for (; y1 <= y2; y1 += 2)
-                map.slots.prepend (new Slot (x, y1, z));
+                map.add_slot (new Slot (x, y1, z));
             break;
 
         case "block":
@@ -336,14 +356,14 @@ public class MapLoader {
             var z = (int) get_attribute_d (attribute_names, attribute_values, "z", layer_z);
             for (; x1 <= x2; x1 += 2)
                 for (var y = y1; y <= y2; y += 2)
-                    map.slots.prepend (new Slot (x1, y, z));
+                    map.add_slot (new Slot (x1, y, z));
             break;
 
         case "tile":
             var x = (int) (get_attribute_d (attribute_names, attribute_values, "x") * 2);
             var y = (int) (get_attribute_d (attribute_names, attribute_values, "y") * 2);
             var z = (int) get_attribute_d (attribute_names, attribute_values, "z", layer_z);
-            map.slots.prepend (new Slot (x, y, z));
+            map.add_slot (new Slot (x, y, z));
             break;
         }
     }

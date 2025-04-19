@@ -66,10 +66,6 @@ public class Tile {
     }
 }
 
-private static int compare_tiles (Tile a, Tile b) {
-    return compare_slots (a.slot, b.slot);
-}
-
 public class Match {
     public Tile tile0;
     public Tile tile1;
@@ -83,12 +79,11 @@ public class Match {
 public class Game {
     public Map map;
     public List<Tile> tiles;
-    public bool inspecting;
 
     private Rand random;
     private int move_number;
 
-    private Tile? hint_tiles[2];
+    private Match? hint_match;
     private Match[] hint_matches;
     private int hint_match_index;
     private uint hint_timeout;
@@ -106,7 +101,10 @@ public class Game {
     public signal void paused_changed ();
     public signal void tick ();
 
-    public int32 seed { get; set; }
+    private int32 _seed = -1;
+    public int32 seed {
+        get { return _seed; }
+    }
 
     public bool started {
         get { return clock != null; }
@@ -120,6 +118,11 @@ public class Game {
         }
     }
 
+    private bool _inspecting;
+    public bool inspecting {
+        get { return _inspecting; }
+    }
+
     private bool _paused;
     public bool paused {
         set {
@@ -131,7 +134,7 @@ public class Game {
                     continue_clock ();
             }
             selected_tile = null;
-            reset_hint ();
+            set_hint (null);
             paused_changed ();
         }
         get { return _paused; }
@@ -214,29 +217,78 @@ public class Game {
         }
     }
 
-    public Game (Map map, GameSave? save = null) {
+    public Game (Map map) {
         this.map = map;
 
         /* Create blank tiles in the locations required in the map */
         create_tiles ();
+    }
 
-        if (save != null) {
-            restore_game (save);
-            return;
+    /* Start with a board consisting of visible blank tiles. Walk through all
+     * tiles, choosing and removing tile pairs until we have a solvable board.
+     *
+     * Check all possible tile matches for visible/remaining tiles. Choose a
+     * random match, hide/remove both tiles, and repeat the process. If we
+     * reach an unsolvable state, undo the previous move and try the next match.
+     *
+     * Once we have a path to victory, assign random tile faces to all pairs.
+     */
+    public void generate (int32 seed = -1) {
+        this._seed = seed != -1 ? seed : Random.int_range (0, int32.MAX);
+        var n_pairs = (int) tiles.length () / 2;
+        var pair_numbers = new int[n_pairs];
+
+        /* Reset game */
+        reset_clock ();
+        move_number = 1;
+        selected_tile = null;
+        _inspecting = false;
+        set_hint (null);
+
+        /* Create tile pair numbers */
+        for (var i = 0; i < n_pairs; i++)
+            pair_numbers[i] = i * 2;
+
+        /* Choose tile pairs until we have a solvable board */
+        random = new Rand.with_seed (this._seed);
+        pair_numbers = shuffle_pair_numbers (pair_numbers);
+        choose_tile_pairs (pair_numbers);
+
+        /* The algorithm has "finished" the game. Make all tiles visible again for
+         * the player. */
+        foreach (unowned var tile in tiles) {
+            tile.visible = true;
+            tile.move_number = 0;
+        }
+        redraw_all_tiles ();
+    }
+
+    public void restore (GameSave save) {
+        move_number = save.move_number;
+        clock_elapsed = save.elapsed_time;
+        _seed = save.seed;
+
+        foreach (unowned var tile in tiles) {
+            foreach (unowned var t in save.tiles) {
+                if (tile.slot.equals (t.slot)) {
+                    tile.number = t.number;
+                    tile.move_number = t.move_number;
+                    tile.visible = t.visible;
+                }
+            }
         }
 
-        this.seed = Random.int_range (0, int32.MAX);
+        redraw_all_tiles ();
+        clock = new Timer ();
+        paused = true;
+    }
 
-        /* Start with a board consisting of visible blank tiles. Walk through all
-         * tiles, choosing and removing tile pairs until we have a solvable board.
-         *
-         * Check all possible tile matches for visible/remaining tiles. Choose a
-         * random match, hide/remove both tiles, and repeat the process. If we
-         * reach an unsolvable state, undo the previous move and try the next match.
-         *
-         * Once we have a path to victory, assign random tile faces to all pairs.
-         */
-        generate_game ();
+    public void restart () {
+        foreach (unowned var tile in tiles) {
+            tile.number = -1;
+            tile.visible = true;
+        }
+        generate (_seed);
     }
 
     public void destroy_timers () {
@@ -249,11 +301,11 @@ public class Game {
         if (!tile0.visible || !tile1.visible)
             return false;
 
-        if (!tile0.matches (tile1))
+        if (tile0 == tile1 || !tile0.matches (tile1))
             return false;
 
         selected_tile = null;
-        reset_hint ();
+        set_hint (null);
 
         /* You lose your re-do queue when you make a move */
         foreach (unowned var tile in tiles)
@@ -270,10 +322,12 @@ public class Game {
         redraw_tile (tile0);
         redraw_tile (tile1);
 
-        if (complete)
+        if (complete) {
             stop_clock ();
-        else
+            _inspecting = true;
+        } else {
             start_clock ();
+        }
 
         moved ();
         return true;
@@ -342,7 +396,7 @@ public class Game {
             return;
 
         selected_tile = null;
-        reset_hint ();
+        set_hint (null);
 
         /* Re-show tiles that were removed */
         move_number--;
@@ -359,7 +413,7 @@ public class Game {
             return;
 
         selected_tile = null;
-        reset_hint ();
+        set_hint (null);
 
         foreach (unowned var tile in tiles) {
             if (tile.move_number == move_number) {
@@ -371,7 +425,7 @@ public class Game {
         moved ();
     }
 
-    public void show_hint () {
+    public Match? next_hint () {
         if (hint_matches.length == 0) {
             hint_matches = find_matches_for_tile (selected_tile);
 
@@ -381,7 +435,7 @@ public class Game {
 
             /* No remaining tiles, no hint to show */
             if (hint_matches.length == 0)
-                return;
+                return null;
 
             hint_match_index = random.int_range (0, (int) hint_matches.length);
         }
@@ -392,21 +446,45 @@ public class Game {
         if (hint_match_index >= hint_matches.length)
             hint_match_index = 0;
 
-        unowned var match = hint_matches[hint_match_index];
-        set_hint (match.tile0, match.tile1);
+        var match = hint_matches[hint_match_index];
+        return match;
     }
 
-    public void restart () {
-        foreach (unowned var tile in tiles) {
-            tile.number = -1;
-            tile.visible = true;
+    public void set_hint (Match? match) {
+        /* Stop hints */
+        remove_hint_timeout ();
+
+        if (match == null) {
+            hint_match = null;
+            hint_matches = null;
+            return;
         }
-        generate_game ();
+
+        hint_match = match;
+        hint_blink_counter = 6;
+        hint_timeout = Timeout.add (250, hint_timeout_cb);
+        hint_timeout_cb ();
+
+        if (_inspecting)
+            return;
+
+        /* 30s penalty */
+        start_clock ();
+        clock_elapsed += 30.0;
+        tick ();
+    }
+
+    public void autoplay_end_game () {
+        if (!all_tiles_unblocked)
+            return;
+
+        autoplay_end_game_timeout = Timeout.add (500, autoplay_end_game_timeout_cb);
+        autoplay_end_game_timeout_cb ();
     }
 
     private void create_tiles () {
         foreach (unowned var slot in map.slots)
-            tiles.insert_sorted (new Tile (slot), compare_tiles);
+            tiles.append (new Tile (slot));
 
         foreach (unowned var tile in tiles) {
             unowned var slot = tile.slot;
@@ -445,55 +523,6 @@ public class Game {
                 }
             }
         }
-    }
-
-    private void generate_game () {
-        var n_pairs = (int) tiles.length () / 2;
-        var pair_numbers = new int[n_pairs];
-
-        /* Reset game */
-        reset_clock ();
-        move_number = 1;
-        selected_tile = null;
-        inspecting = false;
-        reset_hint ();
-
-        /* Create tile pair numbers */
-        for (var i = 0; i < n_pairs; i++)
-            pair_numbers[i] = i * 2;
-
-        /* Choose tile pairs until we have a solvable board */
-        random = new Rand.with_seed (seed);
-        pair_numbers = shuffle_pair_numbers (pair_numbers);
-        choose_tile_pairs (pair_numbers);
-
-        /* The algorithm has "finished" the game. Make all tiles visible again for
-         * the player. */
-        foreach (unowned var tile in tiles) {
-            tile.visible = true;
-            tile.move_number = 0;
-        }
-        redraw_all_tiles ();
-    }
-
-    private void restore_game (GameSave save) {
-        move_number = save.move_number;
-        clock_elapsed = save.elapsed_time;
-        seed = save.seed;
-
-        foreach (unowned var tile in tiles) {
-            foreach (unowned var t in save.tiles) {
-                if (tile.slot.equals (t.slot)) {
-                    tile.number = t.number;
-                    tile.move_number = t.move_number;
-                    tile.visible = t.visible;
-                }
-            }
-        }
-
-        redraw_all_tiles ();
-        clock = new Timer ();
-        paused = true;
     }
 
     private unowned int[] shuffle_pair_numbers (int[] pair_numbers) {
@@ -593,40 +622,15 @@ public class Game {
                 redraw_tile (tile);
     }
 
-    private void redraw_hint_tile (Tile? tile) {
-        if (tile == null)
+    private void redraw_hint_match (Match? match) {
+        if (match == null)
             return;
 
-        tile.highlighted = hint_blink_counter % 2 != 0 || tile == selected_tile;
-        redraw_tile (tile);
-    }
+        match.tile0.highlighted = hint_blink_counter % 2 != 0 || match.tile0 == selected_tile;
+        redraw_tile (match.tile0);
 
-    private void reset_hint () {
-        set_hint (null, null);
-    }
-
-    private void set_hint (Tile? tile0, Tile? tile1) {
-        /* Stop hints */
-        remove_hint_timeout ();
-
-        if (tile0 == null && tile1 == null) {
-            hint_matches = null;
-            return;
-        }
-
-        hint_tiles[0] = tile0;
-        hint_tiles[1] = tile1;
-        hint_blink_counter = 6;
-        hint_timeout = Timeout.add (250, hint_timeout_cb);
-        hint_timeout_cb ();
-
-        if (inspecting)
-            return;
-
-        /* 30s penalty */
-        start_clock ();
-        clock_elapsed += 30.0;
-        tick ();
+        match.tile1.highlighted = hint_blink_counter % 2 != 0 || match.tile1 == selected_tile;
+        redraw_tile (match.tile1);
     }
 
     private void remove_hint_timeout () {
@@ -635,8 +639,7 @@ public class Game {
         hint_timeout = 0;
         hint_blink_counter = 0;
 
-        redraw_hint_tile (hint_tiles[0]);
-        redraw_hint_tile (hint_tiles[1]);
+        redraw_hint_match (hint_match);
     }
 
     private bool hint_timeout_cb () {
@@ -645,17 +648,8 @@ public class Game {
             return false;
         }
         hint_blink_counter--;
-        redraw_hint_tile (hint_tiles[0]);
-        redraw_hint_tile (hint_tiles[1]);
+        redraw_hint_match (hint_match);
         return true;
-    }
-
-    public void autoplay_end_game () {
-        if (!all_tiles_unblocked)
-            return;
-
-        autoplay_end_game_timeout = Timeout.add (500, autoplay_end_game_timeout_cb);
-        autoplay_end_game_timeout_cb ();
     }
 
     private void remove_autoplay_end_game_timeout () {
@@ -665,13 +659,13 @@ public class Game {
     }
 
     private bool autoplay_end_game_timeout_cb () {
-        if (moves_left == 0) {
+        var match = next_hint ();
+        if (match == null) {
             remove_autoplay_end_game_timeout ();
             return false;
         }
 
-        var m = find_matches ()[0];
-        remove_pair (m.tile0, m.tile1);
+        remove_pair (match.tile0, match.tile1);
         return true;
     }
 

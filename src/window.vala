@@ -56,7 +56,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         }
     }
 
-    public MahjonggWindow (Gtk.Application application, List<Map> maps) {
+    public MahjonggWindow (Gtk.Application application, MapLoader map_loader) {
         Object (application: application);
 
         var menu_builder = new Gtk.Builder.from_resource (application.resource_base_path + "/ui/menu.ui");
@@ -65,7 +65,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
         layout_menu.remove_all ();
 
-        foreach (unowned var map in maps) {
+        foreach (unowned var map in map_loader.maps) {
             var menu_label = dpgettext2 (null, "mahjongg map name", map.name);
             var menu_item = new MenuItem (menu_label, null);
             menu_item.set_action_and_target_value ("app.layout", new Variant.string (map.name));

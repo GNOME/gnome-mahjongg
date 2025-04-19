@@ -27,6 +27,7 @@ datadir     = get_option('prefix') / get_option('datadir')
 pkgdatadir  = datadir / 'gnome-mahjongg'
 bindir      = get_option('prefix') / get_option('bindir')
 podir       = meson.project_source_root() / 'po'
+srcdir      = meson.project_source_root() / 'src'
 
 # Dependencies
 glib_dep    = dependency('glib-2.0', version: '>= 2.40.0')
@@ -39,6 +40,7 @@ subdir('po')
 subdir('data')
 subdir('help')
 subdir('src')
+subdir('tests')
 
 gnome.post_install(
   gtk_update_icon_cache: true,

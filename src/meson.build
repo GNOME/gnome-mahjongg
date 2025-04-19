@@ -3,17 +3,17 @@
 
 gnome_mahjongg = executable(
   meson.project_name(),
-  resources + [
+  resources + files(
     'config.vapi',
     'game.vala',
+    'game-save.vala',
     'game-view.vala',
     'gnome-mahjongg.vala',
     'history.vala',
-    'game-save.vala',
     'map.vala',
     'score-dialog.vala',
     'window.vala',
-  ],
+  ),
   dependencies: [
     glib_dep,
     gtk_dep,

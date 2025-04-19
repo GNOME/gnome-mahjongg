@@ -17,6 +17,7 @@
             "config-opts" : [
                 "-Dprofile=development"
             ],
+            "run-tests" : true,
             "sources" : [
                 {
                     "type" : "git",

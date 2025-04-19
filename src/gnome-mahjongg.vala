@@ -5,7 +5,7 @@
 public class Mahjongg : Adw.Application {
     private History history;
     private GameSave game_save;
-    private List<Map> maps;
+    private MapLoader map_loader;
 
     private Settings settings;
     private MahjonggWindow window;
@@ -62,12 +62,14 @@ public class Mahjongg : Adw.Application {
     }
 
     private void create_window () {
-        load_maps ();
+        map_loader = new MapLoader ();
+        map_loader.load_builtin ();
+        map_loader.load_folder (Path.build_filename (DATA_DIRECTORY, "maps"));
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
         history.load ();
 
-        window = new MahjonggWindow (this, maps);
+        window = new MahjonggWindow (this, map_loader);
 
         var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
         primary_game_view = new GameView (using_cairo);
@@ -210,7 +212,6 @@ public class Mahjongg : Adw.Application {
             history.add (completed_entry);
             history.save ();
             game_save.delete ();
-            game_view.game.inspecting = true;
             show_scores (completed_entry.name, completed_entry);
         }
         else if (!game_view.game.can_move) {
@@ -251,7 +252,7 @@ public class Mahjongg : Adw.Application {
     }
 
     private void show_scores (string selected_layout = "", HistoryEntry? completed_entry = null) {
-        new ScoreDialog (history, maps, selected_layout, completed_entry).present (window);
+        new ScoreDialog (history, map_loader, selected_layout, completed_entry).present (window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {
@@ -298,7 +299,8 @@ public class Mahjongg : Adw.Application {
     }
 
     private void hint_cb () {
-        game_view.game.show_hint ();
+        var match = game_view.game.next_hint ();
+        game_view.game.set_hint (match);
         update_ui ();
     }
 
@@ -398,7 +400,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private unowned Map? find_map_by_name (string name) {
-        foreach (unowned var m in maps) {
+        foreach (unowned var m in map_loader.maps) {
             if (m.name == name) {
                 return m;
             }
@@ -411,17 +413,17 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
         // Map wasn't found. Get the default (first) map.
         if (map == null)
-            map = maps.nth_data (0);
+            map = map_loader.maps.nth_data (0);
 
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
-                var map_index = (maps.index (map) + 1) % (int) maps.length ();
-                map = maps.nth_data (map_index);
+                var map_index = (map_loader.maps.index (map) + 1) % (int) map_loader.maps.length ();
+                map = map_loader.maps.nth_data (map_index);
                 break;
             case "random":
-                var map_index = Random.int_range (0, (int) maps.length ());
-                map = maps.nth_data (map_index);
+                var map_index = Random.int_range (0, (int) map_loader.maps.length ());
+                map = map_loader.maps.nth_data (map_index);
                 break;
             }
         }
@@ -503,12 +505,13 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
 
     private void start_game (bool rotate_map, Map map, bool use_game_save = false) {
         new_game_view (rotate_map);
+        game_view.game = new Game (map);
 
         if (use_game_save) {
-            game_view.game = new Game (map, game_save);
+            game_view.game.restore (game_save);
             window.pause ();
         } else {
-            game_view.game = new Game (map);
+            game_view.game.generate ();
             window.unpause ();
         }
 
@@ -546,42 +549,6 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             }
         });
 
-    }
-
-    private void load_maps () {
-        maps = null;
-
-        /* Add the builtin map */
-        maps.append (new Map.builtin ());
-
-        Dir dir;
-        try {
-            dir = Dir.open (Path.build_filename (DATA_DIRECTORY, "maps"));
-        }
-        catch (FileError e) {
-            return;
-        }
-
-        while (true) {
-            var filename = dir.read_name ();
-            if (filename == null)
-                break;
-
-            if (!filename.has_suffix (".map"))
-                continue;
-
-            var loader = new MapLoader ();
-            var path = Path.build_filename (DATA_DIRECTORY, "maps", filename);
-            try {
-                loader.load (path);
-            }
-            catch (Error e) {
-                warning ("Could not load map %s: %s\n", path, e.message);
-                continue;
-            }
-            foreach (unowned var map in loader.maps)
-                maps.append (map);
-        }
     }
 
     public static int main (string[] args) {

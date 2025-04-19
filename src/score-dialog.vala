@@ -44,7 +44,7 @@ public class ScoreDialog : Adw.Dialog {
     private HistoryEntry? completed_entry;
     private Gtk.ListItem? selected_item;
     private ListStore score_model;
-    private unowned List<Map> maps;
+    private MapLoader map_loader;
     private string[] layout_names;
 
     private const ActionEntry[] ACTION_ENTRIES = {
@@ -75,9 +75,9 @@ public class ScoreDialog : Adw.Dialog {
         }
     }
 
-    public ScoreDialog (History history, List<Map> maps, string selected_layout = "",
+    public ScoreDialog (History history, MapLoader map_loader, string selected_layout = "",
                         HistoryEntry? completed_entry = null) {
-        this.maps = maps;
+        this.map_loader = map_loader;
         this.history = history;
         this.completed_entry = completed_entry;
 
@@ -122,7 +122,7 @@ public class ScoreDialog : Adw.Dialog {
         var menu = new Menu ();
         layout_button.menu_model = menu;
 
-        foreach (unowned var map in maps)
+        foreach (unowned var map in map_loader.maps)
             add_layout (menu, map.score_name);
 
         foreach (unowned var entry in history.entries)
@@ -131,7 +131,7 @@ public class ScoreDialog : Adw.Dialog {
         if (completed_entry != null)
             selected_layout = completed_entry.name;
         else if (selected_layout == "")
-            selected_layout = maps.first ().data.score_name;
+            selected_layout = map_loader.maps.first ().data.score_name;
 
         unowned var action = action_group.lookup_action ("layout") as SimpleAction;
         action.set_state (new Variant.string (selected_layout));
@@ -319,7 +319,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private string get_map_display_name (string name) {
-        unowned var map = maps.first ();
+        unowned var map = map_loader.maps.first ();
         var display_name = name;
         do {
             if (map.data.score_name == name) {
