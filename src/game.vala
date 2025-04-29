@@ -267,6 +267,7 @@ public class Game {
         move_number = save.move_number;
         clock_elapsed = save.elapsed_time;
         _seed = save.seed;
+        random = new Rand.with_seed (_seed);
 
         foreach (unowned var tile in tiles) {
             foreach (unowned var t in save.tiles) {
