@@ -322,14 +322,16 @@ public class Game {
         redraw_tile (tile0);
         redraw_tile (tile1);
 
-        if (complete) {
+        if (complete)
             stop_clock ();
-            _inspecting = true;
-        } else {
+        else
             start_clock ();
-        }
 
         moved ();
+
+        if (complete)
+            _inspecting = true;
+
         return true;
     }
 
