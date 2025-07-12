@@ -562,7 +562,6 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         Intl.textdomain (GETTEXT_PACKAGE);
 
         Environment.set_application_name (_("Mahjongg"));
-        Gtk.Window.set_default_icon_name (APP_ID);
 
         typeof (GameView).ensure ();
         var app = new Mahjongg ();
