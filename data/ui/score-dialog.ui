@@ -5,6 +5,7 @@
   <template class="ScoreDialog" parent="AdwDialog">
     <property name="content-width">360</property>
     <property name="content-height">500</property>
+    <property name="title" translatable="yes">Scores</property>
     <child>
       <object class="AdwToolbarView" id="toolbar_view">
         <property name="reveal-bottom-bars">False</property>
