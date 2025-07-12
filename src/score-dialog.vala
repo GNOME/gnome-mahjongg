@@ -214,7 +214,11 @@ public class ScoreDialog : Adw.Dialog {
 
         factory.setup.connect ((factory, object) => {
             var stack = new Gtk.Stack ();
-            stack.add_named (new Gtk.Inscription (null), "label");
+            var inscription = new Gtk.Inscription (null) {
+                text_overflow = Gtk.InscriptionOverflow.ELLIPSIZE_END,
+                valign = Gtk.Align.CENTER
+            };
+            stack.add_named (inscription, "label");
 
             unowned var list_item = object as Gtk.ListItem;
             var entry_input = new Gtk.Entry () {
@@ -246,7 +250,7 @@ public class ScoreDialog : Adw.Dialog {
                 stack.visible_child_name = "label";
                 unowned var inscription = stack.visible_child as Gtk.Inscription;
                 inscription.text = entry.player;
-                inscription.tooltip_text = entry.date.format ("%x");
+                inscription.tooltip_text = "%s\n%s".printf (entry.player, entry.date.format ("%x"));
             }
         });
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
