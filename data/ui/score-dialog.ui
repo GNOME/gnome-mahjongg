@@ -104,7 +104,7 @@
                 <property name="hexpand">True</property>
                 <child type="center">
                   <object class="GtkButton" id="new_game_button">
-                    <property name="label">_New Game</property>
+                    <property name="label" translatable="yes">_New Game</property>
                     <property name="action-name">app.new-game</property>
                     <property name="can-shrink">True</property>
                     <property name="use-underline">True</property>
