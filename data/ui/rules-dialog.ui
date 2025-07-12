@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+<interface>
+  <template class="RulesDialog" parent="AdwPreferencesDialog">
+    <property name="content-width">600</property>
+    <property name="title" translatable="yes">Game Rules</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">Clear the board by matching pairs of identical tiles</property>
+                <child type="prefix">
+                  <object class="GtkImage" id="game_image"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">Only uncovered tiles with a free long edge can be selected</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">object-select-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">Rounds are scored based on completion time</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">document-open-recent-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">You can pause the game</property>
+                <property name="subtitle" translatable="yes" context="game rules">Tile faces will be hidden</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">media-playback-pause-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">You can undo or redo a move</property>
+                <property name="subtitle" translatable="yes" context="game rules">No time penalty is added</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">edit-undo-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">You can use hints to reveal matching tiles</property>
+                <property name="subtitle" translatable="yes" context="game rules">Adds a 30-second time penalty</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">dialog-information-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes" context="game rules">You can shuffle tiles when no moves are left</property>
+                <property name="subtitle" translatable="yes" context="game rules">Adds a 60-second time penalty</property>
+                <child type="prefix">
+                  <object class="GtkImage">
+                    <property name="icon-name">media-playlist-shuffle-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

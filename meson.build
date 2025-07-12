@@ -38,7 +38,6 @@ librsvg_dep = dependency('librsvg-2.0', version: '>= 2.46.0')
 
 subdir('po')
 subdir('data')
-subdir('help')
 subdir('src')
 subdir('tests')
 

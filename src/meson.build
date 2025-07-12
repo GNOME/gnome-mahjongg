@@ -11,6 +11,7 @@ gnome_mahjongg = executable(
     'gnome-mahjongg.vala',
     'history.vala',
     'map.vala',
+    'rules-dialog.vala',
     'score-dialog.vala',
     'window.vala',
   ),

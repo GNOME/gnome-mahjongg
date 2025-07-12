@@ -30,7 +30,7 @@ public class Mahjongg : Adw.Application {
         { "layout-rotation", null, "s", "''", layout_rotation_cb },
         { "background-color", null, "s", "''", background_color_cb },
         { "theme", null, "s", "''", theme_cb },
-        { "help", help_cb },
+        { "rules", rules_cb },
         { "about", about_cb },
         { "quit", quit_cb }
     };
@@ -54,7 +54,7 @@ public class Mahjongg : Adw.Application {
         set_accels_for_action ("app.hint", { "<Primary>h" });
         set_accels_for_action ("app.undo", { "<Primary>z" });
         set_accels_for_action ("app.redo", { "<Shift><Primary>z" });
-        set_accels_for_action ("app.help", { "F1" });
+        set_accels_for_action ("app.rules", { "F1" });
         set_accels_for_action ("app.quit", { "<Primary>q" });
         set_accels_for_action ("window.close", { "<Primary>w" });
 
@@ -512,18 +512,8 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         window.clock = clock;
     }
 
-    private void help_cb () {
-        unowned var display = Gdk.Display.get_default ();
-        var context = display.get_app_launch_context ();
-
-        GLib.AppInfo.launch_default_for_uri_async.begin ("help:gnome-mahjongg", context, null, (obj, res) => {
-            try {
-                GLib.AppInfo.launch_default_for_uri_async.end (res);
-            } catch (Error error) {
-                warning ("Could not open help: %s", error.message);
-            }
-        });
-
+    private void rules_cb () {
+        new RulesDialog ().present (window);
     }
 
     public static int main (string[] args) {

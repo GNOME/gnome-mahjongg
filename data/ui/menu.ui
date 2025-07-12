@@ -115,8 +115,8 @@
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Help</attribute>
-        <attribute name="action">app.help</attribute>
+        <attribute name="label" translatable="yes">Game R_ules</attribute>
+        <attribute name="action">app.rules</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
