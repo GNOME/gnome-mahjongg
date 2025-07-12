@@ -326,7 +326,9 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
                 "Jeremy Bicha",
                 "Alberto Ruiz",
                 "Günther Wagner",
-                "Mathias Bonn"
+                "Mathias Bonn",
+                "K Davis",
+                "François Godin"
             },
             artists = {
                 "Jonathan Buzzard",
