@@ -92,8 +92,11 @@ public class ScoreDialog : Adw.Dialog {
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
             score_view.add_controller (controller);
-            focus_widget = score_view;
+
+            this.focus_widget = score_view;
         }
+        else
+            this.focus_widget = layout_button;
 
         clear_scores_button.clicked.connect (clear_scores_cb);
         closed.connect (closed_cb);
