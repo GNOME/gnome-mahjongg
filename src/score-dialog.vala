@@ -14,7 +14,7 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Gtk.Stack header_stack;
 
     [GtkChild]
-    private unowned Gtk.MenuButton layout_button;
+    private unowned Gtk.DropDown layout_dropdown;
 
     [GtkChild]
     private unowned Adw.WindowTitle title_widget;
@@ -42,35 +42,7 @@ public class ScoreDialog : Adw.Dialog {
     private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private MapLoader map_loader;
-    private string[] layout_names;
-
-    private const ActionEntry[] ACTION_ENTRIES = {
-        { "layout", null, "s", "''", set_map_cb }
-    };
-
-    private string score_map {
-        set {
-            var sorted_entries = history.entries.copy ();
-            sorted_entries.sort (player_sorter_cb);
-            sorted_entries.sort (date_sorter_cb);
-            sorted_entries.sort (rank_sorter_cb);
-
-            layout_button.label = get_map_display_name (value);
-            score_model.remove_all ();
-
-            foreach (unowned var entry in sorted_entries) {
-                if (entry.name == value)
-                    score_model.append (entry);
-            }
-
-            if (score_model.n_items > 0) {
-                content_stack.visible_child_name = "scores";
-                score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
-                return;
-            }
-            content_stack.visible_child_name = "no-scores";
-        }
-    }
+    private HashTable<string, string> display_names = new HashTable<string, string> (str_hash, str_equal);
 
     public ScoreDialog (History history, MapLoader map_loader, string selected_layout = "",
                         HistoryEntry? completed_entry = null) {
@@ -79,6 +51,7 @@ public class ScoreDialog : Adw.Dialog {
         this.completed_entry = completed_entry;
 
         set_up_score_view ();
+        set_up_layout_dropdown ();
         set_up_layout_menu (selected_layout);
         clear_scores_button.sensitive = history.entries.length () > 0;
 
@@ -96,46 +69,45 @@ public class ScoreDialog : Adw.Dialog {
             this.focus_widget = score_view;
         }
         else
-            this.focus_widget = layout_button;
+            this.focus_widget = layout_dropdown;
 
         clear_scores_button.clicked.connect (clear_scores_cb);
         closed.connect (closed_cb);
     }
 
-    private void add_layout (Menu menu, string layout_name) {
-        if (layout_name in layout_names)
-            return;
-
+    private void add_layout (Gtk.StringList model, string layout_name) {
         var display_name = get_map_display_name (layout_name);
-        var menu_item = new MenuItem (display_name, null);
-        menu_item.set_action_and_target_value ("scores.layout", new Variant.string (layout_name));
 
-        menu.append_item (menu_item);
-        layout_names += layout_name;
+        if (model.find (display_name) == uint.MAX)
+            model.append (display_name);
+    }
+
+    private void set_up_layout_dropdown () {
+        unowned var button = layout_dropdown.get_first_child () as Gtk.Button;
+        unowned var popover = layout_dropdown.get_last_child () as Gtk.Popover;
+
+        button.set_has_frame (false);
+        popover.set_halign (Gtk.Align.CENTER);
     }
 
     private void set_up_layout_menu (string selected_layout) {
-        var action_group = new SimpleActionGroup ();
-        action_group.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("scores", action_group);
-
-        var menu = new Menu ();
-        layout_button.menu_model = menu;
+        var display_name = get_map_display_name (selected_layout);
+        var model = new Gtk.StringList (null);
+        layout_dropdown.model = model;
 
         foreach (unowned var map in map_loader.maps)
-            add_layout (menu, map.score_name);
+            add_layout (model, map.score_name);
 
         foreach (unowned var entry in history.entries)
-            add_layout (menu, entry.name);
+            add_layout (model, entry.name);
 
         if (completed_entry != null)
             selected_layout = completed_entry.name;
         else if (selected_layout == "")
-            selected_layout = map_loader.maps.first ().data.score_name;
+            selected_layout = model.get_string (0);
 
-        unowned var action = action_group.lookup_action ("layout") as SimpleAction;
-        action.set_state (new Variant.string (selected_layout));
-        score_map = selected_layout;
+        layout_dropdown.notify["selected"].connect (layout_selected_cb);
+        layout_dropdown.set_selected (model.find (display_name));
     }
 
     private void set_up_score_view () {
@@ -286,11 +258,15 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private string get_map_display_name (string name) {
+        if (display_names.contains (name))
+            return display_names.get (name);
+
         unowned var map = map_loader.maps.first ();
         var display_name = name;
         do {
             if (map.data.score_name == name) {
                 display_name = dpgettext2 (null, "mahjongg map name", map.data.name);
+                display_names.insert (name, display_name);
                 break;
             }
         }
@@ -298,10 +274,28 @@ public class ScoreDialog : Adw.Dialog {
         return display_name;
     }
 
-    private void set_map_cb (SimpleAction action, Variant variant) {
-        var name = variant.get_string ();
-        action.set_state (variant);
-        score_map = name;
+    private void layout_selected_cb () {
+        unowned var selected_item = layout_dropdown.get_selected_item () as Gtk.StringObject;
+        var selected_name = selected_item.string;
+
+        var sorted_entries = history.entries.copy ();
+        sorted_entries.sort (player_sorter_cb);
+        sorted_entries.sort (date_sorter_cb);
+        sorted_entries.sort (rank_sorter_cb);
+
+        score_model.remove_all ();
+
+        foreach (unowned var entry in sorted_entries) {
+            if (get_map_display_name (entry.name) == selected_name)
+                score_model.append (entry);
+        }
+
+        if (score_model.n_items > 0) {
+            content_stack.visible_child_name = "scores";
+            score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
+            return;
+        }
+        content_stack.visible_child_name = "no-scores";
     }
 
     private void score_view_focus_cb () {
