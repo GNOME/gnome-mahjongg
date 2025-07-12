@@ -375,7 +375,8 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void quit_cb () {
-        window.destroy ();
+        if (window != null)
+            window.close ();
     }
 
     private void redo_cb () {
