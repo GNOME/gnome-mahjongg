@@ -29,13 +29,10 @@ public class ScoreDialog : Adw.Dialog {
     private unowned Gtk.ColumnViewColumn rank_column;
 
     [GtkChild]
-    private unowned Gtk.ColumnViewColumn player_column;
-
-    [GtkChild]
     private unowned Gtk.ColumnViewColumn time_column;
 
     [GtkChild]
-    private unowned Gtk.ColumnViewColumn date_column;
+    private unowned Gtk.ColumnViewColumn player_column;
 
     [GtkChild]
     private unowned Gtk.Button new_game_button;
@@ -140,9 +137,8 @@ public class ScoreDialog : Adw.Dialog {
 
     private void set_up_score_view () {
         set_up_rank_column ();
-        set_up_player_column ();
         set_up_time_column ();
-        set_up_date_column ();
+        set_up_player_column ();
 
         score_model = new ListStore (typeof (HistoryEntry));
         var sort_model = new Gtk.SortListModel (score_model, score_view.sorter);
@@ -173,23 +169,20 @@ public class ScoreDialog : Adw.Dialog {
 
         factory.setup.connect ((factory, object) => {
             unowned var list_item = object as Gtk.ListItem;
-            var label = new Gtk.Label (null) {
-                width_chars = 3,
-                xalign = 0
-            };
-            label.add_css_class ("caption");
-            label.add_css_class ("numeric");
-            list_item.child = label;
+            var inscription = new Gtk.Inscription (null);
+            inscription.add_css_class ("caption");
+            inscription.add_css_class ("numeric");
+            list_item.child = inscription;
         });
         factory.bind.connect ((factory, object) => {
             unowned var list_item = object as Gtk.ListItem;
-            unowned var label = list_item.child as Gtk.Label;
+            unowned var inscription = list_item.child as Gtk.Inscription;
             unowned var entry = list_item.item as HistoryEntry;
 
             uint position;
             score_model.find (entry, out position);
 
-            label.label = (position + 1).to_string ();
+            inscription.text = (position + 1).to_string ();
         });
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
@@ -210,6 +203,34 @@ public class ScoreDialog : Adw.Dialog {
             else
                 history_entry.player = entry_input.text;
         });
+    }
+
+    private void set_up_time_column () {
+        var factory = new Gtk.SignalListItemFactory ();
+
+        factory.setup.connect ((factory, object) => {
+            unowned var list_item = object as Gtk.ListItem;
+            var inscription = new Gtk.Inscription (null);
+
+            inscription.add_css_class ("numeric");
+            list_item.child = inscription;
+        });
+        factory.bind.connect ((factory, object) => {
+            unowned var list_item = object as Gtk.ListItem;
+            unowned var inscription = list_item.child as Gtk.Inscription;
+            unowned var entry = list_item.item as HistoryEntry;
+
+            var time_label = "%us".printf (entry.duration);
+            if (entry.duration >= 60)
+                time_label = "%um %us".printf (entry.duration / 60, entry.duration % 60);
+            if (entry == completed_entry)
+                inscription.add_css_class ("heading");
+
+            inscription.text = time_label;
+        });
+
+        time_column.sorter = rank_column.sorter;
+        time_column.factory = factory;
     }
 
     private void set_up_player_column () {
@@ -250,6 +271,7 @@ public class ScoreDialog : Adw.Dialog {
                 stack.visible_child_name = "label";
                 unowned var inscription = stack.visible_child as Gtk.Inscription;
                 inscription.text = entry.player;
+                inscription.tooltip_text = entry.date.format ("%x");
             }
         });
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
@@ -258,64 +280,6 @@ public class ScoreDialog : Adw.Dialog {
 
         player_column.sorter = sorter;
         player_column.factory = factory;
-    }
-
-    private void set_up_time_column () {
-        var factory = new Gtk.SignalListItemFactory ();
-
-        factory.setup.connect ((factory, object) => {
-            unowned var list_item = object as Gtk.ListItem;
-            var label = new Gtk.Inscription (null);
-
-            label.add_css_class ("numeric");
-            list_item.child = label;
-        });
-        factory.bind.connect ((factory, object) => {
-            unowned var list_item = object as Gtk.ListItem;
-            unowned var label = list_item.child as Gtk.Inscription;
-            unowned var entry = list_item.item as HistoryEntry;
-
-            var time_label = "%us".printf (entry.duration);
-            if (entry.duration >= 60)
-                time_label = "%um %us".printf (entry.duration / 60, entry.duration % 60);
-            if (entry == completed_entry)
-                label.add_css_class ("heading");
-
-            label.text = time_label;
-        });
-
-        time_column.sorter = rank_column.sorter;
-        time_column.factory = factory;
-    }
-
-    private void set_up_date_column () {
-        var factory = new Gtk.SignalListItemFactory ();
-        var sorter = new Gtk.MultiSorter ();
-
-        factory.setup.connect ((factory, object) => {
-            unowned var list_item = object as Gtk.ListItem;
-            var label = new Gtk.Label (null) { xalign = 0 };
-
-            label.add_css_class ("numeric");
-            list_item.child = label;
-        });
-        factory.bind.connect ((factory, object) => {
-            unowned var list_item = object as Gtk.ListItem;
-            unowned var label = list_item.child as Gtk.Label;
-            unowned var entry = list_item.item as HistoryEntry;
-
-            var date_label = entry.date.format ("%x");
-            if (entry == completed_entry)
-                label.add_css_class ("heading");
-
-            label.label = date_label;
-        });
-        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
-        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
-        sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
-
-        date_column.sorter = sorter;
-        date_column.factory = factory;
     }
 
     private string get_map_display_name (string name) {

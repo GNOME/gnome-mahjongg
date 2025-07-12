@@ -68,14 +68,8 @@
                         <property name="tab-behavior">item</property>
                         <child>
                           <object class="GtkColumnViewColumn" id="rank_column">
-                            <property name="title">#</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkColumnViewColumn" id="player_column">
-                            <property name="title" translatable="yes">Player</property>
-                            <property name="expand">True</property>
-                            <property name="fixed-width">0</property>
+                            <property name="title" translatable="yes">Rank</property>
+                            <property name="fixed-width">85</property>
                           </object>
                         </child>
                         <child>
@@ -86,8 +80,10 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkColumnViewColumn" id="date_column">
-                            <property name="title" translatable="yes">Date</property>
+                          <object class="GtkColumnViewColumn" id="player_column">
+                            <property name="title" translatable="yes">Player</property>
+                            <property name="expand">True</property>
+                            <property name="fixed-width">0</property>
                           </object>
                         </child>
                       </object>
