@@ -54,8 +54,9 @@ public class Mahjongg : Adw.Application {
         set_accels_for_action ("app.hint", { "<Primary>h" });
         set_accels_for_action ("app.undo", { "<Primary>z" });
         set_accels_for_action ("app.redo", { "<Shift><Primary>z" });
-        set_accels_for_action ("app.help", { "F1", "<Primary>question" });
-        set_accels_for_action ("app.quit", { "<Primary>q", "<Primary>w" });
+        set_accels_for_action ("app.help", { "F1" });
+        set_accels_for_action ("app.quit", { "<Primary>q" });
+        set_accels_for_action ("window.close", { "<Primary>w" });
 
         settings = new Settings (application_id);
         settings.delay ();

@@ -5,6 +5,7 @@ data/org.gnome.Mahjongg.gschema.xml.in
 data/org.gnome.Mahjongg.metainfo.xml.in.in
 data/ui/menu.ui
 data/ui/score-dialog.ui
+data/ui/shortcuts-dialog.ui
 data/ui/window.ui
 src/game.vala
 src/game-view.vala

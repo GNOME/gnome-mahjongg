@@ -11,6 +11,7 @@
     <file alias="metainfo.xml" preprocess="xml-stripblanks" compressed="true">@app-id@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">ui/menu.ui</file>
     <file preprocess="xml-stripblanks">ui/score-dialog.ui</file>
+    <file alias="shortcuts-dialog.ui" preprocess="xml-stripblanks">ui/shortcuts-dialog.ui</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file alias="style.css">css/style.css</file>
     <file alias="style-dark.css">css/style-dark.css</file>
