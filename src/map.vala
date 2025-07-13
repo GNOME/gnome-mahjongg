@@ -239,12 +239,37 @@ public class Map {
 }
 
 public class MapLoader {
-    public List<Map> maps;
+    private Map[] maps;
     private Map? map;
     private int layer_z;
 
+    public int length {
+        get { return maps.length; }
+    }
+
+    public class Iterator {
+        private int index;
+        private MapLoader map_loader;
+
+        public Iterator (MapLoader map_loader) {
+            this.map_loader = map_loader;
+        }
+
+        public bool next () {
+            return index < map_loader.length;
+        }
+
+        public unowned Map get () {
+            return map_loader.get_map_at_position (index++);
+        }
+    }
+
+    public Iterator iterator () {
+        return new Iterator (this);
+    }
+
     public void load_builtin () {
-        maps.append (new Map.builtin ());
+        maps += new Map.builtin ();
     }
 
     public void load_folder (string folder_path) {
@@ -273,6 +298,50 @@ public class MapLoader {
                 continue;
             }
         }
+    }
+
+    public unowned Map? get_map_by_name (string name) {
+        foreach (unowned var map in maps) {
+            if (map.name == name) {
+                return map;
+            }
+        }
+        return null;
+    }
+
+    public unowned Map? get_map_at_position (int position) {
+        if (position >= 0 && position < length)
+            return maps[position];
+        return null;
+    }
+
+    public unowned Map get_next_map (Map map) {
+        int map_index = -1;
+        for (int i = 0; i < length; i++) {
+            if (maps[i] == map) {
+                map_index = i;
+                break;
+            }
+        }
+        var next_map_index = (map_index + 1) % (int) length;
+        return get_map_at_position (next_map_index);
+    }
+
+    public unowned Map get_random_map () {
+        var map_index = Random.int_range (0, (int) length);
+        return get_map_at_position (map_index);
+    }
+
+    public string get_map_display_name (string name) {
+        var display_name = name;
+
+        foreach (var map in maps) {
+            if (map.score_name == name) {
+                display_name = dpgettext2 (null, "mahjongg map name", map.name);
+                break;
+            }
+        }
+        return display_name;
     }
 
     private void load_file (string filename) throws Error {
@@ -373,7 +442,7 @@ public class MapLoader {
         case "map":
             var n_slots = map.slots.length ();
             if (map.name != null && map.score_name != null && n_slots <= 144 && n_slots % 2 == 0)
-                maps.append (map);
+                maps += map;
             else
                 warning ("Invalid map");
             map = null;

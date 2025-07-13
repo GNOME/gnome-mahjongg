@@ -42,7 +42,6 @@ public class ScoreDialog : Adw.Dialog {
     private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private MapLoader map_loader;
-    private HashTable<string, string> display_names = new HashTable<string, string> (str_hash, str_equal);
 
     public ScoreDialog (History history, MapLoader map_loader, string selected_layout = "",
                         HistoryEntry? completed_entry = null) {
@@ -60,7 +59,7 @@ public class ScoreDialog : Adw.Dialog {
             toolbar_view.reveal_bottom_bars = true;
 
             header_stack.visible_child_name = "title";
-            title_widget.subtitle = _("Layout: %s").printf (get_map_display_name (completed_entry.name));
+            title_widget.subtitle = _("Layout: %s").printf (map_loader.get_map_display_name (completed_entry.name));
 
             var controller = new Gtk.EventControllerFocus ();
             controller.enter.connect (score_view_focus_cb);
@@ -76,7 +75,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void add_layout (Gtk.StringList model, string layout_name) {
-        var display_name = get_map_display_name (layout_name);
+        var display_name = map_loader.get_map_display_name (layout_name);
 
         if (model.find (display_name) == uint.MAX)
             model.append (display_name);
@@ -91,11 +90,11 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void set_up_layout_menu (string selected_layout) {
-        var display_name = get_map_display_name (selected_layout);
+        var display_name = map_loader.get_map_display_name (selected_layout);
         var model = new Gtk.StringList (null);
         layout_dropdown.model = model;
 
-        foreach (unowned var map in map_loader.maps)
+        foreach (unowned var map in map_loader)
             add_layout (model, map.score_name);
 
         foreach (unowned var entry in history.entries)
@@ -261,23 +260,6 @@ public class ScoreDialog : Adw.Dialog {
         player_column.factory = factory;
     }
 
-    private string get_map_display_name (string name) {
-        if (display_names.contains (name))
-            return display_names.get (name);
-
-        unowned var map = map_loader.maps.first ();
-        var display_name = name;
-        do {
-            if (map.data.score_name == name) {
-                display_name = dpgettext2 (null, "mahjongg map name", map.data.name);
-                display_names.insert (name, display_name);
-                break;
-            }
-        }
-        while ((map = map.next) != null);
-        return display_name;
-    }
-
     private void layout_selected_cb () {
         unowned var selected_item = layout_dropdown.selected_item as Gtk.StringObject;
         var selected_name = selected_item.string;
@@ -287,7 +269,7 @@ public class ScoreDialog : Adw.Dialog {
         score_model.remove_all ();
 
         foreach (unowned var entry in history.entries)
-            if (get_map_display_name (entry.name) == selected_name)
+            if (map_loader.get_map_display_name (entry.name) == selected_name)
                 entry_list.prepend (entry);
 
         entry_list.sort (player_sorter_cb);

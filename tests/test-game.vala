@@ -424,10 +424,9 @@ private void test_seed_snapshot_turtle () {
 private void test_seed_snapshot_difficult () {
     var map_loader = new MapLoader ();
     map_loader.load_folder ("../data/maps/");
-    var num_maps = map_loader.maps.length ();
-    assert_true (num_maps >= 1);
+    assert_true (map_loader.length >= 1);
 
-    var difficult_map = map_loader.maps.nth_data (num_maps - 1);
+    var difficult_map = map_loader.get_map_at_position (map_loader.length - 1);
     var game = generate_game (difficult_map);
 
     verify_tiles (

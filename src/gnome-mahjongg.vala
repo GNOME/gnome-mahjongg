@@ -403,31 +403,20 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         update_ui ();
     }
 
-    private unowned Map? find_map_by_name (string name) {
-        foreach (unowned var m in map_loader.maps) {
-            if (m.name == name) {
-                return m;
-            }
-        }
-        return null;
-    }
-
     private unowned Map get_next_map (bool rotate_map) {
-        unowned var map = find_map_by_name (settings.get_string ("mapset"));
+        unowned var map = map_loader.get_map_by_name (settings.get_string ("mapset"));
 
         // Map wasn't found. Get the default (first) map.
         if (map == null)
-            map = map_loader.maps.nth_data (0);
+            map = map_loader.get_map_at_position (0);
 
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
-                var map_index = (map_loader.maps.index (map) + 1) % (int) map_loader.maps.length ();
-                map = map_loader.maps.nth_data (map_index);
+                map = map_loader.get_next_map (map);
                 break;
             case "random":
-                var map_index = Random.int_range (0, (int) map_loader.maps.length ());
-                map = map_loader.maps.nth_data (map_index);
+                map = map_loader.get_random_map ();
                 break;
             }
         }
@@ -484,7 +473,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             return;
         }
 
-        Map map = find_map_by_name (game_save.map_name);
+        var map = map_loader.get_map_by_name (game_save.map_name);
 
         if (map == null) {
             warning ("Map '%s' not found in available maps.\n", game_save.map_name);

@@ -30,10 +30,9 @@ private void verify_slots (List<Slot> slots, int[,] expected_layout) {
 private void test_load_maps_builtin () {
     var map_loader = new MapLoader ();
     map_loader.load_builtin ();
-    assert_true (map_loader.maps.length () == 1);
+    assert_true (map_loader.length == 1);
 
-    unowned var node = map_loader.maps.first ();
-    var map = node.data;
+    unowned var map = map_loader.get_map_at_position (0);
     assert_true (map.name == "Turtle");
     assert_true (map.score_name == "easy");
     assert_true (map.width == 30);
@@ -194,10 +193,9 @@ private void test_load_maps_builtin () {
 private void test_load_maps_folder () {
     var map_loader = new MapLoader ();
     map_loader.load_folder ("../data/maps/");
-    assert_true (map_loader.maps.length () == 9);
+    assert_true (map_loader.length == 9);
 
-    unowned var node = map_loader.maps.first ();
-    var map = node.data;
+    unowned var map = map_loader.get_map_at_position (0);
     assert_true (map.name == "The Ziggurat");
     assert_true (map.score_name == "ziggurat");
     assert_true (map.width == 30);
@@ -354,8 +352,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (1);
     assert_true (map.name == "Four Bridges");
     assert_true (map.score_name == "bridges");
     assert_true (map.width == 26);
@@ -512,8 +509,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (2);
     assert_true (map.name == "Cloud");
     assert_true (map.score_name == "cloud");
     assert_true (map.width == 28);
@@ -670,8 +666,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (3);
     assert_true (map.name == "Tic-Tac-Toe");
     assert_true (map.score_name == "tictactoe");
     assert_true (map.width == 26);
@@ -828,8 +823,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (4);
     assert_true (map.name == "Red Dragon");
     assert_true (map.score_name == "dragon");
     assert_true (map.width == 30);
@@ -986,8 +980,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (5);
     assert_true (map.name == "Overpass");
     assert_true (map.score_name == "overpass");
     assert_true (map.width == 24);
@@ -1144,8 +1137,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (6);
     assert_true (map.name == "Pyramid's Walls");
     assert_true (map.score_name == "pyramid");
     assert_true (map.width == 24);
@@ -1302,8 +1294,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (7);
     assert_true (map.name == "Confounding Cross");
     assert_true (map.score_name == "confounding");
     assert_true (map.width == 22);
@@ -1460,8 +1451,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    node = node.next;
-    map = node.data;
+    map = map_loader.get_map_at_position (8);
     assert_true (map.name == "Difficult");
     assert_true (map.score_name == "difficult");
     assert_true (map.width == 22);
@@ -1622,10 +1612,10 @@ private void test_load_maps_folder () {
 private void test_load_maps_invalid_folder () {
     var map_loader = new MapLoader ();
     map_loader.load_folder ("../data/nonexistentmaps/");
-    assert_true (map_loader.maps.length () == 0);
+    assert_true (map_loader.length == 0);
 
     map_loader.load_folder ("data/");
-    assert_true (map_loader.maps.length () == 0);
+    assert_true (map_loader.length == 0);
 }
 
 public int main (string[] args) {

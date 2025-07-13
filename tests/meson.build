@@ -19,6 +19,9 @@ foreach test_name, sources : tests
       gio_dep,
       glib_dep,
     ],
+    c_args: [
+      '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
+    ]
   )
   test(test_name, test_bin)
 endforeach
