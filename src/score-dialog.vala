@@ -279,24 +279,31 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void layout_selected_cb () {
-        unowned var selected_item = layout_dropdown.get_selected_item () as Gtk.StringObject;
+        unowned var selected_item = layout_dropdown.selected_item as Gtk.StringObject;
         var selected_name = selected_item.string;
-
-        var sorted_entries = history.entries.copy ();
-        sorted_entries.sort (player_sorter_cb);
-        sorted_entries.sort (date_sorter_cb);
-        sorted_entries.sort (rank_sorter_cb);
+        List<HistoryEntry> entry_list = null;
+        HistoryEntry[] entry_array = null;
 
         score_model.remove_all ();
 
-        foreach (unowned var entry in sorted_entries) {
+        foreach (unowned var entry in history.entries)
             if (get_map_display_name (entry.name) == selected_name)
-                score_model.append (entry);
-        }
+                entry_list.prepend (entry);
+
+        entry_list.sort (player_sorter_cb);
+        entry_list.sort (date_sorter_cb);
+        entry_list.sort (rank_sorter_cb);
+
+        foreach (unowned var entry in entry_list)
+            entry_array += entry;
+
+        var position = 0;
+        var n_removals = 0;
+        score_model.splice (position, n_removals, entry_array);
 
         if (score_model.n_items > 0) {
             content_stack.visible_child_name = "scores";
-            score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
+            score_view.scroll_to (position, null, Gtk.ListScrollFlags.FOCUS, null);
             return;
         }
         content_stack.visible_child_name = "no-scores";
