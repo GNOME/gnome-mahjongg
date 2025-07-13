@@ -395,15 +395,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         update_ui ();
     }
 
-    private void restart_game () {
-        game_view.game.restart ();
-        game_save.delete ();
-        if (game_view.game.paused)
-            pause_cb ();
-        update_ui ();
-    }
-
-    private unowned Map get_next_map (bool rotate_map) {
+    private unowned Map next_map (bool rotate_map) {
         unowned var map = map_loader.get_map_by_name (settings.get_string ("mapset"));
 
         // Map wasn't found. Get the default (first) map.
@@ -452,55 +444,41 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         window.set_game_view (game_view, transition_type);
     }
 
-    /**
-     * Starts a new game.
-     *
-     * @param rotate_map If starting a new game should automatically rotate the
-     * map according to the ``map-rotation`` setting.
-     */
     private void new_game (bool rotate_map = true) {
+        new_game_view (rotate_map);
         game_save.delete ();
-        start_game (rotate_map, get_next_map (rotate_map));
+        initialize_game (next_map (rotate_map));
     }
 
     private void restore_game (bool rotate_map = true) {
+        new_game_view (rotate_map);
+
         try {
             game_save.load ();
         }
         catch (Error e) {
             warning ("Could not load game save %s: %s\n", game_save.filename, e.message);
-            start_game (rotate_map, get_next_map (rotate_map));
+            initialize_game (next_map (rotate_map));
             return;
         }
 
         var map = map_loader.get_map_by_name (game_save.map_name);
-
         if (map == null) {
             warning ("Map '%s' not found in available maps.\n", game_save.map_name);
-            start_game (rotate_map, get_next_map (rotate_map));
+            initialize_game (next_map (rotate_map));
             return;
         }
 
-        var match_tiles_counter = 0;
-        foreach (unowned var slot in map) {
-            foreach (unowned var tile in game_save.tiles) {
-                if (slot.equals (tile.slot)) {
-                    match_tiles_counter++;
-                    break;
-                }
-            }
-        }
-
-        bool use_game_save = (map.n_slots == match_tiles_counter);
-
-        start_game (rotate_map, map, use_game_save);
+        initialize_game (map, game_save.is_valid (map));
     }
 
-    private void start_game (bool rotate_map, Map map, bool use_game_save = false) {
-        new_game_view (rotate_map);
+    private void initialize_game (Map map, bool resuming = false) {
+        if (game_view.game != null)
+            return;
+
         game_view.game = new Game (map);
 
-        if (use_game_save) {
+        if (resuming) {
             game_view.game.restore (game_save);
             window.pause ();
         } else {
@@ -513,6 +491,14 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         game_view.game.tick.connect (tick_cb);
 
         tick_cb ();
+        update_ui ();
+    }
+
+    private void restart_game () {
+        game_view.game.restart ();
+        game_save.delete ();
+        if (game_view.game.paused)
+            pause_cb ();
         update_ui ();
     }
 

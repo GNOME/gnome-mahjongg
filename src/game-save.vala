@@ -74,6 +74,19 @@ public class GameSave {
         return FileUtils.test (filename, FileTest.EXISTS);
     }
 
+    public bool is_valid (Map map) {
+        var n_matched_tiles = 0;
+        foreach (unowned var slot in map) {
+            foreach (unowned var tile in tiles) {
+                if (slot.equals (tile.slot)) {
+                    n_matched_tiles++;
+                    break;
+                }
+            }
+        }
+        return map.n_slots == n_matched_tiles;
+    }
+
     public void delete () {
         if (!exists ())
             return;
