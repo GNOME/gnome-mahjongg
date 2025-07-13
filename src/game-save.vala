@@ -46,7 +46,7 @@ public class GameSave {
 
         builder.append ("\t<tiles>\n");
 
-        foreach (unowned var tile in game.tiles) {
+        foreach (unowned var tile in game) {
             builder.append_printf (
                 "\t\t<tile number=\"%d\" visible=\"%s\" move_number=\"%d\" x=\"%d\" y=\"%d\" layer=\"%d\"/>\n",
                 tile.number,

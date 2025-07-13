@@ -26,8 +26,8 @@ private void test_tile_highlighted () {
 
 private void test_remove_invalid_pair () {
     var game = generate_game ();
-    var tile_a = game.tiles.nth_data (0);
-    var tile_b = game.tiles.nth_data (1);
+    var tile_a = game.get_tile (0);
+    var tile_b = game.get_tile (1);
     game.selected_tile = tile_a;
 
     // Verify invalid pair
@@ -142,10 +142,10 @@ private void test_next_hint () {
 
 private void test_shuffle_remaining () {
     var game = generate_game ();
-    var tile_number = game.tiles.first ().data.number;
+    var tile_number = game.get_tile (0).number;
 
     game.shuffle_remaining ();
-    assert_true (game.tiles.first ().data.number != tile_number);
+    assert_true (game.get_tile (0).number != tile_number);
 }
 
 private void test_undo_redo () {
@@ -215,11 +215,11 @@ private void test_seed_reproducibility () {
     var game1 = generate_game ();
     var game2 = generate_game ();
 
-    assert_true (game1.tiles.length () == game2.tiles.length ());
+    assert_true (game1.n_tiles == game2.n_tiles);
 
-    for (int i = 0; i < game1.tiles.length (); i++) {
-        var tile1 = game1.tiles.nth_data (i);
-        var tile2 = game2.tiles.nth_data (i);
+    for (int i = 0; i < game1.n_tiles; i++) {
+        var tile1 = game1.get_tile (i);
+        var tile2 = game2.get_tile (i);
 
         assert_true (tile1.number == tile2.number);
         assert_true (tile1.slot.x == tile2.slot.x);
@@ -236,9 +236,9 @@ private void test_seed_difference () {
 
     bool found_difference = false;
 
-    for (int i = 0; i < game1.tiles.length (); i++) {
-        var tile1 = game1.tiles.nth_data (i);
-        var tile2 = game2.tiles.nth_data (i);
+    for (int i = 0; i < game1.n_tiles; i++) {
+        var tile1 = game1.get_tile (i);
+        var tile2 = game2.get_tile (i);
 
         if (tile1.number != tile2.number ||
             tile1.slot.x != tile2.slot.x ||
@@ -251,9 +251,9 @@ private void test_seed_difference () {
     assert_true (found_difference);
 }
 
-private void verify_tiles (List<Tile> tiles, int[,] expected_layout) {
+private void verify_tiles (Game game, int[,] expected_layout) {
     for (int i = 0; i < expected_layout.length[0]; i++) {
-        var tile = tiles.nth_data (i);
+        var tile = game.get_tile (i);
 
         assert_true (tile.visible);
         assert_false (tile.highlighted);
@@ -271,7 +271,7 @@ private void test_seed_snapshot_turtle () {
     var game = generate_game ();
 
     verify_tiles (
-        game.tiles,
+        game,
         {
             {39, 1, 24, 0, 0},
             {53, 0, 22, 0, 0},
@@ -430,7 +430,7 @@ private void test_seed_snapshot_difficult () {
     var game = generate_game (difficult_map);
 
     verify_tiles (
-        game.tiles,
+        game,
         {
             {135, 0, 19, 1, 0},
             {85, 0, 17, 1, 0},
@@ -585,7 +585,7 @@ private void test_game_init () {
 
     // Verify initial game state
     assert_true (game.map != null);
-    assert_true (game.tiles.length () == 144);
+    assert_true (game.n_tiles == 144);
     assert_false (game.started);
     assert_true (game.elapsed == 0.0);
     assert_false (game.paused);
@@ -599,7 +599,7 @@ private void test_game_init () {
     assert_false (game.all_tiles_unblocked);
 
     // Verify tile states
-    foreach (unowned var tile in game.tiles) {
+    foreach (unowned var tile in game) {
         assert_true (tile.visible);
         assert_false (tile.highlighted);
         assert_true (tile.move_number == 0);
@@ -626,7 +626,7 @@ private void test_game_restart () {
     game.restart ();
     assert_true (match.tile0.visible);
     assert_true (match.tile1.visible);
-    foreach (var tile in game.tiles)
+    foreach (var tile in game)
         assert_true (tile.visible);
     assert_true (game.selected_tile == null);
     assert_true (game.moves_left == 17);

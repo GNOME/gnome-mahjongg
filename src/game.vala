@@ -78,8 +78,8 @@ public class Match {
 
 public class Game {
     public Map map;
-    public List<Tile> tiles;
 
+    private Tile[] tiles;
     private Rand random;
     private int move_number;
 
@@ -217,6 +217,10 @@ public class Game {
         }
     }
 
+    public int n_tiles {
+        get { return tiles.length; }
+    }
+
     public Game (Map map) {
         this.map = map;
 
@@ -235,7 +239,7 @@ public class Game {
      */
     public void generate (int32 seed = -1) {
         this._seed = seed != -1 ? seed : Random.int_range (0, int32.MAX);
-        var n_pairs = (int) tiles.length () / 2;
+        var n_pairs = (int) tiles.length / 2;
         var pair_numbers = new int[n_pairs];
 
         /* Reset game */
@@ -296,6 +300,12 @@ public class Game {
         remove_hint_timeout ();
         remove_autoplay_end_game_timeout ();
         stop_clock ();
+    }
+
+    public Tile? get_tile (int position) {
+        if (position >= 0 && position < n_tiles)
+            return tiles[position];
+        return null;
     }
 
     public bool remove_pair (Tile tile0, Tile tile1) {
@@ -485,9 +495,13 @@ public class Game {
         autoplay_end_game_timeout_cb ();
     }
 
+    public Iterator iterator () {
+        return new Iterator (this);
+    }
+
     private void create_tiles () {
         foreach (unowned var slot in map)
-            tiles.append (new Tile (slot));
+            tiles += new Tile (slot);
 
         foreach (unowned var tile in tiles) {
             unowned var slot = tile.slot;
@@ -717,5 +731,22 @@ public class Game {
 
         clock_timeout = Timeout.add_once (wait, clock_timeout_cb);
         tick ();
+    }
+
+    public class Iterator {
+        private int index;
+        private Game game;
+
+        public Iterator (Game game) {
+            this.game = game;
+        }
+
+        public bool next () {
+            return index < game.tiles.length;
+        }
+
+        public unowned Tile get () {
+            return game.tiles[index++];
+        }
     }
 }
