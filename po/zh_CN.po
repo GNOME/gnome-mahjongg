@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-10 04:29+0000\n"
-"PO-Revision-Date: 2025-02-10 19:00+0800\n"
+"POT-Creation-Date: 2025-07-12 23:11+0000\n"
+"PO-Revision-Date: 2025-07-13 08:58+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -22,10 +22,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:521
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:564
 msgid "Mahjongg"
 msgstr "对对碰"
 
@@ -83,11 +83,7 @@ msgstr "亮色样式的麻将"
 msgid "Mahjongg in Dark Style"
 msgstr "暗色样式的麻将"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
-msgid "The Mahjongg Team"
-msgstr "对对碰团队"
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:207
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:230
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
@@ -219,36 +215,109 @@ msgid "_Help"
 msgstr "帮助(_H)"
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "键盘快捷键(_K)"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "关于对对碰(_A)"
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "得分"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr "游戏已完成 🎉"
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "无得分"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr "完成游戏以查看得分"
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "玩家"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "排名"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "时间"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "日期"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "玩家"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:200
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:228
 msgid "_Quit"
 msgstr "退出(_Q)"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "游戏"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "新建游戏"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "重启游戏"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "暂停游戏"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "撤消"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "重做"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "显示提示"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "常规"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "显示帮助"
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "显示主菜单"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "显示键盘快捷键"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "关闭窗口"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "退出"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -266,34 +335,34 @@ msgstr "主菜单"
 msgid "Show Hint"
 msgstr "显示提示"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:17
 msgid "Print release version and exit"
 msgstr "显示发布版本并退出"
 
-#: src/gnome-mahjongg.vala:193
+#: src/gnome-mahjongg.vala:221
 msgid "No Moves Left"
 msgstr "无剩余操作"
 
-#: src/gnome-mahjongg.vala:195
+#: src/gnome-mahjongg.vala:223
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr "您可以撤消操作并尝试寻找解法，或者对剩余分块重新洗牌。"
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:224
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "您可以撤消操作并尝试寻找解法，或者开始新游戏。"
 
-#: src/gnome-mahjongg.vala:204
+#: src/gnome-mahjongg.vala:233
 msgid "_Reshuffle"
 msgstr "洗牌(_R)"
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:235
 msgid "_Continue"
 msgstr "继续(_C)"
 
-#: src/gnome-mahjongg.vala:319
+#: src/gnome-mahjongg.vala:347
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
@@ -305,28 +374,28 @@ msgstr ""
 "Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
 "lumingzh <lumingzh@qq.com>, 2023-2025"
 
-#: src/gnome-mahjongg.vala:321
+#: src/gnome-mahjongg.vala:349
 msgid "Layouts by"
 msgstr "布局"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:63
 #, c-format
 msgid "Layout: %s"
 msgstr "布局：%s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "清除所有得分吗？"
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "这会清除所有布局的所有得分。"
 
-#: src/score-dialog.vala:368
+#: src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "全部清除"
 
@@ -347,56 +416,15 @@ msgstr "继续游戏"
 msgid "Pause Game"
 msgstr "暂停游戏"
 
+#~ msgid "The Mahjongg Team"
+#~ msgstr "对对碰团队"
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
 #~ msgctxt "shortcut window"
 #~ msgid "Playing"
 #~ msgstr "游玩"
-
-#~ msgctxt "shortcut window"
-#~ msgid "New Game"
-#~ msgstr "新建游戏"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Restart Game"
-#~ msgstr "重启游戏"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause Game"
-#~ msgstr "暂停游戏"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "撤消"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "重做"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Hint"
-#~ msgstr "显示提示"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "常规"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Main Menu"
-#~ msgstr "显示主菜单"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Keyboard Shortcuts"
-#~ msgstr "显示键盘快捷键"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Help"
-#~ msgstr "显示帮助"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Quit"
-#~ msgstr "退出"
-
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "键盘快捷键(_K)"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
