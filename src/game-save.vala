@@ -8,7 +8,7 @@ public class GameSave {
     public double elapsed_time;
     public int move_number;
     public int32 seed;
-    public List<Tile> tiles;
+    private Tile[] tiles;
 
     public GameSave (string filename) {
         this.filename = filename;
@@ -35,7 +35,7 @@ public class GameSave {
     }
 
     public void write (Game game) {
-        StringBuilder builder = new StringBuilder ();
+        var builder = new StringBuilder ();
 
         builder.append_printf ("<game map_name=\"%s\" elapsed_time=\"%s\" move_number=\"%d\" seed=\"%d\">\n",
             game.map.name,
@@ -91,7 +91,7 @@ public class GameSave {
         if (!exists ())
             return;
 
-        int result = FileUtils.remove (filename);
+        var result = FileUtils.remove (filename);
 
         if (result == -1)
             warning ("Failed to remove the save file.");
@@ -100,7 +100,11 @@ public class GameSave {
         elapsed_time = 0.0;
         move_number = 0;
         seed = 0;
-        tiles = new List<Tile> ();
+        tiles = null;
+    }
+
+    public Iterator iterator () {
+        return new Iterator (this);
     }
 
     private string? get_attribute (string[] attribute_names, string[] attribute_values, string name,
@@ -141,16 +145,33 @@ public class GameSave {
             int y = (int) (get_attribute_d (attribute_names, attribute_values, "y"));
             int layer = (int) (get_attribute_d (attribute_names, attribute_values, "layer"));
 
-            Slot slot = new Slot (x, y, layer);
+            var slot = new Slot (x, y, layer);
 
-            Tile tile = new Tile (slot) {
+            var tile = new Tile (slot) {
                 number = tile_number,
                 visible = visible,
                 move_number = move_number
             };
 
-            tiles.append (tile);
+            tiles += tile;
             break;
+        }
+    }
+
+    public class Iterator {
+        private int index;
+        private GameSave game_save;
+
+        public Iterator (GameSave game_save) {
+            this.game_save = game_save;
+        }
+
+        public bool next () {
+            return index < game_save.tiles.length;
+        }
+
+        public unowned Tile get () {
+            return game_save.tiles[index++];
         }
     }
 }

@@ -274,7 +274,7 @@ public class Game {
         random = new Rand.with_seed (_seed);
 
         foreach (unowned var tile in tiles) {
-            foreach (unowned var t in save.tiles) {
+            foreach (unowned var t in save) {
                 if (tile.slot.equals (t.slot)) {
                     tile.number = t.number;
                     tile.move_number = t.move_number;
