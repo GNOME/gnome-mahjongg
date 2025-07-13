@@ -298,13 +298,7 @@ public class MapLoader {
                 continue;
 
             var path = Path.build_filename (folder_path, filename);
-            try {
-                load_file (path);
-            }
-            catch (Error e) {
-                warning ("Could not load map %s: %s\n", path, e.message);
-                continue;
-            }
+            load_file (path);
         }
     }
 
@@ -356,31 +350,38 @@ public class MapLoader {
         return new Iterator (this);
     }
 
-    private void load_file (string filename) throws Error {
+    private bool load_file (string filename) {
         string data;
         size_t length;
-        FileUtils.get_contents (filename, out data, out length);
 
-        var parser = MarkupParser ();
-        parser.start_element = start_element_cb;
-        parser.end_element = end_element_cb;
-        parser.text = null;
-        parser.passthrough = null;
-        parser.error = null;
+        try {
+            FileUtils.get_contents (filename, out data, out length);
+        }
+        catch (FileError e) {
+            warning ("Could not load map %s: %s\n", filename, e.message);
+            return false;
+        }
+
+        var parser = MarkupParser () {
+            start_element = start_element_cb,
+            end_element = end_element_cb
+        };
         var parse_context = new MarkupParseContext (parser, 0, this, null);
         try {
             parse_context.parse (data, (ssize_t) length);
         }
         catch (MarkupError e) {
+            warning ("Could not parse map %s: %s\n", filename, e.message);
+            return false;
         }
+        return true;
     }
 
     private string? get_attribute (string[] attribute_names, string[] attribute_values, string name,
                                    string? default = null) {
-        for (var i = 0; attribute_names[i] != null; i++) {
+        for (var i = 0; attribute_names[i] != null; i++)
             if (attribute_names[i].down () == name)
                 return attribute_values[i];
-        }
 
         return default;
     }
@@ -388,25 +389,24 @@ public class MapLoader {
     private double get_attribute_d (string[] attribute_names, string[] attribute_values, string name,
                                     double default = 0.0) {
         var a = get_attribute (attribute_names, attribute_values, name);
-        if (a == null)
-            return default;
-        else
+        if (a != null)
             return double.parse (a);
+        return default;
     }
 
     private void start_element_cb (MarkupParseContext context, string element_name, string[] attribute_names,
                                    string[] attribute_values) throws MarkupError {
-        /* Identify the tag. */
-        switch (element_name.down ()) {
-        case "mahjongg":
-            break;
-
-        case "map":
+        if (element_name.down () == "map") {
             map = new Map ();
             map.name = get_attribute (attribute_names, attribute_values, "name", "");
             map.score_name = get_attribute (attribute_names, attribute_values, "scorename", "");
-            break;
+            return;
+        }
 
+        if (map == null)
+            return;
+
+        switch (element_name.down ()) {
         case "layer":
             layer_z = (int) get_attribute_d (attribute_names, attribute_values, "z");
             break;
@@ -452,11 +452,10 @@ public class MapLoader {
     private void end_element_cb (MarkupParseContext context, string element_name) throws MarkupError {
         switch (element_name.down ()) {
         case "map":
-            var n_slots = map.n_slots;
-            if (map.name != null && map.score_name != null && n_slots <= 144 && n_slots % 2 == 0)
+            if (map.n_slots > 0 && map.n_slots <= 144 && map.n_slots % 2 == 0)
                 maps += map;
             else
-                warning ("Invalid map");
+                warning ("Invalid map %s with %d slots", map.name, map.n_slots);
             map = null;
             break;
 

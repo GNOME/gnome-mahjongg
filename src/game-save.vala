@@ -3,35 +3,42 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 public class GameSave {
-    public string filename;
     public string map_name;
     public double elapsed_time;
     public int move_number;
     public int32 seed;
     private Tile[] tiles;
 
+    private string filename;
+
     public GameSave (string filename) {
         this.filename = filename;
     }
 
-    public void load () throws Error {
+    public bool load () {
         string data;
         size_t length;
-        FileUtils.get_contents (filename, out data, out length);
 
-        var parser = MarkupParser ();
+        try {
+            FileUtils.get_contents (filename, out data, out length);
+        }
+        catch (FileError e) {
+            warning ("Could not load game save %s: %s\n", filename, e.message);
+            return false;
+        }
 
-        parser.start_element = start_element_cb;
-        parser.text = null;
-        parser.passthrough = null;
-        parser.error = null;
-
+        var parser = MarkupParser () {
+            start_element = start_element_cb
+        };
         var parse_context = new MarkupParseContext (parser, 0, this, null);
         try {
             parse_context.parse (data, (ssize_t) length);
         }
         catch (MarkupError e) {
+            warning ("Could not parse game save %s: %s\n", filename, e.message);
+            return false;
         }
+        return true;
     }
 
     public void write (Game game) {
@@ -66,7 +73,7 @@ public class GameSave {
             FileUtils.set_contents (filename, builder.str);
         }
         catch (FileError e) {
-            warning ("Failed to save the game : %s", e.message);
+            warning ("Could not save game to %s: %s", filename, e.message);
         }
     }
 
@@ -92,9 +99,8 @@ public class GameSave {
             return;
 
         var result = FileUtils.remove (filename);
-
         if (result == -1)
-            warning ("Failed to remove the save file.");
+            warning ("Could not remove save file %s.", filename);
 
         map_name = "";
         elapsed_time = 0.0;
@@ -109,10 +115,9 @@ public class GameSave {
 
     private string? get_attribute (string[] attribute_names, string[] attribute_values, string name,
                                    string? default = null) {
-        for (var i = 0; attribute_names[i] != null; i++) {
+        for (var i = 0; attribute_names[i] != null; i++)
             if (attribute_names[i].down () == name)
                 return attribute_values[i];
-        }
 
         return default;
     }
@@ -120,15 +125,13 @@ public class GameSave {
     private double get_attribute_d (string[] attribute_names, string[] attribute_values, string name,
                                     double default = 0.0) {
         var a = get_attribute (attribute_names, attribute_values, name);
-        if (a == null)
-            return default;
-        else
+        if (a != null)
             return double.parse (a);
+        return default;
     }
 
     private void start_element_cb (MarkupParseContext context, string element_name, string[] attribute_names,
                                    string[] attribute_values) throws MarkupError {
-        /* Identify the tag. */
         switch (element_name.down ()) {
         case "game":
             map_name = get_attribute (attribute_names, attribute_values, "map_name", "");
@@ -138,21 +141,19 @@ public class GameSave {
             break;
 
         case "tile":
-            int tile_number = (int) (get_attribute_d (attribute_names, attribute_values, "number"));
-            bool visible = get_attribute (attribute_names, attribute_values, "visible") == "true";
-            int move_number = (int) (get_attribute_d (attribute_names, attribute_values, "move_number"));
-            int x = (int) (get_attribute_d (attribute_names, attribute_values, "x"));
-            int y = (int) (get_attribute_d (attribute_names, attribute_values, "y"));
-            int layer = (int) (get_attribute_d (attribute_names, attribute_values, "layer"));
+            var tile_number = (int) (get_attribute_d (attribute_names, attribute_values, "number"));
+            var visible = get_attribute (attribute_names, attribute_values, "visible") == "true";
+            var move_number = (int) (get_attribute_d (attribute_names, attribute_values, "move_number"));
+            var x = (int) (get_attribute_d (attribute_names, attribute_values, "x"));
+            var y = (int) (get_attribute_d (attribute_names, attribute_values, "y"));
+            var layer = (int) (get_attribute_d (attribute_names, attribute_values, "layer"));
 
             var slot = new Slot (x, y, layer);
-
             var tile = new Tile (slot) {
                 number = tile_number,
                 visible = visible,
                 move_number = move_number
             };
-
             tiles += tile;
             break;
         }

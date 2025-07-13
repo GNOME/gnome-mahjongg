@@ -453,11 +453,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     private void restore_game (bool rotate_map = true) {
         new_game_view (rotate_map);
 
-        try {
-            game_save.load ();
-        }
-        catch (Error e) {
-            warning ("Could not load game save %s: %s\n", game_save.filename, e.message);
+        if (!game_save.load ()) {
             initialize_game (next_map (rotate_map));
             return;
         }
