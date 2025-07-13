@@ -21,7 +21,11 @@ public class Slot {
 public class Map {
     public string? name;
     public string? score_name;
-    public List<Slot> slots;
+    private List<Slot> slots;
+
+    public int n_slots {
+        get { return (int) slots.length (); }
+    }
 
     public Map.builtin () {
         name = "Turtle";
@@ -223,6 +227,14 @@ public class Map {
         slots.insert_sorted (slot, compare_slots);
     }
 
+    public unowned Slot? get_slot (int position) {
+        return slots.nth_data (position);
+    }
+
+    public Iterator iterator () {
+        return new Iterator (this);
+    }
+
     private static int compare_slots (Slot a, Slot b) {
         /* Sort lowest to highest */
         var dl = a.layer - b.layer;
@@ -236,6 +248,23 @@ public class Map {
             return -1;
         return 1;
     }
+
+    public class Iterator {
+        private int index;
+        private Map map;
+
+        public Iterator (Map map) {
+            this.map = map;
+        }
+
+        public bool next () {
+            return index < map.slots.length ();
+        }
+
+        public unowned Slot get () {
+            return map.slots.nth_data (index++);
+        }
+    }
 }
 
 public class MapLoader {
@@ -243,29 +272,8 @@ public class MapLoader {
     private Map? map;
     private int layer_z;
 
-    public int length {
+    public int n_maps {
         get { return maps.length; }
-    }
-
-    public class Iterator {
-        private int index;
-        private MapLoader map_loader;
-
-        public Iterator (MapLoader map_loader) {
-            this.map_loader = map_loader;
-        }
-
-        public bool next () {
-            return index < map_loader.length;
-        }
-
-        public unowned Map get () {
-            return map_loader.get_map_at_position (index++);
-        }
-    }
-
-    public Iterator iterator () {
-        return new Iterator (this);
     }
 
     public void load_builtin () {
@@ -310,25 +318,25 @@ public class MapLoader {
     }
 
     public unowned Map? get_map_at_position (int position) {
-        if (position >= 0 && position < length)
+        if (position >= 0 && position < n_maps)
             return maps[position];
         return null;
     }
 
     public unowned Map get_next_map (Map map) {
         int map_index = -1;
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < n_maps; i++) {
             if (maps[i] == map) {
                 map_index = i;
                 break;
             }
         }
-        var next_map_index = (map_index + 1) % (int) length;
+        var next_map_index = (map_index + 1) % (int) n_maps;
         return get_map_at_position (next_map_index);
     }
 
     public unowned Map get_random_map () {
-        var map_index = Random.int_range (0, (int) length);
+        var map_index = Random.int_range (0, (int) n_maps);
         return get_map_at_position (map_index);
     }
 
@@ -342,6 +350,10 @@ public class MapLoader {
             }
         }
         return display_name;
+    }
+
+    public Iterator iterator () {
+        return new Iterator (this);
     }
 
     private void load_file (string filename) throws Error {
@@ -440,7 +452,7 @@ public class MapLoader {
     private void end_element_cb (MarkupParseContext context, string element_name) throws MarkupError {
         switch (element_name.down ()) {
         case "map":
-            var n_slots = map.slots.length ();
+            var n_slots = map.n_slots;
             if (map.name != null && map.score_name != null && n_slots <= 144 && n_slots % 2 == 0)
                 maps += map;
             else
@@ -451,6 +463,23 @@ public class MapLoader {
         case "layer":
             layer_z = 0;
             break;
+        }
+    }
+
+    public class Iterator {
+        private int index;
+        private MapLoader map_loader;
+
+        public Iterator (MapLoader map_loader) {
+            this.map_loader = map_loader;
+        }
+
+        public bool next () {
+            return index < map_loader.maps.length;
+        }
+
+        public unowned Map get () {
+            return map_loader.maps[index++];
         }
     }
 }

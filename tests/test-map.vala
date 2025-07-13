@@ -16,11 +16,11 @@ private void test_slot () {
     assert_false (slot_b.equals (slot_c));
 }
 
-private void verify_slots (List<Slot> slots, int[,] expected_layout) {
-    assert_true (slots.length () == 144);
+private void verify_slots (Map map, int[,] expected_layout) {
+    assert_true (map.n_slots == 144);
 
-    for (int i = 0; i < slots.length (); i++) {
-        var slot = slots.nth_data (i);
+    for (int i = 0; i < map.n_slots; i++) {
+        var slot = map.get_slot (i);
         assert_true (slot.x == expected_layout[i, 0]);
         assert_true (slot.y == expected_layout[i, 1]);
         assert_true (slot.layer == expected_layout[i, 2]);
@@ -30,7 +30,7 @@ private void verify_slots (List<Slot> slots, int[,] expected_layout) {
 private void test_load_maps_builtin () {
     var map_loader = new MapLoader ();
     map_loader.load_builtin ();
-    assert_true (map_loader.length == 1);
+    assert_true (map_loader.n_maps == 1);
 
     unowned var map = map_loader.get_map_at_position (0);
     assert_true (map.name == "Turtle");
@@ -40,7 +40,7 @@ private void test_load_maps_builtin () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
             {24, 0, 0},
             {22, 0, 0},
@@ -193,7 +193,7 @@ private void test_load_maps_builtin () {
 private void test_load_maps_folder () {
     var map_loader = new MapLoader ();
     map_loader.load_folder ("../data/maps/");
-    assert_true (map_loader.length == 9);
+    assert_true (map_loader.n_maps == 9);
 
     unowned var map = map_loader.get_map_at_position (0);
     assert_true (map.name == "The Ziggurat");
@@ -203,7 +203,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
             {28, 0, 0},
             {28, 2, 0},
@@ -360,7 +360,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
             {22, 0, 0},
             {20, 0, 0},
@@ -517,7 +517,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 2);
     verify_slots (
-        map.slots,
+        map,
         {
             {26, 0, 0},
             {24, 0, 0},
@@ -674,7 +674,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 1);
     verify_slots (
-        map.slots,
+        map,
         {
             {24, 4, 0},
             {18, 0, 0},
@@ -831,7 +831,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
             {28, 0, 0},
             {28, 3, 0},
@@ -988,9 +988,9 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 1);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
-        {22, 4, 0},
+            {22, 4, 0},
             {20, 4, 0},
             {22, 6, 0},
             {14, 0, 0},
@@ -1145,9 +1145,9 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 4);
     assert_true (map.v_overhang == 6);
     verify_slots (
-        map.slots,
+        map,
         {
-        {22, 0, 0},
+            {22, 0, 0},
             {20, 0, 0},
             {22, 2, 0},
             {18, 0, 0},
@@ -1302,7 +1302,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 0);
     verify_slots (
-        map.slots,
+        map,
         {
             {18, 2, 0},
             {16, 2, 0},
@@ -1459,7 +1459,7 @@ private void test_load_maps_folder () {
     assert_true (map.h_overhang == 0);
     assert_true (map.v_overhang == 1);
     verify_slots (
-        map.slots,
+        map,
         {
             {19, 1, 0},
             {17, 1, 0},
@@ -1612,10 +1612,10 @@ private void test_load_maps_folder () {
 private void test_load_maps_invalid_folder () {
     var map_loader = new MapLoader ();
     map_loader.load_folder ("../data/nonexistentmaps/");
-    assert_true (map_loader.length == 0);
+    assert_true (map_loader.n_maps == 0);
 
     map_loader.load_folder ("data/");
-    assert_true (map_loader.length == 0);
+    assert_true (map_loader.n_maps == 0);
 }
 
 public int main (string[] args) {

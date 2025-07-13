@@ -486,7 +486,7 @@ public class Game {
     }
 
     private void create_tiles () {
-        foreach (unowned var slot in map.slots)
+        foreach (unowned var slot in map)
             tiles.append (new Tile (slot));
 
         foreach (unowned var tile in tiles) {

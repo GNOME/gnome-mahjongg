@@ -482,7 +482,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         }
 
         var match_tiles_counter = 0;
-        foreach (unowned var slot in map.slots) {
+        foreach (unowned var slot in map) {
             foreach (unowned var tile in game_save.tiles) {
                 if (slot.equals (tile.slot)) {
                     match_tiles_counter++;
@@ -491,7 +491,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             }
         }
 
-        bool use_game_save = (map.slots.length () == match_tiles_counter);
+        bool use_game_save = (map.n_slots == match_tiles_counter);
 
         start_game (rotate_map, map, use_game_save);
     }
