@@ -105,8 +105,9 @@ public class ScoreDialog : Adw.Dialog {
         else if (selected_layout == "")
             selected_layout = model.get_string (0);
 
-        layout_dropdown.notify["selected"].connect (layout_selected_cb);
         layout_dropdown.set_selected (model.find (display_name));
+        layout_dropdown.notify["selected"].connect (layout_selected_cb);
+        layout_selected_cb ();
     }
 
     private void set_up_score_view () {
