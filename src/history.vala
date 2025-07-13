@@ -4,14 +4,18 @@
 
 public class History {
     public string filename;
-    public List<HistoryEntry> entries;
+    private HistoryEntry[] entries;
+
+    public int length {
+        get { return entries.length; }
+    }
 
     public History (string filename) {
         this.filename = filename;
     }
 
     public void add (HistoryEntry entry) {
-        entries.append (entry);
+        entries += entry;
     }
 
     public void load () {
@@ -65,6 +69,27 @@ public class History {
     public void clear () {
         entries = null;
         save ();
+    }
+
+    public Iterator iterator () {
+        return new Iterator (this);
+    }
+
+    public class Iterator {
+        private int index;
+        private History history;
+
+        public Iterator (History history) {
+            this.history = history;
+        }
+
+        public bool next () {
+            return index < history.length;
+        }
+
+        public unowned HistoryEntry get () {
+            return history.entries[index++];
+        }
     }
 }
 

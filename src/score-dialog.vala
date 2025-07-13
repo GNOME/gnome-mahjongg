@@ -52,7 +52,7 @@ public class ScoreDialog : Adw.Dialog {
         set_up_score_view ();
         set_up_layout_dropdown ();
         set_up_layout_menu (selected_layout);
-        clear_scores_button.sensitive = history.entries.length () > 0;
+        clear_scores_button.sensitive = history.length > 0;
 
         if (completed_entry != null) {
             clear_scores_button.visible = false;
@@ -97,7 +97,7 @@ public class ScoreDialog : Adw.Dialog {
         foreach (unowned var map in map_loader)
             add_layout (model, map.score_name);
 
-        foreach (unowned var entry in history.entries)
+        foreach (unowned var entry in history)
             add_layout (model, entry.name);
 
         if (completed_entry != null)
@@ -268,7 +268,7 @@ public class ScoreDialog : Adw.Dialog {
 
         score_model.remove_all ();
 
-        foreach (unowned var entry in history.entries)
+        foreach (unowned var entry in history)
             if (map_loader.get_map_display_name (entry.name) == selected_name)
                 entry_list.prepend (entry);
 
