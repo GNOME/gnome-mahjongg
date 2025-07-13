@@ -98,6 +98,7 @@ public class HistoryEntry : Object {
     public string name;
     public uint duration;
     public string player;
+    public uint rank;
 
     public HistoryEntry (DateTime date, string name, uint duration, string player) {
         this.date = date;

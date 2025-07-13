@@ -147,6 +147,7 @@ public class ScoreDialog : Adw.Dialog {
             var inscription = new Gtk.Inscription (null);
             inscription.add_css_class ("caption");
             inscription.add_css_class ("numeric");
+
             list_item.child = inscription;
         });
         factory.bind.connect ((factory, object) => {
@@ -154,10 +155,7 @@ public class ScoreDialog : Adw.Dialog {
             unowned var inscription = list_item.child as Gtk.Inscription;
             unowned var entry = list_item.item as HistoryEntry;
 
-            uint position;
-            score_model.find (entry, out position);
-
-            inscription.text = (position + 1).to_string ();
+            inscription.text = entry.rank.to_string ();
         });
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
@@ -277,8 +275,11 @@ public class ScoreDialog : Adw.Dialog {
         entry_list.sort (date_sorter_cb);
         entry_list.sort (rank_sorter_cb);
 
-        foreach (unowned var entry in entry_list)
+        var rank = 1;
+        foreach (unowned var entry in entry_list) {
+            entry.rank = rank++;
             entry_array += entry;
+        }
 
         var position = 0;
         var n_removals = 0;
