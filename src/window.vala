@@ -66,7 +66,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         layout_menu.remove_all ();
 
         foreach (unowned var map in map_loader) {
-            var menu_label = dpgettext2 (null, "mahjongg map name", map.name);
+            var menu_label = map_loader.get_map_display_name (map.score_name);
             var menu_item = new MenuItem (menu_label, null);
             menu_item.set_action_and_target_value ("app.layout", new Variant.string (map.name));
             layout_menu.append_item (menu_item);
