@@ -165,19 +165,6 @@ public class ScoreDialog : Adw.Dialog {
         rank_column.factory = factory;
     }
 
-    private static void connect_entry_input (Gtk.Entry entry_input, Gtk.ListItem list_item) {
-        /* Static method to avoid issues with circular references
-           https://gitlab.gnome.org/GNOME/vala/-/issues/957 */
-
-        entry_input.notify["text"].connect (() => {
-            unowned var history_entry = list_item.item as HistoryEntry;
-            if (entry_input.text.length <= 0)
-                history_entry.player = Environment.get_real_name ();
-            else
-                history_entry.player = entry_input.text;
-        });
-    }
-
     private void set_up_time_column () {
         var factory = new Gtk.SignalListItemFactory ();
 
@@ -223,8 +210,15 @@ public class ScoreDialog : Adw.Dialog {
                 has_frame = false,
                 max_width_chars = 5
             };
+            unowned var entry_input_weak = entry_input;  // Prevent memory leak
 
-            connect_entry_input (entry_input, list_item);
+            entry_input.notify["text"].connect (() => {
+                unowned var history_entry = list_item.item as HistoryEntry;
+                if (entry_input_weak.text.length <= 0)
+                    history_entry.player = Environment.get_real_name ();
+                else
+                    history_entry.player = entry_input_weak.text;
+            });
             entry_input.activate.connect (() => {
                 new_game_button.activate ();
             });
