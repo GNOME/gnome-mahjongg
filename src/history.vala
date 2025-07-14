@@ -50,16 +50,15 @@ public class History {
     }
 
     public void save () {
-        var contents = "";
-
+        var builder = new StringBuilder ();
         foreach (unowned var entry in entries) {
             var line = "%s %s %u %s\n".printf (entry.date.to_string (), entry.name, entry.duration, entry.player);
-            contents += line;
+            builder.append (line);
         }
 
         try {
             DirUtils.create_with_parents (Path.get_dirname (filename), 0775);
-            FileUtils.set_contents (filename, contents);
+            FileUtils.set_contents (filename, builder.str);
         }
         catch (FileError e) {
             warning ("Failed to save history: %s", e.message);
