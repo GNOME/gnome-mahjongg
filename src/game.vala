@@ -303,9 +303,9 @@ public class Game {
     }
 
     public Tile? get_tile (int position) {
-        if (position >= 0 && position < n_tiles)
-            return tiles[position];
-        return null;
+        if (position < 0 || position >= n_tiles)
+            return null;
+        return tiles[position];
     }
 
     public bool remove_pair (Tile tile0, Tile tile1) {

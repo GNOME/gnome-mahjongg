@@ -312,18 +312,17 @@ public class MapLoader {
     }
 
     public unowned Map? get_map_at_position (int position) {
-        if (position >= 0 && position < n_maps)
-            return maps[position];
-        return null;
+        if (position < 0 || position >= n_maps)
+            return null;
+        return maps[position];
     }
 
     public unowned Map get_next_map (Map map) {
-        int map_index = -1;
-        for (int i = 0; i < n_maps; i++) {
-            if (maps[i] == map) {
-                map_index = i;
+        var map_index = 0;
+        foreach (unowned var m in maps) {
+            if (m == map)
                 break;
-            }
+            map_index++;
         }
         var next_map_index = (map_index + 1) % (int) n_maps;
         return get_map_at_position (next_map_index);
@@ -334,11 +333,11 @@ public class MapLoader {
         return get_map_at_position (map_index);
     }
 
-    public string get_map_display_name (string name) {
-        var display_name = name;
+    public string get_map_display_name (string score_name) {
+        var display_name = score_name;
 
         foreach (var map in maps) {
-            if (map.score_name == name) {
+            if (map.score_name == score_name) {
                 display_name = dpgettext2 (null, "mahjongg map name", map.name);
                 break;
             }

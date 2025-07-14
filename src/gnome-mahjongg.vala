@@ -185,7 +185,7 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private async void conf_value_changed_cb (Settings settings, string key) {
+    private void conf_value_changed_cb (Settings settings, string key) {
         if (key == "tileset" || key == "background-color")
             update_theme ();
     }
