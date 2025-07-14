@@ -60,10 +60,6 @@ public class ScoreDialog : Adw.Dialog {
             header_stack.visible_child_name = "title";
             title_widget.subtitle = _("Layout: %s").printf (map_loader.get_map_display_name (completed_entry.name));
 
-            var controller = new Gtk.EventControllerFocus ();
-            controller.enter.connect (score_view_focus_cb);
-            score_view.add_controller (controller);
-
             this.focus_widget = score_view;
         }
         else
@@ -123,6 +119,19 @@ public class ScoreDialog : Adw.Dialog {
             /* Scroll to top when resorting */
             score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
         });
+
+        if (completed_entry == null)
+            return;
+
+        var controller = new Gtk.EventControllerFocus ();
+        controller.enter.connect (() => {
+            Idle.add (() => {
+                score_view.scroll_to (completed_entry.rank - 1, null, Gtk.ListScrollFlags.FOCUS, null);
+                score_view.child_focus (Gtk.DirectionType.TAB_FORWARD);  // Focus the text entry
+                return false;
+            });
+        });
+        score_view.add_controller (controller);
     }
 
     private static int rank_sorter_cb (HistoryEntry entry1, HistoryEntry entry2) {
@@ -212,6 +221,7 @@ public class ScoreDialog : Adw.Dialog {
                 };
                 unowned var entry_input_weak = entry_input;  // Prevent memory leak
 
+                entry_input.add_css_class ("heading");
                 entry_input.notify["text"].connect (() => {
                     unowned var history_entry = list_item.item as HistoryEntry;
 
@@ -223,9 +233,7 @@ public class ScoreDialog : Adw.Dialog {
                     else
                         history_entry.player = entry_input_weak.text;
                 });
-                entry_input.activate.connect (() => {
-                    new_game_button.activate ();
-                });
+                entry_input.activate.connect (() => { new_game_button.activate (); });
 
                 stack.add_named (entry_input, "entry");
             }
@@ -239,9 +247,8 @@ public class ScoreDialog : Adw.Dialog {
 
             if (entry == completed_entry) {
                 stack.visible_child_name = "entry";
-                unowned var text_entry = stack.visible_child as Gtk.Entry;
-                text_entry.text = entry.player;
-                text_entry.add_css_class ("heading");
+                unowned var entry_input = stack.visible_child as Gtk.Entry;
+                entry_input.text = entry.player;
             }
             else {
                 stack.visible_child_name = "label";
@@ -290,20 +297,6 @@ public class ScoreDialog : Adw.Dialog {
             return;
         }
         content_stack.visible_child_name = "no-scores";
-    }
-
-    private void score_view_focus_cb () {
-        uint position;
-        var found_item = score_model.find (completed_entry, out position);
-
-        if (!found_item)
-            return;
-
-        Idle.add (() => {
-            score_view.scroll_to (position, null, Gtk.ListScrollFlags.FOCUS, null);
-            score_view.child_focus (Gtk.DirectionType.TAB_FORWARD);  // Focus the text entry
-            return false;
-        });
     }
 
     private async void clear_scores_cb () {
