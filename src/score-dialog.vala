@@ -39,7 +39,6 @@ public class ScoreDialog : Adw.Dialog {
 
     private History history;
     private HistoryEntry? completed_entry;
-    private Gtk.ListItem? selected_item;
     private ListStore score_model;
     private MapLoader map_loader;
 
@@ -243,7 +242,6 @@ public class ScoreDialog : Adw.Dialog {
                 unowned var text_entry = stack.visible_child as Gtk.Entry;
                 text_entry.text = entry.player;
                 text_entry.add_css_class ("heading");
-                selected_item = list_item;
             }
             else {
                 stack.visible_child_name = "label";
@@ -302,10 +300,8 @@ public class ScoreDialog : Adw.Dialog {
             return;
 
         Idle.add (() => {
-            unowned var stack = selected_item.child as Gtk.Stack;
-            unowned var text_entry = stack.visible_child;
-            text_entry.grab_focus ();
-            score_view.scroll_to (position, null, Gtk.ListScrollFlags.NONE, null);
+            score_view.scroll_to (position, null, Gtk.ListScrollFlags.FOCUS, null);
+            score_view.child_focus (Gtk.DirectionType.TAB_FORWARD);  // Focus the text entry
             return false;
         });
     }
@@ -330,7 +326,6 @@ public class ScoreDialog : Adw.Dialog {
             score_model.remove_all ();
 
             completed_entry = null;
-            selected_item = null;
 
             history.clear ();
             break;
