@@ -79,6 +79,11 @@ public class Mahjongg : Adw.Application {
         window.add_game_view (secondary_game_view);
 
         var layout = settings.get_string ("mapset");
+        if (layout == "Difficult") {
+            // Migrate old layout name
+            layout = "Taipei";
+            settings.set_string ("mapset", layout);
+        }
         unowned var layout_action = lookup_action ("layout") as SimpleAction;
         layout_action.set_state (new Variant.@string (layout));
 

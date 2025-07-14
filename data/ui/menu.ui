@@ -49,7 +49,7 @@
             <attribute name="label" translatable="yes" context="mahjongg map name">Confounding Cross</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes" context="mahjongg map name">Difficult</attribute>
+            <attribute name="label" translatable="yes" context="mahjongg map name">Taipei</attribute>
           </item>
         </section>
       </submenu>

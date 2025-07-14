@@ -372,7 +372,7 @@
     </layer>
     <tile z="5" x="5" y="4"/>
   </map>
-  <map name="Difficult" scorename="difficult">
+  <map name="Taipei" scorename="difficult">
     <layer z="0">
       <tile x="0" y="3"/>
       <tile x="10" y="3"/>
