@@ -171,8 +171,8 @@ public class ScoreDialog : Adw.Dialog {
         factory.setup.connect ((factory, object) => {
             unowned var list_item = object as Gtk.ListItem;
             var inscription = new Gtk.Inscription (null);
-
             inscription.add_css_class ("numeric");
+
             list_item.child = inscription;
         });
         factory.bind.connect ((factory, object) => {
@@ -198,6 +198,7 @@ public class ScoreDialog : Adw.Dialog {
         var sorter = new Gtk.MultiSorter ();
 
         factory.setup.connect ((factory, object) => {
+            unowned var list_item = object as Gtk.ListItem;
             var stack = new Gtk.Stack ();
             var inscription = new Gtk.Inscription (null) {
                 text_overflow = Gtk.InscriptionOverflow.ELLIPSIZE_END,
@@ -205,25 +206,31 @@ public class ScoreDialog : Adw.Dialog {
             };
             stack.add_named (inscription, "label");
 
-            unowned var list_item = object as Gtk.ListItem;
-            var entry_input = new Gtk.Entry () {
-                has_frame = false,
-                max_width_chars = 5
-            };
-            unowned var entry_input_weak = entry_input;  // Prevent memory leak
+            if (completed_entry != null) {
+                var entry_input = new Gtk.Entry () {
+                    has_frame = false,
+                    max_width_chars = 5
+                };
+                unowned var entry_input_weak = entry_input;  // Prevent memory leak
 
-            entry_input.notify["text"].connect (() => {
-                unowned var history_entry = list_item.item as HistoryEntry;
-                if (entry_input_weak.text.length <= 0)
-                    history_entry.player = Environment.get_real_name ();
-                else
-                    history_entry.player = entry_input_weak.text;
-            });
-            entry_input.activate.connect (() => {
-                new_game_button.activate ();
-            });
+                entry_input.notify["text"].connect (() => {
+                    unowned var history_entry = list_item.item as HistoryEntry;
 
-            stack.add_named (entry_input, "entry");
+                    if (history_entry != completed_entry)
+                        return;
+
+                    if (entry_input_weak.text.length <= 0)
+                        history_entry.player = Environment.get_real_name ();
+                    else
+                        history_entry.player = entry_input_weak.text;
+                });
+                entry_input.activate.connect (() => {
+                    new_game_button.activate ();
+                });
+
+                stack.add_named (entry_input, "entry");
+            }
+
             list_item.child = stack;
         });
         factory.bind.connect ((factory, object) => {
