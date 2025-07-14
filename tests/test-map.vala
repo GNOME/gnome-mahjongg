@@ -1455,7 +1455,7 @@ private void test_load_maps_folder () {
     );
 
     map = map_loader.get_next_map (map);
-    assert_true (map.name == "Difficult");
+    assert_true (map.name == "Taipei");
     assert_true (map.score_name == "difficult");
     assert_true (map.width == 22);
     assert_true (map.height == 14);
