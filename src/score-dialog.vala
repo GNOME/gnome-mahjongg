@@ -271,8 +271,6 @@ public class ScoreDialog : Adw.Dialog {
         List<HistoryEntry> entry_list = null;
         HistoryEntry[] entry_array = null;
 
-        score_model.remove_all ();
-
         foreach (unowned var entry in history)
             if (map_loader.get_map_display_name (entry.name) == selected_name)
                 entry_list.prepend (entry);
@@ -288,7 +286,7 @@ public class ScoreDialog : Adw.Dialog {
         }
 
         var position = 0;
-        var n_removals = 0;
+        var n_removals = score_model.n_items;
         score_model.splice (position, n_removals, entry_array);
 
         if (score_model.n_items > 0) {
