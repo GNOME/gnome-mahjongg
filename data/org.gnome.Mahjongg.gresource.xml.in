@@ -4,8 +4,8 @@
 <gresources>
   <gresource prefix="@base-id-slashed@/themes">
     <file alias="postmodern" compressed="true">themes/postmodern.svg</file>
-    <file alias="smooth" compressed="true">themes/smooth.png</file>
-    <file alias="educational" compressed="true">themes/educational.png</file>
+    <file alias="smooth">themes/smooth.svgz</file>
+    <file alias="educational">themes/educational.svgz</file>
   </gresource>
   <gresource prefix="@base-id-slashed@">
     <file alias="metainfo.xml" preprocess="xml-stripblanks" compressed="true">@app-id@.metainfo.xml</file>

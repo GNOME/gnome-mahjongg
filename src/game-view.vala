@@ -12,7 +12,7 @@ public class GameView : Gtk.Widget {
     private int tile_pattern_width;
     private int tile_pattern_height;
 
-    public Gdk.Pixbuf? pixbuf;
+    public Rsvg.Handle? theme_handle;
     public Gdk.Texture? texture;
     public Cairo.Pattern? cairo_pattern;
     public int initial_theme_width;
@@ -100,8 +100,8 @@ public class GameView : Gtk.Widget {
                 var matrix = Cairo.Matrix.identity ();
 
                 matrix.scale (
-                    (double)loaded_theme_width / (double)rendered_theme_width,
-                    (double)loaded_theme_height / (double)rendered_theme_height
+                    (double) loaded_theme_width / (double) rendered_theme_width,
+                    (double) loaded_theme_height / (double) rendered_theme_height
                 );
                 matrix.translate (texture_x - tile_x, texture_y - tile_y);
 
@@ -120,27 +120,34 @@ public class GameView : Gtk.Widget {
         this.cairo_pattern = null;
 
         if (theme_path == null) {
-            this.pixbuf = null;
+            this.theme_handle = null;
             return;
         }
 
         if (game_view == null) {
+            InputStream stream;
             try {
-                pixbuf = new Gdk.Pixbuf.from_resource (theme_path);
+                stream = resources_open_stream (theme_path, ResourceLookupFlags.NONE);
+                theme_handle = new Rsvg.Handle.from_stream_sync (stream, null, Rsvg.HandleFlags.FLAGS_NONE);
             } catch (Error e) {
                 try {
-                    pixbuf = new Gdk.Pixbuf.from_resource (fallback_theme_path);
+                    stream = resources_open_stream (fallback_theme_path, ResourceLookupFlags.NONE);
+                    theme_handle = new Rsvg.Handle.from_stream_sync (stream, null, Rsvg.HandleFlags.FLAGS_NONE);
                 } catch (Error e) {
                     warning ("Could not load theme %s: %s", theme_path, e.message);
                     return;
                 }
             }
-            this.initial_theme_width = pixbuf.width;
-            this.initial_theme_height = pixbuf.height;
+
+            double width, height;
+            theme_handle.get_intrinsic_size_in_pixels (out width, out height);
+
+            this.initial_theme_width = (int) width;
+            this.initial_theme_height = (int) height;
             this.loaded_theme_width = 0;
             this.loaded_theme_height = 0;
         } else {
-            this.pixbuf = game_view.pixbuf;
+            this.theme_handle = game_view.theme_handle;
             this.texture = game_view.texture;
             this.cairo_pattern = game_view.cairo_pattern;
             this.initial_theme_width = game_view.initial_theme_width;
@@ -157,14 +164,17 @@ public class GameView : Gtk.Widget {
     }
 
     private void get_theme_size (out int width, out int height) {
+        int[] scale_factors = {8, 4, 2};
         width = 0;
         height = 0;
 
         /* Try to scale down theme */
-        for (var i = 8; i >= 2; i = i - 2) {
-            if (rendered_theme_width < initial_theme_width / i) {
-                width = initial_theme_width / i;
-                height = initial_theme_height / i;
+        foreach (var factor in scale_factors) {
+            var scaled_width = initial_theme_width / factor;
+
+            if (rendered_theme_width < scaled_width) {
+                width = scaled_width;
+                height = initial_theme_height / factor;
                 break;
             }
         }
@@ -208,29 +218,33 @@ public class GameView : Gtk.Widget {
         this.loaded_theme_height = new_theme_height;
 
         try {
-            Gdk.Pixbuf pixbuf;
-            if (new_theme_width > initial_theme_width)
-                pixbuf = new Gdk.Pixbuf.from_resource_at_scale (theme, new_theme_width, new_theme_height, false);
-            else if (new_theme_width < initial_theme_width)
-                pixbuf = this.pixbuf.scale_simple (new_theme_width, new_theme_height, Gdk.InterpType.TILES);
-            else
-                pixbuf = this.pixbuf;
-
-            var rowstride = new_theme_width * 4;
-            var new_texture = new Gdk.MemoryTexture (
-                new_theme_width,
-                new_theme_height,
-                Gdk.MemoryFormat.R8G8B8A8,
-                pixbuf.read_pixel_bytes (),
-                rowstride
-            );
+            var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, new_theme_width, new_theme_height);
+            var context = new Cairo.Context (theme_surface);
+            var rect = Rsvg.Rectangle () {
+                x = 0,
+                y = 0,
+                width = new_theme_width,
+                height = new_theme_height
+            };
+            theme_handle.render_document (context, rect);
 
             if (using_cairo) {
-                var theme_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, new_theme_width, new_theme_height);
-                new_texture.download (theme_surface.get_data (), rowstride);
-                theme_surface.mark_dirty ();
                 this.cairo_pattern = new Cairo.Pattern.for_surface (theme_surface);
             } else {
+                unowned var data = theme_surface.get_data ();
+                var rowstride = new_theme_width * 4;
+                var format = (BYTE_ORDER == ByteOrder.LITTLE_ENDIAN)
+                    ? Gdk.MemoryFormat.B8G8R8A8_PREMULTIPLIED
+                    : Gdk.MemoryFormat.A8R8G8B8_PREMULTIPLIED;
+
+                data.length = new_theme_height * rowstride;
+                var new_texture = new Gdk.MemoryTexture (
+                    new_theme_width,
+                    new_theme_height,
+                    format,
+                    new Bytes.take (data),
+                    rowstride
+                );
                 this.texture = new_texture;
             }
             queue_draw ();
