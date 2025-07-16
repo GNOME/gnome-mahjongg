@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-10 04:29+0000\n"
-"PO-Revision-Date: 2025-02-10 08:50+0100\n"
+"POT-Creation-Date: 2025-07-15 08:54+0000\n"
+"PO-Revision-Date: 2025-07-16 09:46+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:521
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:530
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -87,11 +87,7 @@ msgstr "Mahjongg v svetlem slogu"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg v temnem slogu"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
-msgid "The Mahjongg Team"
-msgstr "Ekipa Mahjongg"
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:207
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:235
 msgid "_New Game"
 msgstr "_Nova igra"
 
@@ -154,8 +150,8 @@ msgstr "Poševni križ"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "Zahtevna uganka"
+msgid "Taipei"
+msgstr "Tajpej"
 
 #: data/ui/menu.ui:57
 msgid "Layout Ro_tation"
@@ -219,40 +215,172 @@ msgid "Educational"
 msgstr "Izobraževalna"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "Po_moč"
+msgid "Game R_ules"
+msgstr "Pravila i_gre"
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "_Tipkovne bližnjice"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "_O programu Mahjongg"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr "Pravila igre"
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr "Počistite ploščo z ujemajočimi se pari enakih ploščic"
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr "Izberete lahko samo nepokrite ploščice s prostim dolgim robom"
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr "Krogi se točkujejo glede na čas dokončanja"
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "Igro lahko zaustavite"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr "Obrazi ploščic bodo skriti"
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr "Potezo lahko razveljavite ali ponovite"
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr "Časovna kazen se ne prišteje"
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr "Z namigi lahko razkrijete ujemajoče se ploščice"
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr "Doda 30-sekundno časovno kazen"
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr "Ploščice lahko premešate, ko ni več potez"
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr "Doda 60-sekundno časovno kazen"
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "Rezultati"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr "Igra končana 🎉"
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Brez rezultatov"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr "Končajte igro in si oglejte rezultate"
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "Igralec"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "Mesto"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "Čas"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "Datum"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "Igralec"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:200
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:233
 msgid "_Quit"
 msgstr "_Končaj"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "Igra"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "Nova igra"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "Znova zažene igro"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "Premor v igri"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Razveljavi"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Ponovi"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "Pokaži namig"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Splošno"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Game Rules"
+msgstr "Pokaže pravila igre"
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "Pokaže glavni meni"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Pokaže tipkovne bližnjice"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Zapre okno"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Konča program"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -270,15 +398,15 @@ msgstr "Glavni meni"
 msgid "Show Hint"
 msgstr "Pokaži namig"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:17
 msgid "Print release version and exit"
 msgstr "Izpiši različico programa in končaj"
 
-#: src/gnome-mahjongg.vala:193
+#: src/gnome-mahjongg.vala:226
 msgid "No Moves Left"
 msgstr "Ni preostalih premikov"
 
-#: src/gnome-mahjongg.vala:195
+#: src/gnome-mahjongg.vala:228
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -286,22 +414,22 @@ msgstr ""
 "Poteze lahko razveljavite in poskusite najti rešitev ali premešati preostale "
 "ploščice."
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:229
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Razveljavite lahko svoje premike in poiščete ustrezno rešitev ali pa začnete "
 "z novo igro."
 
-#: src/gnome-mahjongg.vala:204
+#: src/gnome-mahjongg.vala:238
 msgid "_Reshuffle"
 msgstr "_Premešaj"
 
-#: src/gnome-mahjongg.vala:209
+#: src/gnome-mahjongg.vala:240
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
-#: src/gnome-mahjongg.vala:319
+#: src/gnome-mahjongg.vala:352
 msgid "translator-credits"
 msgstr ""
 "Matej Urbančič <mateju@src.gnome.org>\n"
@@ -310,28 +438,28 @@ msgstr ""
 "Tadej Janež\n"
 "Martin Srebotnjak"
 
-#: src/gnome-mahjongg.vala:321
+#: src/gnome-mahjongg.vala:354
 msgid "Layouts by"
 msgstr "Postavitve"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:61
 #, c-format
 msgid "Layout: %s"
 msgstr "Postavitev: %s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:302
 msgid "Clear All Scores?"
 msgstr "Ali želite počistiti vse rezultate?"
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:303
 msgid "This will clear every score for every layout."
 msgstr "S tem počistite vsak rezultat za vsako postavitev."
 
-#: src/score-dialog.vala:368
+#: src/score-dialog.vala:307
 msgid "_Cancel"
 msgstr "Pre_kliči"
 
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:308
 msgid "Clear All"
 msgstr "Počisti vse"
 
