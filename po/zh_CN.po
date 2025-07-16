@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-12 23:11+0000\n"
-"PO-Revision-Date: 2025-07-13 08:58+0800\n"
+"POT-Creation-Date: 2025-07-15 08:54+0000\n"
+"PO-Revision-Date: 2025-07-17 06:46+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Generator: Gtranslator 48.0\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:564
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:530
 msgid "Mahjongg"
 msgstr "对对碰"
 
@@ -83,7 +83,7 @@ msgstr "亮色样式的麻将"
 msgid "Mahjongg in Dark Style"
 msgstr "暗色样式的麻将"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:230
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:235
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
@@ -146,8 +146,8 @@ msgstr "讨厌的十字"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "困难"
+msgid "Taipei"
+msgstr "台北"
 
 #: data/ui/menu.ui:57
 msgid "Layout Ro_tation"
@@ -211,8 +211,8 @@ msgid "Educational"
 msgstr "教育"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "帮助(_H)"
+msgid "Game R_ules"
+msgstr "游戏规则(_U)"
 
 #: data/ui/menu.ui:122
 msgid "_Keyboard Shortcuts"
@@ -221,6 +221,65 @@ msgstr "键盘快捷键(_K)"
 #: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "关于对对碰(_A)"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr "游戏规则"
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr "通过匹配成对的可识别分块来清空棋盘"
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr "仅能选择未被覆盖且具有一条自由长边缘的分块"
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr "游戏得分基于完成时间"
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "您可以暂停游戏"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr "分块正面将被隐藏"
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr "您可以撤消或重做游戏操作"
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr "不会添加时间惩罚"
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr "您可以使用提示来揭示匹配的分块"
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr "会添加 30 秒的时间惩罚"
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr "没有剩余操作可执行时您可以对分块洗牌"
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr "会添加 60 秒的时间惩罚"
 
 #: data/ui/score-dialog.ui:8
 msgid "Scores"
@@ -250,7 +309,7 @@ msgstr "时间"
 msgid "Player"
 msgstr "玩家"
 
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:228
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:233
 msgid "_Quit"
 msgstr "退出(_Q)"
 
@@ -296,8 +355,8 @@ msgstr "常规"
 
 #: data/ui/shortcuts-dialog.ui:53
 msgctxt "shortcut window"
-msgid "Show Help"
-msgstr "显示帮助"
+msgid "Show Game Rules"
+msgstr "显示游戏规则"
 
 #: data/ui/shortcuts-dialog.ui:59
 msgctxt "shortcut window"
@@ -339,30 +398,30 @@ msgstr "显示提示"
 msgid "Print release version and exit"
 msgstr "显示发布版本并退出"
 
-#: src/gnome-mahjongg.vala:221
+#: src/gnome-mahjongg.vala:226
 msgid "No Moves Left"
 msgstr "无剩余操作"
 
-#: src/gnome-mahjongg.vala:223
+#: src/gnome-mahjongg.vala:228
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr "您可以撤消操作并尝试寻找解法，或者对剩余分块重新洗牌。"
 
-#: src/gnome-mahjongg.vala:224
+#: src/gnome-mahjongg.vala:229
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "您可以撤消操作并尝试寻找解法，或者开始新游戏。"
 
-#: src/gnome-mahjongg.vala:233
+#: src/gnome-mahjongg.vala:238
 msgid "_Reshuffle"
 msgstr "洗牌(_R)"
 
-#: src/gnome-mahjongg.vala:235
+#: src/gnome-mahjongg.vala:240
 msgid "_Continue"
 msgstr "继续(_C)"
 
-#: src/gnome-mahjongg.vala:347
+#: src/gnome-mahjongg.vala:352
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
@@ -374,28 +433,28 @@ msgstr ""
 "Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
 "lumingzh <lumingzh@qq.com>, 2023-2025"
 
-#: src/gnome-mahjongg.vala:349
+#: src/gnome-mahjongg.vala:354
 msgid "Layouts by"
 msgstr "布局"
 
-#: src/score-dialog.vala:63
+#: src/score-dialog.vala:61
 #, c-format
 msgid "Layout: %s"
 msgstr "布局：%s"
 
-#: src/score-dialog.vala:323
+#: src/score-dialog.vala:302
 msgid "Clear All Scores?"
 msgstr "清除所有得分吗？"
 
-#: src/score-dialog.vala:324
+#: src/score-dialog.vala:303
 msgid "This will clear every score for every layout."
 msgstr "这会清除所有布局的所有得分。"
 
-#: src/score-dialog.vala:328
+#: src/score-dialog.vala:307
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/score-dialog.vala:329
+#: src/score-dialog.vala:308
 msgid "Clear All"
 msgstr "全部清除"
 
@@ -415,6 +474,17 @@ msgstr "继续游戏"
 #: src/window.vala:99
 msgid "Pause Game"
 msgstr "暂停游戏"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "困难"
+
+#~ msgid "_Help"
+#~ msgstr "帮助(_H)"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Show Help"
+#~ msgstr "显示帮助"
 
 #~ msgid "The Mahjongg Team"
 #~ msgstr "对对碰团队"
@@ -498,9 +568,6 @@ msgstr "暂停游戏"
 
 #~ msgid "OK"
 #~ msgstr "确认"
-
-#~ msgid "Unpause the game"
-#~ msgstr "重回游戏"
 
 #~ msgid "GNOME Mahjongg"
 #~ msgstr "GNOME 麻将牌"
