@@ -111,7 +111,5 @@ resources = gnome.compile_resources(
   dependencies: metainfo_file,
 )
 
-install_data('maps' / 'mahjongg.map', install_dir: pkgdatadir / 'maps')
-
 # Man page
 install_man('@0@.6'.format(meson.project_name()))

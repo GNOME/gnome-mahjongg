@@ -27,14 +27,15 @@ private void verify_slots (Map map, int[,] expected_layout) {
     }
 }
 
-private void test_load_maps_builtin () {
-    var map_loader = new MapLoader ();
-    map_loader.load_builtin ();
-    assert_true (map_loader.n_maps == 1);
+private void test_load_maps () {
+    var maps = new Maps ();
+    maps.load ();
+    assert_true (maps.n_maps == 10);
 
     var score_name = "easy";
-    var display_name = map_loader.get_map_display_name (score_name);
-    unowned var map = map_loader.get_map_by_name (display_name);
+    var display_name = maps.get_map_display_name (score_name);
+    unowned var map = maps.get_map_by_name (display_name);
+    unowned var first_map = map;
     assert_true (map.name == display_name == "Turtle");
     assert_true (map.score_name == score_name);
     assert_true (map.width == 30);
@@ -49,156 +50,149 @@ private void test_load_maps_builtin () {
             {28, 7, 0},
             {20, 0, 0},
             {26, 7, 0},
-            {24, 6, 0},
-            {22, 4, 0},
-            {20, 2, 0},
             {18, 0, 0},
-            {24, 8, 0},
-            {22, 6, 0},
-            {20, 4, 0},
-            {18, 2, 0},
+            {20, 2, 0},
+            {22, 4, 0},
+            {24, 6, 0},
             {16, 0, 0},
-            {22, 8, 0},
-            {20, 6, 0},
-            {18, 4, 0},
-            {16, 2, 0},
+            {18, 2, 0},
+            {20, 4, 0},
+            {22, 6, 0},
+            {24, 8, 0},
             {14, 0, 0},
-            {22, 10, 0},
-            {20, 8, 0},
-            {18, 6, 0},
-            {16, 4, 0},
-            {14, 2, 0},
+            {16, 2, 0},
+            {18, 4, 0},
+            {20, 6, 0},
+            {22, 8, 0},
             {12, 0, 0},
-            {24, 14, 0},
-            {20, 10, 0},
-            {18, 8, 0},
-            {16, 6, 0},
-            {14, 4, 0},
-            {12, 2, 0},
+            {14, 2, 0},
+            {16, 4, 0},
+            {18, 6, 0},
+            {20, 8, 0},
+            {22, 10, 0},
             {10, 0, 0},
-            {22, 14, 0},
-            {20, 12, 0},
-            {18, 10, 0},
-            {16, 8, 0},
-            {14, 6, 0},
-            {12, 4, 0},
-            {10, 2, 0},
+            {12, 2, 0},
+            {14, 4, 0},
+            {16, 6, 0},
+            {18, 8, 0},
+            {20, 10, 0},
+            {24, 14, 0},
             {8, 0, 0},
-            {20, 14, 0},
-            {18, 12, 0},
-            {16, 10, 0},
-            {14, 8, 0},
-            {12, 6, 0},
-            {10, 4, 0},
-            {8, 2, 0},
+            {10, 2, 0},
+            {12, 4, 0},
+            {14, 6, 0},
+            {16, 8, 0},
+            {18, 10, 0},
+            {20, 12, 0},
+            {22, 14, 0},
             {6, 0, 0},
-            {18, 14, 0},
-            {16, 12, 0},
-            {14, 10, 0},
-            {12, 8, 0},
-            {10, 6, 0},
-            {8, 4, 0},
-            {6, 2, 0},
+            {8, 2, 0},
+            {10, 4, 0},
+            {12, 6, 0},
+            {14, 8, 0},
+            {16, 10, 0},
+            {18, 12, 0},
+            {20, 14, 0},
             {4, 0, 0},
-            {16, 14, 0},
-            {14, 12, 0},
-            {12, 10, 0},
-            {10, 8, 0},
-            {8, 6, 0},
-            {6, 4, 0},
+            {6, 2, 0},
+            {8, 4, 0},
+            {10, 6, 0},
+            {12, 8, 0},
+            {14, 10, 0},
+            {16, 12, 0},
+            {18, 14, 0},
             {2, 0, 0},
-            {14, 14, 0},
-            {12, 12, 0},
-            {10, 10, 0},
-            {8, 8, 0},
-            {6, 6, 0},
+            {6, 4, 0},
+            {8, 6, 0},
+            {10, 8, 0},
+            {12, 10, 0},
+            {14, 12, 0},
+            {16, 14, 0},
             {4, 4, 0},
-            {12, 14, 0},
-            {10, 12, 0},
-            {8, 10, 0},
-            {6, 8, 0},
+            {6, 6, 0},
+            {8, 8, 0},
+            {10, 10, 0},
+            {12, 12, 0},
+            {14, 14, 0},
             {4, 6, 0},
-            {10, 14, 0},
-            {8, 12, 0},
-            {6, 10, 0},
-            {4, 8, 0},
+            {6, 8, 0},
+            {8, 10, 0},
+            {10, 12, 0},
+            {12, 14, 0},
             {2, 6, 0},
-            {8, 14, 0},
-            {6, 12, 0},
-            {4, 10, 0},
+            {4, 8, 0},
+            {6, 10, 0},
+            {8, 12, 0},
+            {10, 14, 0},
             {2, 8, 0},
+            {4, 10, 0},
+            {6, 12, 0},
+            {8, 14, 0},
             {0, 7, 0},
             {6, 14, 0},
             {4, 14, 0},
             {2, 14, 0},
             {18, 2, 1},
-            {18, 4, 1},
             {16, 2, 1},
-            {18, 6, 1},
-            {16, 4, 1},
+            {18, 4, 1},
             {14, 2, 1},
-            {18, 8, 1},
-            {16, 6, 1},
-            {14, 4, 1},
+            {16, 4, 1},
+            {18, 6, 1},
             {12, 2, 1},
-            {18, 10, 1},
-            {16, 8, 1},
-            {14, 6, 1},
-            {12, 4, 1},
+            {14, 4, 1},
+            {16, 6, 1},
+            {18, 8, 1},
             {10, 2, 1},
-            {18, 12, 1},
-            {16, 10, 1},
-            {14, 8, 1},
-            {12, 6, 1},
-            {10, 4, 1},
+            {12, 4, 1},
+            {14, 6, 1},
+            {16, 8, 1},
+            {18, 10, 1},
             {8, 2, 1},
-            {16, 12, 1},
-            {14, 10, 1},
-            {12, 8, 1},
-            {10, 6, 1},
+            {10, 4, 1},
+            {12, 6, 1},
+            {14, 8, 1},
+            {16, 10, 1},
+            {18, 12, 1},
             {8, 4, 1},
-            {14, 12, 1},
-            {12, 10, 1},
-            {10, 8, 1},
+            {10, 6, 1},
+            {12, 8, 1},
+            {14, 10, 1},
+            {16, 12, 1},
             {8, 6, 1},
-            {12, 12, 1},
-            {10, 10, 1},
+            {10, 8, 1},
+            {12, 10, 1},
+            {14, 12, 1},
             {8, 8, 1},
-            {10, 12, 1},
+            {10, 10, 1},
+            {12, 12, 1},
             {8, 10, 1},
+            {10, 12, 1},
             {8, 12, 1},
             {16, 4, 2},
-            {16, 6, 2},
             {14, 4, 2},
-            {16, 8, 2},
-            {14, 6, 2},
+            {16, 6, 2},
             {12, 4, 2},
-            {16, 10, 2},
-            {14, 8, 2},
-            {12, 6, 2},
+            {14, 6, 2},
+            {16, 8, 2},
             {10, 4, 2},
-            {14, 10, 2},
-            {12, 8, 2},
+            {12, 6, 2},
+            {14, 8, 2},
+            {16, 10, 2},
             {10, 6, 2},
-            {12, 10, 2},
+            {12, 8, 2},
+            {14, 10, 2},
             {10, 8, 2},
+            {12, 10, 2},
             {10, 10, 2},
             {14, 6, 3},
-            {14, 8, 3},
             {12, 6, 3},
+            {14, 8, 3},
             {12, 8, 3},
             {13, 7, 4},
         }
     );
-}
 
-private void test_load_maps_folder () {
-    var map_loader = new MapLoader ();
-    map_loader.load_folder ("../data/maps/");
-    assert_true (map_loader.n_maps == 9);
-
-    unowned var map = map_loader.get_map_at_position (0);
-    unowned var first_map = map;
+    map = maps.get_next_map (map);
     assert_true (map.name == "The Ziggurat");
     assert_true (map.score_name == "ziggurat");
     assert_true (map.width == 30);
@@ -355,7 +349,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Four Bridges");
     assert_true (map.score_name == "bridges");
     assert_true (map.width == 26);
@@ -512,7 +506,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Cloud");
     assert_true (map.score_name == "cloud");
     assert_true (map.width == 28);
@@ -669,7 +663,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Tic-Tac-Toe");
     assert_true (map.score_name == "tictactoe");
     assert_true (map.width == 26);
@@ -826,7 +820,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Red Dragon");
     assert_true (map.score_name == "dragon");
     assert_true (map.width == 30);
@@ -983,7 +977,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Overpass");
     assert_true (map.score_name == "overpass");
     assert_true (map.width == 24);
@@ -1140,7 +1134,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Pyramid's Walls");
     assert_true (map.score_name == "pyramid");
     assert_true (map.width == 24);
@@ -1297,7 +1291,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Confounding Cross");
     assert_true (map.score_name == "confounding");
     assert_true (map.width == 22);
@@ -1454,7 +1448,7 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map.name == "Taipei");
     assert_true (map.score_name == "difficult");
     assert_true (map.width == 22);
@@ -1611,25 +1605,14 @@ private void test_load_maps_folder () {
         }
     );
 
-    map = map_loader.get_next_map (map);
+    map = maps.get_next_map (map);
     assert_true (map == first_map);
-}
-
-private void test_load_maps_invalid_folder () {
-    var map_loader = new MapLoader ();
-    map_loader.load_folder ("../data/nonexistentmaps/");
-    assert_true (map_loader.n_maps == 0);
-
-    map_loader.load_folder ("data/");
-    assert_true (map_loader.n_maps == 0);
 }
 
 public int main (string[] args) {
     Test.init (ref args);
     Test.add_func ("/map/slot", test_slot);
-    Test.add_func ("/map/load_maps_builtin", test_load_maps_builtin);
-    Test.add_func ("/map/load_maps_folder", test_load_maps_folder);
-    Test.add_func ("/map/load_maps_invalid_folder", test_load_maps_invalid_folder);
+    Test.add_func ("/map/load_maps", test_load_maps);
 
     return Test.run ();
 }

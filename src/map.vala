@@ -27,155 +27,6 @@ public class Map {
         get { return (int) slots.length (); }
     }
 
-    public Map.builtin () {
-        name = "Turtle";
-        score_name = "easy";
-        add_slot (new Slot (13, 7, 4));
-        add_slot (new Slot (12, 8, 3));
-        add_slot (new Slot (14, 8, 3));
-        add_slot (new Slot (12, 6, 3));
-        add_slot (new Slot (14, 6, 3));
-        add_slot (new Slot (10, 10, 2));
-        add_slot (new Slot (12, 10, 2));
-        add_slot (new Slot (14, 10, 2));
-        add_slot (new Slot (16, 10, 2));
-        add_slot (new Slot (10, 8, 2));
-        add_slot (new Slot (12, 8, 2));
-        add_slot (new Slot (14, 8, 2));
-        add_slot (new Slot (16, 8, 2));
-        add_slot (new Slot (10, 6, 2));
-        add_slot (new Slot (12, 6, 2));
-        add_slot (new Slot (14, 6, 2));
-        add_slot (new Slot (16, 6, 2));
-        add_slot (new Slot (10, 4, 2));
-        add_slot (new Slot (12, 4, 2));
-        add_slot (new Slot (14, 4, 2));
-        add_slot (new Slot (16, 4, 2));
-        add_slot (new Slot (8, 12, 1));
-        add_slot (new Slot (10, 12, 1));
-        add_slot (new Slot (12, 12, 1));
-        add_slot (new Slot (14, 12, 1));
-        add_slot (new Slot (16, 12, 1));
-        add_slot (new Slot (18, 12, 1));
-        add_slot (new Slot (8, 10, 1));
-        add_slot (new Slot (10, 10, 1));
-        add_slot (new Slot (12, 10, 1));
-        add_slot (new Slot (14, 10, 1));
-        add_slot (new Slot (16, 10, 1));
-        add_slot (new Slot (18, 10, 1));
-        add_slot (new Slot (8, 8, 1));
-        add_slot (new Slot (10, 8, 1));
-        add_slot (new Slot (12, 8, 1));
-        add_slot (new Slot (14, 8, 1));
-        add_slot (new Slot (16, 8, 1));
-        add_slot (new Slot (18, 8, 1));
-        add_slot (new Slot (8, 6, 1));
-        add_slot (new Slot (10, 6, 1));
-        add_slot (new Slot (12, 6, 1));
-        add_slot (new Slot (14, 6, 1));
-        add_slot (new Slot (16, 6, 1));
-        add_slot (new Slot (18, 6, 1));
-        add_slot (new Slot (8, 4, 1));
-        add_slot (new Slot (10, 4, 1));
-        add_slot (new Slot (12, 4, 1));
-        add_slot (new Slot (14, 4, 1));
-        add_slot (new Slot (16, 4, 1));
-        add_slot (new Slot (18, 4, 1));
-        add_slot (new Slot (8, 2, 1));
-        add_slot (new Slot (10, 2, 1));
-        add_slot (new Slot (12, 2, 1));
-        add_slot (new Slot (14, 2, 1));
-        add_slot (new Slot (16, 2, 1));
-        add_slot (new Slot (18, 2, 1));
-        add_slot (new Slot (2, 14, 0));
-        add_slot (new Slot (4, 14, 0));
-        add_slot (new Slot (6, 14, 0));
-        add_slot (new Slot (8, 14, 0));
-        add_slot (new Slot (10, 14, 0));
-        add_slot (new Slot (12, 14, 0));
-        add_slot (new Slot (14, 14, 0));
-        add_slot (new Slot (16, 14, 0));
-        add_slot (new Slot (18, 14, 0));
-        add_slot (new Slot (20, 14, 0));
-        add_slot (new Slot (22, 14, 0));
-        add_slot (new Slot (24, 14, 0));
-        add_slot (new Slot (6, 12, 0));
-        add_slot (new Slot (8, 12, 0));
-        add_slot (new Slot (10, 12, 0));
-        add_slot (new Slot (12, 12, 0));
-        add_slot (new Slot (14, 12, 0));
-        add_slot (new Slot (16, 12, 0));
-        add_slot (new Slot (18, 12, 0));
-        add_slot (new Slot (20, 12, 0));
-        add_slot (new Slot (4, 10, 0));
-        add_slot (new Slot (6, 10, 0));
-        add_slot (new Slot (8, 10, 0));
-        add_slot (new Slot (10, 10, 0));
-        add_slot (new Slot (12, 10, 0));
-        add_slot (new Slot (14, 10, 0));
-        add_slot (new Slot (16, 10, 0));
-        add_slot (new Slot (18, 10, 0));
-        add_slot (new Slot (20, 10, 0));
-        add_slot (new Slot (22, 10, 0));
-        add_slot (new Slot (0, 7, 0));
-        add_slot (new Slot (2, 8, 0));
-        add_slot (new Slot (4, 8, 0));
-        add_slot (new Slot (6, 8, 0));
-        add_slot (new Slot (8, 8, 0));
-        add_slot (new Slot (10, 8, 0));
-        add_slot (new Slot (12, 8, 0));
-        add_slot (new Slot (14, 8, 0));
-        add_slot (new Slot (16, 8, 0));
-        add_slot (new Slot (18, 8, 0));
-        add_slot (new Slot (20, 8, 0));
-        add_slot (new Slot (22, 8, 0));
-        add_slot (new Slot (24, 8, 0));
-        add_slot (new Slot (2, 6, 0));
-        add_slot (new Slot (4, 6, 0));
-        add_slot (new Slot (6, 6, 0));
-        add_slot (new Slot (8, 6, 0));
-        add_slot (new Slot (10, 6, 0));
-        add_slot (new Slot (12, 6, 0));
-        add_slot (new Slot (14, 6, 0));
-        add_slot (new Slot (16, 6, 0));
-        add_slot (new Slot (18, 6, 0));
-        add_slot (new Slot (20, 6, 0));
-        add_slot (new Slot (22, 6, 0));
-        add_slot (new Slot (24, 6, 0));
-        add_slot (new Slot (4, 4, 0));
-        add_slot (new Slot (6, 4, 0));
-        add_slot (new Slot (8, 4, 0));
-        add_slot (new Slot (10, 4, 0));
-        add_slot (new Slot (12, 4, 0));
-        add_slot (new Slot (14, 4, 0));
-        add_slot (new Slot (16, 4, 0));
-        add_slot (new Slot (18, 4, 0));
-        add_slot (new Slot (20, 4, 0));
-        add_slot (new Slot (22, 4, 0));
-        add_slot (new Slot (6, 2, 0));
-        add_slot (new Slot (8, 2, 0));
-        add_slot (new Slot (10, 2, 0));
-        add_slot (new Slot (12, 2, 0));
-        add_slot (new Slot (14, 2, 0));
-        add_slot (new Slot (16, 2, 0));
-        add_slot (new Slot (18, 2, 0));
-        add_slot (new Slot (20, 2, 0));
-        add_slot (new Slot (2, 0, 0));
-        add_slot (new Slot (4, 0, 0));
-        add_slot (new Slot (6, 0, 0));
-        add_slot (new Slot (8, 0, 0));
-        add_slot (new Slot (10, 0, 0));
-        add_slot (new Slot (12, 0, 0));
-        add_slot (new Slot (14, 0, 0));
-        add_slot (new Slot (16, 0, 0));
-        add_slot (new Slot (18, 0, 0));
-        add_slot (new Slot (20, 0, 0));
-        add_slot (new Slot (22, 0, 0));
-        add_slot (new Slot (24, 0, 0));
-        add_slot (new Slot (26, 7, 0));
-        add_slot (new Slot (28, 7, 0));
-    }
-
     private int _width;
     public int h_overhang;
     public int width {
@@ -267,7 +118,7 @@ public class Map {
     }
 }
 
-public class MapLoader {
+public class Maps {
     private Map[] maps;
     private Map? map;
     private int layer_z;
@@ -276,30 +127,30 @@ public class MapLoader {
         get { return maps.length; }
     }
 
-    public void load_builtin () {
-        maps += new Map.builtin ();
-    }
-
-    public void load_folder (string folder_path) {
-        Dir dir;
+    public bool load () {
+        var path = "/org/gnome/Mahjongg/maps/mahjongg.map";
+        string data;
         try {
-            dir = Dir.open (folder_path);
+            data = (string) resources_lookup_data (path, ResourceLookupFlags.NONE).get_data ();
         }
-        catch (FileError e) {
-            return;
+        catch (Error e) {
+            warning ("Could not load map %s: %s\n", path, e.message);
+            return false;
         }
 
-        while (true) {
-            var filename = dir.read_name ();
-            if (filename == null)
-                break;
-
-            if (!filename.has_suffix (".map"))
-                continue;
-
-            var path = Path.build_filename (folder_path, filename);
-            load_file (path);
+        var parser = MarkupParser () {
+            start_element = start_element_cb,
+            end_element = end_element_cb
+        };
+        var parse_context = new MarkupParseContext (parser, 0, this, null);
+        try {
+            parse_context.parse (data, data.length);
         }
+        catch (MarkupError e) {
+            warning ("Could not parse map %s: %s\n", path, e.message);
+            return false;
+        }
+        return true;
     }
 
     public unowned Map? get_map_by_name (string name) {
@@ -347,33 +198,6 @@ public class MapLoader {
 
     public Iterator iterator () {
         return new Iterator (this);
-    }
-
-    private bool load_file (string filename) {
-        string data;
-        size_t length;
-
-        try {
-            FileUtils.get_contents (filename, out data, out length);
-        }
-        catch (FileError e) {
-            warning ("Could not load map %s: %s\n", filename, e.message);
-            return false;
-        }
-
-        var parser = MarkupParser () {
-            start_element = start_element_cb,
-            end_element = end_element_cb
-        };
-        var parse_context = new MarkupParseContext (parser, 0, this, null);
-        try {
-            parse_context.parse (data, (ssize_t) length);
-        }
-        catch (MarkupError e) {
-            warning ("Could not parse map %s: %s\n", filename, e.message);
-            return false;
-        }
-        return true;
     }
 
     private string? get_attribute (string[] attribute_names, string[] attribute_values, string name,
@@ -466,18 +290,18 @@ public class MapLoader {
 
     public class Iterator {
         private int index;
-        private MapLoader map_loader;
+        private Maps maps;
 
-        public Iterator (MapLoader map_loader) {
-            this.map_loader = map_loader;
+        public Iterator (Maps maps) {
+            this.maps = maps;
         }
 
         public bool next () {
-            return index < map_loader.maps.length;
+            return index < maps.maps.length;
         }
 
         public unowned Map get () {
-            return map_loader.maps[index++];
+            return maps.maps[index++];
         }
     }
 }

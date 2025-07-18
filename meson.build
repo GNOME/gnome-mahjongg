@@ -24,7 +24,6 @@ app_id  = 'org.gnome.Mahjongg@0@'.format(profile)
 mandir      = get_option('prefix') / get_option('mandir')
 localedir   = get_option('prefix') / get_option('localedir')
 datadir     = get_option('prefix') / get_option('datadir')
-pkgdatadir  = datadir / 'gnome-mahjongg'
 bindir      = get_option('prefix') / get_option('bindir')
 podir       = meson.project_source_root() / 'po'
 srcdir      = meson.project_source_root() / 'src'

@@ -5,7 +5,7 @@
 public class Mahjongg : Adw.Application {
     private History history;
     private GameSave game_save;
-    private MapLoader map_loader;
+    private Maps maps;
 
     private Settings settings;
     private MahjonggWindow window;
@@ -63,14 +63,13 @@ public class Mahjongg : Adw.Application {
     }
 
     private void create_window () {
-        map_loader = new MapLoader ();
-        map_loader.load_builtin ();
-        map_loader.load_folder (Path.build_filename (DATA_DIRECTORY, "maps"));
+        maps = new Maps ();
+        maps.load ();
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
         history.load ();
 
-        window = new MahjonggWindow (this, map_loader);
+        window = new MahjonggWindow (this, maps);
 
         var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
         primary_game_view = new GameView (using_cairo);
@@ -258,7 +257,7 @@ public class Mahjongg : Adw.Application {
     }
 
     private void show_scores (string selected_layout = "", HistoryEntry? completed_entry = null) {
-        new ScoreDialog (history, map_loader, selected_layout, completed_entry).present (window);
+        new ScoreDialog (history, maps, selected_layout, completed_entry).present (window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {
@@ -401,19 +400,19 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private unowned Map next_map (bool rotate_map) {
-        unowned var map = map_loader.get_map_by_name (settings.get_string ("mapset"));
+        unowned var map = maps.get_map_by_name (settings.get_string ("mapset"));
 
         // Map wasn't found. Get the default (first) map.
         if (map == null)
-            map = map_loader.get_map_at_position (0);
+            map = maps.get_map_at_position (0);
 
         if (rotate_map) {
             switch (settings.get_string ("map-rotation")) {
             case "sequential":
-                map = map_loader.get_next_map (map);
+                map = maps.get_next_map (map);
                 break;
             case "random":
-                map = map_loader.get_random_map ();
+                map = maps.get_random_map ();
                 break;
             }
         }
@@ -463,7 +462,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             return;
         }
 
-        var map = map_loader.get_map_by_name (game_save.map_name);
+        var map = maps.get_map_by_name (game_save.map_name);
         if (map == null) {
             warning ("Map '%s' not found in available maps.\n", game_save.map_name);
             initialize_game (next_map (rotate_map));

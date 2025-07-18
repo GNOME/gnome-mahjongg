@@ -27,7 +27,6 @@ gnome_mahjongg = executable(
     '-DVERSION="@0@"'.format(meson.project_version()),
     '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
     '-DLOCALEDIR="@0@"'.format(localedir),
-    '-DDATA_DIRECTORY="@0@"'.format(pkgdatadir),
     '-w'
   ],
   install: true

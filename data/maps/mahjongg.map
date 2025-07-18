@@ -18,6 +18,24 @@
 <!-- This isn't really XML, it is what g_markup will parse. -->
 
 <mahjongg>
+  <map name="Turtle" scorename="easy">
+    <layer z="0">
+      <row y="0" left="1" right="12"/>
+      <row y="1" left="3" right="10"/>
+      <row y="2" left="2" right="11"/>
+      <row y="3" left="1" right="12"/>
+      <row y="4" left="1" right="12"/>
+      <row y="5" left="2" right="11"/>
+      <row y="6" left="3" right="10"/>
+      <row y="7" left="1" right="12"/>
+      <tile x="0" y="3.5"/>
+      <row y="3.5" left="13" right="14"/>
+    </layer>
+    <block z="1" left="4" right="9" top="1" bottom="6"/>
+    <block z="2" left="5" right="8" top="2" bottom="5"/>
+    <block z="3" left="6" right="7" top="3" bottom="4"/>
+    <tile z="4" x="6.5" y="3.5"/>
+  </map>
   <map name="The Ziggurat" scorename="ziggurat">
     <layer z="0">
       <column x="0" top="0" bottom="7"/>

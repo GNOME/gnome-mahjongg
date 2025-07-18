@@ -15,8 +15,6 @@ Single-player tile-matching game, commonly known as Mahjong solitaire.
 
 ## Resources
 
-- The Mahjongg Map Tool makes it easy to generate new layouts:
-  - <https://github.com/logicplace/mggmap>
 - Sources for the Smooth tile set are available on GitHub:
   - <https://github.com/jimevins/smooth-tileset>
 

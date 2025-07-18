@@ -12,9 +12,14 @@ tests = {
     ]
 }
 
+resources = gnome.compile_resources(
+  'resources',
+  'maps.gresource.xml'
+)
+
 foreach test_name, sources : tests
   test_bin = executable(test_name,
-    sources + ['@0@.vala'.format(test_name)],
+    resources + sources + ['@0@.vala'.format(test_name)],
     dependencies: [
       gio_dep,
       glib_dep,

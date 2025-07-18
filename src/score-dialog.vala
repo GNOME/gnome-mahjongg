@@ -40,11 +40,11 @@ public class ScoreDialog : Adw.Dialog {
     private History history;
     private HistoryEntry? completed_entry;
     private ListStore score_model;
-    private MapLoader map_loader;
+    private Maps maps;
 
-    public ScoreDialog (History history, MapLoader map_loader, string selected_layout = "",
+    public ScoreDialog (History history, Maps maps, string selected_layout = "",
                         HistoryEntry? completed_entry = null) {
-        this.map_loader = map_loader;
+        this.maps = maps;
         this.history = history;
         this.completed_entry = completed_entry;
 
@@ -58,7 +58,7 @@ public class ScoreDialog : Adw.Dialog {
             toolbar_view.reveal_bottom_bars = true;
 
             header_stack.visible_child_name = "title";
-            title_widget.subtitle = _("Layout: %s").printf (map_loader.get_map_display_name (completed_entry.name));
+            title_widget.subtitle = _("Layout: %s").printf (maps.get_map_display_name (completed_entry.name));
 
             this.focus_widget = score_view;
         }
@@ -70,7 +70,7 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void add_layout (Gtk.StringList model, string layout_name) {
-        var display_name = map_loader.get_map_display_name (layout_name);
+        var display_name = maps.get_map_display_name (layout_name);
 
         if (model.find (display_name) == uint.MAX)
             model.append (display_name);
@@ -85,11 +85,11 @@ public class ScoreDialog : Adw.Dialog {
     }
 
     private void set_up_layout_menu (string selected_layout) {
-        var display_name = map_loader.get_map_display_name (selected_layout);
+        var display_name = maps.get_map_display_name (selected_layout);
         var model = new Gtk.StringList (null);
         layout_dropdown.model = model;
 
-        foreach (unowned var map in map_loader)
+        foreach (unowned var map in maps)
             add_layout (model, map.score_name);
 
         foreach (unowned var entry in history)
@@ -272,7 +272,7 @@ public class ScoreDialog : Adw.Dialog {
         HistoryEntry[] entry_array = null;
 
         foreach (unowned var entry in history)
-            if (map_loader.get_map_display_name (entry.name) == selected_name)
+            if (maps.get_map_display_name (entry.name) == selected_name)
                 entry_list.prepend (entry);
 
         entry_list.sort (player_sorter_cb);

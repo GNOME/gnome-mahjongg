@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2025 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+<gresources>
+  <gresource prefix="/org/gnome/Mahjongg/maps">
+    <file alias="mahjongg.map" preprocess="xml-stripblanks">../data/maps/mahjongg.map</file>
+  </gresource>
+</gresources>
