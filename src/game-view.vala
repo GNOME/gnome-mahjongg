@@ -126,14 +126,18 @@ public class GameView : Gtk.Widget {
 
         if (game_view == null) {
             InputStream stream;
+            theme_handle = new Rsvg.Handle ();
+            theme_handle.set_base_uri ("resource://");
+
             try {
                 stream = resources_open_stream (theme_path, ResourceLookupFlags.NONE);
-                theme_handle = new Rsvg.Handle.from_stream_sync (stream, null, Rsvg.HandleFlags.FLAGS_NONE);
+                theme_handle.read_stream_sync (stream);
             } catch (Error e) {
                 try {
                     stream = resources_open_stream (fallback_theme_path, ResourceLookupFlags.NONE);
-                    theme_handle = new Rsvg.Handle.from_stream_sync (stream, null, Rsvg.HandleFlags.FLAGS_NONE);
+                    theme_handle.read_stream_sync (stream);
                 } catch (Error e) {
+                    theme_handle = null;
                     warning ("Could not load theme %s: %s", theme_path, e.message);
                     return;
                 }
