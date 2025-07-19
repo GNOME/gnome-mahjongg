@@ -97,7 +97,9 @@ public class Map {
         var dy = a.y - b.y;
         if (dx > dy)
             return -1;
-        return 1;
+        if (dx < dy)
+            return 1;
+        return dx;
     }
 
     public class Iterator {
