@@ -4,8 +4,8 @@
 
 public class GameSave {
     public string map_name;
-    public double elapsed_time;
-    public int move_number;
+    public double clock;
+    public int move;
     public int32 seed;
     private Tile[] tiles;
 
@@ -44,24 +44,24 @@ public class GameSave {
     public void write (Game game) {
         var builder = new StringBuilder ();
 
-        builder.append_printf ("<game map_name=\"%s\" elapsed_time=\"%s\" move_number=\"%d\" seed=\"%d\">\n",
+        builder.append_printf ("<game map=\"%s\" seed=\"%d\" clock=\"%s\" move=\"%d\">\n",
             game.map.name,
+            game.seed,
             game.elapsed.to_string (),
-            game.current_move_number,
-            game.seed
+            game.current_move
         );
 
         builder.append ("\t<tiles>\n");
 
         foreach (unowned var tile in game) {
             builder.append_printf (
-                "\t\t<tile number=\"%d\" visible=\"%s\" move_number=\"%d\" x=\"%d\" y=\"%d\" layer=\"%d\"/>\n",
+                "\t\t<tile number=\"%d\" visible=\"%s\" move=\"%d\" z=\"%d\" x=\"%d\" y=\"%d\"/>\n",
                 tile.number,
                 tile.visible ? "true" : "false",
-                tile.move_number,
+                tile.move,
+                tile.slot.layer,
                 tile.slot.x,
-                tile.slot.y,
-                tile.slot.layer
+                tile.slot.y
             );
         }
 
@@ -103,8 +103,8 @@ public class GameSave {
             warning ("Could not remove save file %s.", filename);
 
         map_name = "";
-        elapsed_time = 0.0;
-        move_number = 0;
+        clock = 0.0;
+        move = 0;
         seed = 0;
         tiles = null;
     }
@@ -134,25 +134,25 @@ public class GameSave {
                                    string[] attribute_values) throws MarkupError {
         switch (element_name.down ()) {
         case "game":
-            map_name = get_attribute (attribute_names, attribute_values, "map_name", "");
-            elapsed_time = get_attribute_d (attribute_names, attribute_values, "elapsed_time");
-            move_number = (int) get_attribute_d (attribute_names, attribute_values, "move_number");
+            map_name = get_attribute (attribute_names, attribute_values, "map", "");
             seed = (int) get_attribute_d (attribute_names, attribute_values, "seed");
+            clock = get_attribute_d (attribute_names, attribute_values, "clock");
+            move = (int) get_attribute_d (attribute_names, attribute_values, "move");
             break;
 
         case "tile":
-            var tile_number = (int) (get_attribute_d (attribute_names, attribute_values, "number"));
+            var number = (int) (get_attribute_d (attribute_names, attribute_values, "number"));
             var visible = get_attribute (attribute_names, attribute_values, "visible") == "true";
-            var move_number = (int) (get_attribute_d (attribute_names, attribute_values, "move_number"));
+            var move = (int) (get_attribute_d (attribute_names, attribute_values, "move"));
             var x = (int) (get_attribute_d (attribute_names, attribute_values, "x"));
             var y = (int) (get_attribute_d (attribute_names, attribute_values, "y"));
             var layer = (int) (get_attribute_d (attribute_names, attribute_values, "layer"));
 
             var slot = new Slot (x, y, layer);
             var tile = new Tile (slot) {
-                number = tile_number,
+                number = number,
                 visible = visible,
-                move_number = move_number
+                move = move
             };
             tiles += tile;
             break;

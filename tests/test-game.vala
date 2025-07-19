@@ -169,8 +169,8 @@ private void test_undo_redo () {
     // Verify undo/redo possibility and tile states
     assert_true (game.can_undo);
     assert_false (game.can_redo);
-    assert_true (first_match.tile0.move_number == 1 && first_match.tile1.move_number == 1);
-    assert_true (second_match.tile0.move_number == 2 && second_match.tile1.move_number == 2);
+    assert_true (first_match.tile0.move == 1 && first_match.tile1.move == 1);
+    assert_true (second_match.tile0.move == 2 && second_match.tile1.move == 2);
 
     game.undo ();
     assert_true (game.can_undo);
@@ -187,8 +187,8 @@ private void test_undo_redo () {
     game.undo ();
     assert_false (game.can_undo);
     assert_true (game.can_redo);
-    assert_true (first_match.tile0.move_number == 1 && first_match.tile1.move_number == 1);
-    assert_true (second_match.tile0.move_number == 2 && second_match.tile1.move_number == 2);
+    assert_true (first_match.tile0.move == 1 && first_match.tile1.move == 1);
+    assert_true (second_match.tile0.move == 2 && second_match.tile1.move == 2);
 
     // Verify tile state reset
     var third_match = game.next_hint ();
@@ -197,9 +197,9 @@ private void test_undo_redo () {
 
     assert_true (game.can_undo);
     assert_false (game.can_redo);
-    assert_true (first_match.tile0.move_number == 0 && first_match.tile1.move_number == 0);
-    assert_true (second_match.tile0.move_number == 0 && second_match.tile1.move_number == 0);
-    assert_true (third_match.tile0.move_number == 1 && third_match.tile1.move_number == 1);
+    assert_true (first_match.tile0.move == 0 && first_match.tile1.move == 0);
+    assert_true (second_match.tile0.move == 0 && second_match.tile1.move == 0);
+    assert_true (third_match.tile0.move == 1 && third_match.tile1.move == 1);
 }
 
 private void test_undo_redo_no_moves () {
@@ -261,7 +261,7 @@ private void verify_tiles (Game game, int[,] expected_layout) {
 
         assert_true (tile.visible);
         assert_false (tile.highlighted);
-        assert_true (tile.move_number == 0);
+        assert_true (tile.move == 0);
 
         assert_true (tile.number == expected_layout[i, 0]);
         assert_true (tile.selectable == (bool)expected_layout[i, 1]);
@@ -606,7 +606,7 @@ private void test_game_init () {
     foreach (unowned var tile in game) {
         assert_true (tile.visible);
         assert_false (tile.highlighted);
-        assert_true (tile.move_number == 0);
+        assert_true (tile.move == 0);
     }
 }
 
@@ -642,7 +642,7 @@ private void test_game_playthrough () {
     assert_false (game.started);
     assert_true (game.elapsed == 0.0);
 
-    int expected_move_number = 0;
+    int expected_move = 0;
     int num_moves = 0;
     int num_reshuffles = 0;
     int[,] tile_numbers = {
@@ -726,7 +726,7 @@ private void test_game_playthrough () {
 
         if (!game.can_move) {
             game.shuffle_remaining ();
-            expected_move_number = 0;
+            expected_move = 0;
             num_reshuffles++;
         }
 
@@ -743,14 +743,14 @@ private void test_game_playthrough () {
         assert_true (match.tile1.number == tile_numbers[num_moves, 1]);
         assert_true (game.started);
 
-        expected_move_number++;
+        expected_move++;
         num_moves++;
 
         assert_false (match.tile0.selectable || match.tile1.selectable);
         assert_false (match.tile0.visible || match.tile1.visible);
 
-        assert_true (match.tile0.move_number == expected_move_number);
-        assert_true (match.tile1.move_number == expected_move_number);
+        assert_true (match.tile0.move == expected_move);
+        assert_true (match.tile1.move == expected_move);
 
         assert_true (game.can_undo);
         assert_false (game.can_redo);
@@ -769,7 +769,7 @@ private void test_game_playthrough () {
     assert_true (game.all_tiles_unblocked);
 
     // Verify performed moves
-    assert_true (expected_move_number == 16);
+    assert_true (expected_move == 16);
     assert_true (num_moves == 72);
     assert_true (num_reshuffles == 1);
 }

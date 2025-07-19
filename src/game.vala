@@ -6,7 +6,7 @@ public class Tile {
     public int number = -1;
     public bool visible = true;
     public bool highlighted = false;
-    public int move_number;
+    public int move;
     public Slot slot;
 
     private Tile[] left;
@@ -81,7 +81,6 @@ public class Game {
 
     private Tile[] tiles;
     private Rand random;
-    private int move_number;
 
     private Match? hint_match;
     private Match[] hint_matches;
@@ -160,8 +159,9 @@ public class Game {
         }
     }
 
-    public int current_move_number {
-        get { return move_number; }
+    private int _current_move;
+    public int current_move {
+        get { return _current_move; }
     }
 
     public uint moves_left {
@@ -196,13 +196,13 @@ public class Game {
     }
 
     public bool can_undo {
-        get { return move_number > 1; }
+        get { return _current_move > 1; }
     }
 
     public bool can_redo {
         get {
             foreach (unowned var tile in tiles)
-                if (tile.move_number >= move_number)
+                if (tile.move >= _current_move)
                     return true;
             return false;
         }
@@ -244,7 +244,7 @@ public class Game {
 
         /* Reset game */
         reset_clock ();
-        move_number = 1;
+        _current_move = 1;
         selected_tile = null;
         _inspecting = false;
         set_hint (null);
@@ -262,14 +262,14 @@ public class Game {
          * the player. */
         foreach (unowned var tile in tiles) {
             tile.visible = true;
-            tile.move_number = 0;
+            tile.move = 0;
         }
         redraw_all_tiles ();
     }
 
     public void restore (GameSave save) {
-        move_number = save.move_number;
-        clock_elapsed = save.elapsed_time;
+        _current_move = save.move;
+        clock_elapsed = save.clock;
         _seed = save.seed;
         random = new Rand.with_seed (_seed);
 
@@ -277,7 +277,7 @@ public class Game {
             foreach (unowned var t in save) {
                 if (tile.slot.equals (t.slot)) {
                     tile.number = t.number;
-                    tile.move_number = t.move_number;
+                    tile.move = t.move;
                     tile.visible = t.visible;
                 }
             }
@@ -320,15 +320,15 @@ public class Game {
 
         /* You lose your re-do queue when you make a move */
         foreach (unowned var tile in tiles)
-            if (tile.move_number >= move_number)
-                tile.move_number = 0;
+            if (tile.move >= _current_move)
+                tile.move = 0;
 
         tile0.visible = false;
-        tile0.move_number = move_number;
+        tile0.move = current_move;
         tile1.visible = false;
-        tile1.move_number = move_number;
+        tile1.move = current_move;
 
-        move_number++;
+        _current_move++;
 
         redraw_tile (tile0);
         redraw_tile (tile1);
@@ -355,10 +355,10 @@ public class Game {
         Tile[] tiles_to_shuffle = null;
 
         /* Retrieve tile pair numbers of remaining tiles, and blank the tiles */
-        move_number = 1;
+        _current_move = 1;
 
         foreach (unowned var tile in tiles) {
-            tile.move_number = 0;
+            tile.move = 0;
 
             if (tile.visible) {
                 tiles_to_shuffle += tile;
@@ -412,9 +412,9 @@ public class Game {
         set_hint (null);
 
         /* Re-show tiles that were removed */
-        move_number--;
+        _current_move--;
         foreach (unowned var tile in tiles) {
-            if (tile.move_number == move_number) {
+            if (tile.move == _current_move) {
                 tile.visible = true;
                 redraw_tile (tile);
             }
@@ -429,12 +429,12 @@ public class Game {
         set_hint (null);
 
         foreach (unowned var tile in tiles) {
-            if (tile.move_number == move_number) {
+            if (tile.move == _current_move) {
                 tile.visible = false;
                 redraw_tile (tile);
             }
         }
-        move_number++;
+        _current_move++;
         moved ();
     }
 
