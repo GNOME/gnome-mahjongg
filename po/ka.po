@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-12 22:27+0000\n"
-"PO-Revision-Date: 2025-02-13 05:34+0100\n"
+"POT-Creation-Date: 2025-07-18 20:56+0000\n"
+"PO-Revision-Date: 2025-07-20 04:59+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:529
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -71,11 +71,7 @@ msgstr ""
 msgid "Mahjongg in Dark Style"
 msgstr ""
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
-msgid "The Mahjongg Team"
-msgstr ""
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:234
 msgid "_New Game"
 msgstr "_ახალი თამაში"
 
@@ -138,8 +134,8 @@ msgstr ""
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "სირთულე"
+msgid "Taipei"
+msgstr "ტაიპეი"
 
 #: data/ui/menu.ui:57
 msgid "Layout Ro_tation"
@@ -203,40 +199,172 @@ msgid "Educational"
 msgstr "საგანმანათლებლო"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "_დახმარება"
+msgid "Game R_ules"
+msgstr ""
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "_კლავიატურის მალსახმობები"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "Mahjongg-ის შეს_ახებ"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "თქვენ შეგიძლიათ შეაჩეროთ თამაში"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr ""
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr ""
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "ქულები"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr ""
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "ქულების გარეშე"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr ""
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "დამკვრელი"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "რანგი"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "დრო"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "თარიღი"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "დამკვრელი"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:232
 msgid "_Quit"
 msgstr "_გასვლა"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "თამაში"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "ახალი თამაში"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "თამაშის რესტარტი"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "თამაშის შეჩერება"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "დაბრუნება"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "გამეორება"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "მინიშნების ჩვენება"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ზოგადი"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Game Rules"
+msgstr ""
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "მთავარი მენიუს ჩვენება"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობების ჩვენება"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "ფანჯრის დახურვა"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "გასვლა"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -254,59 +382,59 @@ msgstr "მთავარი მენიუ"
 msgid "Show Hint"
 msgstr "მინიშნების ჩვენება"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:17
 msgid "Print release version and exit"
 msgstr "ვერსიის ჩვენება და გასვლა"
 
-#: src/gnome-mahjongg.vala:194
+#: src/gnome-mahjongg.vala:225
 msgid "No Moves Left"
 msgstr "სვლები აღარ დაგრჩათ"
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:227
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr ""
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:228
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:237
 msgid "_Reshuffle"
 msgstr ""
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:239
 msgid "_Continue"
 msgstr "_გაგრძელება"
 
-#: src/gnome-mahjongg.vala:318
+#: src/gnome-mahjongg.vala:351
 msgid "translator-credits"
 msgstr "ვიღაც, ვინც თარგმნა"
 
-#: src/gnome-mahjongg.vala:320
+#: src/gnome-mahjongg.vala:353
 msgid "Layouts by"
 msgstr "განლაგების ავტორი"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:61
 #, c-format
 msgid "Layout: %s"
 msgstr "განლაგება: %s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:302
 msgid "Clear All Scores?"
 msgstr ""
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:303
 msgid "This will clear every score for every layout."
 msgstr ""
 
-#: src/score-dialog.vala:368
+#: src/score-dialog.vala:307
 msgid "_Cancel"
 msgstr "_გაუქმება"
 
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:308
 msgid "Clear All"
 msgstr "ყველას გასუფთავება"
 
@@ -327,52 +455,23 @@ msgstr "თამაშის გაგრძელება"
 msgid "Pause Game"
 msgstr "თამაშის შეჩერება"
 
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "სირთულე"
+
+#~ msgid "_Help"
+#~ msgstr "_დახმარება"
+
+#~ msgid "Date"
+#~ msgstr "თარიღი"
+
 #~ msgctxt "shortcut window"
 #~ msgid "Playing"
 #~ msgstr "თამაშობთ"
 
 #~ msgctxt "shortcut window"
-#~ msgid "New Game"
-#~ msgstr "ახალი თამაში"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause Game"
-#~ msgstr "თამაშის შეჩერება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "დაბრუნება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "გამეორება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Hint"
-#~ msgstr "მინიშნების ჩვენება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "ზოგადი"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Main Menu"
-#~ msgstr "მთავარი მენიუს ჩვენება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Keyboard Shortcuts"
-#~ msgstr "კლავიატურის მალსახმობების ჩვენება"
-
-#~ msgctxt "shortcut window"
 #~ msgid "Show Help"
 #~ msgstr "დახმარების ჩვენება"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Quit"
-#~ msgstr "გასვლა"
-
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "_კლავიატურის მალსახმობები"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
@@ -413,6 +512,3 @@ msgstr "თამაშის შეჩერება"
 
 #~ msgid "OK"
 #~ msgstr "OK"
-
-#~ msgid "Unpause the game"
-#~ msgstr "თამაშის გაგრძელება"
