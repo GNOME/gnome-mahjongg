@@ -212,63 +212,29 @@
   </map>
   <map name="Overpass" scorename="overpass">
     <layer z="0">
-      <row y="0" left="4" right="7"/>
-      <row y="1" left="4" right="7"/>
-      <row y="2" left="0" right="1"/>
-      <row y="2" left="4" right="7"/>
-      <row y="2" left="10" right="11"/>
-      <tile x="0" y="3"/>
-      <row y="3" left="4" right="7"/>
-      <tile x="11" y="3"/>
-      <tile x="0" y="4"/>
-      <row y="4" left="4" right="7"/>
-      <tile x="11" y="4"/>
-      <tile x="0" y="5"/>
-      <row y="5" left="4" right="7"/>
-      <tile x="11" y="5"/>
-      <tile x="0" y="6"/>
-      <row y="6" left="4" right="7"/>
-      <tile x="11" y="6"/>
-      <row y="7" left="0" right="1"/>
-      <row y="7" left="4" right="7"/>
-      <row y="7" left="10" right="11"/>
-      <row y="8" left="4" right="7"/>
+      <column x="0" top="2" bottom="7"/>
+      <tile x="1" y="2"/>
+      <tile x="1" y="7"/>
+      <block left="4" top="0" right="7" bottom="8"/>
+      <tile x="10" y="2"/>
+      <tile x="10" y="7"/>
+      <column x="11" top="2" bottom="7"/>
     </layer>
     <layer z="1">
-      <tile x="0" y="2"/>
-      <tile x="11" y="2"/>
-      <row y="3" left="0" right="1"/>
-      <row y="3" left="10" right="11"/>
-      <row y="4" left="0" right="1"/>
-      <row y="4" left="10" right="11"/>
-      <row y="5" left="0" right="1"/>
-      <row y="5" left="10" right="11"/>
-      <row y="6" left="0" right="1"/>
-      <row y="6" left="10" right="11"/>
-      <tile x="0" y="7"/>
-      <tile x="11" y="7"/>
+      <column x="0" top="2" bottom="7"/>
+      <column x="1" top="3" bottom="6"/>
+      <column x="10" top="3" bottom="6"/>
+      <column x="11" top="2" bottom="7"/>
     </layer>
     <layer z="2">
-      <row y="3" left="1" right="2"/>
-      <row y="3" left="9" right="10"/>
-      <row y="4" left="1" right="2"/>
-      <row y="4" left="9" right="10"/>
-      <row y="5" left="1" right="2"/>
-      <row y="5" left="9" right="10"/>
-      <row y="6" left="1" right="2"/>
-      <row y="6" left="9" right="10"/>
+      <block left="1" top="3" right="2" bottom="6"/>
+      <block left="9" top="3" right="10" bottom="6"/>
     </layer>
     <layer z="3">
-      <row y="3" left="2" right="9"/>
-      <row y="4" left="2" right="9"/>
-      <row y="5" left="2" right="9"/>
-      <row y="6" left="2" right="9"/>
+      <block left="2" top="3" right="9" bottom="6"/>
     </layer>
     <layer z="4">
-      <row y="3" left="3" right="8"/>
-      <row y="4" left="3" right="8"/>
-      <row y="5" left="3" right="8"/>
-      <row y="6" left="3" right="8"/>
+      <block left="3" top="3" right="8" bottom="6"/>
     </layer>
   </map>
   <map name="Pyramid's Walls" scorename="pyramid">
