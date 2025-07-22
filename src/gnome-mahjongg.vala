@@ -337,11 +337,12 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             },
             artists = {
                 "Jonathan Buzzard",
-                "Jim Evans",
+                "Jaye Evins",
                 "Richard Hoelscher",
                 "Gonzalo Odiard",
                 "Max Watson",
-                "Jakub Steiner"
+                "Jakub Steiner",
+                "Rossano Rossi"
             },
             documenters = {
                 "Tiffany Antopolski",
