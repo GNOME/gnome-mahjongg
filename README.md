@@ -13,11 +13,6 @@ Single-player tile-matching game, commonly known as Mahjong solitaire.
 - Report issues: <https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/>
 - Translate: <https://l10n.gnome.org/module/gnome-mahjongg/>
 
-## Resources
-
-- Sources for the Smooth tile set are available on GitHub:
-  - <https://github.com/jimevins/smooth-tileset>
-
 ## Code of Conduct
 
 This project follows the [GNOME Code of Conduct](https://conduct.gnome.org/).
