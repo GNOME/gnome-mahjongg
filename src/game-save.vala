@@ -3,21 +3,25 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 public class GameSave {
-    public string map_name;
+    public Map? map;
     public double clock;
     public int move;
     public int32 seed;
-    private Tile[] tiles;
 
+    private string map_name;
     private string filename;
+    private Tile[] tiles;
 
     public GameSave (string filename) {
         this.filename = filename;
     }
 
-    public bool load () {
+    public bool load (Maps maps) {
         string data;
         size_t length;
+
+        if (!FileUtils.test (filename, FileTest.EXISTS))
+            return false;
 
         try {
             FileUtils.get_contents (filename, out data, out length);
@@ -36,12 +40,23 @@ public class GameSave {
         }
         catch (MarkupError e) {
             warning ("Could not parse game save %s: %s\n", filename, e.message);
+            reset ();
+            return false;
+        }
+
+        map = maps.get_map_by_name (map_name);
+        if (!is_valid (map)) {
+            warning ("Saved layout '%s' is not valid.\n", map_name);
+            reset ();
             return false;
         }
         return true;
     }
 
     public void write (Game game) {
+        if (!game.can_save)
+            return;
+
         var builder = new StringBuilder ();
 
         builder.append_printf ("<game map=\"%s\" seed=\"%d\" clock=\"%s\" move=\"%d\">\n",
@@ -77,36 +92,15 @@ public class GameSave {
         }
     }
 
-    public bool exists () {
-        return FileUtils.test (filename, FileTest.EXISTS);
-    }
-
-    public bool is_valid (Map map) {
-        var n_matched_tiles = 0;
-        foreach (unowned var slot in map) {
-            foreach (unowned var tile in tiles) {
-                if (slot.equals (tile.slot)) {
-                    n_matched_tiles++;
-                    break;
-                }
-            }
-        }
-        return map.n_slots == n_matched_tiles;
-    }
-
     public void delete () {
-        if (!exists ())
+        if (!FileUtils.test (filename, FileTest.EXISTS))
             return;
 
         var result = FileUtils.remove (filename);
         if (result == -1)
             warning ("Could not remove save file %s.", filename);
 
-        map_name = "";
-        clock = 0.0;
-        move = 0;
-        seed = 0;
-        tiles = null;
+        reset ();
     }
 
     public Iterator iterator () {
@@ -146,7 +140,7 @@ public class GameSave {
             var move = (int) (get_attribute_d (attribute_names, attribute_values, "move"));
             var x = (int) (get_attribute_d (attribute_names, attribute_values, "x"));
             var y = (int) (get_attribute_d (attribute_names, attribute_values, "y"));
-            var layer = (int) (get_attribute_d (attribute_names, attribute_values, "layer"));
+            var layer = (int) (get_attribute_d (attribute_names, attribute_values, "z"));
 
             var slot = new Slot (x, y, layer);
             var tile = new Tile (slot) {
@@ -157,6 +151,31 @@ public class GameSave {
             tiles += tile;
             break;
         }
+    }
+
+    private bool is_valid (Map? map) {
+        if (map == null)
+            return false;
+
+        var n_matched_tiles = 0;
+        foreach (unowned var slot in map) {
+            foreach (unowned var tile in tiles) {
+                if (slot.equals (tile.slot)) {
+                    n_matched_tiles++;
+                    break;
+                }
+            }
+        }
+        return map.n_slots == n_matched_tiles;
+    }
+
+    private void reset () {
+        map = null;
+        map_name = "";
+        clock = 0.0;
+        move = 0;
+        seed = 0;
+        tiles = null;
     }
 
     public class Iterator {

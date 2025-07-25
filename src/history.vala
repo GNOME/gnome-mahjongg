@@ -14,10 +14,6 @@ public class History {
         this.filename = filename;
     }
 
-    public void add (HistoryEntry entry) {
-        entries += entry;
-    }
-
     public void load () {
         var contents = "";
         try {
@@ -45,7 +41,7 @@ public class History {
             else
                 player = Environment.get_real_name ();
 
-            add (new HistoryEntry (date, name, duration, player));
+            entries += new HistoryEntry (date, name, duration, player);
         }
     }
 
@@ -63,6 +59,13 @@ public class History {
         catch (FileError e) {
             warning ("Failed to save history: %s", e.message);
         }
+    }
+
+    public HistoryEntry add (DateTime date, string name, uint duration, string player) {
+        var entry = new HistoryEntry (date, name, duration, player);
+        entries += entry;
+        save ();
+        return entry;
     }
 
     public void clear () {

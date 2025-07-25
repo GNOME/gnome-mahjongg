@@ -3,15 +3,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 public class Mahjongg : Adw.Application {
-    private History history;
+    private Game game;
     private GameSave game_save;
     private Maps maps;
-
+    private History history;
     private Settings settings;
-    private MahjonggWindow window;
-    private GameView game_view;
-    private GameView primary_game_view;
-    private GameView secondary_game_view;
 
     private const OptionEntry[] OPTION_ENTRIES = {
         { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
@@ -38,7 +34,6 @@ public class Mahjongg : Adw.Application {
     public Mahjongg () {
         Object (
             application_id: APP_ID,
-            flags: ApplicationFlags.DEFAULT_FLAGS,
             resource_base_path: "/org/gnome/Mahjongg"
         );
         add_main_option_entries (OPTION_ENTRIES);
@@ -66,16 +61,11 @@ public class Mahjongg : Adw.Application {
         maps = new Maps ();
         maps.load ();
 
-        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history"));
+        var history_path = Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history");
+        history = new History (history_path);
         history.load ();
 
-        window = new MahjonggWindow (this, maps);
-
-        var using_cairo = Environment.get_variable ("GSK_RENDERER") == "cairo";
-        primary_game_view = new GameView (using_cairo);
-        secondary_game_view = new GameView (using_cairo);
-        window.add_game_view (primary_game_view);
-        window.add_game_view (secondary_game_view);
+        new MahjonggWindow (this, settings, maps);
 
         var layout = settings.get_string ("mapset");
         if (layout == "Difficult") {
@@ -102,24 +92,13 @@ public class Mahjongg : Adw.Application {
         }
         unowned var theme_action = lookup_action ("theme") as SimpleAction;
         theme_action.set_state (new Variant.@string (theme));
-        update_theme ();
-
-        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
-        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
-        settings.bind ("window-is-maximized", window, "maximized", SettingsBindFlags.DEFAULT);
-
-        var rotate_map = (layout_rotation == "random");
 
         var save_path = Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "gamesave");
         game_save = new GameSave (save_path);
 
-        if (game_save.exists ()) {
-            restore_game (rotate_map);
-        } else {
-            new_game (rotate_map);
-        }
-
-        settings.changed.connect (conf_value_changed_cb);
+        var rotate_map = (layout_rotation == "random");
+        var restore = true;
+        new_game (rotate_map, restore);
     }
 
     protected override int handle_local_options (VariantDict options) {
@@ -134,93 +113,56 @@ public class Mahjongg : Adw.Application {
     }
 
     public override void activate () {
-        if (window == null)
+        if (active_window == null)
             create_window ();
 
-        window.present ();
+        active_window.present ();
     }
 
     public override void shutdown () {
-        if (game_view != null)
-            game_view.game.destroy_timers ();
-
-        if (game_view.game.started && game_view.game.can_move && !game_view.game.inspecting)
-            game_save.write (game_view.game);
-
+        if (game != null) {
+            game.destroy_timers ();
+            game_save.write (game);
+        }
         settings.apply ();
         base.shutdown ();
     }
 
-    private void update_theme (GameView? previous_game_view = null) {
-        var color_scheme = settings.get_enum ("background-color");
-        var theme = settings.get_string ("tileset");
-        var style_manager = Adw.StyleManager.get_default ();
-
-        style_manager.set_color_scheme (color_scheme);
-
-        if (game_view != null) {
-            var path = resource_base_path + "/themes/";
-            var fallback_theme = settings.get_default_value ("tileset").get_string ();
-            game_view.set_theme (path + theme, previous_game_view, path + fallback_theme);
-        }
-        window.theme = theme;
-    }
-
-    private void update_ui () {
-        unowned var pause_action = lookup_action ("pause") as SimpleAction;
-        unowned var hint_action = lookup_action ("hint") as SimpleAction;
-        unowned var undo_action = lookup_action ("undo") as SimpleAction;
-        unowned var redo_action = lookup_action ("redo") as SimpleAction;
-
-        pause_action.set_enabled (game_view.game.started && !game_view.game.inspecting);
-
-        if (game_view.game.paused) {
-            hint_action.set_enabled (false);
-            undo_action.set_enabled (false);
-            redo_action.set_enabled (false);
-        }
-        else {
-            var moves_left = game_view.game.moves_left;
-
-            hint_action.set_enabled (moves_left > 0);
-            undo_action.set_enabled (game_view.game.can_undo);
-            redo_action.set_enabled (game_view.game.can_redo);
-            window.moves_left = moves_left;
-        }
-    }
-
-    private void conf_value_changed_cb (Settings settings, string key) {
-        if (key == "tileset" || key == "background-color")
-            update_theme ();
-    }
-
     private bool attempt_move_cb () {
         /* Cancel pause on click */
-        if (game_view.game.paused) {
-            pause_cb ();
+        if (game.paused) {
+            game.paused = false;
             return false;
         }
         return true;
     }
 
     private async void moved_cb () {
-        update_ui ();
+        unowned var hint_action = lookup_action ("hint") as SimpleAction;
+        unowned var undo_action = lookup_action ("undo") as SimpleAction;
+        unowned var redo_action = lookup_action ("redo") as SimpleAction;
 
-        if (game_view.game.inspecting)
+        hint_action.set_enabled (game.moves_left > 0);
+        undo_action.set_enabled (game.can_undo);
+        redo_action.set_enabled (game.can_redo);
+
+        if (game.inspecting)
             return;
 
-        if (game_view.game.complete) {
+        unowned var pause_action = lookup_action ("pause") as SimpleAction;
+        pause_action.set_enabled (game.started);
+
+        if (game.complete) {
             var date = new DateTime.now_local ();
-            var duration = (uint) game_view.game.elapsed;
+            var duration = (uint) game.elapsed;
             var player = Environment.get_real_name ();
-            var completed_entry = new HistoryEntry (date, game_view.game.map.score_name, duration, player);
-            history.add (completed_entry);
-            history.save ();
+            var completed_entry = history.add (date, game.map.score_name, duration, player);
+
             game_save.delete ();
             show_scores (completed_entry.name, completed_entry);
         }
-        else if (!game_view.game.can_move) {
-            var can_shuffle = game_view.game.can_shuffle;
+        else if (!game.can_move) {
+            var can_shuffle = game.can_shuffle;
             var dialog = new Adw.AlertDialog (
                 _("No Moves Left"),
                 can_shuffle ?
@@ -238,7 +180,7 @@ public class Mahjongg : Adw.Application {
 
             dialog.add_response ("continue", _("_Continue"));
 
-            var resp_id = yield dialog.choose (window, null);
+            var resp_id = yield dialog.choose (active_window, null);
             switch (resp_id) {
             case "reshuffle":
                 shuffle_cb ();
@@ -248,7 +190,7 @@ public class Mahjongg : Adw.Application {
                 break;
             case "quit":
                 game_save.delete ();
-                window.destroy ();
+                active_window.close ();
                 break;
             default:
                 break;
@@ -256,8 +198,26 @@ public class Mahjongg : Adw.Application {
         }
     }
 
+    private void paused_changed_cb () {
+        unowned var hint_action = lookup_action ("hint") as SimpleAction;
+        unowned var undo_action = lookup_action ("undo") as SimpleAction;
+        unowned var redo_action = lookup_action ("redo") as SimpleAction;
+
+        if (game.paused) {
+            hint_action.set_enabled (false);
+            undo_action.set_enabled (false);
+            redo_action.set_enabled (false);
+        }
+        else {
+            hint_action.set_enabled (game.moves_left > 0);
+            undo_action.set_enabled (game.can_undo);
+            redo_action.set_enabled (game.can_redo);
+        }
+    }
+
     private void show_scores (string selected_layout = "", HistoryEntry? completed_entry = null) {
-        new ScoreDialog (history, maps, selected_layout, completed_entry).present (window);
+        new ScoreDialog (history, maps, selected_layout, completed_entry)
+            .present (active_window);
     }
 
     private void layout_cb (SimpleAction action, Variant variant) {
@@ -269,7 +229,8 @@ public class Mahjongg : Adw.Application {
             settings.apply ();
 
             // Load a new game if the layout was manually changed.
-            new_game (false);
+            var rotate_map = false;
+            new_game (rotate_map);
         }
     }
 
@@ -304,13 +265,11 @@ public class Mahjongg : Adw.Application {
     }
 
     private void hint_cb () {
-        var match = game_view.game.next_hint ();
-        game_view.game.set_hint (match);
-        update_ui ();
+        game.show_hint ();
     }
 
     private void shuffle_cb () {
-        game_view.game.shuffle_remaining ();
+        game.shuffle_remaining ();
     }
 
     private void about_cb () {
@@ -356,22 +315,15 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             "Krzysztof Foltman",
             "Sapphire Becker"
         });
-        about_dialog.present (window);
+        about_dialog.present (active_window);
     }
 
     private void pause_cb () {
-        game_view.game.paused = !game_view.game.paused;
-
-        if (game_view.game.paused)
-            window.pause ();
-        else
-            window.unpause ();
-
-        update_ui ();
+        game.paused = !game.paused;
     }
 
     private void scores_cb () {
-        show_scores (game_view.game.map.score_name);
+        show_scores (game.map.score_name);
     }
 
     private void new_game_cb () {
@@ -379,25 +331,21 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void restart_game_cb () {
-        restart_game ();
+        game.restart ();
+        game_save.delete ();
     }
 
     private void quit_cb () {
-        if (window != null)
-            window.close ();
+        if (active_window != null)
+            active_window.close ();
     }
 
     private void redo_cb () {
-        if (game_view.game.paused)
-            return;
-
-        game_view.game.redo ();
-        update_ui ();
+        game.redo ();
     }
 
     private void undo_cb () {
-        game_view.game.undo ();
-        update_ui ();
+        game.undo ();
     }
 
     private unowned Map next_map (bool rotate_map) {
@@ -426,99 +374,38 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         return map;
     }
 
-    private void new_game_view (bool rotate_map = false) {
-        var transition_type = Gtk.StackTransitionType.NONE;
-        var previous_game_view = game_view;
+    private void new_game (bool rotate_map = true, bool restore = false) {
+        var window = active_window as MahjonggWindow;
+        Map map = null;
 
-        if (rotate_map) {
-            if (settings.get_string ("map-rotation") != "single")
-                transition_type = Gtk.StackTransitionType.SLIDE_LEFT;
-            else
-                transition_type = Gtk.StackTransitionType.CROSSFADE;
-        }
-
-        game_view = (game_view == primary_game_view) ? secondary_game_view : primary_game_view;
-        update_theme (previous_game_view);
-
-        if (previous_game_view != null) {
-            previous_game_view.game.destroy_timers ();
-            previous_game_view.game = null;
-            previous_game_view.set_theme (null);
-        }
-
-        window.set_game_view (game_view, transition_type);
-    }
-
-    private void new_game (bool rotate_map = true) {
-        new_game_view (rotate_map);
-        game_save.delete ();
-        initialize_game (next_map (rotate_map));
-    }
-
-    private void restore_game (bool rotate_map = true) {
-        new_game_view (rotate_map);
-
-        if (!game_save.load ()) {
-            initialize_game (next_map (rotate_map));
-            return;
-        }
-
-        var map = maps.get_map_by_name (game_save.map_name);
-        if (map == null) {
-            warning ("Map '%s' not found in available maps.\n", game_save.map_name);
-            initialize_game (next_map (rotate_map));
-            return;
-        }
-
-        initialize_game (map, game_save.is_valid (map));
-    }
-
-    private void initialize_game (Map map, bool resuming = false) {
-        if (game_view.game != null)
-            return;
-
-        game_view.game = new Game (map);
-
-        if (resuming) {
-            game_view.game.restore (game_save);
-            window.pause ();
+        if (restore) {
+            restore = game_save.load (maps);
+            map = game_save.map;
         } else {
-            game_view.game.generate ();
-            window.unpause ();
+            game_save.delete ();
         }
+        if (map == null)
+            map = next_map (rotate_map);
 
-        game_view.game.attempt_move.connect (attempt_move_cb);
-        game_view.game.moved.connect (moved_cb);
-        game_view.game.tick.connect (tick_cb);
+        if (game != null)
+            game.destroy_timers ();
 
-        tick_cb ();
-        update_ui ();
-    }
+        game = new Game (map);
+        window.new_game (game, rotate_map);
 
-    private void restart_game () {
-        game_view.game.restart ();
-        game_save.delete ();
-        if (game_view.game.paused)
-            pause_cb ();
-        update_ui ();
-    }
+        game.attempt_move.connect (attempt_move_cb);
+        game.moved.connect (moved_cb);
+        game.paused_changed.connect (paused_changed_cb);
 
-    private void tick_cb () {
-        string clock;
-        var elapsed = (int) game_view.game.elapsed;
-        var hours = elapsed / 3600;
-        var minutes = (elapsed - hours * 3600) / 60;
-        var seconds = elapsed - hours * 3600 - minutes * 60;
-        if (hours > 0)
-            clock = "%02d∶\xE2\x80\x8E%02d∶\xE2\x80\x8E%02d".printf (hours, minutes, seconds);
+        if (restore)
+            game.restore (game_save);
         else
-            clock = "%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds);
-
-        window.clock = clock;
+            game.generate ();
     }
 
     private void rules_cb () {
-        new RulesDialog ().present (window);
+        new RulesDialog ()
+            .present (active_window);
     }
 
     public static int main (string[] args) {

@@ -155,7 +155,7 @@ public class Maps {
         return true;
     }
 
-    public unowned Map? get_map_by_name (string name) {
+    public unowned Map? get_map_by_name (string? name) {
         foreach (unowned var map in maps) {
             if (map.name == name) {
                 return map;

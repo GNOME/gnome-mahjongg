@@ -208,6 +208,10 @@ public class Game {
         }
     }
 
+    public bool can_save {
+        get { return started && can_move && !inspecting; }
+    }
+
     public bool all_tiles_unblocked {
         get {
             foreach (unowned var tile in tiles)
@@ -244,10 +248,9 @@ public class Game {
 
         /* Reset game */
         reset_clock ();
+        paused = false;
         _current_move = 1;
-        selected_tile = null;
         _inspecting = false;
-        set_hint (null);
 
         /* Create tile pair numbers */
         for (var i = 0; i < n_pairs; i++)
@@ -265,12 +268,12 @@ public class Game {
             tile.move = 0;
         }
         redraw_all_tiles ();
+        moved ();
     }
 
     public void restore (GameSave save) {
-        _current_move = save.move;
-        clock_elapsed = save.clock;
         _seed = save.seed;
+        _current_move = save.move;
         random = new Rand.with_seed (_seed);
 
         foreach (unowned var tile in tiles) {
@@ -283,8 +286,12 @@ public class Game {
             }
         }
 
-        redraw_all_tiles ();
         clock = new Timer ();
+        clock_elapsed = save.clock;
+        tick ();
+
+        redraw_all_tiles ();
+        moved ();
         paused = true;
     }
 
@@ -419,6 +426,7 @@ public class Game {
                 redraw_tile (tile);
             }
         }
+        moved ();
     }
 
     public void redo () {
@@ -463,28 +471,8 @@ public class Game {
         return match;
     }
 
-    public void set_hint (Match? match) {
-        /* Stop hints */
-        remove_hint_timeout ();
-
-        if (match == null) {
-            hint_match = null;
-            hint_matches = null;
-            return;
-        }
-
-        hint_match = match;
-        hint_blink_counter = 6;
-        hint_timeout = Timeout.add (250, hint_timeout_cb);
-        hint_timeout_cb ();
-
-        if (_inspecting)
-            return;
-
-        /* 30s penalty */
-        start_clock ();
-        clock_elapsed += 30.0;
-        tick ();
+    public void show_hint () {
+        set_hint (next_hint ());
     }
 
     public void autoplay_end_game () {
@@ -637,6 +625,35 @@ public class Game {
         foreach (unowned var tile in tiles)
             if (tile.visible)
                 redraw_tile (tile);
+    }
+
+    private void set_hint (Match? match) {
+        /* Stop hints */
+        remove_hint_timeout ();
+
+        if (match == null) {
+            hint_match = null;
+            hint_matches = null;
+            return;
+        }
+
+        hint_match = match;
+        hint_blink_counter = 6;
+        hint_timeout = Timeout.add (250, hint_timeout_cb);
+        hint_timeout_cb ();
+
+        if (_inspecting)
+            return;
+
+        var had_started = started;
+
+        /* 30s penalty */
+        start_clock ();
+        clock_elapsed += 30.0;
+        tick ();
+
+        if (!had_started)
+            moved ();
     }
 
     private void redraw_hint_match (Match? match) {
