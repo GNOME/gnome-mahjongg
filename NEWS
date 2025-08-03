@@ -1,3 +1,20 @@
+49.beta
+=======
+
+* Save game state and restore it from saved file (François Godin)
+* Replace help docs with Game Rules dialog
+* Add Keyboard Shortcuts dialog
+* Rename 'Difficult' layout to 'Taipei'
+* Remove Date column from Scores dialog to leave more space for player name
+* Fix text entry focus when recycling rows in Scores dialog
+* Make slot sorting algorithm stable
+* Load tile layouts from bundled .map resource
+* Eliminate Gdk.Pixbuf in favor of using Rsvg directly
+* Add tests for game.vala and map.vala
+* Numerous optimizations related to Scores dialog
+* Numerous code cleanups
+* Translation updates
+
 48.1
 ====
 

@@ -51,6 +51,7 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="49.beta" date="2025-08-03" type="development"/>
     <release version="48.1" date="2025-04-12">
       <description>
         <p>This release contains the following improvements:</p>

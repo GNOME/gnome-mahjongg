@@ -3,7 +3,7 @@
 
 project(
   'gnome-mahjongg', ['vala', 'c'],
-  version: '48.1',
+  version: '49.beta',
   meson_version: '>= 0.59.0'
 )
 
