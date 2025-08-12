@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-23 13:48+0000\n"
-"PO-Revision-Date: 2025-03-09 13:13+0100\n"
+"POT-Creation-Date: 2025-07-26 12:57+0000\n"
+"PO-Revision-Date: 2025-08-12 19:13+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,20 +21,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:417
 msgid "Mahjongg"
 msgstr "Mahjong"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Matcha brickor och töm brädet"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "spel;strategi;pussel;brädspel;"
 
@@ -84,11 +84,7 @@ msgstr "Mahjong i ljus stil"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjong i mörk stil"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:94
-msgid "The Mahjongg Team"
-msgstr "Mahjong-gruppen"
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_Nytt spel"
 
@@ -151,8 +147,8 @@ msgstr "Förvirrande kors"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "Svår"
+msgid "Taipei"
+msgstr "Taipei"
 
 #: data/ui/menu.ui:57
 msgid "Layout Ro_tation"
@@ -216,40 +212,173 @@ msgid "Educational"
 msgstr "Utbildande"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "_Hjälp"
+msgid "Game R_ules"
+msgstr "Sp_elregler"
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "_Tangentbordsgenvägar"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "_Om Mahjong"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr "Spelregler"
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr "Töm brädet genom att matcha par av identiska brickor"
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr ""
+"Endast brickor som inte är täckta och har en fri lång kant kan markeras"
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr "Spelomgångar poängsätts baserat på tid för slutförande"
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "Du kan pausa spelet"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr "Brickors framsidor kommer döljas"
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr "Du kan ångra eller göra om ett drag"
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr "Inget tidstillägg görs"
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr "Du kan använda tips för att avslöja matchande brickor"
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr "Ger ett tidstillägg på 30 sekunder"
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr "Du kan blanda brickor då inga drag finns kvar"
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr "Ger ett tidstillägg på 60 sekunder"
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "Poäng"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr "Spelet slutfört 🎉"
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Inga poäng"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr "Slutför ett spel för att se poäng"
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "Spelare"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "Ranking"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "Tid"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "Datum"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "Spelare"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "A_vsluta"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "Spel"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "Nytt spel"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "Starta om spel"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "Gör paus i spelet"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Ångra"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Gör om"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "Visa tips"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Allmänt"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Game Rules"
+msgstr "Visa spelregler"
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "Visa huvudmeny"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Visa tangentbordsgenvägar"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Stäng fönster"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avsluta"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -267,15 +396,15 @@ msgstr "Huvudmeny"
 msgid "Show Hint"
 msgstr "Visa tips"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "Visa utgåvans version och avsluta"
 
-#: src/gnome-mahjongg.vala:194
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "Inga drag kvar"
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -283,22 +412,22 @@ msgstr ""
 "Du kan ångra dina drag och försöka igen för att hitta lösningen, eller "
 "blanda kvarvarande brickor igen."
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Du kan ångra dina drag och försöka igen för att hitta lösningen, eller "
 "starta ett nytt spel."
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "_Blanda"
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "_Fortsätt"
 
-#: src/gnome-mahjongg.vala:318
+#: src/gnome-mahjongg.vala:311
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -311,98 +440,68 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: src/gnome-mahjongg.vala:320
+#: src/gnome-mahjongg.vala:313
 msgid "Layouts by"
 msgstr "Layouter av"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:61
 #, c-format
 msgid "Layout: %s"
 msgstr "Layout: %s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:302
 msgid "Clear All Scores?"
 msgstr "Rensa alla poäng?"
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:303
 msgid "This will clear every score for every layout."
 msgstr "Detta kommer rensa alla poäng för alla layouter."
 
-#: src/score-dialog.vala:368
+#: src/score-dialog.vala:307
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:308
 msgid "Clear All"
 msgstr "Rensa alla"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Drag kvar: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "Pausad"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "Fortsätt spel"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "Gör paus i spelet"
 
-#~ msgctxt "shortcut window"
-#~ msgid "Playing"
-#~ msgstr "Spela"
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "Svår"
 
-#~ msgctxt "shortcut window"
-#~ msgid "New Game"
-#~ msgstr "Nytt spel"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Restart Game"
-#~ msgstr "Starta om spel"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause Game"
-#~ msgstr "Gör paus i spelet"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "Ångra"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "Gör om"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Hint"
-#~ msgstr "Visa tips"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "Allmänt"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Main Menu"
-#~ msgstr "Visa huvudmeny"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Keyboard Shortcuts"
-#~ msgstr "Visa tangentbordsgenvägar"
+#~ msgid "_Help"
+#~ msgstr "_Hjälp"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Show Help"
 #~ msgstr "Visa hjälp"
 
-#~ msgctxt "shortcut window"
-#~ msgid "Quit"
-#~ msgstr "Avsluta"
+#~ msgid "The Mahjongg Team"
+#~ msgstr "Mahjong-gruppen"
 
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "_Tangentbordsgenvägar"
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Playing"
+#~ msgstr "Spela"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
@@ -487,9 +586,6 @@ msgstr "Gör paus i spelet"
 
 #~ msgid "A matching game played with Mahjongg tiles"
 #~ msgstr "Ett matchningsspel som spelas med Mahjong-brickor"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Fortsätt spelet"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
