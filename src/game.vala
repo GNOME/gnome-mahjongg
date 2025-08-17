@@ -287,6 +287,7 @@ public class Game {
         }
 
         clock = new Timer ();
+        clock.stop ();
         clock_elapsed = save.clock;
         tick ();
 
@@ -713,16 +714,18 @@ public class Game {
     private void stop_clock () {
         if (clock == null)
             return;
-        if (clock_timeout != 0)
+        if (clock_timeout != 0) {
             Source.remove (clock_timeout);
-        clock_timeout = 0;
-        clock.stop ();
+            clock_timeout = 0;
+        }
+        if (clock.is_active ())
+            clock.stop ();
     }
 
     private void continue_clock () {
         if (clock == null)
             clock = new Timer ();
-        else
+        else if (!clock.is_active ())
             clock.continue ();
         clock_timeout_cb ();
     }
