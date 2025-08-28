@@ -220,11 +220,25 @@ public class Mahjongg : Adw.Application {
             .present (active_window);
     }
 
-    private void layout_cb (SimpleAction action, Variant variant) {
+    private async void _layout_cb (SimpleAction action, Variant variant) {
         var layout = variant.get_string ();
-        action.set_state (variant);
-
         if (settings.get_string ("mapset") != layout) {
+            if (game.started) {
+                var dialog = new Adw.AlertDialog (
+                    _("Change Layout?"),
+                    _("This will end your current game.")
+                ) {
+                    default_response = "cancel"
+                };
+                dialog.add_response ("cancel", _("_Cancel"));
+                dialog.add_response ("change_layout", _("Change _Layout"));
+                dialog.set_response_appearance ("change_layout", Adw.ResponseAppearance.DESTRUCTIVE);
+
+                var resp_id = yield dialog.choose (active_window, null);
+                if (resp_id != "change_layout")
+                    return;
+            }
+
             settings.set_string ("mapset", layout);
             settings.apply ();
 
@@ -232,6 +246,11 @@ public class Mahjongg : Adw.Application {
             var rotate_map = false;
             new_game (rotate_map);
         }
+        action.set_state (variant);
+    }
+
+    private void layout_cb (SimpleAction action, Variant variant) {
+        _layout_cb.begin (action, variant);
     }
 
     private void layout_rotation_cb (SimpleAction action, Variant variant) {
