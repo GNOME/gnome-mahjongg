@@ -23,7 +23,7 @@ public class Mahjongg : Adw.Application {
         { "restart-game", restart_game_cb },
         { "scores", scores_cb },
         { "layout", null, "s", "''", layout_cb },
-        { "layout-rotation", null, "s", "''", layout_rotation_cb },
+        { "layout-progression", null, "s", "''", layout_progression_cb },
         { "background-color", null, "s", "''", background_color_cb },
         { "theme", null, "s", "''", theme_cb },
         { "rules", rules_cb },
@@ -76,9 +76,9 @@ public class Mahjongg : Adw.Application {
         unowned var layout_action = lookup_action ("layout") as SimpleAction;
         layout_action.set_state (new Variant.@string (layout));
 
-        var layout_rotation = settings.get_string ("map-rotation");
-        unowned var layout_rotation_action = lookup_action ("layout-rotation") as SimpleAction;
-        layout_rotation_action.set_state (new Variant.@string (layout_rotation));
+        var layout_progression = settings.get_string ("map-rotation");
+        unowned var layout_progression_action = lookup_action ("layout-progression") as SimpleAction;
+        layout_progression_action.set_state (new Variant.@string (layout_progression));
 
         var background_color = settings.get_string ("background-color");
         unowned var background_color_action = lookup_action ("background-color") as SimpleAction;
@@ -96,7 +96,7 @@ public class Mahjongg : Adw.Application {
         var save_path = Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "gamesave");
         game_save = new GameSave (save_path);
 
-        var rotate_map = (layout_rotation == "random");
+        var rotate_map = (layout_progression == "random");
         var restore = true;
         new_game (rotate_map, restore);
     }
@@ -253,12 +253,12 @@ public class Mahjongg : Adw.Application {
         _layout_cb.begin (action, variant);
     }
 
-    private void layout_rotation_cb (SimpleAction action, Variant variant) {
-        var layout_rotation = variant.get_string ();
+    private void layout_progression_cb (SimpleAction action, Variant variant) {
+        var layout_progression = variant.get_string ();
         action.set_state (variant);
 
-        if (settings.get_string ("map-rotation") != layout_rotation) {
-            settings.set_string ("map-rotation", layout_rotation);
+        if (settings.get_string ("map-rotation") != layout_progression) {
+            settings.set_string ("map-rotation", layout_progression);
             settings.apply ();
         }
     }

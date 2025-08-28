@@ -57,18 +57,18 @@
         <attribute name="label" translatable="yes">Layout _Progression</attribute>
         <section>
           <item>
-            <attribute name="label" translatable="yes" context="layout rotation">No Progression</attribute>
-            <attribute name="action">app.layout-rotation</attribute>
+            <attribute name="label" translatable="yes" context="layout progression">No Progression</attribute>
+            <attribute name="action">app.layout-progression</attribute>
             <attribute name="target">single</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes" context="layout rotation">Sequential</attribute>
-            <attribute name="action">app.layout-rotation</attribute>
+            <attribute name="label" translatable="yes" context="layout progression">Sequential</attribute>
+            <attribute name="action">app.layout-progression</attribute>
             <attribute name="target">sequential</attribute>
           </item>
           <item>
-            <attribute name="label" translatable="yes" context="layout rotation">Random</attribute>
-            <attribute name="action">app.layout-rotation</attribute>
+            <attribute name="label" translatable="yes" context="layout progression">Random</attribute>
+            <attribute name="action">app.layout-progression</attribute>
             <attribute name="target">random</attribute>
           </item>
         </section>
