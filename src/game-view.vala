@@ -234,6 +234,7 @@ public class GameView : Gtk.Widget {
 
             if (using_cairo) {
                 this.cairo_pattern = new Cairo.Pattern.for_surface (theme_surface);
+                this.cairo_pattern.set_filter (Cairo.Filter.BILINEAR);  // Faster scaling than default
             } else {
                 unowned var data = theme_surface.get_data ();
                 var rowstride = new_theme_width * 4;
