@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-15 08:54+0000\n"
-"PO-Revision-Date: 2025-07-16 09:46+0200\n"
+"POT-Creation-Date: 2025-08-29 04:47+0000\n"
+"PO-Revision-Date: 2025-08-29 09:33+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -25,18 +25,18 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:530
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Poišči pare ploščic in počisti igralno ploščo"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "igra;strateška;sestavljanka;tabla;plošča;kitajska;mahjong;"
 
@@ -87,7 +87,7 @@ msgstr "Mahjongg v svetlem slogu"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg v temnem slogu"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:235
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_Nova igra"
 
@@ -154,21 +154,21 @@ msgid "Taipei"
 msgstr "Tajpej"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "_Sukanje postavitve"
+msgid "Layout _Progression"
+msgstr "P_rogresija postavitve"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Brez sukanja"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Brez progresije"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "Zaporedno"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Naključno"
 
@@ -313,7 +313,7 @@ msgstr "Čas"
 msgid "Player"
 msgstr "Igralec"
 
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:233
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "_Končaj"
 
@@ -398,15 +398,15 @@ msgstr "Glavni meni"
 msgid "Show Hint"
 msgstr "Pokaži namig"
 
-#: src/gnome-mahjongg.vala:17
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "Izpiši različico programa in končaj"
 
-#: src/gnome-mahjongg.vala:226
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "Ni preostalih premikov"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -414,22 +414,38 @@ msgstr ""
 "Poteze lahko razveljavite in poskusite najti rešitev ali premešati preostale "
 "ploščice."
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Razveljavite lahko svoje premike in poiščete ustrezno rešitev ali pa začnete "
 "z novo igro."
 
-#: src/gnome-mahjongg.vala:238
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "_Premešaj"
 
-#: src/gnome-mahjongg.vala:240
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
-#: src/gnome-mahjongg.vala:352
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "Ali želite spremeniti postavitev?"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "S tem se bo končala vaša trenutna igra."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "Pre_kliči"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "Spremeni _postavitev"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "Matej Urbančič <mateju@src.gnome.org>\n"
@@ -438,7 +454,7 @@ msgstr ""
 "Tadej Janež\n"
 "Martin Srebotnjak"
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "Postavitve"
 
@@ -447,35 +463,31 @@ msgstr "Postavitve"
 msgid "Layout: %s"
 msgstr "Postavitev: %s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "Ali želite počistiti vse rezultate?"
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "S tem počistite vsak rezultat za vsako postavitev."
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "Pre_kliči"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "Počisti vse"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Število preostalih premikov: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "Premor"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "Nadaljuj igro"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "Premor v igri"
