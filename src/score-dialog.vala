@@ -72,8 +72,16 @@ public class ScoreDialog : Adw.Dialog {
     private void add_layout (Gtk.StringList model, string layout_name) {
         var display_name = maps.get_map_display_name (layout_name);
 
-        if (model.find (display_name) == uint.MAX)
+        if (find_layout_position (model, display_name) == uint.MAX)
             model.append (display_name);
+    }
+
+    private uint find_layout_position (Gtk.StringList model, string display_name) {
+        for (var i = 0; i < model.get_n_items (); i++) {
+            if (model.get_string (i) == display_name)
+                return i;
+        }
+        return uint.MAX;
     }
 
     private void set_up_layout_dropdown () {
@@ -100,7 +108,7 @@ public class ScoreDialog : Adw.Dialog {
         else if (selected_layout == "")
             selected_layout = model.get_string (0);
 
-        layout_dropdown.set_selected (model.find (display_name));
+        layout_dropdown.set_selected (find_layout_position (model, display_name));
         layout_dropdown.notify["selected"].connect (layout_selected_cb);
         layout_selected_cb ();
     }
