@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-14 16:23+0000\n"
-"PO-Revision-Date: 2025-07-14 21:09+0300\n"
+"POT-Creation-Date: 2025-08-29 07:34+0000\n"
+"PO-Revision-Date: 2025-08-29 21:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -23,18 +23,18 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:530
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "Магджонґ"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Знайдіть однакові плитки і очистіть дошку"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "гра;стратегія;головоломка;настільна;"
 
@@ -88,7 +88,7 @@ msgstr "Магджонґ у світлому стилі"
 msgid "Mahjongg in Dark Style"
 msgstr "Магджонґ у темному стилі"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:235
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_Створити гру"
 
@@ -155,21 +155,26 @@ msgid "Taipei"
 msgstr "Тайбей"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "О_бертання компонування"
+#| msgid "Layout Ro_tation"
+msgid "Layout _Progression"
+msgstr "П_оступ компонування"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Без обертання"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Немає поступу"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+#| msgctxt "layout rotation"
+#| msgid "Sequential"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "Послідовно"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+#| msgctxt "layout rotation"
+#| msgid "Random"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Випадково"
 
@@ -247,7 +252,6 @@ msgid "Rounds are scored based on completion time"
 msgstr "Очки нараховуватимуться на основі витраченого часу"
 
 #: data/ui/rules-dialog.ui:42
-#| msgid "Unpause the game"
 msgctxt "game rules"
 msgid "You can pause the game"
 msgstr "Ви можете призупинити гру"
@@ -315,7 +319,7 @@ msgstr "Час"
 msgid "Player"
 msgstr "Гравець"
 
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:233
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "Ви_йти"
 
@@ -400,15 +404,15 @@ msgstr "Головне меню"
 msgid "Show Hint"
 msgstr "Показати підказку"
 
-#: src/gnome-mahjongg.vala:17
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "Показати версію випуску та вийти"
 
-#: src/gnome-mahjongg.vala:226
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "Ходів не лишилося"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -416,21 +420,38 @@ msgstr ""
 "Ви можете скасувати ходи і спробувати знайти розв'язання або перемішати "
 "решту плиток."
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Ви можете скасувати ходи і спробувати знайти розв'язання або почати нову гру."
 
-#: src/gnome-mahjongg.vala:238
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "_Перемішати"
 
-#: src/gnome-mahjongg.vala:240
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "П_родовжити"
 
-#: src/gnome-mahjongg.vala:352
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "Змінити компонування?"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "Це призведе до завершення поточної гри."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: src/gnome-mahjongg.vala:234
+#| msgid "_Layout"
+msgid "Change _Layout"
+msgstr "Змінити _компонування"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -439,7 +460,7 @@ msgstr ""
 "Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Mykola Tkach <Stuartlittle1970@gmail.com>"
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "Компонування"
 
@@ -448,39 +469,39 @@ msgstr "Компонування"
 msgid "Layout: %s"
 msgstr "Компонування: %s"
 
-#: src/score-dialog.vala:304
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "Вилучити усі результати?"
 
-#: src/score-dialog.vala:305
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr ""
 "Це призведе до вилучення усіх результатів для усіх розташувань плиток."
 
-#: src/score-dialog.vala:309
-msgid "_Cancel"
-msgstr "_Скасувати"
-
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "Вилучити все"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Лишилося ходів: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "Призупинено"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "Відновити гру"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "Призупинити гру"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "Без обертання"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Difficult"
