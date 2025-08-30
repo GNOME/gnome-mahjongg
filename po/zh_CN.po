@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-15 08:54+0000\n"
-"PO-Revision-Date: 2025-07-17 06:46+0800\n"
+"POT-Creation-Date: 2025-08-29 18:36+0000\n"
+"PO-Revision-Date: 2025-08-30 10:15+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -24,18 +24,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 48.0\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:530
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "对对碰"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "匹配麻将牌清空版面"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;游戏;策略;智力游戏;谜题;解谜;牌桌;"
 
@@ -83,7 +83,7 @@ msgstr "亮色样式的麻将"
 msgid "Mahjongg in Dark Style"
 msgstr "暗色样式的麻将"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:235
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
@@ -150,21 +150,21 @@ msgid "Taipei"
 msgstr "台北"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "布局旋转(_T)"
+msgid "Layout _Progression"
+msgstr "布局发展(_P)"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "无旋转"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "无发展"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "顺序"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "随机"
 
@@ -309,7 +309,7 @@ msgstr "时间"
 msgid "Player"
 msgstr "玩家"
 
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:233
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "退出(_Q)"
 
@@ -394,34 +394,50 @@ msgstr "主菜单"
 msgid "Show Hint"
 msgstr "显示提示"
 
-#: src/gnome-mahjongg.vala:17
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "显示发布版本并退出"
 
-#: src/gnome-mahjongg.vala:226
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "无剩余操作"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr "您可以撤消操作并尝试寻找解法，或者对剩余分块重新洗牌。"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "您可以撤消操作并尝试寻找解法，或者开始新游戏。"
 
-#: src/gnome-mahjongg.vala:238
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "洗牌(_R)"
 
-#: src/gnome-mahjongg.vala:240
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "继续(_C)"
 
-#: src/gnome-mahjongg.vala:352
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "更改布局吗？"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "这将会结束您当前的游戏。"
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "更改布局(_L)"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
@@ -433,7 +449,7 @@ msgstr ""
 "Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
 "lumingzh <lumingzh@qq.com>, 2023-2025"
 
-#: src/gnome-mahjongg.vala:354
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "布局"
 
@@ -442,38 +458,38 @@ msgstr "布局"
 msgid "Layout: %s"
 msgstr "布局：%s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "清除所有得分吗？"
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "这会清除所有布局的所有得分。"
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "取消(_C)"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "全部清除"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "剩余操作：%2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "已暂停"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "继续游戏"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "暂停游戏"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "无旋转"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Difficult"
@@ -521,9 +537,6 @@ msgstr "暂停游戏"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "全屏"
-
-#~ msgid "Layout"
-#~ msgstr "布局"
 
 #~ msgid "Preferences"
 #~ msgstr "首选项"
