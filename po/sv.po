@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-26 12:57+0000\n"
-"PO-Revision-Date: 2025-08-12 19:13+0200\n"
+"POT-Creation-Date: 2025-08-29 07:34+0000\n"
+"PO-Revision-Date: 2025-08-31 15:32+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,10 +21,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:417
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "Mahjong"
 
@@ -151,21 +151,21 @@ msgid "Taipei"
 msgstr "Taipei"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "_Rotation för layout"
+msgid "Layout _Progression"
+msgstr "Layout_ordning"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Ingen rotation"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Ingen ändring"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "I ordning"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Slumpmässig"
 
@@ -427,7 +427,23 @@ msgstr "_Blanda"
 msgid "_Continue"
 msgstr "_Fortsätt"
 
-#: src/gnome-mahjongg.vala:311
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "Ändra layout?"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "Detta kommer avsluta ditt aktuella spel."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "A_vbryt"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "Ändra _layout"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -440,7 +456,7 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "Layouter av"
 
@@ -449,19 +465,15 @@ msgstr "Layouter av"
 msgid "Layout: %s"
 msgstr "Layout: %s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "Rensa alla poäng?"
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "Detta kommer rensa alla poäng för alla layouter."
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "A_vbryt"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "Rensa alla"
 
@@ -481,6 +493,10 @@ msgstr "Fortsätt spel"
 #: src/window.vala:145
 msgid "Pause Game"
 msgstr "Gör paus i spelet"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "Ingen rotation"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Difficult"
