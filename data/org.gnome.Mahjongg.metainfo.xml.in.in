@@ -119,7 +119,8 @@
     <release version="3.38.0" date="2020-09-18"/>
   </releases>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
-  <url type="homepage">https://gitlab.gnome.org/GNOME/@project-name@</url>
+  <url type="homepage">https://apps.gnome.org/Mahjongg/</url>
+  <url type="contribute">https://welcome.gnome.org/app/Mahjongg/</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/@project-name@/issues</url>
   <url type="translate">https://l10n.gnome.org/module/@project-name@/</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/@project-name@</url>

@@ -11,7 +11,7 @@
   <name xml:lang="en">gnome-mahjongg</name>
   <shortdesc xml:lang="en">Match tiles and clear the board</shortdesc>
   <description xml:lang="en">Match tiles and clear the board</description>
-  <homepage rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg" />
+  <homepage rdf:resource="https://apps.gnome.org/Mahjongg/" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-mahjongg/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/" />

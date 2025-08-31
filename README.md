@@ -9,9 +9,8 @@ Single-player tile-matching game, commonly known as Mahjong solitaire.
 
 ## Useful links
 
-- Homepage: <https://gitlab.gnome.org/GNOME/gnome-mahjongg>
-- Report issues: <https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/>
-- Translate: <https://l10n.gnome.org/module/gnome-mahjongg/>
+- Homepage: <https://apps.gnome.org/Mahjongg/>
+- Contribute: <https://welcome.gnome.org/app/Mahjongg/>
 
 ## Code of Conduct
 
