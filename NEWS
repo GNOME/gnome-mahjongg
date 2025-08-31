@@ -1,3 +1,12 @@
+49.rc
+=====
+
+* Add confirmation dialog for layout change during active game
+* Fix inaccurate elapsed time when saving/restoring game
+* Use bilinear filter for scaling with Cairo renderer
+* Rename Layout Rotation -> Layout Progression
+* Translation updates
+
 49.beta
 =======
 
