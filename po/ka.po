@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-18 20:56+0000\n"
-"PO-Revision-Date: 2025-07-20 04:59+0200\n"
+"POT-Creation-Date: 2025-09-02 10:03+0000\n"
+"PO-Revision-Date: 2025-09-04 09:35+0200\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:529
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;"
 
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Mahjongg in Dark Style"
 msgstr ""
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:234
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_ახალი თამაში"
 
@@ -138,21 +138,21 @@ msgid "Taipei"
 msgstr "ტაიპეი"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "გან_ლაგების შებრუნება"
+msgid "Layout _Progression"
+msgstr "განლაგების _მიმდინარეობა"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "შეტრიალების გარეშე"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr ""
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "თანმიმდევრული"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "შემთხვევითი"
 
@@ -297,7 +297,7 @@ msgstr "დრო"
 msgid "Player"
 msgstr "დამკვრელი"
 
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:232
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "_გასვლა"
 
@@ -382,38 +382,54 @@ msgstr "მთავარი მენიუ"
 msgid "Show Hint"
 msgstr "მინიშნების ჩვენება"
 
-#: src/gnome-mahjongg.vala:17
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "ვერსიის ჩვენება და გასვლა"
 
-#: src/gnome-mahjongg.vala:225
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "სვლები აღარ დაგრჩათ"
 
-#: src/gnome-mahjongg.vala:227
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr ""
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 
-#: src/gnome-mahjongg.vala:237
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr ""
 
-#: src/gnome-mahjongg.vala:239
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "_გაგრძელება"
 
-#: src/gnome-mahjongg.vala:351
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr ""
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr ""
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "_გაუქმება"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "განლაგების შეცვ_ლა"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr "ვიღაც, ვინც თარგმნა"
 
-#: src/gnome-mahjongg.vala:353
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "განლაგების ავტორი"
 
@@ -422,38 +438,38 @@ msgstr "განლაგების ავტორი"
 msgid "Layout: %s"
 msgstr "განლაგება: %s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr ""
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr ""
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "_გაუქმება"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "ყველას გასუფთავება"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "დარჩენილი სვლები: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "შეჩერებულია"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "თამაშის გაგრძელება"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "თამაშის შეჩერება"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "შეტრიალების გარეშე"
 
 #~ msgctxt "mahjongg map name"
 #~ msgid "Difficult"
