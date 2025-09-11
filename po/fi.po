@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-23 13:48+0000\n"
-"PO-Revision-Date: 2025-03-02 11:52+0200\n"
+"POT-Creation-Date: 2025-09-10 17:26+0000\n"
+"PO-Revision-Date: 2025-09-11 11:07+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -24,21 +24,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2010-09-13 15:09+0000\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.7\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "Mahjong"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Sovita laatat ja tyhjennä pelialusta"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;peli;lautapeli;strategia;pulma;"
 
@@ -90,11 +90,7 @@ msgstr "Mahjong ja vaalea tyyli"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjong ja tumma tyyli"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:94
-msgid "The Mahjongg Team"
-msgstr "Mahjongg-tiimi"
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_Uusi peli"
 
@@ -157,25 +153,25 @@ msgstr "Hämmentävä risti"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "Vaikea"
+msgid "Taipei"
+msgstr "Taipei"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "Asettelun _kierto"
+msgid "Layout _Progression"
+msgstr "Asettelun _edistyminen"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Ei kiertoa"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Ei edistymistä"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "Peräkkäinen"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Satunnainen"
 
@@ -222,40 +218,172 @@ msgid "Educational"
 msgstr "Kasvatuksellinen"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "O_hje"
+msgid "Game R_ules"
+msgstr "Pelin _säännöt"
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "_Pikanäppäimet"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "_Tietoja - Mahjong"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr "Pelin säännöt"
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr "Tyhjennä pelilauta sovittamalla toisiaan vastaavat laatat"
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr "Vain paljastetut laatat, joissa on vapaa pitkä reuna, on valittavissa"
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr "Kierrokset pisteytetään suoritusaikaan perustuen"
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "Voit keskeyttää pelin"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr "Laattojen etupuolet piilotetaan"
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr "Voit kumota tai tehdä uudelleen siirron"
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr "Aikasakkoa ei lisätä"
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr "Voit käyttää vihjeitä paljastaaksesi vastaavia laattoja"
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr "Lisää 30 sekunnin aikasakon"
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr "Voit sekoittaa laatat, kun siirtoja ei ole jäljellä"
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr "Lisää 60 sekunnin aikasakon"
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "Pisteet"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr "Peli läpäisty 🎉"
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Ei pisteitä"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr "Pelaa peli loppuun nähdäksesi pisteet"
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "Pelaaja"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "Sijoitus"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "Aika"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "Päiväys"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "Pelaaja"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "_Lopeta"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "Peli"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "Uusi peli"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "Käynnistä peli uudelleen"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "Keskeytä peli"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Kumoa"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Tee uudelleen"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "Näytä vihje"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Yleiset"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Game Rules"
+msgstr "Näytä pelin säännöt"
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "Näytä päävalikko"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Näytä pikanäppäimet"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Sulje ikkuna"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Lopeta"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -273,38 +401,54 @@ msgstr "Päävalikko"
 msgid "Show Hint"
 msgstr "Näytä vihje"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "Näytä julkaisuversio ja sulkeudu"
 
-#: src/gnome-mahjongg.vala:194
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "Ei siirtoja jäljellä"
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr ""
 "Voit kumota siirtoja ja yrittää löytää toisenlaisen ratkaisun, tai sekoittaa "
-"jäljellä olevat tiilet uudelleen."
+"jäljellä olevat laatat uudelleen."
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Voit kumota siirtosi ja yrittää löytää toisenlaisen ratkaisun, tai aloittaa "
 "uuden pelin."
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "_Sekoita"
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "_Jatka"
 
-#: src/gnome-mahjongg.vala:318
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "Vaihdetaanko asettelu?"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "Tämä lopettaa nykyisen pelin."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "Vaihda _asettelu"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "Jiri Grönroos, 2013-2025\n"
@@ -325,96 +469,68 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: src/gnome-mahjongg.vala:320
-#| msgid "Layout: "
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "Asettelun tekijä"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:61
 #, c-format
-#| msgid "Layout: "
 msgid "Layout: %s"
 msgstr "Asettelu: %s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "Tyhjennetäänkö kaikki pisteet?"
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "Tämä tyhjentää kaikki pisteet kaikkien asettelujen osalta."
 
-#: src/score-dialog.vala:368
-msgid "_Cancel"
-msgstr "_Peru"
-
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "Tyhjennä kaikki"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Siirtoja jäljellä: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "Keskeytetty"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "Jatka peliä"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "Keskeytä peli"
+
+#~ msgid "The Mahjongg Team"
+#~ msgstr "Mahjongg-tiimi"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "Vaikea"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "Ei kiertoa"
+
+#~ msgid "_Help"
+#~ msgstr "O_hje"
+
+#~ msgid "Date"
+#~ msgstr "Päiväys"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Playing"
 #~ msgstr "Pelaaminen"
 
 #~ msgctxt "shortcut window"
-#~ msgid "New Game"
-#~ msgstr "Uusi peli"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause Game"
-#~ msgstr "Keskeytä peli"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "Kumoa"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "Tee uudelleen"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Hint"
-#~ msgstr "Näytä vihje"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "Yleiset"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Main Menu"
-#~ msgstr "Näytä päävalikko"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Keyboard Shortcuts"
-#~ msgstr "Näytä pikanäppäimet"
-
-#~ msgctxt "shortcut window"
 #~ msgid "Show Help"
 #~ msgstr "Näytä ohje"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Quit"
-#~ msgstr "Lopeta"
-
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "_Pikanäppäimet"
 
 #~ msgid "Alberto Ruiz"
 #~ msgstr "Alberto Ruiz"
@@ -441,9 +557,6 @@ msgstr "Keskeytä peli"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "Koko näyttö"
-
-#~ msgid "Layout"
-#~ msgstr "Asettelu"
 
 #~ msgid "Preferences"
 #~ msgstr "Asetukset"
@@ -489,9 +602,6 @@ msgstr "Keskeytä peli"
 
 #~ msgid "OK"
 #~ msgstr "OK"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Jatka peliä"
 
 #~ msgid "GNOME Mahjongg"
 #~ msgstr "Gnomen Mahjong"
