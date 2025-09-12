@@ -25,8 +25,8 @@
     </p>
   </description>
   <branding>
-    <color type="primary" scheme_preference="light">#c5c7de</color>
-    <color type="primary" scheme_preference="dark">#2a2d49</color>
+    <color type="primary" scheme_preference="light">#99c1f1</color>
+    <color type="primary" scheme_preference="dark">#12427e</color>
   </branding>
   <screenshots>
     <screenshot type="default">

@@ -320,7 +320,8 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
                 "Gonzalo Odiard",
                 "Max Watson",
                 "Jakub Steiner",
-                "Rossano Rossi"
+                "Rossano Rossi",
+                "Tobias Bernard"
             },
             documenters = {
                 "Tiffany Antopolski",
