@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-07-26 12:57+0000\n"
-"PO-Revision-Date: 2025-07-29 16:05+0330\n"
+"POT-Creation-Date: 2025-09-11 08:09+0000\n"
+"PO-Revision-Date: 2025-09-13 01:48+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,10 +22,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:417
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
 msgid "Mahjongg"
 msgstr "ماهجونگ"
 
@@ -150,21 +150,21 @@ msgid "Taipei"
 msgstr "تایپه"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "_چرخش چیدمان"
+msgid "Layout _Progression"
+msgstr "_پیشرفت چیدمان"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "بدون چرخش"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "بدون پیشرفت"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "ترتیبی"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "کاتوره‌ای"
 
@@ -424,13 +424,29 @@ msgstr "_بر زدن"
 msgid "_Continue"
 msgstr "_ادامه"
 
-#: src/gnome-mahjongg.vala:311
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "تغییر چیدمان؟"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "این کار بازی کنونیتان را پایان خواهد داد."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "_لغو"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "تغییر _چیدمان"
+
+#: src/gnome-mahjongg.vala:330
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:332
 msgid "Layouts by"
 msgstr "چیدمان‌ها به دست"
 
@@ -439,26 +455,22 @@ msgstr "چیدمان‌ها به دست"
 msgid "Layout: %s"
 msgstr "چیدمان: %s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "پاک‌سازی همهٔ امتیازها؟"
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "این کار همهٔ امتیازها را برای همهٔ چینش‌ها پاک می‌کند."
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "_لغو"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "پاک‌سازی همه"
 
 #: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
-msgstr "حرکات مانده: %I2u"
+msgstr "حرکت‌های مانده: %I2u"
 
 #: src/window.vala:137
 msgid "Paused"
@@ -471,6 +483,10 @@ msgstr "از سر گیری بازی"
 #: src/window.vala:145
 msgid "Pause Game"
 msgstr "مکث بازی"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "بدون چرخش"
 
 #~ msgid "The Mahjongg Team"
 #~ msgstr "گروه ماهجونگ"
@@ -518,9 +534,6 @@ msgstr "مکث بازی"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "تمام‌صفحه"
-
-#~ msgid "Layout"
-#~ msgstr "چیدمان"
 
 #~ msgid "Preferences"
 #~ msgstr "ترجیحات"
