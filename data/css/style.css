@@ -1,17 +1,52 @@
 /* SPDX-FileCopyrightText: 2022-2025 Mahjongg Contributors
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
-/* Theme backgrounds */
+/* Theme colors */
+:root {
+    --bg-postmodern: #e8e9f2;
+    --bg-smooth: #eeede3;
+    --bg-educational: #edf5f3;
+    --bg-lightness-factor: 1;
+    --tile-contrast: 100%;
+    --tile-brightness: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-postmodern: #2a2d49;
+        --bg-smooth: #373521;
+        --bg-educational: #1d3a32;
+        --tile-contrast: 140%;
+        --tile-brightness: 80%;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --tile-contrast: 130%;
+        --tile-brightness: 90%;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-lightness-factor: 0.9;
+            --tile-contrast: 150%;
+            --tile-brightness: 80%;
+        }
+    }
+}
+
+/* Backgrounds */
 window toolbarview.postmodern {
-    background: #e8e9f2;
+    background: hsl(from var(--bg-postmodern) h s calc(l * var(--bg-lightness-factor)));
 }
 
 window toolbarview.smooth {
-    background: #eeede3;
+    background: hsl(from var(--bg-smooth) h s calc(l * var(--bg-lightness-factor)));
 }
 
 window toolbarview.educational {
-    background: #edf5f3;
+    background: hsl(from var(--bg-educational) h s calc(l * var(--bg-lightness-factor)));
 }
 
 /* Compact mode */
@@ -30,6 +65,7 @@ window.compact sheet toolbarview > .top-bar {
 
 /* Game view */
 stack.game {
+    filter: contrast(var(--tile-contrast)) brightness(var(--tile-brightness));
     margin-top: -11px;
     min-height: 11px;
     transition: opacity 250ms ease-out;
