@@ -167,7 +167,7 @@ public class GameView : Gtk.Widget {
         resize_theme ();
     }
 
-    private void get_theme_size (out int width, out int height) {
+    private void get_theme_size (out double width, out double height) {
         int[] scale_factors = {8, 4, 2};
         width = 0;
         height = 0;
@@ -198,8 +198,8 @@ public class GameView : Gtk.Widget {
 
         /* Finally. apply system scale factor for HiDPI support */
         var scale = get_native ().get_surface ().get_scale ();
-        width = (int) (width * scale);
-        height = (int) (height * scale);
+        width *= scale;
+        height *= scale;
     }
 
     private void resize_theme () {
@@ -210,8 +210,11 @@ public class GameView : Gtk.Widget {
             return;
 
         /* Get size to load the next tile texture at */
-        int new_theme_width, new_theme_height;
-        get_theme_size (out new_theme_width, out new_theme_height);
+        double new_exact_theme_width, new_exact_theme_height;
+        get_theme_size (out new_exact_theme_width, out new_exact_theme_height);
+
+        var new_theme_width = (int) new_exact_theme_width;
+        var new_theme_height = (int) new_exact_theme_height;
 
         /* If texture size didn't change, avoid unnecessary work */
         if (new_theme_width == loaded_theme_width)
@@ -227,8 +230,8 @@ public class GameView : Gtk.Widget {
             var rect = Rsvg.Rectangle () {
                 x = 0,
                 y = 0,
-                width = new_theme_width,
-                height = new_theme_height
+                width = new_exact_theme_width,
+                height = new_exact_theme_height
             };
             theme_handle.render_document (context, rect);
 
