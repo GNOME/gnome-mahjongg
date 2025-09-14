@@ -52,7 +52,7 @@
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Scores</property>
                     <property name="description" translatable="yes">Finish a game to see scores</property>
-                    <property name="icon-name">starred-symbolic</property>
+                    <property name="icon-name">stopwatch-symbolic</property>
                   </object>
                 </property>
               </object>

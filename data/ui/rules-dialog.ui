@@ -32,7 +32,7 @@
                 <property name="title" translatable="yes" context="game rules">Rounds are scored based on completion time</property>
                 <child type="prefix">
                   <object class="GtkImage">
-                    <property name="icon-name">document-open-recent-symbolic</property>
+                    <property name="icon-name">stopwatch-symbolic</property>
                   </object>
                 </child>
               </object>
