@@ -124,8 +124,10 @@ public class ScoreDialog : Adw.Dialog {
         score_view.sort_by_column (rank_column, Gtk.SortType.ASCENDING);
 
         score_view.sorter.changed.connect (() => {
-            /* Scroll to top when resorting */
-            score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
+            /* Scroll to top when resorting. Ensure that the score view is valid,
+             * since the sorter can change while destroying the dialog. */
+            if (score_view != null)
+                score_view.scroll_to (0, null, Gtk.ListScrollFlags.FOCUS, null);
         });
 
         if (completed_entry == null)
