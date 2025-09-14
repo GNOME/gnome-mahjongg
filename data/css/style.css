@@ -65,10 +65,13 @@ window.compact sheet toolbarview > .top-bar {
 
 /* Game view */
 stack.game {
-    filter: contrast(var(--tile-contrast)) brightness(var(--tile-brightness));
     margin-top: -11px;
     min-height: 11px;
     transition: opacity 250ms ease-out;
+}
+
+stack.tile-filter {
+    filter: contrast(var(--tile-contrast)) brightness(var(--tile-brightness));
 }
 
 /* Scores */

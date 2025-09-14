@@ -43,6 +43,10 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         stack.add_named (new GameView (using_cairo), "primary");
         stack.add_named (new GameView (using_cairo), "secondary");
 
+        /* Tile filters are too slow with the Cairo renderer */
+        if (!using_cairo)
+            stack.add_css_class ("tile-filter");
+
         var menu_builder = new Gtk.Builder.from_resource (application.resource_base_path + "/ui/menu.ui");
         unowned var menu_model = menu_builder.get_object ("menu") as MenuModel;
         unowned var layout_menu = menu_builder.get_object ("layout_menu") as Menu;
