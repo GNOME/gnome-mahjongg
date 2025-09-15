@@ -5,9 +5,13 @@
 public class Tile {
     public int number = -1;
     public bool visible = true;
-    public bool highlighted = false;
+    public bool highlighted;
     public int move;
     public Slot slot;
+
+    public bool shaking;
+    public int shake_offset;
+    public double shake_start_time;
 
     private Tile[] left;
     private Tile[] right;
@@ -314,6 +318,13 @@ public class Game {
         if (position < 0 || position >= n_tiles)
             return null;
         return tiles[position];
+    }
+
+    public void shake_tile (Tile tile, int64 start_time) {
+        tile.shaking = true;
+        tile.shake_offset = 0;
+        tile.shake_start_time = start_time;
+        redraw_tile (tile);
     }
 
     public bool remove_pair (Tile tile0, Tile tile1) {

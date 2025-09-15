@@ -20,6 +20,7 @@ gnome_mahjongg = executable(
     gtk_dep,
     adwaita_dep,
     librsvg_dep,
+    m_dep,
   ],
   vala_args: [ '--pkg=posix' ],
   c_args: [

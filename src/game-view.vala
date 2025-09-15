@@ -25,12 +25,24 @@ public class GameView : Gtk.Widget {
     private double theme_aspect;
     private int rendered_theme_width;
     private int rendered_theme_height;
+    private uint tick_id;
+
+    private const int TILE_SHAKE_DURATION_MS = 250;
+    private const int TILE_SHAKE_FREQUENCY = 6;
+    private const int MIN_TILE_SHAKE_AMPLITUDE = 3;
+    private const double TILE_SHAKE_SCALE_FACTOR = 0.04;
 
     private Game? _game;
     public Game? game {
         get { return _game; }
         set {
+            if (tick_id != 0) {
+                remove_tick_callback (tick_id);
+                tick_id = 0;
+            }
+
             _game = value;
+
             if (value == null)
                 return;
 
@@ -82,6 +94,9 @@ public class GameView : Gtk.Widget {
             /* Draw the tile */
             int tile_x, tile_y;
             get_tile_position (tile, out tile_x, out tile_y);
+
+            if (tile.shaking)
+                tile_x += tile.shake_offset;
 
             var tile_rect = Graphene.Rect ();
             tile_rect.init (tile_x, tile_y, tile_pattern_width, tile_pattern_height);
@@ -326,7 +341,42 @@ public class GameView : Gtk.Widget {
     }
 
     private void redraw_tile_cb (Tile tile) {
-        queue_draw ();
+        if (!tile.shaking) {
+            queue_draw ();
+            return;
+        }
+
+        if (tick_id != 0)
+            return;
+
+        tick_id = add_tick_callback ((widget, frame_clock) => {
+            bool animating = false;
+
+            foreach (var t in game) {
+                if (!t.shaking)
+                    continue;
+
+                var elapsed_ms = (frame_clock.get_frame_time () - t.shake_start_time) / 1000;
+                var elapsed_s = elapsed_ms / 1000;
+
+                if (elapsed_ms > TILE_SHAKE_DURATION_MS) {
+                    t.shaking = false;
+                    t.shake_offset = 0;
+                    t.shake_start_time = 0.0;
+                    continue;
+                }
+
+                var amplitude = Math.fmax (MIN_TILE_SHAKE_AMPLITUDE, tile_width * TILE_SHAKE_SCALE_FACTOR);
+                t.shake_offset = (int) (amplitude * Math.sin (2 * Math.PI * TILE_SHAKE_FREQUENCY * elapsed_s));
+                animating = true;
+            }
+
+            if (!animating)
+                tick_id = 0;
+
+            queue_draw ();
+            return animating;
+        });
     }
 
     private void paused_changed_cb () {
@@ -350,8 +400,15 @@ public class GameView : Gtk.Widget {
         }
 
         /* If not a valid tile then ignore the event */
-        if (tile == null || !tile.selectable)
+        if (tile == null)
             return;
+
+        /* Shake unselectable tile */
+        if (!tile.selectable) {
+            var start_time = get_frame_clock ().get_frame_time ();
+            game.shake_tile (tile, start_time);
+            return;
+        }
 
         /* Select first tile */
         if (game.selected_tile == null) {
