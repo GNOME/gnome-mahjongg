@@ -24,23 +24,23 @@
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
 # Felipe Braga <fbobraga@gmail.com>, 2015.
 # Leônidas Araújo <leorusvellt@hotmail.com>, 2022.
-# Juliano de Souza Camargo <julianosc@pm.me>, 2024.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2012-2025.
+# Juliano de Souza Camargo <julianosc@pm.me>, 2024-2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-02-12 22:27+0000\n"
-"PO-Revision-Date: 2025-02-14 22:15-0300\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"POT-Creation-Date: 2025-09-13 09:36+0000\n"
+"PO-Revision-Date: 2025-09-13 19:20-0300\n"
+"Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 47.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 48.0\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: gnome-mahjongg\n"
@@ -48,18 +48,18 @@ msgstr ""
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:3
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:520
+#: data/org.gnome.Mahjongg.desktop.in.in:2
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:437
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
-#: data/org.gnome.Mahjongg.desktop.in.in:4
+#: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
 msgstr "Combine peças e limpe o tabuleiro"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mahjongg.desktop.in.in:6
+#: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "jogo;game;estratégia;quebra-cabeça;enigma;tabuleiro;"
 
@@ -111,11 +111,7 @@ msgstr "Mahjongg em estilo claro"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg em estilo escuro"
 
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:86
-msgid "The Mahjongg Team"
-msgstr "A equipe Mahjongg"
-
-#: data/ui/menu.ui:8 src/gnome-mahjongg.vala:208
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
 msgid "_New Game"
 msgstr "_Novo jogo"
 
@@ -178,25 +174,25 @@ msgstr "Travessia confusa"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "Difícil"
+msgid "Taipei"
+msgstr "Taipei"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "Ro_tação de layout"
+msgid "Layout _Progression"
+msgstr "_Progressão de leiaute"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Sem rotação"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Sem progressão"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "Sequencial"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Aleatório"
 
@@ -243,40 +239,173 @@ msgid "Educational"
 msgstr "Educacional"
 
 #: data/ui/menu.ui:118
-msgid "_Help"
-msgstr "Aj_uda"
+msgid "Game R_ules"
+msgstr "R_egras do jogo"
 
 #: data/ui/menu.ui:122
+msgid "_Keyboard Shortcuts"
+msgstr "A_talhos de teclado"
+
+#: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "_Sobre o Mahjongg"
+
+#: data/ui/rules-dialog.ui:7
+msgid "Game Rules"
+msgstr "Regras do jogo"
+
+#: data/ui/rules-dialog.ui:14
+msgctxt "game rules"
+msgid "Clear the board by matching pairs of identical tiles"
+msgstr "Limpe o tabuleiro com pares correspondentes de peças idênticas"
+
+#: data/ui/rules-dialog.ui:22
+msgctxt "game rules"
+msgid "Only uncovered tiles with a free long edge can be selected"
+msgstr "Somente peças descobertas com a borda longa livre pode ser selecionada"
+
+#: data/ui/rules-dialog.ui:32
+msgctxt "game rules"
+msgid "Rounds are scored based on completion time"
+msgstr "As rodadas são pontuadas baseadas no tempo de jogo"
+
+#: data/ui/rules-dialog.ui:42
+msgctxt "game rules"
+msgid "You can pause the game"
+msgstr "Você pode pausar o jogo"
+
+#: data/ui/rules-dialog.ui:43
+msgctxt "game rules"
+msgid "Tile faces will be hidden"
+msgstr "A frente das peças serão escondidas"
+
+#: data/ui/rules-dialog.ui:53
+msgctxt "game rules"
+msgid "You can undo or redo a move"
+msgstr "Você pode desfazer ou refazer um movimento"
+
+#: data/ui/rules-dialog.ui:54
+msgctxt "game rules"
+msgid "No time penalty is added"
+msgstr "Nenhuma penalidade de tempo é adicionada"
+
+#: data/ui/rules-dialog.ui:64
+msgctxt "game rules"
+msgid "You can use hints to reveal matching tiles"
+msgstr "Você pode usar dicas para revelar peças correspondentes"
+
+#: data/ui/rules-dialog.ui:65
+msgctxt "game rules"
+msgid "Adds a 30-second time penalty"
+msgstr "Adiciona uma penalidade de 30 segundos"
+
+#: data/ui/rules-dialog.ui:75
+msgctxt "game rules"
+msgid "You can shuffle tiles when no moves are left"
+msgstr ""
+"Você pode embaralhar as peças quando nenhum movimento estiver disponível"
+
+#: data/ui/rules-dialog.ui:76
+msgctxt "game rules"
+msgid "Adds a 60-second time penalty"
+msgstr "Adiciona uma penalidade de 60 segundos"
+
+#: data/ui/score-dialog.ui:8
+msgid "Scores"
+msgstr "Pontuações"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
 msgstr "Jogo concluído 🎉"
 
-#: data/ui/score-dialog.ui:54
+#: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Sem pontuações"
 
-#: data/ui/score-dialog.ui:55
+#: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
 msgstr "Termine um jogo para ver as pontuações"
 
-#: data/ui/score-dialog.ui:77
-msgid "Player"
-msgstr "Jogador"
+#: data/ui/score-dialog.ui:71
+msgid "Rank"
+msgstr "Nível"
 
-#: data/ui/score-dialog.ui:84
+#: data/ui/score-dialog.ui:77
 msgid "Time"
 msgstr "Tempo"
 
-#: data/ui/score-dialog.ui:91
-msgid "Date"
-msgstr "Data"
+#: data/ui/score-dialog.ui:84
+msgid "Player"
+msgstr "Jogador"
 
-#: data/ui/score-dialog.ui:124 src/gnome-mahjongg.vala:201
+#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
 msgid "_Quit"
 msgstr "Sai_r"
+
+#: data/ui/shortcuts-dialog.ui:8
+msgctxt "shortcut window"
+msgid "Game"
+msgstr "Jogo"
+
+#: data/ui/shortcuts-dialog.ui:12
+msgctxt "shortcut window"
+msgid "New Game"
+msgstr "Novo jogo"
+
+#: data/ui/shortcuts-dialog.ui:18
+msgctxt "shortcut window"
+msgid "Restart Game"
+msgstr "Reinicia o jogo"
+
+#: data/ui/shortcuts-dialog.ui:24
+msgctxt "shortcut window"
+msgid "Pause Game"
+msgstr "Pausa o jogo"
+
+#: data/ui/shortcuts-dialog.ui:30
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Desfaz"
+
+#: data/ui/shortcuts-dialog.ui:36
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Refaz"
+
+#: data/ui/shortcuts-dialog.ui:42
+msgctxt "shortcut window"
+msgid "Show Hint"
+msgstr "Mostra uma dica"
+
+#: data/ui/shortcuts-dialog.ui:49
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Geral"
+
+#: data/ui/shortcuts-dialog.ui:53
+msgctxt "shortcut window"
+msgid "Show Game Rules"
+msgstr "Mostra as regras do jogo"
+
+#: data/ui/shortcuts-dialog.ui:59
+msgctxt "shortcut window"
+msgid "Show Main Menu"
+msgstr "Mostra menu principal"
+
+#: data/ui/shortcuts-dialog.ui:65
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostra os atalhos de teclado"
+
+#: data/ui/shortcuts-dialog.ui:71
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Fecha a janela"
+
+#: data/ui/shortcuts-dialog.ui:77
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Sai"
 
 #: data/ui/window.ui:29
 msgid "Undo"
@@ -294,15 +423,15 @@ msgstr "Menu Principal"
 msgid "Show Hint"
 msgstr "Mostrar uma dica"
 
-#: src/gnome-mahjongg.vala:16
+#: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
 msgstr "Imprime a versão de lançamento e sai"
 
-#: src/gnome-mahjongg.vala:194
+#: src/gnome-mahjongg.vala:167
 msgid "No Moves Left"
 msgstr "Sem jogadas restantes"
 
-#: src/gnome-mahjongg.vala:196
+#: src/gnome-mahjongg.vala:169
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -310,22 +439,38 @@ msgstr ""
 "Você pode refazer seus movimentos e tentar encontrar uma solução, ou "
 "reembaralhar as peças restantes."
 
-#: src/gnome-mahjongg.vala:197
+#: src/gnome-mahjongg.vala:170
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Você pode refazer seus movimentos e tentar encontrar uma solução, ou iniciar "
 "um novo jogo."
 
-#: src/gnome-mahjongg.vala:205
+#: src/gnome-mahjongg.vala:179
 msgid "_Reshuffle"
 msgstr "_Reembaralhar"
 
-#: src/gnome-mahjongg.vala:210
+#: src/gnome-mahjongg.vala:181
 msgid "_Continue"
 msgstr "_Continuar"
 
-#: src/gnome-mahjongg.vala:318
+#: src/gnome-mahjongg.vala:228
+msgid "Change Layout?"
+msgstr "Alterar o leiaute?"
+
+#: src/gnome-mahjongg.vala:229
+msgid "This will end your current game."
+msgstr "Isto irá finalizar seu jogo atual."
+
+#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: src/gnome-mahjongg.vala:234
+msgid "Change _Layout"
+msgstr "Alterar _leiaute"
+
+#: src/gnome-mahjongg.vala:331
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -345,94 +490,68 @@ msgstr ""
 "Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Juliano de Souza Camargo <julianosc@pm.me>"
 
-#: src/gnome-mahjongg.vala:320
+#: src/gnome-mahjongg.vala:333
 msgid "Layouts by"
-msgstr "Layout por"
+msgstr "Leiaute por"
 
-#: src/score-dialog.vala:96
+#: src/score-dialog.vala:61
 #, c-format
 msgid "Layout: %s"
-msgstr "Layout: %s"
+msgstr "Leiaute: %s"
 
-#: src/score-dialog.vala:363
+#: src/score-dialog.vala:310
 msgid "Clear All Scores?"
 msgstr "Limpar todas as pontuações?"
 
-#: src/score-dialog.vala:364
+#: src/score-dialog.vala:311
 msgid "This will clear every score for every layout."
 msgstr "Isto limpará todas as pontuações para todos os leiautes."
 
-#: src/score-dialog.vala:368
-msgid "_Cancel"
-msgstr "_Cancelar"
-
-#: src/score-dialog.vala:369
+#: src/score-dialog.vala:316
 msgid "Clear All"
 msgstr "Limpar tudo"
 
-#: src/window.vala:42
+#: src/window.vala:132
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Jogadas restantes: %2u"
 
-#: src/window.vala:91
+#: src/window.vala:137
 msgid "Paused"
 msgstr "Pausado"
 
-#: src/window.vala:93
+#: src/window.vala:139
 msgid "Resume Game"
 msgstr "Continuar jogo"
 
-#: src/window.vala:99
+#: src/window.vala:145
 msgid "Pause Game"
 msgstr "Pausar jogo"
+
+#~ msgid "The Mahjongg Team"
+#~ msgstr "A equipe Mahjongg"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "Difícil"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "Sem rotação"
+
+#~ msgid "_Help"
+#~ msgstr "Aj_uda"
+
+#~ msgid "Date"
+#~ msgstr "Data"
 
 #~ msgctxt "shortcut window"
 #~ msgid "Playing"
 #~ msgstr "Jogando"
 
 #~ msgctxt "shortcut window"
-#~ msgid "New Game"
-#~ msgstr "Novo jogo"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Pause Game"
-#~ msgstr "Pausar jogo"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "Desfaz"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "Refaz"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Hint"
-#~ msgstr "Mostra uma dica"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "Geral"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Main Menu"
-#~ msgstr "Mostrar menu principal"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Show Keyboard Shortcuts"
-#~ msgstr "Mostra os atalhos de teclado"
-
-#~ msgctxt "shortcut window"
 #~ msgid "Show Help"
 #~ msgstr "Mostra a ajuda"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Quit"
-#~ msgstr "Sai"
-
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "A_talhos de teclado"
 
 #~ msgid "Disassemble a pile of tiles by removing matching pairs"
 #~ msgstr "Desmonte uma pilha de peças removendo os pares iguais"
@@ -456,9 +575,6 @@ msgstr "Pausar jogo"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "Tela cheia"
-
-#~ msgid "Layout"
-#~ msgstr "Layout"
 
 #~ msgid "Preferences"
 #~ msgstr "Preferências"
@@ -505,9 +621,6 @@ msgstr "Pausar jogo"
 
 #~ msgid "OK"
 #~ msgstr "OK"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Continua o jogo"
 
 #~ msgid "GNOME Mahjongg"
 #~ msgstr "GNOME Mahjongg"
