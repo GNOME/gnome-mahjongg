@@ -51,7 +51,26 @@
     <control>touch</control>
   </supports>
   <releases>
-    <release version="49.rc" date="2025-08-31" type="development"/>
+    <release version="49.0" date="2025-09-17">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>New app icon by Tobias Bernard</li>
+          <li>Save and restore active games on startup</li>
+          <li>Adjust theme contrast in dark and high contrast modes</li>
+          <li>Shake unselectable tiles when clicking them</li>
+          <li>Replace help docs with Game Rules dialog</li>
+          <li>Add confirmation dialog for layout change during active game</li>
+          <li>Rename 'Difficult' layout to 'Taipei'</li>
+          <li>Remove Date column from Scores dialog to leave more space for player name</li>
+          <li>Fix text entry focus when recycling rows in Scores dialog</li>
+          <li>Reduce frame drops when using the Cairo renderer</li>
+          <li>Use Rsvg directly instead of GdkPixbuf for asset loading</li>
+          <li>Several performance optimizations related to Scores dialog</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.1" date="2025-04-12">
       <description>
         <p>This release contains the following improvements:</p>

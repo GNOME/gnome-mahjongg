@@ -1,3 +1,13 @@
+49.0
+====
+
+* Add new app icon by Tobias Bernard
+* Adjust theme contrast in dark and high contrast modes
+* Shake unselectable tiles when clicking them
+* Fix tile misalignment with fractional scaling
+* Fix critical when destroying Scores dialog
+* Translation updates
+
 49.rc
 =====
 
