@@ -28,7 +28,7 @@ public class Mahjongg : Adw.Application {
         { "theme", null, "s", "''", theme_cb },
         { "rules", rules_cb },
         { "about", about_cb },
-        { "quit", quit_cb }
+        { "quit", quit }
     };
 
     public Mahjongg () {
@@ -190,7 +190,7 @@ public class Mahjongg : Adw.Application {
                 break;
             case "quit":
                 game_save.delete ();
-                active_window.close ();
+                quit ();
                 break;
             default:
                 break;
@@ -353,11 +353,6 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     private void restart_game_cb () {
         game.restart ();
         game_save.delete ();
-    }
-
-    private void quit_cb () {
-        if (active_window != null)
-            active_window.close ();
     }
 
     private void redo_cb () {
