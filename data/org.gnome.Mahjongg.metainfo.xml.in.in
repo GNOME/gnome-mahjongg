@@ -51,6 +51,14 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="49.0.1" date="2025-09-20">
+      <description>
+        <p>
+          This release fixes a Mahjongg 49 regression that broke the Quit
+          button after finishing a game.
+        </p>
+      </description>
+    </release>
     <release version="49.0" date="2025-09-17">
       <description>
         <p>This release contains the following improvements:</p>
