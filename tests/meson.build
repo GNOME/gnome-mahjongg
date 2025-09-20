@@ -23,7 +23,7 @@ foreach test_name, sources : tests
     dependencies: [
       gio_dep,
       glib_dep,
-      m_dep,
+      libm_dep,
     ],
     c_args: [
       '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())

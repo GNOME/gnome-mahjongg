@@ -34,7 +34,7 @@ gio_dep     = dependency('gio-2.0', version: '>= 2.40.0')
 gtk_dep     = dependency('gtk4', version: '>= 4.20.0')
 adwaita_dep = dependency('libadwaita-1', version: '>= 1.8.0')
 librsvg_dep = dependency('librsvg-2.0', version: '>= 2.46.0')
-m_dep       = meson.get_compiler('c').find_library('m', required: false)
+libm_dep    = meson.get_compiler('c').find_library('m', required: false)
 
 subdir('po')
 subdir('data')
