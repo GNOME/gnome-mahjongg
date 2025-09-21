@@ -32,7 +32,7 @@ vala-lint:
   image: valalang/lint:latest
   stage: lint
   script:
-    - io.elementary.vala-lint src
+    - io.elementary.vala-lint
 
 flatpak@x86_64:
     extends: '.flatpak@x86_64'
