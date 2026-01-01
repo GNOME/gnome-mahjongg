@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2019-2025 Mahjongg Contributors
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+[wrap-git]
+directory = libgnome-games-support
+url = https://gitlab.gnome.org/GNOME/libgnome-games-support.git
+revision = 4d39bf961fe97bb86e5b9e4976bb5df75ba1ad5a
+depth = 1
+diff_files = 0001.patch, 0002.patch

@@ -6,7 +6,7 @@ public class Mahjongg : Adw.Application {
     private Game game;
     private GameSave game_save;
     private Maps maps;
-    private History history;
+    private Games.Scores.Context context;
     private Settings settings;
 
     private const OptionEntry[] OPTION_ENTRIES = {
@@ -61,9 +61,14 @@ public class Mahjongg : Adw.Application {
         maps = new Maps ();
         maps.load ();
 
-        var history_path = Path.build_filename (Environment.get_user_data_dir (), "gnome-mahjongg", "history");
-        history = new History (history_path);
-        history.load ();
+        context = new Games.Scores.Context.with_importer_and_icon_name ("gnome-mahjongg",
+                                                                        /* Label on the scores dialog */
+                                                                        _("Layout"),
+                                                                        create_category_from_key,
+                                                                        TIME_LESS_IS_BETTER,
+                                                                        new Games.Scores.HistoryFileImporter (parse_old_score),
+                                                                        APP_ID,
+                                                                        -1);
 
         new MahjonggWindow (this, settings, maps);
 
@@ -156,13 +161,27 @@ public class Mahjongg : Adw.Application {
         pause_action.set_enabled (game.started);
 
         if (game.complete) {
-            var date = new DateTime.now_local ();
-            var duration = (uint) game.elapsed;
-            var player = Environment.get_real_name ();
-            var completed_entry = history.add (date, game.map.score_name, duration, player);
+            var duration = (long) game.elapsed;
+            context.add_score_full.begin (duration,
+                                    new Games.Scores.Category (game.map.score_name, game.map.name),
+                                    null,
+                                    active_window,
+                                    true,
+                                    null,
+                                    (object, result) => {
+                try {
+                    var score_result = context.add_score_full.end (result).action;
+                    if (score_result == Games.Scores.AddScoreAction.NEW_GAME)
+                        new_game (false);
+                    else if (score_result == Games.Scores.AddScoreAction.QUIT)
+                        quit ();
+                }
+                catch (Error e) {
+                    warning ("%s", e.message);
+                }
+            });
 
             game_save.delete ();
-            show_scores (completed_entry.name, completed_entry);
             pause_action.set_enabled (false);
         }
         else if (!game.can_move) {
@@ -219,9 +238,32 @@ public class Mahjongg : Adw.Application {
         }
     }
 
-    private void show_scores (string selected_layout = "", HistoryEntry? completed_entry = null) {
-        new ScoreDialog (history, maps, selected_layout, completed_entry)
-            .present (active_window);
+    private Games.Scores.Category create_category_from_key (string key) {
+        string name = maps.get_map_display_name (key);
+        return new Games.Scores.Category (key, name);
+    }
+
+    private void parse_old_score (string line, out Games.Scores.Score score, out Games.Scores.Category category) {
+        score = null;
+        category = null;
+
+        var tokens = line.split (" ", 4);
+        if (tokens.length < 3)
+            return;
+
+        var date = new DateTime.from_iso8601 (tokens[0], null);
+        if (date == null)
+            return;
+        var name = tokens[1];
+        var duration = int.parse (tokens[2]);
+        string player;
+        if (tokens.length >= 4)
+            player = tokens[3];
+        else
+            player = Environment.get_real_name ();
+
+        score = new Games.Scores.Score (duration, date.to_unix ());
+        category = create_category_from_key (name);
     }
 
     private async void _layout_cb (SimpleAction action, Variant variant) {
@@ -347,7 +389,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
     }
 
     private void scores_cb () {
-        show_scores (game.map.score_name);
+        context.present_dialog (active_window, new Games.Scores.Category (game.map.score_name, game.map.name));
     }
 
     private void new_game_cb () {
