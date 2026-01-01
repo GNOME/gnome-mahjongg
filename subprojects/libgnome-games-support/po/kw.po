@@ -1,0 +1,102 @@
+# Cornish translation for libgnome-games-support.
+# Copyright (C) 2026 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Flynn Peck <cirilla@tuta.io>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2026-08-22 04:16+0000\n"
+"PO-Revision-Date: 2026-08-23 19:39+0100\n"
+"Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
+"Language-Team: kw\n"
+"Language: kw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/GNOME/libgnome-games-support/\n"
+"X-DL-Lang: kw\n"
+"X-DL-Module: libgnome-games-support\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 50.0\n"
+
+#: games/appearance-group.vala:154
+msgid "Appearance"
+msgstr "Gis"
+
+#. Empty State
+#: games/scores/dialog.vala:83
+msgid "No scores yet"
+msgstr "Kevrivow vyth hwath"
+
+#: games/scores/dialog.vala:88
+msgid "Play some games and your scores will show up here."
+msgstr "Gwari nebes gwariow ha agas kevrivow a vydh diskwedhys omma."
+
+#: games/scores/dialog.vala:97
+msgid "Clear Scores…"
+msgstr "Klerhe Kevrivow…"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:118
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "Kevriv Nowydh rag %1$s: %2$s"
+
+#: games/scores/dialog.vala:119
+msgid "Score"
+msgstr "Kevriv"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:124
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "Termyn Nowydh rag %1$s: %2$s"
+
+#: games/scores/dialog.vala:125
+msgid "Time"
+msgstr "Termyn"
+
+#: games/scores/dialog.vala:134
+msgid "Congratulations!"
+msgstr "Keslowena!"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:141 games/scores/dialog.vala:209
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: games/scores/dialog.vala:387
+msgid "Player"
+msgstr "Gwarier"
+
+#: games/scores/dialog.vala:393
+msgid "_New Game"
+msgstr "Gwari _Nowydh"
+
+#: games/scores/dialog.vala:404
+msgid "_Quit"
+msgstr "_Kwytya"
+
+#: games/scores/dialog.vala:436
+msgid "Clear All Scores?"
+msgstr "Klerhe Oll Kevrivow?"
+
+#: games/scores/dialog.vala:437
+msgid "This will clear every score for every layout."
+msgstr "Hemma a wra dilea pub kevriv rag pub aray."
+
+#: games/scores/dialog.vala:440
+msgid "_Cancel"
+msgstr "_Hedhi"
+
+#: games/scores/dialog.vala:441
+msgid "Clear All"
+msgstr "Klerhe Oll"
