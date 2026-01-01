@@ -35,6 +35,10 @@ gtk_dep     = dependency('gtk4', version: '>= 4.22.0')
 adwaita_dep = dependency('libadwaita-1', version: '>= 1.9.0')
 librsvg_dep = dependency('librsvg-2.0', version: '>= 2.46.0')
 libm_dep    = meson.get_compiler('c').find_library('m', required: false)
+libgnome_games_support = subproject ('libgnome-games-support',
+                                     default_options: 'superproject_name=gnome-mahjongg')
+
+libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
 
 subdir('po')
 subdir('data')
