@@ -1,4 +1,4 @@
-/* SPDX-FileCopyrightText: 2022-2025 Mahjongg Contributors
+/* SPDX-FileCopyrightText: 2022-2026 Mahjongg Contributors
  * SPDX-License-Identifier: GPL-2.0-or-later */
 
 /* Theme colors */
@@ -67,7 +67,7 @@ window.compact sheet toolbarview > .top-bar {
 stack.game {
     margin-top: -11px;
     min-height: 11px;
-    transition: opacity 250ms ease-out;
+    transition: opacity 200ms ease-out;
 }
 
 stack.tile-filter {

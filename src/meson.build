@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2018-2025 Mahjongg Contributors
+# SPDX-FileCopyrightText: 2018-2026 Mahjongg Contributors
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 gnome_mahjongg = executable(
@@ -11,6 +11,7 @@ gnome_mahjongg = executable(
     'gnome-mahjongg.vala',
     'history.vala',
     'map.vala',
+    'pause-overlay.vala',
     'rules-dialog.vala',
     'score-dialog.vala',
     'window.vala',

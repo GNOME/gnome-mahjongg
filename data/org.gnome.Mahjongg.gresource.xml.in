@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SPDX-FileCopyrightText: 2019-2025 Mahjongg Contributors
+<!-- SPDX-FileCopyrightText: 2019-2026 Mahjongg Contributors
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <gresources>
   <gresource prefix="@base-id-slashed@/themes">
@@ -10,6 +10,7 @@
   <gresource prefix="@base-id-slashed@">
     <file alias="metainfo.xml" compressed="true">@app-id@.metainfo.xml</file>
     <file preprocess="xml-stripblanks">ui/menu.ui</file>
+    <file preprocess="xml-stripblanks">ui/pause-overlay.ui</file>
     <file preprocess="xml-stripblanks">ui/rules-dialog.ui</file>
     <file preprocess="xml-stripblanks">ui/score-dialog.ui</file>
     <file alias="shortcuts-dialog.ui" preprocess="xml-stripblanks">ui/shortcuts-dialog.ui</file>

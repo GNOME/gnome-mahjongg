@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022-2025 Mahjongg Contributors
+// SPDX-FileCopyrightText: 2022-2026 Mahjongg Contributors
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
@@ -16,11 +16,15 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     private unowned Gtk.Button pause_button;
 
     [GtkChild]
+    private unowned PauseOverlay pause_overlay;
+
+    [GtkChild]
     private unowned Gtk.Stack stack;
 
     private Settings settings;
     private GameView game_view;
     private string? theme;
+    private bool restore_game;
 
     private bool _compact;
     public bool compact {
@@ -72,7 +76,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         update_theme ();
     }
 
-    public void new_game (Game game, bool rotate_map = false) {
+    public void new_game (Game game, bool rotate_map = false, bool restore = false) {
         var transition_type = Gtk.StackTransitionType.NONE;
         var previous_game_view = game_view;
 
@@ -85,6 +89,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
         var next_name = (stack.visible_child_name == "primary") ? "secondary" : "primary";
         game_view = stack.get_child_by_name (next_name) as GameView;
+        restore_game = restore;
         update_theme (previous_game_view);
 
         if (previous_game_view != null) {
@@ -138,21 +143,21 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
     private void paused_changed_cb () {
         if (game_view.game.paused) {
-            title_widget.subtitle = _("Paused");
             pause_button.icon_name = "media-playback-start-symbolic";
             pause_button.tooltip_text = _("Resume Game");
-            toolbar_view.content.add_css_class ("dim-label");
+            stack.add_css_class ("dim-label");
+            pause_overlay.show (restore_game);
+            restore_game = false;
             return;
         }
 
         pause_button.icon_name = "media-playback-pause-symbolic";
         pause_button.tooltip_text = _("Pause Game");
-        toolbar_view.content.remove_css_class ("dim-label");
+        stack.remove_css_class ("dim-label");
+        pause_overlay.hide ();
 
         if (visible_dialog != null)
             visible_dialog.force_close ();
-
-        moved_cb ();
     }
 
     private void tick_cb () {

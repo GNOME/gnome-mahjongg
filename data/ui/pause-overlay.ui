@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-FileCopyrightText: 2026 Mahjongg Contributors
+     SPDX-License-Identifier: GPL-2.0-or-later -->
+<interface>
+  <template class="PauseOverlay" parent="GtkBox">
+    <property name="halign">center</property>
+    <property name="valign">center</property>
+    <property name="visible">False</property>
+    <child>
+      <object class="GtkRevealer">
+        <property name="reveal-child" bind-source="PauseOverlay" bind-property="visible" bind-flags="bidirectional|sync-create"/>
+        <property name="transition-duration">200</property>
+        <property name="transition-type">slide-up</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="margin-bottom">18</property>
+            <property name="margin-end">18</property>
+            <property name="margin-start">18</property>
+            <property name="margin-top">18</property>
+            <property name="spacing">24</property>
+            <child>
+              <object class="GtkLabel" id="progress_bar">
+                <property name="label" translatable="yes">Paused</property>
+                <style>
+                  <class name="title-1"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="halign">center</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">12</property>
+                <child>
+                  <object class="GtkButton" id="resume_button">
+                    <property name="action-name">app.pause</property>
+                    <property name="label" translatable="yes">Resume Game</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="action-name">app.new-game</property>
+                    <property name="label" translatable="yes">_New Game</property>
+                    <property name="use-underline">True</property>
+                    <property name="visible" bind-source="quit_button" bind-property="visible" bind-flags="bidirectional|invert-boolean|sync-create"/>
+                    <style>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="quit_button">
+                    <property name="action-name">app.quit</property>
+                    <property name="label" translatable="yes">_Quit</property>
+                    <property name="use-underline">True</property>
+                    <style>
+                      <class name="destructive-action"/>
+                      <class name="pill"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="osd"/>
+      <class name="toolbar"/>
+    </style>
+  </template>
+</interface>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SPDX-FileCopyrightText: 2022-2025 Mahjongg Contributors
+<!-- SPDX-FileCopyrightText: 2022-2026 Mahjongg Contributors
      SPDX-License-Identifier: GPL-2.0-or-later -->
 <interface>
   <template class="MahjonggWindow" parent="AdwApplicationWindow">
@@ -59,11 +59,18 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkStack" id="stack">
-            <property name="transition-duration">250</property>
-            <style>
-              <class name="game"/>
-            </style>
+          <object class="GtkOverlay">
+            <child>
+              <object class="GtkStack" id="stack">
+                <property name="transition-duration">250</property>
+                <style>
+                  <class name="game"/>
+                </style>
+              </object>
+            </child>
+            <child type="overlay">
+              <object class="PauseOverlay" id="pause_overlay"/>
+            </child>
           </object>
         </property>
       </object>

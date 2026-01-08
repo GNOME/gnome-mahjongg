@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2010-2025 Mahjongg Contributors
+// SPDX-FileCopyrightText: 2010-2026 Mahjongg Contributors
 // SPDX-FileCopyrightText: 2010-2013 Robert Ancell
 // SPDX-License-Identifier: GPL-2.0-or-later
 
@@ -293,7 +293,7 @@ public class Mahjongg : Adw.Application {
 
     private void about_cb () {
         var about_dialog = new Adw.AboutDialog.from_appdata (resource_base_path + "/metainfo.xml", VERSION) {
-            copyright = """Copyright © 1998–2025 Mahjongg Contributors
+            copyright = """Copyright © 1998–2026 Mahjongg Contributors
 Copyright © 1998–2008 Free Software Foundation, Inc.""",
             developers = {
                 "Francisco Bustamante",
@@ -406,7 +406,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
             game.destroy_timers ();
 
         game = new Game (map);
-        window.new_game (game, rotate_map);
+        window.new_game (game, rotate_map, restore);
 
         game.attempt_move.connect (attempt_move_cb);
         game.moved.connect (moved_cb);
