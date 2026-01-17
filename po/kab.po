@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-mahjongg main\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
 "POT-Creation-Date: 2025-09-20 18:49+0000\n"
-"PO-Revision-Date: 2026-01-17 09:29+0100\n"
+"PO-Revision-Date: 2026-01-17 09:32+0100\n"
 "Last-Translator: ButterflyOfFire <butterflyoffire@protonmail.com>\n"
 "Language-Team: Kabyle\n"
 "Language: kab\n"
@@ -117,7 +117,7 @@ msgstr "Asigna"
 #: data/ui/menu.ui:37
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
-msgstr ""
+msgstr "Tic-Tac-Toe"
 
 #: data/ui/menu.ui:40
 msgctxt "mahjongg map name"
@@ -179,7 +179,7 @@ msgstr "Ḍfer aɣanib n unagraw"
 #: data/ui/menu.ui:86
 msgctxt "background color"
 msgid "Light"
-msgstr ""
+msgstr "Aceɛlal"
 
 #: data/ui/menu.ui:91
 msgctxt "background color"
@@ -383,7 +383,7 @@ msgstr ""
 
 #: data/ui/window.ui:43
 msgid "Main Menu"
-msgstr ""
+msgstr "Umuɣ agejdan"
 
 #: data/ui/window.ui:56
 msgid "Show Hint"
@@ -464,11 +464,11 @@ msgstr ""
 
 #: src/window.vala:141
 msgid "Paused"
-msgstr ""
+msgstr "Tettṛaǧu"
 
 #: src/window.vala:143
 msgid "Resume Game"
-msgstr ""
+msgstr "Kemmel urar"
 
 #: src/window.vala:149
 msgid "Pause Game"
