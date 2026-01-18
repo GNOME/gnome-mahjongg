@@ -45,7 +45,7 @@ public class Mahjongg : Adw.Application {
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.new-game", { "<Primary>n" });
         set_accels_for_action ("app.restart-game", { "<Primary>r" });
-        set_accels_for_action ("app.pause", { "<Primary>p", "Pause" });
+        set_accels_for_action ("app.pause", { "Escape", "Pause", "<Primary>p" });
         set_accels_for_action ("app.hint", { "<Primary>h" });
         set_accels_for_action ("app.undo", { "<Primary>z" });
         set_accels_for_action ("app.redo", { "<Shift><Primary>z" });
