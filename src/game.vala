@@ -749,9 +749,9 @@ public class Game {
         tick ();
     }
 
-    private void clock_timeout_cb () {
+    private bool clock_timeout_cb () {
         if (clock == null)
-            return;
+            return Source.REMOVE;
 
         var wait = 0;
         while (wait <= 0) {
@@ -760,8 +760,9 @@ public class Game {
             wait = (int) ((next - elapsed) * 1000);
         }
 
-        clock_timeout = Timeout.add_once (wait, clock_timeout_cb);
+        clock_timeout = Timeout.add (wait, clock_timeout_cb);
         tick ();
+        return Source.REMOVE;
     }
 
     public class Iterator {
