@@ -12,11 +12,6 @@ SPDX-FileCopyrightText = "Mahjongg Contributors"
 SPDX-License-Identifier = "GPL-2.0-or-later"
 
 [[annotations]]
-path = ["help/C/**"]
-SPDX-FileCopyrightText = "GNOME Documentation Team, Mahjongg Contributors"
-SPDX-License-Identifier = "CC-BY-SA-3.0"
-
-[[annotations]]
-path = ["help/**/**.po", "help/LINGUAS", "po/**/*"]
+path = ["po/**/*"]
 SPDX-FileCopyrightText = "GNOME Translation Teams, Mahjongg Contributors"
 SPDX-License-Identifier = "GPL-2.0-or-later"
