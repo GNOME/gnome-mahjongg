@@ -278,8 +278,8 @@ public class ScoreDialog : Adw.Dialog {
     private void layout_selected_cb () {
         unowned var selected_item = layout_dropdown.selected_item as Gtk.StringObject;
         var selected_name = selected_item.string;
-        List<HistoryEntry> entry_list = null;
-        HistoryEntry[] entry_array = null;
+        List<HistoryEntry> entry_list = new List<HistoryEntry> ();
+        HistoryEntry[] entry_array = {};
 
         foreach (unowned var entry in history)
             if (maps.get_map_display_name (entry.name) == selected_name)

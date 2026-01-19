@@ -159,7 +159,7 @@ public class Game {
             }
 
             /* Hint matches can change depending on the selected tile. Reset them. */
-            hint_matches = null;
+            hint_matches = {};
         }
     }
 
@@ -369,9 +369,9 @@ public class Game {
         if (!can_shuffle)
             return;
 
-        int[] removed_tile_faces = null;
-        int[] pair_numbers = null;
-        Tile[] tiles_to_shuffle = null;
+        int[] removed_tile_faces = {};
+        int[] pair_numbers = {};
+        Tile[] tiles_to_shuffle = {};
 
         /* Retrieve tile pair numbers of remaining tiles, and blank the tiles */
         _current_move = 1;
@@ -597,8 +597,8 @@ public class Game {
     }
 
     private Match[] find_matches (bool check_selectable = true) {
-        Match[] matches = null;
-        Tile[] processed_tiles = null;
+        Match[] matches = {};
+        Tile[] processed_tiles = {};
 
         foreach (unowned var t in tiles) {
             var submatches = find_matches_for_tile (t, processed_tiles, check_selectable);
@@ -614,9 +614,9 @@ public class Game {
         return matches;
     }
 
-    private Match[] find_matches_for_tile (Tile? tile, Tile[]? ignored_tiles = null,
+    private Match[] find_matches_for_tile (Tile? tile, Tile[] ignored_tiles = {},
                                            bool check_selectable = true) {
-        Match[] matches = null;
+        Match[] matches = {};
 
         if (tile == null || !tile.visible)
             return matches;
@@ -645,7 +645,7 @@ public class Game {
 
         if (match == null) {
             hint_match = null;
-            hint_matches = null;
+            hint_matches = {};
             return;
         }
 

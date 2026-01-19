@@ -175,7 +175,7 @@ public class GameSave {
         clock = 0.0;
         move = 0;
         seed = 0;
-        tiles = null;
+        tiles = {};
     }
 
     public class Iterator {

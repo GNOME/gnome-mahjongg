@@ -69,7 +69,7 @@ public class History {
     }
 
     public void clear () {
-        entries = null;
+        entries = {};
         save ();
     }
 
