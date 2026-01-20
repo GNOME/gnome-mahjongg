@@ -129,6 +129,8 @@ public class Game {
     private bool _paused;
     public bool paused {
         set {
+            if (value == _paused)
+                return;
             _paused = value;
             if (clock != null) {
                 if (value)
