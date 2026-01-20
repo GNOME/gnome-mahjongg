@@ -255,6 +255,8 @@ public class Game {
         /* Reset game */
         reset_clock ();
         paused = false;
+        selected_tile = null;
+        set_hint (null);
         _current_move = 1;
         _inspecting = false;
 
