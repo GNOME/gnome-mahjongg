@@ -44,8 +44,8 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="action-name">app.new-game</property>
-                    <property name="label" translatable="yes">_New Game</property>
+                    <property name="action-name">app.restart-game</property>
+                    <property name="label" translatable="yes">_Restart Game</property>
                     <property name="use-underline">True</property>
                     <property name="visible" bind-source="quit_button" bind-property="visible" bind-flags="bidirectional|invert-boolean|sync-create"/>
                     <style>
