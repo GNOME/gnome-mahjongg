@@ -53,9 +53,9 @@ public class GameSave {
         return true;
     }
 
-    public void write (Game game) {
+    public bool write (Game game) {
         if (!game.can_save)
-            return;
+            return false;
 
         var builder = new StringBuilder ();
 
@@ -89,7 +89,9 @@ public class GameSave {
         }
         catch (FileError e) {
             warning ("Could not save game to %s: %s", filename, e.message);
+            return false;
         }
+        return true;
     }
 
     public void delete () {

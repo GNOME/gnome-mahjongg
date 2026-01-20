@@ -128,7 +128,10 @@ public class Mahjongg : Adw.Application {
     public override void shutdown () {
         if (game != null) {
             game.destroy_timers ();
-            game_save.write (game);
+
+            /* If we finished the game, set next layout if progression is enabled */
+            if (!game_save.write (game) && game.inspecting)
+                next_map ();
         }
         settings.apply ();
         base.shutdown ();
@@ -369,7 +372,7 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         game.undo ();
     }
 
-    private unowned Map next_map (bool rotate_map) {
+    private unowned Map next_map (bool rotate_map = true) {
         unowned var map = maps.get_map_by_name (settings.get_string ("mapset"));
 
         // Map wasn't found. Get the default (first) map.
