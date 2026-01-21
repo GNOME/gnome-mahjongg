@@ -99,12 +99,6 @@ public class Mahjongg : Adw.Application {
         var rotate_map = (layout_progression == "random");
         var restore = true;
         new_game (rotate_map, restore);
-
-        active_window.notify["suspended"].connect (() => {
-            // Pause game when window is obscured
-            if (active_window.suspended && game.started)
-                game.paused = true;
-        });
     }
 
     protected override int handle_local_options (VariantDict options) {

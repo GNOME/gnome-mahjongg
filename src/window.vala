@@ -68,6 +68,24 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         if (APP_ID.has_suffix (".Devel"))
             add_css_class ("devel");
 
+        menu_button.notify["active"].connect (() => {
+            // Pause game when menu is visible
+            if (game_view.game.started && !pause_overlay.visible)
+                game_view.game.paused = menu_button.active;
+        });
+
+        notify["visible-dialog"].connect (() => {
+            // Pause game when dialog is visible
+            if (game_view.game.started && !pause_overlay.visible)
+                game_view.game.paused = (visible_dialog != null);
+        });
+
+        notify["suspended"].connect (() => {
+            // Pause game when window is obscured
+            if (game_view.game.started && suspended)
+                game_view.game.paused = true;
+        });
+
         settings.bind ("window-width", this, "default-width", SettingsBindFlags.DEFAULT);
         settings.bind ("window-height", this, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-is-maximized", this, "maximized", SettingsBindFlags.DEFAULT);
@@ -146,7 +164,10 @@ public class MahjonggWindow : Adw.ApplicationWindow {
             pause_button.icon_name = "media-playback-start-symbolic";
             pause_button.tooltip_text = _("Resume Game");
             stack.add_css_class ("dim-label");
-            pause_overlay.show (restore_game);
+
+            if (visible_dialog == null && !menu_button.active)
+                pause_overlay.show (restore_game);
+
             restore_game = false;
             return;
         }
