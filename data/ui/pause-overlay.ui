@@ -72,6 +72,7 @@
     </child>
     <style>
       <class name="osd"/>
+      <class name="pause-overlay"/>
       <class name="toolbar"/>
     </style>
   </template>

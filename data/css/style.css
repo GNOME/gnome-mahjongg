@@ -74,6 +74,10 @@ stack.tile-filter {
     filter: contrast(var(--tile-contrast)) brightness(var(--tile-brightness));
 }
 
+.pause-overlay {
+    margin-top: -11px;
+}
+
 /* Scores */
 columnview {
     background: transparent;
