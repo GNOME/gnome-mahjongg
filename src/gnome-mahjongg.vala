@@ -227,7 +227,7 @@ public class Mahjongg : Adw.Application {
     private async void _layout_cb (SimpleAction action, Variant variant) {
         var layout = variant.get_string ();
         if (settings.get_string ("mapset") != layout) {
-            if (game.started) {
+            if (game.started && !game.inspecting) {
                 var dialog = new Adw.AlertDialog (
                     _("Change Layout?"),
                     _("This will end your current game.")
