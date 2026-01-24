@@ -111,8 +111,12 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         update_theme (previous_game_view);
 
         if (previous_game_view != null) {
-            previous_game_view.game = null;
-            previous_game_view.set_theme (null);
+            // Slight delay to allow previous game to redraw when unpaused
+            Idle.add (() => {
+                previous_game_view.game = null;
+                previous_game_view.set_theme (null);
+                return false;
+            });
         }
 
         game_view.game = game;
