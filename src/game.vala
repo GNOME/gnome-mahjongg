@@ -255,7 +255,8 @@ public class Game {
         var pair_numbers = new int[n_pairs];
 
         /* Reset game */
-        paused = false;
+        _paused = false;
+        paused_changed ();  // Always emit signal to update listeners
         reset_clock ();
         selected_tile = null;
         set_hint (null);
