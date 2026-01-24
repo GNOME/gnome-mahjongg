@@ -405,8 +405,10 @@ Copyright © 1998–2008 Free Software Foundation, Inc.""",
         if (map == null)
             map = next_map (rotate_map);
 
-        if (game != null)
+        if (game != null) {
+            game.paused = false;
             game.destroy_timers ();
+        }
 
         game = new Game (map);
         window.new_game (game, rotate_map, restore);
