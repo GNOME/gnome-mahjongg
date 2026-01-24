@@ -120,6 +120,9 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         game.paused_changed.connect (paused_changed_cb);
         game.tick.connect (tick_cb);
 
+        if (visible_dialog != null)
+            visible_dialog.force_close ();
+
         stack.transition_type = transition_type;
         stack.visible_child = game_view;
     }
@@ -176,9 +179,6 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         pause_button.tooltip_text = _("Pause Game");
         stack.remove_css_class ("dim-label");
         pause_overlay.hide ();
-
-        if (visible_dialog != null)
-            visible_dialog.force_close ();
     }
 
     private void tick_cb () {
