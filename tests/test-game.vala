@@ -215,6 +215,67 @@ private void test_undo_redo_no_moves () {
     assert_false (game.can_redo);
 }
 
+private void test_pause () {
+    var game = generate_game ();
+
+    assert_false (game.paused);
+    assert_true (game.elapsed == 0.0);
+
+    // Try forbidden pause before starting game
+    game.paused = true;
+    assert_false (game.paused);
+    assert_true (game.elapsed == 0.0);
+
+    // Remove tile pair
+    var match = game.next_hint ();
+    assert_true (match != null);
+    game.remove_pair (match.tile0, match.tile1);
+    assert_true (game.elapsed > 0.0);
+
+    // Select a tile
+    var second_match = game.next_hint ();
+    game.selected_tile = second_match.tile0;
+    assert_true (game.selected_tile != null);
+
+    // Pause game
+    game.paused = true;
+    assert_true (game.paused);
+    assert_true (game.selected_tile == null);
+    assert_true (game.elapsed > 0.0);
+
+    // Unpause game
+    game.paused = false;
+    assert_false (game.paused);
+    assert_true (game.selected_tile == null);
+    assert_true (game.elapsed > 0.0);
+
+    // Pause game
+    game.paused = true;
+    assert_true (game.paused);
+    assert_true (game.selected_tile == null);
+    assert_true (game.elapsed > 0.0);
+
+    // Restart game
+    game.restart ();
+    assert_false (game.paused);
+    assert_true (game.elapsed == 0.0);
+
+    // Complete game
+    while (!game.complete) {
+        if (!game.can_move)
+            game.shuffle_remaining ();
+
+        var next_match = game.next_hint ();
+        game.remove_pair (next_match.tile0, next_match.tile1);
+        assert_true (game.elapsed > 0.0);
+    }
+
+    // Try forbidden pause after completed game
+    game.paused = true;
+    assert_false (game.paused);
+    assert_true (game.elapsed > 0.0);
+}
+
 private void test_seed_reproducibility () {
     var game1 = generate_game ();
     var game2 = generate_game ();
@@ -625,6 +686,7 @@ private void test_game_restart () {
     // Select a tile
     var second_match = game.next_hint ();
     game.selected_tile = second_match.tile0;
+    assert_true (game.selected_tile != null);
 
     // Verify game state reset after restart
     game.restart ();
@@ -722,6 +784,7 @@ private void test_game_playthrough () {
 
     while (!game.complete) {
         assert_false (game.complete);
+        assert_false (game.paused);
         assert_true (num_moves < tile_numbers.length[0]);
 
         if (!game.can_move) {
@@ -762,6 +825,7 @@ private void test_game_playthrough () {
     assert_true (game.moves_left == 0);
     assert_true (game.next_hint () == null);
     assert_true (game.inspecting);
+    assert_false (game.paused);
     assert_false (game.can_move);
     assert_false (game.can_shuffle);
     assert_true (game.can_undo);
@@ -783,6 +847,7 @@ public int main (string[] args) {
     Test.add_func ("/game/shuffle_remaining", test_shuffle_remaining);
     Test.add_func ("/game/undo_redo", test_undo_redo);
     Test.add_func ("/game/undo_redo_no_moves", test_undo_redo_no_moves);
+    Test.add_func ("/game/pause", test_pause);
     Test.add_func ("/game/seed_reproducibility", test_seed_reproducibility);
     Test.add_func ("/game/seed_difference", test_seed_difference);
     Test.add_func ("/game/seed_snapshot_turtle", test_seed_snapshot_turtle);

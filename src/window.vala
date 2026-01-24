@@ -70,19 +70,19 @@ public class MahjonggWindow : Adw.ApplicationWindow {
 
         menu_button.notify["active"].connect (() => {
             // Pause game when menu is visible
-            if (game_view.game.started && !pause_overlay.visible)
+            if (!pause_overlay.visible)
                 game_view.game.paused = menu_button.active;
         });
 
         notify["visible-dialog"].connect (() => {
             // Pause game when dialog is visible
-            if (game_view.game.started && !pause_overlay.visible)
+            if (!pause_overlay.visible)
                 game_view.game.paused = (visible_dialog != null);
         });
 
         notify["suspended"].connect (() => {
             // Pause game when window is obscured
-            if (game_view.game.started && suspended)
+            if (suspended)
                 game_view.game.paused = true;
         });
 

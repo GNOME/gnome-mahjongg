@@ -163,6 +163,7 @@ public class Mahjongg : Adw.Application {
 
             game_save.delete ();
             show_scores (completed_entry.name, completed_entry);
+            pause_action.set_enabled (false);
         }
         else if (!game.can_move) {
             var can_shuffle = game.can_shuffle;

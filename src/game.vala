@@ -131,6 +131,8 @@ public class Game {
         set {
             if (value == _paused)
                 return;
+            if (!started || inspecting || complete)
+                return;
             _paused = value;
             if (clock != null) {
                 if (value)
@@ -253,8 +255,8 @@ public class Game {
         var pair_numbers = new int[n_pairs];
 
         /* Reset game */
-        reset_clock ();
         paused = false;
+        reset_clock ();
         selected_tile = null;
         set_hint (null);
         _current_move = 1;
