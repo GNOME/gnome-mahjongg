@@ -68,6 +68,10 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         if (APP_ID.has_suffix (".Devel"))
             add_css_class ("devel");
 
+        /* Automatically pause the game in various cases. Note that we are not pausing the game
+         * when the window is unfocused, since we still want players to be able to observe the
+         * board on e.g. another monitor while interacting with a different window. */
+
         menu_button.notify["active"].connect (() => {
             // Pause game when menu is visible
             if (!pause_overlay.visible)
