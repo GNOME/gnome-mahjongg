@@ -1,3 +1,15 @@
+49.1
+====
+
+* Implement pause menu with 'Resume' and 'Quit' buttons
+* Add Escape keyboard shortcut to pause game
+* Pause game when main window is obscured
+* Pause game when dialogs and menus are visible
+* Don't allow pausing completed games
+* Don't show confirmation dialog for layout change after completing game
+* Fix text entry not always receiving focus in Scores dialog
+* Translation updates
+
 49.0.1
 ======
 

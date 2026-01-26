@@ -51,6 +51,21 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="49.1" date="2026-01-26">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>Implement pause menu with 'Resume' and 'Quit' buttons</li>
+          <li>Add Escape keyboard shortcut to pause game</li>
+          <li>Pause game when main window is obscured</li>
+          <li>Pause game when dialogs and menus are visible</li>
+          <li>Don't allow pausing completed games</li>
+          <li>Don't show confirmation dialog for layout change after completing game</li>
+          <li>Fix text entry not always receiving focus in Scores dialog</li>
+          <li>Translation updates</li>
+        </ul>
+      </description>
+    </release>
     <release version="49.0.1" date="2025-09-20">
       <description>
         <p>
