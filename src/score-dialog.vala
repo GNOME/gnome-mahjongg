@@ -39,7 +39,7 @@ public class ScoreDialog : Adw.Dialog {
 
     private History history;
     private HistoryEntry? completed_entry;
-    private unowned Gtk.Entry? player_entry;
+    private Gtk.Entry? player_entry;
     private ListStore score_model;
     private Maps maps;
 
@@ -268,6 +268,16 @@ public class ScoreDialog : Adw.Dialog {
                 inscription.tooltip_text = "%s\n%s".printf (entry.player, entry.date.format ("%x"));
             }
         });
+        if (completed_entry != null) {
+            factory.unbind.connect ((factory, object) => {
+                unowned var list_item = object as Gtk.ListItem;
+                unowned var entry = list_item.item as HistoryEntry;
+
+                if (entry == completed_entry)
+                    player_entry = null;
+            });
+        }
+
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) player_sorter_cb));
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) rank_sorter_cb));
         sorter.append (new Gtk.CustomSorter ((CompareDataFunc<HistoryEntry>) date_sorter_cb));
