@@ -39,6 +39,7 @@ public class ScoreDialog : Adw.Dialog {
 
     private History history;
     private HistoryEntry? completed_entry;
+    private unowned Gtk.Entry? player_entry;
     private ListStore score_model;
     private Maps maps;
 
@@ -137,7 +138,7 @@ public class ScoreDialog : Adw.Dialog {
         controller.enter.connect (() => {
             Idle.add (() => {
                 score_view.scroll_to (completed_entry.rank - 1, null, Gtk.ListScrollFlags.FOCUS, null);
-                score_view.child_focus (Gtk.DirectionType.TAB_FORWARD);  // Focus the text entry
+                player_entry.grab_focus ();
                 return false;
             });
         });
@@ -257,8 +258,8 @@ public class ScoreDialog : Adw.Dialog {
 
             if (entry == completed_entry) {
                 stack.visible_child_name = "entry";
-                unowned var entry_input = stack.visible_child as Gtk.Entry;
-                entry_input.text = entry.player;
+                player_entry = stack.visible_child as Gtk.Entry;
+                player_entry.text = entry.player;
             }
             else {
                 stack.visible_child_name = "label";
