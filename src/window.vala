@@ -16,13 +16,14 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     private unowned Gtk.Button pause_button;
 
     [GtkChild]
-    private unowned PauseOverlay pause_overlay;
+    private unowned Gtk.Overlay overlay;
 
     [GtkChild]
     private unowned Gtk.Stack stack;
 
     private Settings settings;
     private GameView game_view;
+    private PauseOverlay pause_overlay;
     private string? theme;
     private bool restore_game;
     private uint unset_game_idle;
@@ -51,6 +52,8 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         /* Tile filters are too slow with the Cairo renderer */
         if (!using_cairo)
             stack.add_css_class ("tile-filter");
+
+        pause_overlay = new PauseOverlay ();
 
         var menu_builder = new Gtk.Builder.from_resource (application.resource_base_path + "/ui/menu.ui");
         unowned var menu_model = menu_builder.get_object ("menu") as MenuModel;
@@ -181,9 +184,10 @@ public class MahjonggWindow : Adw.ApplicationWindow {
             pause_button.tooltip_text = _("Resume Game");
             stack.add_css_class ("dim-label");
 
-            if (visible_dialog == null && !menu_button.active)
+            if (visible_dialog == null && !menu_button.active) {
+                overlay.add_overlay (pause_overlay);
                 pause_overlay.show (restore_game);
-
+            }
             restore_game = false;
             return;
         }
@@ -191,7 +195,11 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         pause_button.icon_name = "media-playback-pause-symbolic";
         pause_button.tooltip_text = _("Pause Game");
         stack.remove_css_class ("dim-label");
-        pause_overlay.hide ();
+
+        if (pause_overlay.is_ancestor (overlay)) {
+            overlay.remove_overlay (pause_overlay);
+            pause_overlay.hide ();
+        }
     }
 
     private void tick_cb () {

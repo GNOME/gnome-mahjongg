@@ -59,7 +59,7 @@
           </object>
         </child>
         <property name="content">
-          <object class="GtkOverlay">
+          <object class="GtkOverlay" id="overlay">
             <child>
               <object class="GtkStack" id="stack">
                 <property name="transition-duration">250</property>
@@ -67,9 +67,6 @@
                   <class name="game"/>
                 </style>
               </object>
-            </child>
-            <child type="overlay">
-              <object class="PauseOverlay" id="pause_overlay"/>
             </child>
           </object>
         </property>
