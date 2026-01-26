@@ -25,6 +25,7 @@ public class MahjonggWindow : Adw.ApplicationWindow {
     private GameView game_view;
     private string? theme;
     private bool restore_game;
+    private uint unset_game_idle;
 
     private bool _compact;
     public bool compact {
@@ -115,8 +116,12 @@ public class MahjonggWindow : Adw.ApplicationWindow {
         update_theme (previous_game_view);
 
         if (previous_game_view != null) {
+            if (unset_game_idle != 0)
+                Source.remove (unset_game_idle);
+
             // Slight delay to allow previous game to redraw when unpaused
-            Idle.add (() => {
+            unset_game_idle = Idle.add (() => {
+                unset_game_idle = 0;
                 previous_game_view.game = null;
                 previous_game_view.set_theme (null);
                 return false;
