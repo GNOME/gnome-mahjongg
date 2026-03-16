@@ -35,7 +35,8 @@
                 <child>
                   <object class="GtkButton" id="resume_button">
                     <property name="action-name">app.pause</property>
-                    <property name="label" translatable="yes">Resume Game</property>
+                    <property name="label" translatable="yes">Re_sume Game</property>
+                    <property name="use-underline">True</property>
                     <style>
                       <class name="pill"/>
                       <class name="suggested-action"/>
