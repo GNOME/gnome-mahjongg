@@ -38,7 +38,7 @@
             <child type="start">
               <object class="GtkButton" id="clear_scores_button">
                 <property name="icon-name">user-trash-symbolic</property>
-                <property name="tooltip-text">Clear Scores…</property>
+                <property name="tooltip-text" translatable="yes">Clear Scores…</property>
               </object>
             </child>
           </object>
