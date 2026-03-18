@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-01-26 14:52+0000\n"
-"PO-Revision-Date: 2026-01-26 20:13+0500\n"
+"POT-Creation-Date: 2026-03-16 19:24+0000\n"
+"PO-Revision-Date: 2026-03-18 06:55+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
@@ -28,8 +28,7 @@ msgstr "Маджонг"
 msgid "Match tiles and clear the board"
 msgstr "Плиткаларды сәйкестендіріп, тақтаны тазалаңыз"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:5
 msgid "game;strategy;puzzle;board;"
 msgstr "game;strategy;puzzle;board;ойын;стратегия;жұмбақ;тақта;"
@@ -56,11 +55,11 @@ msgid ""
 "look alike may actually be slightly different."
 msgstr ""
 "Маджонг пасьянсы ретінде белгілі бір ойыншыға арналған плиткаларды "
-"сәйкестендіру ойыны. Ойын басында плиткалар тақтаға жиналады. Мақсат — барлық "
-"плиткаларды барынша аз уақыт ішінде өшіру. Екі сәйкес плитканы таңдасаңыз, "
-"олар тақтадан жойылады, бірақ плитканың сол немесе оң жағында сол деңгейде бос "
-"орын болса ғана оны таңдауға болады. Сақ болыңыз: бірдей көрінетін "
-"плиткалардың іс жүзінде аздап айырмашылығы болуы мүмкін."
+"сәйкестендіру ойыны. Ойын басында плиткалар тақтаға жиналады. Мақсат — "
+"барлық плиткаларды барынша аз уақыт ішінде өшіру. Екі сәйкес плитканы "
+"таңдасаңыз, олар тақтадан жойылады, бірақ плитканың сол немесе оң жағында "
+"сол деңгейде бос орын болса ғана оны таңдауға болады. Сақ болыңыз: бірдей "
+"көрінетін плиткалардың іс жүзінде аздап айырмашылығы болуы мүмкін."
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:21
 msgid ""
@@ -69,8 +68,8 @@ msgid ""
 "time penalty."
 msgstr ""
 "Әртүрлі бастапқы жаймаларды таңдауға болады, олардың кейбіреуі оңай, ал "
-"кейбіреуі қиын. Егер қиындық туса, көмек сұрауға болады, бірақ бұл үлкен уақыт "
-"айыппұлын қосады."
+"кейбіреуі қиын. Егер қиындық туса, көмек сұрауға болады, бірақ бұл үлкен "
+"уақыт айыппұлын қосады."
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:34
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:42
@@ -300,6 +299,10 @@ msgstr "Ұпайлар"
 msgid "Game Completed 🎉"
 msgstr "Ойын аяқталды 🎉"
 
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "Ұпайларды тазарту…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Ұпайлар жоқ"
@@ -411,14 +414,15 @@ msgstr "Жүрістер қалмады"
 
 #: src/gnome-mahjongg.vala:173
 msgid ""
-"You can undo your moves and try to find a solution, or reshuffle the remaining "
-"tiles."
+"You can undo your moves and try to find a solution, or reshuffle the "
+"remaining tiles."
 msgstr ""
 "Жүрістерді болдырмау арқылы шешім іздеуге немесе қалған плиткаларды "
 "араластыруға болады."
 
 #: src/gnome-mahjongg.vala:174
-msgid "You can undo your moves and try to find a solution, or start a new game."
+msgid ""
+"You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Жүрістерді болдырмау арқылы шешім іздеуге немесе жаңа ойын бастауға болады."
 
@@ -536,7 +540,8 @@ msgstr "Ойынды аялдату"
 #~ "You can also try to reshuffle the game, but this does not guarantee a "
 #~ "solution."
 #~ msgstr ""
-#~ "Сіз ойынды қайта араластыра аласыз, бірақ, бұл шешім табуға кепіл бермейді."
+#~ "Сіз ойынды қайта араластыра аласыз, бірақ, бұл шешім табуға кепіл "
+#~ "бермейді."
 
 #~ msgid "_Undo"
 #~ msgstr "Бол_дырмау"
