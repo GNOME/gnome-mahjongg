@@ -9,16 +9,16 @@
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2025.
-# Sabri Ünal <yakushabb@gmail.com>, 2023-2025.
+# Sabri Ünal <yakushabb@gmail.com>, 2023-202.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-08-29 07:34+0000\n"
-"PO-Revision-Date: 2025-08-29 11:03+0300\n"
-"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-19 08:00+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "X-Generator: Poedit 3.7\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -89,11 +89,11 @@ msgstr "Mahjongg açık tema ile"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg koyu tema ile"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_Yeni Oyun"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "Oyunu _Yeniden Başlat"
 
@@ -228,6 +228,19 @@ msgstr "_Klavye Kısayolları"
 msgid "_About Mahjongg"
 msgstr "Mahjongg _Hakkında"
 
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "Dondur"
+
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "Oyunu _Sürdür"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "_Çıkış"
+
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
 msgstr "Oyun Kuralları"
@@ -295,6 +308,10 @@ msgstr "Puanlar"
 msgid "Game Completed 🎉"
 msgstr "Oyun Tamamlandı 🎉"
 
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "Puanları Temizle…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Puan Yok"
@@ -314,10 +331,6 @@ msgstr "Zaman"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "Oyuncu"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "_Çıkış"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -404,11 +417,11 @@ msgstr "İpucu Göster"
 msgid "Print release version and exit"
 msgstr "Yayım sürümünü yazdır ve çık"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "Hareket Kalmadı"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -416,79 +429,75 @@ msgstr ""
 "Hareketlerinizi geri alıp çözüm bulmayı deneyebilir ya da kalan karoları "
 "yeniden karıştırabilirsiniz."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Hareketlerinizi geri alıp çözüm bulmayı deneyebilir ya da yeni oyun "
 "başlatabilirsiniz."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
 msgstr "Yeniden _Karıştır"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_Sürdür"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:232
 msgid "Change Layout?"
 msgstr "Düzen Değiştirilsin Mi?"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:233
 msgid "This will end your current game."
 msgstr "Bu, geçerli oyununuzu sonlandıracak."
 
-#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: src/gnome-mahjongg.vala:234
+#: src/gnome-mahjongg.vala:238
 msgid "Change _Layout"
 msgstr "_Düzeni Değiştir"
 
-#: src/gnome-mahjongg.vala:330
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr ""
 "Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Muhammet Kara <muhammetk@gmail.com>\n"
 "Barış Çiçek <baris@teamforce.name.tr>"
 
-#: src/gnome-mahjongg.vala:332
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "Düzenler"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "Düzen: %s"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "Tüm Puanlar Temizlensin Mi?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "Bu, tüm düzenlerdeki puanları temizleyecek."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#: src/window.vala:132
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Kalan Hareket: %2u"
 
-#: src/window.vala:137
-msgid "Paused"
-msgstr "Dondur"
-
-#: src/window.vala:139
+#: src/window.vala:184
 msgid "Resume Game"
 msgstr "Oyunu Sürdür"
 
-#: src/window.vala:145
+#: src/window.vala:196
 msgid "Pause Game"
 msgstr "Oyunu Duraklat"
 
