@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-16 19:24+0000\n"
-"PO-Revision-Date: 2026-03-18 06:55+0500\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-19 07:10+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -84,7 +84,7 @@ msgstr "Маджонг күңгірт стильде"
 msgid "_New Game"
 msgstr "Ж_аңа ойын"
 
-#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:48
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "Қайта іске қо_су"
 
@@ -223,11 +223,11 @@ msgstr "Маджонг ту_ралы"
 msgid "Paused"
 msgstr "Аялдатылған"
 
-#: data/ui/pause-overlay.ui:38 src/window.vala:184
-msgid "Resume Game"
-msgstr "Ойынды жалғастыру"
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "Ойынды жалға_стыру"
 
-#: data/ui/pause-overlay.ui:59 data/ui/score-dialog.ui:119
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
 #: src/gnome-mahjongg.vala:178
 msgid "_Quit"
 msgstr "_Шығу"
@@ -479,6 +479,10 @@ msgstr "Барлығын өшіру"
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Жүрістер қалды: %2u"
+
+#: src/window.vala:184
+msgid "Resume Game"
+msgstr "Ойынды жалғастыру"
 
 #: src/window.vala:196
 msgid "Pause Game"
