@@ -1,32 +1,32 @@
 # Georgian translation for Mahjongg.
 # Copyright (C) 2023, Mahjongg authors
 # This file is distributed under the same license as the Mahjongg package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2023-2025.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-09-02 10:03+0000\n"
-"PO-Revision-Date: 2025-09-04 09:35+0200\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-19 09:00+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
-"Language-Team: \n"
+"Language-Team: Georgian <(nothing)>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:3
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:10
 msgid "Match tiles and clear the board"
-msgstr ""
+msgstr "შეადარეთ ფილები და გაასუფთავეთ დაფა"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mahjongg.desktop.in.in:5
@@ -54,6 +54,12 @@ msgid ""
 "empty space to its left or right at the same level. Be careful: tiles that "
 "look alike may actually be slightly different."
 msgstr ""
+"ერთმოთამაშიანი ფილის დამთხვევის თამაში, საყოველთაოდ ცნობილი როგორც Mahjong "
+"solitaire. ფილები დაფაზე არის დაწყობილი თამაშის დასაწყისში. მიზანია ამოიღოთ "
+"ყველა ფილა რაც შეიძლება ნაკლებ დროში. აირჩიეთ ორი შესატყვისი ფილა და ისინი "
+"გაქრება დაფიდან, მაგრამ კრამიტის არჩევა შეგიძლიათ მხოლოდ იმ შემთხვევაში, თუ "
+"მის მარცხნივ ან მარჯვნივ ცარიელი ადგილია იმავე დონეზე. ფრთხილად იყავით: "
+"ფილები, რომლებიც ჰგავს ერთმანეთს, შეიძლება რეალურად ოდნავ განსხვავებული იყოს."
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:21
 msgid ""
@@ -61,21 +67,24 @@ msgid ""
 "difficult. If you get stuck, you can ask for a hint, but this adds a large "
 "time penalty."
 msgstr ""
+"შეგიძლიათ, აირჩიოთ სხვადასხვა საწყისი განლაგება. ზოგიერთი ადვილია, ზოგიც კი "
+"გრძელი. თუ გაეჭედებით, შეგიძლიათ, მინიშნება ითხოვოთ, მაგრამ ეს დიდი დროის "
+"ჯარიმას ამატებს."
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:34
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:42
 msgid "Mahjongg in Light Style"
-msgstr ""
+msgstr "Mahjongg ღია სტილში"
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
-msgstr ""
+msgstr "Mahjongg მუქ სტილში"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_ახალი თამაში"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "თამაშის გადატვი_რთვა"
 
@@ -95,12 +104,12 @@ msgstr "კუ"
 #: data/ui/menu.ui:28
 msgctxt "mahjongg map name"
 msgid "The Ziggurat"
-msgstr ""
+msgstr "ზიღურათი"
 
 #: data/ui/menu.ui:31
 msgctxt "mahjongg map name"
 msgid "Four Bridges"
-msgstr ""
+msgstr "ოთხი ხიდი"
 
 #: data/ui/menu.ui:34
 msgctxt "mahjongg map name"
@@ -110,27 +119,27 @@ msgstr "ღრუბელი"
 #: data/ui/menu.ui:37
 msgctxt "mahjongg map name"
 msgid "Tic-Tac-Toe"
-msgstr ""
+msgstr "Tic-Tac-Toe"
 
 #: data/ui/menu.ui:40
 msgctxt "mahjongg map name"
 msgid "Red Dragon"
-msgstr ""
+msgstr "წითელი დრაკონი"
 
 #: data/ui/menu.ui:43
 msgctxt "mahjongg map name"
 msgid "Overpass"
-msgstr ""
+msgstr "Overpass"
 
 #: data/ui/menu.ui:46
 msgctxt "mahjongg map name"
 msgid "Pyramid's Walls"
-msgstr ""
+msgstr "პირამიდის კედლები"
 
 #: data/ui/menu.ui:49
 msgctxt "mahjongg map name"
 msgid "Confounding Cross"
-msgstr ""
+msgstr "დამაბნეველი ჯვარი"
 
 #: data/ui/menu.ui:52
 msgctxt "mahjongg map name"
@@ -144,7 +153,7 @@ msgstr "განლაგების _მიმდინარეობა"
 #: data/ui/menu.ui:60
 msgctxt "layout progression"
 msgid "No Progression"
-msgstr ""
+msgstr "მიმდინარეობის გარეშე"
 
 #: data/ui/menu.ui:65
 msgctxt "layout progression"
@@ -186,7 +195,7 @@ msgstr "თემა"
 #: data/ui/menu.ui:99
 msgctxt "mahjongg theme name"
 msgid "Postmodern"
-msgstr ""
+msgstr "პოსტმოდერნი"
 
 #: data/ui/menu.ui:104
 msgctxt "mahjongg theme name"
@@ -200,7 +209,7 @@ msgstr "საგანმანათლებლო"
 
 #: data/ui/menu.ui:118
 msgid "Game R_ules"
-msgstr ""
+msgstr "თამაშის _წესები"
 
 #: data/ui/menu.ui:122
 msgid "_Keyboard Shortcuts"
@@ -210,24 +219,37 @@ msgstr "_კლავიატურის მალსახმობები"
 msgid "_About Mahjongg"
 msgstr "Mahjongg-ის შეს_ახებ"
 
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "შეჩერებულია"
+
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "თამაშის გაგრძე_ლება"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "_გასვლა"
+
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
-msgstr ""
+msgstr "თამაშის წესები"
 
 #: data/ui/rules-dialog.ui:14
 msgctxt "game rules"
 msgid "Clear the board by matching pairs of identical tiles"
-msgstr ""
+msgstr "გაასუფთავეთ დაფა იდენტური ფილების დაწყვილების გზით"
 
 #: data/ui/rules-dialog.ui:22
 msgctxt "game rules"
 msgid "Only uncovered tiles with a free long edge can be selected"
-msgstr ""
+msgstr "შეიძლება შეირჩეს, მხოლოდ, ღია ფილები, თავისუფალი გრძელი კიდეებით"
 
 #: data/ui/rules-dialog.ui:32
 msgctxt "game rules"
 msgid "Rounds are scored based on completion time"
-msgstr ""
+msgstr "რაუნდებში ქულები დასრულების მიხედვით გაიცემა"
 
 #: data/ui/rules-dialog.ui:42
 msgctxt "game rules"
@@ -237,37 +259,37 @@ msgstr "თქვენ შეგიძლიათ შეაჩეროთ თ
 #: data/ui/rules-dialog.ui:43
 msgctxt "game rules"
 msgid "Tile faces will be hidden"
-msgstr ""
+msgstr "ფილის სახეები დამალული იქნება"
 
 #: data/ui/rules-dialog.ui:53
 msgctxt "game rules"
 msgid "You can undo or redo a move"
-msgstr ""
+msgstr "სვლა შეგიძლიათ, გააუქმოთ, ან გაიმეოროთ"
 
 #: data/ui/rules-dialog.ui:54
 msgctxt "game rules"
 msgid "No time penalty is added"
-msgstr ""
+msgstr "დროის ჯარიმა არ ემატება"
 
 #: data/ui/rules-dialog.ui:64
 msgctxt "game rules"
 msgid "You can use hints to reveal matching tiles"
-msgstr ""
+msgstr "შესატყვისი ფილების გამოსავლენად შეგიძლიათ, მინიშნებები გამოიყენოთ"
 
 #: data/ui/rules-dialog.ui:65
 msgctxt "game rules"
 msgid "Adds a 30-second time penalty"
-msgstr ""
+msgstr "ამატებს 30 წამიან ჯარიმას"
 
 #: data/ui/rules-dialog.ui:75
 msgctxt "game rules"
 msgid "You can shuffle tiles when no moves are left"
-msgstr ""
+msgstr "როცა სვლები დარჩენილი არ გაქვთ, შეგიძლიათ, აურიოთ ფილები"
 
 #: data/ui/rules-dialog.ui:76
 msgctxt "game rules"
 msgid "Adds a 60-second time penalty"
-msgstr ""
+msgstr "ამატებს 60 წამიან ჯარიმას"
 
 #: data/ui/score-dialog.ui:8
 msgid "Scores"
@@ -275,7 +297,11 @@ msgstr "ქულები"
 
 #: data/ui/score-dialog.ui:31
 msgid "Game Completed 🎉"
-msgstr ""
+msgstr "თამაში დასრულდა 🎉"
+
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "მაღალი ქულების გასუფთავება…"
 
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
@@ -283,7 +309,7 @@ msgstr "ქულების გარეშე"
 
 #: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
-msgstr ""
+msgstr "დაასრულეთ თამაში ქულების დასანახად"
 
 #: data/ui/score-dialog.ui:71
 msgid "Rank"
@@ -296,10 +322,6 @@ msgstr "დრო"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "დამკვრელი"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "_გასვლა"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -344,7 +366,7 @@ msgstr "ზოგადი"
 #: data/ui/shortcuts-dialog.ui:53
 msgctxt "shortcut window"
 msgid "Show Game Rules"
-msgstr ""
+msgstr "თამაშის წესების ჩვენება"
 
 #: data/ui/shortcuts-dialog.ui:59
 msgctxt "shortcut window"
@@ -386,84 +408,84 @@ msgstr "მინიშნების ჩვენება"
 msgid "Print release version and exit"
 msgstr "ვერსიის ჩვენება და გასვლა"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "სვლები აღარ დაგრჩათ"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr ""
+"შეგიძლიათ, გააუქმოთ თქვენი სვლები და სცადოთ, გამოსავალი იპოვოთ. ან გადაურიოთ "
+"დარჩენილი ფილები."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
+"შეგიძლიათ, გააუქმოთ თქვენი სვლები და სცადოთ, გამოსავალი იპოვოთ. ან ახალი "
+"თამაში დაიწყოთ."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
-msgstr ""
+msgstr "თა_ვიდან არევა"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_გაგრძელება"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:232
 msgid "Change Layout?"
-msgstr ""
+msgstr "შევცვალო განლაგება?"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:233
 msgid "This will end your current game."
-msgstr ""
+msgstr "ეს დაასრულებს თქვენს მიმდინარე თამაშს."
 
-#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_გაუქმება"
 
-#: src/gnome-mahjongg.vala:234
+#: src/gnome-mahjongg.vala:238
 msgid "Change _Layout"
 msgstr "განლაგების შეცვ_ლა"
 
-#: src/gnome-mahjongg.vala:330
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr "ვიღაც, ვინც თარგმნა"
 
-#: src/gnome-mahjongg.vala:332
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "განლაგების ავტორი"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "განლაგება: %s"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
-msgstr ""
+msgstr "გასუფთავეს ყველა ქულა?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
-msgstr ""
+msgstr "ეს გაასუფთავებს ყველა მაღალ ქულას ყველა განლაგებისთვის."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "ყველას გასუფთავება"
 
-#: src/window.vala:132
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "დარჩენილი სვლები: %2u"
 
-#: src/window.vala:137
-msgid "Paused"
-msgstr "შეჩერებულია"
-
-#: src/window.vala:139
+#: src/window.vala:184
 msgid "Resume Game"
 msgstr "თამაშის გაგრძელება"
 
-#: src/window.vala:145
+#: src/window.vala:196
 msgid "Pause Game"
 msgstr "თამაშის შეჩერება"
 
