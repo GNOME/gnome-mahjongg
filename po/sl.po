@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-16 19:24+0000\n"
-"PO-Revision-Date: 2026-03-16 22:09+0100\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-19 23:11+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -91,7 +91,7 @@ msgstr "Mahjongg v temnem slogu"
 msgid "_New Game"
 msgstr "_Nova igra"
 
-#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:48
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "Za_čni igro znova"
 
@@ -230,11 +230,11 @@ msgstr "_O programu Mahjongg"
 msgid "Paused"
 msgstr "Premor"
 
-#: data/ui/pause-overlay.ui:38 src/window.vala:184
-msgid "Resume Game"
-msgstr "Nadaljuj igro"
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "Na_daljuj igro"
 
-#: data/ui/pause-overlay.ui:59 data/ui/score-dialog.ui:119
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
 #: src/gnome-mahjongg.vala:178
 msgid "_Quit"
 msgstr "_Končaj"
@@ -492,6 +492,10 @@ msgstr "Počisti vse"
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Število preostalih premikov: %2u"
+
+#: src/window.vala:184
+msgid "Resume Game"
+msgstr "Nadaljuj igro"
 
 #: src/window.vala:196
 msgid "Pause Game"
