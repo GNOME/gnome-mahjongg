@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-16 19:24+0000\n"
-"PO-Revision-Date: 2026-03-18 16:27+0800\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-19 10:41+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
@@ -87,7 +87,7 @@ msgstr "暗色样式的麻将"
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
-#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:48
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "重启游戏(_R)"
 
@@ -226,11 +226,11 @@ msgstr "关于对对碰(_A)"
 msgid "Paused"
 msgstr "已暂停"
 
-#: data/ui/pause-overlay.ui:38 src/window.vala:184
-msgid "Resume Game"
-msgstr "继续游戏"
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "继续游戏(_S)"
 
-#: data/ui/pause-overlay.ui:59 data/ui/score-dialog.ui:119
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
 #: src/gnome-mahjongg.vala:178
 msgid "_Quit"
 msgstr "退出(_Q)"
@@ -487,6 +487,10 @@ msgstr "全部清除"
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "剩余操作：%2u"
+
+#: src/window.vala:184
+msgid "Resume Game"
+msgstr "继续游戏"
 
 #: src/window.vala:196
 msgid "Pause Game"
