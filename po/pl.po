@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-09-19 22:31+0000\n"
-"PO-Revision-Date: 2026-03-14 12:48+0100\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-03-21 10:25+0100\n"
 "Last-Translator: Victoria <royal.victoria@proton.me>\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
@@ -31,10 +31,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:432
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Madżong"
 
@@ -94,11 +94,11 @@ msgstr "Madżong w jasnym motywie"
 msgid "Mahjongg in Dark Style"
 msgstr "Madżong w ciemnym motywie"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_Nowa gra"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "_Zacznij od początku"
 
@@ -233,6 +233,19 @@ msgstr "_Skróty klawiszowe"
 msgid "_About Mahjongg"
 msgstr "_O programie"
 
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "Wstrzymano"
+
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "W_znów grę"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "_Wyjdź"
+
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
 msgstr "Zasady gry"
@@ -302,6 +315,10 @@ msgstr "Wyniki"
 msgid "Game Completed 🎉"
 msgstr "Gra ukończona 🎉"
 
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "Wyczyść wyniki…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Brak wyników"
@@ -321,10 +338,6 @@ msgstr "Czas"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "Osoba grająca"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "_Wyjdź"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -411,11 +424,11 @@ msgstr "Wyświetla wskazówkę"
 msgid "Print release version and exit"
 msgstr "Wyświetla wersję i kończy działanie"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "Nie ma żadnych dostępnych ruchów"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -423,38 +436,38 @@ msgstr ""
 "Możesz cofnąć swoje ruchy i spróbować znaleźć rozwiązanie, lub pomieszać "
 "pozostałe kafelki."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Możesz cofnąć swoje ruchy i spróbować znaleźć rozwiązanie, lub zacząć nową "
 "grę."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
 msgstr "_Pomieszaj"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_Kontynuuj"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:232
 msgid "Change Layout?"
 msgstr "Zmienić szablon?"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:233
 msgid "This will end your current game."
 msgstr "To zakończy obecną grę."
 
-#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:317
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: src/gnome-mahjongg.vala:234
+#: src/gnome-mahjongg.vala:238
 msgid "Change _Layout"
 msgstr "Zmień _szablon"
 
-#: src/gnome-mahjongg.vala:331
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -473,43 +486,39 @@ msgstr ""
 "skantek <antoniskalecki@gmail.com>, 2024\n"
 "Victoria <royal.victoria@proton.me>, 2025-2026"
 
-#: src/gnome-mahjongg.vala:333
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "Szablony zrobione przez:"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "Szablon: %s"
 
-#: src/score-dialog.vala:312
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "Wyczyścić wszystkie wyniki?"
 
-#: src/score-dialog.vala:313
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "To wyczyści każdy wynik dla każdego szablonu."
 
-#: src/score-dialog.vala:318
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "Wyczyść wszystko"
 
-#: src/window.vala:136
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Pozostało ruchów: %2u"
 
-#: src/window.vala:141
-msgid "Paused"
-msgstr "Wstrzymano"
-
-#: src/window.vala:143
+#: src/window.vala:184
 msgid "Resume Game"
-msgstr "Wznów grę"
+msgstr "Wznawia grę"
 
-#: src/window.vala:149
+#: src/window.vala:196
 msgid "Pause Game"
-msgstr "Wstrzymaj grę"
+msgstr "Wstrzymuje grę"
 
 #~ msgid "The Mahjongg Team"
 #~ msgstr "Zespół Madżong"
