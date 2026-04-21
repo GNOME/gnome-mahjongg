@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-mahjongg.
-# Copyright (C) 2025 gnome-mahjongg's COPYRIGHT HOLDERS
+# Copyright (C) 2026 gnome-mahjongg's COPYRIGHT HOLDERS
 # This file is distributed under the same license as the gnome-mahjongg package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -24,32 +24,34 @@
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
 # Felipe Braga <fbobraga@gmail.com>, 2015.
 # Leônidas Araújo <leorusvellt@hotmail.com>, 2022.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2025.
 # Juliano de Souza Camargo <julianosc@pm.me>, 2024-2025.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-09-13 09:36+0000\n"
-"PO-Revision-Date: 2025-09-13 19:20-0300\n"
-"Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
+"POT-Creation-Date: 2026-03-18 18:43+0000\n"
+"PO-Revision-Date: 2026-04-21 08:24-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 50.0\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: gnome-mahjongg\n"
-"X-DL-Branch: master\n"
+"X-DL-Branch: main\n"
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/GNOME/gnome-mahjongg\n"
+"X-DL-Lang: pt_BR\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:437
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -111,11 +113,11 @@ msgstr "Mahjongg em estilo claro"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg em estilo escuro"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_Novo jogo"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "_Reiniciar jogo"
 
@@ -250,6 +252,19 @@ msgstr "A_talhos de teclado"
 msgid "_About Mahjongg"
 msgstr "_Sobre o Mahjongg"
 
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "Pausado"
+
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "_Continuar jogo"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "Sai_r"
+
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
 msgstr "Regras do jogo"
@@ -318,6 +333,10 @@ msgstr "Pontuações"
 msgid "Game Completed 🎉"
 msgstr "Jogo concluído 🎉"
 
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "Limpar pontuações…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Sem pontuações"
@@ -337,10 +356,6 @@ msgstr "Tempo"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "Jogador"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "Sai_r"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -427,11 +442,11 @@ msgstr "Mostrar uma dica"
 msgid "Print release version and exit"
 msgstr "Imprime a versão de lançamento e sai"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "Sem jogadas restantes"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -439,38 +454,38 @@ msgstr ""
 "Você pode refazer seus movimentos e tentar encontrar uma solução, ou "
 "reembaralhar as peças restantes."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Você pode refazer seus movimentos e tentar encontrar uma solução, ou iniciar "
 "um novo jogo."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
 msgstr "_Reembaralhar"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_Continuar"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:232
 msgid "Change Layout?"
 msgstr "Alterar o leiaute?"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:233
 msgid "This will end your current game."
 msgstr "Isto irá finalizar seu jogo atual."
 
-#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/gnome-mahjongg.vala:234
+#: src/gnome-mahjongg.vala:238
 msgid "Change _Layout"
 msgstr "Alterar _leiaute"
 
-#: src/gnome-mahjongg.vala:331
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -490,41 +505,37 @@ msgstr ""
 "Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Juliano de Souza Camargo <julianosc@pm.me>"
 
-#: src/gnome-mahjongg.vala:333
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "Leiaute por"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "Leiaute: %s"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "Limpar todas as pontuações?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "Isto limpará todas as pontuações para todos os leiautes."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "Limpar tudo"
 
-#: src/window.vala:132
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Jogadas restantes: %2u"
 
-#: src/window.vala:137
-msgid "Paused"
-msgstr "Pausado"
-
-#: src/window.vala:139
+#: src/window.vala:184
 msgid "Resume Game"
 msgstr "Continuar jogo"
 
-#: src/window.vala:145
+#: src/window.vala:196
 msgid "Pause Game"
 msgstr "Pausar jogo"
 
