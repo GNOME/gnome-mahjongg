@@ -431,7 +431,6 @@ public class GameView : Gtk.Widget {
 
     private Tile? find_tile (int x, int y) {
         unowned Tile? topmost_tile = null;
-        var previous_layer = -1;
 
         foreach (unowned var tile in game) {
             if (!tile.visible)
@@ -440,8 +439,7 @@ public class GameView : Gtk.Widget {
             int tile_x, tile_y;
             get_tile_position (tile, out tile_x, out tile_y);
 
-            if (tile.slot.layer > previous_layer
-                    && tile_x <= x <= (tile_x + tile_pattern_width)
+            if (tile_x <= x <= (tile_x + tile_pattern_width)
                     && tile_y <= y <= (tile_y + tile_pattern_height))
                 topmost_tile = tile;
         }
