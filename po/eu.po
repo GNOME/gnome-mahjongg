@@ -5,13 +5,13 @@
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015.
-# Asier Saratsua Garmendia <asiersarasua@ni.eus>, 2019, 2021, 2022, 2023, 2025.
+# Asier Saratsua Garmendia <asiersarasua@ni.eus>, 2019, 2021, 2022, 2023, 2025, 2026.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-08-26 22:11+0000\n"
-"PO-Revision-Date: 2025-08-27 17:00+0100\n"
+"POT-Creation-Date: 2026-05-01 16:45+0000\n"
+"PO-Revision-Date: 2026-06-05 17:00+0100\n"
 "Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <eu@eu.eus>\n"
 "Language: eu\n"
@@ -21,7 +21,7 @@ msgstr "Project-Id-Version: gnome-mahjongg master\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:417
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -73,11 +73,11 @@ msgstr "Mahjongg estilo argian"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg estilo ilunean"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_Joko berria"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "_Berrabiarazi jokoa"
 
@@ -140,21 +140,26 @@ msgid "Taipei"
 msgstr "Taipei"
 
 #: data/ui/menu.ui:57
-msgid "Layout Ro_tation"
-msgstr "Diseinuaren bi_raketa"
+#| msgid "Layout Ro_tation"
+msgid "Layout _Progression"
+msgstr "Diseinuaren _aurrerapena"
 
 #: data/ui/menu.ui:60
-msgctxt "layout rotation"
-msgid "No Rotation"
-msgstr "Biraketarik ez"
+msgctxt "layout progression"
+msgid "No Progression"
+msgstr "Aurrerapenik ez"
 
 #: data/ui/menu.ui:65
-msgctxt "layout rotation"
+#| msgctxt "layout rotation"
+#| msgid "Sequential"
+msgctxt "layout progression"
 msgid "Sequential"
 msgstr "Sekuentziala"
 
 #: data/ui/menu.ui:70
-msgctxt "layout rotation"
+#| msgctxt "layout rotation"
+#| msgid "Random"
+msgctxt "layout progression"
 msgid "Random"
 msgstr "Ausazkoa"
 
@@ -211,6 +216,20 @@ msgstr "Las_ter-teklak"
 #: data/ui/menu.ui:126
 msgid "_About Mahjongg"
 msgstr "Mahjongg aplikazioari _buruz"
+
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "Pausatuta"
+
+#: data/ui/pause-overlay.ui:38
+#| msgid "Resume Game"
+msgid "Re_sume Game"
+msgstr "Be_rrabiarazi jokoa"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "I_rten"
 
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
@@ -279,6 +298,11 @@ msgstr "Puntuazioak"
 msgid "Game Completed 🎉"
 msgstr "Jokoa osatu da 🎉"
 
+#: data/ui/score-dialog.ui:41
+#| msgid "Clear All Scores?"
+msgid "Clear Scores…"
+msgstr "Garbitu puntuazioak…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Puntuaziorik ez"
@@ -298,10 +322,6 @@ msgstr "Ordua"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "Jokalaria"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "I_rten"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -388,74 +408,88 @@ msgstr "Erakutsi iradokizuna"
 msgid "Print release version and exit"
 msgstr "Erakutsi bertsioaren informazioa eta irten"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "Ezin da mugimendu gehiagorik egin"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
 msgstr "Mugimenduak desegin eta beste konponbide bat bilatu dezakzu, edo geratzen diren lauzak nahastu ditzakezu."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr "Mugimenduak desegin eta beste konponbide bat bilatu dezakzu, edo joko berria abiarazi dezakezu."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
 msgstr "_Nahastu"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_Jarraitu"
 
-#: src/gnome-mahjongg.vala:311
+#: src/gnome-mahjongg.vala:232
+#| msgid "Layout"
+msgid "Change Layout?"
+msgstr "Aldatu diseinua?"
+
+#: src/gnome-mahjongg.vala:233
+msgid "This will end your current game."
+msgstr "Horrek zure oraingo jokoa amaituko du."
+
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
+msgid "_Cancel"
+msgstr "_Utzi"
+
+#: src/gnome-mahjongg.vala:238
+#| msgid "_Layout"
+msgid "Change _Layout"
+msgstr "Aldatu _diseinua"
+
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: src/gnome-mahjongg.vala:313
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "Diseinuak:"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "Diseinua: %s"
 
-#: src/score-dialog.vala:302
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "Garbitu puntuazio guztiak?"
 
-#: src/score-dialog.vala:303
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "Diseinu guztietako puntuazio guztiak garbituko dira."
 
-#: src/score-dialog.vala:307
-msgid "_Cancel"
-msgstr "_Utzi"
-
-#: src/score-dialog.vala:308
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "Garbitu denak"
 
-#: src/window.vala:132
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Senbat mugimendu: %2u"
 
-#: src/window.vala:137
-msgid "Paused"
-msgstr "Pausatuta"
-
-#: src/window.vala:139
+#: src/window.vala:184
 msgid "Resume Game"
 msgstr "Berrabiarazi jokoa"
 
-#: src/window.vala:145
+#: src/window.vala:196
 msgid "Pause Game"
 msgstr "Pausatu jokoa"
+
+#~ msgctxt "layout rotation"
+#~ msgid "No Rotation"
+#~ msgstr "Biraketarik ez"
 
 #~ msgid "The Mahjongg Team"
 #~ msgstr "Mahjongg taldea"
@@ -503,9 +537,6 @@ msgstr "Pausatu jokoa"
 #~ msgctxt "shortcut window"
 #~ msgid "Fullscreen"
 #~ msgstr "Pantaila osoa"
-
-#~ msgid "Layout"
-#~ msgstr "Diseinua"
 
 #~ msgid "Preferences"
 #~ msgstr "Hobespenak"
