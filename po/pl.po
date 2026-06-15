@@ -16,15 +16,16 @@
 # Aviary.pl <community-poland@mozilla.org>, 2007-2022.
 # skantek <antoniskalecki@gmail.com>, 2024.
 # Victoria <royal.victoria@proton.me>, 2025-2026.
+# Victoria Niedzielska <victorian@gnome.org>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-18 18:43+0000\n"
-"PO-Revision-Date: 2026-03-21 10:25+0100\n"
-"Last-Translator: Victoria <royal.victoria@proton.me>\n"
-"Language-Team: Polish\n"
+"POT-Creation-Date: 2026-05-01 16:45+0000\n"
+"PO-Revision-Date: 2026-06-15 10:45+0200\n"
+"Last-Translator: Victoria Niedzielska <victorian@gnome.org>\n"
+"Language-Team: Polish <https://l10n.gnome.org/teams/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,11 +89,11 @@ msgstr ""
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:34
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:42
 msgid "Mahjongg in Light Style"
-msgstr "Madżong w jasnym motywie"
+msgstr "Madżong w jasnym stylu"
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
-msgstr "Madżong w ciemnym motywie"
+msgstr "Madżong w ciemnym stylu"
 
 #: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
@@ -231,7 +232,7 @@ msgstr "_Skróty klawiszowe"
 
 #: data/ui/menu.ui:126
 msgid "_About Mahjongg"
-msgstr "_O programie"
+msgstr "_O grze"
 
 #: data/ui/pause-overlay.ui:24
 msgid "Paused"
@@ -244,7 +245,7 @@ msgstr "W_znów grę"
 #: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
 #: src/gnome-mahjongg.vala:178
 msgid "_Quit"
-msgstr "_Wyjdź"
+msgstr "_Zakończ działanie"
 
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
@@ -325,7 +326,7 @@ msgstr "Brak wyników"
 
 #: data/ui/score-dialog.ui:54
 msgid "Finish a game to see scores"
-msgstr "Zakończ grę aby zobaczyć wyniki"
+msgstr "Zakończ grę, aby zobaczyć wyniki"
 
 #: data/ui/score-dialog.ui:71
 msgid "Rank"
@@ -337,7 +338,7 @@ msgstr "Czas"
 
 #: data/ui/score-dialog.ui:84
 msgid "Player"
-msgstr "Osoba grająca"
+msgstr "Gracz"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -352,12 +353,12 @@ msgstr "Nowa gra"
 #: data/ui/shortcuts-dialog.ui:18
 msgctxt "shortcut window"
 msgid "Restart Game"
-msgstr "Zacznij od początku"
+msgstr "Zaczęcie od początku"
 
 #: data/ui/shortcuts-dialog.ui:24
 msgctxt "shortcut window"
 msgid "Pause Game"
-msgstr "Wstrzymaj grę"
+msgstr "Wstrzymanie gry"
 
 #: data/ui/shortcuts-dialog.ui:30
 msgctxt "shortcut window"
@@ -402,15 +403,15 @@ msgstr "Zamknięcie okna"
 #: data/ui/shortcuts-dialog.ui:77
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Zakończenie programu"
+msgstr "Zakończenie działania"
 
 #: data/ui/window.ui:29
 msgid "Undo"
-msgstr "Cofa"
+msgstr "Cofnij"
 
 #: data/ui/window.ui:36
 msgid "Redo"
-msgstr "Ponawia"
+msgstr "Ponów"
 
 #: data/ui/window.ui:43
 msgid "Main Menu"
@@ -418,7 +419,7 @@ msgstr "Menu główne"
 
 #: data/ui/window.ui:56
 msgid "Show Hint"
-msgstr "Wyświetla wskazówkę"
+msgstr "Wyświetl wskazówkę"
 
 #: src/gnome-mahjongg.vala:13
 msgid "Print release version and exit"
@@ -484,7 +485,7 @@ msgstr ""
 "Piotr Drąg <piotrdrag@gmail.com>, 2010-2022\n"
 "Aviary.pl <community-poland@mozilla.org>, 2007-2022\n"
 "skantek <antoniskalecki@gmail.com>, 2024\n"
-"Victoria <royal.victoria@proton.me>, 2025-2026"
+"Victoria Niedzielska <victorian@gnome.org>, 2025-2026"
 
 #: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
@@ -514,11 +515,11 @@ msgstr "Pozostało ruchów: %2u"
 
 #: src/window.vala:184
 msgid "Resume Game"
-msgstr "Wznawia grę"
+msgstr "Wznów grę"
 
 #: src/window.vala:196
 msgid "Pause Game"
-msgstr "Wstrzymuje grę"
+msgstr "Wstrzymaj grę"
 
 #~ msgid "The Mahjongg Team"
 #~ msgstr "Zespół Madżong"
