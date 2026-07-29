@@ -23,8 +23,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2025-08-29 04:47+0000\n"
-"PO-Revision-Date: 2025-08-31 18:46+0200\n"
+"POT-Creation-Date: 2026-05-01 16:45+0000\n"
+"PO-Revision-Date: 2026-07-29 17:18+0200\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -32,11 +32,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
-#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:436
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
 msgid "Mahjongg"
 msgstr "Mahjongg"
 
@@ -97,11 +97,11 @@ msgstr "Mahjongg ve světlém stylu"
 msgid "Mahjongg in Dark Style"
 msgstr "Mahjongg v tmavém stylu"
 
-#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:176
+#: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
 msgstr "_Nová hra"
 
-#: data/ui/menu.ui:12
+#: data/ui/menu.ui:12 data/ui/pause-overlay.ui:49
 msgid "_Restart Game"
 msgstr "H_rát znovu od začátku"
 
@@ -236,6 +236,19 @@ msgstr "_Klávesové zkratky"
 msgid "_About Mahjongg"
 msgstr "O _aplikaci Mahjongg"
 
+#: data/ui/pause-overlay.ui:24
+msgid "Paused"
+msgstr "Pozastaveno"
+
+#: data/ui/pause-overlay.ui:38
+msgid "Re_sume Game"
+msgstr "Pok_račovat ve hře"
+
+#: data/ui/pause-overlay.ui:60 data/ui/score-dialog.ui:119
+#: src/gnome-mahjongg.vala:178
+msgid "_Quit"
+msgstr "U_končit"
+
 #: data/ui/rules-dialog.ui:7
 msgid "Game Rules"
 msgstr "Pravidla hry"
@@ -303,6 +316,10 @@ msgstr "Skóre"
 msgid "Game Completed 🎉"
 msgstr "Hra je dokončena 🎉"
 
+#: data/ui/score-dialog.ui:41
+msgid "Clear Scores…"
+msgstr "Vymazat skóre…"
+
 #: data/ui/score-dialog.ui:53
 msgid "No Scores"
 msgstr "Žádná skóre"
@@ -322,10 +339,6 @@ msgstr "Čas"
 #: data/ui/score-dialog.ui:84
 msgid "Player"
 msgstr "Hráč"
-
-#: data/ui/score-dialog.ui:119 src/gnome-mahjongg.vala:174
-msgid "_Quit"
-msgstr "U_končit"
 
 #: data/ui/shortcuts-dialog.ui:8
 msgctxt "shortcut window"
@@ -412,11 +425,11 @@ msgstr "Zobrazit radu"
 msgid "Print release version and exit"
 msgstr "Vypsat verzi vydání a skončit"
 
-#: src/gnome-mahjongg.vala:167
+#: src/gnome-mahjongg.vala:171
 msgid "No Moves Left"
 msgstr "Nezbývá žádný pohyb"
 
-#: src/gnome-mahjongg.vala:169
+#: src/gnome-mahjongg.vala:173
 msgid ""
 "You can undo your moves and try to find a solution, or reshuffle the "
 "remaining tiles."
@@ -424,37 +437,37 @@ msgstr ""
 "Můžete vrátit zpět své tahy a pokusit se najít řešení, nebo přemíchat "
 "zbývající kameny."
 
-#: src/gnome-mahjongg.vala:170
+#: src/gnome-mahjongg.vala:174
 msgid ""
 "You can undo your moves and try to find a solution, or start a new game."
 msgstr ""
 "Můžete své tahy vrátit zpět a pokusit se najít řešení nebo začít novou hru."
 
-#: src/gnome-mahjongg.vala:179
+#: src/gnome-mahjongg.vala:183
 msgid "_Reshuffle"
 msgstr "Př_emíchat"
 
-#: src/gnome-mahjongg.vala:181
+#: src/gnome-mahjongg.vala:185
 msgid "_Continue"
 msgstr "_Pokračovat"
 
-#: src/gnome-mahjongg.vala:228
+#: src/gnome-mahjongg.vala:232
 msgid "Change Layout?"
 msgstr "Změnit rozvržení?"
 
-#: src/gnome-mahjongg.vala:229
+#: src/gnome-mahjongg.vala:233
 msgid "This will end your current game."
 msgstr "Toto ukončí vaši aktuální hru."
 
-#: src/gnome-mahjongg.vala:233 src/score-dialog.vala:315
+#: src/gnome-mahjongg.vala:237 src/score-dialog.vala:328
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: src/gnome-mahjongg.vala:234
+#: src/gnome-mahjongg.vala:238
 msgid "Change _Layout"
 msgstr "Změnit r_ozvržení"
 
-#: src/gnome-mahjongg.vala:330
+#: src/gnome-mahjongg.vala:335
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -472,41 +485,37 @@ msgstr ""
 "Marek Černocký <marek@manet.cz>\n"
 "Daniel Rusek <mail@asciiwolf.com>"
 
-#: src/gnome-mahjongg.vala:332
+#: src/gnome-mahjongg.vala:337
 msgid "Layouts by"
 msgstr "Rozvržení podle"
 
-#: src/score-dialog.vala:61
+#: src/score-dialog.vala:62
 #, c-format
 msgid "Layout: %s"
 msgstr "Rozvržení: %s"
 
-#: src/score-dialog.vala:310
+#: src/score-dialog.vala:323
 msgid "Clear All Scores?"
 msgstr "Vymazat všechna skóre?"
 
-#: src/score-dialog.vala:311
+#: src/score-dialog.vala:324
 msgid "This will clear every score for every layout."
 msgstr "Toto vymaže každé skóre pro každé rozložení."
 
-#: src/score-dialog.vala:316
+#: src/score-dialog.vala:329
 msgid "Clear All"
 msgstr "Vymazat vše"
 
-#: src/window.vala:132
+#: src/window.vala:178
 #, c-format
 msgid "Moves Left: %2u"
 msgstr "Zbývá tahů: %2u"
 
-#: src/window.vala:137
-msgid "Paused"
-msgstr "Pozastaveno"
-
-#: src/window.vala:139
+#: src/window.vala:184
 msgid "Resume Game"
 msgstr "Pokračovat ve hře"
 
-#: src/window.vala:145
+#: src/window.vala:196
 msgid "Pause Game"
 msgstr "Pozastavit hru"
 
