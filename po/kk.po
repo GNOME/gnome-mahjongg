@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-18 18:43+0000\n"
-"PO-Revision-Date: 2026-03-19 07:10+0500\n"
+"POT-Creation-Date: 2026-05-01 16:45+0000\n"
+"PO-Revision-Date: 2026-08-22 08:21+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -79,6 +79,10 @@ msgstr "Маджонг ашық стильде"
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
 msgstr "Маджонг күңгірт стильде"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:171
+msgid "The Mahjongg Team"
+msgstr "Маджонг тобы"
 
 #: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
