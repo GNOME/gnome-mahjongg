@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mahjongg master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mahjongg/issues/\n"
-"POT-Creation-Date: 2026-03-18 18:43+0000\n"
-"PO-Revision-Date: 2026-03-19 11:39+0100\n"
+"POT-Creation-Date: 2026-05-01 16:45+0000\n"
+"PO-Revision-Date: 2026-09-04 10:00+0200\n"
 "Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
 "Language: bg\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: data/org.gnome.Mahjongg.desktop.in.in:2
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:9 src/gnome-mahjongg.vala:438
@@ -66,8 +66,8 @@ msgstr ""
 "Маджонг. В началото на играта всички плочки са подредени на дъската. Целта е "
 "за възможно най-малко време да махнете всички плочки. Изберете две плочки с "
 "еднакви фигури, за да ги махнете. Внимавайте — понякога плочките много си "
-"приличат, но са различни. Може да махате само плочки, които са свободни — "
-"на същото ниво, отляво или отдясно, да няма друга плочка."
+"приличат, но са различни. Може да махате само плочки, които са свободни — на "
+"същото ниво, отляво или отдясно, да няма друга плочка."
 
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:21
 msgid ""
@@ -87,6 +87,10 @@ msgstr "Маджонг в светъл стил"
 #: data/org.gnome.Mahjongg.metainfo.xml.in.in:38
 msgid "Mahjongg in Dark Style"
 msgstr "Маджонг в тъмен стил"
+
+#: data/org.gnome.Mahjongg.metainfo.xml.in.in:171
+msgid "The Mahjongg Team"
+msgstr "Екипът на Маджонг"
 
 #: data/ui/menu.ui:8 data/ui/score-dialog.ui:104 src/gnome-mahjongg.vala:180
 msgid "_New Game"
