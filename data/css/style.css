@@ -76,6 +76,7 @@ stack.tile-filter {
 
 .pause-overlay {
     margin-top: -11px;
+    padding: 30px;
 }
 
 /* Scores */

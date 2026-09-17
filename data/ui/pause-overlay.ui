@@ -10,14 +10,10 @@
       <object class="GtkRevealer">
         <property name="reveal-child" bind-source="PauseOverlay" bind-property="visible" bind-flags="bidirectional|sync-create"/>
         <property name="transition-duration">200</property>
-        <property name="transition-type">slide-up</property>
+        <property name="transition-type">fade-slide-up</property>
         <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>
-            <property name="margin-bottom">18</property>
-            <property name="margin-end">18</property>
-            <property name="margin-start">18</property>
-            <property name="margin-top">18</property>
             <property name="spacing">24</property>
             <child>
               <object class="GtkLabel" id="progress_bar">
@@ -67,14 +63,14 @@
                 </child>
               </object>
             </child>
+            <style>
+              <class name="osd"/>
+              <class name="pause-overlay"/>
+              <class name="toolbar"/>
+            </style>
           </object>
         </child>
       </object>
     </child>
-    <style>
-      <class name="osd"/>
-      <class name="pause-overlay"/>
-      <class name="toolbar"/>
-    </style>
   </template>
 </interface>
