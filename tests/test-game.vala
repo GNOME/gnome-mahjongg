@@ -219,18 +219,20 @@ private void test_pause () {
     var game = generate_game ();
 
     assert_false (game.paused);
+    assert_false (game.started);
     assert_true (game.elapsed == 0.0);
 
     // Try forbidden pause before starting game
     game.paused = true;
     assert_false (game.paused);
+    assert_false (game.started);
     assert_true (game.elapsed == 0.0);
 
     // Remove tile pair
     var match = game.next_hint ();
     assert_true (match != null);
     game.remove_pair (match.tile0, match.tile1);
-    assert_true (game.elapsed > 0.0);
+    assert_true (game.started);
 
     // Select a tile
     var second_match = game.next_hint ();
@@ -240,24 +242,26 @@ private void test_pause () {
     // Pause game
     game.paused = true;
     assert_true (game.paused);
+    assert_true (game.started);
     assert_true (game.selected_tile == null);
-    assert_true (game.elapsed > 0.0);
 
     // Unpause game
     game.paused = false;
     assert_false (game.paused);
+    assert_true (game.started);
     assert_true (game.selected_tile == null);
-    assert_true (game.elapsed > 0.0);
 
     // Pause game
     game.paused = true;
     assert_true (game.paused);
-    assert_true (game.selected_tile == null);
+    assert_true (game.started);
     assert_true (game.elapsed > 0.0);
+    assert_true (game.selected_tile == null);
 
     // Restart game
     game.restart ();
     assert_false (game.paused);
+    assert_false (game.started);
     assert_true (game.elapsed == 0.0);
 
     // Complete game
@@ -267,12 +271,13 @@ private void test_pause () {
 
         var next_match = game.next_hint ();
         game.remove_pair (next_match.tile0, next_match.tile1);
-        assert_true (game.elapsed > 0.0);
+        assert_true (game.started);
     }
 
     // Try forbidden pause after completed game
     game.paused = true;
     assert_false (game.paused);
+    assert_true (game.started);
     assert_true (game.elapsed > 0.0);
 }
 
