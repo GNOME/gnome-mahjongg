@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2010-2026 Mahjongg Contributors
 // SPDX-FileCopyrightText: 2010-2013 Robert Ancell
-// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/score-dialog.ui")]
 public class ScoreDialog : Adw.Dialog {

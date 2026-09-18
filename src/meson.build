@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: 2018-2026 Mahjongg Contributors
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 gnome_mahjongg = executable(
   meson.project_name(),

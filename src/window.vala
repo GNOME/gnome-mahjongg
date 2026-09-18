@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2022-2026 Mahjongg Contributors
-// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 [GtkTemplate (ui = "/org/gnome/Mahjongg/ui/window.ui")]
 public class MahjonggWindow : Adw.ApplicationWindow {

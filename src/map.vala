@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2010-2025 Mahjongg Contributors
 // SPDX-FileCopyrightText: 2010-2013 Robert Ancell
-// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 public class Slot {
     public int x;

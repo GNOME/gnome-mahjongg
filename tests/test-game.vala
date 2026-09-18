@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2025-2026 Mahjongg Contributors
-// SPDX-License-Identifier: GPL-2.0-or-later
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 private Game generate_game (owned Map? map = null, int32 seed = 123456) {
     if (map == null) {
