@@ -1,3 +1,13 @@
+51.0
+====
+
+* Add new animation for showing pause menu
+* Add missing mnemonic to 'Resume Game' button
+* Add missing translations for 'Clear Scores' string
+* Bump minimum GTK version to 4.22
+* Upgrade license to GPLv3+
+* Translation updates
+
 49.1.1
 ======
 
