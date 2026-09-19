@@ -230,19 +230,15 @@ public class ScoreDialog : Adw.Dialog {
                     has_frame = false,
                     max_width_chars = 5
                 };
-                unowned var entry_input_weak = entry_input;  // Prevent memory leak
 
                 entry_input.add_css_class ("heading");
-                entry_input.notify["text"].connect (() => {
-                    unowned var history_entry = list_item.item as HistoryEntry;
+                entry_input.notify["text"].connect ((object, pspec) => {
+                    unowned var player_entry = object as Gtk.Entry;
 
-                    if (history_entry != completed_entry)
-                        return;
-
-                    if (entry_input_weak.text.length <= 0)
-                        history_entry.player = Environment.get_real_name ();
+                    if (player_entry.text.length <= 0)
+                        completed_entry.player = Environment.get_real_name ();
                     else
-                        history_entry.player = entry_input_weak.text;
+                        completed_entry.player = player_entry.text;
                 });
                 entry_input.activate.connect (() => { new_game_button.activate (); });
 
