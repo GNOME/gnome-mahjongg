@@ -51,6 +51,15 @@
     <control>touch</control>
   </supports>
   <releases>
+    <release version="51.1" date="2026-09-20">
+      <description>
+        <p>This release contains the following improvements:</p>
+        <ul>
+          <li>Fix a crash in the Scores dialog</li>
+          <li>More balanced light background color for Smooth theme</li>
+        </ul>
+      </description>
+    </release>
     <release version="51.0" date="2026-09-18">
       <description>
         <p>This release contains the following improvements:</p>
