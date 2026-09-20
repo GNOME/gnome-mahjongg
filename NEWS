@@ -1,3 +1,11 @@
+49.2
+====
+
+* Fix a crash in the Scores dialog on newer platform versions
+* More balanced light background color for Smooth theme
+* Fix flaky game pause test
+* Translation updates
+
 49.1.1
 ======
 
